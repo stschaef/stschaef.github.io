@@ -2,6 +2,7 @@
 permalink: /misc/misc.md
 title: "Miscellaneous"
 excerpt: "Miscellaneous"
+collection: misc
 author_profile: true
 redirect_from: 
 ---

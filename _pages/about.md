@@ -14,8 +14,3 @@ My research interests are primarily in the logic and semantics of programming la
 
 More broadly, I am a huge proponent of intuitionistic mathematics demonstrated to a computer --- such as in a proof assistant. The Curry-Howard Correspondence extends in two directions: just as we use mathematics to inform our analysis of computation, we should take a computational point-of-view to give an unambiguous and constructive accounting of mathematics.
 
-## Extras
-
-In my spare time I like to cook and bake. I also have been trying to pick up the piano but I'm not very good. 
-
-I am also pretty decent at [Tetris](https://jstris.jezevec10.com/u/Zistheonlyring).
