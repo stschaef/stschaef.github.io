@@ -1,13 +1,8 @@
 ---
 permalink: /misc/misc.md
-title: "Miscellaneous"
-excerpt: "Miscellaneous"
+title: "Extra"
 collection: misc
-author_profile: true
-redirect_from: 
 ---
-
-# Extras
 
 Here's a cool [video about a lattice reduction algorithm](https://youtu.be/U8MI2a_BHHo?si=AeJko2YOwu7jrP65).
 
