@@ -8,6 +8,7 @@ KEEP=(
   ".gitmodules"
   "build.sh"
   "cleanup.sh"
+  "CNAME"
 )
 
 # Convert the array into a pattern string for grep
