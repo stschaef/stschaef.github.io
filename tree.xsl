@@ -25,7 +25,7 @@
         </title>
       </head>
       <body>
-        <ninja-keys placeholder="Start typing a note title or ID"></ninja-keys>
+        <ninja-keys placeholder="Start typing a note title or ID" openHotkey="ctrl+k"></ninja-keys>
         <xsl:if test="not(/f:tree[@root = 'true'])">
 
           <header class="header">

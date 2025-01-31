@@ -91,6 +91,17 @@ fetch("./forest.json")
   rest.forEach((addr) => addItemToSection(addr, "All Trees", null))
 
   ninja.data = items
+  ninja.data.push(
+    {
+      id: 'Research Journal',
+      title: 'Open Research Journal',
+      hotkey: 'ctrl+j',
+      icon: bookmarkIcon,
+      section: 'Journal',
+      handler: () => {
+        window.location.href = data.journal.route
+      }
+    })
  });
 
 function search() {
@@ -102,3 +113,16 @@ function search() {
 document.addEventListener("DOMContentLoaded", function () {
     document.getElementById("search").onclick = search;
 });
+
+// ninja.data = [
+//     {
+//       id: 'Research Journal',
+//       title: 'Open Research Journal',
+//       hotkey: 'ctrl+j',
+//       icon: 'apps',
+//       section: 'Projects',
+//       handler: () => {
+//         window.location.href =
+//       },
+//     }
+// ]
