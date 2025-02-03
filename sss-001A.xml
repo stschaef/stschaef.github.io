@@ -1,50 +1,94 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="default.xsl"?>
-<fr:tree
-toc="true"
-numbered="true"
-show-heading="true"
-show-metadata="true"
-expanded="true"
-root="false"
-xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>245</fr:anchor><fr:addr
-type="user">sss-001A</fr:addr><fr:route>sss-001A.xml</fr:route><fr:title
-text="More Thoughts on Sequential Ambiguity">More Thoughts on Sequential Ambiguity</fr:title><fr:taxon>Daily</fr:taxon><fr:date><fr:year>2025</fr:year><fr:month>1</fr:month><fr:day>29</fr:day></fr:date><fr:authors><fr:author><fr:link
-type="local"
-href="stevenschaefer.xml"
-addr="stevenschaefer"
-title="Steven Schaefer">Steven Schaefer</fr:link></fr:author></fr:authors></fr:frontmatter><fr:mainmatter><fr:p>Previously Max suggested the internal definition of sequential ambiguity to be the following:</fr:p><fr:tree
-toc="true"
-numbered="true"
-show-heading="true"
-show-metadata="false"
-expanded="true"
-root="false"
-xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>247</fr:anchor><fr:addr
-type="user">sss-0016</fr:addr><fr:route>sss-0016.xml</fr:route><fr:title
-text="Sequential Ambiguity Helper">Sequential Ambiguity Helper</fr:title><fr:taxon>Daily</fr:taxon><fr:date><fr:year>2025</fr:year><fr:month>1</fr:month><fr:day>24</fr:day></fr:date><fr:authors><fr:author><fr:link
-type="local"
-href="maxsnew.xml"
-addr="maxsnew"
-title="Max S. New">Max S. New</fr:link></fr:author><fr:author><fr:link
-type="local"
-href="stevenschaefer.xml"
-addr="stevenschaefer"
-title="Steven Schaefer">Steven Schaefer</fr:link></fr:author></fr:authors></fr:frontmatter><fr:mainmatter><fr:p>Max suggested that an effective way to represent <fr:link
-type="local"
-href="sss-0017.xml"
-addr="sss-0017"
-title="Sequential Unambiguity">sequential unamiguity</fr:link> in Dependent Lambek Calculus to alleviate my issues proving <fr:link
-type="local"
-href="sss-000V.xml"
-addr="sss-000V"
-title="FollowLast Soundness">followlast soundness</fr:link>.</fr:p><fr:p>An attempt would be that the following map has an inverse
-  <fr:tex
-display="block"><![CDATA[g \otimes  {\mathopen {}\left ({\mathopen {}\left (h \otimes  k\right )\mathclose {}} \And  {\mathopen {}\left (h \otimes  l\right )\mathclose {}}\right )\mathclose {}} \vdash  {\mathopen {}\left (g \otimes  h \otimes  k\right )\mathclose {}} \And  (g \otimes  h \otimes  l)]]></fr:tex></fr:p></fr:mainmatter><fr:backmatter /></fr:tree><fr:p>After more thought, I think this is close but not exactly right. The attempt at the definition would presuppose that <fr:tex
-display="inline"><![CDATA[g]]></fr:tex> is unambiguous. However the following definition would allow for ambiguity in <fr:tex
-display="inline"><![CDATA[g]]></fr:tex>, and has been proven in Agda by me.</fr:p><fr:tex
-display="block"><![CDATA[(g \And  g) \otimes  {\mathopen {}\left ({\mathopen {}\left (h \otimes  k\right )\mathclose {}} \And  {\mathopen {}\left (h \otimes  l\right )\mathclose {}}\right )\mathclose {}} \cong  {\mathopen {}\left (g \otimes  h \otimes  k\right )\mathclose {}} \And  (g \otimes  h \otimes  l)]]></fr:tex><fr:p>Rather than requiring an inverse that mystically picks out a <fr:tex
-display="inline"><![CDATA[g]]></fr:tex>-parse, the above isomorphism maintains both <fr:tex
-display="inline"><![CDATA[g]]></fr:tex> parses but faithfully reflects that the splitting point between <fr:tex
-display="inline"><![CDATA[g]]></fr:tex> and <fr:tex
-display="inline"><![CDATA[h]]></fr:tex> is uniquely determined.</fr:p></fr:mainmatter><fr:backmatter /></fr:tree>
+<fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" root="false">
+  <fr:frontmatter>
+    <fr:authors>
+      <fr:author>
+        <fr:link href="stevenschaefer.xml" title="Steven Schaefer" addr="stevenschaefer" type="local">Steven Schaefer</fr:link>
+      </fr:author>
+      <fr:contributor>
+        <fr:link href="maxsnew.xml" title="Max S. New" addr="maxsnew" type="local">Max S. New</fr:link>
+      </fr:contributor>
+    </fr:authors>
+    <fr:date>
+      <fr:year>2025</fr:year>
+      <fr:month>1</fr:month>
+      <fr:day>29</fr:day>
+    </fr:date>
+    <fr:anchor>657</fr:anchor>
+    <fr:addr type="user">sss-001A</fr:addr>
+    <fr:route>sss-001A.xml</fr:route>
+    <fr:title text="More Thoughts on Sequential Ambiguity">More Thoughts on Sequential Ambiguity</fr:title>
+    <fr:taxon>Daily</fr:taxon>
+  </fr:frontmatter>
+  <fr:mainmatter>
+    <fr:p>Previously Max suggested the internal definition of sequential ambiguity to be the following:</fr:p>
+    <fr:tree show-metadata="false">
+      <fr:frontmatter>
+        <fr:authors>
+          <fr:author>
+            <fr:link href="maxsnew.xml" title="Max S. New" addr="maxsnew" type="local">Max S. New</fr:link>
+          </fr:author>
+          <fr:author>
+            <fr:link href="stevenschaefer.xml" title="Steven Schaefer" addr="stevenschaefer" type="local">Steven Schaefer</fr:link>
+          </fr:author>
+        </fr:authors>
+        <fr:date>
+          <fr:year>2025</fr:year>
+          <fr:month>1</fr:month>
+          <fr:day>24</fr:day>
+        </fr:date>
+        <fr:anchor>656</fr:anchor>
+        <fr:addr type="user">sss-0016</fr:addr>
+        <fr:route>sss-0016.xml</fr:route>
+        <fr:title text="Sequential Ambiguity Helper">Sequential Ambiguity Helper</fr:title>
+        <fr:taxon>Daily</fr:taxon>
+      </fr:frontmatter>
+      <fr:mainmatter>
+        <fr:p>Max suggested that an effective way to represent <fr:link href="sss-0017.xml" title="Sequential Unambiguity" addr="sss-0017" type="local">sequential unamiguity</fr:link> in Dependent Lambek Calculus to alleviate my issues proving <fr:link href="sss-000V.xml" title="FollowLast Soundness" addr="sss-000V" type="local">followlast soundness</fr:link>.</fr:p>
+        <fr:p>An attempt would be that the following map has an inverse
+  <fr:tex display="block"><![CDATA[g \otimes  {\mathopen {}\left ({\mathopen {}\left (h \otimes  k\right )\mathclose {}} \And  {\mathopen {}\left (h \otimes  l\right )\mathclose {}}\right )\mathclose {}} \vdash  {\mathopen {}\left (g \otimes  h \otimes  k\right )\mathclose {}} \And  (g \otimes  h \otimes  l)]]></fr:tex></fr:p>
+      </fr:mainmatter>
+    </fr:tree>
+    <fr:p>After more thought, I think this is close but not exactly right. The attempt at the definition would presuppose that <fr:tex display="inline"><![CDATA[g]]></fr:tex> is unambiguous. However the following definition would allow for ambiguity in <fr:tex display="inline"><![CDATA[g]]></fr:tex>, and has been proven in Agda by me.</fr:p>
+    <fr:tex display="block"><![CDATA[(g \And  g) \otimes  {\mathopen {}\left ({\mathopen {}\left (h \otimes  k\right )\mathclose {}} \And  {\mathopen {}\left (h \otimes  l\right )\mathclose {}}\right )\mathclose {}} \cong  {\mathopen {}\left (g \otimes  h \otimes  k\right )\mathclose {}} \And  (g \otimes  h \otimes  l)]]></fr:tex>
+    <fr:p>Rather than requiring an inverse that mystically picks out a <fr:tex display="inline"><![CDATA[g]]></fr:tex>-parse, the above isomorphism maintains both <fr:tex display="inline"><![CDATA[g]]></fr:tex> parses but faithfully reflects that the splitting point between <fr:tex display="inline"><![CDATA[g]]></fr:tex> and <fr:tex display="inline"><![CDATA[h]]></fr:tex> is uniquely determined.</fr:p>
+  </fr:mainmatter>
+  <fr:backmatter>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:anchor>651</fr:anchor>
+        <fr:title text="References">References</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter />
+    </fr:tree>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:anchor>652</fr:anchor>
+        <fr:title text="Context">Context</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter />
+    </fr:tree>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:anchor>653</fr:anchor>
+        <fr:title text="Backlinks">Backlinks</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter />
+    </fr:tree>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:anchor>654</fr:anchor>
+        <fr:title text="Related">Related</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter />
+    </fr:tree>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:anchor>655</fr:anchor>
+        <fr:title text="Contributions">Contributions</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter />
+    </fr:tree>
+  </fr:backmatter>
+</fr:tree>
