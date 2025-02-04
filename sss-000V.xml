@@ -12,7 +12,7 @@
       <fr:month>1</fr:month>
       <fr:day>24</fr:day>
     </fr:date>
-    <fr:anchor>697</fr:anchor>
+    <fr:anchor>704</fr:anchor>
     <fr:addr type="user">sss-000V</fr:addr>
     <fr:route>sss-000V.xml</fr:route>
     <fr:title text="FollowLast Soundness">FollowLast Soundness</fr:title>
@@ -25,32 +25,32 @@
 Given <fr:tex display="inline"><![CDATA[g]]></fr:tex> and <fr:tex display="inline"><![CDATA[h]]></fr:tex> such that <fr:tex display="inline"><![CDATA[\mathsf {FLast}(g)]]></fr:tex> and <fr:tex display="inline"><![CDATA[\mathsf {First}(h)]]></fr:tex> are disjoint, and <fr:tex display="inline"><![CDATA[c \not  \in  \mathsf {FLast}(h)]]></fr:tex>, want to show that <fr:tex display="inline"><![CDATA[c]]></fr:tex> is also not in <fr:tex display="inline"><![CDATA[\mathsf {FLast}(g \otimes  h)]]></fr:tex>.
 
 That is, assuming for all <fr:tex display="inline"><![CDATA[c]]></fr:tex>, <fr:tex display="inline"><![CDATA[g \And  {\mathopen {}\left (g \otimes  c \otimes  \top \right )\mathclose {}} \vdash  \bot ]]></fr:tex> or <fr:tex display="inline"><![CDATA[h \And  {\mathopen {}\left (c \otimes  \top \right )\mathclose {}} \vdash  \bot ]]></fr:tex>. Fix <fr:tex display="inline"><![CDATA[c]]></fr:tex> such that <fr:tex display="inline"><![CDATA[h \And  {\mathopen {}\left (h \otimes  c \otimes  \top \right )\mathclose {}} \vdash  \bot ]]></fr:tex>, and then show <fr:tex display="inline"><![CDATA[g \otimes  h \And  {\mathopen {}\left (g \otimes  h \otimes  c \otimes  \top \right )\mathclose {}} \vdash  \bot ]]></fr:tex>.</fr:p>
-    <fr:p>This isn't super bad to do in the model, where you do some case analysis. In particular, the string that is parsed splits into some <fr:tex display="inline"><![CDATA[w , x : \mathsf {String}]]></fr:tex> with <fr:tex display="inline"><![CDATA[g]]></fr:tex> and <fr:tex display="inline"><![CDATA[h]]></fr:tex> parses, respectively. Likewise, it splits into <fr:tex display="inline"><![CDATA[y , z : \mathsf {String}]]></fr:tex> with a <fr:tex display="inline"><![CDATA[g]]></fr:tex> parse of <fr:tex display="inline"><![CDATA[y]]></fr:tex> and an <fr:tex display="inline"><![CDATA[h \otimes  \texttt {"}c\texttt {"} \otimes  \top ]]></fr:tex> parse of <fr:tex display="inline"><![CDATA[z]]></fr:tex>. All in all, we have
+    <fr:p>This isn't super bad to do in the model, where you do some case analysis. In particular, the string that is parsed splits into some <fr:tex display="inline"><![CDATA[w , x : \mathrm {String}]]></fr:tex> with <fr:tex display="inline"><![CDATA[g]]></fr:tex> and <fr:tex display="inline"><![CDATA[h]]></fr:tex> parses, respectively. Likewise, it splits into <fr:tex display="inline"><![CDATA[y , z : \mathrm {String}]]></fr:tex> with a <fr:tex display="inline"><![CDATA[g]]></fr:tex> parse of <fr:tex display="inline"><![CDATA[y]]></fr:tex> and an <fr:tex display="inline"><![CDATA[h \otimes  \texttt {"}c\texttt {"} \otimes  \top ]]></fr:tex> parse of <fr:tex display="inline"><![CDATA[z]]></fr:tex>. All in all, we have
 
-<fr:tex display="block"><![CDATA[w,x,y,z : \mathsf {String} , w \texttt { ++ } x = y \texttt { ++ } z]]></fr:tex>
+<fr:tex display="block"><![CDATA[w,x,y,z : \mathrm {String} , w \texttt { ++ } x = y \texttt { ++ } z]]></fr:tex>
 with some parses <fr:tex display="inline"><![CDATA[g w]]></fr:tex>, <fr:tex display="inline"><![CDATA[h x]]></fr:tex>, <fr:tex display="inline"><![CDATA[g y]]></fr:tex>, and <fr:tex display="inline"><![CDATA[(h \otimes  \texttt {"}c\texttt {"} \otimes  \top ) z]]></fr:tex>. Then you split into cases checking whether <fr:tex display="inline"><![CDATA[w]]></fr:tex> and <fr:tex display="inline"><![CDATA[y]]></fr:tex> are the same string, if <fr:tex display="inline"><![CDATA[w]]></fr:tex> is a (nontrivial) prefix of <fr:tex display="inline"><![CDATA[y]]></fr:tex>, or if <fr:tex display="inline"><![CDATA[y]]></fr:tex> is a prefix of <fr:tex display="inline"><![CDATA[w]]></fr:tex>.  Then each of the cases are straightforward enough but still tedious.</fr:p>
     <fr:p>I've been weighing whether or not to do effectively the same proof but in the model by using the axiom
-<fr:tex display="block"><![CDATA[g \cong  \textstyle \mathchoice {\textstyle \oplus _{{\mathopen {}\left (w : \mathsf {String}\right )\mathclose {}}}}{\textstyle \oplus _{{\mathopen {}\left (w : \mathsf {String}\right )\mathclose {}}}}{\scriptstyle \oplus _{{\mathopen {}\left (w : \mathsf {String}\right )\mathclose {}}}}{\scriptscriptstyle \oplus _{{\mathopen {}\left (w : \mathsf {String}\right )\mathclose {}}}}. g \And  \lceil  w \rceil ]]></fr:tex>
+<fr:tex display="block"><![CDATA[g \cong  \textstyle \mathchoice {\textstyle \oplus _{{\mathopen {}\left (w : \mathrm {String}\right )\mathclose {}}}}{\textstyle \oplus _{{\mathopen {}\left (w : \mathrm {String}\right )\mathclose {}}}}{\scriptstyle \oplus _{{\mathopen {}\left (w : \mathrm {String}\right )\mathclose {}}}}{\scriptscriptstyle \oplus _{{\mathopen {}\left (w : \mathrm {String}\right )\mathclose {}}}}. g \And  \lceil  w \rceil ]]></fr:tex>
 It feels as there should be a way to do this at a high level utilizing type-based reasoning, rather than manipulating individual strings.</fr:p>
   </fr:mainmatter>
   <fr:backmatter>
     <fr:tree show-metadata="false" hidden-when-empty="true">
       <fr:frontmatter>
-        <fr:anchor>685</fr:anchor>
+        <fr:anchor>692</fr:anchor>
         <fr:title text="References">References</fr:title>
       </fr:frontmatter>
       <fr:mainmatter />
     </fr:tree>
     <fr:tree show-metadata="false" hidden-when-empty="true">
       <fr:frontmatter>
-        <fr:anchor>686</fr:anchor>
+        <fr:anchor>693</fr:anchor>
         <fr:title text="Context">Context</fr:title>
       </fr:frontmatter>
       <fr:mainmatter />
     </fr:tree>
     <fr:tree show-metadata="false" hidden-when-empty="true">
       <fr:frontmatter>
-        <fr:anchor>690</fr:anchor>
+        <fr:anchor>697</fr:anchor>
         <fr:title text="Backlinks">Backlinks</fr:title>
       </fr:frontmatter>
       <fr:mainmatter>
@@ -66,7 +66,7 @@ It feels as there should be a way to do this at a high level utilizing type-base
               <fr:month>1</fr:month>
               <fr:day>31</fr:day>
             </fr:date>
-            <fr:anchor>687</fr:anchor>
+            <fr:anchor>694</fr:anchor>
             <fr:addr type="user">sss-001D</fr:addr>
             <fr:route>sss-001D.xml</fr:route>
             <fr:title text="It's Just Star Continuity?">It's Just Star Continuity?</fr:title>
@@ -86,7 +86,7 @@ It feels as there should be a way to do this at a high level utilizing type-base
                   <fr:month>1</fr:month>
                   <fr:day>29</fr:day>
                 </fr:date>
-                <fr:anchor>426</fr:anchor>
+                <fr:anchor>563</fr:anchor>
                 <fr:addr type="user">sss-0019</fr:addr>
                 <fr:route>sss-0019.xml</fr:route>
                 <fr:title text="Can I Use Guarded Recursion?">Can I Use Guarded Recursion?</fr:title>
@@ -122,7 +122,7 @@ when <fr:tex display="inline"><![CDATA[r \And  {\mathopen {}\left (r \otimes  c 
               <fr:month>1</fr:month>
               <fr:day>29</fr:day>
             </fr:date>
-            <fr:anchor>688</fr:anchor>
+            <fr:anchor>695</fr:anchor>
             <fr:addr type="user">sss-0019</fr:addr>
             <fr:route>sss-0019.xml</fr:route>
             <fr:title text="Can I Use Guarded Recursion?">Can I Use Guarded Recursion?</fr:title>
@@ -157,7 +157,7 @@ when <fr:tex display="inline"><![CDATA[r \And  {\mathopen {}\left (r \otimes  c 
               <fr:month>1</fr:month>
               <fr:day>24</fr:day>
             </fr:date>
-            <fr:anchor>689</fr:anchor>
+            <fr:anchor>696</fr:anchor>
             <fr:addr type="user">sss-0016</fr:addr>
             <fr:route>sss-0016.xml</fr:route>
             <fr:title text="Sequential Ambiguity Helper">Sequential Ambiguity Helper</fr:title>
@@ -173,7 +173,7 @@ when <fr:tex display="inline"><![CDATA[r \And  {\mathopen {}\left (r \otimes  c 
     </fr:tree>
     <fr:tree show-metadata="false" hidden-when-empty="true">
       <fr:frontmatter>
-        <fr:anchor>695</fr:anchor>
+        <fr:anchor>702</fr:anchor>
         <fr:title text="Related">Related</fr:title>
       </fr:frontmatter>
       <fr:mainmatter>
@@ -189,7 +189,7 @@ when <fr:tex display="inline"><![CDATA[r \And  {\mathopen {}\left (r \otimes  c 
               <fr:month>1</fr:month>
               <fr:day>24</fr:day>
             </fr:date>
-            <fr:anchor>691</fr:anchor>
+            <fr:anchor>698</fr:anchor>
             <fr:addr type="user">sss-000W</fr:addr>
             <fr:route>sss-000W.xml</fr:route>
             <fr:title text="Deterministic Regular Expressions">Deterministic Regular Expressions</fr:title>
@@ -219,7 +219,7 @@ In the spirit of <fr:link href="bruggemannkleinwood.xml" title="Deterministic re
               <fr:month>1</fr:month>
               <fr:day>24</fr:day>
             </fr:date>
-            <fr:anchor>692</fr:anchor>
+            <fr:anchor>699</fr:anchor>
             <fr:addr type="user">sss-000Z</fr:addr>
             <fr:route>sss-000Z.xml</fr:route>
             <fr:title text="First Sets in Dependent Lambek Calculus">First Sets in Dependent Lambek Calculus</fr:title>
@@ -243,7 +243,7 @@ In the spirit of <fr:link href="bruggemannkleinwood.xml" title="Deterministic re
               <fr:month>1</fr:month>
               <fr:day>24</fr:day>
             </fr:date>
-            <fr:anchor>693</fr:anchor>
+            <fr:anchor>700</fr:anchor>
             <fr:addr type="user">sss-0011</fr:addr>
             <fr:route>sss-0011.xml</fr:route>
             <fr:title text="FollowLast Sets in Dependent Lambek Calculus">FollowLast Sets in Dependent Lambek Calculus</fr:title>
@@ -267,7 +267,7 @@ In the spirit of <fr:link href="bruggemannkleinwood.xml" title="Deterministic re
               <fr:month>1</fr:month>
               <fr:day>24</fr:day>
             </fr:date>
-            <fr:anchor>694</fr:anchor>
+            <fr:anchor>701</fr:anchor>
             <fr:addr type="user">sss-0015</fr:addr>
             <fr:route>sss-0015.xml</fr:route>
             <fr:title text="Nullability in Dependent Lambek Calculus">Nullability in Dependent Lambek Calculus</fr:title>
@@ -283,7 +283,7 @@ In the spirit of <fr:link href="bruggemannkleinwood.xml" title="Deterministic re
     </fr:tree>
     <fr:tree show-metadata="false" hidden-when-empty="true">
       <fr:frontmatter>
-        <fr:anchor>696</fr:anchor>
+        <fr:anchor>703</fr:anchor>
         <fr:title text="Contributions">Contributions</fr:title>
       </fr:frontmatter>
       <fr:mainmatter />
