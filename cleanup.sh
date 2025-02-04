@@ -9,6 +9,8 @@ KEEP=(
   "build.sh"
   "cleanup.sh"
   "CNAME"
+  "MWPLS.pdf"
+  "intrinsic-verifcation-of-parsers.pdf"
 )
 
 # Convert the array into a pattern string for grep
