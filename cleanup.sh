@@ -10,7 +10,8 @@ KEEP=(
   "cleanup.sh"
   "CNAME"
   "MWPLS.pdf"
-  "intrinsic-verifcation-of-parsers.pdf"
+  "intrinsic-verification-of-parsers.pdf"
+  "headshot.jpeg"
 )
 
 # Convert the array into a pattern string for grep
