@@ -8,7 +8,7 @@
       <fr:month>1</fr:month>
       <fr:day>24</fr:day>
     </fr:date>
-    <fr:anchor>403</fr:anchor>
+    <fr:anchor>448</fr:anchor>
     <fr:addr type="user">journal</fr:addr>
     <fr:route>journal.xml</fr:route>
     <fr:title text="Research Journal">Research Journal</fr:title>
@@ -25,16 +25,71 @@
         <fr:date>
           <fr:year>2025</fr:year>
           <fr:month>2</fr:month>
+          <fr:day>7</fr:day>
+        </fr:date>
+        <fr:anchor>439</fr:anchor>
+        <fr:addr type="user">sss-001Q</fr:addr>
+        <fr:route>sss-001Q.xml</fr:route>
+        <fr:title text="Wrong Definition of FollowLast">Wrong Definition of FollowLast</fr:title>
+        <fr:taxon>Daily</fr:taxon>
+      </fr:frontmatter>
+      <fr:mainmatter>
+        <fr:p>Until now I had been using the wrong definition of follow last sets. Rather than what I intially had,</fr:p>
+        <fr:tree show-metadata="false">
+          <fr:frontmatter>
+            <fr:authors />
+            <fr:date>
+              <fr:year>2025</fr:year>
+              <fr:month>1</fr:month>
+              <fr:day>24</fr:day>
+            </fr:date>
+            <fr:anchor>438</fr:anchor>
+            <fr:addr type="user">sss-0010</fr:addr>
+            <fr:route>sss-0010.xml</fr:route>
+            <fr:title text="FollowLast Set">FollowLast Set</fr:title>
+            <fr:taxon>Definition</fr:taxon>
+          </fr:frontmatter>
+          <fr:mainmatter>
+            <fr:p>The followlast set (<fr:tex display="inline"><![CDATA[\mathsf {FLast}(\cdot )]]></fr:tex>) of a grammar <fr:tex display="inline"><![CDATA[A]]></fr:tex> are all the characters that may follow a word in the language of <fr:tex display="inline"><![CDATA[A]]></fr:tex> in a string that is in the language of <fr:tex display="inline"><![CDATA[A]]></fr:tex>.
+
+  <fr:tex display="block"><![CDATA[ \mathsf {FLast}(A) = \{ c ~|~ \exists  w , w_A . w_A \in  L(A) \land  w_Acw \in  L(A) \}]]></fr:tex></fr:p>
+          </fr:mainmatter>
+        </fr:tree>
+        <fr:p>I should instead require <fr:tex display="inline"><![CDATA[w_A]]></fr:tex> to be empty in
+  <fr:tex display="block"><![CDATA[ \mathsf {FLast}(A) = \{ c ~|~ \exists  w , w_A . w_A \in  L(A) \setminus  \{ \epsilon  \} \land  w_A c w \in  L(A) \}]]></fr:tex></fr:p>
+        <fr:p>Or at least that's what they have in [Neel's paper]{krishnaswami_typed_2019}. Max believes I should have a more compelling argument for which definition is better/more appropriate, which is fair enough. The best argument I have thus far is that our original definition would break the property that
+ <fr:tex display="block"><![CDATA[\mathsf {FLast}(A \oplus  B) = \mathsf {FLast}(A) \cup  \mathsf {FLast}(B)]]></fr:tex></fr:p>
+      </fr:mainmatter>
+    </fr:tree>
+    <fr:tree show-metadata="true" expanded="false" toc="false" numbered="false">
+      <fr:frontmatter>
+        <fr:authors>
+          <fr:author>
+            <fr:link href="stevenschaefer.xml" title="Steven Schaefer" addr="stevenschaefer" type="local">Steven Schaefer</fr:link>
+          </fr:author>
+        </fr:authors>
+        <fr:date>
+          <fr:year>2025</fr:year>
+          <fr:month>2</fr:month>
           <fr:day>6</fr:day>
         </fr:date>
-        <fr:anchor>394</fr:anchor>
+        <fr:anchor>440</fr:anchor>
         <fr:addr type="user">sss-001K</fr:addr>
         <fr:route>sss-001K.xml</fr:route>
         <fr:title text="Using the Subobject Classifier">Using the Subobject Classifier</fr:title>
         <fr:taxon>Daily</fr:taxon>
       </fr:frontmatter>
       <fr:mainmatter>
-        <fr:p>Previously in Agda we had constructed <fr:link href="sss-001L.xml" title="Equalizer" addr="sss-001L" type="local">equalizers</fr:link> in Dependent Lambek Calculus using [sigma types]{sss-001M}.</fr:p>
+        <fr:p>Previously in Agda we had constructed <fr:link href="sss-001L.xml" title="Equalizer" addr="sss-001L" type="local">equalizers</fr:link> in Dependent Lambek Calculus using <fr:link href="sss-001M.xml" title="Constructing Equalizers in Type Theory" addr="sss-001M" type="local">sigma types</fr:link>. Further, equalizers form <fr:link href="sss-001P.xml" title="Subobject" addr="sss-001P" type="local">subobjects</fr:link>, which may be comprehended as maps from a type into a subobject classifier.</fr:p>
+        <fr:p>I believe in our formalization we want to generalize this idea to a broader class of subobjects, maybe even all of them. That is, we could define a <fr:link href="sss-001N.xml" title="Subobject Classifier" addr="sss-001N" type="local">subobject classifying grammar</fr:link> <fr:tex display="inline"><![CDATA[\Omega ]]></fr:tex>. Then we can internally define any predicate on a grammar <fr:tex display="inline"><![CDATA[g]]></fr:tex> via a term <fr:tex display="inline"><![CDATA[p : g \vdash  \Omega ]]></fr:tex>.</fr:p>
+        <fr:p>That is, forall <fr:tex display="inline"><![CDATA[w : \mathrm {String}]]></fr:tex> we have <fr:tex display="inline"><![CDATA[\llbracket {\Omega }\rrbracket (w) \colonequals  \mathsf {hProp}]]></fr:tex>, and
+
+<fr:tex display="block"><![CDATA[
+\llbracket {\mathsf {subgrammar}(g)(p)}\rrbracket (w) \colonequals  \mathchoice {\textstyle \sum _{{\mathopen {}\left (x : \llbracket {g}\rrbracket (w)\right )\mathclose {}}}}{\textstyle \sum _{{\mathopen {}\left (x : \llbracket {g}\rrbracket (w)\right )\mathclose {}}}}{\scriptstyle \sum _{{\mathopen {}\left (x : \llbracket {g}\rrbracket (w)\right )\mathclose {}}}}{\scriptscriptstyle \sum _{{\mathopen {}\left (x : \llbracket {g}\rrbracket (w)\right )\mathclose {}}}}{\llbracket {p}\rrbracket (x)}]]></fr:tex></fr:p>
+        <fr:p>The code for this is nearly identical to the defintion of equalizers as sigma types, and I have even built a translation of the equalizers code that is defined with this as its foundation. I have not yet tested if either implementation is preferable.</fr:p>
+        <fr:p>It isn't yet clear how to best expose this sort of construct syntactically. I suppose you could assume some subobject classifying grammar, but then I don't know if you can then reap the benefits of the propositions internally. That is, how do you reflect the proposition that two terms are equal in the internal language of propositions rather than the external one?</fr:p>
+        <fr:p>If nothing else, this code gives me a reusable interface to axiomatize smaller, sandboxed ways in which I'd like to internalize certain types of propositions (such as "two terms are equal" or "does not begin with the character <fr:tex display="inline"><![CDATA[c]]></fr:tex>").</fr:p>
+        <fr:p>The hope for this code is that it let's me inductively prove the <fr:link href="sss-000V.xml" title="FollowLast Soundness" addr="sss-000V" type="local">follow last soundness</fr:link> of Kleene star.</fr:p>
       </fr:mainmatter>
     </fr:tree>
     <fr:tree show-metadata="true" expanded="false" toc="false" numbered="false">
@@ -49,7 +104,7 @@
           <fr:month>1</fr:month>
           <fr:day>31</fr:day>
         </fr:date>
-        <fr:anchor>396</fr:anchor>
+        <fr:anchor>441</fr:anchor>
         <fr:addr type="user">sss-001D</fr:addr>
         <fr:route>sss-001D.xml</fr:route>
         <fr:title text="It's Just Star Continuity?">It's Just Star Continuity?</fr:title>
@@ -69,7 +124,7 @@
               <fr:month>1</fr:month>
               <fr:day>29</fr:day>
             </fr:date>
-            <fr:anchor>395</fr:anchor>
+            <fr:anchor>401</fr:anchor>
             <fr:addr type="user">sss-0019</fr:addr>
             <fr:route>sss-0019.xml</fr:route>
             <fr:title text="Can I Use Guarded Recursion?">Can I Use Guarded Recursion?</fr:title>
@@ -105,7 +160,7 @@ when <fr:tex display="inline"><![CDATA[r \And  {\mathopen {}\left (r \otimes  c 
           <fr:month>1</fr:month>
           <fr:day>29</fr:day>
         </fr:date>
-        <fr:anchor>397</fr:anchor>
+        <fr:anchor>442</fr:anchor>
         <fr:addr type="user">sss-0019</fr:addr>
         <fr:route>sss-0019.xml</fr:route>
         <fr:title text="Can I Use Guarded Recursion?">Can I Use Guarded Recursion?</fr:title>
@@ -137,7 +192,7 @@ when <fr:tex display="inline"><![CDATA[r \And  {\mathopen {}\left (r \otimes  c 
           <fr:month>1</fr:month>
           <fr:day>29</fr:day>
         </fr:date>
-        <fr:anchor>398</fr:anchor>
+        <fr:anchor>443</fr:anchor>
         <fr:addr type="user">sss-001C</fr:addr>
         <fr:route>sss-001C.xml</fr:route>
         <fr:title text="Guarded Recursion and Linearity">Guarded Recursion and Linearity</fr:title>
@@ -164,7 +219,7 @@ when <fr:tex display="inline"><![CDATA[r \And  {\mathopen {}\left (r \otimes  c 
           <fr:month>1</fr:month>
           <fr:day>29</fr:day>
         </fr:date>
-        <fr:anchor>400</fr:anchor>
+        <fr:anchor>445</fr:anchor>
         <fr:addr type="user">sss-001A</fr:addr>
         <fr:route>sss-001A.xml</fr:route>
         <fr:title text="More Thoughts on Sequential Ambiguity">More Thoughts on Sequential Ambiguity</fr:title>
@@ -187,7 +242,7 @@ when <fr:tex display="inline"><![CDATA[r \And  {\mathopen {}\left (r \otimes  c 
               <fr:month>1</fr:month>
               <fr:day>24</fr:day>
             </fr:date>
-            <fr:anchor>399</fr:anchor>
+            <fr:anchor>444</fr:anchor>
             <fr:addr type="user">sss-0016</fr:addr>
             <fr:route>sss-0016.xml</fr:route>
             <fr:title text="Sequential Ambiguity Helper">Sequential Ambiguity Helper</fr:title>
@@ -216,7 +271,7 @@ when <fr:tex display="inline"><![CDATA[r \And  {\mathopen {}\left (r \otimes  c 
           <fr:month>1</fr:month>
           <fr:day>24</fr:day>
         </fr:date>
-        <fr:anchor>401</fr:anchor>
+        <fr:anchor>446</fr:anchor>
         <fr:addr type="user">sss-000V</fr:addr>
         <fr:route>sss-000V.xml</fr:route>
         <fr:title text="FollowLast Soundness">FollowLast Soundness</fr:title>
@@ -253,7 +308,7 @@ It feels as there should be a way to do this at a high level utilizing type-base
           <fr:month>1</fr:month>
           <fr:day>24</fr:day>
         </fr:date>
-        <fr:anchor>402</fr:anchor>
+        <fr:anchor>447</fr:anchor>
         <fr:addr type="user">sss-0016</fr:addr>
         <fr:route>sss-0016.xml</fr:route>
         <fr:title text="Sequential Ambiguity Helper">Sequential Ambiguity Helper</fr:title>
@@ -269,35 +324,35 @@ It feels as there should be a way to do this at a high level utilizing type-base
   <fr:backmatter>
     <fr:tree show-metadata="false" hidden-when-empty="true">
       <fr:frontmatter>
-        <fr:anchor>389</fr:anchor>
+        <fr:anchor>433</fr:anchor>
         <fr:title text="References">References</fr:title>
       </fr:frontmatter>
       <fr:mainmatter />
     </fr:tree>
     <fr:tree show-metadata="false" hidden-when-empty="true">
       <fr:frontmatter>
-        <fr:anchor>390</fr:anchor>
+        <fr:anchor>434</fr:anchor>
         <fr:title text="Context">Context</fr:title>
       </fr:frontmatter>
       <fr:mainmatter />
     </fr:tree>
     <fr:tree show-metadata="false" hidden-when-empty="true">
       <fr:frontmatter>
-        <fr:anchor>391</fr:anchor>
+        <fr:anchor>435</fr:anchor>
         <fr:title text="Backlinks">Backlinks</fr:title>
       </fr:frontmatter>
       <fr:mainmatter />
     </fr:tree>
     <fr:tree show-metadata="false" hidden-when-empty="true">
       <fr:frontmatter>
-        <fr:anchor>392</fr:anchor>
+        <fr:anchor>436</fr:anchor>
         <fr:title text="Related">Related</fr:title>
       </fr:frontmatter>
       <fr:mainmatter />
     </fr:tree>
     <fr:tree show-metadata="false" hidden-when-empty="true">
       <fr:frontmatter>
-        <fr:anchor>393</fr:anchor>
+        <fr:anchor>437</fr:anchor>
         <fr:title text="Contributions">Contributions</fr:title>
       </fr:frontmatter>
       <fr:mainmatter />

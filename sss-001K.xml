@@ -12,40 +12,49 @@
       <fr:month>2</fr:month>
       <fr:day>6</fr:day>
     </fr:date>
-    <fr:anchor>649</fr:anchor>
+    <fr:anchor>643</fr:anchor>
     <fr:addr type="user">sss-001K</fr:addr>
     <fr:route>sss-001K.xml</fr:route>
     <fr:title text="Using the Subobject Classifier">Using the Subobject Classifier</fr:title>
     <fr:taxon>Daily</fr:taxon>
   </fr:frontmatter>
   <fr:mainmatter>
-    <fr:p>Previously in Agda we had constructed <fr:link href="sss-001L.xml" title="Equalizer" addr="sss-001L" type="local">equalizers</fr:link> in Dependent Lambek Calculus using [sigma types]{sss-001M}.</fr:p>
+    <fr:p>Previously in Agda we had constructed <fr:link href="sss-001L.xml" title="Equalizer" addr="sss-001L" type="local">equalizers</fr:link> in Dependent Lambek Calculus using <fr:link href="sss-001M.xml" title="Constructing Equalizers in Type Theory" addr="sss-001M" type="local">sigma types</fr:link>. Further, equalizers form <fr:link href="sss-001P.xml" title="Subobject" addr="sss-001P" type="local">subobjects</fr:link>, which may be comprehended as maps from a type into a subobject classifier.</fr:p>
+    <fr:p>I believe in our formalization we want to generalize this idea to a broader class of subobjects, maybe even all of them. That is, we could define a <fr:link href="sss-001N.xml" title="Subobject Classifier" addr="sss-001N" type="local">subobject classifying grammar</fr:link> <fr:tex display="inline"><![CDATA[\Omega ]]></fr:tex>. Then we can internally define any predicate on a grammar <fr:tex display="inline"><![CDATA[g]]></fr:tex> via a term <fr:tex display="inline"><![CDATA[p : g \vdash  \Omega ]]></fr:tex>.</fr:p>
+    <fr:p>That is, forall <fr:tex display="inline"><![CDATA[w : \mathrm {String}]]></fr:tex> we have <fr:tex display="inline"><![CDATA[\llbracket {\Omega }\rrbracket (w) \colonequals  \mathsf {hProp}]]></fr:tex>, and
+
+<fr:tex display="block"><![CDATA[
+\llbracket {\mathsf {subgrammar}(g)(p)}\rrbracket (w) \colonequals  \mathchoice {\textstyle \sum _{{\mathopen {}\left (x : \llbracket {g}\rrbracket (w)\right )\mathclose {}}}}{\textstyle \sum _{{\mathopen {}\left (x : \llbracket {g}\rrbracket (w)\right )\mathclose {}}}}{\scriptstyle \sum _{{\mathopen {}\left (x : \llbracket {g}\rrbracket (w)\right )\mathclose {}}}}{\scriptscriptstyle \sum _{{\mathopen {}\left (x : \llbracket {g}\rrbracket (w)\right )\mathclose {}}}}{\llbracket {p}\rrbracket (x)}]]></fr:tex></fr:p>
+    <fr:p>The code for this is nearly identical to the defintion of equalizers as sigma types, and I have even built a translation of the equalizers code that is defined with this as its foundation. I have not yet tested if either implementation is preferable.</fr:p>
+    <fr:p>It isn't yet clear how to best expose this sort of construct syntactically. I suppose you could assume some subobject classifying grammar, but then I don't know if you can then reap the benefits of the propositions internally. That is, how do you reflect the proposition that two terms are equal in the internal language of propositions rather than the external one?</fr:p>
+    <fr:p>If nothing else, this code gives me a reusable interface to axiomatize smaller, sandboxed ways in which I'd like to internalize certain types of propositions (such as "two terms are equal" or "does not begin with the character <fr:tex display="inline"><![CDATA[c]]></fr:tex>").</fr:p>
+    <fr:p>The hope for this code is that it let's me inductively prove the <fr:link href="sss-000V.xml" title="FollowLast Soundness" addr="sss-000V" type="local">follow last soundness</fr:link> of Kleene star.</fr:p>
   </fr:mainmatter>
   <fr:backmatter>
     <fr:tree show-metadata="false" hidden-when-empty="true">
       <fr:frontmatter>
-        <fr:anchor>643</fr:anchor>
+        <fr:anchor>633</fr:anchor>
         <fr:title text="References">References</fr:title>
       </fr:frontmatter>
       <fr:mainmatter />
     </fr:tree>
     <fr:tree show-metadata="false" hidden-when-empty="true">
       <fr:frontmatter>
-        <fr:anchor>644</fr:anchor>
+        <fr:anchor>634</fr:anchor>
         <fr:title text="Context">Context</fr:title>
       </fr:frontmatter>
       <fr:mainmatter />
     </fr:tree>
     <fr:tree show-metadata="false" hidden-when-empty="true">
       <fr:frontmatter>
-        <fr:anchor>645</fr:anchor>
+        <fr:anchor>635</fr:anchor>
         <fr:title text="Backlinks">Backlinks</fr:title>
       </fr:frontmatter>
       <fr:mainmatter />
     </fr:tree>
     <fr:tree show-metadata="false" hidden-when-empty="true">
       <fr:frontmatter>
-        <fr:anchor>647</fr:anchor>
+        <fr:anchor>641</fr:anchor>
         <fr:title text="Related">Related</fr:title>
       </fr:frontmatter>
       <fr:mainmatter>
@@ -59,9 +68,81 @@
             <fr:date>
               <fr:year>2025</fr:year>
               <fr:month>2</fr:month>
+              <fr:day>7</fr:day>
+            </fr:date>
+            <fr:anchor>636</fr:anchor>
+            <fr:addr type="user">sss-001P</fr:addr>
+            <fr:route>sss-001P.xml</fr:route>
+            <fr:title text="Subobject">Subobject</fr:title>
+            <fr:taxon>Definition</fr:taxon>
+          </fr:frontmatter>
+          <fr:mainmatter>
+            <fr:p>In a category <fr:tex display="inline"><![CDATA[\mathcal {C}]]></fr:tex>, a subobject of <fr:tex display="inline"><![CDATA[c]]></fr:tex> is an isomorphism class of monomorphisms into <fr:tex display="inline"><![CDATA[c]]></fr:tex>.</fr:p>
+          </fr:mainmatter>
+        </fr:tree>
+        <fr:tree show-metadata="true" expanded="false" toc="false" numbered="false">
+          <fr:frontmatter>
+            <fr:authors>
+              <fr:author>
+                <fr:link href="stevenschaefer.xml" title="Steven Schaefer" addr="stevenschaefer" type="local">Steven Schaefer</fr:link>
+              </fr:author>
+            </fr:authors>
+            <fr:date>
+              <fr:year>2025</fr:year>
+              <fr:month>2</fr:month>
               <fr:day>6</fr:day>
             </fr:date>
-            <fr:anchor>646</fr:anchor>
+            <fr:anchor>637</fr:anchor>
+            <fr:addr type="user">sss-001N</fr:addr>
+            <fr:route>sss-001N.xml</fr:route>
+            <fr:title text="Subobject Classifier">Subobject Classifier</fr:title>
+            <fr:taxon>Definition</fr:taxon>
+          </fr:frontmatter>
+          <fr:mainmatter>
+            <fr:p>Subsets <fr:tex display="inline"><![CDATA[A]]></fr:tex> of a set <fr:tex display="inline"><![CDATA[X]]></fr:tex> may classically be identified with a characteristic map <fr:tex display="inline"><![CDATA[\chi _{A} : X \to  \mathsf {bool}]]></fr:tex>. Intuitively, for every <fr:tex display="inline"><![CDATA[x : X]]></fr:tex>, <fr:tex display="inline"><![CDATA[\chi _{A}]]></fr:tex> gives a truth value to the statement "<fr:tex display="inline"><![CDATA[x]]></fr:tex> is in the subset <fr:tex display="inline"><![CDATA[A]]></fr:tex>". In this manner, the domain of the characteristic map, <fr:tex display="inline"><![CDATA[\mathsf {bool}]]></fr:tex>, classifies the subsets of <fr:tex display="inline"><![CDATA[X]]></fr:tex>.</fr:p>
+            <fr:p>Generalizing over this principle, in a category <fr:tex display="inline"><![CDATA[\mathcal {C}]]></fr:tex> an object <fr:tex display="inline"><![CDATA[\Omega ]]></fr:tex> is a subobject classifier if maps into it from some object <fr:tex display="inline"><![CDATA[c]]></fr:tex> likewise uniquely identify a <fr:link href="sss-001P.xml" title="Subobject" addr="sss-001P" type="local">subobject</fr:link> of <fr:tex display="inline"><![CDATA[c]]></fr:tex>.</fr:p>
+            <fr:p>We can understand <fr:tex display="inline"><![CDATA[\Omega ]]></fr:tex> to behave like an object of truth values that are not necessarily boolean valued. A morphism <fr:tex display="inline"><![CDATA[p : c \to  \Omega ]]></fr:tex> can be thought of like a predicate on <fr:tex display="inline"><![CDATA[c]]></fr:tex>. If <fr:tex display="inline"><![CDATA[c]]></fr:tex> were a set, this would precisely be the characteristic function on it. However, this idea can generalize beyond sets. For instance in the category of graphs, <fr:tex display="inline"><![CDATA[\Omega ]]></fr:tex> is a cleverly constructed graph such that any graph homomorphism <fr:tex display="inline"><![CDATA[g \to  \Omega ]]></fr:tex> into it picks out a unique subgraph of <fr:tex display="inline"><![CDATA[g]]></fr:tex>.</fr:p>
+            <fr:p>There are always two (suggestively named) disjoint "points" of <fr:tex display="inline"><![CDATA[\Omega ]]></fr:tex>, thought of as morphisms out of the [terminal object]{sss-001O} <fr:tex display="inline"><![CDATA[\mathsf {true} , \mathsf {false} : \top  \to  \Omega ]]></fr:tex>. I think if we're being careful, <fr:tex display="inline"><![CDATA[\mathsf {true}]]></fr:tex> may properly be the "subobject classifier" but I always use the term to refer to <fr:tex display="inline"><![CDATA[\Omega ]]></fr:tex> itself.</fr:p>
+            <fr:p>A subobject <fr:tex display="inline"><![CDATA[\phi  : d \hookrightarrow  c]]></fr:tex> induces a unique characteristic morphism <fr:tex display="inline"><![CDATA[p_{\phi } : c \to  \Omega ]]></fr:tex> such that
+  <fr:tex display="block"><![CDATA[p_{\phi } \circ  \phi  = \mathsf {true} \circ  !_{d}]]></fr:tex>
+  Moreover, the appropriate square must be a pullback, but I cannot currently include <fr:code>tikzcd</fr:code> in Forester, <fr:link href="sss-0018.xml" title="Experience with Forester" addr="sss-0018" type="local">which stinks</fr:link>.</fr:p>
+          </fr:mainmatter>
+        </fr:tree>
+        <fr:tree show-metadata="true" expanded="false" toc="false" numbered="false">
+          <fr:frontmatter>
+            <fr:authors>
+              <fr:author>
+                <fr:link href="stevenschaefer.xml" title="Steven Schaefer" addr="stevenschaefer" type="local">Steven Schaefer</fr:link>
+              </fr:author>
+            </fr:authors>
+            <fr:date>
+              <fr:year>2025</fr:year>
+              <fr:month>2</fr:month>
+              <fr:day>6</fr:day>
+            </fr:date>
+            <fr:anchor>638</fr:anchor>
+            <fr:addr type="user">sss-001M</fr:addr>
+            <fr:route>sss-001M.xml</fr:route>
+            <fr:title text="Constructing Equalizers in Type Theory">Constructing Equalizers in Type Theory</fr:title>
+          </fr:frontmatter>
+          <fr:mainmatter>
+            <fr:p>In the presence of <fr:tex display="inline"><![CDATA[\Sigma ]]></fr:tex>-types, one may construct all <fr:link href="sss-001L.xml" title="Equalizer" addr="sss-001L" type="local">equalizers</fr:link>. Given types <fr:tex display="inline"><![CDATA[A]]></fr:tex> and <fr:tex display="inline"><![CDATA[B]]></fr:tex> with functions <fr:tex display="inline"><![CDATA[f, g : A \to  B]]></fr:tex>, the equalizer may be constructed as
+  <fr:tex display="block"><![CDATA[\mathsf {eq}_{f,g} \colonequals  \mathchoice {\textstyle \sum _{{\mathopen {}\left (a : A\right )\mathclose {}}}}{\textstyle \sum _{{\mathopen {}\left (a : A\right )\mathclose {}}}}{\scriptstyle \sum _{{\mathopen {}\left (a : A\right )\mathclose {}}}}{\scriptscriptstyle \sum _{{\mathopen {}\left (a : A\right )\mathclose {}}}}{{\mathopen {}\left (f(a) = g(a)\right )\mathclose {}}}]]></fr:tex></fr:p>
+          </fr:mainmatter>
+        </fr:tree>
+        <fr:tree show-metadata="true" expanded="false" toc="false" numbered="false">
+          <fr:frontmatter>
+            <fr:authors>
+              <fr:author>
+                <fr:link href="stevenschaefer.xml" title="Steven Schaefer" addr="stevenschaefer" type="local">Steven Schaefer</fr:link>
+              </fr:author>
+            </fr:authors>
+            <fr:date>
+              <fr:year>2025</fr:year>
+              <fr:month>2</fr:month>
+              <fr:day>6</fr:day>
+            </fr:date>
+            <fr:anchor>639</fr:anchor>
             <fr:addr type="user">sss-001L</fr:addr>
             <fr:route>sss-001L.xml</fr:route>
             <fr:title text="Equalizer">Equalizer</fr:title>
@@ -73,11 +154,45 @@
     <fr:li><fr:tex display="inline"><![CDATA[\pi  \circ  f = \pi  \circ  g]]></fr:tex></fr:li></fr:ul></fr:p>
           </fr:mainmatter>
         </fr:tree>
+        <fr:tree show-metadata="true" expanded="false" toc="false" numbered="false">
+          <fr:frontmatter>
+            <fr:authors>
+              <fr:author>
+                <fr:link href="stevenschaefer.xml" title="Steven Schaefer" addr="stevenschaefer" type="local">Steven Schaefer</fr:link>
+              </fr:author>
+            </fr:authors>
+            <fr:date>
+              <fr:year>2025</fr:year>
+              <fr:month>1</fr:month>
+              <fr:day>24</fr:day>
+            </fr:date>
+            <fr:anchor>640</fr:anchor>
+            <fr:addr type="user">sss-000V</fr:addr>
+            <fr:route>sss-000V.xml</fr:route>
+            <fr:title text="FollowLast Soundness">FollowLast Soundness</fr:title>
+            <fr:taxon>Daily</fr:taxon>
+          </fr:frontmatter>
+          <fr:mainmatter>
+            <fr:p>Thus far I have shown the soundness of our notions of <fr:link href="sss-0015.xml" title="Nullability in Dependent Lambek Calculus" addr="sss-0015" type="local">nullability</fr:link> and <fr:link href="sss-000Z.xml" title="First Sets in Dependent Lambek Calculus" addr="sss-000Z" type="local">first sets</fr:link> for the encoding of <fr:link href="sss-000W.xml" title="Deterministic Regular Expressions" addr="sss-000W" type="local">deterministic regular expresssions</fr:link> in Dependent Lambek Calculus.</fr:p>
+            <fr:p>I've been primarily stuck on the following proof for the soundness of the <fr:link href="sss-0011.xml" title="FollowLast Sets in Dependent Lambek Calculus" addr="sss-0011" type="local">followlast</fr:link> sets in the case of concatenation of two nonnullable grammars.
+
+Given <fr:tex display="inline"><![CDATA[g]]></fr:tex> and <fr:tex display="inline"><![CDATA[h]]></fr:tex> such that <fr:tex display="inline"><![CDATA[\mathsf {FLast}(g)]]></fr:tex> and <fr:tex display="inline"><![CDATA[\mathsf {First}(h)]]></fr:tex> are disjoint, and <fr:tex display="inline"><![CDATA[c \not  \in  \mathsf {FLast}(h)]]></fr:tex>, want to show that <fr:tex display="inline"><![CDATA[c]]></fr:tex> is also not in <fr:tex display="inline"><![CDATA[\mathsf {FLast}(g \otimes  h)]]></fr:tex>.
+
+That is, assuming for all <fr:tex display="inline"><![CDATA[c]]></fr:tex>, <fr:tex display="inline"><![CDATA[g \And  {\mathopen {}\left (g \otimes  c \otimes  \top \right )\mathclose {}} \vdash  \bot ]]></fr:tex> or <fr:tex display="inline"><![CDATA[h \And  {\mathopen {}\left (c \otimes  \top \right )\mathclose {}} \vdash  \bot ]]></fr:tex>. Fix <fr:tex display="inline"><![CDATA[c]]></fr:tex> such that <fr:tex display="inline"><![CDATA[h \And  {\mathopen {}\left (h \otimes  c \otimes  \top \right )\mathclose {}} \vdash  \bot ]]></fr:tex>, and then show <fr:tex display="inline"><![CDATA[g \otimes  h \And  {\mathopen {}\left (g \otimes  h \otimes  c \otimes  \top \right )\mathclose {}} \vdash  \bot ]]></fr:tex>.</fr:p>
+            <fr:p>This isn't super bad to do in the model, where you do some case analysis. In particular, the string that is parsed splits into some <fr:tex display="inline"><![CDATA[w , x : \mathrm {String}]]></fr:tex> with <fr:tex display="inline"><![CDATA[g]]></fr:tex> and <fr:tex display="inline"><![CDATA[h]]></fr:tex> parses, respectively. Likewise, it splits into <fr:tex display="inline"><![CDATA[y , z : \mathrm {String}]]></fr:tex> with a <fr:tex display="inline"><![CDATA[g]]></fr:tex> parse of <fr:tex display="inline"><![CDATA[y]]></fr:tex> and an <fr:tex display="inline"><![CDATA[h \otimes  \texttt {"}c\texttt {"} \otimes  \top ]]></fr:tex> parse of <fr:tex display="inline"><![CDATA[z]]></fr:tex>. All in all, we have
+
+<fr:tex display="block"><![CDATA[w,x,y,z : \mathrm {String} , w \texttt { ++ } x = y \texttt { ++ } z]]></fr:tex>
+with some parses <fr:tex display="inline"><![CDATA[g w]]></fr:tex>, <fr:tex display="inline"><![CDATA[h x]]></fr:tex>, <fr:tex display="inline"><![CDATA[g y]]></fr:tex>, and <fr:tex display="inline"><![CDATA[(h \otimes  \texttt {"}c\texttt {"} \otimes  \top ) z]]></fr:tex>. Then you split into cases checking whether <fr:tex display="inline"><![CDATA[w]]></fr:tex> and <fr:tex display="inline"><![CDATA[y]]></fr:tex> are the same string, if <fr:tex display="inline"><![CDATA[w]]></fr:tex> is a (nontrivial) prefix of <fr:tex display="inline"><![CDATA[y]]></fr:tex>, or if <fr:tex display="inline"><![CDATA[y]]></fr:tex> is a prefix of <fr:tex display="inline"><![CDATA[w]]></fr:tex>.  Then each of the cases are straightforward enough but still tedious.</fr:p>
+            <fr:p>I've been weighing whether or not to do effectively the same proof but in the model by using the axiom
+<fr:tex display="block"><![CDATA[g \cong  \textstyle \mathchoice {\textstyle \oplus _{{\mathopen {}\left (w : \mathrm {String}\right )\mathclose {}}}}{\textstyle \oplus _{{\mathopen {}\left (w : \mathrm {String}\right )\mathclose {}}}}{\scriptstyle \oplus _{{\mathopen {}\left (w : \mathrm {String}\right )\mathclose {}}}}{\scriptscriptstyle \oplus _{{\mathopen {}\left (w : \mathrm {String}\right )\mathclose {}}}}. g \And  \lceil  w \rceil ]]></fr:tex>
+It feels as there should be a way to do this at a high level utilizing type-based reasoning, rather than manipulating individual strings.</fr:p>
+          </fr:mainmatter>
+        </fr:tree>
       </fr:mainmatter>
     </fr:tree>
     <fr:tree show-metadata="false" hidden-when-empty="true">
       <fr:frontmatter>
-        <fr:anchor>648</fr:anchor>
+        <fr:anchor>642</fr:anchor>
         <fr:title text="Contributions">Contributions</fr:title>
       </fr:frontmatter>
       <fr:mainmatter />
