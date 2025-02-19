@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="default.xsl"?>
+<fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" root="false">
+  <fr:frontmatter>
+    <fr:authors>
+      <fr:author>
+        <fr:link href="stevenschaefer.xml" title="Steven Schaefer" addr="stevenschaefer" type="local">Steven Schaefer</fr:link>
+      </fr:author>
+    </fr:authors>
+    <fr:date>
+      <fr:year>2025</fr:year>
+      <fr:month>2</fr:month>
+      <fr:day>19</fr:day>
+    </fr:date>
+    <fr:addr>sss-002A</fr:addr>
+    <fr:route>sss-002A.xml</fr:route>
+    <fr:title text="Greedy Parsing">Greedy Parsing</fr:title>
+    <fr:taxon>Definition</fr:taxon>
+  </fr:frontmatter>
+  <fr:mainmatter>
+    <fr:p>A regular expression <fr:tex display="inline"><![CDATA[r]]></fr:tex> may be unambiguous. To resolve this unambiguity one may choose to instead replace <fr:tex display="inline"><![CDATA[r]]></fr:tex> with an unambiguous goal for parsing, or instead one may define a disambiguation strategy for <fr:tex display="inline"><![CDATA[r]]></fr:tex>.</fr:p>
+    <fr:p>For instance, in <fr:link href="frischCardelli.xml" title="Greedy regular expression matching" addr="frischCardelli" type="local">Greedy regular expression matching</fr:link> Frisch and Cardelli alleviate the ambiguity of parsing a Kleene star by always taking the <fr:code>cons</fr:code> branch when possible. That is, when scanning over a string left-to-right with the goal of parsing a Kleene star of <fr:tex display="inline"><![CDATA[A]]></fr:tex> and then another grammar <fr:tex display="inline"><![CDATA[B]]></fr:tex>, we <fr:em>greedily</fr:em> parse a Kleene star of maximal length before moving on to a <fr:tex display="inline"><![CDATA[B]]></fr:tex>.</fr:p>
+    <fr:p>This same greediness approach is common in parsing theory. It is also used in <fr:link href="henglein_regular_2011.xml" title="Regular expression containment: Coinductive axiomatization and computational interpretation" addr="henglein_regular_2011" type="local">Regular expression containment: Coinductive axiomatization and computational interpretation</fr:link> and in parsing expression grammars.</fr:p>
+  </fr:mainmatter>
+  <fr:backmatter>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:title text="References">References</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter>
+        <fr:tree show-metadata="true" expanded="false" toc="false" numbered="false">
+          <fr:frontmatter>
+            <fr:authors>
+              <fr:author>Fritz Henglein</fr:author>
+              <fr:author>Lasse Nielsen</fr:author>
+            </fr:authors>
+            <fr:date>
+              <fr:year>2011</fr:year>
+              <fr:month>1</fr:month>
+            </fr:date>
+            <fr:addr>henglein_regular_2011</fr:addr>
+            <fr:route>henglein_regular_2011.xml</fr:route>
+            <fr:title text="Regular expression containment: Coinductive axiomatization and computational interpretation">Regular expression containment: Coinductive axiomatization and computational interpretation</fr:title>
+            <fr:taxon>Reference</fr:taxon>
+            <fr:meta name="doi">10.1145/1925844.1926429</fr:meta>
+            <fr:meta name="external">https://dl.acm.org/doi/10.1145/1925844.1926429</fr:meta>
+            <fr:meta name="bibtex"><![CDATA[@article{henglein_regular_2011,
+ title = {Regular expression containment: coinductive axiomatization and computational interpretation},
+ author = {Henglein, Fritz and Nielsen, Lasse},
+ year = {2011},
+ doi = {10.1145/1925844.1926429},
+ url = {https://dl.acm.org/doi/10.1145/1925844.1926429},
+ urldate = {2023-11-28},
+ journal = {ACM SIGPLAN Notices},
+ volume = {46},
+ number = {1},
+ pages = {385--398},
+ file = {Full Text PDF:/Users/stevenschaefer/Zotero/storage/ZUZHNIP8/Henglein and Nielsen - 2011 - Regular expression containment coinductive axioma.pdf:application/pdf},
+ keywords = {axiomatization, coercion, coinduction, computational interpretation, containment, equivalence, regular expression, type},
+ month = {January},
+ abstract = {We present a new sound and complete axiomatization of regular expression containment. It consists of the conventional axiomatization of concatenation, alternation, empty set and (the singleton set containing) the empty string as an idempotent semiring, the fixed- point rule E* = 1 + E × E* for Kleene-star, and a general coinduction rule as the only additional rule. Our axiomatization gives rise to a natural computational interpretation of regular expressions as simple types that represent parse trees, and of containment proofs as coercions. This gives the axiom- atization a Curry-Howard-style constructive interpretation: Containment proofs do not only certify a language-theoretic contain- ment, but, under our computational interpretation, constructively transform a membership proof of a string in one regular expression into a membership proof of the same string in another regular expression. We show how to encode regular expression equivalence proofs in Salomaa's, Kozen's and Grabmayer's axiomatizations into our containment system, which equips their axiomatizations with a computational interpretation and implies completeness of our axiomatization. To ensure its soundness, we require that the computational interpretation of the coinduction rule be a hereditarily total function. Hereditary totality can be considered the mother of syn- tactic side conditions: it "explains" their soundness, yet cannot be used as a conventional side condition in its own right since it turns out to be undecidable. We discuss application of regular expressions as types to bit coding of strings and hint at other applications to the wide-spread use of regular expressions for substring matching, where classical automata-theoretic techniques are a priori inapplicable. Neither regular expressions as types nor subtyping interpreted coercively are novel per se. Somewhat surprisingly, this seems to be the first investigation of a general proof-theoretic framework for the latter in the context of the former, however.},
+ shorttitle = {Regular expression containment},
+ issn = {0362-1340}
+}]]></fr:meta>
+          </fr:frontmatter>
+          <fr:mainmatter />
+        </fr:tree>
+        <fr:tree show-metadata="true" expanded="false" toc="false" numbered="false">
+          <fr:frontmatter>
+            <fr:authors>
+              <fr:author>Alain Frisch</fr:author>
+              <fr:author>Luca Cardelli</fr:author>
+            </fr:authors>
+            <fr:date>
+              <fr:year>2004</fr:year>
+            </fr:date>
+            <fr:addr>frischCardelli</fr:addr>
+            <fr:route>frischCardelli.xml</fr:route>
+            <fr:title text="Greedy regular expression matching">Greedy regular expression matching</fr:title>
+            <fr:taxon>Reference</fr:taxon>
+            <fr:meta name="bibtex"><![CDATA[@inproceedings{frischCardelli,
+ title = {Greedy Regular Expression Matching},
+ author = {Frisch, Alain
+and Cardelli, Luca},
+ year = {2004},
+ isbn = {978-3-540-27836-8},
+ booktitle = {Automata, Languages and Programming},
+ editor = {D{\'i}az, Josep
+and Karhum{\"a}ki, Juhani
+and Lepist{\"o}, Arto
+and Sannella, Donald},
+ pages = {618--629},
+ publisher = {Springer Berlin Heidelberg},
+ address = {Berlin, Heidelberg},
+ abstract = {This paper studies the problem of matching sequences against regular expressions in order to produce structured values.}
+}]]></fr:meta>
+          </fr:frontmatter>
+          <fr:mainmatter />
+        </fr:tree>
+      </fr:mainmatter>
+    </fr:tree>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:title text="Context">Context</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter />
+    </fr:tree>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:title text="Backlinks">Backlinks</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter>
+        <fr:tree show-metadata="true" expanded="false" toc="false" numbered="false">
+          <fr:frontmatter>
+            <fr:authors>
+              <fr:author>
+                <fr:link href="stevenschaefer.xml" title="Steven Schaefer" addr="stevenschaefer" type="local">Steven Schaefer</fr:link>
+              </fr:author>
+            </fr:authors>
+            <fr:date>
+              <fr:year>2025</fr:year>
+              <fr:month>2</fr:month>
+              <fr:day>19</fr:day>
+            </fr:date>
+            <fr:addr>sss-002B</fr:addr>
+            <fr:route>sss-002B.xml</fr:route>
+            <fr:title text="Greediness as a Predicate on Grammars?">Greediness as a Predicate on Grammars?</fr:title>
+            <fr:taxon>Daily</fr:taxon>
+          </fr:frontmatter>
+          <fr:mainmatter>
+            <fr:p>I am not quite sure how to make everything precise, but I believe that <fr:link href="sss-002A.xml" title="Greedy Parsing" addr="sss-002A" type="local">greediness</fr:link> may be expressible as a <fr:link href="sss-001K.xml" title="Using the Subobject Classifier" addr="sss-001K" type="local">predicate</fr:link> on tensors.</fr:p>
+            <fr:p>For instance, we may hope to define greediness as something like <fr:tex display="inline"><![CDATA[\mathsf {isGreedy} : A \otimes  B \vdash  \Omega ]]></fr:tex>
+
+<fr:tex display="block"><![CDATA[\mathsf {isGreedy}~w~(s, a , b) \colonequals  \not  \exists  (s' , a' , b') \in  (A \otimes  B) w . \mathsf {stringOf}(a) < \mathsf {stringOf}(a')]]></fr:tex></fr:p>
+            <fr:p>Where above I mean for <fr:tex display="inline"><![CDATA[w, w' : \mathrm {String}]]></fr:tex>, we define <fr:tex display="inline"><![CDATA[w < w']]></fr:tex> to mean that <fr:tex display="inline"><![CDATA[w]]></fr:tex> is a proper prefix of <fr:tex display="inline"><![CDATA[w']]></fr:tex>.</fr:p>
+            <fr:p>In English, this attempt at a definiton would read as : a parse of <fr:tex display="inline"><![CDATA[A \otimes  B]]></fr:tex> is greedy if there is no parse of <fr:tex display="inline"><![CDATA[A \otimes  B]]></fr:tex> for the same string where the parse of <fr:tex display="inline"><![CDATA[A]]></fr:tex> occurs over a larger substring.</fr:p>
+            <fr:p>This definiton cannot work exactly, as it is solely a semantic definiton. Yet it feels close to being workable internally.</fr:p>
+          </fr:mainmatter>
+        </fr:tree>
+      </fr:mainmatter>
+    </fr:tree>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:title text="Related">Related</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter />
+    </fr:tree>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:title text="Contributions">Contributions</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter />
+    </fr:tree>
+  </fr:backmatter>
+</fr:tree>

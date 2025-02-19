@@ -12,8 +12,7 @@
       <fr:month>2</fr:month>
       <fr:day>12</fr:day>
     </fr:date>
-    <fr:anchor>1174</fr:anchor>
-    <fr:addr type="user">sss-001R</fr:addr>
+    <fr:addr>sss-001R</fr:addr>
     <fr:route>sss-001R.xml</fr:route>
     <fr:title text="FollowLast Definition is Actually Fine">FollowLast Definition is Actually Fine</fr:title>
     <fr:taxon>Daily</fr:taxon>
@@ -29,8 +28,7 @@
           <fr:month>1</fr:month>
           <fr:day>24</fr:day>
         </fr:date>
-        <fr:anchor>533</fr:anchor>
-        <fr:addr type="user">sss-0010</fr:addr>
+        <fr:addr>sss-0010</fr:addr>
         <fr:route>sss-0010.xml</fr:route>
         <fr:title text="FollowLast Set">FollowLast Set</fr:title>
         <fr:taxon>Definition</fr:taxon>
@@ -54,8 +52,7 @@
           <fr:month>1</fr:month>
           <fr:day>24</fr:day>
         </fr:date>
-        <fr:anchor>534</fr:anchor>
-        <fr:addr type="user">sss-0011</fr:addr>
+        <fr:addr>sss-0011</fr:addr>
         <fr:route>sss-0011.xml</fr:route>
         <fr:title text="FollowLast Sets in Dependent Lambek Calculus">FollowLast Sets in Dependent Lambek Calculus</fr:title>
         <fr:taxon>Definition</fr:taxon>
@@ -73,7 +70,6 @@
   <fr:backmatter>
     <fr:tree show-metadata="false" hidden-when-empty="true">
       <fr:frontmatter>
-        <fr:anchor>1168</fr:anchor>
         <fr:title text="References">References</fr:title>
       </fr:frontmatter>
       <fr:mainmatter>
@@ -87,8 +83,7 @@
               <fr:year>2019</fr:year>
               <fr:month>6</fr:month>
             </fr:date>
-            <fr:anchor>1166</fr:anchor>
-            <fr:addr type="user">krishnaswami_typed_2019</fr:addr>
+            <fr:addr>krishnaswami_typed_2019</fr:addr>
             <fr:route>krishnaswami_typed_2019.xml</fr:route>
             <fr:title text="A typed, algebraic approach to parsing">A typed, algebraic approach to parsing</fr:title>
             <fr:taxon>Reference</fr:taxon>
@@ -113,14 +108,76 @@
           </fr:frontmatter>
           <fr:mainmatter />
         </fr:tree>
+      </fr:mainmatter>
+    </fr:tree>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:title text="Context">Context</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter />
+    </fr:tree>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:title text="Backlinks">Backlinks</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter />
+    </fr:tree>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:title text="Related">Related</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter>
+        <fr:tree show-metadata="true" expanded="false" toc="false" numbered="false">
+          <fr:frontmatter>
+            <fr:authors>
+              <fr:author>
+                <fr:link href="stevenschaefer.xml" title="Steven Schaefer" addr="stevenschaefer" type="local">Steven Schaefer</fr:link>
+              </fr:author>
+            </fr:authors>
+            <fr:date>
+              <fr:year>2025</fr:year>
+              <fr:month>2</fr:month>
+              <fr:day>7</fr:day>
+            </fr:date>
+            <fr:addr>sss-001Q</fr:addr>
+            <fr:route>sss-001Q.xml</fr:route>
+            <fr:title text="Wrong Definition of FollowLast">Wrong Definition of FollowLast</fr:title>
+            <fr:taxon>Daily</fr:taxon>
+          </fr:frontmatter>
+          <fr:mainmatter>
+            <fr:p>Until now I had been using the wrong definition of follow last sets. Rather than what I intially had,</fr:p>
+            <fr:tree show-metadata="false">
+              <fr:frontmatter>
+                <fr:authors />
+                <fr:date>
+                  <fr:year>2025</fr:year>
+                  <fr:month>1</fr:month>
+                  <fr:day>24</fr:day>
+                </fr:date>
+                <fr:addr>sss-0010</fr:addr>
+                <fr:route>sss-0010.xml</fr:route>
+                <fr:title text="FollowLast Set">FollowLast Set</fr:title>
+                <fr:taxon>Definition</fr:taxon>
+              </fr:frontmatter>
+              <fr:mainmatter>
+                <fr:p>The followlast set (<fr:tex display="inline"><![CDATA[\mathsf {FLast}(\cdot )]]></fr:tex>) of a grammar <fr:tex display="inline"><![CDATA[A]]></fr:tex> are all the characters that may follow a word in the language of <fr:tex display="inline"><![CDATA[A]]></fr:tex> in a string that is in the language of <fr:tex display="inline"><![CDATA[A]]></fr:tex>.
+
+  <fr:tex display="block"><![CDATA[ \mathsf {FLast}(A) = \{ c ~|~ \exists  w , w_A . w_A \in  L(A) \land  w_Acw \in  L(A) \}]]></fr:tex></fr:p>
+              </fr:mainmatter>
+            </fr:tree>
+            <fr:p>I should instead require <fr:tex display="inline"><![CDATA[w_A]]></fr:tex> to be empty in
+  <fr:tex display="block"><![CDATA[ \mathsf {FLast}(A) = \{ c ~|~ \exists  w , w_A . w_A \in  L(A) \setminus  \{ \epsilon  \} \land  w_A c w \in  L(A) \}]]></fr:tex></fr:p>
+            <fr:p>Or at least that's what they have in <fr:link href="krishnaswami_typed_2019.xml" title="A typed, algebraic approach to parsing" addr="krishnaswami_typed_2019" type="local">Neel's paper</fr:link>. Max believes I should have a more compelling argument for which definition is better/more appropriate, which is fair enough. The best argument I have thus far is that our original definition would break the property that
+ <fr:tex display="block"><![CDATA[\mathsf {FLast}(A \oplus  B) = \mathsf {FLast}(A) \cup  \mathsf {FLast}(B)]]></fr:tex></fr:p>
+          </fr:mainmatter>
+        </fr:tree>
         <fr:tree show-metadata="true" expanded="false" toc="false" numbered="false">
           <fr:frontmatter>
             <fr:authors>
               <fr:author>Anne Bruggemann-Klein</fr:author>
               <fr:author>Derick Wood</fr:author>
             </fr:authors>
-            <fr:anchor>1167</fr:anchor>
-            <fr:addr type="user">bruggemannkleinwood</fr:addr>
+            <fr:addr>bruggemannkleinwood</fr:addr>
             <fr:route>bruggemannkleinwood.xml</fr:route>
             <fr:title text="Deterministic regular languages">Deterministic regular languages</fr:title>
             <fr:taxon>Reference</fr:taxon>
@@ -146,75 +203,6 @@ isbn="978-3-540-46775-5"
     </fr:tree>
     <fr:tree show-metadata="false" hidden-when-empty="true">
       <fr:frontmatter>
-        <fr:anchor>1169</fr:anchor>
-        <fr:title text="Context">Context</fr:title>
-      </fr:frontmatter>
-      <fr:mainmatter />
-    </fr:tree>
-    <fr:tree show-metadata="false" hidden-when-empty="true">
-      <fr:frontmatter>
-        <fr:anchor>1170</fr:anchor>
-        <fr:title text="Backlinks">Backlinks</fr:title>
-      </fr:frontmatter>
-      <fr:mainmatter />
-    </fr:tree>
-    <fr:tree show-metadata="false" hidden-when-empty="true">
-      <fr:frontmatter>
-        <fr:anchor>1172</fr:anchor>
-        <fr:title text="Related">Related</fr:title>
-      </fr:frontmatter>
-      <fr:mainmatter>
-        <fr:tree show-metadata="true" expanded="false" toc="false" numbered="false">
-          <fr:frontmatter>
-            <fr:authors>
-              <fr:author>
-                <fr:link href="stevenschaefer.xml" title="Steven Schaefer" addr="stevenschaefer" type="local">Steven Schaefer</fr:link>
-              </fr:author>
-            </fr:authors>
-            <fr:date>
-              <fr:year>2025</fr:year>
-              <fr:month>2</fr:month>
-              <fr:day>7</fr:day>
-            </fr:date>
-            <fr:anchor>1171</fr:anchor>
-            <fr:addr type="user">sss-001Q</fr:addr>
-            <fr:route>sss-001Q.xml</fr:route>
-            <fr:title text="Wrong Definition of FollowLast">Wrong Definition of FollowLast</fr:title>
-            <fr:taxon>Daily</fr:taxon>
-          </fr:frontmatter>
-          <fr:mainmatter>
-            <fr:p>Until now I had been using the wrong definition of follow last sets. Rather than what I intially had,</fr:p>
-            <fr:tree show-metadata="false">
-              <fr:frontmatter>
-                <fr:authors />
-                <fr:date>
-                  <fr:year>2025</fr:year>
-                  <fr:month>1</fr:month>
-                  <fr:day>24</fr:day>
-                </fr:date>
-                <fr:anchor>533</fr:anchor>
-                <fr:addr type="user">sss-0010</fr:addr>
-                <fr:route>sss-0010.xml</fr:route>
-                <fr:title text="FollowLast Set">FollowLast Set</fr:title>
-                <fr:taxon>Definition</fr:taxon>
-              </fr:frontmatter>
-              <fr:mainmatter>
-                <fr:p>The followlast set (<fr:tex display="inline"><![CDATA[\mathsf {FLast}(\cdot )]]></fr:tex>) of a grammar <fr:tex display="inline"><![CDATA[A]]></fr:tex> are all the characters that may follow a word in the language of <fr:tex display="inline"><![CDATA[A]]></fr:tex> in a string that is in the language of <fr:tex display="inline"><![CDATA[A]]></fr:tex>.
-
-  <fr:tex display="block"><![CDATA[ \mathsf {FLast}(A) = \{ c ~|~ \exists  w , w_A . w_A \in  L(A) \land  w_Acw \in  L(A) \}]]></fr:tex></fr:p>
-              </fr:mainmatter>
-            </fr:tree>
-            <fr:p>I should instead require <fr:tex display="inline"><![CDATA[w_A]]></fr:tex> to be empty in
-  <fr:tex display="block"><![CDATA[ \mathsf {FLast}(A) = \{ c ~|~ \exists  w , w_A . w_A \in  L(A) \setminus  \{ \epsilon  \} \land  w_A c w \in  L(A) \}]]></fr:tex></fr:p>
-            <fr:p>Or at least that's what they have in <fr:link href="krishnaswami_typed_2019.xml" title="A typed, algebraic approach to parsing" addr="krishnaswami_typed_2019" type="local">Neel's paper</fr:link>. Max believes I should have a more compelling argument for which definition is better/more appropriate, which is fair enough. The best argument I have thus far is that our original definition would break the property that
- <fr:tex display="block"><![CDATA[\mathsf {FLast}(A \oplus  B) = \mathsf {FLast}(A) \cup  \mathsf {FLast}(B)]]></fr:tex></fr:p>
-          </fr:mainmatter>
-        </fr:tree>
-      </fr:mainmatter>
-    </fr:tree>
-    <fr:tree show-metadata="false" hidden-when-empty="true">
-      <fr:frontmatter>
-        <fr:anchor>1173</fr:anchor>
         <fr:title text="Contributions">Contributions</fr:title>
       </fr:frontmatter>
       <fr:mainmatter />

@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="default.xsl"?>
+<fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" root="false">
+  <fr:frontmatter>
+    <fr:authors>
+      <fr:author>
+        <fr:link href="stevenschaefer.xml" title="Steven Schaefer" addr="stevenschaefer" type="local">Steven Schaefer</fr:link>
+      </fr:author>
+    </fr:authors>
+    <fr:date>
+      <fr:year>2025</fr:year>
+      <fr:month>2</fr:month>
+      <fr:day>19</fr:day>
+    </fr:date>
+    <fr:addr>sss-002B</fr:addr>
+    <fr:route>sss-002B.xml</fr:route>
+    <fr:title text="Greediness as a Predicate on Grammars?">Greediness as a Predicate on Grammars?</fr:title>
+    <fr:taxon>Daily</fr:taxon>
+  </fr:frontmatter>
+  <fr:mainmatter>
+    <fr:p>I am not quite sure how to make everything precise, but I believe that <fr:link href="sss-002A.xml" title="Greedy Parsing" addr="sss-002A" type="local">greediness</fr:link> may be expressible as a <fr:link href="sss-001K.xml" title="Using the Subobject Classifier" addr="sss-001K" type="local">predicate</fr:link> on tensors.</fr:p>
+    <fr:p>For instance, we may hope to define greediness as something like <fr:tex display="inline"><![CDATA[\mathsf {isGreedy} : A \otimes  B \vdash  \Omega ]]></fr:tex>
+
+<fr:tex display="block"><![CDATA[\mathsf {isGreedy}~w~(s, a , b) \colonequals  \not  \exists  (s' , a' , b') \in  (A \otimes  B) w . \mathsf {stringOf}(a) < \mathsf {stringOf}(a')]]></fr:tex></fr:p>
+    <fr:p>Where above I mean for <fr:tex display="inline"><![CDATA[w, w' : \mathrm {String}]]></fr:tex>, we define <fr:tex display="inline"><![CDATA[w < w']]></fr:tex> to mean that <fr:tex display="inline"><![CDATA[w]]></fr:tex> is a proper prefix of <fr:tex display="inline"><![CDATA[w']]></fr:tex>.</fr:p>
+    <fr:p>In English, this attempt at a definiton would read as : a parse of <fr:tex display="inline"><![CDATA[A \otimes  B]]></fr:tex> is greedy if there is no parse of <fr:tex display="inline"><![CDATA[A \otimes  B]]></fr:tex> for the same string where the parse of <fr:tex display="inline"><![CDATA[A]]></fr:tex> occurs over a larger substring.</fr:p>
+    <fr:p>This definiton cannot work exactly, as it is solely a semantic definiton. Yet it feels close to being workable internally.</fr:p>
+  </fr:mainmatter>
+  <fr:backmatter>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:title text="References">References</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter />
+    </fr:tree>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:title text="Context">Context</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter />
+    </fr:tree>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:title text="Backlinks">Backlinks</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter />
+    </fr:tree>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:title text="Related">Related</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter>
+        <fr:tree show-metadata="true" expanded="false" toc="false" numbered="false">
+          <fr:frontmatter>
+            <fr:authors>
+              <fr:author>
+                <fr:link href="stevenschaefer.xml" title="Steven Schaefer" addr="stevenschaefer" type="local">Steven Schaefer</fr:link>
+              </fr:author>
+            </fr:authors>
+            <fr:date>
+              <fr:year>2025</fr:year>
+              <fr:month>2</fr:month>
+              <fr:day>19</fr:day>
+            </fr:date>
+            <fr:addr>sss-002A</fr:addr>
+            <fr:route>sss-002A.xml</fr:route>
+            <fr:title text="Greedy Parsing">Greedy Parsing</fr:title>
+            <fr:taxon>Definition</fr:taxon>
+          </fr:frontmatter>
+          <fr:mainmatter>
+            <fr:p>A regular expression <fr:tex display="inline"><![CDATA[r]]></fr:tex> may be unambiguous. To resolve this unambiguity one may choose to instead replace <fr:tex display="inline"><![CDATA[r]]></fr:tex> with an unambiguous goal for parsing, or instead one may define a disambiguation strategy for <fr:tex display="inline"><![CDATA[r]]></fr:tex>.</fr:p>
+            <fr:p>For instance, in <fr:link href="frischCardelli.xml" title="Greedy regular expression matching" addr="frischCardelli" type="local">Greedy regular expression matching</fr:link> Frisch and Cardelli alleviate the ambiguity of parsing a Kleene star by always taking the <fr:code>cons</fr:code> branch when possible. That is, when scanning over a string left-to-right with the goal of parsing a Kleene star of <fr:tex display="inline"><![CDATA[A]]></fr:tex> and then another grammar <fr:tex display="inline"><![CDATA[B]]></fr:tex>, we <fr:em>greedily</fr:em> parse a Kleene star of maximal length before moving on to a <fr:tex display="inline"><![CDATA[B]]></fr:tex>.</fr:p>
+            <fr:p>This same greediness approach is common in parsing theory. It is also used in <fr:link href="henglein_regular_2011.xml" title="Regular expression containment: Coinductive axiomatization and computational interpretation" addr="henglein_regular_2011" type="local">Regular expression containment: Coinductive axiomatization and computational interpretation</fr:link> and in parsing expression grammars.</fr:p>
+          </fr:mainmatter>
+        </fr:tree>
+        <fr:tree show-metadata="true" expanded="false" toc="false" numbered="false">
+          <fr:frontmatter>
+            <fr:authors>
+              <fr:author>
+                <fr:link href="stevenschaefer.xml" title="Steven Schaefer" addr="stevenschaefer" type="local">Steven Schaefer</fr:link>
+              </fr:author>
+            </fr:authors>
+            <fr:date>
+              <fr:year>2025</fr:year>
+              <fr:month>2</fr:month>
+              <fr:day>6</fr:day>
+            </fr:date>
+            <fr:addr>sss-001K</fr:addr>
+            <fr:route>sss-001K.xml</fr:route>
+            <fr:title text="Using the Subobject Classifier">Using the Subobject Classifier</fr:title>
+            <fr:taxon>Daily</fr:taxon>
+          </fr:frontmatter>
+          <fr:mainmatter>
+            <fr:p>Previously in Agda we had constructed <fr:link href="sss-001L.xml" title="Equalizer" addr="sss-001L" type="local">equalizers</fr:link> in Dependent Lambek Calculus using <fr:link href="sss-001M.xml" title="Constructing Equalizers in Type Theory" addr="sss-001M" type="local">sigma types</fr:link>. Further, equalizers form <fr:link href="sss-001P.xml" title="Subobject" addr="sss-001P" type="local">subobjects</fr:link>, which may be comprehended as maps from a type into a subobject classifier.</fr:p>
+            <fr:p>I believe in our formalization we want to generalize this idea to a broader class of subobjects, maybe even all of them. That is, we could define a <fr:link href="sss-001N.xml" title="Subobject Classifier" addr="sss-001N" type="local">subobject classifying grammar</fr:link> <fr:tex display="inline"><![CDATA[\Omega ]]></fr:tex>. Then we can internally define any predicate on a grammar <fr:tex display="inline"><![CDATA[g]]></fr:tex> via a term <fr:tex display="inline"><![CDATA[p : g \vdash  \Omega ]]></fr:tex>.</fr:p>
+            <fr:p>That is, forall <fr:tex display="inline"><![CDATA[w : \mathrm {String}]]></fr:tex> we have <fr:tex display="inline"><![CDATA[\llbracket {\Omega }\rrbracket (w) \colonequals  \mathsf {hProp}]]></fr:tex>, and
+
+<fr:tex display="block"><![CDATA[
+\llbracket {\mathsf {subgrammar}(g)(p)}\rrbracket (w) \colonequals  \mathchoice {\textstyle \sum _{{\mathopen {}\left (x : \llbracket {g}\rrbracket (w)\right )\mathclose {}}}}{\textstyle \sum _{{\mathopen {}\left (x : \llbracket {g}\rrbracket (w)\right )\mathclose {}}}}{\scriptstyle \sum _{{\mathopen {}\left (x : \llbracket {g}\rrbracket (w)\right )\mathclose {}}}}{\scriptscriptstyle \sum _{{\mathopen {}\left (x : \llbracket {g}\rrbracket (w)\right )\mathclose {}}}}{\llbracket {p}\rrbracket (x)}]]></fr:tex></fr:p>
+            <fr:p>The code for this is nearly identical to the defintion of equalizers as sigma types, and I have even built a translation of the equalizers code that is defined with this as its foundation. I have not yet tested if either implementation is preferable.</fr:p>
+            <fr:p>It isn't yet clear how to best expose this sort of construct syntactically. I suppose you could assume some subobject classifying grammar, but then I don't know if you can then reap the benefits of the propositions internally. That is, how do you reflect the proposition that two terms are equal in the internal language of propositions rather than the external one?</fr:p>
+            <fr:p>If nothing else, this code gives me a reusable interface to axiomatize smaller, sandboxed ways in which I'd like to internalize certain types of propositions (such as "two terms are equal" or "does not begin with the character <fr:tex display="inline"><![CDATA[c]]></fr:tex>").</fr:p>
+            <fr:p>The hope for this code is that it let's me inductively prove the <fr:link href="sss-000V.xml" title="FollowLast Soundness" addr="sss-000V" type="local">follow last soundness</fr:link> of Kleene star.</fr:p>
+          </fr:mainmatter>
+        </fr:tree>
+      </fr:mainmatter>
+    </fr:tree>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:title text="Contributions">Contributions</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter />
+    </fr:tree>
+  </fr:backmatter>
+</fr:tree>
