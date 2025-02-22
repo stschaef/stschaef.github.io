@@ -163,6 +163,32 @@
                 <fr:date>
                   <fr:year>2025</fr:year>
                   <fr:month>2</fr:month>
+                  <fr:day>21</fr:day>
+                </fr:date>
+                <fr:addr>sss-002J</fr:addr>
+                <fr:route>sss-002J.xml</fr:route>
+                <fr:title text="Another Attempt Towards Greediness?">Another Attempt Towards Greediness?</fr:title>
+                <fr:taxon>Daily</fr:taxon>
+              </fr:frontmatter>
+              <fr:mainmatter>
+                <fr:p>It occurs to me that <fr:link href="sss-002B.xml" title="Greediness as a Predicate on Grammars?" addr="sss-002B" type="local">Greediness as a Predicate on Grammars?</fr:link> may be more accurately characterized as "longest-match" instead of "<fr:link href="sss-002A.xml" title="Greedy Parsing" addr="sss-002A" type="local">greediness</fr:link>", but that does not matter too much. A first step is encoding any disambiguation strategy.</fr:p>
+                <fr:p><fr:link href="frischCardelli.xml" title="Greedy regular expression matching" addr="frischCardelli" type="local">Greedy regular expression matching</fr:link> offers a way to break ambiguities introduced by sums and Kleene star. To capture the greedy parsers involve Kleene stars, we may be able to do a much simpler and naive approach.</fr:p>
+                <fr:tex display="block"><![CDATA[{A}^{*} \otimes  {\mathopen {}\left (B \And  \neg  {\mathopen {}\left (A \otimes  \top \right )\mathclose {}}\right )\mathclose {}} \subset  {A}^{*} \otimes  B]]></fr:tex>
+                <fr:p>That is, maybe you can simply restrict the type to make it so the parses following a Kleene star cannot contain a source of ambiguity with respect to that Kleene star. At a first glance, semantically this should enforce the same greediness you'd expect, but I'm not sure how much of this is workable syntactically.</fr:p>
+                <fr:p>Similarly, you may be able to disambiguate sums by preferring the left summand.</fr:p>
+                <fr:tex display="block"><![CDATA[A \oplus  {\mathopen {}\left (B \And  \neg  A\right )\mathclose {}} \subset  A \oplus  B]]></fr:tex>
+              </fr:mainmatter>
+            </fr:tree>
+            <fr:tree show-metadata="true" expanded="false" toc="false" numbered="false">
+              <fr:frontmatter>
+                <fr:authors>
+                  <fr:author>
+                    <fr:link href="stevenschaefer.xml" title="Steven Schaefer" addr="stevenschaefer" type="local">Steven Schaefer</fr:link>
+                  </fr:author>
+                </fr:authors>
+                <fr:date>
+                  <fr:year>2025</fr:year>
+                  <fr:month>2</fr:month>
                   <fr:day>19</fr:day>
                 </fr:date>
                 <fr:addr>sss-002B</fr:addr>
