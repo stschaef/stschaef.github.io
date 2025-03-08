@@ -27,7 +27,6 @@
       <body>
         <ninja-keys placeholder="Start typing a note title or ID" openHotkey="ctrl+k"></ninja-keys>
         <xsl:if test="not(/f:tree[@root = 'true'])">
-
           <header class="header">
             <nav class="nav">
               <div class="logo">
@@ -166,13 +165,25 @@
     </div>
   </xsl:template>
 
-  <xsl:template match="f:addr">
+  <xsl:template match="f:addr[../f:route]">
     <a class="slug" href="{../f:route}">
       <xsl:text>[</xsl:text>
       <xsl:value-of select="." />
       <xsl:text>]</xsl:text>
     </a>
   </xsl:template>
+
+  <xsl:template match="f:addr[not(../f:route)]">
+  </xsl:template>
+
+  <xsl:template match="f:resource">
+    <xsl:apply-templates select="f:resource-content"/>
+  </xsl:template>
+
+  <xsl:template match="f:resource-content">
+    <xsl:apply-templates/>
+  </xsl:template>
+
 
   <xsl:template match="f:source-path">
     <a class="edit-button" href="{concat('vscode://file', .)}">
@@ -275,7 +286,10 @@
     </a>
   </xsl:template>
 
-  <xsl:template match="/f:tree/f:backmatter">
+  <xsl:template match="/f:tree[@root='true']/f:backmatter">
+  </xsl:template>
+
+  <xsl:template match="/f:tree[not(@root='true')]/f:backmatter">
     <footer>
       <xsl:apply-templates />
     </footer>
@@ -287,7 +301,7 @@
   <xsl:template match="f:backmatter//f:backmatter">
   </xsl:template>
 
-  <xsl:template match="f:tree">
+  <xsl:template match="f:tree[f:mainmatter[*] or not(@hidden-when-empty = 'true')]">
     <section>
       <xsl:attribute name="lang">
         <xsl:choose>
@@ -333,5 +347,9 @@
 
     <xsl:apply-templates select="f:backmatter" />
   </xsl:template>
+
+  <xsl:template match="f:tree"></xsl:template>
+
+
 
 </xsl:stylesheet>
