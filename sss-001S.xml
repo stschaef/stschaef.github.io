@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/xsl" href="default.xsl"?>
-<fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" root="false">
+<?xml-stylesheet type="text/xsl" href="/default.xsl"?>
+<fr:tree xmlns:fr="http://www.forester-notes.org" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:xml="http://www.w3.org/XML/1998/namespace" root="false" base-url="/">
   <fr:frontmatter>
     <fr:authors>
       <fr:author>
-        <fr:link href="stevenschaefer.xml" title="Steven Schaefer" addr="stevenschaefer" type="local">Steven Schaefer</fr:link>
+        <fr:link href="/stevenschaefer.xml" title="Steven Schaefer" addr="stevenschaefer" type="local">Steven Schaefer</fr:link>
       </fr:author>
     </fr:authors>
     <fr:date>
@@ -13,34 +13,38 @@
       <fr:day>12</fr:day>
     </fr:date>
     <fr:addr>sss-001S</fr:addr>
-    <fr:route>sss-001S.xml</fr:route>
+    <fr:route>/sss-001S.xml</fr:route>
     <fr:title text="Star Continuity is a Semantic Property">Star Continuity is a Semantic Property</fr:title>
   </fr:frontmatter>
   <fr:mainmatter>
-    <fr:p><fr:link href="sss-001H.xml" title="Star Continuity in Dependent Lambek Calculus" addr="sss-001H" type="local">Star continuity in Dependent Lambek Calculus</fr:link> can often be a convenient proof technique, but its important to remember that this shouldn't be the first line of defense.</fr:p>
-    <fr:p>Star continuity holds in the Agda model, but does it hold in the syntactic model? I believe that it does because of the presence of the indexed coproducts. So perhaps it isn't so sinister after all. It is worth noting that much of the reason performed by inducting on the length of a Kleene star isn't very elegant. If a proof necessitates star continuity, then it doesn't seem to be aided greatly by the type system.</fr:p>
+    <html:p><fr:link href="/sss-001H.xml" title="Star Continuity in Dependent Lambek Calculus" addr="sss-001H" type="local">Star continuity in Dependent Lambek Calculus</fr:link> can often be a convenient proof technique, but its important to remember that this shouldn't be the first line of defense.</html:p>
+    <html:p>Star continuity holds in the Agda model, but does it hold in the syntactic model? I believe that it does because of the presence of the indexed coproducts. So perhaps it isn't so sinister after all. It is worth noting that much of the reason performed by inducting on the length of a Kleene star isn't very elegant. If a proof necessitates star continuity, then it doesn't seem to be aided greatly by the type system.</html:p>
   </fr:mainmatter>
   <fr:backmatter>
     <fr:tree show-metadata="false" hidden-when-empty="true">
       <fr:frontmatter>
+        <fr:authors />
         <fr:title text="References">References</fr:title>
       </fr:frontmatter>
       <fr:mainmatter />
     </fr:tree>
     <fr:tree show-metadata="false" hidden-when-empty="true">
       <fr:frontmatter>
+        <fr:authors />
         <fr:title text="Context">Context</fr:title>
       </fr:frontmatter>
       <fr:mainmatter />
     </fr:tree>
     <fr:tree show-metadata="false" hidden-when-empty="true">
       <fr:frontmatter>
+        <fr:authors />
         <fr:title text="Backlinks">Backlinks</fr:title>
       </fr:frontmatter>
       <fr:mainmatter />
     </fr:tree>
     <fr:tree show-metadata="false" hidden-when-empty="true">
       <fr:frontmatter>
+        <fr:authors />
         <fr:title text="Related">Related</fr:title>
       </fr:frontmatter>
       <fr:mainmatter>
@@ -48,7 +52,7 @@
           <fr:frontmatter>
             <fr:authors>
               <fr:author>
-                <fr:link href="stevenschaefer.xml" title="Steven Schaefer" addr="stevenschaefer" type="local">Steven Schaefer</fr:link>
+                <fr:link href="/stevenschaefer.xml" title="Steven Schaefer" addr="stevenschaefer" type="local">Steven Schaefer</fr:link>
               </fr:author>
             </fr:authors>
             <fr:date>
@@ -57,22 +61,23 @@
               <fr:day>3</fr:day>
             </fr:date>
             <fr:addr>sss-001H</fr:addr>
-            <fr:route>sss-001H.xml</fr:route>
+            <fr:route>/sss-001H.xml</fr:route>
             <fr:title text="Star Continuity in Dependent Lambek Calculus">Star Continuity in Dependent Lambek Calculus</fr:title>
             <fr:taxon>Definition</fr:taxon>
           </fr:frontmatter>
           <fr:mainmatter>
-            <fr:p>For a grammar <fr:tex display="inline"><![CDATA[A]]></fr:tex>, the Kleene star <fr:tex display="inline"><![CDATA[{A}^{*}]]></fr:tex> is isomorphic to an indexed coproduct.
+            <html:p>For a grammar <fr:tex display="inline"><![CDATA[A]]></fr:tex>, the Kleene star <fr:tex display="inline"><![CDATA[{A}^{*}]]></fr:tex> is isomorphic to an indexed coproduct.
 
-  <fr:tex display="block"><![CDATA[{A}^{*} \cong  \textstyle \mathchoice {\textstyle \oplus _{{\mathopen {}\left (n : \mathbb {N}\right )\mathclose {}}}}{\textstyle \oplus _{{\mathopen {}\left (n : \mathbb {N}\right )\mathclose {}}}}{\scriptstyle \oplus _{{\mathopen {}\left (n : \mathbb {N}\right )\mathclose {}}}}{\scriptscriptstyle \oplus _{{\mathopen {}\left (n : \mathbb {N}\right )\mathclose {}}}}. \textrm {char}^{\otimes  n}]]></fr:tex></fr:p>
-            <fr:p>That is, we may view the parses of <fr:tex display="inline"><![CDATA[{A}^{*}]]></fr:tex> like a linear list comprising parses of <fr:tex display="inline"><![CDATA[A]]></fr:tex> concatenated together. Further, for each of these lists we may know the precise length.</fr:p>
-            <fr:p>When viewing Dependent Lambek Calculus as a model of Kleene algebra, this is precisely the statement that <fr:link href="sss-001F.xml" title="Star Continuity" addr="sss-001F" type="local">star continuity</fr:link> holds.</fr:p>
+  <fr:tex display="block"><![CDATA[{A}^{*} \cong  \textstyle \mathchoice {\textstyle \oplus _{{\mathopen {}\left (n : \mathbb {N}\right )\mathclose {}}}}{\textstyle \oplus _{{\mathopen {}\left (n : \mathbb {N}\right )\mathclose {}}}}{\scriptstyle \oplus _{{\mathopen {}\left (n : \mathbb {N}\right )\mathclose {}}}}{\scriptscriptstyle \oplus _{{\mathopen {}\left (n : \mathbb {N}\right )\mathclose {}}}}. \textrm {char}^{\otimes  n}]]></fr:tex></html:p>
+            <html:p>That is, we may view the parses of <fr:tex display="inline"><![CDATA[{A}^{*}]]></fr:tex> like a linear list comprising parses of <fr:tex display="inline"><![CDATA[A]]></fr:tex> concatenated together. Further, for each of these lists we may know the precise length.</html:p>
+            <html:p>When viewing Dependent Lambek Calculus as a model of Kleene algebra, this is precisely the statement that <fr:link href="/sss-001F.xml" title="Star Continuity" addr="sss-001F" type="local">star continuity</fr:link> holds.</html:p>
           </fr:mainmatter>
         </fr:tree>
       </fr:mainmatter>
     </fr:tree>
     <fr:tree show-metadata="false" hidden-when-empty="true">
       <fr:frontmatter>
+        <fr:authors />
         <fr:title text="Contributions">Contributions</fr:title>
       </fr:frontmatter>
       <fr:mainmatter />

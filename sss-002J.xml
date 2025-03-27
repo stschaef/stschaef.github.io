@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/xsl" href="default.xsl"?>
-<fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" root="false">
+<?xml-stylesheet type="text/xsl" href="/default.xsl"?>
+<fr:tree xmlns:fr="http://www.forester-notes.org" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:xml="http://www.w3.org/XML/1998/namespace" root="false" base-url="/">
   <fr:frontmatter>
     <fr:authors>
       <fr:author>
-        <fr:link href="stevenschaefer.xml" title="Steven Schaefer" addr="stevenschaefer" type="local">Steven Schaefer</fr:link>
+        <fr:link href="/stevenschaefer.xml" title="Steven Schaefer" addr="stevenschaefer" type="local">Steven Schaefer</fr:link>
       </fr:author>
     </fr:authors>
     <fr:date>
@@ -13,21 +13,22 @@
       <fr:day>21</fr:day>
     </fr:date>
     <fr:addr>sss-002J</fr:addr>
-    <fr:route>sss-002J.xml</fr:route>
+    <fr:route>/sss-002J.xml</fr:route>
     <fr:title text="Another Attempt Towards Greediness?">Another Attempt Towards Greediness?</fr:title>
     <fr:taxon>Daily</fr:taxon>
   </fr:frontmatter>
   <fr:mainmatter>
-    <fr:p>It occurs to me that <fr:link href="sss-002B.xml" title="Greediness as a Predicate on Grammars?" addr="sss-002B" type="local">Greediness as a Predicate on Grammars?</fr:link> may be more accurately characterized as "longest-match" instead of "<fr:link href="sss-002A.xml" title="Greedy Parsing" addr="sss-002A" type="local">greediness</fr:link>", but that does not matter too much. A first step is encoding any disambiguation strategy.</fr:p>
-    <fr:p><fr:link href="frischCardelli.xml" title="Greedy regular expression matching" addr="frischCardelli" type="local">Greedy regular expression matching</fr:link> offers a way to break ambiguities introduced by sums and Kleene star. To capture the greedy parsers involve Kleene stars, we may be able to do a much simpler and naive approach.</fr:p>
+    <html:p>It occurs to me that <fr:link href="/sss-002B.xml" title="Greediness as a Predicate on Grammars?" addr="sss-002B" type="local">Greediness as a Predicate on Grammars?</fr:link> may be more accurately characterized as "longest-match" instead of "<fr:link href="/sss-002A.xml" title="Greedy Parsing" addr="sss-002A" type="local">greediness</fr:link>", but that does not matter too much. A first step is encoding any disambiguation strategy.</html:p>
+    <html:p><fr:link href="/frischCardelli.xml" title="Greedy regular expression matching" addr="frischCardelli" type="local">Greedy regular expression matching</fr:link> offers a way to break ambiguities introduced by sums and Kleene star. To capture the greedy parsers involve Kleene stars, we may be able to do a much simpler and naive approach.</html:p>
     <fr:tex display="block"><![CDATA[{A}^{*} \otimes  {\mathopen {}\left (B \And  \neg  {\mathopen {}\left (A \otimes  \top \right )\mathclose {}}\right )\mathclose {}} \subset  {A}^{*} \otimes  B]]></fr:tex>
-    <fr:p>That is, maybe you can simply restrict the type to make it so the parses following a Kleene star cannot contain a source of ambiguity with respect to that Kleene star. At a first glance, semantically this should enforce the same greediness you'd expect, but I'm not sure how much of this is workable syntactically.</fr:p>
-    <fr:p>Similarly, you may be able to disambiguate sums by preferring the left summand.</fr:p>
+    <html:p>That is, maybe you can simply restrict the type to make it so the parses following a Kleene star cannot contain a source of ambiguity with respect to that Kleene star. At a first glance, semantically this should enforce the same greediness you'd expect, but I'm not sure how much of this is workable syntactically.</html:p>
+    <html:p>Similarly, you may be able to disambiguate sums by preferring the left summand.</html:p>
     <fr:tex display="block"><![CDATA[A \oplus  {\mathopen {}\left (B \And  \neg  A\right )\mathclose {}} \subset  A \oplus  B]]></fr:tex>
   </fr:mainmatter>
   <fr:backmatter>
     <fr:tree show-metadata="false" hidden-when-empty="true">
       <fr:frontmatter>
+        <fr:authors />
         <fr:title text="References">References</fr:title>
       </fr:frontmatter>
       <fr:mainmatter>
@@ -41,7 +42,7 @@
               <fr:year>2004</fr:year>
             </fr:date>
             <fr:addr>frischCardelli</fr:addr>
-            <fr:route>frischCardelli.xml</fr:route>
+            <fr:route>/frischCardelli.xml</fr:route>
             <fr:title text="Greedy regular expression matching">Greedy regular expression matching</fr:title>
             <fr:taxon>Reference</fr:taxon>
             <fr:meta name="bibtex"><![CDATA[@inproceedings{frischCardelli,
@@ -67,18 +68,21 @@ and Sannella, Donald},
     </fr:tree>
     <fr:tree show-metadata="false" hidden-when-empty="true">
       <fr:frontmatter>
+        <fr:authors />
         <fr:title text="Context">Context</fr:title>
       </fr:frontmatter>
       <fr:mainmatter />
     </fr:tree>
     <fr:tree show-metadata="false" hidden-when-empty="true">
       <fr:frontmatter>
+        <fr:authors />
         <fr:title text="Backlinks">Backlinks</fr:title>
       </fr:frontmatter>
       <fr:mainmatter />
     </fr:tree>
     <fr:tree show-metadata="false" hidden-when-empty="true">
       <fr:frontmatter>
+        <fr:authors />
         <fr:title text="Related">Related</fr:title>
       </fr:frontmatter>
       <fr:mainmatter>
@@ -86,7 +90,7 @@ and Sannella, Donald},
           <fr:frontmatter>
             <fr:authors>
               <fr:author>
-                <fr:link href="stevenschaefer.xml" title="Steven Schaefer" addr="stevenschaefer" type="local">Steven Schaefer</fr:link>
+                <fr:link href="/stevenschaefer.xml" title="Steven Schaefer" addr="stevenschaefer" type="local">Steven Schaefer</fr:link>
               </fr:author>
             </fr:authors>
             <fr:date>
@@ -95,25 +99,25 @@ and Sannella, Donald},
               <fr:day>19</fr:day>
             </fr:date>
             <fr:addr>sss-002B</fr:addr>
-            <fr:route>sss-002B.xml</fr:route>
+            <fr:route>/sss-002B.xml</fr:route>
             <fr:title text="Greediness as a Predicate on Grammars?">Greediness as a Predicate on Grammars?</fr:title>
             <fr:taxon>Daily</fr:taxon>
           </fr:frontmatter>
           <fr:mainmatter>
-            <fr:p>I am not quite sure how to make everything precise, but I believe that <fr:link href="sss-002A.xml" title="Greedy Parsing" addr="sss-002A" type="local">greediness</fr:link> may be expressible as a <fr:link href="sss-001K.xml" title="Using the Subobject Classifier" addr="sss-001K" type="local">predicate</fr:link> on tensors.</fr:p>
-            <fr:p>For instance, we may hope to define greediness as something like <fr:tex display="inline"><![CDATA[\mathsf {isGreedy} : A \otimes  B \vdash  \Omega ]]></fr:tex>
+            <html:p>I am not quite sure how to make everything precise, but I believe that <fr:link href="/sss-002A.xml" title="Greedy Parsing" addr="sss-002A" type="local">greediness</fr:link> may be expressible as a <fr:link href="/sss-001K.xml" title="Using the Subobject Classifier" addr="sss-001K" type="local">predicate</fr:link> on tensors.</html:p>
+            <html:p>For instance, we may hope to define greediness as something like <fr:tex display="inline"><![CDATA[\mathsf {isGreedy} : A \otimes  B \vdash  \Omega ]]></fr:tex>
 
-<fr:tex display="block"><![CDATA[\mathsf {isGreedy}~w~(s, a , b) \colonequals  \not  \exists  (s' , a' , b') \in  (A \otimes  B) w . \mathsf {stringOf}(a) < \mathsf {stringOf}(a')]]></fr:tex></fr:p>
-            <fr:p>Where above I mean for <fr:tex display="inline"><![CDATA[w, w' : \mathrm {String}]]></fr:tex>, we define <fr:tex display="inline"><![CDATA[w < w']]></fr:tex> to mean that <fr:tex display="inline"><![CDATA[w]]></fr:tex> is a proper prefix of <fr:tex display="inline"><![CDATA[w']]></fr:tex>.</fr:p>
-            <fr:p>In English, this attempt at a definiton would read as : a parse of <fr:tex display="inline"><![CDATA[A \otimes  B]]></fr:tex> is greedy if there is no parse of <fr:tex display="inline"><![CDATA[A \otimes  B]]></fr:tex> for the same string where the parse of <fr:tex display="inline"><![CDATA[A]]></fr:tex> occurs over a larger substring.</fr:p>
-            <fr:p>This definiton cannot work exactly, as it is solely a semantic definiton. Yet it feels close to being workable internally.</fr:p>
+<fr:tex display="block"><![CDATA[\mathsf {isGreedy}~w~(s, a , b) \colonequals  \not  \exists  (s' , a' , b') \in  (A \otimes  B) w . \mathsf {stringOf}(a) < \mathsf {stringOf}(a')]]></fr:tex></html:p>
+            <html:p>Where above I mean for <fr:tex display="inline"><![CDATA[w, w' : \mathrm {String}]]></fr:tex>, we define <fr:tex display="inline"><![CDATA[w < w']]></fr:tex> to mean that <fr:tex display="inline"><![CDATA[w]]></fr:tex> is a proper prefix of <fr:tex display="inline"><![CDATA[w']]></fr:tex>.</html:p>
+            <html:p>In English, this attempt at a definiton would read as : a parse of <fr:tex display="inline"><![CDATA[A \otimes  B]]></fr:tex> is greedy if there is no parse of <fr:tex display="inline"><![CDATA[A \otimes  B]]></fr:tex> for the same string where the parse of <fr:tex display="inline"><![CDATA[A]]></fr:tex> occurs over a larger substring.</html:p>
+            <html:p>This definiton cannot work exactly, as it is solely a semantic definiton. Yet it feels close to being workable internally.</html:p>
           </fr:mainmatter>
         </fr:tree>
         <fr:tree show-metadata="true" expanded="false" toc="false" numbered="false">
           <fr:frontmatter>
             <fr:authors>
               <fr:author>
-                <fr:link href="stevenschaefer.xml" title="Steven Schaefer" addr="stevenschaefer" type="local">Steven Schaefer</fr:link>
+                <fr:link href="/stevenschaefer.xml" title="Steven Schaefer" addr="stevenschaefer" type="local">Steven Schaefer</fr:link>
               </fr:author>
             </fr:authors>
             <fr:date>
@@ -122,20 +126,21 @@ and Sannella, Donald},
               <fr:day>19</fr:day>
             </fr:date>
             <fr:addr>sss-002A</fr:addr>
-            <fr:route>sss-002A.xml</fr:route>
+            <fr:route>/sss-002A.xml</fr:route>
             <fr:title text="Greedy Parsing">Greedy Parsing</fr:title>
             <fr:taxon>Definition</fr:taxon>
           </fr:frontmatter>
           <fr:mainmatter>
-            <fr:p>A regular expression <fr:tex display="inline"><![CDATA[r]]></fr:tex> may be unambiguous. To resolve this unambiguity one may choose to instead replace <fr:tex display="inline"><![CDATA[r]]></fr:tex> with an unambiguous goal for parsing, or instead one may define a disambiguation strategy for <fr:tex display="inline"><![CDATA[r]]></fr:tex>.</fr:p>
-            <fr:p>For instance, in <fr:link href="frischCardelli.xml" title="Greedy regular expression matching" addr="frischCardelli" type="local">Greedy regular expression matching</fr:link> Frisch and Cardelli alleviate the ambiguity of parsing a Kleene star by always taking the <fr:code>cons</fr:code> branch when possible. That is, when scanning over a string left-to-right with the goal of parsing a Kleene star of <fr:tex display="inline"><![CDATA[A]]></fr:tex> and then another grammar <fr:tex display="inline"><![CDATA[B]]></fr:tex>, we <fr:em>greedily</fr:em> parse a Kleene star of maximal length before moving on to a <fr:tex display="inline"><![CDATA[B]]></fr:tex>.</fr:p>
-            <fr:p>This same greediness approach is common in parsing theory. It is also used in <fr:link href="henglein_regular_2011.xml" title="Regular expression containment: Coinductive axiomatization and computational interpretation" addr="henglein_regular_2011" type="local">Regular expression containment: Coinductive axiomatization and computational interpretation</fr:link> and in parsing expression grammars.</fr:p>
+            <html:p>A regular expression <fr:tex display="inline"><![CDATA[r]]></fr:tex> may be unambiguous. To resolve this unambiguity one may choose to instead replace <fr:tex display="inline"><![CDATA[r]]></fr:tex> with an unambiguous goal for parsing, or instead one may define a disambiguation strategy for <fr:tex display="inline"><![CDATA[r]]></fr:tex>.</html:p>
+            <html:p>For instance, in <fr:link href="/frischCardelli.xml" title="Greedy regular expression matching" addr="frischCardelli" type="local">Greedy regular expression matching</fr:link> Frisch and Cardelli alleviate the ambiguity of parsing a Kleene star by always taking the <html:code>cons</html:code> branch when possible. That is, when scanning over a string left-to-right with the goal of parsing a Kleene star of <fr:tex display="inline"><![CDATA[A]]></fr:tex> and then another grammar <fr:tex display="inline"><![CDATA[B]]></fr:tex>, we <html:em>greedily</html:em> parse a Kleene star of maximal length before moving on to a <fr:tex display="inline"><![CDATA[B]]></fr:tex>.</html:p>
+            <html:p>This same greediness approach is common in parsing theory. It is also used in <fr:link href="/henglein_regular_2011.xml" title="Regular expression containment: Coinductive axiomatization and computational interpretation" addr="henglein_regular_2011" type="local">Regular expression containment: Coinductive axiomatization and computational interpretation</fr:link> and in parsing expression grammars.</html:p>
           </fr:mainmatter>
         </fr:tree>
       </fr:mainmatter>
     </fr:tree>
     <fr:tree show-metadata="false" hidden-when-empty="true">
       <fr:frontmatter>
+        <fr:authors />
         <fr:title text="Contributions">Contributions</fr:title>
       </fr:frontmatter>
       <fr:mainmatter />

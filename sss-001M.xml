@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/xsl" href="default.xsl"?>
-<fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" root="false">
+<?xml-stylesheet type="text/xsl" href="/default.xsl"?>
+<fr:tree xmlns:fr="http://www.forester-notes.org" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:xml="http://www.w3.org/XML/1998/namespace" root="false" base-url="/">
   <fr:frontmatter>
     <fr:authors>
       <fr:author>
-        <fr:link href="stevenschaefer.xml" title="Steven Schaefer" addr="stevenschaefer" type="local">Steven Schaefer</fr:link>
+        <fr:link href="/stevenschaefer.xml" title="Steven Schaefer" addr="stevenschaefer" type="local">Steven Schaefer</fr:link>
       </fr:author>
     </fr:authors>
     <fr:date>
@@ -13,28 +13,31 @@
       <fr:day>6</fr:day>
     </fr:date>
     <fr:addr>sss-001M</fr:addr>
-    <fr:route>sss-001M.xml</fr:route>
+    <fr:route>/sss-001M.xml</fr:route>
     <fr:title text="Constructing Equalizers in Type Theory">Constructing Equalizers in Type Theory</fr:title>
   </fr:frontmatter>
   <fr:mainmatter>
-    <fr:p>In the presence of <fr:tex display="inline"><![CDATA[\Sigma ]]></fr:tex>-types, one may construct all <fr:link href="sss-001L.xml" title="Equalizer" addr="sss-001L" type="local">equalizers</fr:link>. Given types <fr:tex display="inline"><![CDATA[A]]></fr:tex> and <fr:tex display="inline"><![CDATA[B]]></fr:tex> with functions <fr:tex display="inline"><![CDATA[f, g : A \to  B]]></fr:tex>, the equalizer may be constructed as
-  <fr:tex display="block"><![CDATA[\mathsf {eq}_{f,g} \colonequals  \mathchoice {\textstyle \sum _{{\mathopen {}\left (a : A\right )\mathclose {}}}}{\textstyle \sum _{{\mathopen {}\left (a : A\right )\mathclose {}}}}{\scriptstyle \sum _{{\mathopen {}\left (a : A\right )\mathclose {}}}}{\scriptscriptstyle \sum _{{\mathopen {}\left (a : A\right )\mathclose {}}}}{{\mathopen {}\left (f(a) = g(a)\right )\mathclose {}}}]]></fr:tex></fr:p>
+    <html:p>In the presence of <fr:tex display="inline"><![CDATA[\Sigma ]]></fr:tex>-types, one may construct all <fr:link href="/sss-001L.xml" title="Equalizer" addr="sss-001L" type="local">equalizers</fr:link>. Given types <fr:tex display="inline"><![CDATA[A]]></fr:tex> and <fr:tex display="inline"><![CDATA[B]]></fr:tex> with functions <fr:tex display="inline"><![CDATA[f, g : A \to  B]]></fr:tex>, the equalizer may be constructed as
+  <fr:tex display="block"><![CDATA[\mathsf {eq}_{f,g} \colonequals  \mathchoice {\textstyle \sum _{{\mathopen {}\left (a : A\right )\mathclose {}}}}{\textstyle \sum _{{\mathopen {}\left (a : A\right )\mathclose {}}}}{\scriptstyle \sum _{{\mathopen {}\left (a : A\right )\mathclose {}}}}{\scriptscriptstyle \sum _{{\mathopen {}\left (a : A\right )\mathclose {}}}}{{\mathopen {}\left (f(a) = g(a)\right )\mathclose {}}}]]></fr:tex></html:p>
   </fr:mainmatter>
   <fr:backmatter>
     <fr:tree show-metadata="false" hidden-when-empty="true">
       <fr:frontmatter>
+        <fr:authors />
         <fr:title text="References">References</fr:title>
       </fr:frontmatter>
       <fr:mainmatter />
     </fr:tree>
     <fr:tree show-metadata="false" hidden-when-empty="true">
       <fr:frontmatter>
+        <fr:authors />
         <fr:title text="Context">Context</fr:title>
       </fr:frontmatter>
       <fr:mainmatter />
     </fr:tree>
     <fr:tree show-metadata="false" hidden-when-empty="true">
       <fr:frontmatter>
+        <fr:authors />
         <fr:title text="Backlinks">Backlinks</fr:title>
       </fr:frontmatter>
       <fr:mainmatter>
@@ -42,7 +45,7 @@
           <fr:frontmatter>
             <fr:authors>
               <fr:author>
-                <fr:link href="stevenschaefer.xml" title="Steven Schaefer" addr="stevenschaefer" type="local">Steven Schaefer</fr:link>
+                <fr:link href="/stevenschaefer.xml" title="Steven Schaefer" addr="stevenschaefer" type="local">Steven Schaefer</fr:link>
               </fr:author>
             </fr:authors>
             <fr:date>
@@ -51,27 +54,28 @@
               <fr:day>6</fr:day>
             </fr:date>
             <fr:addr>sss-001K</fr:addr>
-            <fr:route>sss-001K.xml</fr:route>
+            <fr:route>/sss-001K.xml</fr:route>
             <fr:title text="Using the Subobject Classifier">Using the Subobject Classifier</fr:title>
             <fr:taxon>Daily</fr:taxon>
           </fr:frontmatter>
           <fr:mainmatter>
-            <fr:p>Previously in Agda we had constructed <fr:link href="sss-001L.xml" title="Equalizer" addr="sss-001L" type="local">equalizers</fr:link> in Dependent Lambek Calculus using <fr:link href="sss-001M.xml" title="Constructing Equalizers in Type Theory" addr="sss-001M" type="local">sigma types</fr:link>. Further, equalizers form <fr:link href="sss-001P.xml" title="Subobject" addr="sss-001P" type="local">subobjects</fr:link>, which may be comprehended as maps from a type into a subobject classifier.</fr:p>
-            <fr:p>I believe in our formalization we want to generalize this idea to a broader class of subobjects, maybe even all of them. That is, we could define a <fr:link href="sss-001N.xml" title="Subobject Classifier" addr="sss-001N" type="local">subobject classifying grammar</fr:link> <fr:tex display="inline"><![CDATA[\Omega ]]></fr:tex>. Then we can internally define any predicate on a grammar <fr:tex display="inline"><![CDATA[g]]></fr:tex> via a term <fr:tex display="inline"><![CDATA[p : g \vdash  \Omega ]]></fr:tex>.</fr:p>
-            <fr:p>That is, forall <fr:tex display="inline"><![CDATA[w : \mathrm {String}]]></fr:tex> we have <fr:tex display="inline"><![CDATA[\llbracket {\Omega }\rrbracket (w) \colonequals  \mathsf {hProp}]]></fr:tex>, and
+            <html:p>Previously in Agda we had constructed <fr:link href="/sss-001L.xml" title="Equalizer" addr="sss-001L" type="local">equalizers</fr:link> in Dependent Lambek Calculus using <fr:link href="/sss-001M.xml" title="Constructing Equalizers in Type Theory" addr="sss-001M" type="local">sigma types</fr:link>. Further, equalizers form <fr:link href="/sss-001P.xml" title="Subobject" addr="sss-001P" type="local">subobjects</fr:link>, which may be comprehended as maps from a type into a subobject classifier.</html:p>
+            <html:p>I believe in our formalization we want to generalize this idea to a broader class of subobjects, maybe even all of them. That is, we could define a <fr:link href="/sss-001N.xml" title="Subobject Classifier" addr="sss-001N" type="local">subobject classifying grammar</fr:link> <fr:tex display="inline"><![CDATA[\Omega ]]></fr:tex>. Then we can internally define any predicate on a grammar <fr:tex display="inline"><![CDATA[g]]></fr:tex> via a term <fr:tex display="inline"><![CDATA[p : g \vdash  \Omega ]]></fr:tex>.</html:p>
+            <html:p>That is, forall <fr:tex display="inline"><![CDATA[w : \mathrm {String}]]></fr:tex> we have <fr:tex display="inline"><![CDATA[\llbracket {\Omega }\rrbracket (w) \colonequals  \mathsf {hProp}]]></fr:tex>, and
 
 <fr:tex display="block"><![CDATA[
-\llbracket {\mathsf {subgrammar}(g)(p)}\rrbracket (w) \colonequals  \mathchoice {\textstyle \sum _{{\mathopen {}\left (x : \llbracket {g}\rrbracket (w)\right )\mathclose {}}}}{\textstyle \sum _{{\mathopen {}\left (x : \llbracket {g}\rrbracket (w)\right )\mathclose {}}}}{\scriptstyle \sum _{{\mathopen {}\left (x : \llbracket {g}\rrbracket (w)\right )\mathclose {}}}}{\scriptscriptstyle \sum _{{\mathopen {}\left (x : \llbracket {g}\rrbracket (w)\right )\mathclose {}}}}{\llbracket {p}\rrbracket (x)}]]></fr:tex></fr:p>
-            <fr:p>The code for this is nearly identical to the defintion of equalizers as sigma types, and I have even built a translation of the equalizers code that is defined with this as its foundation. I have not yet tested if either implementation is preferable.</fr:p>
-            <fr:p>It isn't yet clear how to best expose this sort of construct syntactically. I suppose you could assume some subobject classifying grammar, but then I don't know if you can then reap the benefits of the propositions internally. That is, how do you reflect the proposition that two terms are equal in the internal language of propositions rather than the external one?</fr:p>
-            <fr:p>If nothing else, this code gives me a reusable interface to axiomatize smaller, sandboxed ways in which I'd like to internalize certain types of propositions (such as "two terms are equal" or "does not begin with the character <fr:tex display="inline"><![CDATA[c]]></fr:tex>").</fr:p>
-            <fr:p>The hope for this code is that it let's me inductively prove the <fr:link href="sss-000V.xml" title="FollowLast Soundness" addr="sss-000V" type="local">follow last soundness</fr:link> of Kleene star.</fr:p>
+\llbracket {\mathsf {subgrammar}(g)(p)}\rrbracket (w) \colonequals  \mathchoice {\textstyle \sum _{{\mathopen {}\left (x : \llbracket {g}\rrbracket (w)\right )\mathclose {}}}}{\textstyle \sum _{{\mathopen {}\left (x : \llbracket {g}\rrbracket (w)\right )\mathclose {}}}}{\scriptstyle \sum _{{\mathopen {}\left (x : \llbracket {g}\rrbracket (w)\right )\mathclose {}}}}{\scriptscriptstyle \sum _{{\mathopen {}\left (x : \llbracket {g}\rrbracket (w)\right )\mathclose {}}}}{\llbracket {p}\rrbracket (x)}]]></fr:tex></html:p>
+            <html:p>The code for this is nearly identical to the defintion of equalizers as sigma types, and I have even built a translation of the equalizers code that is defined with this as its foundation. I have not yet tested if either implementation is preferable.</html:p>
+            <html:p>It isn't yet clear how to best expose this sort of construct syntactically. I suppose you could assume some subobject classifying grammar, but then I don't know if you can then reap the benefits of the propositions internally. That is, how do you reflect the proposition that two terms are equal in the internal language of propositions rather than the external one?</html:p>
+            <html:p>If nothing else, this code gives me a reusable interface to axiomatize smaller, sandboxed ways in which I'd like to internalize certain types of propositions (such as "two terms are equal" or "does not begin with the character <fr:tex display="inline"><![CDATA[c]]></fr:tex>").</html:p>
+            <html:p>The hope for this code is that it let's me inductively prove the <fr:link href="/sss-000V.xml" title="FollowLast Soundness" addr="sss-000V" type="local">follow last soundness</fr:link> of Kleene star.</html:p>
           </fr:mainmatter>
         </fr:tree>
       </fr:mainmatter>
     </fr:tree>
     <fr:tree show-metadata="false" hidden-when-empty="true">
       <fr:frontmatter>
+        <fr:authors />
         <fr:title text="Related">Related</fr:title>
       </fr:frontmatter>
       <fr:mainmatter>
@@ -79,7 +83,7 @@
           <fr:frontmatter>
             <fr:authors>
               <fr:author>
-                <fr:link href="stevenschaefer.xml" title="Steven Schaefer" addr="stevenschaefer" type="local">Steven Schaefer</fr:link>
+                <fr:link href="/stevenschaefer.xml" title="Steven Schaefer" addr="stevenschaefer" type="local">Steven Schaefer</fr:link>
               </fr:author>
             </fr:authors>
             <fr:date>
@@ -88,20 +92,21 @@
               <fr:day>6</fr:day>
             </fr:date>
             <fr:addr>sss-001L</fr:addr>
-            <fr:route>sss-001L.xml</fr:route>
+            <fr:route>/sss-001L.xml</fr:route>
             <fr:title text="Equalizer">Equalizer</fr:title>
             <fr:taxon>Definition</fr:taxon>
           </fr:frontmatter>
           <fr:mainmatter>
-            <fr:p>Let <fr:tex display="inline"><![CDATA[c]]></fr:tex> and <fr:tex display="inline"><![CDATA[d]]></fr:tex> be objects in a category <fr:tex display="inline"><![CDATA[\mathcal {C}]]></fr:tex> with two parallel morphisms <fr:tex display="inline"><![CDATA[f , g : c \to  d]]></fr:tex>. The <fr:em>equalizer</fr:em> of <fr:tex display="inline"><![CDATA[f]]></fr:tex> and <fr:tex display="inline"><![CDATA[g]]></fr:tex>, if it exists, is the universal object <fr:tex display="inline"><![CDATA[\mathsf {eq}]]></fr:tex> with the following property:
-  <fr:ul><fr:li>There is a morphism <fr:tex display="inline"><![CDATA[\pi  : \mathsf {eq} \to  c]]></fr:tex></fr:li>
-    <fr:li><fr:tex display="inline"><![CDATA[\pi  \circ  f = \pi  \circ  g]]></fr:tex></fr:li></fr:ul></fr:p>
+            <html:p>Let <fr:tex display="inline"><![CDATA[c]]></fr:tex> and <fr:tex display="inline"><![CDATA[d]]></fr:tex> be objects in a category <fr:tex display="inline"><![CDATA[\mathcal {C}]]></fr:tex> with two parallel morphisms <fr:tex display="inline"><![CDATA[f , g : c \to  d]]></fr:tex>. The <html:em>equalizer</html:em> of <fr:tex display="inline"><![CDATA[f]]></fr:tex> and <fr:tex display="inline"><![CDATA[g]]></fr:tex>, if it exists, is the universal object <fr:tex display="inline"><![CDATA[\mathsf {eq}]]></fr:tex> with the following property:
+  <html:ul><html:li>There is a morphism <fr:tex display="inline"><![CDATA[\pi  : \mathsf {eq} \to  c]]></fr:tex></html:li>
+    <html:li><fr:tex display="inline"><![CDATA[\pi  \circ  f = \pi  \circ  g]]></fr:tex></html:li></html:ul></html:p>
           </fr:mainmatter>
         </fr:tree>
       </fr:mainmatter>
     </fr:tree>
     <fr:tree show-metadata="false" hidden-when-empty="true">
       <fr:frontmatter>
+        <fr:authors />
         <fr:title text="Contributions">Contributions</fr:title>
       </fr:frontmatter>
       <fr:mainmatter />

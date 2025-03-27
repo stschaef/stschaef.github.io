@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/xsl" href="default.xsl"?>
-<fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" root="false">
+<?xml-stylesheet type="text/xsl" href="/default.xsl"?>
+<fr:tree xmlns:fr="http://www.forester-notes.org" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:xml="http://www.w3.org/XML/1998/namespace" root="false" base-url="/">
   <fr:frontmatter>
     <fr:authors>
       <fr:author>
-        <fr:link href="stevenschaefer.xml" title="Steven Schaefer" addr="stevenschaefer" type="local">Steven Schaefer</fr:link>
+        <fr:link href="/stevenschaefer.xml" title="Steven Schaefer" addr="stevenschaefer" type="local">Steven Schaefer</fr:link>
       </fr:author>
     </fr:authors>
     <fr:date>
@@ -13,13 +13,13 @@
       <fr:day>12</fr:day>
     </fr:date>
     <fr:addr>sss-001R</fr:addr>
-    <fr:route>sss-001R.xml</fr:route>
+    <fr:route>/sss-001R.xml</fr:route>
     <fr:title text="FollowLast Definition is Actually Fine">FollowLast Definition is Actually Fine</fr:title>
     <fr:taxon>Daily</fr:taxon>
   </fr:frontmatter>
   <fr:mainmatter>
-    <fr:p>In <fr:link href="sss-001Q.xml" title="Wrong Definition of FollowLast" addr="sss-001Q" type="local">Wrong Definition of FollowLast</fr:link>, I mention that the definition of follow last sets in the Agda formalization needs to be changed to match the definitions used in <fr:link href="krishnaswami_typed_2019.xml" title="A typed, algebraic approach to parsing" addr="krishnaswami_typed_2019" type="local">[krishnaswami_typed_2019]</fr:link> and <fr:link href="bruggemannkleinwood.xml" title="Deterministic regular languages" addr="bruggemannkleinwood" type="local">[bruggemannkleinwood]</fr:link>.</fr:p>
-    <fr:p>Instead I had define follow last sets as</fr:p>
+    <html:p>In <fr:link href="/sss-001Q.xml" title="Wrong Definition of FollowLast" addr="sss-001Q" type="local">Wrong Definition of FollowLast</fr:link>, I mention that the definition of follow last sets in the Agda formalization needs to be changed to match the definitions used in <fr:link href="/krishnaswami_typed_2019.xml" title="A typed, algebraic approach to parsing" addr="krishnaswami_typed_2019" type="local">[krishnaswami_typed_2019]</fr:link> and <fr:link href="/bruggemannkleinwood.xml" title="Deterministic regular languages" addr="bruggemannkleinwood" type="local">[bruggemannkleinwood]</fr:link>.</html:p>
+    <html:p>Instead I had define follow last sets as</html:p>
     <fr:tree show-metadata="false">
       <fr:frontmatter>
         <fr:authors />
@@ -29,22 +29,22 @@
           <fr:day>24</fr:day>
         </fr:date>
         <fr:addr>sss-0010</fr:addr>
-        <fr:route>sss-0010.xml</fr:route>
+        <fr:route>/sss-0010.xml</fr:route>
         <fr:title text="FollowLast Set">FollowLast Set</fr:title>
         <fr:taxon>Definition</fr:taxon>
       </fr:frontmatter>
       <fr:mainmatter>
-        <fr:p>The followlast set (<fr:tex display="inline"><![CDATA[\mathsf {FLast}(\cdot )]]></fr:tex>) of a grammar <fr:tex display="inline"><![CDATA[A]]></fr:tex> are all the characters that may follow a word in the language of <fr:tex display="inline"><![CDATA[A]]></fr:tex> in a string that is in the language of <fr:tex display="inline"><![CDATA[A]]></fr:tex>.
+        <html:p>The followlast set (<fr:tex display="inline"><![CDATA[\mathsf {FLast}(\cdot )]]></fr:tex>) of a grammar <fr:tex display="inline"><![CDATA[A]]></fr:tex> are all the characters that may follow a word in the language of <fr:tex display="inline"><![CDATA[A]]></fr:tex> in a string that is in the language of <fr:tex display="inline"><![CDATA[A]]></fr:tex>.
 
-  <fr:tex display="block"><![CDATA[ \mathsf {FLast}(A) = \{ c ~|~ \exists  w , w_A . w_A \in  L(A) \land  w_Acw \in  L(A) \}]]></fr:tex></fr:p>
+  <fr:tex display="block"><![CDATA[ \mathsf {FLast}(A) = \{ c ~|~ \exists  w , w_A . w_A \in  L(A) \land  w_Acw \in  L(A) \}]]></fr:tex></html:p>
       </fr:mainmatter>
     </fr:tree>
-    <fr:p>This definition is encoded in Dependent Lambek Calculus as follows,</fr:p>
+    <html:p>This definition is encoded in Dependent Lambek Calculus as follows,</html:p>
     <fr:tree show-metadata="false">
       <fr:frontmatter>
         <fr:authors>
           <fr:author>
-            <fr:link href="stevenschaefer.xml" title="Steven Schaefer" addr="stevenschaefer" type="local">Steven Schaefer</fr:link>
+            <fr:link href="/stevenschaefer.xml" title="Steven Schaefer" addr="stevenschaefer" type="local">Steven Schaefer</fr:link>
           </fr:author>
         </fr:authors>
         <fr:date>
@@ -53,23 +53,24 @@
           <fr:day>24</fr:day>
         </fr:date>
         <fr:addr>sss-0011</fr:addr>
-        <fr:route>sss-0011.xml</fr:route>
+        <fr:route>/sss-0011.xml</fr:route>
         <fr:title text="FollowLast Sets in Dependent Lambek Calculus">FollowLast Sets in Dependent Lambek Calculus</fr:title>
         <fr:taxon>Definition</fr:taxon>
       </fr:frontmatter>
       <fr:mainmatter>
-        <fr:p>The <fr:link href="sss-0010.xml" title="FollowLast Set" addr="sss-0010" type="local">followlast set</fr:link> of a grammar <fr:tex display="inline"><![CDATA[A]]></fr:tex> may be captured in Dependent Lambek Calculus via the following proposition:
+        <html:p>The <fr:link href="/sss-0010.xml" title="FollowLast Set" addr="sss-0010" type="local">followlast set</fr:link> of a grammar <fr:tex display="inline"><![CDATA[A]]></fr:tex> may be captured in Dependent Lambek Calculus via the following proposition:
 
-  <fr:tex display="block"><![CDATA[ c \not  \in  \mathsf {FLast}(A) := A \And  (A \otimes  \texttt {"}c\texttt {"} \otimes  \top ) \vdash  \bot ]]></fr:tex></fr:p>
+  <fr:tex display="block"><![CDATA[ c \not  \in  \mathsf {FLast}(A) := A \And  (A \otimes  \texttt {"}c\texttt {"} \otimes  \top ) \vdash  \bot ]]></fr:tex></html:p>
       </fr:mainmatter>
     </fr:tree>
-    <fr:p>It turns out the original definitions I used aren't incorrect, instead the follow last set of a disjunction must be augmented. In <fr:link href="krishnaswami_typed_2019.xml" title="A typed, algebraic approach to parsing" addr="krishnaswami_typed_2019" type="local">A typed, algebraic approach to parsing</fr:link> and <fr:link href="bruggemannkleinwood.xml" title="Deterministic regular languages" addr="bruggemannkleinwood" type="local">Deterministic regular languages</fr:link>, the follow last sets of a disjunction obey a very aesthetic equality,
-<fr:tex display="block"><![CDATA[\mathsf {FLast}(A \oplus  B) = \mathsf {FLast}(A) \cup  \mathsf {FLast}(B)]]></fr:tex></fr:p>
-    <fr:p>However, with my augmented definition if either of <fr:tex display="inline"><![CDATA[A]]></fr:tex> or <fr:tex display="inline"><![CDATA[B]]></fr:tex> is nullable, the follow last set of <fr:tex display="inline"><![CDATA[A \oplus  B]]></fr:tex> must also be unioned with <fr:tex display="inline"><![CDATA[\mathsf {First}(A) \cup  \mathsf {First}(B)]]></fr:tex>.</fr:p>
+    <html:p>It turns out the original definitions I used aren't incorrect, instead the follow last set of a disjunction must be augmented. In <fr:link href="/krishnaswami_typed_2019.xml" title="A typed, algebraic approach to parsing" addr="krishnaswami_typed_2019" type="local">A typed, algebraic approach to parsing</fr:link> and <fr:link href="/bruggemannkleinwood.xml" title="Deterministic regular languages" addr="bruggemannkleinwood" type="local">Deterministic regular languages</fr:link>, the follow last sets of a disjunction obey a very aesthetic equality,
+<fr:tex display="block"><![CDATA[\mathsf {FLast}(A \oplus  B) = \mathsf {FLast}(A) \cup  \mathsf {FLast}(B)]]></fr:tex></html:p>
+    <html:p>However, with my augmented definition if either of <fr:tex display="inline"><![CDATA[A]]></fr:tex> or <fr:tex display="inline"><![CDATA[B]]></fr:tex> is nullable, the follow last set of <fr:tex display="inline"><![CDATA[A \oplus  B]]></fr:tex> must also be unioned with <fr:tex display="inline"><![CDATA[\mathsf {First}(A) \cup  \mathsf {First}(B)]]></fr:tex>.</html:p>
   </fr:mainmatter>
   <fr:backmatter>
     <fr:tree show-metadata="false" hidden-when-empty="true">
       <fr:frontmatter>
+        <fr:authors />
         <fr:title text="References">References</fr:title>
       </fr:frontmatter>
       <fr:mainmatter>
@@ -84,7 +85,7 @@
               <fr:month>6</fr:month>
             </fr:date>
             <fr:addr>krishnaswami_typed_2019</fr:addr>
-            <fr:route>krishnaswami_typed_2019.xml</fr:route>
+            <fr:route>/krishnaswami_typed_2019.xml</fr:route>
             <fr:title text="A typed, algebraic approach to parsing">A typed, algebraic approach to parsing</fr:title>
             <fr:taxon>Reference</fr:taxon>
             <fr:meta name="doi">10.1145/3314221.3314625</fr:meta>
@@ -108,69 +109,6 @@
           </fr:frontmatter>
           <fr:mainmatter />
         </fr:tree>
-      </fr:mainmatter>
-    </fr:tree>
-    <fr:tree show-metadata="false" hidden-when-empty="true">
-      <fr:frontmatter>
-        <fr:title text="Context">Context</fr:title>
-      </fr:frontmatter>
-      <fr:mainmatter />
-    </fr:tree>
-    <fr:tree show-metadata="false" hidden-when-empty="true">
-      <fr:frontmatter>
-        <fr:title text="Backlinks">Backlinks</fr:title>
-      </fr:frontmatter>
-      <fr:mainmatter />
-    </fr:tree>
-    <fr:tree show-metadata="false" hidden-when-empty="true">
-      <fr:frontmatter>
-        <fr:title text="Related">Related</fr:title>
-      </fr:frontmatter>
-      <fr:mainmatter>
-        <fr:tree show-metadata="true" expanded="false" toc="false" numbered="false">
-          <fr:frontmatter>
-            <fr:authors>
-              <fr:author>
-                <fr:link href="stevenschaefer.xml" title="Steven Schaefer" addr="stevenschaefer" type="local">Steven Schaefer</fr:link>
-              </fr:author>
-            </fr:authors>
-            <fr:date>
-              <fr:year>2025</fr:year>
-              <fr:month>2</fr:month>
-              <fr:day>7</fr:day>
-            </fr:date>
-            <fr:addr>sss-001Q</fr:addr>
-            <fr:route>sss-001Q.xml</fr:route>
-            <fr:title text="Wrong Definition of FollowLast">Wrong Definition of FollowLast</fr:title>
-            <fr:taxon>Daily</fr:taxon>
-          </fr:frontmatter>
-          <fr:mainmatter>
-            <fr:p>Until now I had been using the wrong definition of follow last sets. Rather than what I intially had,</fr:p>
-            <fr:tree show-metadata="false">
-              <fr:frontmatter>
-                <fr:authors />
-                <fr:date>
-                  <fr:year>2025</fr:year>
-                  <fr:month>1</fr:month>
-                  <fr:day>24</fr:day>
-                </fr:date>
-                <fr:addr>sss-0010</fr:addr>
-                <fr:route>sss-0010.xml</fr:route>
-                <fr:title text="FollowLast Set">FollowLast Set</fr:title>
-                <fr:taxon>Definition</fr:taxon>
-              </fr:frontmatter>
-              <fr:mainmatter>
-                <fr:p>The followlast set (<fr:tex display="inline"><![CDATA[\mathsf {FLast}(\cdot )]]></fr:tex>) of a grammar <fr:tex display="inline"><![CDATA[A]]></fr:tex> are all the characters that may follow a word in the language of <fr:tex display="inline"><![CDATA[A]]></fr:tex> in a string that is in the language of <fr:tex display="inline"><![CDATA[A]]></fr:tex>.
-
-  <fr:tex display="block"><![CDATA[ \mathsf {FLast}(A) = \{ c ~|~ \exists  w , w_A . w_A \in  L(A) \land  w_Acw \in  L(A) \}]]></fr:tex></fr:p>
-              </fr:mainmatter>
-            </fr:tree>
-            <fr:p>I should instead require <fr:tex display="inline"><![CDATA[w_A]]></fr:tex> to be empty in
-  <fr:tex display="block"><![CDATA[ \mathsf {FLast}(A) = \{ c ~|~ \exists  w , w_A . w_A \in  L(A) \setminus  \{ \epsilon  \} \land  w_A c w \in  L(A) \}]]></fr:tex></fr:p>
-            <fr:p>Or at least that's what they have in <fr:link href="krishnaswami_typed_2019.xml" title="A typed, algebraic approach to parsing" addr="krishnaswami_typed_2019" type="local">Neel's paper</fr:link>. Max believes I should have a more compelling argument for which definition is better/more appropriate, which is fair enough. The best argument I have thus far is that our original definition would break the property that
- <fr:tex display="block"><![CDATA[\mathsf {FLast}(A \oplus  B) = \mathsf {FLast}(A) \cup  \mathsf {FLast}(B)]]></fr:tex></fr:p>
-          </fr:mainmatter>
-        </fr:tree>
         <fr:tree show-metadata="true" expanded="false" toc="false" numbered="false">
           <fr:frontmatter>
             <fr:authors>
@@ -178,7 +116,7 @@
               <fr:author>Derick Wood</fr:author>
             </fr:authors>
             <fr:addr>bruggemannkleinwood</fr:addr>
-            <fr:route>bruggemannkleinwood.xml</fr:route>
+            <fr:route>/bruggemannkleinwood.xml</fr:route>
             <fr:title text="Deterministic regular languages">Deterministic regular languages</fr:title>
             <fr:taxon>Reference</fr:taxon>
             <fr:meta name="doi">10.1007/3-540-55210-3_182</fr:meta>
@@ -203,6 +141,73 @@ isbn="978-3-540-46775-5"
     </fr:tree>
     <fr:tree show-metadata="false" hidden-when-empty="true">
       <fr:frontmatter>
+        <fr:authors />
+        <fr:title text="Context">Context</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter />
+    </fr:tree>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors />
+        <fr:title text="Backlinks">Backlinks</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter />
+    </fr:tree>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors />
+        <fr:title text="Related">Related</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter>
+        <fr:tree show-metadata="true" expanded="false" toc="false" numbered="false">
+          <fr:frontmatter>
+            <fr:authors>
+              <fr:author>
+                <fr:link href="/stevenschaefer.xml" title="Steven Schaefer" addr="stevenschaefer" type="local">Steven Schaefer</fr:link>
+              </fr:author>
+            </fr:authors>
+            <fr:date>
+              <fr:year>2025</fr:year>
+              <fr:month>2</fr:month>
+              <fr:day>7</fr:day>
+            </fr:date>
+            <fr:addr>sss-001Q</fr:addr>
+            <fr:route>/sss-001Q.xml</fr:route>
+            <fr:title text="Wrong Definition of FollowLast">Wrong Definition of FollowLast</fr:title>
+            <fr:taxon>Daily</fr:taxon>
+          </fr:frontmatter>
+          <fr:mainmatter>
+            <html:p>Until now I had been using the wrong definition of follow last sets. Rather than what I intially had,</html:p>
+            <fr:tree show-metadata="false">
+              <fr:frontmatter>
+                <fr:authors />
+                <fr:date>
+                  <fr:year>2025</fr:year>
+                  <fr:month>1</fr:month>
+                  <fr:day>24</fr:day>
+                </fr:date>
+                <fr:addr>sss-0010</fr:addr>
+                <fr:route>/sss-0010.xml</fr:route>
+                <fr:title text="FollowLast Set">FollowLast Set</fr:title>
+                <fr:taxon>Definition</fr:taxon>
+              </fr:frontmatter>
+              <fr:mainmatter>
+                <html:p>The followlast set (<fr:tex display="inline"><![CDATA[\mathsf {FLast}(\cdot )]]></fr:tex>) of a grammar <fr:tex display="inline"><![CDATA[A]]></fr:tex> are all the characters that may follow a word in the language of <fr:tex display="inline"><![CDATA[A]]></fr:tex> in a string that is in the language of <fr:tex display="inline"><![CDATA[A]]></fr:tex>.
+
+  <fr:tex display="block"><![CDATA[ \mathsf {FLast}(A) = \{ c ~|~ \exists  w , w_A . w_A \in  L(A) \land  w_Acw \in  L(A) \}]]></fr:tex></html:p>
+              </fr:mainmatter>
+            </fr:tree>
+            <html:p>I should instead require <fr:tex display="inline"><![CDATA[w_A]]></fr:tex> to be empty in
+  <fr:tex display="block"><![CDATA[ \mathsf {FLast}(A) = \{ c ~|~ \exists  w , w_A . w_A \in  L(A) \setminus  \{ \epsilon  \} \land  w_A c w \in  L(A) \}]]></fr:tex></html:p>
+            <html:p>Or at least that's what they have in <fr:link href="/krishnaswami_typed_2019.xml" title="A typed, algebraic approach to parsing" addr="krishnaswami_typed_2019" type="local">Neel's paper</fr:link>. Max believes I should have a more compelling argument for which definition is better/more appropriate, which is fair enough. The best argument I have thus far is that our original definition would break the property that
+ <fr:tex display="block"><![CDATA[\mathsf {FLast}(A \oplus  B) = \mathsf {FLast}(A) \cup  \mathsf {FLast}(B)]]></fr:tex></html:p>
+          </fr:mainmatter>
+        </fr:tree>
+      </fr:mainmatter>
+    </fr:tree>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors />
         <fr:title text="Contributions">Contributions</fr:title>
       </fr:frontmatter>
       <fr:mainmatter />
