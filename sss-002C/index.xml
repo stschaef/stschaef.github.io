@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="/default.xsl"?>
+<fr:tree xmlns:fr="http://www.forester-notes.org" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:xml="http://www.w3.org/XML/1998/namespace" root="false" base-url="/">
+  <fr:frontmatter>
+    <fr:authors>
+      <fr:author>
+        <fr:link href="/stevenschaefer/" title="Steven Schaefer" uri="https://stevenschaefer.net/stevenschaefer/" display-uri="stevenschaefer" type="local">Steven Schaefer</fr:link>
+      </fr:author>
+    </fr:authors>
+    <fr:uri>https://stevenschaefer.net/sss-002C/</fr:uri>
+    <fr:display-uri>sss-002C</fr:display-uri>
+    <fr:route>/sss-002C/</fr:route>
+    <fr:title text="Am I on to Something?">Am I on to Something?</fr:title>
+  </fr:frontmatter>
+  <fr:mainmatter>
+    <html:p>Here I am documenting the half-baked ideas I've had but have never taken anywhere. On these I've either been out of depth on the requisite knowledge, rediscovered something that isn't as new as I'd hoped, or simply don't have the time. I hope one day I can return to these an flesh them out.</html:p>
+    <fr:tree show-metadata="true" expanded="false" toc="false" numbered="false">
+      <fr:frontmatter>
+        <fr:authors>
+          <fr:author>
+            <fr:link href="/stevenschaefer/" title="Steven Schaefer" uri="https://stevenschaefer.net/stevenschaefer/" display-uri="stevenschaefer" type="local">Steven Schaefer</fr:link>
+          </fr:author>
+        </fr:authors>
+        <fr:date>
+          <fr:year>2025</fr:year>
+          <fr:month>2</fr:month>
+          <fr:day>19</fr:day>
+        </fr:date>
+        <fr:uri>https://stevenschaefer.net/sss-002E/</fr:uri>
+        <fr:display-uri>sss-002E</fr:display-uri>
+        <fr:route>/sss-002E/</fr:route>
+        <fr:title text="Gröbner Bases for Inferring Polynomial Loop Invariants">Gröbner Bases for Inferring Polynomial Loop Invariants</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter>
+        <html:p>When the tools in <fr:link href="/maI4IncrementalInference2019/" title="I4: Incremental inference of inductive invariants for verification of distributed protocols" uri="https://stevenschaefer.net/maI4IncrementalInference2019/" display-uri="maI4IncrementalInference2019" type="local">I4: Incremental inference of inductive invariants for verification of distributed protocols</fr:link> and <fr:link href="/goelSymmetryQuantificationNew2021/" title="On Symmetry and Quantification: A New Approach to Verify Distributed Protocols" uri="https://stevenschaefer.net/goelSymmetryQuantificationNew2021/" display-uri="goelSymmetryQuantificationNew2021" type="local">On Symmetry and Quantification: A New Approach to Verify Distributed Protocols</fr:link> search for an inductive invariant of a distributed system, the search procedure instantiates a series of small finite models and tries to infer from their truth tables a series of logical formulae that hold over those finite models. These formulae are found by running the Quine-McCluskey algorithm for minimization of Boolean functions. The prime implicants found by Quine-McCluskey have a latent symmetry that can be abstracted into quantified formulae. There are only so many small numbers, and so small finite models may propose formulae that do not hold at larger sizes. However, if you find a formula that holds at size <fr:tex display="inline"><![CDATA[n]]></fr:tex> as well as size <fr:tex display="inline"><![CDATA[n + 1]]></fr:tex>, then it is likely a good candidate to hold at all sizes. You need to be a little careful if your protocol is indexed by several variables, but mostly this general idea holds when abstracting to a protocol of unbounded size. Further discussion of this idea can be found in <fr:link href="/LuoSatBasedQuantifiedSymmetric/" title="SAT-based quantified symmetric minimization of the reachable states of distributed protocols: An update" uri="https://stevenschaefer.net/LuoSatBasedQuantifiedSymmetric/" display-uri="LuoSatBasedQuantifiedSymmetric" type="local">SAT-based quantified symmetric minimization of the reachable states of distributed protocols: An update</fr:link>.</html:p>
+        <html:p>My observation was that Quine-McCluskey is just a special instance of Buchberger's algorithm for computing <fr:link href="/sss-002H/" title="Gröbner Basis" uri="https://stevenschaefer.net/sss-002H/" display-uri="sss-002H" type="local">Gröbner Bases</fr:link>. That is, you can describe Boolean formulae as polynomials over the field with two elements, and in this translation Quine-McCluskey and Buchberger each compute the same data. This observation isn't new in and of itself, but it does open up an opportunity to generalize the invariant search procedure that is used above.</html:p>
+        <html:p>The place I went looking to apply this idea was in the search of polynomial loop invariants. If a loop had an invariant that is expressible as a polynomial relation between the program variables, then you could apply the same idea as above to infer the loop invariant.</html:p>
+        <html:p>Suppose <fr:tex display="inline"><![CDATA[x_{1}, \dots , x_{n}]]></fr:tex> are the variables in scope of program <fr:tex display="inline"><![CDATA[S]]></fr:tex> and <fr:tex display="inline"><![CDATA[S]]></fr:tex> contains a loop that we want to infer an invariant for. Denote the value of <fr:tex display="inline"><![CDATA[x_{i}]]></fr:tex> at the <fr:tex display="inline"><![CDATA[j]]></fr:tex>-th loop iteration by <fr:tex display="inline"><![CDATA[x_{i,j}]]></fr:tex>. The invariant search procedure proceeds intuitively as the following: we will keep track of the minimal set of polynomials that could interpolate between all of the variable assignments that we have witnessed thus far. Formally this is kept track of by the ideal of polynomials. At the <fr:tex display="inline"><![CDATA[j]]></fr:tex>-th loop iteration we add a new generator to the ideal which corresponds to the assignments <fr:tex display="inline"><![CDATA[x_{1,j}, \dots , x_{n,j}]]></fr:tex>. The Gröbner basis for this ideal provides the minimal data needed to generate all the assignments witnessed thus far, so if this process saturates then the Gröbner basis encodes a polynomial loop invariant. The nice thing about polynomials is that they have finite degree which guarantees that this process does indeed saturate (provided that the degree of the invariant is smaller than the number of loop iterations).</html:p>
+        <html:p>I was so excited to find this idea. I'd felt like it was my first good idea in grad school. Then I read <fr:link href="/rodriguez-carbonellAutomaticGenerationPolynomial/" title="Automatic Generation of Polynomial Loop Invariants: Algebraic Foundations" uri="https://stevenschaefer.net/rodriguez-carbonellAutomaticGenerationPolynomial/" display-uri="rodriguez-carbonellAutomaticGenerationPolynomial" type="local">Automatic Generation of Polynomial Loop Invariants: Algebraic Foundations</fr:link> and found out someone had done this 20 years ago. I still wonder from time to time if there is room to further refine this idea or perhaps further generalize it. For instance, there is further generalization beyond Quine-McCluskey or Buchberger to the Knuth-Bendix algorithm, which seems to be a more general instance of both of these algorithms. So perhaps this search procedure can be weakened to an even more general class? Although, I'm not yet familiar much with the Knuth-Bendix algorithm.</html:p>
+      </fr:mainmatter>
+    </fr:tree>
+    <fr:tree show-metadata="true" expanded="false" toc="false" numbered="false">
+      <fr:frontmatter>
+        <fr:authors>
+          <fr:author>
+            <fr:link href="/stevenschaefer/" title="Steven Schaefer" uri="https://stevenschaefer.net/stevenschaefer/" display-uri="stevenschaefer" type="local">Steven Schaefer</fr:link>
+          </fr:author>
+        </fr:authors>
+        <fr:date>
+          <fr:year>2025</fr:year>
+          <fr:month>2</fr:month>
+          <fr:day>19</fr:day>
+        </fr:date>
+        <fr:uri>https://stevenschaefer.net/sss-002D/</fr:uri>
+        <fr:display-uri>sss-002D</fr:display-uri>
+        <fr:route>/sss-002D/</fr:route>
+        <fr:title text="A Method for Verify Translational Invariance of Image Processing Neural Networks">A Method for Verify Translational Invariance of Image Processing Neural Networks</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter>
+        <html:p>My understanding for how one may prove a safety property <fr:tex display="inline"><![CDATA[P]]></fr:tex> for a neural network <fr:tex display="inline"><![CDATA[N]]></fr:tex> is as follows. First, express <fr:tex display="inline"><![CDATA[P]]></fr:tex> as an input-output property. That is, choose some region <fr:tex display="inline"><![CDATA[D]]></fr:tex> in the domain of <fr:tex display="inline"><![CDATA[N]]></fr:tex> to represent the inputs of interest. Further choose some region <fr:tex display="inline"><![CDATA[A]]></fr:tex> in the codomain of <fr:tex display="inline"><![CDATA[N]]></fr:tex> to describe safe outputs. Then describe <fr:tex display="inline"><![CDATA[P]]></fr:tex> as the property:
+<fr:tex display="block"><![CDATA[\forall  x \in  D . N(x) \in  A]]></fr:tex></html:p>
+        <html:p>For instance, this is more or less how Reluplex, Marabou, and <fr:tex display="inline"><![CDATA[\alpha  \beta ]]></fr:tex>-CROWN each work. Squinting my eyes, this is the only such method for verifying a safety property for <fr:tex display="inline"><![CDATA[N]]></fr:tex>. That is, this is the only way to get a 100</html:p>
+        <html:p>I believe in this formalism I have an idea for how to express the property "<fr:tex display="inline"><![CDATA[N]]></fr:tex> is translationally invariant" where <fr:tex display="inline"><![CDATA[N]]></fr:tex> is an image classifying net.</html:p>
+        <html:p>To this end, we need a continuous artifact that captures what it means to translate an image. We can express an image as a matrix of pixels <fr:tex display="inline"><![CDATA[I]]></fr:tex> (or perhaps several parallel matrices if we care about color channels, but stick to a single grayscale matrix for now). To shift <fr:tex display="inline"><![CDATA[I]]></fr:tex> over by a single pixel, we may left-multiply <fr:tex display="inline"><![CDATA[I]]></fr:tex> by the shift matrix <fr:tex display="inline"><![CDATA[S]]></fr:tex>, where <fr:tex display="inline"><![CDATA[S]]></fr:tex> is the matrix filled with zeros and has 1's on the subdiagonal. Note that all the directions of shifting <fr:tex display="inline"><![CDATA[I]]></fr:tex> are captured by the combinations of left/right multiplication by <fr:tex display="inline"><![CDATA[S]]></fr:tex>,<fr:tex display="inline"><![CDATA[S^{T}]]></fr:tex>.</html:p>
+        <html:p>Shifting by multiple pixels is now expressed by the matrix <fr:tex display="inline"><![CDATA[S^{n} I]]></fr:tex>, however this is still a discrete dynamical system. We don't have a continuous object by which we can test our safety property. My initial thought to continuousify this system was to express some sort of exponential flow by <fr:tex display="inline"><![CDATA[S]]></fr:tex>. That is, consider the matrix
+<fr:tex display="block"><![CDATA[S^{t} I \colonequals  e^{t \mathsf {log(S)}}]]></fr:tex></html:p>
+        <html:p><fr:tex display="inline"><![CDATA[S^{t} I]]></fr:tex> then captures what it means to translate the image <fr:tex display="inline"><![CDATA[I]]></fr:tex> over by <fr:tex display="inline"><![CDATA[t]]></fr:tex>, a real-valued "amount of shifting". This choice of continuous artifact could then be used for a verification effort, however there are some issues related to numerical stability because <fr:tex display="inline"><![CDATA[S]]></fr:tex> isn't invertible. Because it is not invertible, <fr:tex display="inline"><![CDATA[\mathsf {log(S)}]]></fr:tex> doesn't actually exist. So to make the above construction work, we need to mildly perturb <fr:tex display="inline"><![CDATA[S]]></fr:tex> and take a pseudoinverse. This sort of works and makes it so <fr:tex display="inline"><![CDATA[S^{t} I]]></fr:tex> does capture some real valued shift, but it is only accurate when <fr:tex display="inline"><![CDATA[t]]></fr:tex> is small. So this is maybe problematic for our verification effort. This may be resolvable by chopping up the problem into subproblems, each of which is thin enough for the current iteration is accurate enough on that subproblem. However, there are two big things to consider.</html:p>
+        <html:ol><html:li>The exponential approach above is probably too complicated. It seems likely that you may be able to take some (sequence of) linear interpolation(s) between the <fr:tex display="inline"><![CDATA[S^{n} I]]></fr:tex>'s. This will still be some continuous object that captures a real-valued shift and it will be much more stable the approach above.</html:li>
+<html:li>Even if we sort out which continuous object represents translation of an image, I cannot for the life of me train any neural network that is translationally invariant. So the proof method is useless if there is nothing that it would ever apply to.</html:li></html:ol>
+        <html:p>Precisely in this last point, I have mostly focused on trying to train a small CNN for MNIST handwritten digit classification that preserves the output class for small, reasonable translations of the digit. I've used data augmentation to predispose the network to being translationally invariant, and even though I can get a high degree of invariance, I cannot get a network that is invariant for all of the examples even in the training set or a reserved testing set.</html:p>
+        <html:p>It may be the case that the method I propose for measuring this invariance could be used to adversarially train a network to have better invariance. It may also be the case that all CNNs are bound to suffer from small degrees of translational sensitivity. I cannot find the citation at the moment, but there was a paper that suggested that CNNs suffer from weird issues of translational sensitivity that relate to the size of the convolutional window. So maybe this approach is doomed to fail anyway.</html:p>
+        <html:p>On the whole, I will say that machine learning verification almost sounds like an oxymoron. That is, if you have the expressivity to properly state a sophisticated safety property, then you likely understand the problem enough to not need to resort to machine learning in the first place. So almost tautologically, it seems that there cannot be satisfying verification of neural nets, as the tasks of machine learning and verification live on very different epistemic foundations.</html:p>
+        <html:p>The related works I could liberate from Zotero may be found below.</html:p>
+        <fr:tree show-metadata="false">
+          <fr:frontmatter>
+            <fr:authors />
+            <fr:date>
+              <fr:year>2025</fr:year>
+              <fr:month>2</fr:month>
+              <fr:day>19</fr:day>
+            </fr:date>
+            <fr:uri>https://stevenschaefer.net/sss-002F/</fr:uri>
+            <fr:display-uri>sss-002F</fr:display-uri>
+            <fr:route>/sss-002F/</fr:route>
+            <fr:title text="Machine Learning Verification">Machine Learning Verification</fr:title>
+          </fr:frontmatter>
+          <fr:mainmatter><html:p>A collection of resources about machine learning verification.</html:p>
+  <fr:tree show-metadata="true" expanded="false" toc="false" numbered="false"><fr:frontmatter><fr:authors><fr:author>Bruno Gavranović</fr:author></fr:authors><fr:date><fr:year>2024</fr:year></fr:date><fr:uri>https://stevenschaefer.net/gavranovicFundamentalComponentsDeep/</fr:uri><fr:display-uri>gavranovicFundamentalComponentsDeep</fr:display-uri><fr:route>/gavranovicFundamentalComponentsDeep/</fr:route><fr:title text="Fundamental Components of Deep Learning: A category-theoretic approach">Fundamental Components of Deep Learning: A category-theoretic approach</fr:title><fr:taxon>reference</fr:taxon><fr:meta name="bibtex"><![CDATA[@article{gavranovicFundamentalComponentsDeep,
+ title = {Fundamental {{Components}} of {{Deep Learning}}: {{A}} Category-Theoretic Approach},
+ author = {Gavranović, Bruno},
+ date = {2024},
+ file = {/Users/stevenschaefer/Zotero/storage/YWVPGKTZ/Gavranović - Fundamental Components of Deep Learning A categor.pdf},
+ langid = {english}
+}]]></fr:meta></fr:frontmatter><fr:mainmatter /></fr:tree><fr:tree show-metadata="true" expanded="false" toc="false" numbered="false"><fr:frontmatter><fr:authors><fr:author>Zhe Tao</fr:author><fr:author>Stephanie Nawas</fr:author><fr:author>Jacqueline Mitchell</fr:author><fr:author>Aditya V. Thakur</fr:author></fr:authors><fr:date><fr:year>2023</fr:year><fr:month>6</fr:month><fr:day>6</fr:day></fr:date><fr:uri>https://stevenschaefer.net/taoArchitecturePreservingProvableRepair2023/</fr:uri><fr:display-uri>taoArchitecturePreservingProvableRepair2023</fr:display-uri><fr:route>/taoArchitecturePreservingProvableRepair2023/</fr:route><fr:title text="Architecture-Preserving Provable Repair of Deep Neural Networks">Architecture-Preserving Provable Repair of Deep Neural Networks</fr:title><fr:taxon>reference</fr:taxon><fr:meta name="doi">10.1145/3591238</fr:meta><fr:meta name="external">https://dl.acm.org/doi/10.1145/3591238</fr:meta><fr:meta name="bibtex"><![CDATA[@article{taoArchitecturePreservingProvableRepair2023,
+ title = {Architecture-{{Preserving Provable Repair}} of {{Deep Neural Networks}}},
+ author = {Tao, Zhe and Nawas, Stephanie and Mitchell, Jacqueline and Thakur, Aditya V.},
+ date = {2023-06-06},
+ doi = {10.1145/3591238},
+ url = {https://dl.acm.org/doi/10.1145/3591238},
+ urldate = {2023-11-27},
+ journaltitle = {Proceedings of the ACM on Programming Languages},
+ volume = {7},
+ pages = {443--467},
+ file = {/Users/stevenschaefer/Zotero/storage/PZJLBU9Z/Tao et al. - 2023 - Architecture-Preserving Provable Repair of Deep Ne.pdf},
+ langid = {english},
+ issue = {PLDI},
+ abstract = {Deep neural networks (DNNs) are becoming increasingly important components of software, and are considered the state-of-the-art solution for a number of problems, such as image recognition. However, DNNs are far from infallible, and incorrect behavior of DNNs can have disastrous real-world consequences. This paper addresses the problem of architecture-preserving V-polytope provable repair of DNNs. A V-polytope defines a convex bounded polytope using its vertex representation. V-polytope provable repair guarantees that the repaired DNN satisfies the given specification on the infinite set of points in the given V-polytope. An architecture-preserving repair only modifies the parameters of the DNN, without modifying its architecture. The repair has the flexibility to modify multiple layers of the DNN, and runs in polynomial time. It supports DNNs with activation functions that have some linear pieces, as well as fully-connected, convolutional, pooling and residual layers. To the best our knowledge, this is the first provable repair approach that has all of these features. We implement our approach in a tool called APRNN. Using MNIST, ImageNet, and ACAS Xu DNNs, we show that it has better efficiency, scalability, and generalization compared to PRDNN and REASSURE, prior provable repair methods that are not architecture preserving. CCS Concepts: • Computing methodologies → Neural networks; • Theory of computation → Linear programming; • Software and its engineering → Software post-development issues.},
+ issn = {2475-1421},
+ shortjournal = {Proc. ACM Program. Lang.}
+}]]></fr:meta></fr:frontmatter><fr:mainmatter /></fr:tree><fr:tree show-metadata="true" expanded="false" toc="false" numbered="false"><fr:frontmatter><fr:authors><fr:author>Mark Niklas Müller</fr:author><fr:author>Gleb Makarchuk</fr:author><fr:author>Gagandeep Singh</fr:author><fr:author>Markus Püschel</fr:author><fr:author>Martin Vechev</fr:author></fr:authors><fr:date><fr:year>2022</fr:year><fr:month>1</fr:month><fr:day>16</fr:day></fr:date><fr:uri>https://stevenschaefer.net/mullerPRIMAGeneralPrecise2022/</fr:uri><fr:display-uri>mullerPRIMAGeneralPrecise2022</fr:display-uri><fr:route>/mullerPRIMAGeneralPrecise2022/</fr:route><fr:title text="PRIMA: General and Precise Neural Network Certification via Scalable Convex Hull Approximations">PRIMA: General and Precise Neural Network Certification via Scalable Convex Hull Approximations</fr:title><fr:taxon>reference</fr:taxon><fr:meta name="doi">10.1145/3498704</fr:meta><fr:meta name="external">http://arxiv.org/abs/2103.03638</fr:meta><fr:meta name="bibtex"><![CDATA[@article{mullerPRIMAGeneralPrecise2022,
+ title = {{{PRIMA}}: {{General}} and {{Precise Neural Network Certification}} via {{Scalable Convex Hull Approximations}}},
+ author = {Müller, Mark Niklas and Makarchuk, Gleb and Singh, Gagandeep and Püschel, Markus and Vechev, Martin},
+ date = {2022-01-16},
+ doi = {10.1145/3498704},
+ url = {http://arxiv.org/abs/2103.03638},
+ urldate = {2024-02-09},
+ journaltitle = {Proceedings of the ACM on Programming Languages},
+ volume = {6},
+ pages = {1--33},
+ file = {/Users/stevenschaefer/Zotero/storage/NKNZFJGD/Müller et al. - 2022 - PRIMA General and Precise Neural Network Certific.pdf;/Users/stevenschaefer/Zotero/storage/GTBW8M32/2103.html},
+ keywords = {Computer Science - Artificial Intelligence,Computer Science - Machine Learning},
+ issue = {POPL},
+ abstract = {Formal verification of neural networks is critical for their safe adoption in real-world applications. However, designing a precise and scalable verifier which can handle different activation functions, realistic network architectures and relevant specifications remains an open and difficult challenge. In this paper, we take a major step forward in addressing this challenge and present a new verification framework, called PRIMA. PRIMA is both (i) general: it handles any non-linear activation function, and (ii) precise: it computes precise convex abstractions involving multiple neurons via novel convex hull approximation algorithms that leverage concepts from computational geometry. The algorithms have polynomial complexity, yield fewer constraints, and minimize precision loss. We evaluate the effectiveness of PRIMA on a variety of challenging tasks from prior work. Our results show that PRIMA is significantly more precise than the state-of-the-art, verifying robustness to input perturbations for up to 20\%, 30\%, and 34\% more images than existing work on ReLU-, Sigmoid-, and Tanh-based networks, respectively. Further, PRIMA enables, for the first time, the precise verification of a realistic neural network for autonomous driving within a few minutes.},
+ issn = {2475-1421},
+ eprintclass = {cs},
+ eprinttype = {arXiv},
+ eprint = {2103.03638},
+ shortjournal = {Proc. ACM Program. Lang.},
+ shorttitle = {{{PRIMA}}}
+}]]></fr:meta></fr:frontmatter><fr:mainmatter /></fr:tree><fr:tree show-metadata="true" expanded="false" toc="false" numbered="false"><fr:frontmatter><fr:authors><fr:author>Matthew Sotoudeh</fr:author><fr:author>Aditya V. Thakur</fr:author></fr:authors><fr:date><fr:year>2021</fr:year><fr:month>6</fr:month><fr:day>19</fr:day></fr:date><fr:uri>https://stevenschaefer.net/sotoudehProvableRepairDeep2021/</fr:uri><fr:display-uri>sotoudehProvableRepairDeep2021</fr:display-uri><fr:route>/sotoudehProvableRepairDeep2021/</fr:route><fr:title text="Provable repair of deep neural networks">Provable repair of deep neural networks</fr:title><fr:taxon>reference</fr:taxon><fr:meta name="doi">10.1145/3453483.3454064</fr:meta><fr:meta name="external">https://dl.acm.org/doi/10.1145/3453483.3454064</fr:meta><fr:meta name="bibtex"><![CDATA[@inproceedings{sotoudehProvableRepairDeep2021,
+ title = {Provable Repair of Deep Neural Networks},
+ author = {Sotoudeh, Matthew and Thakur, Aditya V.},
+ date = {2021-06-19},
+ isbn = {978-1-4503-8391-2},
+ doi = {10.1145/3453483.3454064},
+ url = {https://dl.acm.org/doi/10.1145/3453483.3454064},
+ urldate = {2023-11-27},
+ booktitle = {Proceedings of the 42nd {{ACM SIGPLAN International Conference}} on {{Programming Language Design}} and {{Implementation}}},
+ pages = {588--603},
+ publisher = {ACM},
+ file = {/Users/stevenschaefer/Zotero/storage/UXYPJFHB/Sotoudeh and Thakur - 2021 - Provable repair of deep neural networks.pdf},
+ langid = {english},
+ eventtitle = {{{PLDI}} '21: 42nd {{ACM SIGPLAN International Conference}} on {{Programming Language Design}} and {{Implementation}}},
+ location = {Virtual Canada}
+}]]></fr:meta></fr:frontmatter><fr:mainmatter /></fr:tree><fr:tree show-metadata="true" expanded="false" toc="false" numbered="false"><fr:frontmatter><fr:authors><fr:author>Johannes C. Myburgh</fr:author><fr:author>Coenraad Mouton</fr:author><fr:author>Marelie H. Davel</fr:author></fr:authors><fr:date><fr:year>2021</fr:year><fr:month>4</fr:month><fr:day>19</fr:day></fr:date><fr:uri>https://stevenschaefer.net/myburghTrackingTranslationInvariance2021/</fr:uri><fr:display-uri>myburghTrackingTranslationInvariance2021</fr:display-uri><fr:route>/myburghTrackingTranslationInvariance2021/</fr:route><fr:title text="Tracking translation invariance in CNNs">Tracking translation invariance in CNNs</fr:title><fr:taxon>reference</fr:taxon><fr:meta name="external">http://arxiv.org/abs/2104.05997</fr:meta><fr:meta name="bibtex"><![CDATA[@article{myburghTrackingTranslationInvariance2021,
+ title = {Tracking Translation Invariance in {{CNNs}}},
+ author = {Myburgh, Johannes C. and Mouton, Coenraad and Davel, Marelie H.},
+ date = {2021-04-19},
+ url = {http://arxiv.org/abs/2104.05997},
+ urldate = {2024-01-15},
+ file = {/Users/stevenschaefer/Zotero/storage/5LHTBWEI/Myburgh et al. - 2021 - Tracking translation invariance in CNNs.pdf;/Users/stevenschaefer/Zotero/storage/YN4MZRDR/2104.html},
+ keywords = {Computer Science - Machine Learning},
+ pubstate = {prepublished},
+ abstract = {Although Convolutional Neural Networks (CNNs) are widely used, their translation invariance (ability to deal with translated inputs) is still subject to some controversy. We explore this question using translation-sensitivity maps to quantify how sensitive a standard CNN is to a translated input. We propose the use of Cosine Similarity as sensitivity metric over Euclidean Distance, and discuss the importance of restricting the dimensionality of either of these metrics when comparing architectures. Our main focus is to investigate the effect of different architectural components of a standard CNN on that network's sensitivity to translation. By varying convolutional kernel sizes and amounts of zero padding, we control the size of the feature maps produced, allowing us to quantify the extent to which these elements influence translation invariance. We also measure translation invariance at different locations within the CNN to determine the extent to which convolutional and fully connected layers, respectively, contribute to the translation invariance of a CNN as a whole. Our analysis indicates that both convolutional kernel size and feature map size have a systematic influence on translation invariance. We also see that convolutional layers contribute less than expected to translation invariance, when not specifically forced to do so.},
+ eprintclass = {cs},
+ eprinttype = {arXiv},
+ eprint = {2104.05997}
+}]]></fr:meta></fr:frontmatter><fr:mainmatter /></fr:tree><fr:tree show-metadata="true" expanded="false" toc="false" numbered="false"><fr:frontmatter><fr:authors><fr:author>Sanjit A. Seshia</fr:author><fr:author>Dorsa Sadigh</fr:author><fr:author>S. Shankar Sastry</fr:author></fr:authors><fr:date><fr:year>2020</fr:year><fr:month>7</fr:month><fr:day>23</fr:day></fr:date><fr:uri>https://stevenschaefer.net/seshiaVerifiedArtificialIntelligence2020/</fr:uri><fr:display-uri>seshiaVerifiedArtificialIntelligence2020</fr:display-uri><fr:route>/seshiaVerifiedArtificialIntelligence2020/</fr:route><fr:title text="Towards Verified Artificial Intelligence">Towards Verified Artificial Intelligence</fr:title><fr:taxon>reference</fr:taxon><fr:meta name="doi">10.48550/arXiv.1606.08514</fr:meta><fr:meta name="external">http://arxiv.org/abs/1606.08514</fr:meta><fr:meta name="bibtex"><![CDATA[@article{seshiaVerifiedArtificialIntelligence2020,
+ title = {Towards {{Verified Artificial Intelligence}}},
+ author = {Seshia, Sanjit A. and Sadigh, Dorsa and Sastry, S. Shankar},
+ date = {2020-07-23},
+ doi = {10.48550/arXiv.1606.08514},
+ url = {http://arxiv.org/abs/1606.08514},
+ urldate = {2025-02-19},
+ file = {/Users/stevenschaefer/Zotero/storage/36B6PJKB/Seshia et al. - 2020 - Towards Verified Artificial Intelligence.pdf},
+ keywords = {Computer Science - Artificial Intelligence},
+ pubstate = {prepublished},
+ langid = {english},
+ abstract = {Verified artificial intelligence (AI) is the goal of designing AI-based systems that have strong, ideally provable, assurances of correctness with respect to mathematically-specified requirements. This paper considers Verified AI from a formal methods perspective. We describe five challenges for achieving Verified AI, and five corresponding principles for addressing these challenges.},
+ eprintclass = {cs},
+ eprinttype = {arXiv},
+ eprint = {1606.08514}
+}]]></fr:meta></fr:frontmatter><fr:mainmatter /></fr:tree><fr:tree show-metadata="true" expanded="false" toc="false" numbered="false"><fr:frontmatter><fr:authors><fr:author>Hoang-Dung Tran</fr:author><fr:author>Stanley Bak</fr:author><fr:author>Weiming Xiang</fr:author><fr:author>Taylor T. Johnson</fr:author></fr:authors><fr:date><fr:year>2020</fr:year><fr:month>5</fr:month><fr:day>14</fr:day></fr:date><fr:uri>https://stevenschaefer.net/tranVerificationDeepConvolutional2020/</fr:uri><fr:display-uri>tranVerificationDeepConvolutional2020</fr:display-uri><fr:route>/tranVerificationDeepConvolutional2020/</fr:route><fr:title text="Verification of Deep Convolutional Neural Networks Using ImageStars">Verification of Deep Convolutional Neural Networks Using ImageStars</fr:title><fr:taxon>reference</fr:taxon><fr:meta name="doi">10.48550/arXiv.2004.05511</fr:meta><fr:meta name="external">http://arxiv.org/abs/2004.05511</fr:meta><fr:meta name="bibtex"><![CDATA[@article{tranVerificationDeepConvolutional2020,
+ title = {Verification of {{Deep Convolutional Neural Networks Using ImageStars}}},
+ author = {Tran, Hoang-Dung and Bak, Stanley and Xiang, Weiming and Johnson, Taylor T.},
+ date = {2020-05-14},
+ doi = {10.48550/arXiv.2004.05511},
+ url = {http://arxiv.org/abs/2004.05511},
+ urldate = {2025-02-19},
+ file = {/Users/stevenschaefer/Zotero/storage/V4T73R6M/Tran et al. - 2020 - Verification of Deep Convolutional Neural Networks.pdf},
+ keywords = {Computer Science - Computer Vision and Pattern Recognition,Computer Science - Machine Learning},
+ pubstate = {prepublished},
+ langid = {english},
+ abstract = {Convolutional Neural Networks (CNN) have redefined stateof-the-art in many real-world applications, such as facial recognition, image classification, human pose estimation, and semantic segmentation. Despite their success, CNNs are vulnerable to adversarial attacks, where slight changes to their inputs may lead to sharp changes in their output in even well-trained networks. Set-based analysis methods can detect or prove the absence of bounded adversarial attacks, which can then be used to evaluate the effectiveness of neural network training methodology. Unfortunately, existing verification approaches have limited scalability in terms of the size of networks that can be analyzed.},
+ eprintclass = {cs},
+ eprinttype = {arXiv},
+ eprint = {2004.05511}
+}]]></fr:meta></fr:frontmatter><fr:mainmatter /></fr:tree><fr:tree show-metadata="true" expanded="false" toc="false" numbered="false"><fr:frontmatter><fr:authors><fr:author>Coenraad Mouton</fr:author><fr:author>Johannes C. Myburgh</fr:author><fr:author>Marelie H. Davel</fr:author></fr:authors><fr:date><fr:year>2020</fr:year></fr:date><fr:uri>https://stevenschaefer.net/moutonStrideTranslationInvariance2020/</fr:uri><fr:display-uri>moutonStrideTranslationInvariance2020</fr:display-uri><fr:route>/moutonStrideTranslationInvariance2020/</fr:route><fr:title text="Stride and Translation Invariance in CNNs">Stride and Translation Invariance in CNNs</fr:title><fr:taxon>reference</fr:taxon><fr:meta name="doi">10.1007/978-3-030-66151-9_17</fr:meta><fr:meta name="external">http://arxiv.org/abs/2103.10097</fr:meta><fr:meta name="bibtex"><![CDATA[@incollection{moutonStrideTranslationInvariance2020,
+ title = {Stride and {{Translation Invariance}} in {{CNNs}}},
+ author = {Mouton, Coenraad and Myburgh, Johannes C. and Davel, Marelie H.},
+ date = {2020},
+ doi = {10.1007/978-3-030-66151-9_17},
+ url = {http://arxiv.org/abs/2103.10097},
+ urldate = {2024-01-15},
+ volume = {1342},
+ pages = {267--281},
+ file = {/Users/stevenschaefer/Zotero/storage/Y7LCRI7F/Mouton et al. - 2020 - Stride and Translation Invariance in CNNs.pdf;/Users/stevenschaefer/Zotero/storage/3K5QYWZH/2103.html},
+ keywords = {Computer Science - Machine Learning},
+ abstract = {Convolutional Neural Networks have become the standard for image classification tasks, however, these architectures are not invariant to translations of the input image. This lack of invariance is attributed to the use of stride which ignores the sampling theorem, and fully connected layers which lack spatial reasoning. We show that stride can greatly benefit translation invariance given that it is combined with sufficient similarity between neighbouring pixels, a characteristic which we refer to as local homogeneity. We also observe that this characteristic is dataset-specific and dictates the relationship between pooling kernel size and stride required for translation invariance. Furthermore we find that a trade-off exists between generalization and translation invariance in the case of pooling kernel size, as larger kernel sizes lead to better invariance but poorer generalization. Finally we explore the efficacy of other solutions proposed, namely global average pooling, anti-aliasing, and data augmentation, both empirically and through the lens of local homogeneity.},
+ eprintclass = {cs},
+ eprinttype = {arXiv},
+ eprint = {2103.10097}
+}]]></fr:meta></fr:frontmatter><fr:mainmatter /></fr:tree><fr:tree show-metadata="true" expanded="false" toc="false" numbered="false"><fr:frontmatter><fr:authors><fr:author>Aharon Azulay</fr:author><fr:author>Yair Weiss</fr:author></fr:authors><fr:date><fr:year>2019</fr:year></fr:date><fr:uri>https://stevenschaefer.net/azulayWhyDeepConvolutional/</fr:uri><fr:display-uri>azulayWhyDeepConvolutional</fr:display-uri><fr:route>/azulayWhyDeepConvolutional/</fr:route><fr:title text="Why do deep convolutional networks generalize so poorly to small image transformations?">Why do deep convolutional networks generalize so poorly to small image transformations?</fr:title><fr:taxon>reference</fr:taxon><fr:meta name="bibtex"><![CDATA[@article{azulayWhyDeepConvolutional,
+ title = {Why Do Deep Convolutional Networks Generalize so Poorly to Small Image Transformations?},
+ author = {Azulay, Aharon and Weiss, Yair},
+ date = {2019},
+ file = {/Users/stevenschaefer/Zotero/storage/YFRPN7UL/Azulay and Weiss - Why do deep convolutional networks generalize so p.pdf},
+ langid = {english},
+ abstract = {Convolutional Neural Networks (CNNs) are commonly assumed to be invariant to small image transformations: either because of the convolutional architecture or because they were trained using data augmentation. Recently, several authors have shown that this is not the case: small translations or rescalings of the input image can drastically change the network’s prediction. In this paper, we quantify this phenomena and ask why neither the convolutional architecture nor data augmentation are sufficient to achieve the desired invariance. Specifically, we show that the convolutional architecture does not give invariance since architectures ignore the classical sampling theorem, and data augmentation does not give invariance because the CNNs learn to be invariant to transformations only for images that are very similar to typical images from the training set. We discuss two possible solutions to this problem: (1) antialiasing the intermediate representations and (2) increasing data augmentation and show that they provide only a partial solution at best. Taken together, our results indicate that the problem of insuring invariance to small image transformations in neural networks while preserving high accuracy remains unsolved.}
+}]]></fr:meta></fr:frontmatter><fr:mainmatter /></fr:tree><fr:tree show-metadata="true" expanded="false" toc="false" numbered="false"><fr:frontmatter><fr:authors><fr:author>Panagiotis Kouvaros</fr:author><fr:author>Alessio Lomuscio</fr:author></fr:authors><fr:date><fr:year>2018</fr:year><fr:month>11</fr:month><fr:day>28</fr:day></fr:date><fr:uri>https://stevenschaefer.net/kouvarosFormalVerificationCNNbased2018/</fr:uri><fr:display-uri>kouvarosFormalVerificationCNNbased2018</fr:display-uri><fr:route>/kouvarosFormalVerificationCNNbased2018/</fr:route><fr:title text="Formal Verification of CNN-based Perception Systems">Formal Verification of CNN-based Perception Systems</fr:title><fr:taxon>reference</fr:taxon><fr:meta name="doi">10.48550/arXiv.1811.11373</fr:meta><fr:meta name="external">http://arxiv.org/abs/1811.11373</fr:meta><fr:meta name="bibtex"><![CDATA[@article{kouvarosFormalVerificationCNNbased2018,
+ title = {Formal {{Verification}} of {{CNN-based Perception Systems}}},
+ author = {Kouvaros, Panagiotis and Lomuscio, Alessio},
+ date = {2018-11-28},
+ doi = {10.48550/arXiv.1811.11373},
+ url = {http://arxiv.org/abs/1811.11373},
+ urldate = {2025-02-19},
+ file = {/Users/stevenschaefer/Zotero/storage/LL2RPHJN/Kouvaros and Lomuscio - 2018 - Formal Verification of CNN-based Perception System.pdf},
+ keywords = {Computer Science - Computer Vision and Pattern Recognition,Computer Science - Machine Learning,Statistics - Machine Learning},
+ pubstate = {prepublished},
+ langid = {english},
+ abstract = {We address the problem of verifying neural-based perception systems implemented by convolutional neural networks. We define a notion of local robustness based on affine and photometric transformations. We show the notion cannot be captured by previously employed notions of robustness. The method proposed is based on reachability analysis for feed-forward neural networks and relies on MILP encodings of both the CNNs and transformations under question. We present an implementation and discuss the experimental results obtained for a CNN trained from the MNIST data set.},
+ eprintclass = {cs},
+ eprinttype = {arXiv},
+ eprint = {1811.11373}
+}]]></fr:meta></fr:frontmatter><fr:mainmatter /></fr:tree>
+</fr:mainmatter>
+        </fr:tree>
+      </fr:mainmatter>
+    </fr:tree>
+    <fr:tree show-metadata="true" expanded="false" toc="false" numbered="false">
+      <fr:frontmatter>
+        <fr:authors>
+          <fr:author>
+            <fr:link href="/stevenschaefer/" title="Steven Schaefer" uri="https://stevenschaefer.net/stevenschaefer/" display-uri="stevenschaefer" type="local">Steven Schaefer</fr:link>
+          </fr:author>
+        </fr:authors>
+        <fr:date>
+          <fr:year>2025</fr:year>
+          <fr:month>1</fr:month>
+          <fr:day>29</fr:day>
+        </fr:date>
+        <fr:uri>https://stevenschaefer.net/sss-001C/</fr:uri>
+        <fr:display-uri>sss-001C</fr:display-uri>
+        <fr:route>/sss-001C/</fr:route>
+        <fr:title text="Guarded Recursion and Linearity">Guarded Recursion and Linearity</fr:title>
+        <fr:taxon>daily</fr:taxon>
+      </fr:frontmatter>
+      <fr:mainmatter>
+        <html:p>In a discussion with Eric, we may have stumbled upon a neat interaction of guarded recursion and linearity.</html:p>
+        <html:p>Could it be the case that guarded recursion in a linear setting would let you recover inductive reasoning? For instance, if I were to build a term of a guarded type in a finitary context, I could not do truly coinductive things. I will necessarily consume all of the input eventually or something like this.</html:p>
+        <html:p>Regular languages can be <fr:link href="/sss-001J/" title="Deterministic Automata as Coalgebras" uri="https://stevenschaefer.net/sss-001J/" display-uri="sss-001J" type="local">characterized as finite coalgebras</fr:link>, which has a very similar flavor to this interaction between guardedness and linearity. Deterministic automata arise here coalgebraically, and the coalgebras that happen to be finite are precisely those that are regular (which can already be described inductively). It is unclear if there are confounding factors that make this work out for regular languages, and not more general instances of finitely coinductive things.</html:p>
+      </fr:mainmatter>
+    </fr:tree>
+  </fr:mainmatter>
+  <fr:backmatter>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors />
+        <fr:title text="References">References</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter />
+    </fr:tree>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors />
+        <fr:title text="Context">Context</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter />
+    </fr:tree>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors />
+        <fr:title text="Backlinks">Backlinks</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter />
+    </fr:tree>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors />
+        <fr:title text="Related">Related</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter />
+    </fr:tree>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors />
+        <fr:title text="Contributions">Contributions</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter />
+    </fr:tree>
+  </fr:backmatter>
+</fr:tree>

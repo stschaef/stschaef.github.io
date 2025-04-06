@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="/default.xsl"?>
+<fr:tree xmlns:fr="http://www.forester-notes.org" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:xml="http://www.w3.org/XML/1998/namespace" root="false" base-url="/">
+  <fr:frontmatter>
+    <fr:authors />
+    <fr:date>
+      <fr:year>2025</fr:year>
+      <fr:month>1</fr:month>
+      <fr:day>24</fr:day>
+    </fr:date>
+    <fr:uri>https://stevenschaefer.net/sss-000Y/</fr:uri>
+    <fr:display-uri>sss-000Y</fr:display-uri>
+    <fr:route>/sss-000Y/</fr:route>
+    <fr:title text="First Set">First Set</fr:title>
+    <fr:taxon>definition</fr:taxon>
+  </fr:frontmatter>
+  <fr:mainmatter>
+    <html:p>The first set (<fr:tex display="inline"><![CDATA[\mathsf {First}(\cdot )]]></fr:tex>) of a grammar <fr:tex display="inline"><![CDATA[A]]></fr:tex> are all the characters that may appear at the beginning of a word in the language of <fr:tex display="inline"><![CDATA[A]]></fr:tex>.
+
+  <fr:tex display="block"><![CDATA[ \mathsf {First}(A) = \{ c ~|~ \exists  w . cw \in  L(A) \}]]></fr:tex></html:p>
+  </fr:mainmatter>
+  <fr:backmatter>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors />
+        <fr:title text="References">References</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter />
+    </fr:tree>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors />
+        <fr:title text="Context">Context</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter />
+    </fr:tree>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors />
+        <fr:title text="Backlinks">Backlinks</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter>
+        <fr:tree show-metadata="true" expanded="false" toc="false" numbered="false">
+          <fr:frontmatter>
+            <fr:authors>
+              <fr:author>
+                <fr:link href="/stevenschaefer/" title="Steven Schaefer" uri="https://stevenschaefer.net/stevenschaefer/" display-uri="stevenschaefer" type="local">Steven Schaefer</fr:link>
+              </fr:author>
+            </fr:authors>
+            <fr:date>
+              <fr:year>2025</fr:year>
+              <fr:month>1</fr:month>
+              <fr:day>24</fr:day>
+            </fr:date>
+            <fr:uri>https://stevenschaefer.net/sss-000W/</fr:uri>
+            <fr:display-uri>sss-000W</fr:display-uri>
+            <fr:route>/sss-000W/</fr:route>
+            <fr:title text="Deterministic Regular Expressions">Deterministic Regular Expressions</fr:title>
+            <fr:taxon>definition</fr:taxon>
+          </fr:frontmatter>
+          <fr:mainmatter>
+            <html:p><html:em>Deterministic regular expressions</html:em> are a grammar formalism for defining regular expressions that correspond to deterministic regular languages.
+
+In the spirit of <fr:link href="/bruggemannkleinwood/" title="Deterministic regular languages" uri="https://stevenschaefer.net/bruggemannkleinwood/" display-uri="bruggemannkleinwood" type="local">Bruggemann-Klein and Wood</fr:link> and <fr:link href="/krishnaswami_typed_2019/" title="A typed, algebraic approach to parsing" uri="https://stevenschaefer.net/krishnaswami_typed_2019/" display-uri="krishnaswami_typed_2019" type="local">Krishaswami and Yallop</fr:link>, inductively define the deterministic regular expressions in terms of their <fr:link href="/sss-0014/" title="Nullable Grammar" uri="https://stevenschaefer.net/sss-0014/" display-uri="sss-0014" type="local">nullability</fr:link>, <fr:link href="/sss-000Y/" title="First Set" uri="https://stevenschaefer.net/sss-000Y/" display-uri="sss-000Y" type="local">first set</fr:link>, and <fr:link href="/sss-0010/" title="FollowLast Set" uri="https://stevenschaefer.net/sss-0010/" display-uri="sss-0010" type="local">followlast set</fr:link>:
+  <html:ul><html:li><fr:tex display="inline"><![CDATA[\epsilon ]]></fr:tex>, the grammar accepting only the empty string.</html:li>
+    <html:li><fr:tex display="inline"><![CDATA[\texttt {"}c\texttt {"}]]></fr:tex>, the grammar only accepting the length 1 string comprising the character <fr:tex display="inline"><![CDATA[c]]></fr:tex> for some character <fr:tex display="inline"><![CDATA[c]]></fr:tex> drawn from the alphabet</html:li>
+    <html:li><fr:tex display="inline"><![CDATA[r \otimes  r']]></fr:tex>, the concatenation of <fr:tex display="inline"><![CDATA[r]]></fr:tex> and <fr:tex display="inline"><![CDATA[r']]></fr:tex> where <fr:tex display="inline"><![CDATA[\neg  \mathsf {Null}(r)]]></fr:tex> and <fr:tex display="inline"><![CDATA[\mathsf {FLast}(r) \cap  \mathsf {First}(r') = \emptyset ]]></fr:tex></html:li>
+    <html:li><fr:tex display="inline"><![CDATA[r \oplus  r']]></fr:tex>, the disjunction of <fr:tex display="inline"><![CDATA[r]]></fr:tex> and <fr:tex display="inline"><![CDATA[r']]></fr:tex> where <fr:tex display="inline"><![CDATA[\neg  (\mathsf {Null}(r) \land  \mathsf {Null}(r'))]]></fr:tex> and <fr:tex display="inline"><![CDATA[\mathsf {First}(r) \cap  \mathsf {First}(r') = \emptyset ]]></fr:tex></html:li>
+    <html:li><fr:tex display="inline"><![CDATA[{r}^{*}]]></fr:tex>, the Kleene star of <fr:tex display="inline"><![CDATA[r]]></fr:tex> where <fr:tex display="inline"><![CDATA[\neg  \mathsf {Null}(r)]]></fr:tex> and <fr:tex display="inline"><![CDATA[\mathsf {FLast}(r) \cap  \mathsf {First}(r) = \emptyset ]]></fr:tex></html:li></html:ul></html:p>
+            <html:p>In each of the above constructors, the constraints on <fr:tex display="inline"><![CDATA[\mathsf {First}(r)]]></fr:tex> and <fr:tex display="inline"><![CDATA[\mathsf {FLast}(r)]]></fr:tex> remove sources of ambiguity in a regular expressions. They provide a sound guarantee that the resulting regular expression has at most one parse for any string.</html:p>
+          </fr:mainmatter>
+        </fr:tree>
+        <fr:tree show-metadata="true" expanded="false" toc="false" numbered="false">
+          <fr:frontmatter>
+            <fr:authors>
+              <fr:author>
+                <fr:link href="/stevenschaefer/" title="Steven Schaefer" uri="https://stevenschaefer.net/stevenschaefer/" display-uri="stevenschaefer" type="local">Steven Schaefer</fr:link>
+              </fr:author>
+            </fr:authors>
+            <fr:date>
+              <fr:year>2025</fr:year>
+              <fr:month>1</fr:month>
+              <fr:day>24</fr:day>
+            </fr:date>
+            <fr:uri>https://stevenschaefer.net/sss-000Z/</fr:uri>
+            <fr:display-uri>sss-000Z</fr:display-uri>
+            <fr:route>/sss-000Z/</fr:route>
+            <fr:title text="First Sets in Dependent Lambek Calculus">First Sets in Dependent Lambek Calculus</fr:title>
+            <fr:taxon>definition</fr:taxon>
+          </fr:frontmatter>
+          <fr:mainmatter>
+            <html:p>The <fr:link href="/sss-000Y/" title="First Set" uri="https://stevenschaefer.net/sss-000Y/" display-uri="sss-000Y" type="local">first set</fr:link> of a grammar <fr:tex display="inline"><![CDATA[A]]></fr:tex> may be captured in Dependent Lambek Calculus via the following proposition:
+
+  <fr:tex display="block"><![CDATA[ c \not  \in  \mathsf {First}(A) := A \And  (\texttt {"}c\texttt {"} \otimes  \top ) \vdash  \bot ]]></fr:tex></html:p>
+          </fr:mainmatter>
+        </fr:tree>
+        <fr:tree show-metadata="true" expanded="false" toc="false" numbered="false">
+          <fr:frontmatter>
+            <fr:authors />
+            <fr:date>
+              <fr:year>2025</fr:year>
+              <fr:month>1</fr:month>
+              <fr:day>24</fr:day>
+            </fr:date>
+            <fr:uri>https://stevenschaefer.net/sss-0017/</fr:uri>
+            <fr:display-uri>sss-0017</fr:display-uri>
+            <fr:route>/sss-0017/</fr:route>
+            <fr:title text="Sequential Unambiguity">Sequential Unambiguity</fr:title>
+            <fr:taxon>definition</fr:taxon>
+          </fr:frontmatter>
+          <fr:mainmatter>
+            <html:p>Grammars <fr:tex display="inline"><![CDATA[A]]></fr:tex> and <fr:tex display="inline"><![CDATA[B]]></fr:tex> are <html:em>sequentially unambiguous</html:em> if the <fr:link href="/sss-0010/" title="FollowLast Set" uri="https://stevenschaefer.net/sss-0010/" display-uri="sss-0010" type="local">followlast set</fr:link> of <fr:tex display="inline"><![CDATA[A]]></fr:tex> is disjoint from the <fr:link href="/sss-000Y/" title="First Set" uri="https://stevenschaefer.net/sss-000Y/" display-uri="sss-000Y" type="local">first set</fr:link> of <fr:tex display="inline"><![CDATA[B]]></fr:tex>.
+
+<fr:tex display="block"><![CDATA[\mathsf {FLast}(A) \cap  \mathsf {First}(B) = \emptyset ]]></fr:tex></html:p>
+            <html:p>We can understand this intuitively by characterizing the behavior of a left-to-right parser of <fr:tex display="inline"><![CDATA[A \otimes  B]]></fr:tex>. First it searches for a parse of <fr:tex display="inline"><![CDATA[A]]></fr:tex>, then upon finding a character that is not in <fr:tex display="inline"><![CDATA[\mathsf {FLast}(A)]]></fr:tex> it may begin trying search for <fr:tex display="inline"><![CDATA[B]]></fr:tex>.
+
+That is, there is a unique boundary between the <fr:tex display="inline"><![CDATA[A]]></fr:tex>-parse and the <fr:tex display="inline"><![CDATA[B]]></fr:tex>-parse.</html:p>
+          </fr:mainmatter>
+        </fr:tree>
+      </fr:mainmatter>
+    </fr:tree>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors />
+        <fr:title text="Related">Related</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter />
+    </fr:tree>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors />
+        <fr:title text="Contributions">Contributions</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter />
+    </fr:tree>
+  </fr:backmatter>
+</fr:tree>
