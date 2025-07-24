@@ -12,6 +12,7 @@ KEEP=(
   "MWPLS.pdf"
   "intrinsic-verification-of-parsers.pdf"
   "headshot.jpeg"
+  "index.html"
 )
 
 # Convert the array into a pattern string for grep
