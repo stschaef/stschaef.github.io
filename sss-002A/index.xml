@@ -43,63 +43,7 @@
         <fr:authors />
         <fr:title text="Backlinks">Backlinks</fr:title>
       </fr:frontmatter>
-      <fr:mainmatter>
-        <fr:tree show-metadata="true" expanded="false" toc="false" numbered="false">
-          <fr:frontmatter>
-            <fr:authors>
-              <fr:author>
-                <fr:link href="/stevenschaefer/" title="Steven Schaefer" uri="https://stevenschaefer.net/stevenschaefer/" display-uri="stevenschaefer" type="local">Steven Schaefer</fr:link>
-              </fr:author>
-            </fr:authors>
-            <fr:date>
-              <fr:year>2025</fr:year>
-              <fr:month>2</fr:month>
-              <fr:day>21</fr:day>
-            </fr:date>
-            <fr:uri>https://stevenschaefer.net/sss-002J/</fr:uri>
-            <fr:display-uri>sss-002J</fr:display-uri>
-            <fr:route>/sss-002J/</fr:route>
-            <fr:title text="Another Attempt Towards Greediness?">Another Attempt Towards Greediness?</fr:title>
-            <fr:taxon>daily</fr:taxon>
-          </fr:frontmatter>
-          <fr:mainmatter>
-            <html:p>It occurs to me that <fr:link href="/sss-002B/" title="Greediness as a Predicate on Grammars?" uri="https://stevenschaefer.net/sss-002B/" display-uri="sss-002B" type="local">Greediness as a Predicate on Grammars?</fr:link> may be more accurately characterized as "longest-match" instead of "<fr:link href="/sss-002A/" title="Greedy Parsing" uri="https://stevenschaefer.net/sss-002A/" display-uri="sss-002A" type="local">greediness</fr:link>", but that does not matter too much. A first step is encoding any disambiguation strategy.</html:p>
-            <html:p><fr:link href="/frischCardelli/" title="Greedy regular expression matching" uri="https://stevenschaefer.net/frischCardelli/" display-uri="frischCardelli" type="local">Greedy regular expression matching</fr:link> offers a way to break ambiguities introduced by sums and Kleene star. To capture the greedy parsers involve Kleene stars, we may be able to do a much simpler and naive approach.</html:p>
-            <fr:tex display="block"><![CDATA[{A}^{*} \otimes  {\mathopen {}\left (B \And  \neg  {\mathopen {}\left (A \otimes  \top \right )\mathclose {}}\right )\mathclose {}} \subset  {A}^{*} \otimes  B]]></fr:tex>
-            <html:p>That is, maybe you can simply restrict the type to make it so the parses following a Kleene star cannot contain a source of ambiguity with respect to that Kleene star. At a first glance, semantically this should enforce the same greediness you'd expect, but I'm not sure how much of this is workable syntactically.</html:p>
-            <html:p>Similarly, you may be able to disambiguate sums by preferring the left summand.</html:p>
-            <fr:tex display="block"><![CDATA[A \oplus  {\mathopen {}\left (B \And  \neg  A\right )\mathclose {}} \subset  A \oplus  B]]></fr:tex>
-          </fr:mainmatter>
-        </fr:tree>
-        <fr:tree show-metadata="true" expanded="false" toc="false" numbered="false">
-          <fr:frontmatter>
-            <fr:authors>
-              <fr:author>
-                <fr:link href="/stevenschaefer/" title="Steven Schaefer" uri="https://stevenschaefer.net/stevenschaefer/" display-uri="stevenschaefer" type="local">Steven Schaefer</fr:link>
-              </fr:author>
-            </fr:authors>
-            <fr:date>
-              <fr:year>2025</fr:year>
-              <fr:month>2</fr:month>
-              <fr:day>19</fr:day>
-            </fr:date>
-            <fr:uri>https://stevenschaefer.net/sss-002B/</fr:uri>
-            <fr:display-uri>sss-002B</fr:display-uri>
-            <fr:route>/sss-002B/</fr:route>
-            <fr:title text="Greediness as a Predicate on Grammars?">Greediness as a Predicate on Grammars?</fr:title>
-            <fr:taxon>daily</fr:taxon>
-          </fr:frontmatter>
-          <fr:mainmatter>
-            <html:p>I am not quite sure how to make everything precise, but I believe that <fr:link href="/sss-002A/" title="Greedy Parsing" uri="https://stevenschaefer.net/sss-002A/" display-uri="sss-002A" type="local">greediness</fr:link> may be expressible as a <fr:link href="/sss-001K/" title="Using the Subobject Classifier" uri="https://stevenschaefer.net/sss-001K/" display-uri="sss-001K" type="local">predicate</fr:link> on tensors.</html:p>
-            <html:p>For instance, we may hope to define greediness as something like <fr:tex display="inline"><![CDATA[\mathsf {isGreedy} : A \otimes  B \vdash  \Omega ]]></fr:tex>
-
-<fr:tex display="block"><![CDATA[\mathsf {isGreedy}~w~(s, a , b) \colonequals  \not  \exists  (s' , a' , b') \in  (A \otimes  B) w . \mathsf {stringOf}(a) < \mathsf {stringOf}(a')]]></fr:tex></html:p>
-            <html:p>Where above I mean for <fr:tex display="inline"><![CDATA[w, w' : \mathrm {String}]]></fr:tex>, we define <fr:tex display="inline"><![CDATA[w < w']]></fr:tex> to mean that <fr:tex display="inline"><![CDATA[w]]></fr:tex> is a proper prefix of <fr:tex display="inline"><![CDATA[w']]></fr:tex>.</html:p>
-            <html:p>In English, this attempt at a definiton would read as : a parse of <fr:tex display="inline"><![CDATA[A \otimes  B]]></fr:tex> is greedy if there is no parse of <fr:tex display="inline"><![CDATA[A \otimes  B]]></fr:tex> for the same string where the parse of <fr:tex display="inline"><![CDATA[A]]></fr:tex> occurs over a larger substring.</html:p>
-            <html:p>This definiton cannot work exactly, as it is solely a semantic definiton. Yet it feels close to being workable internally.</html:p>
-          </fr:mainmatter>
-        </fr:tree>
-      </fr:mainmatter>
+      <fr:mainmatter />
     </fr:tree>
     <fr:tree show-metadata="false" hidden-when-empty="true">
       <fr:frontmatter>

@@ -43,42 +43,7 @@
         <fr:authors />
         <fr:title text="Backlinks">Backlinks</fr:title>
       </fr:frontmatter>
-      <fr:mainmatter>
-        <fr:tree show-metadata="true" expanded="false" toc="false" numbered="false">
-          <fr:frontmatter>
-            <fr:authors>
-              <fr:author>
-                <fr:link href="/stevenschaefer/" title="Steven Schaefer" uri="https://stevenschaefer.net/stevenschaefer/" display-uri="stevenschaefer" type="local">Steven Schaefer</fr:link>
-              </fr:author>
-            </fr:authors>
-            <fr:date>
-              <fr:year>2025</fr:year>
-              <fr:month>1</fr:month>
-              <fr:day>24</fr:day>
-            </fr:date>
-            <fr:uri>https://stevenschaefer.net/sss-000V/</fr:uri>
-            <fr:display-uri>sss-000V</fr:display-uri>
-            <fr:route>/sss-000V/</fr:route>
-            <fr:title text="FollowLast Soundness">FollowLast Soundness</fr:title>
-            <fr:taxon>daily</fr:taxon>
-          </fr:frontmatter>
-          <fr:mainmatter>
-            <html:p>Thus far I have shown the soundness of our notions of <fr:link href="/sss-0015/" title="Nullability in \deplambek " uri="https://stevenschaefer.net/sss-0015/" display-uri="sss-0015" type="local">nullability</fr:link> and <fr:link href="/sss-000Z/" title="First Sets in \deplambek " uri="https://stevenschaefer.net/sss-000Z/" display-uri="sss-000Z" type="local">first sets</fr:link> for the encoding of <fr:link href="/sss-000W/" title="Deterministic Regular Expressions" uri="https://stevenschaefer.net/sss-000W/" display-uri="sss-000W" type="local">deterministic regular expresssions</fr:link> in Dependent Lambek Calculus.</html:p>
-            <html:p>I've been primarily stuck on the following proof for the soundness of the <fr:link href="/sss-0011/" title="FollowLast Sets in \deplambek " uri="https://stevenschaefer.net/sss-0011/" display-uri="sss-0011" type="local">followlast</fr:link> sets in the case of concatenation of two nonnullable grammars.
-
-Given <fr:tex display="inline"><![CDATA[g]]></fr:tex> and <fr:tex display="inline"><![CDATA[h]]></fr:tex> such that <fr:tex display="inline"><![CDATA[\mathsf {FLast}(g)]]></fr:tex> and <fr:tex display="inline"><![CDATA[\mathsf {First}(h)]]></fr:tex> are disjoint, and <fr:tex display="inline"><![CDATA[c \not  \in  \mathsf {FLast}(h)]]></fr:tex>, want to show that <fr:tex display="inline"><![CDATA[c]]></fr:tex> is also not in <fr:tex display="inline"><![CDATA[\mathsf {FLast}(g \otimes  h)]]></fr:tex>.
-
-That is, assuming for all <fr:tex display="inline"><![CDATA[c]]></fr:tex>, <fr:tex display="inline"><![CDATA[g \And  {\mathopen {}\left (g \otimes  c \otimes  \top \right )\mathclose {}} \vdash  \bot ]]></fr:tex> or <fr:tex display="inline"><![CDATA[h \And  {\mathopen {}\left (c \otimes  \top \right )\mathclose {}} \vdash  \bot ]]></fr:tex>. Fix <fr:tex display="inline"><![CDATA[c]]></fr:tex> such that <fr:tex display="inline"><![CDATA[h \And  {\mathopen {}\left (h \otimes  c \otimes  \top \right )\mathclose {}} \vdash  \bot ]]></fr:tex>, and then show <fr:tex display="inline"><![CDATA[g \otimes  h \And  {\mathopen {}\left (g \otimes  h \otimes  c \otimes  \top \right )\mathclose {}} \vdash  \bot ]]></fr:tex>.</html:p>
-            <html:p>This isn't super bad to do in the model, where you do some case analysis. In particular, the string that is parsed splits into some <fr:tex display="inline"><![CDATA[w , x : \mathrm {String}]]></fr:tex> with <fr:tex display="inline"><![CDATA[g]]></fr:tex> and <fr:tex display="inline"><![CDATA[h]]></fr:tex> parses, respectively. Likewise, it splits into <fr:tex display="inline"><![CDATA[y , z : \mathrm {String}]]></fr:tex> with a <fr:tex display="inline"><![CDATA[g]]></fr:tex> parse of <fr:tex display="inline"><![CDATA[y]]></fr:tex> and an <fr:tex display="inline"><![CDATA[h \otimes  \texttt {"}c\texttt {"} \otimes  \top ]]></fr:tex> parse of <fr:tex display="inline"><![CDATA[z]]></fr:tex>. All in all, we have
-
-<fr:tex display="block"><![CDATA[w,x,y,z : \mathrm {String} , w \texttt { ++ } x = y \texttt { ++ } z]]></fr:tex>
-with some parses <fr:tex display="inline"><![CDATA[g w]]></fr:tex>, <fr:tex display="inline"><![CDATA[h x]]></fr:tex>, <fr:tex display="inline"><![CDATA[g y]]></fr:tex>, and <fr:tex display="inline"><![CDATA[(h \otimes  \texttt {"}c\texttt {"} \otimes  \top ) z]]></fr:tex>. Then you split into cases checking whether <fr:tex display="inline"><![CDATA[w]]></fr:tex> and <fr:tex display="inline"><![CDATA[y]]></fr:tex> are the same string, if <fr:tex display="inline"><![CDATA[w]]></fr:tex> is a (nontrivial) prefix of <fr:tex display="inline"><![CDATA[y]]></fr:tex>, or if <fr:tex display="inline"><![CDATA[y]]></fr:tex> is a prefix of <fr:tex display="inline"><![CDATA[w]]></fr:tex>.  Then each of the cases are straightforward enough but still tedious.</html:p>
-            <html:p>I've been weighing whether or not to do effectively the same proof but in the model by using the axiom
-<fr:tex display="block"><![CDATA[g \cong  \textstyle \mathchoice {\textstyle \oplus _{{\mathopen {}\left (w : \mathrm {String}\right )\mathclose {}}}}{\textstyle \oplus _{{\mathopen {}\left (w : \mathrm {String}\right )\mathclose {}}}}{\scriptstyle \oplus _{{\mathopen {}\left (w : \mathrm {String}\right )\mathclose {}}}}{\scriptscriptstyle \oplus _{{\mathopen {}\left (w : \mathrm {String}\right )\mathclose {}}}}. g \And  \lceil  w \rceil ]]></fr:tex>
-It feels as there should be a way to do this at a high level utilizing type-based reasoning, rather than manipulating individual strings.</html:p>
-          </fr:mainmatter>
-        </fr:tree>
-      </fr:mainmatter>
+      <fr:mainmatter />
     </fr:tree>
     <fr:tree show-metadata="false" hidden-when-empty="true">
       <fr:frontmatter>

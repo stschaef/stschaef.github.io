@@ -4,7 +4,7 @@
 
 cd ~/forest
 
-./build.sh
+./buildPublic.sh
 
 cd ~/stschaef.github.io
 
