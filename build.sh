@@ -20,4 +20,4 @@ git push origin master
 
 cd ~/forest
 
-./build.sh
+./buildPrivate.sh
