@@ -78,7 +78,7 @@ Consider the example of products in a category <fr:tex display="inline"><![CDATA
 
  
   
-  <html:figure><fr:resource hash="8572c9554e180f92c37575458e94de18"><fr:resource-content><html:img src="/8572c9554e180f92c37575458e94de18.svg" /></fr:resource-content><fr:resource-source type="latex" part="preamble"><![CDATA[
+  <html:figure><fr:resource hash="8a23d8745d87676fe50011ccc80136b3"><fr:resource-content><html:img src="/8a23d8745d87676fe50011ccc80136b3.svg" /></fr:resource-content><fr:resource-source type="latex" part="preamble"><![CDATA[
    
  \RequirePackage{tikz}
  \RequirePackage{amsmath}
@@ -97,16 +97,16 @@ Consider the example of products in a category <fr:tex display="inline"><![CDATA
 
  \NewDocumentCommand\CreateRect{D<>{} m m}{
    \path
-     coordinate (1nw)
-     ++(2,-3) coordinate (1se)
-     coordinate (1sw) at (1se -| 1nw)
-     coordinate (1ne) at (1nw -| 1se)
+     coordinate (#1nw)
+     ++(#2,-#3) coordinate (#1se)
+     coordinate (#1sw) at (#1se -| #1nw)
+     coordinate (#1ne) at (#1nw -| #1se)
    ;
 
-   \path[spath/save = 1north] (1nw) to (1ne);
-   \path[spath/save = 1west] (1nw) to (1sw);
-   \path[spath/save = 1east] (1ne) to (1se);
-   \path[spath/save = 1south] (1sw) to (1se);
+   \path[spath/save = #1north] (#1nw) to (#1ne);
+   \path[spath/save = #1west] (#1nw) to (#1sw);
+   \path[spath/save = #1east] (#1ne) to (#1se);
+   \path[spath/save = #1south] (#1sw) to (#1se);
  }
 
    

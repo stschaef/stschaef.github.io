@@ -6,12 +6,26 @@
 
   <xsl:key name="tree-with-uri" match="/f:tree/f:mainmatter//f:tree" use="f:frontmatter/f:uri/text()" />
 
+  <!-- Editor configuration: set to "emacs", "vscode", "nvim", or a custom URL scheme.
+       Supported values:
+         "emacs"   -> forester-edit://open?path=FILE  (requires forester-edit handler)
+         "vscode"  -> vscode://file/FILE
+         "cursor"  -> cursor://file/FILE
+         custom    -> CUSTOM://file/FILE
+  -->
+  <xsl:variable name="editor">emacs</xsl:variable>
+
+  <!-- Default theme applied when a tree has no \meta{theme}{...}.
+       Set to "" to disable default theming. Use "none" in a tree's meta to skip. -->
+  <xsl:variable name="default-theme">dracula</xsl:variable>
+
   <xsl:template match="/">
     <html xmlns="http://www.w3.org/1999/xhtml" data-base-url="{/f:tree/@base-url}">
       <head>
         <meta name="viewport" content="width=device-width" />
         <link rel="stylesheet" href="{/f:tree/@base-url}style.css" />
         <link rel="stylesheet" href="{/f:tree/@base-url}katex.min.css" />
+        <link rel="stylesheet" href="{/f:tree/@base-url}themes/dracula.css" />
         <script type="text/javascript">
           <xsl:if test="/f:tree/f:frontmatter/f:source-path">
             <xsl:text>window.sourcePath = '</xsl:text>
@@ -29,9 +43,12 @@
         <xsl:if test="not(/f:tree[@root = 'true'])">
           <header class="header">
             <nav class="nav">
-              <div class="logo">
+              <div class="nav-links">
                 <a href="{/f:tree/@base-url}index.html" title="Home">
                   <xsl:text>« Home</xsl:text>
+                </a>
+                <a href="{/f:tree/@base-url}sss-test-dashboard/" title="Dashboard">
+                  <xsl:text>Dashboard</xsl:text>
                 </a>
               </div>
             </nav>
@@ -39,13 +56,35 @@
         </xsl:if>
         <div id="grid-wrapper">
           <article>
+            <xsl:attribute name="class">
+              <xsl:text>tree-container</xsl:text>
+              <xsl:if test="f:tree/f:frontmatter/f:meta[@name='layout']">
+                <xsl:text> layout-</xsl:text>
+                <xsl:value-of select="f:tree/f:frontmatter/f:meta[@name='layout']" />
+              </xsl:if>
+              <xsl:choose>
+                <xsl:when test="f:tree/f:frontmatter/f:meta[@name='theme'] = 'none'" />
+                <xsl:when test="f:tree/f:frontmatter/f:meta[@name='theme']">
+                  <xsl:text> theme-</xsl:text>
+                  <xsl:value-of select="f:tree/f:frontmatter/f:meta[@name='theme']" />
+                </xsl:when>
+                <xsl:when test="$default-theme != ''">
+                  <xsl:text> theme-</xsl:text>
+                  <xsl:value-of select="$default-theme" />
+                </xsl:when>
+              </xsl:choose>
+            </xsl:attribute>
             <xsl:apply-templates select="f:tree" />
           </article>
           <xsl:if test="f:tree/f:mainmatter/f:tree[not(@toc='false')] and not(/f:tree/f:frontmatter/f:meta[@name = 'toc']/.='false')">
             <nav id="toc">
-              <div class="block">
+              <input type="checkbox" id="toc-toggle" checked="checked" />
+              <label class="toc-toggle-btn" for="toc-toggle"></label>
+              <div class="toc-content">
                 <h1>Table of Contents</h1>
-                <xsl:apply-templates select="f:tree/f:mainmatter" mode="toc" />
+                <div class="block">
+                  <xsl:apply-templates select="f:tree/f:mainmatter" mode="toc" />
+                </div>
               </div>
             </nav>
           </xsl:if>
@@ -206,7 +245,29 @@
   </xsl:template>
 
   <xsl:template match="f:source-path">
-    <a class="edit-button" href="{concat('vscode://file', .)}">
+    <a class="edit-button" title="{.}">
+      <xsl:attribute name="href">
+        <xsl:choose>
+          <xsl:when test="$editor = 'emacs'">
+            <xsl:text>forester-edit://open?path=</xsl:text>
+            <xsl:value-of select="." />
+          </xsl:when>
+          <xsl:when test="$editor = 'vscode'">
+            <xsl:text>vscode://file</xsl:text>
+            <xsl:value-of select="." />
+          </xsl:when>
+          <xsl:when test="$editor = 'cursor'">
+            <xsl:text>cursor://file</xsl:text>
+            <xsl:value-of select="." />
+          </xsl:when>
+          <xsl:otherwise>
+            <!-- Custom: use editor value as the URL scheme -->
+            <xsl:value-of select="$editor" />
+            <xsl:text>://file</xsl:text>
+            <xsl:value-of select="." />
+          </xsl:otherwise>
+        </xsl:choose>
+      </xsl:attribute>
       <xsl:text>[edit]</xsl:text>
     </a>
   </xsl:template>
@@ -218,11 +279,29 @@
   <xsl:template match="f:frontmatter">
     <header>
       <h1>
-        <span class="taxon">
-          <xsl:apply-templates select=".." mode="tree-taxon-with-number">
-            <xsl:with-param name="suffix">.&#160;</xsl:with-param>
-          </xsl:apply-templates>
-        </span>
+        <xsl:choose>
+          <xsl:when test="f:meta[@name='status']">
+            <span class="todo-status todo-status-{f:meta[@name='status']}">
+              <xsl:choose>
+                <xsl:when test="f:meta[@name='status'] = 'pending'">TODO</xsl:when>
+                <xsl:when test="f:meta[@name='status'] = 'in-progress'">IN-PROGRESS</xsl:when>
+                <xsl:when test="f:meta[@name='status'] = 'done'">DONE</xsl:when>
+                <xsl:when test="f:meta[@name='status'] = 'cancelled'">CANCELLED</xsl:when>
+                <xsl:otherwise>
+                  <xsl:value-of select="f:meta[@name='status']" />
+                </xsl:otherwise>
+              </xsl:choose>
+              <xsl:text>.&#160;</xsl:text>
+            </span>
+          </xsl:when>
+          <xsl:otherwise>
+            <span class="taxon">
+              <xsl:apply-templates select=".." mode="tree-taxon-with-number">
+                <xsl:with-param name="suffix">.&#160;</xsl:with-param>
+              </xsl:apply-templates>
+            </span>
+          </xsl:otherwise>
+        </xsl:choose>
 
         <xsl:apply-templates select="f:title" />
         <xsl:text>&#032;</xsl:text>
@@ -365,6 +444,11 @@
           <xsl:value-of select="f:frontmatter/f:taxon" />
         </xsl:attribute>
       </xsl:if>
+      <xsl:if test="f:frontmatter/f:meta[@name='status']">
+        <xsl:attribute name="data-status">
+          <xsl:value-of select="f:frontmatter/f:meta[@name='status']" />
+        </xsl:attribute>
+      </xsl:if>
 
       <xsl:choose>
         <xsl:when test="not(@show-heading='false')">
@@ -375,8 +459,10 @@
             <summary>
               <xsl:apply-templates select="f:frontmatter" />
             </summary>
-            <xsl:apply-templates select="f:mainmatter" />
-            <xsl:apply-templates select="f:frontmatter/f:meta[@name='bibtex']" />
+            <div class="tree-content">
+              <xsl:apply-templates select="f:mainmatter" />
+              <xsl:apply-templates select="f:frontmatter/f:meta[@name='bibtex']" />
+            </div>
           </details>
         </xsl:when>
         <xsl:otherwise>
