@@ -47,7 +47,7 @@
                 <a href="{/f:tree/@base-url}index.html" title="Home">
                   <xsl:text>« Home</xsl:text>
                 </a>
-                <a href="{/f:tree/@base-url}sss-test-dashboard/" title="Dashboard">
+                <a href="{/f:tree/@base-url}dashboard/" title="Dashboard">
                   <xsl:text>Dashboard</xsl:text>
                 </a>
               </div>
@@ -55,6 +55,12 @@
           </header>
         </xsl:if>
         <div id="grid-wrapper">
+          <xsl:if test="f:tree/f:frontmatter/f:meta[@name='layout']">
+            <xsl:attribute name="class">
+              <xsl:text>layout-</xsl:text>
+              <xsl:value-of select="f:tree/f:frontmatter/f:meta[@name='layout']" />
+            </xsl:attribute>
+          </xsl:if>
           <article>
             <xsl:attribute name="class">
               <xsl:text>tree-container</xsl:text>

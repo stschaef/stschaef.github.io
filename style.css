@@ -209,7 +209,9 @@ footer h2 {
     grid-template-columns: minmax(0, 90ex) auto;
   }
   /* Wide layout: article fills available space */
-  #grid-wrapper:has(.layout-wide),
+  #grid-wrapper.layout-wide {
+    grid-template-columns: 1fr auto;
+  }
   #grid-wrapper:has(.forester-grid) {
     grid-template-columns: 1fr auto;
   }
@@ -224,8 +226,12 @@ body>header {
   margin-right: auto;
   grid-column: 1;
 }
-/* Wide layout: remove article max-width */
-#grid-wrapper>article.layout-wide,
+/* Wide layout: remove article max-width and fill grid cell */
+#grid-wrapper.layout-wide>article {
+  max-width: none;
+  margin-right: 0;
+  width: 100%;
+}
 #grid-wrapper:has(.forester-grid)>article {
   max-width: none;
 }
