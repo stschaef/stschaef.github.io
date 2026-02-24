@@ -12,7 +12,6 @@
       <fr:month>2</fr:month>
       <fr:day>7</fr:day>
     </fr:date>
-    <fr:source-path>/Users/stevenschaefer/forest/trees/public/sss-001P.tree</fr:source-path>
     <fr:uri>https://stevenschaefer.net/sss-001P/</fr:uri>
     <fr:display-uri>sss-001P</fr:display-uri>
     <fr:route>/sss-001P/</fr:route>
@@ -57,7 +56,6 @@
               <fr:month>2</fr:month>
               <fr:day>6</fr:day>
             </fr:date>
-            <fr:source-path>/Users/stevenschaefer/forest/trees/public/sss-001N.tree</fr:source-path>
             <fr:uri>https://stevenschaefer.net/sss-001N/</fr:uri>
             <fr:display-uri>sss-001N</fr:display-uri>
             <fr:route>/sss-001N/</fr:route>
@@ -81,51 +79,6 @@
   A subobject <fr:tex display="inline"><![CDATA[\phi  : d \hookrightarrow  c]]></fr:tex> induces a unique characteristic morphism <fr:tex display="inline"><![CDATA[p_{\phi } : c \to  \Omega ]]></fr:tex> such that
   <fr:tex display="block"><![CDATA[p_{\phi } \circ  \phi  = \mathsf {true} \circ  !_{d}]]></fr:tex>
   Moreover, the appropriate square must be a pullback, but I cannot currently include <html:code>tikzcd</html:code> in Forester, <fr:link href="/sss-0018/" title="Experience with Forester" uri="https://stevenschaefer.net/sss-0018/" display-uri="sss-0018" type="local">which stinks</fr:link>.
-</html:p>
-          </fr:mainmatter>
-        </fr:tree>
-        <fr:tree show-metadata="true" expanded="false" toc="false" numbered="false">
-          <fr:frontmatter>
-            <fr:authors>
-              <fr:author>
-                <fr:link href="/stevenschaefer/" title="Steven Schaefer" uri="https://stevenschaefer.net/stevenschaefer/" display-uri="stevenschaefer" type="local">Steven Schaefer</fr:link>
-              </fr:author>
-            </fr:authors>
-            <fr:date>
-              <fr:year>2025</fr:year>
-              <fr:month>2</fr:month>
-              <fr:day>6</fr:day>
-            </fr:date>
-            <fr:source-path>/Users/stevenschaefer/forest/trees/sss-001K.tree</fr:source-path>
-            <fr:uri>https://stevenschaefer.net/sss-001K/</fr:uri>
-            <fr:display-uri>sss-001K</fr:display-uri>
-            <fr:route>/sss-001K/</fr:route>
-            <fr:title text="Using the Subobject Classifier">Using the Subobject Classifier</fr:title>
-            <fr:taxon>Daily</fr:taxon>
-          </fr:frontmatter>
-          <fr:mainmatter>
-            <html:p>
-  Previously in Agda we had constructed <fr:link href="/sss-001L/" title="Equalizer" uri="https://stevenschaefer.net/sss-001L/" display-uri="sss-001L" type="local">equalizers</fr:link> in Dependent Lambek Calculus using <fr:link href="/sss-001M/" title="Constructing Equalizers in Type Theory" uri="https://stevenschaefer.net/sss-001M/" display-uri="sss-001M" type="local">sigma types</fr:link>. Further, equalizers form <fr:link href="/sss-001P/" title="Subobject" uri="https://stevenschaefer.net/sss-001P/" display-uri="sss-001P" type="local">subobjects</fr:link>, which may be comprehended as maps from a type into a subobject classifier.
-</html:p>
-            <html:p>
-I believe in our formalization we want to generalize this idea to a broader class of subobjects, maybe even all of them. That is, we could define a <fr:link href="/sss-001N/" title="Subobject Classifier" uri="https://stevenschaefer.net/sss-001N/" display-uri="sss-001N" type="local">subobject classifying grammar</fr:link> <fr:tex display="inline"><![CDATA[\Omega ]]></fr:tex>. Then we can internally define any predicate on a grammar <fr:tex display="inline"><![CDATA[g]]></fr:tex> via a term <fr:tex display="inline"><![CDATA[p : g \vdash  \Omega ]]></fr:tex>.
-</html:p>
-            <html:p>
-That is, forall <fr:tex display="inline"><![CDATA[w : \mathrm {String}]]></fr:tex> we have <fr:tex display="inline"><![CDATA[\llbracket {\Omega }\rrbracket (w) \colonequals  \mathsf {hProp}]]></fr:tex>, and
-
-<fr:tex display="block"><![CDATA[
-\llbracket {\mathsf {subgrammar}(g)(p)}\rrbracket (w) \colonequals  \mathchoice {\textstyle \sum _{{\mathopen {}\left (x : \llbracket {g}\rrbracket (w)\right )\mathclose {}}}}{\textstyle \sum _{{\mathopen {}\left (x : \llbracket {g}\rrbracket (w)\right )\mathclose {}}}}{\scriptstyle \sum _{{\mathopen {}\left (x : \llbracket {g}\rrbracket (w)\right )\mathclose {}}}}{\scriptscriptstyle \sum _{{\mathopen {}\left (x : \llbracket {g}\rrbracket (w)\right )\mathclose {}}}}{\llbracket {p}\rrbracket (x)}]]></fr:tex></html:p>
-            <html:p>
-The code for this is nearly identical to the defintion of equalizers as sigma types, and I have even built a translation of the equalizers code that is defined with this as its foundation. I have not yet tested if either implementation is preferable.
-</html:p>
-            <html:p>
- It isn't yet clear how to best expose this sort of construct syntactically. I suppose you could assume some subobject classifying grammar, but then I don't know if you can then reap the benefits of the propositions internally. That is, how do you reflect the proposition that two terms are equal in the internal language of propositions rather than the external one?
-</html:p>
-            <html:p>
-  If nothing else, this code gives me a reusable interface to axiomatize smaller, sandboxed ways in which I'd like to internalize certain types of propositions (such as "two terms are equal" or "does not begin with the character <fr:tex display="inline"><![CDATA[c]]></fr:tex>").
-</html:p>
-            <html:p>
-  The hope for this code is that it let's me inductively prove the <fr:link href="/sss-000V/" title="FollowLast Soundness" uri="https://stevenschaefer.net/sss-000V/" display-uri="sss-000V" type="local">follow last soundness</fr:link> of Kleene star.
 </html:p>
           </fr:mainmatter>
         </fr:tree>
