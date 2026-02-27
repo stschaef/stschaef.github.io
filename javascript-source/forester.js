@@ -89,8 +89,13 @@ window.addEventListener("load", (event) => {
    top.forEach((item) => addItemToSection(item, "Top Trees", bookmarkIcon))
    rest.forEach((item) => addItemToSection(item, "All Trees", null))
  
+   items.push({
+    id: 'explore',
+    title: 'Explore forest by tags and queries',
+    section: 'Commands',
+    handler: () => { window.location.href = '/explore/'; }
+   });
+
    ninja.data = items
-  }); 
+  });
 });
-
-

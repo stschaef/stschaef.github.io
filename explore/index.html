@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" data-base-url="/">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="/katex.min.css">
+  <link rel="stylesheet" href="/themes/dracula.css">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <script type="module" src="/forester.js"></script>
+  <title>Explore Forest</title>
+  <style>
+    .explore-input-row {
+      display: flex; align-items: center; gap: 8px;
+      flex-wrap: wrap; margin-bottom: 0.8em;
+    }
+    .explore-input-row label {
+      font-size: 0.95em; white-space: nowrap;
+      color: var(--dracula-comment, #6272a4);
+    }
+    .explore-input-wrap {
+      position: relative; flex: 1; min-width: 20ex;
+    }
+    .explore-input {
+      width: 100%; box-sizing: border-box;
+      padding: 5px 8px; font-family: inherit; font-size: 0.95em;
+      border: 1px solid var(--dracula-current, #44475a);
+      border-radius: 4px;
+      background: var(--dracula-bg, #282a36);
+      color: var(--dracula-fg, #f8f8f2);
+    }
+    .explore-input:focus {
+      outline: none;
+      border-color: var(--dracula-purple, #bd93f9);
+    }
+    .explore-autocomplete {
+      display: none; position: absolute; top: 100%; left: 0; right: 0;
+      max-height: 200px; overflow-y: auto; z-index: 10;
+      background: var(--dracula-bg, #282a36);
+      border: 1px solid var(--dracula-current, #44475a);
+      border-top: none; border-radius: 0 0 4px 4px;
+    }
+    .explore-autocomplete.open { display: block; }
+    .explore-autocomplete-item {
+      padding: 4px 8px; cursor: pointer; font-size: 0.9em;
+      color: var(--dracula-fg, #f8f8f2);
+    }
+    .explore-autocomplete-item:hover,
+    .explore-autocomplete-item.active {
+      background: var(--dracula-current, #44475a);
+    }
+    .explore-selected-tags {
+      display: flex; flex-wrap: wrap; gap: 5px; margin-bottom: 0.8em;
+    }
+    .explore-tag-pill {
+      display: inline-flex; align-items: center; gap: 4px;
+      padding: 2px 8px; border-radius: 10px; font-size: 0.85em;
+      background: var(--dracula-current, #44475a);
+      color: var(--dracula-fg, #f8f8f2);
+    }
+    .explore-tag-pill .remove {
+      cursor: pointer; font-size: 1.1em; line-height: 1;
+      color: var(--dracula-comment, #6272a4);
+    }
+    .explore-tag-pill .remove:hover {
+      color: var(--dracula-red, #ff5555);
+    }
+    .explore-results { margin-top: 0.5em; }
+    .explore-no-results {
+      color: var(--dracula-comment, #6272a4);
+      font-style: italic; padding: 0.5em 0;
+    }
+    .explore-result-item { margin-bottom: 0.3em; }
+    .explore-result-item a { text-decoration: underline dotted; }
+    .explore-result-item .taxon {
+      color: var(--dracula-pink, #ff79c6); font-weight: bolder;
+    }
+    .explore-result-item .slug {
+      color: var(--dracula-comment, #6272a4); font-weight: 200;
+    }
+    .explore-result-tags {
+      font-size: 0.8em; color: var(--dracula-comment, #6272a4);
+    }
+    .explore-count {
+      font-size: 0.85em; margin-bottom: 0.5em;
+      color: var(--dracula-comment, #6272a4);
+    }
+  </style>
+</head>
+<body>
+  <ninja-keys placeholder="Start typing a note title or ID"></ninja-keys>
+  <header class="header">
+    <nav class="nav">
+      <div class="nav-links">
+        <a href="/index.html" title="Home">&laquo; Home</a>
+      </div>
+    </nav>
+  </header>
+  <div id="grid-wrapper">
+    <article class="tree-container theme-dracula">
+      <section class="block">
+        <details open>
+          <summary>
+            <header><h1>Explore Forest</h1></header>
+          </summary>
+          <div class="tree-content">
+            <div class="explore-input-row">
+              <label for="tag-input">Tags</label>
+              <div class="explore-input-wrap">
+                <input type="text" id="tag-input" class="explore-input"
+                       placeholder="Type to add tags..." autocomplete="off">
+                <div id="tag-dropdown" class="explore-autocomplete"></div>
+              </div>
+            </div>
+            <div id="selected-tags" class="explore-selected-tags"></div>
+            <div class="explore-input-row">
+              <label for="title-filter">Title</label>
+              <div class="explore-input-wrap">
+                <input type="text" id="title-filter" class="explore-input"
+                       placeholder="Filter by title...">
+              </div>
+            </div>
+            <div class="explore-input-row">
+              <label for="taxon-filter">Taxon</label>
+              <div class="explore-input-wrap">
+                <input type="text" id="taxon-filter" class="explore-input"
+                       placeholder="e.g. Reference, Person, TODO...">
+              </div>
+            </div>
+            <div id="explore-results" class="explore-results"></div>
+          </div>
+        </details>
+      </section>
+    </article>
+  </div>
+  <script>
+    let allTrees = [];
+    let allTags = [];
+    let selectedTags = new Set();
+    let activeIndex = -1;
+
+    fetch('/forest.json')
+      .then(r => r.json())
+      .then(trees => {
+        allTrees = trees;
+        const tagSet = new Set();
+        trees.forEach(t => (t.tags || []).forEach(tag => tagSet.add(tag)));
+        allTags = Array.from(tagSet).sort();
+        runFilter();
+      });
+
+    const tagInput = document.getElementById('tag-input');
+    const dropdown = document.getElementById('tag-dropdown');
+    const titleFilter = document.getElementById('title-filter');
+    const taxonFilter = document.getElementById('taxon-filter');
+
+    titleFilter.addEventListener('input', runFilter);
+    taxonFilter.addEventListener('input', runFilter);
+
+    tagInput.addEventListener('input', () => {
+      activeIndex = -1;
+      showSuggestions(tagInput.value);
+    });
+
+    tagInput.addEventListener('keydown', (e) => {
+      const items = dropdown.querySelectorAll('.explore-autocomplete-item');
+      if (e.key === 'ArrowDown') {
+        e.preventDefault();
+        activeIndex = Math.min(activeIndex + 1, items.length - 1);
+        updateActive(items);
+      } else if (e.key === 'ArrowUp') {
+        e.preventDefault();
+        activeIndex = Math.max(activeIndex - 1, 0);
+        updateActive(items);
+      } else if (e.key === 'Enter') {
+        e.preventDefault();
+        if (activeIndex >= 0 && items[activeIndex]) {
+          addTag(items[activeIndex].textContent);
+        } else if (tagInput.value.trim()) {
+          // If exact match exists, add it
+          const val = tagInput.value.trim().toLowerCase();
+          const match = allTags.find(t => t.toLowerCase() === val);
+          if (match) addTag(match);
+        }
+      } else if (e.key === 'Escape') {
+        closeSuggestions();
+      }
+    });
+
+    tagInput.addEventListener('blur', () => {
+      // Delay to allow click on dropdown item
+      setTimeout(closeSuggestions, 150);
+    });
+
+    tagInput.addEventListener('focus', () => {
+      if (tagInput.value) showSuggestions(tagInput.value);
+    });
+
+    function showSuggestions(query) {
+      const q = query.toLowerCase();
+      const matches = allTags.filter(t =>
+        !selectedTags.has(t) && t.toLowerCase().includes(q)
+      );
+      if (matches.length === 0 || !q) {
+        closeSuggestions();
+        return;
+      }
+      dropdown.innerHTML = matches.slice(0, 15).map(tag =>
+        `<div class="explore-autocomplete-item" onmousedown="addTag('${tag.replace(/'/g, "\\'")}')">${tag}</div>`
+      ).join('');
+      dropdown.classList.add('open');
+    }
+
+    function closeSuggestions() {
+      dropdown.classList.remove('open');
+      activeIndex = -1;
+    }
+
+    function updateActive(items) {
+      items.forEach((el, i) => {
+        el.classList.toggle('active', i === activeIndex);
+      });
+      if (activeIndex >= 0 && items[activeIndex]) {
+        items[activeIndex].scrollIntoView({ block: 'nearest' });
+      }
+    }
+
+    function addTag(tag) {
+      selectedTags.add(tag);
+      tagInput.value = '';
+      closeSuggestions();
+      renderSelectedTags();
+      runFilter();
+      tagInput.focus();
+    }
+
+    function removeTag(tag) {
+      selectedTags.delete(tag);
+      renderSelectedTags();
+      runFilter();
+    }
+
+    function renderSelectedTags() {
+      const container = document.getElementById('selected-tags');
+      container.innerHTML = Array.from(selectedTags).map(tag =>
+        `<span class="explore-tag-pill">${tag}<span class="remove" onclick="removeTag('${tag.replace(/'/g, "\\'")}')">&times;</span></span>`
+      ).join('');
+    }
+
+    function runFilter() {
+      const tf = (titleFilter.value || '').toLowerCase();
+      const xf = (taxonFilter.value || '').toLowerCase();
+      const results = allTrees.filter(tree => {
+        if (selectedTags.size > 0) {
+          const treeTags = new Set(tree.tags || []);
+          for (const tag of selectedTags) {
+            if (!treeTags.has(tag)) return false;
+          }
+        }
+        if (tf && !(tree.title || '').toLowerCase().includes(tf)) return false;
+        if (xf && !(tree.taxon || '').toLowerCase().includes(xf)) return false;
+        return true;
+      });
+      renderResults(results);
+    }
+
+    function renderResults(results) {
+      const container = document.getElementById('explore-results');
+      if (selectedTags.size === 0 && !titleFilter.value && !taxonFilter.value) {
+        container.innerHTML = '<div class="explore-no-results">Type a tag, title, or taxon to search.</div>';
+        return;
+      }
+      if (results.length === 0) {
+        container.innerHTML = '<div class="explore-no-results">No matching trees.</div>';
+        return;
+      }
+      const count = `<div class="explore-count">${results.length} result${results.length === 1 ? '' : 's'}</div>`;
+      container.innerHTML = count + results.map(tree => {
+        const taxon = tree.taxon ? `<span class="taxon">${esc(tree.taxon)}. </span>` : '';
+        const title = esc(tree.title || 'Untitled');
+        const slug = `<span class="slug"> [${esc(tree.uri)}]</span>`;
+        const tags = (tree.tags || []).map(t => esc(t)).join(', ');
+        return `<div class="explore-result-item">
+          <a href="${esc(tree.route)}">${taxon}${title}${slug}</a>
+          ${tags ? '<span class="explore-result-tags"> &mdash; ' + tags + '</span>' : ''}
+        </div>`;
+      }).join('');
+    }
+
+    function esc(s) {
+      const d = document.createElement('div');
+      d.textContent = s;
+      return d.innerHTML;
+    }
+  </script>
+</body>
+</html>
