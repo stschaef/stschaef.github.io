@@ -78,9 +78,9 @@ Consider the example of products in a category <fr:tex display="inline"><![CDATA
 
  
   
-  <html:figure><fr:resource hash="8a23d8745d87676fe50011ccc80136b3"><fr:resource-content><html:img src="/8a23d8745d87676fe50011ccc80136b3.svg" /></fr:resource-content><fr:resource-source type="latex" part="preamble"><![CDATA[
+  <html:figure><fr:resource hash="7f26162765321bee0c780abc50e44698"><fr:resource-content><html:img src="/7f26162765321bee0c780abc50e44698.svg" /></fr:resource-content><fr:resource-source type="latex" part="preamble"><![CDATA[
    
- \RequirePackage{tikz}
+  \RequirePackage{tikz}
  \RequirePackage{amsmath}
  \usetikzlibrary{backgrounds, intersections, calc, spath3, fit}
  \definecolor{catccolor}{RGB}{255,244,138}
@@ -353,27 +353,28 @@ Consider the example of products in a category <fr:tex display="inline"><![CDATA
 
  \ExplSyntaxOff
 
-  ]]></fr:resource-source><fr:resource-source type="latex" part="body"><![CDATA[
-\begin {tikzpicture}[
+  ]]></fr:resource-source><fr:resource-source type="latex" part="body"><![CDATA[\begin{tikzpicture}[
     node distance=2cm,
     >={Stealth[length=3mm]},
     every node/.style={minimum size=8mm}
 ]
 
+% Nodes
 \node (product) at (0,2) {$p$};
 \node (A) at (-2,0) {$c$};
 \node (B) at (2,0) {$d$};
 \node (C) at (0,4) {$b$};
 
-\draw[->] (product) -- (A) node[midway, yshift=-0.2cm, xshift=0.2cm] {$\pi _1$};
-\draw[->] (product) -- (B) node[midway, yshift=-0.2cm, xshift=-0.2cm] {$\pi _2$};
+% Projection arrows
+\draw[->] (product) -- (A) node[midway, yshift=-0.2cm, xshift=0.2cm] {$\pi_1$};
+\draw[->] (product) -- (B) node[midway, yshift=-0.2cm, xshift=-0.2cm] {$\pi_2$};
 
+% Universal property arrows (dashed for the unique morphism)
 \draw[->, bend left] (C) -- (A) node[midway, left] {$f_1$};
 \draw[->, bend right] (C) -- (B) node[midway, right] {$f_2$};
-\draw[->, dashed] (C) -- (product) node[midway, xshift= 0.2cm] {$\exists  !$};
+\draw[->, dashed] (C) -- (product) node[midway, xshift= 0.2cm] {$\exists !$};
 
-\end {tikzpicture}
-{}]]></fr:resource-source></fr:resource></html:figure>
+\end{tikzpicture}{}]]></fr:resource-source></fr:resource></html:figure>
  
 
 

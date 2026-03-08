@@ -344,9 +344,9 @@ Gentzen's theorem shows that this rule does not increase the expressivity of the
     
  
   
-  <html:figure><fr:resource hash="545ba518db267e7e06e4f5b32197c7c3"><fr:resource-content><html:img src="/545ba518db267e7e06e4f5b32197c7c3.svg" /></fr:resource-content><fr:resource-source type="latex" part="preamble"><![CDATA[
+  <html:figure><fr:resource hash="c4d61491b6714ca56f85a32a2f474d16"><fr:resource-content><html:img src="/c4d61491b6714ca56f85a32a2f474d16.svg" /></fr:resource-content><fr:resource-source type="latex" part="preamble"><![CDATA[
    
- \RequirePackage{tikz}
+  \RequirePackage{tikz}
  \RequirePackage{amsmath}
  \usetikzlibrary{backgrounds, intersections, calc, spath3, fit}
  \definecolor{catccolor}{RGB}{255,244,138}
@@ -619,25 +619,23 @@ Gentzen's theorem shows that this rule does not increase the expressivity of the
 
  \ExplSyntaxOff
 
-  ]]></fr:resource-source><fr:resource-source type="latex" part="body"><![CDATA[
-      \begin {tikzpicture}[diagram]
-        \node (nw) {${\mathopen {}\left (x\otimes  I\right )\mathclose {}}\otimes  y$};
-        \node[below right = 2.5cm of nw] (s) {$x\otimes  y$};
-        \node[above right = 2.5cm of s] (ne) {$x\otimes {\mathopen {}\left (I\otimes  y\right )\mathclose {}}$};
-        \draw[->] (nw) to node[above] {$\alpha _{x,I,y}$} (ne);
-        \draw[->] (nw) to node[sloped,below] {$\rho _x\otimes  1_{y}$} (s);
-        \draw[->] (ne) to node[sloped,below] {$1_{x}\otimes  \lambda _{y}$} (s);
-      \end {tikzpicture}
-    {}]]></fr:resource-source></fr:resource></html:figure></html:li>
+  ]]></fr:resource-source><fr:resource-source type="latex" part="body"><![CDATA[      \begin{tikzpicture}[diagram]
+        \node (nw) {$\left(x\otimes I\right)\otimes y$};
+        \node[below right = 2.5cm of nw] (s) {$x\otimes y$};
+        \node[above right = 2.5cm of s] (ne) {$x\otimes\left(I\otimes y\right)$};
+        \draw[->] (nw) to node[above] {$\alpha_{x,I,y}$} (ne);
+        \draw[->] (nw) to node[sloped,below] {$\rho_x\otimes 1_{y}$} (s);
+        \draw[->] (ne) to node[sloped,below] {$1_{x}\otimes \lambda_{y}$} (s);
+      \end{tikzpicture}{}]]></fr:resource-source></fr:resource></html:figure></html:li>
 
   <html:li>
     and the pentagon below commutes:
     
  
   
-  <html:figure><fr:resource hash="b6869f82920c0c0a3e30fedf5f4a66d7"><fr:resource-content><html:img src="/b6869f82920c0c0a3e30fedf5f4a66d7.svg" /></fr:resource-content><fr:resource-source type="latex" part="preamble"><![CDATA[
+  <html:figure><fr:resource hash="d880d964089bdca66ea73067b66bf677"><fr:resource-content><html:img src="/d880d964089bdca66ea73067b66bf677.svg" /></fr:resource-content><fr:resource-source type="latex" part="preamble"><![CDATA[
    
- \RequirePackage{tikz}
+  \RequirePackage{tikz}
  \RequirePackage{amsmath}
  \usetikzlibrary{backgrounds, intersections, calc, spath3, fit}
  \definecolor{catccolor}{RGB}{255,244,138}
@@ -910,20 +908,18 @@ Gentzen's theorem shows that this rule does not increase the expressivity of the
 
  \ExplSyntaxOff
 
-  ]]></fr:resource-source><fr:resource-source type="latex" part="body"><![CDATA[
-      \begin {tikzpicture}[diagram]
-        \node (nw) {${\mathopen {}\left ({\mathopen {}\left (w\otimes  x\right )\mathclose {}}\otimes  y\right )\mathclose {}}\otimes  z$};
-        \node[above right = 3cm of nw, xshift=1cm] (n) {${\mathopen {}\left (w\otimes  x\right )\mathclose {}}\otimes {\mathopen {}\left (y\otimes  z\right )\mathclose {}}$};
-        \node[below right = 3cm of n, xshift=1cm] (ne) {$w\otimes {\mathopen {}\left (x\otimes {\mathopen {}\left (y\otimes  z\right )\mathclose {}}\right )\mathclose {}}$};
-        \node[below = of nw] (sw) {${\mathopen {}\left (w\otimes {\mathopen {}\left (x\otimes  y\right )\mathclose {}}\right )\mathclose {}}\otimes  z$};
-        \node[below = of ne] (se) {$w\otimes {\mathopen {}\left ({\mathopen {}\left (x\otimes  y\right )\mathclose {}}\otimes  z\right )\mathclose {}}$};
-        \draw[->] (nw) to node[left] {$\alpha _{w,x,y}\otimes 1_{z}$} (sw);
-        \draw[->] (sw) to node[below] {$\alpha _{w,x\otimes  y,z}$} (se);
-        \draw[->] (se) to node[right] {$1_{w}\otimes \alpha _{x,y,z}$} (ne);
-        \draw[->] (nw) to node[sloped,above] {$\alpha _{w\otimes  x},y,z$} (n);
-        \draw[->] (n) to node[sloped,above] {$\alpha _{w,x,y\otimes  z}$} (ne);
-      \end {tikzpicture}
-    {}]]></fr:resource-source></fr:resource></html:figure></html:li></html:ol></fr:mainmatter></fr:tree>
+  ]]></fr:resource-source><fr:resource-source type="latex" part="body"><![CDATA[      \begin{tikzpicture}[diagram]
+        \node (nw) {$\left(\left(w\otimes x\right)\otimes y\right)\otimes z$};
+        \node[above right = 3cm of nw, xshift=1cm] (n) {$\left(w\otimes x\right)\otimes\left(y\otimes z\right)$};
+        \node[below right = 3cm of n, xshift=1cm] (ne) {$w\otimes\left(x\otimes\left(y\otimes z\right)\right)$};
+        \node[below = of nw] (sw) {$\left(w\otimes\left(x\otimes y\right)\right)\otimes z$};
+        \node[below = of ne] (se) {$w\otimes\left(\left(x\otimes y\right)\otimes z\right)$};
+        \draw[->] (nw) to node[left] {$\alpha_{w,x,y}\otimes 1_{z}$} (sw);
+        \draw[->] (sw) to node[below] {$\alpha_{w,x\otimes y,z}$} (se);
+        \draw[->] (se) to node[right] {$1_{w}\otimes\alpha_{x,y,z}$} (ne);
+        \draw[->] (nw) to node[sloped,above] {$\alpha_{w\otimes x,y,z}$} (n);
+        \draw[->] (n) to node[sloped,above] {$\alpha_{w,x,y\otimes z}$} (ne);
+      \end{tikzpicture}{}]]></fr:resource-source></fr:resource></html:figure></html:li></html:ol></fr:mainmatter></fr:tree>
 <fr:tree show-metadata="false"><fr:frontmatter><fr:authors><fr:author><fr:link href="/stevenschaefer/" title="Steven Schaefer" uri="https://stevenschaefer.net/stevenschaefer/" display-uri="stevenschaefer" type="local">Steven Schaefer</fr:link></fr:author></fr:authors><fr:date><fr:year>2024</fr:year><fr:month>8</fr:month><fr:day>6</fr:day></fr:date><fr:uri>https://stevenschaefer.net/sss-0007/</fr:uri><fr:display-uri>sss-0007</fr:display-uri><fr:route>/sss-0007/</fr:route><fr:title text="Closed Monoidal Structure">Closed Monoidal Structure</fr:title><fr:taxon>Definition</fr:taxon></fr:frontmatter><fr:mainmatter><html:p>A <fr:link href="/sss-0006/" title="Monoidal Category" uri="https://stevenschaefer.net/sss-0006/" display-uri="sss-0006" type="local">monoidal category</fr:link> is <html:em>left closed</html:em> if for each <fr:tex display="inline"><![CDATA[Y \in  C]]></fr:tex>, the functor <fr:tex display="inline"><![CDATA[- \otimes  Y : C \to  C]]></fr:tex> has a right adjoint <fr:tex display="inline"><![CDATA[{Y} \multimap _L {-}  : C \to  C ]]></fr:tex> forming the left internal-hom out of <fr:tex display="inline"><![CDATA[Y]]></fr:tex>.</html:p><html:p>
 That is, for all <fr:tex display="inline"><![CDATA[X,Y,Z]]></fr:tex>, there is a natural isomorphism <fr:tex display="inline"><![CDATA[C[X \otimes  Y , Z] \cong  C[ X , [Y , Z]]]]></fr:tex></html:p><html:p>
 There is an obvious right-handed variant <fr:tex display="inline"><![CDATA[{Y} \multimap _R {-}]]></fr:tex> that is right adjoint to <fr:tex display="inline"><![CDATA[Y \otimes  -]]></fr:tex>. <html:em>Note</html:em>: this is likely better denoted with a flipped symbol, but I don't yet know if I can include it in Forester.
