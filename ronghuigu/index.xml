@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="/default.xsl"?>
+<fr:tree xmlns:fr="http://www.forester-notes.org" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:xml="http://www.w3.org/XML/1998/namespace" root="false" base-url="/">
+  <fr:frontmatter>
+    <fr:authors />
+    <fr:uri>https://stevenschaefer.net/ronghuigu/</fr:uri>
+    <fr:display-uri>ronghuigu</fr:display-uri>
+    <fr:route>/ronghuigu/</fr:route>
+    <fr:title text="Ronghui Gu">Ronghui Gu</fr:title>
+    <fr:taxon>person</fr:taxon>
+  </fr:frontmatter>
+  <fr:mainmatter />
+  <fr:backmatter>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors />
+        <fr:title text="References">References</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter />
+    </fr:tree>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors />
+        <fr:title text="Context">Context</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter />
+    </fr:tree>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors />
+        <fr:title text="Backlinks">Backlinks</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter />
+    </fr:tree>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors />
+        <fr:title text="Related">Related</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter />
+    </fr:tree>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors />
+        <fr:title text="Contributions">Contributions</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter>
+        <fr:tree show-metadata="true" expanded="false" toc="false" numbered="false">
+          <fr:frontmatter>
+            <fr:authors>
+              <fr:author>
+                <fr:link href="/jiananyao/" title="Jianan Yao" uri="https://stevenschaefer.net/jiananyao/" display-uri="jiananyao" type="local">Jianan Yao</fr:link>
+              </fr:author>
+              <fr:author>
+                <fr:link href="/runzhoutao/" title="Runzhou Tao" uri="https://stevenschaefer.net/runzhoutao/" display-uri="runzhoutao" type="local">Runzhou Tao</fr:link>
+              </fr:author>
+              <fr:author>
+                <fr:link href="/ronghuigu/" title="Ronghui Gu" uri="https://stevenschaefer.net/ronghuigu/" display-uri="ronghuigu" type="local">Ronghui Gu</fr:link>
+              </fr:author>
+              <fr:author>
+                <fr:link href="/jasonnieh/" title="Jason Nieh" uri="https://stevenschaefer.net/jasonnieh/" display-uri="jasonnieh" type="local">Jason Nieh</fr:link>
+              </fr:author>
+              <fr:author>
+                <fr:link href="/sumanjana/" title="Suman Jana" uri="https://stevenschaefer.net/sumanjana/" display-uri="sumanjana" type="local">Suman Jana</fr:link>
+              </fr:author>
+              <fr:author>
+                <fr:link href="/gabrielryan/" title="Gabriel Ryan" uri="https://stevenschaefer.net/gabrielryan/" display-uri="gabrielryan" type="local">Gabriel Ryan</fr:link>
+              </fr:author>
+            </fr:authors>
+            <fr:date>
+              <fr:year>2021</fr:year>
+            </fr:date>
+            <fr:uri>https://stevenschaefer.net/yaoDistAIDataDrivenAutomated/</fr:uri>
+            <fr:display-uri>yaoDistAIDataDrivenAutomated</fr:display-uri>
+            <fr:route>/yaoDistAIDataDrivenAutomated/</fr:route>
+            <fr:title text="DistAI: Data-Driven Automated Invariant Learning for Distributed Protocols">DistAI: Data-Driven Automated Invariant Learning for Distributed Protocols</fr:title>
+            <fr:taxon>Reference</fr:taxon>
+            <fr:meta name="layout">wide</fr:meta>
+            <fr:meta name="external">https://www.usenix.org/conference/osdi21/presentation/yao</fr:meta>
+            <fr:meta name="pdf">/bafkrmicdvl2bmun4qpuozxozyqdve2myg4bx5fe4dpwsrsrhqpaqufgyv4.pdf</fr:meta>
+            <fr:meta name="bibtex"><![CDATA[@article{yaoDistAIDataDrivenAutomated,
+ title = {{{DistAI}}: {{Data-Driven Automated Invariant Learning}} for {{Distributed Protocols}}},
+ author = {Yao, Jianan and Tao, Runzhou and Gu, Ronghui and Nieh, Jason and Jana, Suman and Ryan, Gabriel},
+ date = {2021},
+ file = {/Users/stevenschaefer/Zotero/storage/QECYBHLP/Yao et al. - DistAI Data-Driven Automated Invariant Learning f.pdf},
+ langid = {english},
+ abstract = {Distributed systems are notoriously hard to implement correctly due to non-determinism. Finding the inductive invariant of the distributed protocol is a critical step in verifying the correctness of distributed systems, but takes a long time to do even for simple protocols. We present DistAI, a data-driven automated system for learning inductive invariants for distributed protocols. DistAI generates data by simulating the distributed protocol at different instance sizes and recording states as samples. Based on the observation that invariants are often concise in practice, DistAI starts with small invariant formulas and enumerates all strongest possible invariants that hold for all samples. It then feeds those invariants and the desired safety properties to an SMT solver to check if the conjunction of the invariants and the safety properties is inductive. Starting with small invariant formulas and strongest possible invariants avoids large SMT queries, improving SMT solver performance. Because DistAI starts with the strongest possible invariants, if the SMT solver fails, DistAI does not need to discard failed invariants, but knows to monotonically weaken them and try again with the solver, repeating the process until it eventually succeeds. We prove that DistAI is guaranteed to find the ∃-free inductive invariant that proves the desired safety properties in finite time, if one exists. Our evaluation shows that DistAI successfully verifies 13 common distributed protocols automatically and outperforms alternative methods both in the number of protocols it verifies and the speed at which it does so, in some cases by more than two orders of magnitude.}
+}]]></fr:meta>
+          </fr:frontmatter>
+          <fr:mainmatter />
+        </fr:tree>
+      </fr:mainmatter>
+    </fr:tree>
+  </fr:backmatter>
+</fr:tree>
