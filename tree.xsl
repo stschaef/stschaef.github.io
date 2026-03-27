@@ -332,7 +332,7 @@
           <xsl:apply-templates select="f:meta[@name='video']" />
           <xsl:apply-templates select="f:meta[@name='pdf']" mode="pdf-link" />
         </ul>
-        <xsl:if test="f:meta[@name='pdf']">
+        <xsl:if test="f:meta[@name='pdf'] and not(ancestor::f:mainmatter)">
           <details class="pdf-viewer-details">
             <summary>Embedded PDF</summary>
             <iframe class="pdf-viewer" src="{f:meta[@name='pdf']}"></iframe>
