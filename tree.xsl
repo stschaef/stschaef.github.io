@@ -16,16 +16,19 @@
   <xsl:variable name="editor">emacs</xsl:variable>
 
   <!-- Default theme applied when a tree has no \meta{theme}{...}.
-       Set to "" to disable default theming. Use "none" in a tree's meta to skip. -->
-  <xsl:variable name="default-theme">dracula</xsl:variable>
+       Set to "" to disable default theming. Use "none" in a tree's meta to skip.
+       Available: paper · dracula · academic · solarized · editorial · blueprint. -->
+  <xsl:variable name="default-theme">paper</xsl:variable>
 
   <xsl:template match="/">
     <html xmlns="http://www.w3.org/1999/xhtml" data-base-url="{/f:tree/@base-url}">
       <head>
         <meta name="viewport" content="width=device-width" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;700;800&amp;family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&amp;family=JetBrains+Mono:wght@400;500;700&amp;display=swap" />
         <link rel="stylesheet" href="{/f:tree/@base-url}style.css" />
         <link rel="stylesheet" href="{/f:tree/@base-url}katex.min.css" />
-        <link rel="stylesheet" href="{/f:tree/@base-url}themes/dracula.css" />
         <script type="text/javascript">
           <xsl:if test="/f:tree/f:frontmatter/f:source-path">
             <xsl:text>window.sourcePath = '</xsl:text>
@@ -34,21 +37,20 @@
           </xsl:if>
         </script>
         <script type="module" src="{/f:tree/@base-url}forester.js"></script>
+        <script defer="defer" src="{/f:tree/@base-url}forester-extras.js"></script>
         <title>
           <xsl:value-of select="/f:tree/f:frontmatter/f:title/@text" />
         </title>
       </head>
       <body>
-        <ninja-keys placeholder="Start typing a note title or ID"></ninja-keys>
+        <ninja-keys placeholder="Start typing a note title or ID"
+                    exportparts="ninja-input,ninja-input-wrapper,actions-list,ninja-action,ninja-selected,ninja-icon,ninja-title,ninja-hotkey,ninja-group-header,ninja-result-taxon,ninja-result-title,ninja-result-slug"></ninja-keys>
         <xsl:if test="not(/f:tree[@root = 'true'])">
           <header class="header">
             <nav class="nav">
               <div class="nav-links">
                 <a href="{/f:tree/@base-url}index.html" title="Home">
                   <xsl:text>« Home</xsl:text>
-                </a>
-                <a href="{/f:tree/@base-url}dashboard/" title="Dashboard">
-                  <xsl:text>Dashboard</xsl:text>
                 </a>
               </div>
             </nav>
@@ -332,7 +334,7 @@
           <xsl:apply-templates select="f:meta[@name='video']" />
           <xsl:apply-templates select="f:meta[@name='pdf']" mode="pdf-link" />
         </ul>
-        <xsl:if test="f:meta[@name='pdf'] and not(ancestor::f:mainmatter)">
+        <xsl:if test="f:meta[@name='pdf'] and normalize-space(f:meta[@name='pdf']) != '' and not(ancestor::f:mainmatter)">
           <details class="pdf-viewer-details">
             <summary>Embedded PDF</summary>
             <iframe class="pdf-viewer" src="{f:meta[@name='pdf']}"></iframe>
@@ -423,7 +425,18 @@
 
   <xsl:template match="/f:tree[not(@root='true')]/f:backmatter">
     <footer>
-      <xsl:apply-templates />
+      <xsl:choose>
+        <xsl:when test="../f:frontmatter/f:taxon = 'Person'">
+          <xsl:apply-templates select="f:tree[f:frontmatter/f:title = 'References']" />
+          <xsl:apply-templates select="f:tree[f:frontmatter/f:title = 'Context']" />
+          <xsl:apply-templates select="f:tree[f:frontmatter/f:title = 'Contributions']" />
+          <xsl:apply-templates select="f:tree[f:frontmatter/f:title = 'Backlinks']" />
+          <xsl:apply-templates select="f:tree[f:frontmatter/f:title = 'Related']" />
+        </xsl:when>
+        <xsl:otherwise>
+          <xsl:apply-templates />
+        </xsl:otherwise>
+      </xsl:choose>
     </footer>
   </xsl:template>
 

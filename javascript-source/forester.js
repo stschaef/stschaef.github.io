@@ -68,15 +68,22 @@ window.addEventListener("load", (event) => {
     return item.tags ? item.tags.includes('top') : false
    }
  
+   const escapeHTML = (s) => String(s)
+    .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;').replace(/'/g, '&#39;')
+
    const addItemToSection = (item, section, icon) => {
-    const title =
-     item.taxon
-      ? (item.title ? `${item.taxon}. ${item.title}` : item.taxon)
-      : (item.title ? item.title : "Untitled")
-    const fullTitle = `${title} [${item.uri}]`
+    const parts = []
+    if (item.taxon) {
+     parts.push(`<span class="ninja-result-taxon" part="ninja-result-taxon" data-taxon="${escapeHTML(item.taxon)}">${escapeHTML(item.taxon)}</span>`)
+    }
+    parts.push(`<span class="ninja-result-title" part="ninja-result-title">${escapeHTML(item.title || "Untitled")}</span>`)
+    if (item.uri) {
+     parts.push(`<span class="ninja-result-slug" part="ninja-result-slug">${escapeHTML(item.uri)}</span>`)
+    }
     items.push({
      id: item.uri,
-     title: fullTitle,
+     title: parts.join(''),
      section: section,
      icon: icon,
      handler: () => {

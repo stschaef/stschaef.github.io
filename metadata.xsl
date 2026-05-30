@@ -163,11 +163,13 @@
   </xsl:template>
 
   <xsl:template match="f:meta[@name='pdf']" mode="pdf-link">
-    <li class="meta-item">
-      <a class="link pdf-open" href="{.}" target="_blank">
-        <xsl:text>Open PDF</xsl:text>
-      </a>
-    </li>
+    <xsl:if test="normalize-space(.) != ''">
+      <li class="meta-item">
+        <a class="link pdf-open" href="{.}" target="_blank">
+          <xsl:text>Open PDF</xsl:text>
+        </a>
+      </li>
+    </xsl:if>
   </xsl:template>
 
   <!-- Suppress pdf meta from default rendering -->
