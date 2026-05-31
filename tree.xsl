@@ -50,7 +50,14 @@
         <script type="module" src="{/f:tree/@base-url}forester.js"></script>
         <script defer="defer" src="{/f:tree/@base-url}forester-extras.js"></script>
         <title>
-          <xsl:value-of select="/f:tree/f:frontmatter/f:title/@text" />
+          <xsl:choose>
+            <xsl:when test="/f:tree/f:frontmatter/f:meta[@name='browser-title']">
+              <xsl:value-of select="/f:tree/f:frontmatter/f:meta[@name='browser-title']" />
+            </xsl:when>
+            <xsl:otherwise>
+              <xsl:value-of select="/f:tree/f:frontmatter/f:title/@text" />
+            </xsl:otherwise>
+          </xsl:choose>
         </title>
       </head>
       <body>
@@ -212,7 +219,14 @@
           </style>
         </xsl:if>
         <title>
-          <xsl:value-of select="/f:tree/f:frontmatter/f:title/@text" />
+          <xsl:choose>
+            <xsl:when test="/f:tree/f:frontmatter/f:meta[@name='browser-title']">
+              <xsl:value-of select="/f:tree/f:frontmatter/f:meta[@name='browser-title']" />
+            </xsl:when>
+            <xsl:otherwise>
+              <xsl:value-of select="/f:tree/f:frontmatter/f:title/@text" />
+            </xsl:otherwise>
+          </xsl:choose>
         </title>
       </head>
       <body>
