@@ -21,6 +21,17 @@
   <xsl:variable name="default-theme">paper</xsl:variable>
 
   <xsl:template match="/">
+    <xsl:choose>
+      <xsl:when test="/f:tree/f:frontmatter/f:meta[@name='layout'] = 'reveal'">
+        <xsl:call-template name="reveal-root" />
+      </xsl:when>
+      <xsl:otherwise>
+        <xsl:call-template name="default-root" />
+      </xsl:otherwise>
+    </xsl:choose>
+  </xsl:template>
+
+  <xsl:template name="default-root">
     <html xmlns="http://www.w3.org/1999/xhtml" data-base-url="{/f:tree/@base-url}">
       <head>
         <meta name="viewport" content="width=device-width" />
@@ -99,6 +110,206 @@
         </div>
       </body>
     </html>
+  </xsl:template>
+
+  <!-- Reveal.js slide-deck scaffold. Triggered by \meta{layout}{reveal}. -->
+  <xsl:template name="reveal-root">
+    <xsl:variable name="reveal-theme">
+      <xsl:choose>
+        <xsl:when test="/f:tree/f:frontmatter/f:meta[@name='reveal-theme']">
+          <xsl:value-of select="/f:tree/f:frontmatter/f:meta[@name='reveal-theme']" />
+        </xsl:when>
+        <xsl:otherwise>white</xsl:otherwise>
+      </xsl:choose>
+    </xsl:variable>
+    <html xmlns="http://www.w3.org/1999/xhtml" data-base-url="{/f:tree/@base-url}">
+      <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reset.css" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.css" />
+        <xsl:if test="$reveal-theme != 'none'">
+          <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/theme/{$reveal-theme}.css" id="reveal-theme-link" />
+        </xsl:if>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;700;800&amp;family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&amp;family=JetBrains+Mono:wght@400;500;700&amp;display=swap" />
+        <link rel="stylesheet" href="{/f:tree/@base-url}style.css" />
+        <link rel="stylesheet" href="{/f:tree/@base-url}katex.min.css" />
+        <style>
+          /* Make the slides legible against the forest paper theme. */
+          .reveal { background: var(--bg, #f1e8d2); color: var(--fg, #38301f); }
+          .reveal .slides section { text-align: left; font-family: var(--font-body); }
+          .reveal h1, .reveal h2, .reveal h3 { color: var(--fg); text-transform: none; font-family: var(--font-head); }
+          .reveal .slide-title { color: var(--accent); margin-bottom: 0.5em; }
+          .reveal a { color: var(--link); }
+          .reveal pre, .reveal code { font-family: var(--font-mono); color: var(--code-fg); }
+          .reveal pre { box-shadow: none; width: auto; margin: 0.6em 0; background: transparent; }
+          .reveal pre.shiki { background: transparent !important; padding: 0.4em 0; border-radius: 0; }
+          .reveal pre.shiki code { background: transparent !important; counter-reset: step; counter-increment: step 0; display: block; }
+          .reveal pre.shiki code .line::before {
+            content: counter(step);
+            counter-increment: step;
+            display: inline-block;
+            width: 1.8em;
+            margin-right: 1em;
+            text-align: right;
+            color: var(--fg-faint);
+            user-select: none;
+          }
+          .reveal aside.notes { display: none; }
+          .reveal blockquote { border-left: 3px solid var(--accent); background: var(--surface); padding: 0.6em 1em; }
+          /* In-slide transclusions render inline; just style the heading. */
+          .reveal .transcluded { margin: 0.6em 0; }
+          .reveal .transcluded > h3.transcluded-title {
+            font-size: 0.85em; color: var(--accent); margin: 0 0 0.3em 0;
+            text-transform: uppercase; letter-spacing: 0.08em;
+          }
+          /* ===== Per-slide CSS hooks: \meta{slide-class}{...} ===== */
+          /* Vertically center this slide's content. */
+          .reveal section.center {
+            display: flex !important; flex-direction: column;
+            justify-content: center; min-height: 100%;
+          }
+          /* Bigger title on this slide. */
+          .reveal section.big-title > h2.slide-title { font-size: 2.5em; }
+          .reveal section.huge-title > h2.slide-title { font-size: 4em; line-height: 1.05; }
+          .reveal section.mega-title > h2.slide-title { font-size: 6em; line-height: 1.0; }
+          /* Reverse-video section divider. */
+          .reveal section.divider {
+            background: var(--accent); color: var(--bg);
+            margin: 0 -2rem; padding: 2rem;
+          }
+          .reveal section.divider > h2.slide-title,
+          .reveal section.divider > h2.slide-title a { color: var(--bg); }
+          /* Plain-title variant: drops the accent color/casing. */
+          .reveal section.plain-title > h2.slide-title {
+            color: var(--fg); text-transform: none; letter-spacing: 0;
+          }
+        </style>
+        <!-- Per-deck font-size knob. Use \meta{font-size}{32px} or {1.4em}, etc. -->
+        <xsl:if test="/f:tree/f:frontmatter/f:meta[@name='font-size']">
+          <style>
+            .reveal { font-size: <xsl:value-of select="/f:tree/f:frontmatter/f:meta[@name='font-size']" /> !important; }
+          </style>
+        </xsl:if>
+        <!-- Force-activate the paper theme tokens inside .reveal.theme-paper. -->
+        <xsl:if test="/f:tree/f:frontmatter/f:meta[@name='theme'] = 'paper' or not(/f:tree/f:frontmatter/f:meta[@name='theme'])">
+          <style>
+            :root:has(.reveal.theme-paper) {
+              --orange:   oklch(0.585 0.145 47);
+              --burgundy: oklch(0.430 0.125 22);
+              --blue:     oklch(0.500 0.090 245);
+              --mustard:  oklch(0.730 0.130 86);
+              --bg: #f1e8d2; --surface: #f7f0dd;
+              --fg: #38301f; --fg-muted: #7c6a4f; --fg-faint: #ab9a78;
+              --rule: #ddccaa; --rule-strong: #c4ab7c;
+              --accent: var(--orange); --accent-2: var(--blue);
+              --link: var(--burgundy);
+              --code-bg: #e8dbbb; --code-fg: #564731;
+              --font-head: "Futura", "Jost", "Century Gothic", sans-serif;
+              --font-body: "Futura", "Jost", "Century Gothic", sans-serif;
+            }
+          </style>
+        </xsl:if>
+        <title>
+          <xsl:value-of select="/f:tree/f:frontmatter/f:title/@text" />
+        </title>
+      </head>
+      <body>
+        <div class="reveal theme-paper">
+          <div class="slides">
+            <!-- No synthetic title slide. Author your own first slide
+                 (e.g. \transclude{...}) — the deck's frontmatter still
+                 supplies the <title> element for the browser tab. -->
+            <xsl:apply-templates select="/f:tree/f:mainmatter/*" mode="slide" />
+          </div>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/plugin/notes/notes.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/plugin/math/math.js"></script>
+        <script type="module">
+          // Shiki syntax highlighting. Loads Agda TextMate grammar from theme,
+          // highlights every &lt;pre&gt;&lt;code class="language-X"&gt; in place, then
+          // initializes Reveal so the highlighted DOM is what gets laid out.
+          try {
+            const baseUrl = document.documentElement.dataset.baseUrl || '';
+            const [shiki, agdaGrammar] = await Promise.all([
+              import('https://esm.sh/shiki@1.22.0'),
+              fetch(baseUrl + 'agda.tmLanguage.json').then(r =&gt; r.json()),
+            ]);
+            const highlighter = await shiki.createHighlighter({
+              themes: ['vitesse-light'],
+              langs: [
+                'haskell', 'typescript', 'bash', 'json',
+                { ...agdaGrammar, name: 'agda', scopeName: 'source.agda' },
+              ],
+            });
+            const loaded = new Set(highlighter.getLoadedLanguages());
+            document.querySelectorAll('pre &gt; code[class*="language-"]').forEach(el =&gt; {
+              const langClass = [...el.classList].find(c =&gt; c.startsWith('language-'));
+              if (!langClass) return;
+              const lang = langClass.replace('language-', '');
+              if (!loaded.has(lang)) return;
+              const code = el.textContent;
+              const html = highlighter.codeToHtml(code, { lang, theme: 'vitesse-light' });
+              el.parentElement.outerHTML = html;
+            });
+          } catch (e) {
+            console.warn('Shiki highlight failed:', e);
+          }
+          Reveal.initialize({
+            hash: true,
+            center: false,
+            slideNumber: 'c/t',
+            plugins: [ RevealNotes, RevealMath.KaTeX ],
+            keyboard: {
+              // h / l: jump to prev/next slide, skipping fragments.
+              // j / k untouched -- keep reveal's defaults (fragment-aware).
+              72: () =&gt; Reveal.left({skipFragments: true}),
+              76: () =&gt; Reveal.right({skipFragments: true}),
+            }
+          });
+        </script>
+      </body>
+    </html>
+  </xsl:template>
+
+  <!-- In slide mode, a transcluded tree becomes a section. Its mainmatter
+       contents are rendered directly (no details/summary chrome). The slide
+       title links out to the standalone tree page when one exists. -->
+  <xsl:template match="f:tree" mode="slide">
+    <section>
+      <!-- Per-slide CSS hook. Use \meta{slide-class}{center big-title} or
+           stack multiple \meta{slide-class}{X} calls; they concatenate. -->
+      <xsl:if test="f:frontmatter/f:meta[@name='slide-class']">
+        <xsl:attribute name="class">
+          <xsl:for-each select="f:frontmatter/f:meta[@name='slide-class']">
+            <xsl:if test="position() &gt; 1"><xsl:text> </xsl:text></xsl:if>
+            <xsl:value-of select="." />
+          </xsl:for-each>
+        </xsl:attribute>
+      </xsl:if>
+      <xsl:if test="f:frontmatter/f:title and not(f:frontmatter/f:meta[@name='slide-no-title']='true')">
+        <h2 class="slide-title">
+          <xsl:choose>
+            <xsl:when test="f:frontmatter/f:route">
+              <a href="{f:frontmatter/f:route}" target="_blank" rel="noopener">
+                <xsl:apply-templates select="f:frontmatter/f:title" />
+              </a>
+            </xsl:when>
+            <xsl:otherwise>
+              <xsl:apply-templates select="f:frontmatter/f:title" />
+            </xsl:otherwise>
+          </xsl:choose>
+        </h2>
+      </xsl:if>
+      <xsl:apply-templates select="f:mainmatter" />
+    </section>
+  </xsl:template>
+
+  <!-- Any other top-level element (e.g. paragraphs, raw HTML) renders as-is. -->
+  <xsl:template match="*" mode="slide">
+    <xsl:apply-templates select="." />
   </xsl:template>
 
   <xsl:template match="f:tree" mode="tree-taxon-with-number">
@@ -446,7 +657,38 @@
   <xsl:template match="f:backmatter//f:backmatter">
   </xsl:template>
 
-  <xsl:template match="f:tree[f:mainmatter[*] or not(@hidden-when-empty = 'true')]">
+  <!-- In-slide transclusion: when the deck is in reveal layout, nested trees
+       (i.e. \transclude inside a slide body) render inline as a small block
+       with an optional accent-colored title — no <details>/<summary> chrome. -->
+  <xsl:template match="f:tree[f:mainmatter[*] or not(@hidden-when-empty = 'true')]"
+                priority="2">
+    <xsl:choose>
+      <xsl:when test="/f:tree/f:frontmatter/f:meta[@name='layout'] = 'reveal'">
+        <div class="transcluded">
+          <xsl:if test="f:frontmatter/f:title and not(@show-heading='false')">
+            <h3 class="transcluded-title">
+              <xsl:choose>
+                <xsl:when test="f:frontmatter/f:route">
+                  <a href="{f:frontmatter/f:route}" target="_blank" rel="noopener">
+                    <xsl:apply-templates select="f:frontmatter/f:title" />
+                  </a>
+                </xsl:when>
+                <xsl:otherwise>
+                  <xsl:apply-templates select="f:frontmatter/f:title" />
+                </xsl:otherwise>
+              </xsl:choose>
+            </h3>
+          </xsl:if>
+          <xsl:apply-templates select="f:mainmatter" />
+        </div>
+      </xsl:when>
+      <xsl:otherwise>
+        <xsl:call-template name="default-tree-block" />
+      </xsl:otherwise>
+    </xsl:choose>
+  </xsl:template>
+
+  <xsl:template name="default-tree-block">
     <section>
       <xsl:attribute name="lang">
         <xsl:choose>
