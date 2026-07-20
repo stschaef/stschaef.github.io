@@ -1,0 +1,601 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="/default.xsl"?>
+<fr:tree xmlns:fr="http://www.forester-notes.org" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:xml="http://www.w3.org/XML/1998/namespace" root="false" base-url="/">
+  <fr:frontmatter>
+    <fr:authors>
+      <fr:author>
+        <fr:link href="/stevenschaefer/" title="Steven Schaefer" uri="https://stevenschaefer.net/stevenschaefer/" display-uri="stevenschaefer" type="local">Steven Schaefer</fr:link>
+      </fr:author>
+    </fr:authors>
+    <fr:date>
+      <fr:year>2026</fr:year>
+      <fr:month>4</fr:month>
+      <fr:day>20</fr:day>
+    </fr:date>
+    <fr:source-path>/Users/stevenschaefer/forest/trees/sss-009V.tree</fr:source-path>
+    <fr:uri>https://stevenschaefer.net/sss-009V/</fr:uri>
+    <fr:display-uri>sss-009V</fr:display-uri>
+    <fr:route>/sss-009V/</fr:route>
+    <fr:title text="Validate genericity in a non-grammars category">Validate genericity in a non-grammars category</fr:title>
+    <fr:taxon>TODO</fr:taxon>
+    <fr:meta name="status">cancelled</fr:meta>
+    <fr:meta name="completed">2026-05-29</fr:meta>
+    <fr:meta name="cancelled">true</fr:meta>
+    <fr:meta name="priority">medium</fr:meta>
+    <fr:meta name="apple-id">x-apple-reminder://1F350658-C494-4EE2-9613-CB2CE3106746</fr:meta>
+    <fr:meta name="forester-addr">sss-009V</fr:meta>
+  </fr:frontmatter>
+  <fr:mainmatter>
+    <html:p>Once <fr:link href="/sss-009U/" title="Parameterize the elaborator over the target category" uri="https://stevenschaefer.net/sss-009U/" display-uri="sss-009U" type="local">Parameterize the elaborator over the target category</fr:link> lands, exercise the generic interface by elaborating the same surface DSL into at least one non-grammars instance — candidates include a free monoidal biclosed category, a presheaf category <fr:tex display="inline"><![CDATA[\hat {\mathcal {C}}]]></fr:tex> on some small <fr:tex display="inline"><![CDATA[\mathcal {C}]]></fr:tex>, or a syntactic category from a different domain.</html:p>
+    <html:p>The point is to catch leakage of grammars-specific assumptions (e.g. concatenation, splittings, <html:code>String</html:code> indexing) that the abstract interface failed to hide. Examples should be small but should hit each connective.</html:p>
+  </fr:mainmatter>
+  <fr:backmatter>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors />
+        <fr:title text="References">References</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter />
+    </fr:tree>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors />
+        <fr:title text="Context">Context</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter />
+    </fr:tree>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors />
+        <fr:title text="Backlinks">Backlinks</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter>
+        <fr:tree show-metadata="true" expanded="false" toc="false" numbered="false">
+          <fr:frontmatter>
+            <fr:authors>
+              <fr:author>
+                <fr:link href="/stevenschaefer/" title="Steven Schaefer" uri="https://stevenschaefer.net/stevenschaefer/" display-uri="stevenschaefer" type="local">Steven Schaefer</fr:link>
+              </fr:author>
+            </fr:authors>
+            <fr:date>
+              <fr:year>2026</fr:year>
+              <fr:month>4</fr:month>
+              <fr:day>20</fr:day>
+            </fr:date>
+            <fr:source-path>/Users/stevenschaefer/forest/trees/sss-00AE.tree</fr:source-path>
+            <fr:uri>https://stevenschaefer.net/sss-00AE/</fr:uri>
+            <fr:display-uri>sss-00AE</fr:display-uri>
+            <fr:route>/sss-00AE/</fr:route>
+            <fr:title text="How the LinearElab Elaborator Compiles to Category-Polymorphic Morphisms">How the <html:code>LinearElab</html:code> Elaborator Compiles to Category-Polymorphic Morphisms</fr:title>
+            <fr:taxon>Note</fr:taxon>
+            <fr:meta name="status">pending</fr:meta>
+          </fr:frontmatter>
+          <fr:mainmatter>
+            <html:p>Intuitive walkthrough of <html:code>Lean/LambekD/LinearElab/</html:code> — how a surface
+term like</html:p>
+            <html:p>
+              <html:code>
+                <fr:link href="%28x%20:%20A)%20(y%20:%20B)%20=%3E%20(x,%20y)" type="external">(x : A) (y : B) =&gt; (x, y)</fr:link>
+              </html:code>
+            </html:p>
+            <html:p>gets turned into a morphism <fr:tex display="inline"><![CDATA[\llbracket {A \otimes  B}\rrbracket _\ell  \to  A \otimes  B]]></fr:tex> in
+an abstract monoidal / biclosed / (co)cartesian / indexed / inductive
+category <fr:tex display="inline"><![CDATA[\mathcal {C}]]></fr:tex>. Meant to be read alongside the code, not as a spec.</html:p>
+            <fr:tree show-metadata="false">
+              <fr:frontmatter>
+                <fr:authors>
+                  <fr:author>
+                    <fr:link href="/stevenschaefer/" title="Steven Schaefer" uri="https://stevenschaefer.net/stevenschaefer/" display-uri="stevenschaefer" type="local">Steven Schaefer</fr:link>
+                  </fr:author>
+                </fr:authors>
+                <fr:date>
+                  <fr:year>2026</fr:year>
+                  <fr:month>4</fr:month>
+                  <fr:day>20</fr:day>
+                </fr:date>
+                <fr:source-path>/Users/stevenschaefer/forest/trees/sss-00AE.tree</fr:source-path>
+                <fr:title text="The big picture">The big picture</fr:title>
+              </fr:frontmatter>
+              <fr:mainmatter>
+                <html:p>The elaborator is a <html:strong>syntax-to-syntax preprocessor</html:strong>. It does not
+manufacture Lean <html:code>Expr</html:code>s itself; instead it reads a DSL expression,
+decides for each subterm which typed <html:em>combinator</html:em> should stand in for
+it, and builds a Lean <html:em>source-level term</html:em> that applies those
+combinators. The generated source is handed back to Lean's normal
+<html:code>elabTerm</html:code> at the very end. Unification, typeclass resolution, and
+universe inference happen once, there, on the full tree — not piecewise
+while we are walking the DSL.</html:p>
+                <html:p>Conceptually:</html:p>
+                <html:ul><html:li><html:strong>DSL syntax</html:strong> (category <html:code>lterm</html:code>) lives in
+    <html:code>LinearElab/Syntax.lean</html:code>. Each connective of the paper has its
+    own shape: <html:code>(x, y)</html:code>, <html:code>let (a,b) = _ in _</html:code>, <html:code>fun (x:A) =&gt;</html:code>,
+    <html:code>⟨e₁, e₂⟩</html:code>, <html:code>match _ with | inl a =&gt; _ | inr b =&gt; _</html:code>, and so on.</html:li>
+  <html:li><html:strong>Combinators</html:strong> live in <html:code>LambekD.Linear.{Monoidal,Biclosed,
+    Cartesian,Cocartesian,IndexedProducts,IndexedCoproducts,Inductive}</html:code>.
+    Each is a plain Lean definition parametric in a category <fr:tex display="inline"><![CDATA[\mathcal {C}]]></fr:tex>
+    carrying only the structure that connective needs (monoidal, left-
+    closed, right-closed, chosen products, chosen coproducts, chosen
+    distributor, initial algebras). No reference to <html:code>Grammar</html:code>.</html:li>
+  <html:li><html:strong>The elaborator</html:strong> in <html:code>LinearElab/Elaborator.lean</html:code> is the
+    bridge: one <html:code>partial def</html:code> per DSL form, emitting a
+    <html:code>TSyntax `term</html:code> that mentions exactly the right combinator
+    with exactly the right <html:em>context arguments</html:em> pinned down.</html:li></html:ul>
+              </fr:mainmatter>
+            </fr:tree>
+            <fr:tree show-metadata="false">
+              <fr:frontmatter>
+                <fr:authors>
+                  <fr:author>
+                    <fr:link href="/stevenschaefer/" title="Steven Schaefer" uri="https://stevenschaefer.net/stevenschaefer/" display-uri="stevenschaefer" type="local">Steven Schaefer</fr:link>
+                  </fr:author>
+                </fr:authors>
+                <fr:date>
+                  <fr:year>2026</fr:year>
+                  <fr:month>4</fr:month>
+                  <fr:day>20</fr:day>
+                </fr:date>
+                <fr:source-path>/Users/stevenschaefer/forest/trees/sss-00AE.tree</fr:source-path>
+                <fr:title text="What the combinators want from us">What the combinators want from us</fr:title>
+              </fr:frontmatter>
+              <fr:mainmatter>
+                <html:p>Take <html:code>tensorIntro</html:code> as representative:</html:p>
+                <html:p><html:code>tensorIntro (e₁ : ⟦Δ⟧ₗ ⟶ A) (e₂ : ⟦Δ'⟧ₗ ⟶ B) : ⟦Δ ++ Δ'⟧ₗ ⟶ A ⊗ B</html:code>
+(with Δ, Δ', A, B implicit).</html:p>
+                <html:p><html:code>LinCtx C</html:code> is an ordered left-to-right list of <fr:tex display="inline"><![CDATA[\mathcal {C}]]></fr:tex>-objects
+(think: a telescope of linear types). <html:code>⟦_⟧ₗ</html:code> folds it into a
+right-nested tensor. The combinator takes <html:em>two</html:em> morphisms, on
+contexts <html:code>Δ</html:code> and <html:code>Δ'</html:code>, and returns a morphism on the
+concatenated context <html:code>Δ ++ Δ'</html:code>.</html:p>
+                <html:p>So when the user writes <html:code>(e₁, e₂)</html:code> with ambient context
+<fr:tex display="inline"><![CDATA[\Delta _{\text {full}}]]></fr:tex>, there is exactly <html:strong>one decision</html:strong> to make:
+<html:em>where to cut</html:em> <fr:tex display="inline"><![CDATA[\Delta _{\text {full}}]]></fr:tex> into a prefix <fr:tex display="inline"><![CDATA[\Delta ]]></fr:tex> used by
+<html:code>e₁</html:code> and a suffix <fr:tex display="inline"><![CDATA[\Delta ']]></fr:tex> used by <html:code>e₂</html:code>. The rest —
+what <html:code>A</html:code>, <html:code>B</html:code>, and <fr:tex display="inline"><![CDATA[\mathcal {C}]]></fr:tex> are — is Lean's problem.</html:p>
+                <html:p>Every other combinator is the same pattern. Some take one context
+(<html:code>var</html:code>, <html:code>unitIntro</html:code>, <html:code>prodIntro</html:code>, <html:code>sumInl</html:code>); some take
+a <html:em>middle slice</html:em> and an outer prefix + suffix (<html:code>unitElim</html:code>,
+<html:code>tensorElim</html:code>, <html:code>sumElim</html:code>, <html:code>coprodDElim</html:code>, <html:code>botElim</html:code>);
+the rest are binders that add or remove a single slot at the front or the
+end (<html:code>limpRIntro</html:code>, <html:code>limpLIntro</html:code>, <html:code>funD</html:code>). The elaborator's
+job is to look at the DSL shape, compute the cuts, and emit the
+corresponding combinator applied to its inputs with the cuts threaded
+through <html:em>explicitly</html:em>.</html:p>
+              </fr:mainmatter>
+            </fr:tree>
+            <fr:tree show-metadata="false">
+              <fr:frontmatter>
+                <fr:authors>
+                  <fr:author>
+                    <fr:link href="/stevenschaefer/" title="Steven Schaefer" uri="https://stevenschaefer.net/stevenschaefer/" display-uri="stevenschaefer" type="local">Steven Schaefer</fr:link>
+                  </fr:author>
+                </fr:authors>
+                <fr:date>
+                  <fr:year>2026</fr:year>
+                  <fr:month>4</fr:month>
+                  <fr:day>20</fr:day>
+                </fr:date>
+                <fr:source-path>/Users/stevenschaefer/forest/trees/sss-00AE.tree</fr:source-path>
+                <fr:title text="The cutting algorithm: free variables and ordering">The cutting algorithm: free variables and ordering</fr:title>
+              </fr:frontmatter>
+              <fr:mainmatter>
+                <html:p>Two tiny helpers do almost all the work.</html:p>
+                <html:ul><html:li><html:code>freeVars : TSyntax `lterm → Array Name</html:code> — purely syntactic,
+    recurses through the term and collects identifiers that are not shadowed
+    by a binder. It knows about all the DSL's binding forms
+    (<html:code>let () = _ in</html:code>, <html:code>let (a,b) = _ in</html:code>, <html:code>fun (x:T) =&gt;</html:code>,
+    <html:code>funl (x:T) =&gt;</html:code>, <html:code>match _ with | inl a | inr b</html:code>,
+    <html:code>matchD _ with | ⟪x, y⟫</html:code>).</html:li>
+  <html:li><html:code>splitCtx fvLeft fvRight</html:code> — walks the ambient context left-to-right
+    and finds the unique split point <html:code>i</html:code> such that the first <html:code>i</html:code>
+    names lie in <html:code>fvLeft</html:code> and the rest in <html:code>fvRight</html:code>. Throws an error
+    if any variable is unused, reused across branches, or appears out of
+    order.</html:li></html:ul>
+                <html:p>For middle-slice forms (<html:code>let (a,b) = e in e'</html:code> and friends) there is
+a second helper <html:code>splitCtxMiddle fvMid fvOuter</html:code> that finds a
+<html:em>contiguous</html:em> range of indices all of whose variables lie in <html:code>fvMid</html:code>,
+asserts that range really is contiguous, and returns the three pieces
+<fr:tex display="inline"><![CDATA[\Delta '_1, \Delta , \Delta '_2]]></fr:tex> around it.</html:p>
+                <html:p>These two functions enforce <html:strong>ordered linearity</html:strong> — no contraction
+(variable appearing twice on the same side of a split), no weakening (a
+variable that goes nowhere), no exchange (a left-variable appearing after
+a right-variable). When the user-written binder structure of the DSL does
+not support a valid cut, splitCtx itself raises the error. The main loop
+never has to think about linearity; it only asks "where does the cut go?"
+and delegates.</html:p>
+                <html:p>Cartesian and indexed-product intro are the only forms that do <html:em>not</html:em>
+cut: <html:code>⟨e₁, e₂⟩</html:code> shares the whole ambient context between the two
+branches (cartesian is additive, so it permits the same resources to be
+used by both). The elaborator simply recurses on each branch with the
+full ctx and lets the branches' internal linearity checks enforce that
+each branch really does consume it.</html:p>
+              </fr:mainmatter>
+            </fr:tree>
+            <fr:tree show-metadata="false">
+              <fr:frontmatter>
+                <fr:authors>
+                  <fr:author>
+                    <fr:link href="/stevenschaefer/" title="Steven Schaefer" uri="https://stevenschaefer.net/stevenschaefer/" display-uri="stevenschaefer" type="local">Steven Schaefer</fr:link>
+                  </fr:author>
+                </fr:authors>
+                <fr:date>
+                  <fr:year>2026</fr:year>
+                  <fr:month>4</fr:month>
+                  <fr:day>20</fr:day>
+                </fr:date>
+                <fr:source-path>/Users/stevenschaefer/forest/trees/sss-00AE.tree</fr:source-path>
+                <fr:title text="The unification subtlety — why we pin Δ with named arguments">The unification subtlety — why we pin <html:code>Δ</html:code> with named arguments</fr:title>
+              </fr:frontmatter>
+              <fr:mainmatter>
+                <html:p>Combinators like <html:code>tensorIntro</html:code> type as
+<html:code>⟦Δ ++ Δ'⟧ₗ ⟶ A ⊗ B</html:code>. When we apply such a combinator to a concrete
+ambient context <fr:tex display="inline"><![CDATA[\Delta _{\text {full}}]]></fr:tex>, Lean's unifier tries to solve
+<html:code>Δ ++ Δ' = Δ_full</html:code>. That equation has <html:em>many</html:em> solutions (any cut
+point works), and because <html:code>LinCtx.append</html:code> recurses on its <html:em>right</html:em>
+argument, Lean's unifier eagerly pins <fr:tex display="inline"><![CDATA[\Delta ']]></fr:tex> to some small suffix and
+leaves <fr:tex display="inline"><![CDATA[\Delta ]]></fr:tex> as whatever is left — typically <html:em>not</html:em> the split our
+FV analysis computed.</html:p>
+                <html:p>To stop Lean from guessing, the elaborator serialises the <html:em>exact</html:em>
+cut pieces back into surface syntax:</html:p>
+                <html:p>
+                  <html:code>ctxToSyntax vars = nil.snoc A₀.snoc A₁. ⋯ .snoc A_k</html:code>
+                </html:p>
+                <html:p>and passes them to the combinator as <html:em>named implicit arguments</html:em>
+(<html:code>(Δ := $Δstx)</html:code> / <html:code>(Δ' := $Δ'stx)</html:code>). Now when Lean sees
+<html:code>tensorIntro (Δ := A,B) (Δ' := C,D) m₁ m₂</html:code>, both halves are
+syntactically pinned and the equation <html:code>(A,B) ++ (C,D) = A,B,C,D</html:code>
+reduces definitionally. No unification ambiguity remains.</html:p>
+                <html:p>The same trick is what unblocks middle-slice combinators
+(<html:code>unitElim</html:code>, <html:code>tensorElim</html:code>, <html:code>sumElim</html:code>, <html:code>coprodDElim</html:code>,
+<html:code>botElim</html:code>), which have <html:em>two</html:em> append patterns in their types.</html:p>
+              </fr:mainmatter>
+            </fr:tree>
+            <fr:tree show-metadata="false">
+              <fr:frontmatter>
+                <fr:authors>
+                  <fr:author>
+                    <fr:link href="/stevenschaefer/" title="Steven Schaefer" uri="https://stevenschaefer.net/stevenschaefer/" display-uri="stevenschaefer" type="local">Steven Schaefer</fr:link>
+                  </fr:author>
+                </fr:authors>
+                <fr:date>
+                  <fr:year>2026</fr:year>
+                  <fr:month>4</fr:month>
+                  <fr:day>20</fr:day>
+                </fr:date>
+                <fr:source-path>/Users/stevenschaefer/forest/trees/sss-00AE.tree</fr:source-path>
+                <fr:title text="Per-connective intuitions">Per-connective intuitions</fr:title>
+              </fr:frontmatter>
+              <fr:mainmatter>
+                <fr:tree show-metadata="false">
+                  <fr:frontmatter>
+                    <fr:authors>
+                      <fr:author>
+                        <fr:link href="/stevenschaefer/" title="Steven Schaefer" uri="https://stevenschaefer.net/stevenschaefer/" display-uri="stevenschaefer" type="local">Steven Schaefer</fr:link>
+                      </fr:author>
+                    </fr:authors>
+                    <fr:date>
+                      <fr:year>2026</fr:year>
+                      <fr:month>4</fr:month>
+                      <fr:day>20</fr:day>
+                    </fr:date>
+                    <fr:source-path>/Users/stevenschaefer/forest/trees/sss-00AE.tree</fr:source-path>
+                    <fr:title text="Monoidal (the skeleton)">Monoidal (the skeleton)</fr:title>
+                  </fr:frontmatter>
+                  <fr:mainmatter>
+                    <html:p><html:strong><html:code>x</html:code></html:strong> ⟶ <html:code>Linear.var A</html:code>: singleton context
+<html:code>[(x, A)]</html:code> maps by identity into the slot.</html:p>
+                    <html:p><html:strong><html:code>()</html:code></html:strong> ⟶ <html:code>Linear.unitIntro</html:code>: requires empty context,
+produces the monoidal unit <fr:tex display="inline"><![CDATA[I]]></fr:tex>.</html:p>
+                    <html:p><html:strong><html:code>(e₁, e₂)</html:code></html:strong> ⟶ <html:code>tensorIntro (Δ := …) (Δ' := …) m₁ m₂</html:code>:
+<html:code>splitCtx (FV e₁) (FV e₂)</html:code> picks the cut; each branch is elaborated
+in its own piece of the context.</html:p>
+                    <html:p><html:strong><html:code>let () = e in e'</html:code></html:strong> and <html:strong><html:code>let (a,b) = e in e'</html:code></html:strong>:
+<html:code>e</html:code> consumes a <html:em>middle slice</html:em> <html:code>Δ</html:code>, <html:code>e'</html:code> runs on
+<html:code>Δ'₁ ++ Δ'₂</html:code> (plus the new binders in the pair case). We emit
+<html:code>unitElim</html:code> / <html:code>tensorElim</html:code> with the three pieces pinned. The new
+binders in the pair case get hole types <html:code>_</html:code>; Lean fills them from
+the type of <html:code>e</html:code>.</html:p>
+                  </fr:mainmatter>
+                </fr:tree>
+                <fr:tree show-metadata="false">
+                  <fr:frontmatter>
+                    <fr:authors>
+                      <fr:author>
+                        <fr:link href="/stevenschaefer/" title="Steven Schaefer" uri="https://stevenschaefer.net/stevenschaefer/" display-uri="stevenschaefer" type="local">Steven Schaefer</fr:link>
+                      </fr:author>
+                    </fr:authors>
+                    <fr:date>
+                      <fr:year>2026</fr:year>
+                      <fr:month>4</fr:month>
+                      <fr:day>20</fr:day>
+                    </fr:date>
+                    <fr:source-path>/Users/stevenschaefer/forest/trees/sss-00AE.tree</fr:source-path>
+                    <fr:title text="Biclosed (binders)">Biclosed (binders)</fr:title>
+                  </fr:frontmatter>
+                  <fr:mainmatter>
+                    <html:p>Ordinary functions come in two flavours because context is ordered.
+<html:code>fun (x : A) =&gt; e</html:code> <html:em>pushes</html:em> <html:code>x</html:code> onto the <html:strong>end</html:strong> of the
+ambient ctx and emits <html:code>limpRIntro (Δ := ambient) body</html:code>, producing
+<html:code>A →[C] B</html:code>. <html:code>funl (x : A) =&gt; e</html:code> pushes it onto the
+<html:strong>front</html:strong> and emits <html:code>limpLIntro (Δ := ambient) body</html:code>, producing
+<html:code>B [C]← A</html:code>. The ambient ctx is passed as <html:code>Δ</html:code> so that Lean does
+not try to solve <html:code>Δ.snoc A = newCtx</html:code> or <html:code>sole A ++ Δ = newCtx</html:code>
+by guessing.</html:p>
+                    <html:p>Application likewise splits into two rules by <html:em>which side the
+function appears on</html:em>. <html:code>f a</html:code> (juxtaposition, function on the left) is
+<html:code>limpRApp</html:code>; <html:code>a ·⟜ f</html:code> (argument on the left) is <html:code>limpLApp</html:code>.
+The two combinators have their append patterns in opposite orders
+(<html:code>Δ ++ Δ'</html:code> vs <html:code>Δ' ++ Δ</html:code>), so the elaborator has to know which
+side is the function when it emits the call.</html:p>
+                  </fr:mainmatter>
+                </fr:tree>
+                <fr:tree show-metadata="false">
+                  <fr:frontmatter>
+                    <fr:authors>
+                      <fr:author>
+                        <fr:link href="/stevenschaefer/" title="Steven Schaefer" uri="https://stevenschaefer.net/stevenschaefer/" display-uri="stevenschaefer" type="local">Steven Schaefer</fr:link>
+                      </fr:author>
+                    </fr:authors>
+                    <fr:date>
+                      <fr:year>2026</fr:year>
+                      <fr:month>4</fr:month>
+                      <fr:day>20</fr:day>
+                    </fr:date>
+                    <fr:source-path>/Users/stevenschaefer/forest/trees/sss-00AE.tree</fr:source-path>
+                    <fr:title text="Cartesian (⟨⟩, ⟨e₁, e₂⟩, π₁, π₂)">Cartesian (<html:code>⟨⟩</html:code>, <html:code>⟨e₁, e₂⟩</html:code>, <html:code>π₁</html:code>, <html:code>π₂</html:code>)</fr:title>
+                  </fr:frontmatter>
+                  <fr:mainmatter>
+                    <html:p>Additive, so there is no cut: <html:code>⟨e₁, e₂⟩</html:code> elaborates <html:em>both</html:em>
+branches under the same ambient context, and Lean's <fr:tex display="inline"><![CDATA[A \amp  B]]></fr:tex>
+constructor uses the cartesian <html:code>lift</html:code> combinator. <html:code>⟨⟩</html:code> is the
+unique morphism into the chosen terminal and accepts <html:em>any</html:em> ambient
+ctx. Projections just post-compose with <html:code>fst</html:code> or <html:code>snd</html:code>.</html:p>
+                  </fr:mainmatter>
+                </fr:tree>
+                <fr:tree show-metadata="false">
+                  <fr:frontmatter>
+                    <fr:authors>
+                      <fr:author>
+                        <fr:link href="/stevenschaefer/" title="Steven Schaefer" uri="https://stevenschaefer.net/stevenschaefer/" display-uri="stevenschaefer" type="local">Steven Schaefer</fr:link>
+                      </fr:author>
+                    </fr:authors>
+                    <fr:date>
+                      <fr:year>2026</fr:year>
+                      <fr:month>4</fr:month>
+                      <fr:day>20</fr:day>
+                    </fr:date>
+                    <fr:source-path>/Users/stevenschaefer/forest/trees/sss-00AE.tree</fr:source-path>
+                    <fr:title text="Cocartesian (inl, inr, match, absurd)">Cocartesian (<html:code>inl</html:code>, <html:code>inr</html:code>, <html:code>match</html:code>, <html:code>absurd</html:code>)</fr:title>
+                  </fr:frontmatter>
+                  <fr:mainmatter>
+                    <html:p>Injections are pre-composed with <html:code>inl</html:code> / <html:code>inr</html:code> — no cut.</html:p>
+                    <html:p><html:code>match e with | inl a =&gt; f | inr b =&gt; g</html:code> is the only <html:em>genuinely
+subtle</html:em> monoidal case outside tensor-elim. The scrutinee <html:code>e</html:code>
+consumes a contiguous middle slice <fr:tex display="inline"><![CDATA[\Delta ]]></fr:tex>, and both branches share
+the outer context <fr:tex display="inline"><![CDATA[\Delta '_1, \Delta '_2]]></fr:tex>, each extending it with one
+new binder (<html:code>a</html:code> or <html:code>b</html:code>, with hole types filled from <html:code>e</html:code>'s
+type). Emission is <html:code>sumElim (Δ'₁ := …) (Δ := …) (Δ'₂ := …) m mf mg</html:code>;
+the underlying combinator bakes in the distributor so that the two
+branches of the coproduct really do glue back into a single morphism on
+the whole ambient ctx.</html:p>
+                    <html:p><html:code>absurd e</html:code> is <fr:tex display="inline"><![CDATA[\bot ]]></fr:tex>-elim. The scrutinee provides a
+morphism into the initial object; the distributor's <html:em>annihilation</html:em>
+maps any flanking context to the initial. That means we are allowed to
+have ambient variables that do not appear in <html:code>e</html:code> at all — they
+just get annihilated. In <html:code>freeVars</html:code> this breaks the usual
+"every variable must be used somewhere" invariant, so the elaborator
+special-cases <html:code>absurd</html:code>: ambient vars outside <html:code>FV(e)</html:code> are
+treated as "used by the annihilation", <html:strong>not</html:strong> as an unused-variable
+error.</html:p>
+                  </fr:mainmatter>
+                </fr:tree>
+                <fr:tree show-metadata="false">
+                  <fr:frontmatter>
+                    <fr:authors>
+                      <fr:author>
+                        <fr:link href="/stevenschaefer/" title="Steven Schaefer" uri="https://stevenschaefer.net/stevenschaefer/" display-uri="stevenschaefer" type="local">Steven Schaefer</fr:link>
+                      </fr:author>
+                    </fr:authors>
+                    <fr:date>
+                      <fr:year>2026</fr:year>
+                      <fr:month>4</fr:month>
+                      <fr:day>20</fr:day>
+                    </fr:date>
+                    <fr:source-path>/Users/stevenschaefer/forest/trees/sss-00AE.tree</fr:source-path>
+                    <fr:title text="Indexed products and coproducts (non-linear binders)">Indexed products and coproducts (non-linear binders)</fr:title>
+                  </fr:frontmatter>
+                  <fr:mainmatter>
+                    <html:p><html:code>funD (x : X) =&gt; e</html:code> introduces a <html:em>non-linear</html:em> (Lean-level)
+binder <html:code>x : X</html:code> that the body can mention as an ordinary Lean term
+but <html:strong>not</html:strong> as a linear variable. The linear context is unchanged
+for the body — nothing is consumed. The elaborator elaborates <html:code>e</html:code>
+under the same ambient ctx, then wraps the result in a Lean <html:code>fun x
+: X =&gt; _</html:code> and hands that to <html:code>prodDIntro</html:code>, which is exactly the
+<html:code>liftD</html:code> of the chosen indexed-product structure.</html:p>
+                    <html:p><html:code>e ·@ x</html:code> post-composes the projection at index <html:code>x</html:code>.</html:p>
+                    <html:p><html:code>⟪x, e⟫</html:code> injects at a specified index; <html:code>coprodDInj x e</html:code>.</html:p>
+                    <html:p><html:code>matchD e with | ⟪x, y⟫ =&gt; body</html:code>: like <html:code>match</html:code>, <html:code>e</html:code>
+consumes a middle slice and <html:code>body</html:code> gets one new linear binder
+<html:code>y</html:code> (with a hole type inferred from the index family) and one
+non-linear binder <html:code>x : X</html:code>. Emission is <html:code>coprodDElim (Δ'₁ := …)
+(Δ := …) (Δ'₂ := …) m (fun x =&gt; body)</html:code>, where the <html:code>fun x =&gt; …</html:code>
+captures the non-linear binder from the surface syntax.</html:p>
+                  </fr:mainmatter>
+                </fr:tree>
+                <fr:tree show-metadata="false">
+                  <fr:frontmatter>
+                    <fr:authors>
+                      <fr:author>
+                        <fr:link href="/stevenschaefer/" title="Steven Schaefer" uri="https://stevenschaefer.net/stevenschaefer/" display-uri="stevenschaefer" type="local">Steven Schaefer</fr:link>
+                      </fr:author>
+                    </fr:authors>
+                    <fr:date>
+                      <fr:year>2026</fr:year>
+                      <fr:month>4</fr:month>
+                      <fr:day>20</fr:day>
+                    </fr:date>
+                    <fr:source-path>/Users/stevenschaefer/forest/trees/sss-00AE.tree</fr:source-path>
+                    <fr:title text="Initial algebras (roll, fold)">Initial algebras (<html:code>roll</html:code>, <html:code>fold</html:code>)</fr:title>
+                  </fr:frontmatter>
+                  <fr:mainmatter>
+                    <html:p><html:code>roll[x] e</html:code> is <html:code>muRoll _ x e</html:code>, which is literally
+<html:code>e ≫ HasInitialAlgebra.roll x</html:code>: post-compose the linear body with
+the initial algebra's constructor at index <html:code>x</html:code>. The <html:code>_</html:code> is a
+placeholder for the functor <html:code>F</html:code>, which Lean is expected to recover
+from the expected return type <fr:tex display="inline"><![CDATA[\mu  F x]]></fr:tex>.</html:p>
+                    <html:p><html:code>fold[algs] e</html:code> is <html:code>muFold algs e = e ≫ HasInitialAlgebra.fold
+algs x</html:code>: post-compose with the catamorphism induced by the algebra
+<html:code>algs : ∀ y, (F y).denote A ⟶ A y</html:code>. <html:code>roll</html:code> and <html:code>fold</html:code> do
+not restructure the context; they just chain on top of it.</html:p>
+                    <html:p>The <fr:tex display="inline"><![CDATA[\beta ]]></fr:tex> and <fr:tex display="inline"><![CDATA[\eta ]]></fr:tex> laws of initial algebras (<html:code>fold_roll</html:code>,
+<html:code>fold_unique</html:code>) are semantic lemmas, not judgmental — the
+elaborator does nothing to expose them, it is up to the programmer to
+rewrite when needed.</html:p>
+                  </fr:mainmatter>
+                </fr:tree>
+              </fr:mainmatter>
+            </fr:tree>
+            <fr:tree show-metadata="false">
+              <fr:frontmatter>
+                <fr:authors>
+                  <fr:author>
+                    <fr:link href="/stevenschaefer/" title="Steven Schaefer" uri="https://stevenschaefer.net/stevenschaefer/" display-uri="stevenschaefer" type="local">Steven Schaefer</fr:link>
+                  </fr:author>
+                </fr:authors>
+                <fr:date>
+                  <fr:year>2026</fr:year>
+                  <fr:month>4</fr:month>
+                  <fr:day>20</fr:day>
+                </fr:date>
+                <fr:source-path>/Users/stevenschaefer/forest/trees/sss-00AE.tree</fr:source-path>
+                <fr:title text="Entry point: the DSL brackets">Entry point: the DSL brackets</fr:title>
+              </fr:frontmatter>
+              <fr:mainmatter>
+                <html:p>The top-level macro in <html:code>elabLinearBracket</html:code>:</html:p>
+                <html:ol><html:li>Reads the surface syntax <html:code><fr:link href="%28x%E2%82%81%20:%20A%E2%82%81)%20%E2%80%A6%20(x%E2%82%99%20:%20A%E2%82%99)%20=%3E%20body" type="external">(x₁ : A₁) … (xₙ : Aₙ) =&gt; body</fr:link></html:code>.</html:li>
+  <html:li>Builds the initial <html:code>ElabCtx</html:code> from the typed binders: an array
+    of <html:code>(Name × TSyntax `term)</html:code> pairs, in the order written.</html:li>
+  <html:li>Runs the elaborator <html:code>elabLTerm body</html:code> under that context. The
+    output is a single <html:code>TSyntax `term</html:code> — a Lean source-level term
+    mentioning <html:code>Linear.tensorIntro</html:code>, <html:code>Linear.sumElim</html:code>, etc.,
+    with all context pieces and non-linear binders wired up.</html:li>
+  <html:li>Calls <html:code>Lean.Elab.Term.elabTerm</html:code> on that syntax with the
+    expected type from the surrounding Lean context. Unification and
+    typeclass resolution — for the category <fr:tex display="inline"><![CDATA[\mathcal {C}]]></fr:tex> itself, for the
+    types of the binders, for the appropriate chosen-structure instances
+    — all happen here, once, on the finished tree.</html:li></html:ol>
+                <html:p>The elaborator never inspects <html:code>Expr</html:code>, never calls
+<html:code>isDefEq</html:code>, never synthesises an instance. It is a syntactic
+preprocessor that knows how to name the right combinators and pin
+their context implicits; everything semantic is Lean's job.</html:p>
+              </fr:mainmatter>
+            </fr:tree>
+            <fr:tree show-metadata="false">
+              <fr:frontmatter>
+                <fr:authors>
+                  <fr:author>
+                    <fr:link href="/stevenschaefer/" title="Steven Schaefer" uri="https://stevenschaefer.net/stevenschaefer/" display-uri="stevenschaefer" type="local">Steven Schaefer</fr:link>
+                  </fr:author>
+                </fr:authors>
+                <fr:date>
+                  <fr:year>2026</fr:year>
+                  <fr:month>4</fr:month>
+                  <fr:day>20</fr:day>
+                </fr:date>
+                <fr:source-path>/Users/stevenschaefer/forest/trees/sss-00AE.tree</fr:source-path>
+                <fr:title text="What is not there (yet)">What is <html:em>not</html:em> there (yet)</fr:title>
+              </fr:frontmatter>
+              <fr:mainmatter>
+                <html:ul><html:li>No escape hatch <html:code>#[f]</html:code> to embed a Lean-level morphism. The
+    grammar-specific <html:code>Elab/</html:code> elaborator has one; the linear one does
+    not — if you need to use a Lean-constructed morphism, you must
+    currently write the term directly (as in the <html:code>prodDIntro</html:code> smoke
+    test which falls back to the raw combinator).</html:li>
+  <html:li>No constructor-apps for <html:code>grammar_inductive</html:code>-style named data.
+    The inductive surface here is only the <html:code>roll</html:code>/<html:code>fold</html:code> pair.</html:li>
+  <html:li>No <html:code>match … with</html:code> on <html:code>μ F</html:code> beyond what <html:code>fold</html:code> expresses,
+    and no equivalent of the <html:code>grammar_decreasing</html:code> termination plumbing.
+    Both were grammar-specific in the older elaborator.</html:li>
+  <html:li>No Lean-level <html:code>rewrite</html:code> / <html:code>simp</html:code> hooks; β/η laws of each
+    connective exist as <html:code>simp</html:code> lemmas on the combinators, but the
+    DSL does not surface them.</html:li></html:ul>
+                <html:p>These are all deliberate omissions — the <html:code>LinearElab</html:code> elaborator
+is the minimal, category-polymorphic core. The grammar-specific pieces
+live in the older <html:code>Elab/</html:code> tree and compose with these combinators
+via instances on <html:code>Grammar</html:code>.</html:p>
+              </fr:mainmatter>
+            </fr:tree>
+            <fr:tree show-metadata="false">
+              <fr:frontmatter>
+                <fr:authors>
+                  <fr:author>
+                    <fr:link href="/stevenschaefer/" title="Steven Schaefer" uri="https://stevenschaefer.net/stevenschaefer/" display-uri="stevenschaefer" type="local">Steven Schaefer</fr:link>
+                  </fr:author>
+                </fr:authors>
+                <fr:date>
+                  <fr:year>2026</fr:year>
+                  <fr:month>4</fr:month>
+                  <fr:day>20</fr:day>
+                </fr:date>
+                <fr:source-path>/Users/stevenschaefer/forest/trees/sss-00AE.tree</fr:source-path>
+                <fr:title text="Related">Related</fr:title>
+              </fr:frontmatter>
+              <fr:mainmatter>
+                <html:ul><html:li><fr:link href="/sss-009P/" title="Lean Implementation of Dependent Lambek Calculus" uri="https://stevenschaefer.net/sss-009P/" display-uri="sss-009P" type="local">sss-009P Lean port of the surface elaborator</fr:link> — umbrella
+    plan under which this work sits.</html:li>
+  <html:li><fr:link href="/sss-009U/" title="Parameterize the elaborator over the target category" uri="https://stevenschaefer.net/sss-009U/" display-uri="sss-009U" type="local">sss-009U Parameterize the elaborator over the target category</fr:link> —
+    this tree documents the result of that task.</html:li>
+  <html:li><fr:link href="/sss-009V/" title="Validate genericity in a non-grammars category" uri="https://stevenschaefer.net/sss-009V/" display-uri="sss-009V" type="local">sss-009V Validate genericity in a non-grammars category</fr:link> —
+    the next step: exercise these combinators in a non-grammars instance.</html:li></html:ul>
+              </fr:mainmatter>
+            </fr:tree>
+          </fr:mainmatter>
+        </fr:tree>
+      </fr:mainmatter>
+    </fr:tree>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors />
+        <fr:title text="Related">Related</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter>
+        <fr:tree show-metadata="true" expanded="false" toc="false" numbered="false">
+          <fr:frontmatter>
+            <fr:authors>
+              <fr:author>
+                <fr:link href="/stevenschaefer/" title="Steven Schaefer" uri="https://stevenschaefer.net/stevenschaefer/" display-uri="stevenschaefer" type="local">Steven Schaefer</fr:link>
+              </fr:author>
+            </fr:authors>
+            <fr:date>
+              <fr:year>2026</fr:year>
+              <fr:month>4</fr:month>
+              <fr:day>20</fr:day>
+            </fr:date>
+            <fr:source-path>/Users/stevenschaefer/forest/trees/sss-009U.tree</fr:source-path>
+            <fr:uri>https://stevenschaefer.net/sss-009U/</fr:uri>
+            <fr:display-uri>sss-009U</fr:display-uri>
+            <fr:route>/sss-009U/</fr:route>
+            <fr:title text="Parameterize the elaborator over the target category">Parameterize the elaborator over the target category</fr:title>
+            <fr:taxon>TODO</fr:taxon>
+            <fr:meta name="status">done</fr:meta>
+            <fr:meta name="completed">2026-05-29</fr:meta>
+            <fr:meta name="priority">medium</fr:meta>
+            <fr:meta name="apple-id">x-apple-reminder://1F1652D2-D177-4498-9D21-558C53DBC132</fr:meta>
+            <fr:meta name="forester-addr">sss-009U</fr:meta>
+          </fr:frontmatter>
+          <fr:mainmatter>
+            <html:p>The current sketch hardwires the target: <html:code>Grammar = String → Type</html:code>, <html:code>A ⊢ B = ∀ w, A w → B w</html:code>, tensor as splittings, etc. Refactor so the elaborator emits terms in an abstract categorical interface — a typeclass packaging the structure required by each connective (monoidal biclosed, finite (co)products, indexed (co)products, initial algebras for <html:code>grammar_inductive</html:code>, the LNL adjunction once <fr:link href="/sss-009T/" title="Embed the full linear / non-linear DSL" uri="https://stevenschaefer.net/sss-009T/" display-uri="sss-009T" type="local">Embed the full linear / non-linear DSL</fr:link> lands, etc.).</html:p>
+            <html:p>Recover the existing grammars semantics as one instance of this interface. Track exactly which connectives need which structure so users can elaborate fragments of the DSL in categories that don't satisfy the full bill.</html:p>
+            <html:p>Merged into <fr:tree show-metadata="false"><fr:frontmatter><fr:authors><fr:author><fr:link href="/stevenschaefer/" title="Steven Schaefer" uri="https://stevenschaefer.net/stevenschaefer/" display-uri="stevenschaefer" type="local">Steven Schaefer</fr:link></fr:author></fr:authors><fr:date><fr:year>2026</fr:year><fr:month>4</fr:month><fr:day>20</fr:day></fr:date><fr:source-path>/Users/stevenschaefer/forest/trees/sss-009Q.tree</fr:source-path><fr:uri>https://stevenschaefer.net/sss-009Q/</fr:uri><fr:display-uri>sss-009Q</fr:display-uri><fr:route>/sss-009Q/</fr:route><fr:title text="Audit the existing Lean elaborator sketch">Audit the existing Lean elaborator sketch</fr:title><fr:taxon>TODO</fr:taxon><fr:meta name="status">pending</fr:meta><fr:meta name="priority">high</fr:meta><fr:meta name="apple-id">x-apple-reminder://823874AD-3C3B-4EA3-AF22-0D8C0E10D6B1</fr:meta><fr:meta name="forester-addr">sss-009Q</fr:meta></fr:frontmatter><fr:mainmatter><html:p>Read <html:code>~/grammars-and-semantic-actions/Lean/LambekD/Elab/</html:code> end-to-end and produce a written summary covering: surface syntax categories (<html:code>gterm</html:code>, <html:code>gpat</html:code>), the <html:code>OrderedCtx</html:code> discipline, how <html:code>findSplit</html:code> and the application-resolution rules are implemented, and what <html:code>Elaborator.lean</html:code> actually emits for each surface form.</html:p><html:p>The goal is to know, for every elaboration rule, which Lambek<fr:tex display="inline"><![CDATA[^D]]></fr:tex> typing rule it implements and where any informal/incorrect choices were made by the AI sketch. Output: a tree (or set of trees) that maps surface form <fr:tex display="inline"><![CDATA[\to ]]></fr:tex> typing rule <fr:tex display="inline"><![CDATA[\to ]]></fr:tex> emitted Lean term.</html:p></fr:mainmatter></fr:tree>.</html:p>
+          </fr:mainmatter>
+        </fr:tree>
+      </fr:mainmatter>
+    </fr:tree>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors />
+        <fr:title text="Contributions">Contributions</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter />
+    </fr:tree>
+  </fr:backmatter>
+</fr:tree>

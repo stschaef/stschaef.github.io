@@ -1,0 +1,376 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="/default.xsl"?>
+<fr:tree xmlns:fr="http://www.forester-notes.org" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:xml="http://www.w3.org/XML/1998/namespace" root="false" base-url="/">
+  <fr:frontmatter>
+    <fr:authors>
+      <fr:author>
+        <fr:link href="/stevenschaefer/" title="Steven Schaefer" uri="https://stevenschaefer.net/stevenschaefer/" display-uri="stevenschaefer" type="local">Steven Schaefer</fr:link>
+      </fr:author>
+    </fr:authors>
+    <fr:date>
+      <fr:year>2025</fr:year>
+      <fr:month>1</fr:month>
+      <fr:day>29</fr:day>
+    </fr:date>
+    <fr:source-path>/Users/stevenschaefer/forest/trees/sss-0019.tree</fr:source-path>
+    <fr:uri>https://stevenschaefer.net/sss-0019/</fr:uri>
+    <fr:display-uri>sss-0019</fr:display-uri>
+    <fr:route>/sss-0019/</fr:route>
+    <fr:title text="Can I Use Guarded Recursion?">Can I Use Guarded Recursion?</fr:title>
+    <fr:taxon>Daily</fr:taxon>
+  </fr:frontmatter>
+  <fr:mainmatter>
+    <html:p>
+  I don't exactly understand how guarded recursion works, but I suspect it might be the sort of thing that allows some of these proofs to go through or be simplified.
+</html:p>
+    <html:p>
+  For instance, the sorts of recursive calls to parsers that aren't structurally recursive, but will be decreasing on the inputted strings.
+</html:p>
+    <html:p>
+  Also, proofs involving Kleene stars that where I would like to assume the inductive hypothesis on the Kleene star after it has been unrolled once. If I wish to prove <fr:link href="/sss-000V/" title="FollowLast Soundness" uri="https://stevenschaefer.net/sss-000V/" display-uri="sss-000V" type="local">follow last soundness</fr:link> for the Kleene star of a deterministic regular expression <fr:tex display="inline"><![CDATA[r]]></fr:tex>,
+
+<fr:tex display="block"><![CDATA[{r}^{*} \And  {\mathopen {}\left ({r}^{*} \otimes  c \otimes  \top \right )\mathclose {}} \vdash  \bot ]]></fr:tex>
+
+when <fr:tex display="inline"><![CDATA[r \And  {\mathopen {}\left (r \otimes  c \otimes  \top \right )\mathclose {}} \vdash  \bot ]]></fr:tex> and <fr:tex display="inline"><![CDATA[r \And  {\mathopen {}\left (c \otimes  \top \right )\mathclose {}} \vdash  \bot ]]></fr:tex>.
+</html:p>
+    <html:p>
+  The proof reduceds to unrolling each of the <fr:tex display="inline"><![CDATA[{r}^{*}]]></fr:tex> and then showing
+  <fr:tex display="block"><![CDATA[{\mathopen {}\left (r \otimes  {r}^{*}\right )\mathclose {}} \And  {\mathopen {}\left ({\mathopen {}\left (r \otimes  {r}^{*}\right )\mathclose {}} \otimes  c \otimes  \top \right )\mathclose {}} \vdash  \bot ]]></fr:tex>
+
+  However, my only strategy for such a proof involves invoking an inductive hypothesis for the <fr:tex display="inline"><![CDATA[{r}^{*}]]></fr:tex> terms which would currently be circular reasoning. Although, because they are unrolled once, I suspect I may be able to make some sort of guarded argument and make each of these <fr:tex display="inline"><![CDATA[{r}^{*}]]></fr:tex> to instead be <fr:tex display="inline"><![CDATA[\triangleright  {r}^{*}]]></fr:tex>. Then this would allow me to use the inductive hypothesis?
+</html:p>
+  </fr:mainmatter>
+  <fr:backmatter>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors />
+        <fr:title text="References">References</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter />
+    </fr:tree>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors />
+        <fr:title text="Context">Context</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter>
+        <fr:tree show-metadata="true" expanded="false" toc="false" numbered="false">
+          <fr:frontmatter>
+            <fr:authors>
+              <fr:author>
+                <fr:link href="/stevenschaefer/" title="Steven Schaefer" uri="https://stevenschaefer.net/stevenschaefer/" display-uri="stevenschaefer" type="local">Steven Schaefer</fr:link>
+              </fr:author>
+            </fr:authors>
+            <fr:date>
+              <fr:year>2025</fr:year>
+              <fr:month>1</fr:month>
+              <fr:day>31</fr:day>
+            </fr:date>
+            <fr:source-path>/Users/stevenschaefer/forest/trees/sss-001D.tree</fr:source-path>
+            <fr:uri>https://stevenschaefer.net/sss-001D/</fr:uri>
+            <fr:display-uri>sss-001D</fr:display-uri>
+            <fr:route>/sss-001D/</fr:route>
+            <fr:title text="It's Just Star Continuity?">It's Just Star Continuity?</fr:title>
+            <fr:taxon>Daily</fr:taxon>
+          </fr:frontmatter>
+          <fr:mainmatter>
+            <html:p>
+  I have been stuck on the proof of <fr:link href="/sss-000V/" title="FollowLast Soundness" uri="https://stevenschaefer.net/sss-000V/" display-uri="sss-000V" type="local">follow last soundness</fr:link> for the Kleene star case for a few days. To the point of considering guarded recursion.
+</html:p>
+            <fr:tree show-metadata="false">
+              <fr:frontmatter>
+                <fr:authors>
+                  <fr:author>
+                    <fr:link href="/stevenschaefer/" title="Steven Schaefer" uri="https://stevenschaefer.net/stevenschaefer/" display-uri="stevenschaefer" type="local">Steven Schaefer</fr:link>
+                  </fr:author>
+                </fr:authors>
+                <fr:date>
+                  <fr:year>2025</fr:year>
+                  <fr:month>1</fr:month>
+                  <fr:day>29</fr:day>
+                </fr:date>
+                <fr:source-path>/Users/stevenschaefer/forest/trees/sss-0019.tree</fr:source-path>
+                <fr:uri>https://stevenschaefer.net/sss-0019/</fr:uri>
+                <fr:display-uri>sss-0019</fr:display-uri>
+                <fr:route>/sss-0019/</fr:route>
+                <fr:title text="Can I Use Guarded Recursion?">Can I Use Guarded Recursion?</fr:title>
+                <fr:taxon>Daily</fr:taxon>
+              </fr:frontmatter>
+              <fr:mainmatter>
+                <html:p>
+  I don't exactly understand how guarded recursion works, but I suspect it might be the sort of thing that allows some of these proofs to go through or be simplified.
+</html:p>
+                <html:p>
+  For instance, the sorts of recursive calls to parsers that aren't structurally recursive, but will be decreasing on the inputted strings.
+</html:p>
+                <html:p>
+  Also, proofs involving Kleene stars that where I would like to assume the inductive hypothesis on the Kleene star after it has been unrolled once. If I wish to prove <fr:link href="/sss-000V/" title="FollowLast Soundness" uri="https://stevenschaefer.net/sss-000V/" display-uri="sss-000V" type="local">follow last soundness</fr:link> for the Kleene star of a deterministic regular expression <fr:tex display="inline"><![CDATA[r]]></fr:tex>,
+
+<fr:tex display="block"><![CDATA[{r}^{*} \And  {\mathopen {}\left ({r}^{*} \otimes  c \otimes  \top \right )\mathclose {}} \vdash  \bot ]]></fr:tex>
+
+when <fr:tex display="inline"><![CDATA[r \And  {\mathopen {}\left (r \otimes  c \otimes  \top \right )\mathclose {}} \vdash  \bot ]]></fr:tex> and <fr:tex display="inline"><![CDATA[r \And  {\mathopen {}\left (c \otimes  \top \right )\mathclose {}} \vdash  \bot ]]></fr:tex>.
+</html:p>
+                <html:p>
+  The proof reduceds to unrolling each of the <fr:tex display="inline"><![CDATA[{r}^{*}]]></fr:tex> and then showing
+  <fr:tex display="block"><![CDATA[{\mathopen {}\left (r \otimes  {r}^{*}\right )\mathclose {}} \And  {\mathopen {}\left ({\mathopen {}\left (r \otimes  {r}^{*}\right )\mathclose {}} \otimes  c \otimes  \top \right )\mathclose {}} \vdash  \bot ]]></fr:tex>
+
+  However, my only strategy for such a proof involves invoking an inductive hypothesis for the <fr:tex display="inline"><![CDATA[{r}^{*}]]></fr:tex> terms which would currently be circular reasoning. Although, because they are unrolled once, I suspect I may be able to make some sort of guarded argument and make each of these <fr:tex display="inline"><![CDATA[{r}^{*}]]></fr:tex> to instead be <fr:tex display="inline"><![CDATA[\triangleright  {r}^{*}]]></fr:tex>. Then this would allow me to use the inductive hypothesis?
+</html:p>
+              </fr:mainmatter>
+            </fr:tree>
+            <html:p>
+  After boarding this out with Pranav. It seems like a very simple solution using star continuity would let me inductively use hypotheses as they relate to concatenations of <fr:tex display="inline"><![CDATA[r]]></fr:tex>. Then I can tie these together by inducting on the indices of the iterated tensors as referenced by continuity.
+</html:p>
+            <html:p>
+  I don't think this approach would ever nicely generalize to the context free case, so I still suspect that guarded recursion is the way to go.
+</html:p>
+          </fr:mainmatter>
+        </fr:tree>
+        <fr:tree show-metadata="true" expanded="false" toc="false" numbered="false">
+          <fr:frontmatter>
+            <fr:authors>
+              <fr:contributor>
+                <fr:link href="/maxsnew/" title="Max S. New" uri="https://stevenschaefer.net/maxsnew/" display-uri="maxsnew" type="local">Max S. New</fr:link>
+              </fr:contributor>
+              <fr:contributor>
+                <fr:link href="/stevenschaefer/" title="Steven Schaefer" uri="https://stevenschaefer.net/stevenschaefer/" display-uri="stevenschaefer" type="local">Steven Schaefer</fr:link>
+              </fr:contributor>
+            </fr:authors>
+            <fr:source-path>/Users/stevenschaefer/forest/trees/sss-test-dailies-col.tree</fr:source-path>
+            <fr:uri>https://stevenschaefer.net/sss-test-dailies-col/</fr:uri>
+            <fr:display-uri>sss-test-dailies-col</fr:display-uri>
+            <fr:route>/sss-test-dailies-col/</fr:route>
+            <fr:title text="Dailies">Dailies</fr:title>
+          </fr:frontmatter>
+          <fr:mainmatter>
+            <fr:tree show-metadata="false">
+              <fr:frontmatter>
+                <fr:authors>
+                  <fr:author>
+                    <fr:link href="/stevenschaefer/" title="Steven Schaefer" uri="https://stevenschaefer.net/stevenschaefer/" display-uri="stevenschaefer" type="local">Steven Schaefer</fr:link>
+                  </fr:author>
+                </fr:authors>
+                <fr:date>
+                  <fr:year>2025</fr:year>
+                  <fr:month>1</fr:month>
+                  <fr:day>24</fr:day>
+                </fr:date>
+                <fr:source-path>/Users/stevenschaefer/forest/trees/sss-000V.tree</fr:source-path>
+                <fr:uri>https://stevenschaefer.net/sss-000V/</fr:uri>
+                <fr:display-uri>sss-000V</fr:display-uri>
+                <fr:route>/sss-000V/</fr:route>
+                <fr:title text="FollowLast Soundness">FollowLast Soundness</fr:title>
+                <fr:taxon>Daily</fr:taxon>
+              </fr:frontmatter>
+              <fr:mainmatter>
+                <html:p>
+Thus far I have shown the soundness of our notions of <fr:link href="/sss-0015/" title="Nullability in Dependent Lambek Calculus" uri="https://stevenschaefer.net/sss-0015/" display-uri="sss-0015" type="local">nullability</fr:link> and <fr:link href="/sss-000Z/" title="First Sets in Dependent Lambek Calculus" uri="https://stevenschaefer.net/sss-000Z/" display-uri="sss-000Z" type="local">first sets</fr:link> for the encoding of <fr:link href="/sss-000W/" title="Deterministic Regular Expressions" uri="https://stevenschaefer.net/sss-000W/" display-uri="sss-000W" type="local">deterministic regular expresssions</fr:link> in Dependent Lambek Calculus.
+</html:p>
+                <html:p>
+I've been primarily stuck on the following proof for the soundness of the <fr:link href="/sss-0011/" title="FollowLast Sets in Dependent Lambek Calculus" uri="https://stevenschaefer.net/sss-0011/" display-uri="sss-0011" type="local">followlast</fr:link> sets in the case of concatenation of two nonnullable grammars.
+
+Given <fr:tex display="inline"><![CDATA[g]]></fr:tex> and <fr:tex display="inline"><![CDATA[h]]></fr:tex> such that <fr:tex display="inline"><![CDATA[\mathsf {FLast}(g)]]></fr:tex> and <fr:tex display="inline"><![CDATA[\mathsf {First}(h)]]></fr:tex> are disjoint, and <fr:tex display="inline"><![CDATA[c \not  \in  \mathsf {FLast}(h)]]></fr:tex>, want to show that <fr:tex display="inline"><![CDATA[c]]></fr:tex> is also not in <fr:tex display="inline"><![CDATA[\mathsf {FLast}(g \otimes  h)]]></fr:tex>.
+
+That is, assuming for all <fr:tex display="inline"><![CDATA[c]]></fr:tex>, <fr:tex display="inline"><![CDATA[g \And  {\mathopen {}\left (g \otimes  c \otimes  \top \right )\mathclose {}} \vdash  \bot ]]></fr:tex> or <fr:tex display="inline"><![CDATA[h \And  {\mathopen {}\left (c \otimes  \top \right )\mathclose {}} \vdash  \bot ]]></fr:tex>. Fix <fr:tex display="inline"><![CDATA[c]]></fr:tex> such that <fr:tex display="inline"><![CDATA[h \And  {\mathopen {}\left (h \otimes  c \otimes  \top \right )\mathclose {}} \vdash  \bot ]]></fr:tex>, and then show <fr:tex display="inline"><![CDATA[g \otimes  h \And  {\mathopen {}\left (g \otimes  h \otimes  c \otimes  \top \right )\mathclose {}} \vdash  \bot ]]></fr:tex>.
+
+</html:p>
+                <html:p>
+This isn't super bad to do in the model, where you do some case analysis. In particular, the string that is parsed splits into some <fr:tex display="inline"><![CDATA[w , x : \mathrm {String}]]></fr:tex> with <fr:tex display="inline"><![CDATA[g]]></fr:tex> and <fr:tex display="inline"><![CDATA[h]]></fr:tex> parses, respectively. Likewise, it splits into <fr:tex display="inline"><![CDATA[y , z : \mathrm {String}]]></fr:tex> with a <fr:tex display="inline"><![CDATA[g]]></fr:tex> parse of <fr:tex display="inline"><![CDATA[y]]></fr:tex> and an <fr:tex display="inline"><![CDATA[h \otimes  \texttt {"}c\texttt {"} \otimes  \top ]]></fr:tex> parse of <fr:tex display="inline"><![CDATA[z]]></fr:tex>. All in all, we have
+
+<fr:tex display="block"><![CDATA[w,x,y,z : \mathrm {String} , w \texttt { ++ } x = y \texttt { ++ } z]]></fr:tex>
+with some parses <fr:tex display="inline"><![CDATA[g w]]></fr:tex>, <fr:tex display="inline"><![CDATA[h x]]></fr:tex>, <fr:tex display="inline"><![CDATA[g y]]></fr:tex>, and <fr:tex display="inline"><![CDATA[(h \otimes  \texttt {"}c\texttt {"} \otimes  \top ) z]]></fr:tex>. Then you split into cases checking whether <fr:tex display="inline"><![CDATA[w]]></fr:tex> and <fr:tex display="inline"><![CDATA[y]]></fr:tex> are the same string, if <fr:tex display="inline"><![CDATA[w]]></fr:tex> is a (nontrivial) prefix of <fr:tex display="inline"><![CDATA[y]]></fr:tex>, or if <fr:tex display="inline"><![CDATA[y]]></fr:tex> is a prefix of <fr:tex display="inline"><![CDATA[w]]></fr:tex>.  Then each of the cases are straightforward enough but still tedious.
+
+</html:p>
+                <html:p>
+I've been weighing whether or not to do effectively the same proof but in the model by using the axiom
+<fr:tex display="block"><![CDATA[g \cong  \textstyle \mathchoice {\textstyle \oplus _{{\mathopen {}\left (w : \mathrm {String}\right )\mathclose {}}}}{\textstyle \oplus _{{\mathopen {}\left (w : \mathrm {String}\right )\mathclose {}}}}{\scriptstyle \oplus _{{\mathopen {}\left (w : \mathrm {String}\right )\mathclose {}}}}{\scriptscriptstyle \oplus _{{\mathopen {}\left (w : \mathrm {String}\right )\mathclose {}}}}. g \And  \lceil  w \rceil ]]></fr:tex>
+It feels as there should be a way to do this at a high level utilizing type-based reasoning, rather than manipulating individual strings.
+</html:p>
+              </fr:mainmatter>
+            </fr:tree>
+            <fr:tree show-metadata="false">
+              <fr:frontmatter>
+                <fr:authors>
+                  <fr:author>
+                    <fr:link href="/maxsnew/" title="Max S. New" uri="https://stevenschaefer.net/maxsnew/" display-uri="maxsnew" type="local">Max S. New</fr:link>
+                  </fr:author>
+                  <fr:author>
+                    <fr:link href="/stevenschaefer/" title="Steven Schaefer" uri="https://stevenschaefer.net/stevenschaefer/" display-uri="stevenschaefer" type="local">Steven Schaefer</fr:link>
+                  </fr:author>
+                </fr:authors>
+                <fr:date>
+                  <fr:year>2025</fr:year>
+                  <fr:month>1</fr:month>
+                  <fr:day>24</fr:day>
+                </fr:date>
+                <fr:source-path>/Users/stevenschaefer/forest/trees/sss-0016.tree</fr:source-path>
+                <fr:uri>https://stevenschaefer.net/sss-0016/</fr:uri>
+                <fr:display-uri>sss-0016</fr:display-uri>
+                <fr:route>/sss-0016/</fr:route>
+                <fr:title text="Sequential Ambiguity Helper">Sequential Ambiguity Helper</fr:title>
+                <fr:taxon>Daily</fr:taxon>
+              </fr:frontmatter>
+              <fr:mainmatter>
+                <html:p>
+  Max suggested that an effective way to represent <fr:link href="/sss-0017/" title="Sequential Unambiguity" uri="https://stevenschaefer.net/sss-0017/" display-uri="sss-0017" type="local">sequential unamiguity</fr:link> in Dependent Lambek Calculus to alleviate my issues proving <fr:link href="/sss-000V/" title="FollowLast Soundness" uri="https://stevenschaefer.net/sss-000V/" display-uri="sss-000V" type="local">followlast soundness</fr:link>.
+</html:p>
+                <html:p>
+  An attempt would be that the following map has an inverse
+  <fr:tex display="block"><![CDATA[g \otimes  {\mathopen {}\left ({\mathopen {}\left (h \otimes  k\right )\mathclose {}} \And  {\mathopen {}\left (h \otimes  l\right )\mathclose {}}\right )\mathclose {}} \vdash  {\mathopen {}\left (g \otimes  h \otimes  k\right )\mathclose {}} \And  (g \otimes  h \otimes  l)]]></fr:tex></html:p>
+              </fr:mainmatter>
+            </fr:tree>
+            <fr:tree show-metadata="false">
+              <fr:frontmatter>
+                <fr:authors>
+                  <fr:author>
+                    <fr:link href="/stevenschaefer/" title="Steven Schaefer" uri="https://stevenschaefer.net/stevenschaefer/" display-uri="stevenschaefer" type="local">Steven Schaefer</fr:link>
+                  </fr:author>
+                </fr:authors>
+                <fr:date>
+                  <fr:year>2025</fr:year>
+                  <fr:month>1</fr:month>
+                  <fr:day>29</fr:day>
+                </fr:date>
+                <fr:source-path>/Users/stevenschaefer/forest/trees/sss-0019.tree</fr:source-path>
+                <fr:uri>https://stevenschaefer.net/sss-0019/</fr:uri>
+                <fr:display-uri>sss-0019</fr:display-uri>
+                <fr:route>/sss-0019/</fr:route>
+                <fr:title text="Can I Use Guarded Recursion?">Can I Use Guarded Recursion?</fr:title>
+                <fr:taxon>Daily</fr:taxon>
+              </fr:frontmatter>
+              <fr:mainmatter>
+                <html:p>
+  I don't exactly understand how guarded recursion works, but I suspect it might be the sort of thing that allows some of these proofs to go through or be simplified.
+</html:p>
+                <html:p>
+  For instance, the sorts of recursive calls to parsers that aren't structurally recursive, but will be decreasing on the inputted strings.
+</html:p>
+                <html:p>
+  Also, proofs involving Kleene stars that where I would like to assume the inductive hypothesis on the Kleene star after it has been unrolled once. If I wish to prove <fr:link href="/sss-000V/" title="FollowLast Soundness" uri="https://stevenschaefer.net/sss-000V/" display-uri="sss-000V" type="local">follow last soundness</fr:link> for the Kleene star of a deterministic regular expression <fr:tex display="inline"><![CDATA[r]]></fr:tex>,
+
+<fr:tex display="block"><![CDATA[{r}^{*} \And  {\mathopen {}\left ({r}^{*} \otimes  c \otimes  \top \right )\mathclose {}} \vdash  \bot ]]></fr:tex>
+
+when <fr:tex display="inline"><![CDATA[r \And  {\mathopen {}\left (r \otimes  c \otimes  \top \right )\mathclose {}} \vdash  \bot ]]></fr:tex> and <fr:tex display="inline"><![CDATA[r \And  {\mathopen {}\left (c \otimes  \top \right )\mathclose {}} \vdash  \bot ]]></fr:tex>.
+</html:p>
+                <html:p>
+  The proof reduceds to unrolling each of the <fr:tex display="inline"><![CDATA[{r}^{*}]]></fr:tex> and then showing
+  <fr:tex display="block"><![CDATA[{\mathopen {}\left (r \otimes  {r}^{*}\right )\mathclose {}} \And  {\mathopen {}\left ({\mathopen {}\left (r \otimes  {r}^{*}\right )\mathclose {}} \otimes  c \otimes  \top \right )\mathclose {}} \vdash  \bot ]]></fr:tex>
+
+  However, my only strategy for such a proof involves invoking an inductive hypothesis for the <fr:tex display="inline"><![CDATA[{r}^{*}]]></fr:tex> terms which would currently be circular reasoning. Although, because they are unrolled once, I suspect I may be able to make some sort of guarded argument and make each of these <fr:tex display="inline"><![CDATA[{r}^{*}]]></fr:tex> to instead be <fr:tex display="inline"><![CDATA[\triangleright  {r}^{*}]]></fr:tex>. Then this would allow me to use the inductive hypothesis?
+</html:p>
+              </fr:mainmatter>
+            </fr:tree>
+          </fr:mainmatter>
+        </fr:tree>
+      </fr:mainmatter>
+    </fr:tree>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors />
+        <fr:title text="Backlinks">Backlinks</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter>
+        <fr:tree show-metadata="true" expanded="false" toc="false" numbered="false">
+          <fr:frontmatter>
+            <fr:authors>
+              <fr:author>
+                <fr:link href="/stevenschaefer/" title="Steven Schaefer" uri="https://stevenschaefer.net/stevenschaefer/" display-uri="stevenschaefer" type="local">Steven Schaefer</fr:link>
+              </fr:author>
+            </fr:authors>
+            <fr:date>
+              <fr:year>2026</fr:year>
+              <fr:month>4</fr:month>
+              <fr:day>22</fr:day>
+            </fr:date>
+            <fr:source-path>/Users/stevenschaefer/forest/trees/sss-00AH.tree</fr:source-path>
+            <fr:uri>https://stevenschaefer.net/sss-00AH/</fr:uri>
+            <fr:display-uri>sss-00AH</fr:display-uri>
+            <fr:route>/sss-00AH/</fr:route>
+            <fr:title text="Candidates for a guarded modality in dep-Lambek">Candidates for a guarded modality in dep-Lambek</fr:title>
+            <fr:taxon>Idea</fr:taxon>
+          </fr:frontmatter>
+          <fr:mainmatter>
+            <html:p>Pre-meeting notes for the <fr:link href="/sss-00AF/" title="Advisor meeting 2026-04-22 (Max and Cass)" uri="https://stevenschaefer.net/sss-00AF/" display-uri="sss-00AF" type="local">advisor meeting on 2026-04-22</fr:link>.
+Related: <fr:link href="/sss-0019/" title="Can I Use Guarded Recursion?" uri="https://stevenschaefer.net/sss-0019/" display-uri="sss-0019" type="local">Can I use guarded recursion?</fr:link>,
+<fr:link href="/sss-009A/" title="Well-Founded Recursion in Dependent Lambek Calculus" uri="https://stevenschaefer.net/sss-009A/" display-uri="sss-009A" type="local">well-founded recursion in dep-Lambek</fr:link>.</html:p>
+            <html:p><html:strong>Analytic candidate.</html:strong> Internally a grammar is essentially
+<fr:tex display="inline"><![CDATA[A : \mathrm {String} \to  \mathbb {N} \to  \mathbf {Set}]]></fr:tex>, and we could set
+<fr:tex display="block"><![CDATA[{\mathopen {}\left (\triangleright  A\right )\mathclose {}}\, w\, 0 = \top , \qquad  {\mathopen {}\left (\triangleright  A\right )\mathclose {}}\, w\, {\mathopen {}\left (\mathsf {suc}\, n\right )\mathclose {}} = A\, w\, n.]]></fr:tex>
+This is the usual step-indexed later: shift the index by one and give
+free truth at step zero.</html:p>
+            <html:p><html:strong>Synthetic candidate.</html:strong> In Agda we could alternatively define
+<fr:tex display="block"><![CDATA[{\mathopen {}\left (\triangleright  A\right )\mathclose {}}\, w = \triangleright \, {\mathopen {}\left (A\, w\right )\mathclose {}}]]></fr:tex>
+and inherit the ambient later modality of the synthetic guarded type theory.
+This keeps grammar-indexing orthogonal to step-indexing.</html:p>
+            <html:p><html:strong>Open question.</html:strong> Which of these plays best with the
+<fr:link href="/sss-00AG/" title="Well-foundedness of the Dyck functor via the string-decomposition axiom" uri="https://stevenschaefer.net/sss-00AG/" display-uri="sss-00AG" type="local">Dyck functor / string-decomposition story</fr:link>? The analytic version
+makes step-indexing and string-length arguments interact explicitly; the
+synthetic version defers that to the ambient modality but needs to be
+reconciled with the grammar-as-type-family structure. See also the
+<fr:link href="/sss-00AI/" title="Trivial case of the guarded modality: should it be top or the current string's quote?" uri="https://stevenschaefer.net/sss-00AI/" display-uri="sss-00AI" type="local">trivial-case question</fr:link>.</html:p>
+          </fr:mainmatter>
+        </fr:tree>
+      </fr:mainmatter>
+    </fr:tree>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors />
+        <fr:title text="Related">Related</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter>
+        <fr:tree show-metadata="true" expanded="false" toc="false" numbered="false">
+          <fr:frontmatter>
+            <fr:authors>
+              <fr:author>
+                <fr:link href="/stevenschaefer/" title="Steven Schaefer" uri="https://stevenschaefer.net/stevenschaefer/" display-uri="stevenschaefer" type="local">Steven Schaefer</fr:link>
+              </fr:author>
+            </fr:authors>
+            <fr:date>
+              <fr:year>2025</fr:year>
+              <fr:month>1</fr:month>
+              <fr:day>24</fr:day>
+            </fr:date>
+            <fr:source-path>/Users/stevenschaefer/forest/trees/sss-000V.tree</fr:source-path>
+            <fr:uri>https://stevenschaefer.net/sss-000V/</fr:uri>
+            <fr:display-uri>sss-000V</fr:display-uri>
+            <fr:route>/sss-000V/</fr:route>
+            <fr:title text="FollowLast Soundness">FollowLast Soundness</fr:title>
+            <fr:taxon>Daily</fr:taxon>
+          </fr:frontmatter>
+          <fr:mainmatter>
+            <html:p>
+Thus far I have shown the soundness of our notions of <fr:link href="/sss-0015/" title="Nullability in Dependent Lambek Calculus" uri="https://stevenschaefer.net/sss-0015/" display-uri="sss-0015" type="local">nullability</fr:link> and <fr:link href="/sss-000Z/" title="First Sets in Dependent Lambek Calculus" uri="https://stevenschaefer.net/sss-000Z/" display-uri="sss-000Z" type="local">first sets</fr:link> for the encoding of <fr:link href="/sss-000W/" title="Deterministic Regular Expressions" uri="https://stevenschaefer.net/sss-000W/" display-uri="sss-000W" type="local">deterministic regular expresssions</fr:link> in Dependent Lambek Calculus.
+</html:p>
+            <html:p>
+I've been primarily stuck on the following proof for the soundness of the <fr:link href="/sss-0011/" title="FollowLast Sets in Dependent Lambek Calculus" uri="https://stevenschaefer.net/sss-0011/" display-uri="sss-0011" type="local">followlast</fr:link> sets in the case of concatenation of two nonnullable grammars.
+
+Given <fr:tex display="inline"><![CDATA[g]]></fr:tex> and <fr:tex display="inline"><![CDATA[h]]></fr:tex> such that <fr:tex display="inline"><![CDATA[\mathsf {FLast}(g)]]></fr:tex> and <fr:tex display="inline"><![CDATA[\mathsf {First}(h)]]></fr:tex> are disjoint, and <fr:tex display="inline"><![CDATA[c \not  \in  \mathsf {FLast}(h)]]></fr:tex>, want to show that <fr:tex display="inline"><![CDATA[c]]></fr:tex> is also not in <fr:tex display="inline"><![CDATA[\mathsf {FLast}(g \otimes  h)]]></fr:tex>.
+
+That is, assuming for all <fr:tex display="inline"><![CDATA[c]]></fr:tex>, <fr:tex display="inline"><![CDATA[g \And  {\mathopen {}\left (g \otimes  c \otimes  \top \right )\mathclose {}} \vdash  \bot ]]></fr:tex> or <fr:tex display="inline"><![CDATA[h \And  {\mathopen {}\left (c \otimes  \top \right )\mathclose {}} \vdash  \bot ]]></fr:tex>. Fix <fr:tex display="inline"><![CDATA[c]]></fr:tex> such that <fr:tex display="inline"><![CDATA[h \And  {\mathopen {}\left (h \otimes  c \otimes  \top \right )\mathclose {}} \vdash  \bot ]]></fr:tex>, and then show <fr:tex display="inline"><![CDATA[g \otimes  h \And  {\mathopen {}\left (g \otimes  h \otimes  c \otimes  \top \right )\mathclose {}} \vdash  \bot ]]></fr:tex>.
+
+</html:p>
+            <html:p>
+This isn't super bad to do in the model, where you do some case analysis. In particular, the string that is parsed splits into some <fr:tex display="inline"><![CDATA[w , x : \mathrm {String}]]></fr:tex> with <fr:tex display="inline"><![CDATA[g]]></fr:tex> and <fr:tex display="inline"><![CDATA[h]]></fr:tex> parses, respectively. Likewise, it splits into <fr:tex display="inline"><![CDATA[y , z : \mathrm {String}]]></fr:tex> with a <fr:tex display="inline"><![CDATA[g]]></fr:tex> parse of <fr:tex display="inline"><![CDATA[y]]></fr:tex> and an <fr:tex display="inline"><![CDATA[h \otimes  \texttt {"}c\texttt {"} \otimes  \top ]]></fr:tex> parse of <fr:tex display="inline"><![CDATA[z]]></fr:tex>. All in all, we have
+
+<fr:tex display="block"><![CDATA[w,x,y,z : \mathrm {String} , w \texttt { ++ } x = y \texttt { ++ } z]]></fr:tex>
+with some parses <fr:tex display="inline"><![CDATA[g w]]></fr:tex>, <fr:tex display="inline"><![CDATA[h x]]></fr:tex>, <fr:tex display="inline"><![CDATA[g y]]></fr:tex>, and <fr:tex display="inline"><![CDATA[(h \otimes  \texttt {"}c\texttt {"} \otimes  \top ) z]]></fr:tex>. Then you split into cases checking whether <fr:tex display="inline"><![CDATA[w]]></fr:tex> and <fr:tex display="inline"><![CDATA[y]]></fr:tex> are the same string, if <fr:tex display="inline"><![CDATA[w]]></fr:tex> is a (nontrivial) prefix of <fr:tex display="inline"><![CDATA[y]]></fr:tex>, or if <fr:tex display="inline"><![CDATA[y]]></fr:tex> is a prefix of <fr:tex display="inline"><![CDATA[w]]></fr:tex>.  Then each of the cases are straightforward enough but still tedious.
+
+</html:p>
+            <html:p>
+I've been weighing whether or not to do effectively the same proof but in the model by using the axiom
+<fr:tex display="block"><![CDATA[g \cong  \textstyle \mathchoice {\textstyle \oplus _{{\mathopen {}\left (w : \mathrm {String}\right )\mathclose {}}}}{\textstyle \oplus _{{\mathopen {}\left (w : \mathrm {String}\right )\mathclose {}}}}{\scriptstyle \oplus _{{\mathopen {}\left (w : \mathrm {String}\right )\mathclose {}}}}{\scriptscriptstyle \oplus _{{\mathopen {}\left (w : \mathrm {String}\right )\mathclose {}}}}. g \And  \lceil  w \rceil ]]></fr:tex>
+It feels as there should be a way to do this at a high level utilizing type-based reasoning, rather than manipulating individual strings.
+</html:p>
+          </fr:mainmatter>
+        </fr:tree>
+      </fr:mainmatter>
+    </fr:tree>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors />
+        <fr:title text="Contributions">Contributions</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter />
+    </fr:tree>
+  </fr:backmatter>
+</fr:tree>

@@ -1,0 +1,700 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="/default.xsl"?>
+<fr:tree xmlns:fr="http://www.forester-notes.org" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:xml="http://www.w3.org/XML/1998/namespace" root="false" base-url="/">
+  <fr:frontmatter>
+    <fr:authors>
+      <fr:author>
+        <fr:link href="/stevenschaefer/" title="Steven Schaefer" uri="https://stevenschaefer.net/stevenschaefer/" display-uri="stevenschaefer" type="local">Steven Schaefer</fr:link>
+      </fr:author>
+    </fr:authors>
+    <fr:date>
+      <fr:year>2026</fr:year>
+      <fr:month>4</fr:month>
+      <fr:day>17</fr:day>
+    </fr:date>
+    <fr:source-path>/Users/stevenschaefer/forest/trees/sss-008Y.tree</fr:source-path>
+    <fr:uri>https://stevenschaefer.net/sss-008Y/</fr:uri>
+    <fr:display-uri>sss-008Y</fr:display-uri>
+    <fr:route>/sss-008Y/</fr:route>
+    <fr:title text="Example: Current vs. Rich Rendering">Example: Current vs. Rich Rendering</fr:title>
+  </fr:frontmatter>
+  <fr:mainmatter>
+    <html:p>Referenced from <fr:link href="/sss-008X/" title="Rich Forest Rendering in Emacs" uri="https://stevenschaefer.net/sss-008X/" display-uri="sss-008X" type="local">Rich Forest Rendering in Emacs</fr:link>. Shows concrete examples of Forester markup that renders well in a browser but degrades to plain text in the current Emacs preview.</html:p>
+    <html:p><html:strong>Inline math.</html:strong> Source: <html:code><![CDATA[#{e^{i \pi} + 1 = 0}]]></html:code>. In-browser: <fr:tex display="inline"><![CDATA[e^{i \pi } + 1 = 0]]></fr:tex>. In current Emacs preview: the raw source, with no KaTeX rendering.</html:p>
+    <html:p><html:strong>Display math.</html:strong> Source: <html:code><![CDATA[##{\sum_{n=0}^{\infty} \frac{1}{n!} = e}]]></html:code>. In-browser:</html:p>
+    <fr:tex display="block"><![CDATA[\sum _{n=0}^{\infty } \frac {1}{n!} = e]]></fr:tex>
+    <html:p>In the current Emacs preview this shows up as one long line of TeX-looking source with no formatting.</html:p>
+    <html:p><html:strong>Inline markup.</html:strong> <html:code><![CDATA[\em{italic}]]></html:code>, <html:code><![CDATA[\strong{bold}]]></html:code>, and <html:code><![CDATA[\code{monospace}]]></html:code> all have visual distinction in the browser but currently flatten to indistinguishable runs of characters in the text preview.</html:p>
+    <html:p><html:strong>Transclusion.</html:strong> A <html:code><![CDATA[\transclude{sss-XXXX}]]></html:code> call in the browser expands the target tree inline, often with its own math, code, and links. In the Emacs preview it shows as a literal <html:code><![CDATA[\transclude]]></html:code> call — the reader has to navigate away to see the content.</html:p>
+    <html:p><html:strong>Datalog queries.</html:strong> Source like the <html:code>status-pending</html:code> query in <fr:link href="/forkester-features/" title="Features for Forking Forester" uri="https://stevenschaefer.net/forkester-features/" display-uri="forkester-features" type="local">Features for Forking Forester</fr:link> produces a live list of trees in the browser but renders as a raw <html:code><![CDATA[\query\datalog{...}]]></html:code> block in Emacs with no results.</html:p>
+    <html:p><html:strong>Links and cross-references.</html:strong> <html:code><![CDATA[[title](sss-XXXX)]]></html:code> is a clickable navigation in the browser; in the Emacs preview it's plain text with no indication that it's a link target.</html:p>
+  </fr:mainmatter>
+  <fr:backmatter>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors />
+        <fr:title text="References">References</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter />
+    </fr:tree>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors />
+        <fr:title text="Context">Context</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter />
+    </fr:tree>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors />
+        <fr:title text="Backlinks">Backlinks</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter>
+        <fr:tree show-metadata="true" expanded="false" toc="false" numbered="false">
+          <fr:frontmatter>
+            <fr:authors>
+              <fr:author>
+                <fr:link href="/stevenschaefer/" title="Steven Schaefer" uri="https://stevenschaefer.net/stevenschaefer/" display-uri="stevenschaefer" type="local">Steven Schaefer</fr:link>
+              </fr:author>
+            </fr:authors>
+            <fr:date>
+              <fr:year>2026</fr:year>
+              <fr:month>4</fr:month>
+              <fr:day>17</fr:day>
+            </fr:date>
+            <fr:source-path>/Users/stevenschaefer/forest/trees/sss-008X.tree</fr:source-path>
+            <fr:uri>https://stevenschaefer.net/sss-008X/</fr:uri>
+            <fr:display-uri>sss-008X</fr:display-uri>
+            <fr:route>/sss-008X/</fr:route>
+            <fr:title text="Rich Forest Rendering in Emacs">Rich Forest Rendering in Emacs</fr:title>
+            <fr:taxon>TODO</fr:taxon>
+            <fr:meta name="status">icebox</fr:meta>
+            <fr:meta name="apple-id">x-apple-reminder://8A6A3CD1-568E-44B2-9A99-7C2C63A63F9B</fr:meta>
+            <fr:meta name="forester-addr">sss-008X</fr:meta>
+          </fr:frontmatter>
+          <fr:mainmatter>
+            <html:p>Part of <fr:link href="/sss-008V/" title="Modern Web Browser from Within Emacs" uri="https://stevenschaefer.net/sss-008V/" display-uri="sss-008V" type="local">Modern Web Browser from Within Emacs</fr:link>. Supersedes the text-rendering half of <fr:link href="/sss-003B/" title="Tree Rendering in Emacs" uri="https://stevenschaefer.net/sss-003B/" display-uri="sss-003B" type="local">Tree Rendering in Emacs</fr:link> by aiming instead for full HTML-quality rendering inside an Emacs buffer.</html:p>
+            <html:p>Goal: when previewing a tree in Emacs, show a rendering that matches what the Forester-compiled HTML shows in a real browser — rendered math, transclusions expanded inline, working links, Datalog query results, figure images — rather than the plain-text-with-markup view we have today.</html:p>
+            <html:p>For a demonstration of what current rendering looks like versus what rich rendering would produce, see <fr:link href="/sss-008Y/" title="Example: Current vs. Rich Rendering" uri="https://stevenschaefer.net/sss-008Y/" display-uri="sss-008Y" type="local">Example: Current vs. Rich Rendering</fr:link>.</html:p>
+            <html:p>Implementation routes:</html:p>
+            <html:ul><html:li><html:strong>Embed the forester dev server output directly.</html:strong> We already serve the rendered forest at <html:code>http://localhost:1313</html:code>. An embedded browser (EAF / <html:code>xwidget-webkit</html:code>) could visit the URL for the current tree. This is the cheapest path: no new rendering code, and every Forester feature (math, Datalog, transclusions, themes) works out of the box.</html:li>
+<html:li><html:strong>Parse tree + render to a rich Emacs buffer.</html:strong> Convert Forester markup to overlays, images (for math), and text properties in a native buffer. Keeps everything Emacs-native but requires reimplementing a nontrivial fraction of the compiler.</html:li>
+<html:li><html:strong>Hybrid.</html:strong> Use native buffer for editing, embedded browser in a side window for preview. Auto-refresh on save.</html:li></html:ul>
+            <html:p>Open questions:</html:p>
+            <html:ul><html:li>Does <html:code>xwidget-webkit</html:code> reliably handle KaTeX / MathJax? Forester uses KaTeX; if the embedded browser can't run it, math renders as raw source.</html:li>
+<html:li>How do we round-trip clicks in the embedded rendering back to "open this tree in Emacs"? The existing <html:code>[edit]</html:code> button (see <fr:link href="/sss-003H/" title="Open Editor" uri="https://stevenschaefer.net/sss-003H/" display-uri="sss-003H" type="local">Open Editor</fr:link>) already goes the other way.</html:li>
+<html:li>Server dependency: option 1 assumes a live <html:code>./server.sh</html:code>. Fine on my laptop; less fine if I open a tree on a machine without the forester toolchain.</html:li></html:ul>
+          </fr:mainmatter>
+        </fr:tree>
+      </fr:mainmatter>
+    </fr:tree>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors />
+        <fr:title text="Related">Related</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter>
+        <fr:tree show-metadata="true" expanded="false" toc="false" numbered="false">
+          <fr:frontmatter>
+            <fr:authors>
+              <fr:author>
+                <fr:link href="/stevenschaefer/" title="Steven Schaefer" uri="https://stevenschaefer.net/stevenschaefer/" display-uri="stevenschaefer" type="local">Steven Schaefer</fr:link>
+              </fr:author>
+            </fr:authors>
+            <fr:date>
+              <fr:year>2026</fr:year>
+              <fr:month>4</fr:month>
+              <fr:day>17</fr:day>
+            </fr:date>
+            <fr:source-path>/Users/stevenschaefer/forest/trees/sss-008X.tree</fr:source-path>
+            <fr:uri>https://stevenschaefer.net/sss-008X/</fr:uri>
+            <fr:display-uri>sss-008X</fr:display-uri>
+            <fr:route>/sss-008X/</fr:route>
+            <fr:title text="Rich Forest Rendering in Emacs">Rich Forest Rendering in Emacs</fr:title>
+            <fr:taxon>TODO</fr:taxon>
+            <fr:meta name="status">icebox</fr:meta>
+            <fr:meta name="apple-id">x-apple-reminder://8A6A3CD1-568E-44B2-9A99-7C2C63A63F9B</fr:meta>
+            <fr:meta name="forester-addr">sss-008X</fr:meta>
+          </fr:frontmatter>
+          <fr:mainmatter>
+            <html:p>Part of <fr:link href="/sss-008V/" title="Modern Web Browser from Within Emacs" uri="https://stevenschaefer.net/sss-008V/" display-uri="sss-008V" type="local">Modern Web Browser from Within Emacs</fr:link>. Supersedes the text-rendering half of <fr:link href="/sss-003B/" title="Tree Rendering in Emacs" uri="https://stevenschaefer.net/sss-003B/" display-uri="sss-003B" type="local">Tree Rendering in Emacs</fr:link> by aiming instead for full HTML-quality rendering inside an Emacs buffer.</html:p>
+            <html:p>Goal: when previewing a tree in Emacs, show a rendering that matches what the Forester-compiled HTML shows in a real browser — rendered math, transclusions expanded inline, working links, Datalog query results, figure images — rather than the plain-text-with-markup view we have today.</html:p>
+            <html:p>For a demonstration of what current rendering looks like versus what rich rendering would produce, see <fr:link href="/sss-008Y/" title="Example: Current vs. Rich Rendering" uri="https://stevenschaefer.net/sss-008Y/" display-uri="sss-008Y" type="local">Example: Current vs. Rich Rendering</fr:link>.</html:p>
+            <html:p>Implementation routes:</html:p>
+            <html:ul><html:li><html:strong>Embed the forester dev server output directly.</html:strong> We already serve the rendered forest at <html:code>http://localhost:1313</html:code>. An embedded browser (EAF / <html:code>xwidget-webkit</html:code>) could visit the URL for the current tree. This is the cheapest path: no new rendering code, and every Forester feature (math, Datalog, transclusions, themes) works out of the box.</html:li>
+<html:li><html:strong>Parse tree + render to a rich Emacs buffer.</html:strong> Convert Forester markup to overlays, images (for math), and text properties in a native buffer. Keeps everything Emacs-native but requires reimplementing a nontrivial fraction of the compiler.</html:li>
+<html:li><html:strong>Hybrid.</html:strong> Use native buffer for editing, embedded browser in a side window for preview. Auto-refresh on save.</html:li></html:ul>
+            <html:p>Open questions:</html:p>
+            <html:ul><html:li>Does <html:code>xwidget-webkit</html:code> reliably handle KaTeX / MathJax? Forester uses KaTeX; if the embedded browser can't run it, math renders as raw source.</html:li>
+<html:li>How do we round-trip clicks in the embedded rendering back to "open this tree in Emacs"? The existing <html:code>[edit]</html:code> button (see <fr:link href="/sss-003H/" title="Open Editor" uri="https://stevenschaefer.net/sss-003H/" display-uri="sss-003H" type="local">Open Editor</fr:link>) already goes the other way.</html:li>
+<html:li>Server dependency: option 1 assumes a live <html:code>./server.sh</html:code>. Fine on my laptop; less fine if I open a tree on a machine without the forester toolchain.</html:li></html:ul>
+          </fr:mainmatter>
+        </fr:tree>
+        <fr:tree show-metadata="true" expanded="false" toc="false" numbered="false">
+          <fr:frontmatter>
+            <fr:authors>
+              <fr:author>
+                <fr:link href="/stevenschaefer/" title="Steven Schaefer" uri="https://stevenschaefer.net/stevenschaefer/" display-uri="stevenschaefer" type="local">Steven Schaefer</fr:link>
+              </fr:author>
+            </fr:authors>
+            <fr:date>
+              <fr:year>2026</fr:year>
+              <fr:month>2</fr:month>
+              <fr:day>20</fr:day>
+            </fr:date>
+            <fr:source-path>/Users/stevenschaefer/forest/trees/forkester-features.tree</fr:source-path>
+            <fr:uri>https://stevenschaefer.net/forkester-features/</fr:uri>
+            <fr:display-uri>forkester-features</fr:display-uri>
+            <fr:route>/forkester-features/</fr:route>
+            <fr:title text="Features for Forking Forester">Features for Forking Forester</fr:title>
+            <fr:meta name="toc">false</fr:meta>
+          </fr:frontmatter>
+          <fr:mainmatter>
+            <fr:tree show-metadata="false">
+              <fr:frontmatter>
+                <fr:authors>
+                  <fr:author>
+                    <fr:link href="/stevenschaefer/" title="Steven Schaefer" uri="https://stevenschaefer.net/stevenschaefer/" display-uri="stevenschaefer" type="local">Steven Schaefer</fr:link>
+                  </fr:author>
+                </fr:authors>
+                <fr:date>
+                  <fr:year>2026</fr:year>
+                  <fr:month>2</fr:month>
+                  <fr:day>20</fr:day>
+                </fr:date>
+                <fr:source-path>/Users/stevenschaefer/forest/trees/forkester-features.tree</fr:source-path>
+                <fr:title text="Pending">Pending</fr:title>
+              </fr:frontmatter>
+              <fr:mainmatter />
+            </fr:tree>
+            <fr:tree show-metadata="false">
+              <fr:frontmatter>
+                <fr:authors>
+                  <fr:author>
+                    <fr:link href="/stevenschaefer/" title="Steven Schaefer" uri="https://stevenschaefer.net/stevenschaefer/" display-uri="stevenschaefer" type="local">Steven Schaefer</fr:link>
+                  </fr:author>
+                </fr:authors>
+                <fr:date>
+                  <fr:year>2026</fr:year>
+                  <fr:month>2</fr:month>
+                  <fr:day>20</fr:day>
+                </fr:date>
+                <fr:source-path>/Users/stevenschaefer/forest/trees/forkester-features.tree</fr:source-path>
+                <fr:title text="In Progress">In Progress</fr:title>
+              </fr:frontmatter>
+              <fr:mainmatter />
+            </fr:tree>
+            <fr:tree show-metadata="false">
+              <fr:frontmatter>
+                <fr:authors>
+                  <fr:author>
+                    <fr:link href="/stevenschaefer/" title="Steven Schaefer" uri="https://stevenschaefer.net/stevenschaefer/" display-uri="stevenschaefer" type="local">Steven Schaefer</fr:link>
+                  </fr:author>
+                </fr:authors>
+                <fr:date>
+                  <fr:year>2026</fr:year>
+                  <fr:month>2</fr:month>
+                  <fr:day>20</fr:day>
+                </fr:date>
+                <fr:source-path>/Users/stevenschaefer/forest/trees/forkester-features.tree</fr:source-path>
+                <fr:title text="Done">Done</fr:title>
+              </fr:frontmatter>
+              <fr:mainmatter>
+                <fr:tree show-metadata="true" expanded="false" toc="false" numbered="false">
+                  <fr:frontmatter>
+                    <fr:authors>
+                      <fr:author>
+                        <fr:link href="/stevenschaefer/" title="Steven Schaefer" uri="https://stevenschaefer.net/stevenschaefer/" display-uri="stevenschaefer" type="local">Steven Schaefer</fr:link>
+                      </fr:author>
+                    </fr:authors>
+                    <fr:date>
+                      <fr:year>2026</fr:year>
+                      <fr:month>2</fr:month>
+                      <fr:day>22</fr:day>
+                    </fr:date>
+                    <fr:source-path>/Users/stevenschaefer/forest/trees/sss-004B.tree</fr:source-path>
+                    <fr:uri>https://stevenschaefer.net/sss-004B/</fr:uri>
+                    <fr:display-uri>sss-004B</fr:display-uri>
+                    <fr:route>/sss-004B/</fr:route>
+                    <fr:title text="Reference Managers + PDFs">Reference Managers + PDFs</fr:title>
+                    <fr:taxon>TODO</fr:taxon>
+                    <fr:meta name="status">done</fr:meta>
+                    <fr:meta name="completed">2026-02-25</fr:meta>
+                  </fr:frontmatter>
+                  <fr:mainmatter>
+                    <html:p>We use Forester as a reference manager and it captures all of the
+right metadata about a document. I'd also like if it made it easier to
+access the PDF of a reference. We should track where the pdf is stored
+locally and include a button that opens the pdf viewer chosen by the
+user.</html:p>
+                    <html:p>Further, we may wish for there to be a element in the tree
+that renders the pdf in the browser.</html:p>
+                  </fr:mainmatter>
+                </fr:tree>
+                <fr:tree show-metadata="true" expanded="false" toc="false" numbered="false">
+                  <fr:frontmatter>
+                    <fr:authors>
+                      <fr:author>
+                        <fr:link href="/stevenschaefer/" title="Steven Schaefer" uri="https://stevenschaefer.net/stevenschaefer/" display-uri="stevenschaefer" type="local">Steven Schaefer</fr:link>
+                      </fr:author>
+                    </fr:authors>
+                    <fr:date>
+                      <fr:year>2026</fr:year>
+                      <fr:month>2</fr:month>
+                      <fr:day>22</fr:day>
+                    </fr:date>
+                    <fr:source-path>/Users/stevenschaefer/forest/trees/sss-0049.tree</fr:source-path>
+                    <fr:uri>https://stevenschaefer.net/sss-0049/</fr:uri>
+                    <fr:display-uri>sss-0049</fr:display-uri>
+                    <fr:route>/sss-0049/</fr:route>
+                    <fr:title text="Handwriting Rendering">Handwriting Rendering</fr:title>
+                    <fr:taxon>TODO</fr:taxon>
+                    <fr:meta name="status">done</fr:meta>
+                    <fr:meta name="completed">2026-03-25</fr:meta>
+                  </fr:frontmatter>
+                  <fr:mainmatter>
+                    <html:p>I am currently having Claude write a sketch of how to make a
+handwritten notetaking app that I can self host, use with PencilKit,
+and integrate with a rich, associative tagging system like Forester's.</html:p>
+                    <html:p>Currently with the sketch of a Notability integration with
+Forester, the tree is rendered with a thumbnail. Once this is
+implemented, I would want to potentially render the handwritten note
+in an in-browser canvas. I think HTML5 supports things like this. In
+this way we can maybe have a read-only interactive view with the
+handwritten note
+</html:p>
+                    <html:p>I've vibe coded a handwritten notes app for forester, but I am not
+yet able to link a <html:code>pdf</html:code> to this forest, only <html:code>png</html:code>.</html:p>
+                    <html:p>Merged into <fr:link href="/sss-0072/" title="ForesterPad: iPad App Redesign" uri="https://stevenschaefer.net/sss-0072/" display-uri="sss-0072" type="local">ForesterPad: iPad App Redesign</fr:link>.</html:p>
+                  </fr:mainmatter>
+                </fr:tree>
+                <fr:tree show-metadata="true" expanded="false" toc="false" numbered="false">
+                  <fr:frontmatter>
+                    <fr:authors>
+                      <fr:author>
+                        <fr:link href="/stevenschaefer/" title="Steven Schaefer" uri="https://stevenschaefer.net/stevenschaefer/" display-uri="stevenschaefer" type="local">Steven Schaefer</fr:link>
+                      </fr:author>
+                    </fr:authors>
+                    <fr:date>
+                      <fr:year>2026</fr:year>
+                      <fr:month>2</fr:month>
+                      <fr:day>21</fr:day>
+                    </fr:date>
+                    <fr:source-path>/Users/stevenschaefer/forest/trees/sss-003Y.tree</fr:source-path>
+                    <fr:uri>https://stevenschaefer.net/sss-003Y/</fr:uri>
+                    <fr:display-uri>sss-003Y</fr:display-uri>
+                    <fr:route>/sss-003Y/</fr:route>
+                    <fr:title text="Manage Grocery lists">Manage Grocery lists</fr:title>
+                    <fr:taxon>TODO</fr:taxon>
+                    <fr:meta name="status">done</fr:meta>
+                    <fr:meta name="completed">2026-02-21</fr:meta>
+                  </fr:frontmatter>
+                  <fr:mainmatter>
+                    <html:p>Hook into the groceries list on my apple reminders for two
+directional grocery list sync.</html:p>
+                    <html:p>Implemented in <html:code>forester-org.el</html:code> with bidirectional Apple Reminders sync:</html:p>
+                    <html:ul><html:li><html:code>forester-grocery-add</html:code> — quick-add an item (creates tree + pushes to Apple)</html:li>
+<html:li><html:code>forester-grocery-add-multi</html:code> — add multiple items at once (comma or newline separated)</html:li>
+<html:li><html:code>forester-grocery-list</html:code> — view pending items in a query buffer</html:li>
+<html:li><html:code>forester-grocery-pull</html:code> — pull items added via Siri/phone into forester</html:li>
+<html:li><html:code>forester-grocery-push</html:code> — push local items to Apple Reminders</html:li>
+<html:li><html:code>forester-grocery-clear-done</html:code> — sync completion status from Apple</html:li>
+<html:li><html:code>forester-grocery-sync</html:code> — full bidirectional sync (pull + push + clear done)</html:li></html:ul>
+                    <html:p>Uses a configurable Apple Reminders list (default "Groceries") via
+<html:code>forester-org-grocery-list</html:code>. Items added via Siri to the Groceries list
+are automatically pulled into forester as trees with <![CDATA[\tag{grocery}]]>.</html:p>
+                  </fr:mainmatter>
+                </fr:tree>
+                <fr:tree show-metadata="true" expanded="false" toc="false" numbered="false">
+                  <fr:frontmatter>
+                    <fr:authors>
+                      <fr:author>
+                        <fr:link href="/stevenschaefer/" title="Steven Schaefer" uri="https://stevenschaefer.net/stevenschaefer/" display-uri="stevenschaefer" type="local">Steven Schaefer</fr:link>
+                      </fr:author>
+                    </fr:authors>
+                    <fr:date>
+                      <fr:year>2026</fr:year>
+                      <fr:month>2</fr:month>
+                      <fr:day>21</fr:day>
+                    </fr:date>
+                    <fr:source-path>/Users/stevenschaefer/forest/trees/sss-003R.tree</fr:source-path>
+                    <fr:uri>https://stevenschaefer.net/sss-003R/</fr:uri>
+                    <fr:display-uri>sss-003R</fr:display-uri>
+                    <fr:route>/sss-003R/</fr:route>
+                    <fr:title text="Forester as a Reference Manager">Forester as a Reference Manager</fr:title>
+                    <fr:taxon>TODO</fr:taxon>
+                    <fr:meta name="status">done</fr:meta>
+                    <fr:meta name="completed">2026-02-21</fr:meta>
+                  </fr:frontmatter>
+                  <fr:mainmatter>
+                    <html:p>I like using Forester to track references, and I'd even like to
+treat it as a Zotero replacement. I'm unsure what features I might need.
+</html:p>
+                    <html:p>Oooh it would be great to have an "add reference" template and/or
+keybind. Even better if there could be the ability to add by URL and
+have the data properly parsed into the Forester reference format</html:p>
+                    <html:p>Implemented in <html:code>forester-org.el</html:code> with three interactive commands:
+<html:code>forester-capture-reference</html:code> (manual entry),
+<html:code>forester-import-reference</html:code> (from URL: DOI, arXiv, or publisher page),
+and <html:code>forester-import-bibtex</html:code> (from clipboard BibTeX). Supports
+DOI content negotiation, arXiv API, and HTML meta tag extraction
+(Highwire Press / OpenGraph). Reference trees are created in
+<html:code>trees/public/refs/</html:code> with <![CDATA[\taxon{Reference}
+\meta{layout}{wide}]]> and embedded BibTeX.</html:p>
+                  </fr:mainmatter>
+                </fr:tree>
+                <fr:tree show-metadata="true" expanded="false" toc="false" numbered="false">
+                  <fr:frontmatter>
+                    <fr:authors>
+                      <fr:author>
+                        <fr:link href="/stevenschaefer/" title="Steven Schaefer" uri="https://stevenschaefer.net/stevenschaefer/" display-uri="stevenschaefer" type="local">Steven Schaefer</fr:link>
+                      </fr:author>
+                    </fr:authors>
+                    <fr:date>
+                      <fr:year>2026</fr:year>
+                      <fr:month>2</fr:month>
+                      <fr:day>21</fr:day>
+                    </fr:date>
+                    <fr:source-path>/Users/stevenschaefer/forest/trees/sss-003O.tree</fr:source-path>
+                    <fr:uri>https://stevenschaefer.net/sss-003O/</fr:uri>
+                    <fr:display-uri>sss-003O</fr:display-uri>
+                    <fr:route>/sss-003O/</fr:route>
+                    <fr:title text="Handwriting integration">Handwriting integration</fr:title>
+                    <fr:taxon>TODO</fr:taxon>
+                    <fr:meta name="status">done</fr:meta>
+                    <fr:meta name="completed">2026-03-25</fr:meta>
+                  </fr:frontmatter>
+                  <fr:mainmatter>
+                    <html:p>
+  I often use my ipad pro to take handwritten notes, and I find it
+  frustrating that digital handwritten notes don't interagte with my
+  other knowledge management in Forester. I think that is a real point
+  of frustration, as there is a significant cognitive friction
+  managing two independent systems. So I often give up and just use
+  one or none of them.
+</html:p>
+                    <html:p>
+  We may wish to use OCR on notes as a hook when saving them, or
+  perhaps as a nightly task. I don't know how effective that might be.
+</html:p>
+                    <html:p>
+  Maybe something as simple as a capturing workflow where I can easily
+  link to a digital handwritten note from within a normal tree. Then
+  on each device we can register a program that opens a notetaking app
+  of choice for handling handwritten notes. And maybe we can the
+  ability to link to digital notes from handwritten ones as well, and
+  the OCR could detect this?
+</html:p>
+                    <html:p>Merged into <fr:link href="/sss-0072/" title="ForesterPad: iPad App Redesign" uri="https://stevenschaefer.net/sss-0072/" display-uri="sss-0072" type="local">ForesterPad: iPad App Redesign</fr:link>.</html:p>
+                  </fr:mainmatter>
+                </fr:tree>
+                <fr:tree show-metadata="true" expanded="false" toc="false" numbered="false">
+                  <fr:frontmatter>
+                    <fr:authors>
+                      <fr:author>
+                        <fr:link href="/stevenschaefer/" title="Steven Schaefer" uri="https://stevenschaefer.net/stevenschaefer/" display-uri="stevenschaefer" type="local">Steven Schaefer</fr:link>
+                      </fr:author>
+                    </fr:authors>
+                    <fr:date>
+                      <fr:year>2026</fr:year>
+                      <fr:month>2</fr:month>
+                      <fr:day>21</fr:day>
+                    </fr:date>
+                    <fr:source-path>/Users/stevenschaefer/forest/trees/sss-003M.tree</fr:source-path>
+                    <fr:uri>https://stevenschaefer.net/sss-003M/</fr:uri>
+                    <fr:display-uri>sss-003M</fr:display-uri>
+                    <fr:route>/sss-003M/</fr:route>
+                    <fr:title text="Syncing with Apple Reminders">Syncing with Apple Reminders</fr:title>
+                    <fr:taxon>TODO</fr:taxon>
+                    <fr:meta name="status">done</fr:meta>
+                    <fr:meta name="completed">2026-02-21</fr:meta>
+                  </fr:frontmatter>
+                  <fr:mainmatter>
+                    <html:p>
+  I'd like to have some bidirectional syncing with Apple
+  Reminders/Calendar so that I can interface with Siri to add
+  reminders to my forester, as well as get notifications for things I
+  set as due in my forest.
+</html:p>
+                    <html:p>
+  Implemented via native AppleScript (osascript) in <html:code>forester-org.el</html:code>.
+  No third-party CLI tools needed. Push/pull sync creates items in the
+  native Reminders and Calendar apps, which automatically sync to all
+  Apple devices via iCloud.
+</html:p>
+                  </fr:mainmatter>
+                </fr:tree>
+                <fr:tree show-metadata="true" expanded="false" toc="false" numbered="false">
+                  <fr:frontmatter>
+                    <fr:authors>
+                      <fr:author>
+                        <fr:link href="/stevenschaefer/" title="Steven Schaefer" uri="https://stevenschaefer.net/stevenschaefer/" display-uri="stevenschaefer" type="local">Steven Schaefer</fr:link>
+                      </fr:author>
+                    </fr:authors>
+                    <fr:date>
+                      <fr:year>2026</fr:year>
+                      <fr:month>2</fr:month>
+                      <fr:day>20</fr:day>
+                    </fr:date>
+                    <fr:source-path>/Users/stevenschaefer/forest/trees/sss-003I.tree</fr:source-path>
+                    <fr:uri>https://stevenschaefer.net/sss-003I/</fr:uri>
+                    <fr:display-uri>sss-003I</fr:display-uri>
+                    <fr:route>/sss-003I/</fr:route>
+                    <fr:title text="Query by Tag">Query by Tag</fr:title>
+                    <fr:taxon>TODO</fr:taxon>
+                    <fr:meta name="status">done</fr:meta>
+                  </fr:frontmatter>
+                  <fr:mainmatter>
+                    <html:p>Querying by a tag should show the existing tags as
+options. Similarly when filtering results in the resulting buffer</html:p>
+                  </fr:mainmatter>
+                </fr:tree>
+                <fr:tree show-metadata="true" expanded="false" toc="false" numbered="false">
+                  <fr:frontmatter>
+                    <fr:authors>
+                      <fr:author>
+                        <fr:link href="/stevenschaefer/" title="Steven Schaefer" uri="https://stevenschaefer.net/stevenschaefer/" display-uri="stevenschaefer" type="local">Steven Schaefer</fr:link>
+                      </fr:author>
+                    </fr:authors>
+                    <fr:date>
+                      <fr:year>2026</fr:year>
+                      <fr:month>2</fr:month>
+                      <fr:day>20</fr:day>
+                    </fr:date>
+                    <fr:source-path>/Users/stevenschaefer/forest/trees/sss-003H.tree</fr:source-path>
+                    <fr:uri>https://stevenschaefer.net/sss-003H/</fr:uri>
+                    <fr:display-uri>sss-003H</fr:display-uri>
+                    <fr:route>/sss-003H/</fr:route>
+                    <fr:title text="Open Editor">Open Editor</fr:title>
+                    <fr:taxon>TODO</fr:taxon>
+                    <fr:meta name="status">done</fr:meta>
+                  </fr:frontmatter>
+                  <fr:mainmatter>
+                    <html:p>
+We have correctly pointed the <html:code>[edit]</html:code> button at opening Emacs
+for me and hopefully it is able to be configured to open other
+editors. We should route the <html:code>CMD e</html:code> shortcut to open the same.
+</html:p>
+                    <html:p>The command tries to open vscode still </html:p>
+                  </fr:mainmatter>
+                </fr:tree>
+                <fr:tree show-metadata="true" expanded="false" toc="false" numbered="false">
+                  <fr:frontmatter>
+                    <fr:authors>
+                      <fr:author>
+                        <fr:link href="/stevenschaefer/" title="Steven Schaefer" uri="https://stevenschaefer.net/stevenschaefer/" display-uri="stevenschaefer" type="local">Steven Schaefer</fr:link>
+                      </fr:author>
+                    </fr:authors>
+                    <fr:date>
+                      <fr:year>2026</fr:year>
+                      <fr:month>2</fr:month>
+                      <fr:day>20</fr:day>
+                    </fr:date>
+                    <fr:source-path>/Users/stevenschaefer/forest/trees/sss-003G.tree</fr:source-path>
+                    <fr:uri>https://stevenschaefer.net/sss-003G/</fr:uri>
+                    <fr:display-uri>sss-003G</fr:display-uri>
+                    <fr:route>/sss-003G/</fr:route>
+                    <fr:title text="Cycling TODOs">Cycling TODOs</fr:title>
+                    <fr:taxon>TODO</fr:taxon>
+                    <fr:meta name="status">done</fr:meta>
+                    <fr:meta name="completed">2026-02-21</fr:meta>
+                  </fr:frontmatter>
+                  <fr:mainmatter>
+                    <html:p>
+Cycling TODOs in a query buffer (from <html:code>SPC r q t</html:code>) is lossy. It can only go from pending to in progress, or from in progress to done. Then once it is done, it is removed from the preview. We should be able to arbitrarily cycle. The initial query should only show pending or in progress TODOs, but the ones that are cycled to done should not disappear unless the preview is refreshed.
+</html:p>
+                    <html:p>Resolved. Full cycling (pending \to  in-progress \to  done \to  cancelled \to  pending)
+implemented via <html:code>forester-cycle-todo-state</html:code>. The query buffer
+<html:code>forester-query-cycle-state</html:code> updates status in-place so done items
+remain visible until manual refresh. Completion metadata is set/removed
+correctly when entering/leaving done state. The earlier <html:code>replace-match</html:code>
+backslash error was fixed by using literal mode.</html:p>
+                  </fr:mainmatter>
+                </fr:tree>
+                <fr:tree show-metadata="true" expanded="false" toc="false" numbered="false">
+                  <fr:frontmatter>
+                    <fr:authors>
+                      <fr:author>
+                        <fr:link href="/stevenschaefer/" title="Steven Schaefer" uri="https://stevenschaefer.net/stevenschaefer/" display-uri="stevenschaefer" type="local">Steven Schaefer</fr:link>
+                      </fr:author>
+                    </fr:authors>
+                    <fr:date>
+                      <fr:year>2026</fr:year>
+                      <fr:month>2</fr:month>
+                      <fr:day>20</fr:day>
+                    </fr:date>
+                    <fr:source-path>/Users/stevenschaefer/forest/trees/sss-003F.tree</fr:source-path>
+                    <fr:uri>https://stevenschaefer.net/sss-003F/</fr:uri>
+                    <fr:display-uri>sss-003F</fr:display-uri>
+                    <fr:route>/sss-003F/</fr:route>
+                    <fr:title text="Autofill mode in Forester mode hook">Autofill mode in Forester mode hook</fr:title>
+                    <fr:taxon>TODO</fr:taxon>
+                    <fr:meta name="status">done</fr:meta>
+                    <fr:meta name="completed">2026-02-20</fr:meta>
+                  </fr:frontmatter>
+                  <fr:mainmatter />
+                </fr:tree>
+                <fr:tree show-metadata="true" expanded="false" toc="false" numbered="false">
+                  <fr:frontmatter>
+                    <fr:authors>
+                      <fr:author>
+                        <fr:link href="/stevenschaefer/" title="Steven Schaefer" uri="https://stevenschaefer.net/stevenschaefer/" display-uri="stevenschaefer" type="local">Steven Schaefer</fr:link>
+                      </fr:author>
+                    </fr:authors>
+                    <fr:date>
+                      <fr:year>2026</fr:year>
+                      <fr:month>2</fr:month>
+                      <fr:day>20</fr:day>
+                    </fr:date>
+                    <fr:source-path>/Users/stevenschaefer/forest/trees/sss-003E.tree</fr:source-path>
+                    <fr:uri>https://stevenschaefer.net/sss-003E/</fr:uri>
+                    <fr:display-uri>sss-003E</fr:display-uri>
+                    <fr:route>/sss-003E/</fr:route>
+                    <fr:title text="Find Tree">Find Tree</fr:title>
+                    <fr:taxon>TODO</fr:taxon>
+                    <fr:meta name="status">done</fr:meta>
+                  </fr:frontmatter>
+                  <fr:mainmatter>
+                    <html:p>
+  Finding trees with <html:code>SPC r f</html:code> with a description that has no matches should make a new tree with the given title. Prompt with template choice
+</html:p>
+                    <html:p>
+This command now fails with "forest home not set"
+</html:p>
+                  </fr:mainmatter>
+                </fr:tree>
+                <fr:tree show-metadata="true" expanded="false" toc="false" numbered="false">
+                  <fr:frontmatter>
+                    <fr:authors>
+                      <fr:author>
+                        <fr:link href="/stevenschaefer/" title="Steven Schaefer" uri="https://stevenschaefer.net/stevenschaefer/" display-uri="stevenschaefer" type="local">Steven Schaefer</fr:link>
+                      </fr:author>
+                    </fr:authors>
+                    <fr:date>
+                      <fr:year>2026</fr:year>
+                      <fr:month>2</fr:month>
+                      <fr:day>20</fr:day>
+                    </fr:date>
+                    <fr:source-path>/Users/stevenschaefer/forest/trees/sss-003D.tree</fr:source-path>
+                    <fr:uri>https://stevenschaefer.net/sss-003D/</fr:uri>
+                    <fr:display-uri>sss-003D</fr:display-uri>
+                    <fr:route>/sss-003D/</fr:route>
+                    <fr:title text="Finding trees should sort by recent">Finding trees should sort by recent</fr:title>
+                    <fr:taxon>TODO</fr:taxon>
+                    <fr:meta name="status">done</fr:meta>
+                  </fr:frontmatter>
+                  <fr:mainmatter>
+                    <html:p>
+  Searching for trees with <html:code>SPC r f</html:code> should sort the trees by most recent use. Currently I think it will show what has most recently been found, but we should also sort by most recent creation or access. Similar to <html:code>recentf</html:code> in emacs.
+</html:p>
+                  </fr:mainmatter>
+                </fr:tree>
+                <fr:tree show-metadata="true" expanded="false" toc="false" numbered="false">
+                  <fr:frontmatter>
+                    <fr:authors>
+                      <fr:author>
+                        <fr:link href="/stevenschaefer/" title="Steven Schaefer" uri="https://stevenschaefer.net/stevenschaefer/" display-uri="stevenschaefer" type="local">Steven Schaefer</fr:link>
+                      </fr:author>
+                    </fr:authors>
+                    <fr:date>
+                      <fr:year>2026</fr:year>
+                      <fr:month>2</fr:month>
+                      <fr:day>20</fr:day>
+                    </fr:date>
+                    <fr:source-path>/Users/stevenschaefer/forest/trees/sss-003C.tree</fr:source-path>
+                    <fr:uri>https://stevenschaefer.net/sss-003C/</fr:uri>
+                    <fr:display-uri>sss-003C</fr:display-uri>
+                    <fr:route>/sss-003C/</fr:route>
+                    <fr:title text="Manage the Forester server via the emacs mode">Manage the Forester server via the emacs mode</fr:title>
+                    <fr:taxon>TODO</fr:taxon>
+                    <fr:meta name="status">done</fr:meta>
+                    <fr:meta name="completed">2026-02-20</fr:meta>
+                  </fr:frontmatter>
+                  <fr:mainmatter>
+                    <html:p>
+  Elisp functions and keybinds for running a Forester server, starting, stopping, etc. Have a log/status buffer. Start the server whenever a Forester file is opened and keep it running
+</html:p>
+                    <html:p><html:code>SPC r B</html:code> does correctly open the browser, but currently does so at the wrong path. For instance, this tree opens <html:code>file:///sss-003C/index.xml</html:code>. But to actually see it in a browser, we should open the route <html:code>http://localhost:1313/sss-003C/index.xml</html:code> (or at whatever port the current server is on).
+</html:p>
+                    <html:p>
+  We could then show in the editor if there is a build error for the tree. Is related to what language servers should do?
+</html:p>
+                  </fr:mainmatter>
+                </fr:tree>
+                <fr:tree show-metadata="true" expanded="false" toc="false" numbered="false">
+                  <fr:frontmatter>
+                    <fr:authors>
+                      <fr:author>
+                        <fr:link href="/stevenschaefer/" title="Steven Schaefer" uri="https://stevenschaefer.net/stevenschaefer/" display-uri="stevenschaefer" type="local">Steven Schaefer</fr:link>
+                      </fr:author>
+                    </fr:authors>
+                    <fr:date>
+                      <fr:year>2026</fr:year>
+                      <fr:month>2</fr:month>
+                      <fr:day>20</fr:day>
+                    </fr:date>
+                    <fr:source-path>/Users/stevenschaefer/forest/trees/sss-003B.tree</fr:source-path>
+                    <fr:uri>https://stevenschaefer.net/sss-003B/</fr:uri>
+                    <fr:display-uri>sss-003B</fr:display-uri>
+                    <fr:route>/sss-003B/</fr:route>
+                    <fr:title text="Tree Rendering in Emacs">Tree Rendering in Emacs</fr:title>
+                    <fr:taxon>TODO</fr:taxon>
+                    <fr:meta name="status">done</fr:meta>
+                  </fr:frontmatter>
+                  <fr:mainmatter>
+                    <html:p>
+  Both text-based rendering in an emacs buffer and richer rendering that emulates the full xml browser rendering.
+</html:p>
+                    <html:p>
+  If possible, we should render things like <html:code>code</html:code> and <html:em>italics</html:em> and <html:strong>bold</html:strong> text specially in the preview buffers. I'm also unsure how math mode a la <fr:tex display="inline"><![CDATA[x]]></fr:tex> ought to be rendered.
+</html:p>
+                    <fr:tex display="block"><![CDATA[e^{i \pi } + 1 = 0]]></fr:tex>
+                    <html:p>
+I'd like it if these did render the Tex.
+</html:p>
+                  </fr:mainmatter>
+                </fr:tree>
+                <fr:tree show-metadata="true" expanded="false" toc="false" numbered="false">
+                  <fr:frontmatter>
+                    <fr:authors>
+                      <fr:author>
+                        <fr:link href="/stevenschaefer/" title="Steven Schaefer" uri="https://stevenschaefer.net/stevenschaefer/" display-uri="stevenschaefer" type="local">Steven Schaefer</fr:link>
+                      </fr:author>
+                    </fr:authors>
+                    <fr:date>
+                      <fr:year>2026</fr:year>
+                      <fr:month>2</fr:month>
+                      <fr:day>20</fr:day>
+                    </fr:date>
+                    <fr:source-path>/Users/stevenschaefer/forest/trees/sss-0038.tree</fr:source-path>
+                    <fr:uri>https://stevenschaefer.net/sss-0038/</fr:uri>
+                    <fr:display-uri>sss-0038</fr:display-uri>
+                    <fr:route>/sss-0038/</fr:route>
+                    <fr:title text="Public/private split for Forkester rendering">Public/private split for Forkester rendering</fr:title>
+                    <fr:taxon>TODO</fr:taxon>
+                    <fr:meta name="status">done</fr:meta>
+                  </fr:frontmatter>
+                  <fr:mainmatter>
+                    <html:p>
+  Need to test what is actually exported.
+</html:p>
+                    <html:p>
+Ideally, I would like to flatten my trees directories so there need not be a <html:code>public.toml</html:code> and <html:code>private.toml</html:code>. Instead, the usage of tags in a single <html:code>toml</html:code> should configure what is exported. The usage here may for instance be the presence of a <html:code>public</html:code> tag, the absence of a <html:code>private</html:code> tag, or any other datalog query.
+</html:p>
+                  </fr:mainmatter>
+                </fr:tree>
+              </fr:mainmatter>
+            </fr:tree>
+          </fr:mainmatter>
+        </fr:tree>
+      </fr:mainmatter>
+    </fr:tree>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors />
+        <fr:title text="Contributions">Contributions</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter />
+    </fr:tree>
+  </fr:backmatter>
+</fr:tree>

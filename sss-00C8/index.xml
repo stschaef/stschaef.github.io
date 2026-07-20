@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="/default.xsl"?>
+<fr:tree xmlns:fr="http://www.forester-notes.org" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:xml="http://www.w3.org/XML/1998/namespace" root="false" base-url="/">
+  <fr:frontmatter>
+    <fr:authors>
+      <fr:author>
+        <fr:link href="/stevenschaefer/" title="Steven Schaefer" uri="https://stevenschaefer.net/stevenschaefer/" display-uri="stevenschaefer" type="local">Steven Schaefer</fr:link>
+      </fr:author>
+    </fr:authors>
+    <fr:date>
+      <fr:year>2026</fr:year>
+      <fr:month>5</fr:month>
+      <fr:day>29</fr:day>
+    </fr:date>
+    <fr:source-path>/Users/stevenschaefer/forest/trees/sss-00C8.tree</fr:source-path>
+    <fr:uri>https://stevenschaefer.net/sss-00C8/</fr:uri>
+    <fr:display-uri>sss-00C8</fr:display-uri>
+    <fr:route>/sss-00C8/</fr:route>
+    <fr:title text="Updating the theme — submodule workflow">Updating the theme — submodule workflow</fr:title>
+  </fr:frontmatter>
+  <fr:mainmatter>
+    <html:p>Editing the theme means editing the submodule. The flow:</html:p>
+    <html:ul><html:li><html:code>cd ~/forest/theme</html:code></html:li>
+  <html:li>Edit <html:code>style.css</html:code>, <html:code>forester-extras.js</html:code>, or whichever file</html:li>
+  <html:li><html:code>git commit</html:code> inside <html:code>theme/</html:code> (the commit lands on the <html:code>fork</html:code> remote's branch)</html:li>
+  <html:li><html:code>git push fork</html:code> to publish</html:li>
+  <html:li>Back in <html:code>~/forest</html:code>: <html:code>git add theme</html:code> then <html:code>git commit</html:code> to bump the recorded submodule SHA</html:li></html:ul>
+    <html:p>Forgetting the second commit means the forest repo still points at the old theme SHA — locally everything looks right, but other clones (and <html:code>forest-pull.service</html:code> on the home server) will check out the stale version.</html:p>
+    <html:p>For local iteration, <html:code>./server.sh</html:code> runs Forester in dev mode with <html:code>fswatch</html:code> on both <html:code>trees/</html:code> and <html:code>theme/</html:code>; CSS edits hot-rebuild without touching git at all. Only commit when the change is settled.</html:p>
+    <html:p>To pull in upstream Forester theme releases:</html:p>
+    <html:ul><html:li>Inside <html:code>theme/</html:code>: <html:code>git fetch origin</html:code></html:li>
+  <html:li><html:code>git merge &lt;upstream-tag&gt;</html:code> or rebase the Theme Studio commits onto the new tag</html:li>
+  <html:li>Expect conflicts in <html:code>style.css</html:code> and <html:code>tree.xsl</html:code> — these are the most heavily modified files</html:li>
+  <html:li><html:code>forester-extras.js</html:code> should never conflict (upstream doesn't know about it)</html:li></html:ul>
+    <html:p>The whole subsystem assumes you also have read access to <html:code>~/ocaml-forester</html:code> for reference — when an XSL change behaves unexpectedly, the upstream compiler source (<html:code>lib/frontend/Htmx_client.ml</html:code>, <html:code>lib/parser/</html:code>) is the authoritative explanation of what classes and attributes the pipeline emits.</html:p>
+  </fr:mainmatter>
+  <fr:backmatter>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors />
+        <fr:title text="References">References</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter />
+    </fr:tree>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors />
+        <fr:title text="Context">Context</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter>
+        <fr:tree show-metadata="true" expanded="false" toc="false" numbered="false">
+          <fr:frontmatter>
+            <fr:authors>
+              <fr:author>
+                <fr:link href="/stevenschaefer/" title="Steven Schaefer" uri="https://stevenschaefer.net/stevenschaefer/" display-uri="stevenschaefer" type="local">Steven Schaefer</fr:link>
+              </fr:author>
+            </fr:authors>
+            <fr:date>
+              <fr:year>2026</fr:year>
+              <fr:month>5</fr:month>
+              <fr:day>29</fr:day>
+            </fr:date>
+            <fr:source-path>/Users/stevenschaefer/forest/trees/sss-00C2.tree</fr:source-path>
+            <fr:uri>https://stevenschaefer.net/sss-00C2/</fr:uri>
+            <fr:display-uri>sss-00C2</fr:display-uri>
+            <fr:route>/sss-00C2/</fr:route>
+            <fr:title text="Theme Studio — the current forest theme">Theme Studio — the current forest theme</fr:title>
+          </fr:frontmatter>
+          <fr:mainmatter>
+            <html:p>Reference for the theme currently shipping on this forest — the <html:em>Theme Studio</html:em> redesign (April 2026). Supersedes the earlier theming note <fr:link href="/sss-0099/" title="Forest Theming Customization" uri="https://stevenschaefer.net/sss-0099/" display-uri="sss-0099" type="local">Forest Theming Customization</fr:link>, which describes the upstream base theme plus a thin Dracula overlay and is no longer accurate. Background on why theming lives in a fork at all is in <fr:link href="/sss-0036/" title="Forking Forester" uri="https://stevenschaefer.net/sss-0036/" display-uri="sss-0036" type="local">Forking Forester</fr:link>.</html:p>
+            <fr:tree show-metadata="false" expanded="false">
+              <fr:frontmatter>
+                <fr:authors>
+                  <fr:author>
+                    <fr:link href="/stevenschaefer/" title="Steven Schaefer" uri="https://stevenschaefer.net/stevenschaefer/" display-uri="stevenschaefer" type="local">Steven Schaefer</fr:link>
+                  </fr:author>
+                </fr:authors>
+                <fr:date>
+                  <fr:year>2026</fr:year>
+                  <fr:month>5</fr:month>
+                  <fr:day>29</fr:day>
+                </fr:date>
+                <fr:source-path>/Users/stevenschaefer/forest/trees/sss-00C3.tree</fr:source-path>
+                <fr:uri>https://stevenschaefer.net/sss-00C3/</fr:uri>
+                <fr:display-uri>sss-00C3</fr:display-uri>
+                <fr:route>/sss-00C3/</fr:route>
+                <fr:title text="Where the theme lives">Where the theme lives</fr:title>
+              </fr:frontmatter>
+              <fr:mainmatter>
+                <html:p>The theme is a git submodule at <html:code>~/forest/theme/</html:code>, declared in <html:code>.gitmodules</html:code>. The submodule URL points to a personal fork — <html:code>git@github.com:stschaef/forester-base-theme.git</html:code> — not the upstream Sourcehut repo. The fork tracks upstream's <html:code>4.3.0</html:code> tag as its base, with Theme Studio commits layered on top.</html:p>
+                <html:p>Inside the submodule, the live remotes are:</html:p>
+                <html:ul><html:li><html:code>origin</html:code> → <html:code>https://git.sr.ht/~jonsterling/forester-base-theme</html:code> (read-only upstream, for pulling new releases)</html:li>
+  <html:li><html:code>fork</html:code> → <html:code>git@github.com:stschaef/forester-base-theme.git</html:code> (read/write, what the submodule actually checks out)</html:li></html:ul>
+                <html:p>The forest repo records a commit SHA in the <html:code>theme</html:code> submodule; the build configs (<html:code>forest.toml</html:code>, <html:code>public.toml</html:code>) point Forester at <html:code>theme/</html:code> for XSL templates and at <html:code>theme/style.css</html:code>, <html:code>theme/forester.js</html:code>, <html:code>theme/forester-extras.js</html:code> for the bundled assets. Forester copies these into <html:code>output/</html:code> on each build.</html:p>
+                <html:p>Key files inside the submodule:</html:p>
+                <html:ul><html:li><html:code>style.css</html:code> — ~930 lines, the entire Theme Studio palette (see <fr:link href="/sss-00C4/" title="Theme Studio architecture — six themes via token overrides" uri="https://stevenschaefer.net/sss-00C4/" display-uri="sss-00C4" type="local">theme architecture</fr:link>)</html:li>
+  <html:li><html:code>style.css.upstream-bak</html:code> — preserved copy of the pre-redesign upstream CSS, kept for reference</html:li>
+  <html:li><html:code>forester-extras.js</html:code> — the <fr:link href="/sss-00C5/" title="The persistent left identity rail" uri="https://stevenschaefer.net/sss-00C5/" display-uri="sss-00C5" type="local">persistent left rail</fr:link> builder, kept separate so re-bundling <html:code>forester.js</html:code> from upstream sources doesn't clobber it</html:li>
+  <html:li><html:code>forester.js</html:code> — bundled from <html:code>javascript-source/forester.js</html:code> via <html:code>bundle-js.sh</html:code> (esbuild)</html:li>
+  <html:li><html:code>tree.xsl</html:code>, <html:code>default.xsl</html:code>, <html:code>core.xsl</html:code>, <html:code>links.xsl</html:code>, <html:code>metadata.xsl</html:code> — XSL pipeline, near-upstream</html:li>
+  <html:li><html:code>themes/dracula.css</html:code> — legacy single-overlay file from before the redesign; superseded by inline theme blocks in <html:code>style.css</html:code>, kept around but no longer wired up</html:li>
+  <html:li><html:code>fonts/</html:code> — only KaTeX fonts; body/heading fonts now come from the system stack or web fonts loaded by name (Newsreader, Jost)</html:li></html:ul>
+              </fr:mainmatter>
+            </fr:tree>
+            <fr:tree show-metadata="false" expanded="false">
+              <fr:frontmatter>
+                <fr:authors>
+                  <fr:author>
+                    <fr:link href="/stevenschaefer/" title="Steven Schaefer" uri="https://stevenschaefer.net/stevenschaefer/" display-uri="stevenschaefer" type="local">Steven Schaefer</fr:link>
+                  </fr:author>
+                </fr:authors>
+                <fr:date>
+                  <fr:year>2026</fr:year>
+                  <fr:month>5</fr:month>
+                  <fr:day>29</fr:day>
+                </fr:date>
+                <fr:source-path>/Users/stevenschaefer/forest/trees/sss-00C4.tree</fr:source-path>
+                <fr:uri>https://stevenschaefer.net/sss-00C4/</fr:uri>
+                <fr:display-uri>sss-00C4</fr:display-uri>
+                <fr:route>/sss-00C4/</fr:route>
+                <fr:title text="Theme Studio architecture — six themes via token overrides">Theme Studio architecture — six themes via token overrides</fr:title>
+              </fr:frontmatter>
+              <fr:mainmatter>
+                <html:p><html:code>style.css</html:code> defines one set of base design tokens on <html:code>:root</html:code> (colors, fonts, spacing, taxon stamp palette, TODO state colors) and six themes that override those tokens. Each theme is dispatched by <html:code><![CDATA[\meta{theme}{X}]]></html:code>, which the XSL pipeline turns into <html:code>article.theme-X</html:code>; the override block lives on <html:code>:root:has(article.theme-X)</html:code> so the tokens flow through the whole document, not just the article.</html:p>
+                <html:p>The six themes:</html:p>
+                <html:ul><html:li><html:strong>paper</html:strong> — Field Notes inspired; burnt orange · burgundy · slate blue · mustard on cream; Newsreader serif body, Jost display</html:li>
+  <html:li><html:strong>dracula</html:strong> — refined dark; the original overlay, now folded into the unified file</html:li>
+  <html:li><html:strong>academic</html:strong> — high-contrast scholarly light; Newsreader throughout, italic small-caps taxons</html:li>
+  <html:li><html:strong>solarized</html:strong> — Ethan Schoonover's warm-neutral palette</html:li>
+  <html:li><html:strong>editorial</html:strong> — Swiss / bold Helvetica with vermilion accent and heavy display sizes</html:li>
+  <html:li><html:strong>blueprint</html:strong> — ice-on-navy dark variant with a faint grid backdrop on <html:code>body</html:code></html:li></html:ul>
+                <html:p>Beyond the token block, each theme adds a small set of theme-internal flourishes via <html:code>article.theme-X</html:code> selectors — depth-cycled subtree border colors in <html:code>paper</html:code>, the grid background in <html:code>blueprint</html:code>, italic emphasis recolor in <html:code>dracula</html:code>, etc.</html:p>
+                <html:p>The default theme is <html:code>paper</html:code>, set as an XSL variable in <html:code>tree.xsl</html:code>:</html:p>
+                <html:pre><![CDATA[  <xsl:variable name="default-theme">paper</xsl:variable>]]></html:pre>
+                <html:p>When a tree omits <html:code><![CDATA[\meta{theme}]]></html:code>, the XSL falls back to this default; <html:code><![CDATA[\meta{theme}{none}]]></html:code> explicitly opts out (no theme class is emitted, base tokens win).</html:p>
+              </fr:mainmatter>
+            </fr:tree>
+            <fr:tree show-metadata="false" expanded="false">
+              <fr:frontmatter>
+                <fr:authors>
+                  <fr:author>
+                    <fr:link href="/stevenschaefer/" title="Steven Schaefer" uri="https://stevenschaefer.net/stevenschaefer/" display-uri="stevenschaefer" type="local">Steven Schaefer</fr:link>
+                  </fr:author>
+                </fr:authors>
+                <fr:date>
+                  <fr:year>2026</fr:year>
+                  <fr:month>5</fr:month>
+                  <fr:day>29</fr:day>
+                </fr:date>
+                <fr:source-path>/Users/stevenschaefer/forest/trees/sss-00C5.tree</fr:source-path>
+                <fr:uri>https://stevenschaefer.net/sss-00C5/</fr:uri>
+                <fr:display-uri>sss-00C5</fr:display-uri>
+                <fr:route>/sss-00C5/</fr:route>
+                <fr:title text="The persistent left identity rail">The persistent left identity rail</fr:title>
+              </fr:frontmatter>
+              <fr:mainmatter>
+                <html:p>The sticky left sidebar — name (link to home), email, and the page TOC — is built at runtime by <html:code>theme/forester-extras.js</html:code>. The upstream theme's top nav bar is hidden via a <html:code>display: none</html:code> rule on <html:code>header.header</html:code> in <html:code>style.css</html:code>; the JS scrapes its <html:code>Home</html:code> link before removing it and rebuilds an <html:code>&lt;aside class="site-sidebar"&gt;</html:code> as the first child of <html:code>grid-wrapper</html:code>.</html:p>
+                <html:p>Identity values are hard-coded in the JS — currently <html:code>Steven Schaefer</html:code> and <html:code>stschaef@umich.edu</html:code> in the <html:code>SITE</html:code> constant at the top of the file. Editing those is the one place to change what the rail displays.</html:p>
+                <html:p>The rail also pulls the page TOC (<html:code>navtoc</html:code>) into itself when present, separated by an <html:code>&lt;hr class="site-div"&gt;</html:code>. CSS in <html:code>style.css</html:code> sets up the grid:</html:p>
+                <html:pre><![CDATA[  @media (min-width: 1000px) {
+    #grid-wrapper {
+      display: grid;
+      grid-template-columns: var(--side-w) minmax(0, 1fr);
+    }
+  }]]></html:pre>
+                <html:p>Below 1000px the sidebar reverts to static flow above the article. <html:code>forester-extras.js</html:code> also strips the trailing period the XSL bakes onto stamped taxon and TODO-status labels (<html:code>TODO.</html:code>, <html:code>Reference.</html:code>) — subtree numbers like <html:code>1.</html:code> are left alone.</html:p>
+                <html:p>Because <html:code>forester.js</html:code> is rebundled from upstream sources via <html:code>bundle-js.sh</html:code>, the rail logic lives in its own file so upstream re-bundles don't clobber it. <html:code>tree.xsl</html:code> sources both scripts.</html:p>
+              </fr:mainmatter>
+            </fr:tree>
+            <fr:tree show-metadata="false" expanded="false">
+              <fr:frontmatter>
+                <fr:authors>
+                  <fr:author>
+                    <fr:link href="/stevenschaefer/" title="Steven Schaefer" uri="https://stevenschaefer.net/stevenschaefer/" display-uri="stevenschaefer" type="local">Steven Schaefer</fr:link>
+                  </fr:author>
+                </fr:authors>
+                <fr:date>
+                  <fr:year>2026</fr:year>
+                  <fr:month>5</fr:month>
+                  <fr:day>29</fr:day>
+                </fr:date>
+                <fr:source-path>/Users/stevenschaefer/forest/trees/sss-00C6.tree</fr:source-path>
+                <fr:uri>https://stevenschaefer.net/sss-00C6/</fr:uri>
+                <fr:display-uri>sss-00C6</fr:display-uri>
+                <fr:route>/sss-00C6/</fr:route>
+                <fr:title text="How \meta{theme} dispatch works">How <html:code><![CDATA[\meta{theme}]]></html:code> dispatch works</fr:title>
+              </fr:frontmatter>
+              <fr:mainmatter>
+                <html:p>Theme dispatch is entirely in <html:code>theme/tree.xsl</html:code>, around lines 76–87. The XSL writes a <html:code>class</html:code> attribute on <html:code>.tree-container</html:code> computed from <html:code><![CDATA[\meta{theme}{...}]]></html:code>:</html:p>
+                <html:pre><![CDATA[  <xsl:choose>
+    <xsl:when test="...meta[@name='theme'] = 'none'" />
+    <xsl:when test="...meta[@name='theme']">
+      <xsl:text> theme-</xsl:text>
+      <xsl:value-of select="...meta[@name='theme']" />
+    </xsl:when>
+    <xsl:when test="$default-theme != ''">
+      <xsl:text> theme-</xsl:text>
+      <xsl:value-of select="$default-theme" />
+    </xsl:when>
+  </xsl:choose>]]></html:pre>
+                <html:p>Three cases:</html:p>
+                <html:ul><html:li>Tree sets <html:code><![CDATA[\meta{theme}{X}]]></html:code> → emits <html:code>class="... theme-X"</html:code>, which activates the matching <html:code>:root:has(article.theme-X)</html:code> block in <html:code>style.css</html:code></html:li>
+  <html:li>Tree sets <html:code><![CDATA[\meta{theme}{none}]]></html:code> → no theme class; base <html:code>:root</html:code> tokens win (academic-light fallback)</html:li>
+  <html:li>No <html:code>theme</html:code> meta → falls through to <html:code>$default-theme</html:code> (currently <html:code>paper</html:code>)</html:li></html:ul>
+                <html:p>To add a new theme, the workflow is: pick a name, add a <html:code><![CDATA[:root:has(article.theme-<name>) { ... }]]></html:code> block in <html:code>style.css</html:code> overriding the relevant tokens, and optionally a few <html:code><![CDATA[ article.theme-<name>]]></html:code> selectors for theme-specific structural touches. No XSL or compiler change needed.</html:p>
+                <html:p>To change the site-wide default, edit the <html:code>$default-theme</html:code> variable at the top of <html:code>tree.xsl</html:code>.</html:p>
+              </fr:mainmatter>
+            </fr:tree>
+            <fr:tree show-metadata="false" expanded="false">
+              <fr:frontmatter>
+                <fr:authors>
+                  <fr:author>
+                    <fr:link href="/stevenschaefer/" title="Steven Schaefer" uri="https://stevenschaefer.net/stevenschaefer/" display-uri="stevenschaefer" type="local">Steven Schaefer</fr:link>
+                  </fr:author>
+                </fr:authors>
+                <fr:date>
+                  <fr:year>2026</fr:year>
+                  <fr:month>5</fr:month>
+                  <fr:day>29</fr:day>
+                </fr:date>
+                <fr:source-path>/Users/stevenschaefer/forest/trees/sss-00C7.tree</fr:source-path>
+                <fr:uri>https://stevenschaefer.net/sss-00C7/</fr:uri>
+                <fr:display-uri>sss-00C7</fr:display-uri>
+                <fr:route>/sss-00C7/</fr:route>
+                <fr:title text="\meta{layout} is currently a no-op"><html:code><![CDATA[\meta{layout}]]></html:code> is currently a no-op</fr:title>
+              </fr:frontmatter>
+              <fr:mainmatter>
+                <html:p>The XSL still emits <html:code>layout-X</html:code> classes on both <html:code>grid-wrapper</html:code> and <html:code>.tree-container</html:code> when a tree sets <html:code><![CDATA[\meta{layout}{X}]]></html:code> (see <html:code>tree.xsl:63-75</html:code>), but the Theme Studio <html:code>style.css</html:code> has <html:strong>zero</html:strong> <html:code>.layout-*</html:code> rules. So <html:code><![CDATA[\meta{layout}{wide}]]></html:code>, <html:code>dashboard</html:code>, <html:code>table</html:code>, <html:code>kanban</html:code> all attach a class that styles nothing.</html:p>
+                <html:p>The upstream-backup CSS (<html:code>theme/style.css.upstream-bak</html:code>) had twelve <html:code>.layout-*</html:code> rules covering <html:code>layout-wide</html:code>, <html:code>layout-table</html:code>, <html:code>layout-kanban</html:code>. None of them survived the Theme Studio rewrite. <html:code>layout-dashboard</html:code> was <html:em>never</html:em> styled even in the upstream version — the dashboard layout described in the forest <html:code>CLAUDE.md</html:code> was aspirational.</html:p>
+                <html:p>Trees that still set <html:code><![CDATA[\meta{layout}{wide}]]></html:code> (the index, dashboard, a few public refs) render exactly as if the meta were absent. Either:</html:p>
+                <html:ul><html:li>Port the relevant rules out of <html:code>style.css.upstream-bak</html:code> into <html:code>style.css</html:code>, or</html:li>
+  <html:li>Strip the now-meaningless <html:code><![CDATA[\meta{layout}]]></html:code> declarations from the trees that set them</html:li></html:ul>
+                <html:p>The CLAUDE.md doc still lists <html:code><![CDATA[\meta{layout}{wide|dashboard|table|kanban}]]></html:code> as a supported customization surface; that section needs updating in lockstep with whichever fix lands.</html:p>
+              </fr:mainmatter>
+            </fr:tree>
+            <fr:tree show-metadata="false" expanded="false">
+              <fr:frontmatter>
+                <fr:authors>
+                  <fr:author>
+                    <fr:link href="/stevenschaefer/" title="Steven Schaefer" uri="https://stevenschaefer.net/stevenschaefer/" display-uri="stevenschaefer" type="local">Steven Schaefer</fr:link>
+                  </fr:author>
+                </fr:authors>
+                <fr:date>
+                  <fr:year>2026</fr:year>
+                  <fr:month>5</fr:month>
+                  <fr:day>29</fr:day>
+                </fr:date>
+                <fr:source-path>/Users/stevenschaefer/forest/trees/sss-00C8.tree</fr:source-path>
+                <fr:uri>https://stevenschaefer.net/sss-00C8/</fr:uri>
+                <fr:display-uri>sss-00C8</fr:display-uri>
+                <fr:route>/sss-00C8/</fr:route>
+                <fr:title text="Updating the theme — submodule workflow">Updating the theme — submodule workflow</fr:title>
+              </fr:frontmatter>
+              <fr:mainmatter>
+                <html:p>Editing the theme means editing the submodule. The flow:</html:p>
+                <html:ul><html:li><html:code>cd ~/forest/theme</html:code></html:li>
+  <html:li>Edit <html:code>style.css</html:code>, <html:code>forester-extras.js</html:code>, or whichever file</html:li>
+  <html:li><html:code>git commit</html:code> inside <html:code>theme/</html:code> (the commit lands on the <html:code>fork</html:code> remote's branch)</html:li>
+  <html:li><html:code>git push fork</html:code> to publish</html:li>
+  <html:li>Back in <html:code>~/forest</html:code>: <html:code>git add theme</html:code> then <html:code>git commit</html:code> to bump the recorded submodule SHA</html:li></html:ul>
+                <html:p>Forgetting the second commit means the forest repo still points at the old theme SHA — locally everything looks right, but other clones (and <html:code>forest-pull.service</html:code> on the home server) will check out the stale version.</html:p>
+                <html:p>For local iteration, <html:code>./server.sh</html:code> runs Forester in dev mode with <html:code>fswatch</html:code> on both <html:code>trees/</html:code> and <html:code>theme/</html:code>; CSS edits hot-rebuild without touching git at all. Only commit when the change is settled.</html:p>
+                <html:p>To pull in upstream Forester theme releases:</html:p>
+                <html:ul><html:li>Inside <html:code>theme/</html:code>: <html:code>git fetch origin</html:code></html:li>
+  <html:li><html:code>git merge &lt;upstream-tag&gt;</html:code> or rebase the Theme Studio commits onto the new tag</html:li>
+  <html:li>Expect conflicts in <html:code>style.css</html:code> and <html:code>tree.xsl</html:code> — these are the most heavily modified files</html:li>
+  <html:li><html:code>forester-extras.js</html:code> should never conflict (upstream doesn't know about it)</html:li></html:ul>
+                <html:p>The whole subsystem assumes you also have read access to <html:code>~/ocaml-forester</html:code> for reference — when an XSL change behaves unexpectedly, the upstream compiler source (<html:code>lib/frontend/Htmx_client.ml</html:code>, <html:code>lib/parser/</html:code>) is the authoritative explanation of what classes and attributes the pipeline emits.</html:p>
+              </fr:mainmatter>
+            </fr:tree>
+          </fr:mainmatter>
+        </fr:tree>
+      </fr:mainmatter>
+    </fr:tree>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors />
+        <fr:title text="Backlinks">Backlinks</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter />
+    </fr:tree>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors />
+        <fr:title text="Related">Related</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter />
+    </fr:tree>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors />
+        <fr:title text="Contributions">Contributions</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter />
+    </fr:tree>
+  </fr:backmatter>
+</fr:tree>

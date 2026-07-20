@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="/default.xsl"?>
+<fr:tree xmlns:fr="http://www.forester-notes.org" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:xml="http://www.w3.org/XML/1998/namespace" root="false" base-url="/">
+  <fr:frontmatter>
+    <fr:authors>
+      <fr:author>
+        <fr:link href="/stevenschaefer/" title="Steven Schaefer" uri="https://stevenschaefer.net/stevenschaefer/" display-uri="stevenschaefer" type="local">Steven Schaefer</fr:link>
+      </fr:author>
+    </fr:authors>
+    <fr:date>
+      <fr:year>2026</fr:year>
+      <fr:month>6</fr:month>
+      <fr:day>2</fr:day>
+    </fr:date>
+    <fr:source-path>/Users/stevenschaefer/forest/trees/sss-00E4.tree</fr:source-path>
+    <fr:uri>https://stevenschaefer.net/sss-00E4/</fr:uri>
+    <fr:display-uri>sss-00E4</fr:display-uri>
+    <fr:route>/sss-00E4/</fr:route>
+    <fr:title text="Dyck derivation trees, animated">Dyck derivation trees, animated</fr:title>
+    <fr:meta name="author">false</fr:meta>
+    <fr:meta name="layout">reveal</fr:meta>
+    <fr:meta name="theme">paper</fr:meta>
+    <fr:meta name="font-size">26px</fr:meta>
+  </fr:frontmatter>
+  <fr:mainmatter>
+  <html:section>
+  
+  <html:div style="display: flex; flex-direction: column; align-items: center; justify-content: center">
+    
+  <html:span style="font-size: 2em">Dyck derivation trees</html:span>
+
+    <html:p><html:em>Generated from a real</html:em> <fr:tex display="inline"><![CDATA[\mathtt {DyckAST}]]></fr:tex> <html:em>term, not hand-drawn.</html:em></html:p>
+    <html:p><html:span style="font-size: 0.75em"><fr:tex display="inline"><![CDATA[\mathtt {mt} : \mathtt {DyckAST}]]></fr:tex> \quad 
+       <fr:tex display="inline"><![CDATA[\mathtt {bal} : \mathtt {DyckAST} \to  \mathtt {DyckAST} \to  \mathtt {DyckAST}]]></fr:tex>
+       \quad  term: <fr:tex display="inline"><![CDATA[\mathtt {bal}\;\mathtt {mt}\;\lparen \mathtt {bal}\;\lparen 
+       \mathtt {bal}\;\mathtt {mt}\;\mathtt {mt}\rparen \;\mathtt {mt}\rparen ]]></fr:tex></html:span></html:p>
+  </html:div>
+
+</html:section>
+
+  <html:section>
+  
+  <html:div style="text-align: center"><html:p><html:strong>As an inference-rule derivation</html:strong></html:p> 
+  <html:span style="font-size: 0.75em">(grows bottom-up)</html:span>
+</html:div>
+
+  
+  <html:div class="dtree" data-mode="inf" data-loop="true">
+    <html:script type="application/json" class="dt-spec"><![CDATA[{"rule":"bal","concl":"()(()) : Dyck","kids":[{"tok":"("},{"rule":"nil","concl":"ε : Dyck","kids":[]},{"tok":")"},{"rule":"bal","concl":"(()) : Dyck","kids":[{"tok":"("},{"rule":"bal","concl":"() : Dyck","kids":[{"tok":"("},{"rule":"nil","concl":"ε : Dyck","kids":[]},{"tok":")"},{"rule":"nil","concl":"ε : Dyck","kids":[]}]},{"tok":")"},{"rule":"nil","concl":"ε : Dyck","kids":[]}]}]}]]></html:script>
+  </html:div>
+
+</html:section>
+
+  <html:section>
+  
+  <html:div style="text-align: center"><html:p><html:strong>The same term as a parse tree</html:strong></html:p> 
+  <html:span style="font-size: 0.75em">(grows top-down)</html:span>
+</html:div>
+
+  
+  <html:div class="dtree" data-mode="parse" data-loop="true">
+    <html:script type="application/json" class="dt-spec"><![CDATA[{"rule":"bal","concl":"()(()) : Dyck","kids":[{"tok":"("},{"rule":"nil","concl":"ε : Dyck","kids":[]},{"tok":")"},{"rule":"bal","concl":"(()) : Dyck","kids":[{"tok":"("},{"rule":"bal","concl":"() : Dyck","kids":[{"tok":"("},{"rule":"nil","concl":"ε : Dyck","kids":[]},{"tok":")"},{"rule":"nil","concl":"ε : Dyck","kids":[]}]},{"tok":")"},{"rule":"nil","concl":"ε : Dyck","kids":[]}]}]}]]></html:script>
+  </html:div>
+
+</html:section>
+
+  <html:section>
+  
+  <html:div style="display: flex; flex-direction: column; align-items: center; justify-content: center">
+    <html:p><html:span style="font-size: 1.4em">No fake inductive type.</html:span></html:p>
+    <html:p>The JSON above is the output of <html:code>toSpec : DyckAST -&gt; String</html:code> ---
+       a fold over the <html:em>real</html:em> inductive parse-tree type in
+       <html:code><![CDATA[ Examples.Benchmark.Dyck]]></html:code>. A parse produces a
+       <fr:tex display="inline"><![CDATA[\mathtt {DyckAST}]]></fr:tex> via <html:code>abstractify</html:code>; <html:code>toSpec</html:code> folds it to this
+       spec; the renderer is two more folds (parse view / inference view).</html:p>
+    <html:p><html:span style="font-size: 0.75em">Regenerate: <html:code>C-c C-n</html:code> on <html:code>exampleJSON</html:code> in
+       <html:code><![CDATA[ Examples.Generic.DyckSpec]]></html:code>.</html:span></html:p>
+  </html:div>
+
+</html:section>
+</fr:mainmatter>
+  <fr:backmatter>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors />
+        <fr:title text="References">References</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter />
+    </fr:tree>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors />
+        <fr:title text="Context">Context</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter />
+    </fr:tree>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors />
+        <fr:title text="Backlinks">Backlinks</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter />
+    </fr:tree>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors />
+        <fr:title text="Related">Related</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter />
+    </fr:tree>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors />
+        <fr:title text="Contributions">Contributions</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter />
+    </fr:tree>
+  </fr:backmatter>
+</fr:tree>

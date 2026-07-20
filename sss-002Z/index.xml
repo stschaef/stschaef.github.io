@@ -1,0 +1,452 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="/default.xsl"?>
+<fr:tree xmlns:fr="http://www.forester-notes.org" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:xml="http://www.w3.org/XML/1998/namespace" root="false" base-url="/">
+  <fr:frontmatter>
+    <fr:authors>
+      <fr:author>
+        <fr:link href="/stevenschaefer/" title="Steven Schaefer" uri="https://stevenschaefer.net/stevenschaefer/" display-uri="stevenschaefer" type="local">Steven Schaefer</fr:link>
+      </fr:author>
+    </fr:authors>
+    <fr:date>
+      <fr:year>2025</fr:year>
+      <fr:month>8</fr:month>
+      <fr:day>25</fr:day>
+    </fr:date>
+    <fr:uri>https://stevenschaefer.net/sss-002Z/</fr:uri>
+    <fr:display-uri>sss-002Z</fr:display-uri>
+    <fr:route>/sss-002Z/</fr:route>
+    <fr:title text="Universal Element of a Presheaf">Universal Element of a Presheaf</fr:title>
+    <fr:taxon>Definition</fr:taxon>
+  </fr:frontmatter>
+  <fr:mainmatter>
+    <html:p>A <html:em>universal element</html:em> of a presheaf <fr:tex display="inline"><![CDATA[P]]></fr:tex> on a category <fr:tex display="inline"><![CDATA[C]]></fr:tex> is an <fr:link href="/sss-0030/" title="Element of a Presheaf" uri="https://stevenschaefer.net/sss-0030/" display-uri="sss-0030" type="local">element</fr:link> <fr:tex display="inline"><![CDATA[x \in  P c]]></fr:tex>, where <fr:tex display="inline"><![CDATA[c]]></fr:tex> is some object of <fr:tex display="inline"><![CDATA[C]]></fr:tex>, demonstrating that <fr:tex display="inline"><![CDATA[P]]></fr:tex> is representable by <fr:tex display="inline"><![CDATA[c]]></fr:tex>.</html:p>
+    <fr:tex display="block"><![CDATA[P \cong  よ c]]></fr:tex>
+    <html:p>(Slightly) more concretely, a universal element is captured by the following three pieces of data
+  <html:ul><html:li>An object <fr:tex display="inline"><![CDATA[c]]></fr:tex> of <fr:tex display="inline"><![CDATA[C]]></fr:tex></html:li>
+     <html:li>An element <fr:tex display="inline"><![CDATA[x \in  P c]]></fr:tex></html:li>
+     <html:li>A proof that the map sending a morphism <fr:tex display="inline"><![CDATA[f : b \to  c]]></fr:tex> to <fr:tex display="inline"><![CDATA[(Pf)(x)]]></fr:tex> is an equivalence</html:li></html:ul>
+
+  This third point states that morphisms from <fr:tex display="inline"><![CDATA[b]]></fr:tex> into <fr:tex display="inline"><![CDATA[c]]></fr:tex> are uniquely determined by an element of <fr:tex display="inline"><![CDATA[P]]></fr:tex> at the domain <fr:tex display="inline"><![CDATA[b]]></fr:tex>.
+</html:p>
+    <html:p>Or equivalently, universal elements are terminal in the category of elements.</html:p>
+  </fr:mainmatter>
+  <fr:backmatter>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors />
+        <fr:title text="References">References</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter />
+    </fr:tree>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors />
+        <fr:title text="Context">Context</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter />
+    </fr:tree>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors />
+        <fr:title text="Backlinks">Backlinks</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter>
+        <fr:tree show-metadata="true" expanded="false" toc="false" numbered="false">
+          <fr:frontmatter>
+            <fr:authors>
+              <fr:author>
+                <fr:link href="/stevenschaefer/" title="Steven Schaefer" uri="https://stevenschaefer.net/stevenschaefer/" display-uri="stevenschaefer" type="local">Steven Schaefer</fr:link>
+              </fr:author>
+            </fr:authors>
+            <fr:date>
+              <fr:year>2025</fr:year>
+              <fr:month>8</fr:month>
+              <fr:day>25</fr:day>
+            </fr:date>
+            <fr:uri>https://stevenschaefer.net/sss-002Y/</fr:uri>
+            <fr:display-uri>sss-002Y</fr:display-uri>
+            <fr:route>/sss-002Y/</fr:route>
+            <fr:title text="What is a universal property, really?">What is a universal property, really?</fr:title>
+          </fr:frontmatter>
+          <fr:mainmatter>
+            <html:p>
+Universal properties are a convenient method for defining an object in a category up to isomorphism. Rather than giving a concrete, bottom-up construction of an object, we can instead uniquely specify its behavior.
+</html:p>
+            <html:p>
+Consider the example of products in a category <fr:tex display="inline"><![CDATA[C]]></fr:tex>. We say that <html:em>the product</html:em> of <fr:tex display="inline"><![CDATA[c]]></fr:tex> and <fr:tex display="inline"><![CDATA[d]]></fr:tex> is any object <fr:tex display="inline"><![CDATA[p]]></fr:tex> of <fr:tex display="inline"><![CDATA[C]]></fr:tex> such that the following diagram commutes.
+
+
+ 
+  
+  <html:figure><fr:resource hash="7f26162765321bee0c780abc50e44698"><fr:resource-content><html:img src="/7f26162765321bee0c780abc50e44698.svg" /></fr:resource-content><fr:resource-source type="latex" part="preamble"><![CDATA[
+   
+  \RequirePackage{tikz}
+ \RequirePackage{amsmath}
+ \usetikzlibrary{backgrounds, intersections, calc, spath3, fit}
+ \definecolor{catccolor}{RGB}{255,244,138}
+ \tikzstyle{dot}=[circle, draw=black, fill=black, minimum size=1mm, inner sep=0mm]
+ \tikzstyle{catc}=[catccolor!60]
+ \tikzstyle{catd}=[orange!40]
+ \tikzstyle{cate}=[red!40]
+ \tikzstyle{catf}=[blue!10]
+ \tikzstyle{catg}=[green!25]
+
+
+ \tikzstyle{blue halo}=[fill=blue!10, opacity=0.7, rounded corners]
+ \tikzstyle{white halo}=[fill=white, opacity=0.7, rounded corners]
+
+ \NewDocumentCommand\CreateRect{D<>{} m m}{
+   \path
+     coordinate (#1nw)
+     ++(#2,-#3) coordinate (#1se)
+     coordinate (#1sw) at (#1se -| #1nw)
+     coordinate (#1ne) at (#1nw -| #1se)
+   ;
+
+   \path[spath/save = #1north] (#1nw) to (#1ne);
+   \path[spath/save = #1west] (#1nw) to (#1sw);
+   \path[spath/save = #1east] (#1ne) to (#1se);
+   \path[spath/save = #1south] (#1sw) to (#1se);
+ }
+
+   
+  \usepackage{tikz, tikz-cd, mathtools, amssymb, stmaryrd}
+ \usetikzlibrary{matrix,arrows}
+ \usetikzlibrary{backgrounds,fit,positioning,calc,shapes}
+ \usetikzlibrary{decorations.pathreplacing}
+ \usetikzlibrary{decorations.pathmorphing}
+ \usetikzlibrary{decorations.markings}
+
+ \tikzset{
+   desc/.style={sloped, fill=white,inner sep=2pt},
+   upright desc/.style={fill=white,inner sep=2pt},
+   pullback/.style = {
+     append after command={
+       \pgfextra{
+         \draw ($(\tikzlastnode) + (.2cm,-.5cm)$) -- ++(0.3cm,0) -- ++(0,0.3cm);
+       }
+     }
+   },
+   pullback 45/.style = {
+     append after command={
+       \pgfextra{
+         \draw[rotate = 45] ($(\tikzlastnode) + (.2cm,-.5cm)$) -- ++(0.3cm,0) -- ++(0,0.3cm);
+       }
+     }
+   },
+   ne pullback/.style = {
+     append after command={
+       \pgfextra{
+         \draw ($(\tikzlastnode) + (-.2cm,-.5cm)$) -- ++(-0.3cm,0) -- ++(0,0.3cm);
+       }
+     }
+   },
+   sw pullback/.style = {
+     append after command={
+       \pgfextra{
+         \draw ($(\tikzlastnode) + (.2cm,.5cm)$) -- ++(0.3cm,0) -- ++(0,-0.3cm);
+       }
+     }
+   },
+   dotted pullback/.style = {
+     append after command={
+       \pgfextra{
+         \draw [densely dotted] ($(\tikzlastnode) + (.2cm,-.5cm)$) -- ++(0.3cm,0) -- ++(0,0.3cm);
+       }
+     }
+   },
+   muted pullback/.style = {
+     append after command={
+       \pgfextra{
+         \draw [gray] ($(\tikzlastnode) + (.2cm,-.5cm)$) -- ++(0.3cm,0) -- ++(0,0.3cm);
+       }
+     }
+   },
+   pushout/.style = {
+     append after command={
+       \pgfextra{
+         \draw ($(\tikzlastnode) + (-.2cm,.5cm)$) -- ++(-0.3cm,0) -- ++(0,-0.3cm);
+       }
+     }
+   },
+   between/.style args={#1 and #2}{
+     at = ($(#1)!0.5!(#2)$)
+   },
+   diagram/.style = {
+     on grid,
+     node distance=2cm,
+     commutative diagrams/every diagram,
+     line width = .5pt,
+     every node/.append style = {
+       commutative diagrams/every cell,
+     }
+   },
+   fibration/.style = {
+     -{Triangle[open]}
+   },
+   etale/.style = {
+     -{Triangle[open]}
+   },
+   etale cover/.style= {
+     >={Triangle[open]},->.>
+   },
+   opfibration/.style = {
+     -{Triangle}
+   },
+   lies over/.style = {
+     |-{Triangle[open]}
+   },
+   op lies over/.style = {
+     |-{Triangle}
+   },
+   embedding/.style = {
+     {right hook}->
+   },
+   open immersion/.style = {
+     {right hook}-{Triangle[open]}
+   },
+   closed immersion/.style = {
+     {right hook}-{Triangle}
+   },
+   closed immersion*/.style = {
+     {left hook}-{Triangle}
+   },
+   embedding*/.style = {
+     {left hook}->
+   },
+   open immersion*/.style = {
+     {left hook}-{Triangle[open]}
+   },
+   exists/.style = {
+     densely dashed
+   },
+ }
+
+ \newlength{\dontworryaboutit}
+
+ \tikzset{
+   inline diagram/.style = {
+     commutative diagrams/every diagram,
+     commutative diagrams/cramped,
+     line width = .5pt,
+     every node/.append style = {
+       commutative diagrams/every cell,
+       anchor = base,
+       inner sep = 0pt
+     },
+     every path/.append style = {
+       outer xsep = 2pt
+     }
+   }
+ }
+
+ \tikzset{
+   square/nw/.style = {},
+   square/ne/.style = {},
+   square/se/.style = {},
+   square/sw/.style = {},
+   square/north/.style = {->},
+   square/south/.style = {->},
+   square/west/.style = {->},
+   square/east/.style = {->},
+   square/north/node/.style = {above},
+   square/south/node/.style = {below},
+   square/west/node/.style = {left},
+   square/east/node/.style = {right},
+ }
+
+ \ExplSyntaxOn
+
+ \bool_new:N \l_jon_glue_west
+
+ \keys_define:nn { jon-tikz/diagram } {
+   nw .tl_set:N = \l_jon_tikz_diagram_nw,
+   sw .tl_set:N = \l_jon_tikz_diagram_sw,
+   ne .tl_set:N = \l_jon_tikz_diagram_ne,
+   se .tl_set:N = \l_jon_tikz_diagram_se,
+
+   width .tl_set:N = \l_jon_tikz_diagram_width,
+   height .tl_set:N = \l_jon_tikz_diagram_height,
+
+   north .tl_set:N = \l_jon_tikz_diagram_north,
+   south .tl_set:N = \l_jon_tikz_diagram_south,
+   west .tl_set:N = \l_jon_tikz_diagram_west,
+   east .tl_set:N = \l_jon_tikz_diagram_east,
+
+   nw/style .code:n = {\tikzset{square/nw/.style = {#1}}},
+   sw/style .code:n = {\tikzset{square/sw/.style = {#1}}},
+   ne/style .code:n = {\tikzset{square/ne/.style = {#1}}},
+   se/style .code:n = {\tikzset{square/se/.style = {#1}}},
+
+   glue .choice:,
+   glue / west .code:n = {\bool_set:Nn \l_jon_glue_west \c_true_bool},
+
+   glue~target .tl_set:N = \l_jon_tikz_glue_target,
+
+   north/style .code:n = {\tikzset{square/north/.style = {#1}}},
+   north/node/style .code:n = {\tikzset{square/north/node/.style = {#1}}},
+   south/style .code:n = {\tikzset{square/south/.style = {#1}}},
+   south/node/style .code:n = {\tikzset{square/south/node/.style = {#1}}},
+   west/style .code:n = {\tikzset{square/west/.style = {#1}}},
+   west/node/style .code:n = {\tikzset{square/west/node/.style = {#1}}},
+   east/style .code:n = {\tikzset{square/east/.style = {#1}}},
+   east/node/style .code:n = {\tikzset{square/east/node/.style = {#1}}},
+
+   draft .meta:n = {
+     nw = {\__jon_tikz_diagram_fmt_placeholder:n {nw}},
+     sw = {\__jon_tikz_diagram_fmt_placeholder:n {sw}},
+     se = {\__jon_tikz_diagram_fmt_placeholder:n {se}},
+     ne = {\__jon_tikz_diagram_fmt_placeholder:n {ne}},
+     north = {\__jon_tikz_diagram_fmt_placeholder:n {north}},
+     south = {\__jon_tikz_diagram_fmt_placeholder:n {south}},
+     west = {\__jon_tikz_diagram_fmt_placeholder:n {west}},
+     east = {\__jon_tikz_diagram_fmt_placeholder:n {east}},
+   }
+ }
+
+ \tl_set:Nn \l_jon_tikz_diagram_width { 2cm }
+ \tl_set:Nn \l_jon_tikz_diagram_height { 2cm }
+
+
+ \cs_new:Npn \__jon_tikz_diagram_fmt_placeholder:n #1 {
+   \texttt{\textcolor{red}{#1}}
+ }
+
+ \keys_set:nn { jon-tikz/diagram } {
+   glue~target = {},
+ }
+
+
+ \cs_new:Nn \__jon_tikz_render_square:nn {
+   \group_begin:
+   \keys_set:nn {jon-tikz/diagram} {#2}
+   \bool_if:nTF \l_jon_glue_west {
+     \node (#1ne) [right = \l_jon_tikz_diagram_width~of~\l_jon_tikz_glue_target ne,square/ne] {$\l_jon_tikz_diagram_ne$};
+     \node (#1se) [below = \l_jon_tikz_diagram_height~of~#1ne,square/se] {$\l_jon_tikz_diagram_se$};
+     \draw[square/north] (\l_jon_tikz_glue_target ne) to node [square/north/node] {$\l_jon_tikz_diagram_north$} (#1ne);
+     \draw[square/east] (#1ne) to node [square/east/node] {$\l_jon_tikz_diagram_east$} (#1se);
+     \draw[square/south] (\l_jon_tikz_glue_target se) to node [square/south/node] {$\l_jon_tikz_diagram_south$} (#1se);
+   } {
+     \node (#1nw) [square/nw] {$\l_jon_tikz_diagram_nw$};
+     \node (#1sw) [below = \l_jon_tikz_diagram_height~of~#1nw,square/sw] {$\l_jon_tikz_diagram_sw$};
+     \draw[square/west] (#1nw) to node [square/west/node] {$\l_jon_tikz_diagram_west$} (#1sw);
+
+     \node (#1ne) [right = \l_jon_tikz_diagram_width~of~#1nw,square/ne] {$\l_jon_tikz_diagram_ne$};
+     \node (#1se) [below = \l_jon_tikz_diagram_height~of~#1ne,square/se] {$\l_jon_tikz_diagram_se$};
+     \draw[square/north] (#1nw) to node [square/north/node] {$\l_jon_tikz_diagram_north$} (#1ne);
+     \draw[square/east] (#1ne) to node [square/east/node] {$\l_jon_tikz_diagram_east$} (#1se);
+     \draw[square/south] (#1sw) to node [square/south/node] {$\l_jon_tikz_diagram_south$} (#1se);
+   }
+   \group_end:
+ }
+
+ \NewDocumentCommand\SpliceDiagramSquare{D<>{}m}{
+   \__jon_tikz_render_square:nn {#1} {#2}
+ }
+
+
+ \NewDocumentCommand\DiagramSquare{D<>{}O{}m}{
+   \begin{tikzpicture}[diagram,#2,baseline=(#1sw.base)]
+     \__jon_tikz_render_square:nn {#1} {#3}
+   \end{tikzpicture}
+ }
+
+ \ExplSyntaxOff
+
+  ]]></fr:resource-source><fr:resource-source type="latex" part="body"><![CDATA[\begin{tikzpicture}[
+    node distance=2cm,
+    >={Stealth[length=3mm]},
+    every node/.style={minimum size=8mm}
+]
+
+% Nodes
+\node (product) at (0,2) {$p$};
+\node (A) at (-2,0) {$c$};
+\node (B) at (2,0) {$d$};
+\node (C) at (0,4) {$b$};
+
+% Projection arrows
+\draw[->] (product) -- (A) node[midway, yshift=-0.2cm, xshift=0.2cm] {$\pi_1$};
+\draw[->] (product) -- (B) node[midway, yshift=-0.2cm, xshift=-0.2cm] {$\pi_2$};
+
+% Universal property arrows (dashed for the unique morphism)
+\draw[->, bend left] (C) -- (A) node[midway, left] {$f_1$};
+\draw[->, bend right] (C) -- (B) node[midway, right] {$f_2$};
+\draw[->, dashed] (C) -- (product) node[midway, xshift= 0.2cm] {$\exists !$};
+
+\end{tikzpicture}{}]]></fr:resource-source></fr:resource></html:figure>
+ 
+
+
+We say that <fr:tex display="inline"><![CDATA[p]]></fr:tex> satisfies the universal property of the product of <fr:tex display="inline"><![CDATA[c]]></fr:tex> and <fr:tex display="inline"><![CDATA[d]]></fr:tex>.
+</html:p>
+            <html:p>
+Surely this matches our set-based intuition of what a product should behave like. Similarly, we can sketch out constructions of other universal properties like initial objects, terminal objects, exponentials, etc. However, what is precisely meant by the term <html:em>universal property</html:em>?
+</html:p>
+            <html:p>
+The notion of a universal property is made precise by the notion of a <fr:link href="/sss-002Z/" title="Universal Element of a Presheaf" uri="https://stevenschaefer.net/sss-002Z/" display-uri="sss-002Z" type="local">universal element of a presheaf</fr:link>. That is, an object satisfies a universal property if we can build a universal element of the appropriate presheaf at that object.
+</html:p>
+            <html:p>
+Let's look at the universal element characterization of the products example. Note that a map into a product is determined by a map into each component. To map into <fr:tex display="inline"><![CDATA[c \times  d]]></fr:tex>, we need both a map into <fr:tex display="inline"><![CDATA[c]]></fr:tex> and a map into <fr:tex display="inline"><![CDATA[d]]></fr:tex>, as in the above diagram. That is, to build a map <fr:tex display="inline"><![CDATA[b \to  c \times  d]]></fr:tex>, we must simultaneously provide elements of <fr:tex display="inline"><![CDATA[よ c]]></fr:tex> and <fr:tex display="inline"><![CDATA[よ d]]></fr:tex> at <fr:tex display="inline"><![CDATA[b]]></fr:tex>.
+</html:p>
+            <html:p>
+  Using the product of presheaves, this means we are providing a single element of the presheaf <fr:tex display="inline"><![CDATA[(よ c) \times  (よ d)]]></fr:tex>. Quite nicely, the universal element of this presheaf provides the object of <fr:tex display="inline"><![CDATA[C]]></fr:tex> that is <html:em>the product</html:em> of <fr:tex display="inline"><![CDATA[c]]></fr:tex> and <fr:tex display="inline"><![CDATA[d]]></fr:tex>. The universal element, provided that it exists, contains the following data:
+<html:ul><html:li>An object <fr:tex display="inline"><![CDATA[p]]></fr:tex></html:li>
+  <html:li>An element <fr:tex display="inline"><![CDATA[x \in  (よ c \times  よ d) p]]></fr:tex></html:li>
+  <html:li>A proof that the map sending <fr:tex display="inline"><![CDATA[f : b \to  p]]></fr:tex> to a pair of maps <fr:tex display="inline"><![CDATA[f_1 : b \to  c]]></fr:tex>, <fr:tex display="inline"><![CDATA[f_2 : b \to  d]]></fr:tex> is an equivlance. Therefore, any element of <fr:tex display="inline"><![CDATA[よ c \times  よ d]]></fr:tex> factors through <fr:tex display="inline"><![CDATA[x]]></fr:tex></html:li></html:ul>
+
+Recall that the product of presheaves is computed pointwise in the category of sets, so if we expand the type of the element <fr:tex display="inline"><![CDATA[x]]></fr:tex> above we find that <fr:tex display="inline"><![CDATA[x]]></fr:tex> is a pair of maps <fr:tex display="inline"><![CDATA[p \to  c]]></fr:tex> and <fr:tex display="inline"><![CDATA[p \to  d]]></fr:tex>.
+
+<fr:tex display="block"><![CDATA[(よ c \times  よ d) p \cong  (よ c p) \times  (よ d p)]]></fr:tex>
+
+The first part of this pair is precisely <fr:tex display="inline"><![CDATA[\pi _1]]></fr:tex>. Correspondingly, the second part of this pair is <fr:tex display="inline"><![CDATA[\pi _2]]></fr:tex>. Finally, the universality of the element <fr:tex display="inline"><![CDATA[x]]></fr:tex> (i.e. the proof that any other element factors through <fr:tex display="inline"><![CDATA[x]]></fr:tex>) captures our commutative diagram from above.
+</html:p>
+            <html:p>
+This is a very rough sketch of what a universal property is, and has elided for now an important application of the Yoneda lemma. In any cases, all a univeral property is really saying is that a particular presheaf is representable; and, rather elegantly, a universal element of a presheaf is convenient packaging of that representability proof.
+</html:p>
+            <html:p>
+In summary, <html:em>universal properties</html:em> are not as ad-hoc as they may initially seem, and the language of presheaves provides a reusable and precise definition that can be instantiated to describe a very large class of properties.
+</html:p>
+          </fr:mainmatter>
+        </fr:tree>
+      </fr:mainmatter>
+    </fr:tree>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors />
+        <fr:title text="Related">Related</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter>
+        <fr:tree show-metadata="true" expanded="false" toc="false" numbered="false">
+          <fr:frontmatter>
+            <fr:authors>
+              <fr:author>
+                <fr:link href="/stevenschaefer/" title="Steven Schaefer" uri="https://stevenschaefer.net/stevenschaefer/" display-uri="stevenschaefer" type="local">Steven Schaefer</fr:link>
+              </fr:author>
+            </fr:authors>
+            <fr:date>
+              <fr:year>2025</fr:year>
+              <fr:month>8</fr:month>
+              <fr:day>25</fr:day>
+            </fr:date>
+            <fr:uri>https://stevenschaefer.net/sss-0030/</fr:uri>
+            <fr:display-uri>sss-0030</fr:display-uri>
+            <fr:route>/sss-0030/</fr:route>
+            <fr:title text="Element of a Presheaf">Element of a Presheaf</fr:title>
+            <fr:taxon>Definition</fr:taxon>
+          </fr:frontmatter>
+          <fr:mainmatter>
+            <html:p>An <html:em>element of a presheaf</html:em> <fr:tex display="inline"><![CDATA[P]]></fr:tex> at an object <fr:tex display="inline"><![CDATA[c]]></fr:tex> is an element <fr:tex display="inline"><![CDATA[x]]></fr:tex> of the set <fr:tex display="inline"><![CDATA[P c]]></fr:tex>.</html:p>
+          </fr:mainmatter>
+        </fr:tree>
+      </fr:mainmatter>
+    </fr:tree>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors />
+        <fr:title text="Contributions">Contributions</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter />
+    </fr:tree>
+  </fr:backmatter>
+</fr:tree>

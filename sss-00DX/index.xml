@@ -1,0 +1,813 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="/default.xsl"?>
+<fr:tree xmlns:fr="http://www.forester-notes.org" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:xml="http://www.w3.org/XML/1998/namespace" root="false" base-url="/">
+  <fr:frontmatter>
+    <fr:authors>
+      <fr:author>
+        <fr:link href="/stevenschaefer/" title="Steven Schaefer" uri="https://stevenschaefer.net/stevenschaefer/" display-uri="stevenschaefer" type="local">Steven Schaefer</fr:link>
+      </fr:author>
+    </fr:authors>
+    <fr:date>
+      <fr:year>2026</fr:year>
+      <fr:month>6</fr:month>
+      <fr:day>2</fr:day>
+    </fr:date>
+    <fr:source-path>/Users/stevenschaefer/forest/trees/sss-00DX.tree</fr:source-path>
+    <fr:uri>https://stevenschaefer.net/sss-00DX/</fr:uri>
+    <fr:display-uri>sss-00DX</fr:display-uri>
+    <fr:route>/sss-00DX/</fr:route>
+    <fr:title text="The animation category (a monad in spans is a category)">The animation category (a monad in spans is a category)</fr:title>
+  </fr:frontmatter>
+  <fr:mainmatter>
+    <html:p>You wondered whether an animation should be "a monad," "an object in a category,"
+or "a whole category." These are the same guess, and pinning it down gives the type
+of the spec that <fr:link href="/sss-00DW/" title="Agda integration: three pipelines from proof to animation" uri="https://stevenschaefer.net/sss-00DW/" display-uri="sss-00DW" type="local">the Agda pipelines</fr:link> produce.</html:p>
+    <html:p><html:strong>Animations form a category.</html:strong> Take an animation type indexed by its
+endpoints, <fr:tex display="inline"><![CDATA[\mathsf {Anim} : \mathsf {Scene} \to  \mathsf {Scene} \to  \mathsf {Type}]]></fr:tex>,
+with <fr:tex display="inline"><![CDATA[\mathsf {id} : \mathsf {Anim}\, s\, s]]></fr:tex> (the still/hold) and composition
+<fr:tex display="inline"><![CDATA[\mathsf {Anim}\, a\, b \to  \mathsf {Anim}\, b\, c \to  \mathsf {Anim}\, a\, c]]></fr:tex>
+("play, then play"). That is exactly a category: objects are scenes, morphisms are
+animations. A reduction step <html:em>inhabits</html:em> it directly as a generator.</html:p>
+    <html:p><html:strong>It is monoidal.</html:strong> Add <fr:tex display="inline"><![CDATA[\otimes ]]></fr:tex> = play two animations in parallel /
+place two scenes side by side. Now compound animations are described by <html:em>string
+diagrams of animations</html:em> --- sequential <fr:tex display="inline"><![CDATA[\circ ]]></fr:tex> and parallel <fr:tex display="inline"><![CDATA[\otimes ]]></fr:tex>.</html:p>
+    <html:p><html:strong>Why "monad" was also right.</html:strong> A monad in the bicategory of spans <html:em>is</html:em> a
+category: an indexed family <fr:tex display="inline"><![CDATA[M : \mathsf {Scene} \to  \mathsf {Scene} \to 
+\mathsf {Type}]]></fr:tex> with a unit <fr:tex display="inline"><![CDATA[\mathsf {id} : M\, s\, s]]></fr:tex> and a multiplication
+<fr:tex display="inline"><![CDATA[M\, a\, b \to  M\, b\, c \to  M\, a\, c]]></fr:tex> is a category presented as a monad. So "the
+animation monad" and "the animation category" are one object, two views.</html:p>
+    <html:p><html:strong>Free-monad presentation (for authoring).</html:strong> For writing animations by hand,
+take the free monad over an edit-functor with operations <fr:tex display="inline"><![CDATA[\mathsf {highlight}]]></fr:tex>,
+<fr:tex display="inline"><![CDATA[\mathsf {rewrite}]]></fr:tex>, <fr:tex display="inline"><![CDATA[\mathsf {wait}]]></fr:tex>, <fr:tex display="inline"><![CDATA[\mathsf {paste}]]></fr:tex>, ... This gives
+do-notation in Agda and an <html:em>inspectable</html:em> term that an interpreter folds into the
+keyframe spec --- precisely the "monad that generates a description input to an
+animation."</html:p>
+    <html:p>The indexed/typed presentation keeps endpoints honest (an animation knows its
+before and after); the free-monad presentation is ergonomic. They interconvert: the
+free monad's terms are morphisms of the category. Which to expose to authors is an
+API choice, not a foundational one.</html:p>
+  </fr:mainmatter>
+  <fr:backmatter>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors />
+        <fr:title text="References">References</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter />
+    </fr:tree>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors />
+        <fr:title text="Context">Context</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter>
+        <fr:tree show-metadata="true" expanded="false" toc="false" numbered="false">
+          <fr:frontmatter>
+            <fr:authors>
+              <fr:author>
+                <fr:link href="/stevenschaefer/" title="Steven Schaefer" uri="https://stevenschaefer.net/stevenschaefer/" display-uri="stevenschaefer" type="local">Steven Schaefer</fr:link>
+              </fr:author>
+            </fr:authors>
+            <fr:date>
+              <fr:year>2026</fr:year>
+              <fr:month>6</fr:month>
+              <fr:day>2</fr:day>
+            </fr:date>
+            <fr:source-path>/Users/stevenschaefer/forest/trees/sss-00DU.tree</fr:source-path>
+            <fr:uri>https://stevenschaefer.net/sss-00DU/</fr:uri>
+            <fr:display-uri>sss-00DU</fr:display-uri>
+            <fr:route>/sss-00DU/</fr:route>
+            <fr:title text="Beyond parity: structure-driven animation">Beyond parity: structure-driven animation</fr:title>
+          </fr:frontmatter>
+          <fr:mainmatter>
+            <html:p>The <fr:link href="/sss-00DO/" title="Manim-style mathematical animations in Forester" uri="https://stevenschaefer.net/sss-00DO/" display-uri="sss-00DO" type="local">main animation doc</fr:link> stops at Manim <html:em>parity</html:em>. This axis goes
+past it: animating the structured objects of category theory and type theory ---
+typing derivations, proof trees, commutative diagrams, string diagrams,
+step-by-step term reduction --- which Manim handles poorly precisely because its
+primitives are geometric, not structural.</html:p>
+            <html:p><html:strong>The reframe.</html:strong> Manim's primitives are <html:code>Mobjects</html:code> at absolute
+coordinates: a commutative square is four hand-placed nodes and four hand-placed
+arrows, with no "square" as an object --- only its picture. Every object we care
+about is instead <html:em>combinatorial</html:em>: a tree of rules, a functor from a free
+category, a morphism in a monoidal category, an AST plus a rewrite. See
+<fr:link href="/sss-00DV/" title="The object zoo: structures and their signature animations" uri="https://stevenschaefer.net/sss-00DV/" display-uri="sss-00DV" type="local">the object zoo</fr:link>.</html:p>
+            <html:p><html:strong>Layout is a functor.</html:strong> Write <fr:tex display="inline"><![CDATA[\mathsf {Layout} : \mathcal {S} \to 
+\mathcal {G}]]></fr:tex> from a category of structures to a category of geometric scenes. A
+structural morphism <fr:tex display="inline"><![CDATA[S \to  S']]></fr:tex> is transported through <fr:tex display="inline"><![CDATA[\mathsf {Layout}]]></fr:tex> to a
+geometric morph. Because the picture is <html:em>generated from</html:em> the structure, we can
+emit stable, semantically meaningful <html:code>data-id</html:code>s.</html:p>
+            <html:p><html:strong>Payoff over Tier 1.</html:strong> Manim's <html:code>TransformMatchingTex</html:code>
+<html:em>heuristically recovers</html:em> the before/after correspondence from rendered LaTeX,
+and often guesses wrong. Here the correspondence is a map we already hold,
+<fr:tex display="inline"><![CDATA[\varphi  : \mathsf {elts}(S) \rightharpoonup  \mathsf {elts}(S')]]></fr:tex>. Then
+<fr:link href="/sss-00DP/" title="Tier 0: enable auto-animate, the declarative keyframe layer" uri="https://stevenschaefer.net/sss-00DP/" display-uri="sss-00DP" type="local">reveal auto-animate</fr:link> just consumes it: matched ids tween, unmatched in
+<fr:tex display="inline"><![CDATA[S]]></fr:tex> fade out, unmatched in <fr:tex display="inline"><![CDATA[S']]></fr:tex> fade in. One engine for proof trees, diagrams,
+and reductions.</html:p>
+            <html:p>This axis has four parts: <fr:link href="/sss-00DV/" title="The object zoo: structures and their signature animations" uri="https://stevenschaefer.net/sss-00DV/" display-uri="sss-00DV" type="local">the object zoo</fr:link>, how to drive it from
+<fr:link href="/sss-00DW/" title="Agda integration: three pipelines from proof to animation" uri="https://stevenschaefer.net/sss-00DW/" display-uri="sss-00DW" type="local">existing Agda</fr:link>, <fr:link href="/sss-00DX/" title="The animation category (a monad in spans is a category)" uri="https://stevenschaefer.net/sss-00DX/" display-uri="sss-00DX" type="local">the animation category</fr:link> (your "monad /
+object in a category" guesses, unified), and <fr:link href="/sss-00DY/" title="Cubical paths as animations" uri="https://stevenschaefer.net/sss-00DY/" display-uri="sss-00DY" type="local">cubical paths as
+animations</fr:link> (where your existing equality proofs <html:em>are</html:em> the content).</html:p>
+            <fr:tree show-metadata="false" expanded="false">
+              <fr:frontmatter>
+                <fr:authors>
+                  <fr:author>
+                    <fr:link href="/stevenschaefer/" title="Steven Schaefer" uri="https://stevenschaefer.net/stevenschaefer/" display-uri="stevenschaefer" type="local">Steven Schaefer</fr:link>
+                  </fr:author>
+                </fr:authors>
+                <fr:date>
+                  <fr:year>2026</fr:year>
+                  <fr:month>6</fr:month>
+                  <fr:day>2</fr:day>
+                </fr:date>
+                <fr:source-path>/Users/stevenschaefer/forest/trees/sss-00DV.tree</fr:source-path>
+                <fr:uri>https://stevenschaefer.net/sss-00DV/</fr:uri>
+                <fr:display-uri>sss-00DV</fr:display-uri>
+                <fr:route>/sss-00DV/</fr:route>
+                <fr:title text="The object zoo: structures and their signature animations">The object zoo: structures and their signature animations</fr:title>
+              </fr:frontmatter>
+              <fr:mainmatter>
+                <html:p>Each structure on the <fr:link href="/sss-00DU/" title="Beyond parity: structure-driven animation" uri="https://stevenschaefer.net/sss-00DU/" display-uri="sss-00DU" type="local">structure-driven</fr:link> list has a representation we
+mostly already have in Agda, and a signature animation that is hard or impossible
+to do <html:em>structurally</html:em> in Manim. The recurring engine reduces every case to a
+partial map <fr:tex display="inline"><![CDATA[\varphi ]]></fr:tex> between element-sets plus appear/disappear sets --- exactly
+what <fr:link href="/sss-00DP/" title="Tier 0: enable auto-animate, the declarative keyframe layer" uri="https://stevenschaefer.net/sss-00DP/" display-uri="sss-00DP" type="local">auto-animate</fr:link> consumes.</html:p>
+                <html:p><html:strong>Typing derivations / proof trees.</html:strong> An inductive tree of rules. Animate:
+grow bottom-up (proof search, goal to subgoals), <html:em>cut-elimination</html:em> as a rewrite,
+and the substitution lemma as a <html:em>derivation-to-derivation</html:em> transform --- a proof
+of a metatheorem played as an animation.</html:p>
+                <html:p><html:strong>Categories as arrows / commutative diagrams.</html:strong> A quiver plus a functor
+from the free category --- you have <html:code>Free/Category/Quiver</html:code> and <html:code>QuiverPath</html:code>
+(a morphism <html:em>is</html:em> a path of edges). Animate: composition arcing in, a
+<html:em>functor action</html:em> sweeping the whole diagram onto its image, naturality squares
+filling in, and <html:em>element-chasing</html:em> (a dot pushed along arrows until two paths
+converge).</html:p>
+                <html:p><html:strong>String diagrams.</html:strong> A morphism in a monoidal category --- you have
+<html:code>Categories/Monoidal/Base</html:code>. Animate: <html:em>planar isotopy</html:em> (sliding boxes past
+each other, the interchange law), <html:em>yanking</html:em>/snake equations for adjunctions, and
+sub-diagram rewriting. This is the one genuinely <html:em>continuous</html:em> case: <fr:tex display="inline"><![CDATA[\varphi ]]></fr:tex> is
+a bijection and only positions move, so wires may want true path interpolation
+(<fr:link href="/sss-00DR/" title="Tier 2: SVG primitives and path morphing" uri="https://stevenschaefer.net/sss-00DR/" display-uri="sss-00DR" type="local">Tier 2</fr:link>).</html:p>
+                <html:p><html:strong>Step-by-step reduction.</html:strong> An AST plus a rewrite relation; your free CCC
+normalizer (<html:code>Free/CartesianClosedCategory/Base</html:code>) is exactly STLC with
+reduction. Animate: <fr:tex display="inline"><![CDATA[\beta ]]></fr:tex> as <html:em>substitution = copy the argument subtree to each
+variable occurrence</html:em>, with the redex highlighted inside its evaluation context
+(a one-hole context = a highlighted path to the hole), then the local rewrite.</html:p>
+                <html:p><html:strong>The shared primitives.</html:strong> highlight, rewrite/replace, copy (substitution,
+contraction), delete (weakening, cut, yanking), paste (composition), map (functor
+action), and the lone continuous one, deform (isotopy). All but the last are a
+partial element-map plus appear/disappear.</html:p>
+              </fr:mainmatter>
+            </fr:tree>
+            <fr:tree show-metadata="false" expanded="false">
+              <fr:frontmatter>
+                <fr:authors>
+                  <fr:author>
+                    <fr:link href="/stevenschaefer/" title="Steven Schaefer" uri="https://stevenschaefer.net/stevenschaefer/" display-uri="stevenschaefer" type="local">Steven Schaefer</fr:link>
+                  </fr:author>
+                </fr:authors>
+                <fr:date>
+                  <fr:year>2026</fr:year>
+                  <fr:month>6</fr:month>
+                  <fr:day>2</fr:day>
+                </fr:date>
+                <fr:source-path>/Users/stevenschaefer/forest/trees/sss-00DW.tree</fr:source-path>
+                <fr:uri>https://stevenschaefer.net/sss-00DW/</fr:uri>
+                <fr:display-uri>sss-00DW</fr:display-uri>
+                <fr:route>/sss-00DW/</fr:route>
+                <fr:title text="Agda integration: three pipelines from proof to animation">Agda integration: three pipelines from proof to animation</fr:title>
+              </fr:frontmatter>
+              <fr:mainmatter>
+                <html:p>How existing Agda becomes an animation in Forester. The guiding split: Agda owns
+<html:em>what</html:em> (the structure and its transformation), TypeScript/SVG owns <html:em>how it
+looks</html:em>. The structures live in your developments already (see
+<fr:link href="/sss-00DV/" title="The object zoo: structures and their signature animations" uri="https://stevenschaefer.net/sss-00DV/" display-uri="sss-00DV" type="local">the object zoo</fr:link>); these pipelines move them to the page.</html:p>
+                <html:p><html:strong>1. Build-time extraction (pragmatic v1).</html:strong> An Agda function
+<fr:tex display="inline"><![CDATA[\mathsf {toSpec} : \mathsf {Structure} \to  \mathsf {AnimationSpec}]]></fr:tex> --- a list of
+scenes plus the correspondence <fr:tex display="inline"><![CDATA[\varphi ]]></fr:tex> --- compiled via Agda's JS or GHC
+backend and run at build time to emit JSON beside the tree. A
+<html:code><![CDATA[\animation{spec-id}]]></html:code> macro references it; the theme's JS
+lays each scene out and lets <fr:link href="/sss-00DP/" title="Tier 0: enable auto-animate, the declarative keyframe layer" uri="https://stevenschaefer.net/sss-00DP/" display-uri="sss-00DP" type="local">auto-animate</fr:link> tween between them.</html:p>
+                <html:p><html:strong>2. Client-side Agda-as-JS (the interactive frontier).</html:strong> Compile the
+development to JS, ship it, and let the reader type a term that <html:em>Agda in the
+browser</html:em> reduces, playing the animation live. Your free-CCC normalizer becomes a
+reduction engine on the page. This is past Manim entirely --- the output is not a
+video but a running evaluator. Aligns with <fr:link href="/sss-00DS/" title="Tier 3: timeline, scrubbing, and reactive updaters" uri="https://stevenschaefer.net/sss-00DS/" display-uri="sss-00DS" type="local">Tier 3</fr:link> interactivity.</html:p>
+                <html:p><html:strong>3. Reflection.</html:strong> Use <html:code>Cubical/Reflection</html:code> and
+<html:code>Tactics/Reflection</html:code> to quote a term or derivation's AST directly into a spec,
+avoiding a hand-written <fr:tex display="inline"><![CDATA[\mathsf {toSpec}]]></fr:tex> for the common cases.</html:p>
+                <html:p><html:strong>What the spec is.</html:strong> A small declarative format: an ordered list of scenes,
+each a laid-out structure with ided elements, plus per-transition correspondence
+and timing. It is the value produced by <fr:link href="/sss-00DX/" title="The animation category (a monad in spans is a category)" uri="https://stevenschaefer.net/sss-00DX/" display-uri="sss-00DX" type="local">the animation category</fr:link> or its
+free-monad presentation --- the "description of code input to an animation" made
+precise.</html:p>
+                <html:p><html:strong>Open question.</html:strong> Layout itself: do we compute geometry in Agda
+(portable, but reimplementing tree/quiver/string-diagram layout), or emit only the
+combinatorial structure and lay out in TS with an existing engine (d3-hierarchy for
+trees, a quiver layout, a progressive-plane-graph layout for string diagrams)?
+Leaning TS for layout, Agda for structure and correspondence.</html:p>
+              </fr:mainmatter>
+            </fr:tree>
+            <fr:tree show-metadata="false" expanded="false">
+              <fr:frontmatter>
+                <fr:authors>
+                  <fr:author>
+                    <fr:link href="/stevenschaefer/" title="Steven Schaefer" uri="https://stevenschaefer.net/stevenschaefer/" display-uri="stevenschaefer" type="local">Steven Schaefer</fr:link>
+                  </fr:author>
+                </fr:authors>
+                <fr:date>
+                  <fr:year>2026</fr:year>
+                  <fr:month>6</fr:month>
+                  <fr:day>2</fr:day>
+                </fr:date>
+                <fr:source-path>/Users/stevenschaefer/forest/trees/sss-00DX.tree</fr:source-path>
+                <fr:uri>https://stevenschaefer.net/sss-00DX/</fr:uri>
+                <fr:display-uri>sss-00DX</fr:display-uri>
+                <fr:route>/sss-00DX/</fr:route>
+                <fr:title text="The animation category (a monad in spans is a category)">The animation category (a monad in spans is a category)</fr:title>
+              </fr:frontmatter>
+              <fr:mainmatter>
+                <html:p>You wondered whether an animation should be "a monad," "an object in a category,"
+or "a whole category." These are the same guess, and pinning it down gives the type
+of the spec that <fr:link href="/sss-00DW/" title="Agda integration: three pipelines from proof to animation" uri="https://stevenschaefer.net/sss-00DW/" display-uri="sss-00DW" type="local">the Agda pipelines</fr:link> produce.</html:p>
+                <html:p><html:strong>Animations form a category.</html:strong> Take an animation type indexed by its
+endpoints, <fr:tex display="inline"><![CDATA[\mathsf {Anim} : \mathsf {Scene} \to  \mathsf {Scene} \to  \mathsf {Type}]]></fr:tex>,
+with <fr:tex display="inline"><![CDATA[\mathsf {id} : \mathsf {Anim}\, s\, s]]></fr:tex> (the still/hold) and composition
+<fr:tex display="inline"><![CDATA[\mathsf {Anim}\, a\, b \to  \mathsf {Anim}\, b\, c \to  \mathsf {Anim}\, a\, c]]></fr:tex>
+("play, then play"). That is exactly a category: objects are scenes, morphisms are
+animations. A reduction step <html:em>inhabits</html:em> it directly as a generator.</html:p>
+                <html:p><html:strong>It is monoidal.</html:strong> Add <fr:tex display="inline"><![CDATA[\otimes ]]></fr:tex> = play two animations in parallel /
+place two scenes side by side. Now compound animations are described by <html:em>string
+diagrams of animations</html:em> --- sequential <fr:tex display="inline"><![CDATA[\circ ]]></fr:tex> and parallel <fr:tex display="inline"><![CDATA[\otimes ]]></fr:tex>.</html:p>
+                <html:p><html:strong>Why "monad" was also right.</html:strong> A monad in the bicategory of spans <html:em>is</html:em> a
+category: an indexed family <fr:tex display="inline"><![CDATA[M : \mathsf {Scene} \to  \mathsf {Scene} \to 
+\mathsf {Type}]]></fr:tex> with a unit <fr:tex display="inline"><![CDATA[\mathsf {id} : M\, s\, s]]></fr:tex> and a multiplication
+<fr:tex display="inline"><![CDATA[M\, a\, b \to  M\, b\, c \to  M\, a\, c]]></fr:tex> is a category presented as a monad. So "the
+animation monad" and "the animation category" are one object, two views.</html:p>
+                <html:p><html:strong>Free-monad presentation (for authoring).</html:strong> For writing animations by hand,
+take the free monad over an edit-functor with operations <fr:tex display="inline"><![CDATA[\mathsf {highlight}]]></fr:tex>,
+<fr:tex display="inline"><![CDATA[\mathsf {rewrite}]]></fr:tex>, <fr:tex display="inline"><![CDATA[\mathsf {wait}]]></fr:tex>, <fr:tex display="inline"><![CDATA[\mathsf {paste}]]></fr:tex>, ... This gives
+do-notation in Agda and an <html:em>inspectable</html:em> term that an interpreter folds into the
+keyframe spec --- precisely the "monad that generates a description input to an
+animation."</html:p>
+                <html:p>The indexed/typed presentation keeps endpoints honest (an animation knows its
+before and after); the free-monad presentation is ergonomic. They interconvert: the
+free monad's terms are morphisms of the category. Which to expose to authors is an
+API choice, not a foundational one.</html:p>
+              </fr:mainmatter>
+            </fr:tree>
+            <fr:tree show-metadata="false" expanded="false">
+              <fr:frontmatter>
+                <fr:authors>
+                  <fr:author>
+                    <fr:link href="/stevenschaefer/" title="Steven Schaefer" uri="https://stevenschaefer.net/stevenschaefer/" display-uri="stevenschaefer" type="local">Steven Schaefer</fr:link>
+                  </fr:author>
+                </fr:authors>
+                <fr:date>
+                  <fr:year>2026</fr:year>
+                  <fr:month>6</fr:month>
+                  <fr:day>2</fr:day>
+                </fr:date>
+                <fr:source-path>/Users/stevenschaefer/forest/trees/sss-00DY.tree</fr:source-path>
+                <fr:uri>https://stevenschaefer.net/sss-00DY/</fr:uri>
+                <fr:display-uri>sss-00DY</fr:display-uri>
+                <fr:route>/sss-00DY/</fr:route>
+                <fr:title text="Cubical paths as animations">Cubical paths as animations</fr:title>
+              </fr:frontmatter>
+              <fr:mainmatter>
+                <html:p>The deepest connection, and the one you were unsure where to start. The claim:
+in cubical Agda, <html:em>a path between two scenes already is an animation</html:em>, so you may
+not need to invent <fr:link href="/sss-00DX/" title="The animation category (a monad in spans is a category)" uri="https://stevenschaefer.net/sss-00DX/" display-uri="sss-00DX" type="local">the animation category</fr:link> from scratch --- <fr:tex display="inline"><![CDATA[\equiv ]]></fr:tex> is
+an instance of it. This tree builds from a concrete first experiment up to a
+research frontier, so there is a clear place to begin.</html:p>
+                <html:p><html:strong>The observation.</html:strong> A path <fr:tex display="inline"><![CDATA[p : a \equiv  b]]></fr:tex> carries an interval variable
+<fr:tex display="inline"><![CDATA[i : \mathbb {I}]]></fr:tex>, and <fr:tex display="inline"><![CDATA[p\, i]]></fr:tex> is "the value at time <fr:tex display="inline"><![CDATA[i]]></fr:tex>." Path concatenation is
+sequencing animations; <fr:tex display="inline"><![CDATA[\mathsf {transp}]]></fr:tex> and <fr:tex display="inline"><![CDATA[\mathsf {hcomp}]]></fr:tex> are combinators
+(transport, fill, whisker). So <fr:tex display="inline"><![CDATA[\mathbb {I}]]></fr:tex> <html:em>is</html:em> the timeline.</html:p>
+                <html:p><html:strong>Where to begin (smallest experiment).</html:strong> Pick a structure type with a
+layout --- say a finite quiver-shaped diagram. Take one equality you can already
+prove between two such values (a <fr:tex display="inline"><![CDATA[\mathsf {CategorySolver}]]></fr:tex>/
+<fr:tex display="inline"><![CDATA[\mathsf {FunctorSolver}]]></fr:tex> output is a ready supply: it proves two morphisms equal).
+Render it by <html:em>sampling</html:em>: evaluate <fr:tex display="inline"><![CDATA[p]]></fr:tex> at <fr:tex display="inline"><![CDATA[i]]></fr:tex> stepped from <fr:tex display="inline"><![CDATA[0]]></fr:tex> to <fr:tex display="inline"><![CDATA[1]]></fr:tex> in <fr:tex display="inline"><![CDATA[n]]></fr:tex>
+steps and lay out each sample. If <fr:tex display="inline"><![CDATA[p]]></fr:tex> is a continuous deformation you get a smooth
+morph; if it is built from discrete rewrites you get the auto-animate steps. That
+one end-to-end path --- prove, sample, render --- is the whole proof of concept.</html:p>
+                <html:p><html:strong>Your proofs are the content.</html:strong> The equalities your solvers and
+hand-written lemmas already establish (two diagram pictures equal, an isotopy of
+string diagrams, a coherence cell) become animations for free under sampling. You
+are not authoring motion; you are <html:em>visualizing proofs you already have</html:em>.</html:p>
+                <html:p><html:strong>Directed vs undirected.</html:strong> Two regimes fall out. <html:em>Undirected</html:em>
+(reversible): isotopies, equalities, coherences --- genuine cubical paths, sampled
+continuously. <html:em>Directed</html:em> (irreversible): reduction, functor action --- a
+morphism in a free category on a rewrite graph (your <html:code>QuiverPath</html:code>), rendered as
+a stepwise trace. Same "sample the interval" renderer, different interval.</html:p>
+                <html:p><html:strong>The frontier (future work, not v1).</html:strong> <html:em>Directed type theory</html:em>
+(Riehl--Shulman simplicial TT; Max New's directed work) is the directed analog of
+cubical: a directed interval whose endpoints are asymmetric. It would unify both
+regimes --- the directed interval as the timeline of an irreversible reduction, its
+core groupoid as a reversible isotopy --- under one "sample the (directed)
+interval" renderer. Open questions: does a sampled directed path give well-defined
+<fr:tex display="inline"><![CDATA[\varphi ]]></fr:tex> correspondences at each step? How do <fr:tex display="inline"><![CDATA[\mathsf {hcomp}]]></fr:tex> fillers render
+(as simultaneous multi-part morphs)? Can naturality (a <html:code>funExt</html:code> path) be shown
+literally as the squares sweeping out? Begin with the undirected sampling
+experiment above; treat directed TT as the horizon.</html:p>
+              </fr:mainmatter>
+            </fr:tree>
+          </fr:mainmatter>
+        </fr:tree>
+      </fr:mainmatter>
+    </fr:tree>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors />
+        <fr:title text="Backlinks">Backlinks</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter>
+        <fr:tree show-metadata="true" expanded="false" toc="false" numbered="false">
+          <fr:frontmatter>
+            <fr:authors>
+              <fr:author>
+                <fr:link href="/stevenschaefer/" title="Steven Schaefer" uri="https://stevenschaefer.net/stevenschaefer/" display-uri="stevenschaefer" type="local">Steven Schaefer</fr:link>
+              </fr:author>
+            </fr:authors>
+            <fr:date>
+              <fr:year>2026</fr:year>
+              <fr:month>6</fr:month>
+              <fr:day>2</fr:day>
+            </fr:date>
+            <fr:source-path>/Users/stevenschaefer/forest/trees/sss-00DY.tree</fr:source-path>
+            <fr:uri>https://stevenschaefer.net/sss-00DY/</fr:uri>
+            <fr:display-uri>sss-00DY</fr:display-uri>
+            <fr:route>/sss-00DY/</fr:route>
+            <fr:title text="Cubical paths as animations">Cubical paths as animations</fr:title>
+          </fr:frontmatter>
+          <fr:mainmatter>
+            <html:p>The deepest connection, and the one you were unsure where to start. The claim:
+in cubical Agda, <html:em>a path between two scenes already is an animation</html:em>, so you may
+not need to invent <fr:link href="/sss-00DX/" title="The animation category (a monad in spans is a category)" uri="https://stevenschaefer.net/sss-00DX/" display-uri="sss-00DX" type="local">the animation category</fr:link> from scratch --- <fr:tex display="inline"><![CDATA[\equiv ]]></fr:tex> is
+an instance of it. This tree builds from a concrete first experiment up to a
+research frontier, so there is a clear place to begin.</html:p>
+            <html:p><html:strong>The observation.</html:strong> A path <fr:tex display="inline"><![CDATA[p : a \equiv  b]]></fr:tex> carries an interval variable
+<fr:tex display="inline"><![CDATA[i : \mathbb {I}]]></fr:tex>, and <fr:tex display="inline"><![CDATA[p\, i]]></fr:tex> is "the value at time <fr:tex display="inline"><![CDATA[i]]></fr:tex>." Path concatenation is
+sequencing animations; <fr:tex display="inline"><![CDATA[\mathsf {transp}]]></fr:tex> and <fr:tex display="inline"><![CDATA[\mathsf {hcomp}]]></fr:tex> are combinators
+(transport, fill, whisker). So <fr:tex display="inline"><![CDATA[\mathbb {I}]]></fr:tex> <html:em>is</html:em> the timeline.</html:p>
+            <html:p><html:strong>Where to begin (smallest experiment).</html:strong> Pick a structure type with a
+layout --- say a finite quiver-shaped diagram. Take one equality you can already
+prove between two such values (a <fr:tex display="inline"><![CDATA[\mathsf {CategorySolver}]]></fr:tex>/
+<fr:tex display="inline"><![CDATA[\mathsf {FunctorSolver}]]></fr:tex> output is a ready supply: it proves two morphisms equal).
+Render it by <html:em>sampling</html:em>: evaluate <fr:tex display="inline"><![CDATA[p]]></fr:tex> at <fr:tex display="inline"><![CDATA[i]]></fr:tex> stepped from <fr:tex display="inline"><![CDATA[0]]></fr:tex> to <fr:tex display="inline"><![CDATA[1]]></fr:tex> in <fr:tex display="inline"><![CDATA[n]]></fr:tex>
+steps and lay out each sample. If <fr:tex display="inline"><![CDATA[p]]></fr:tex> is a continuous deformation you get a smooth
+morph; if it is built from discrete rewrites you get the auto-animate steps. That
+one end-to-end path --- prove, sample, render --- is the whole proof of concept.</html:p>
+            <html:p><html:strong>Your proofs are the content.</html:strong> The equalities your solvers and
+hand-written lemmas already establish (two diagram pictures equal, an isotopy of
+string diagrams, a coherence cell) become animations for free under sampling. You
+are not authoring motion; you are <html:em>visualizing proofs you already have</html:em>.</html:p>
+            <html:p><html:strong>Directed vs undirected.</html:strong> Two regimes fall out. <html:em>Undirected</html:em>
+(reversible): isotopies, equalities, coherences --- genuine cubical paths, sampled
+continuously. <html:em>Directed</html:em> (irreversible): reduction, functor action --- a
+morphism in a free category on a rewrite graph (your <html:code>QuiverPath</html:code>), rendered as
+a stepwise trace. Same "sample the interval" renderer, different interval.</html:p>
+            <html:p><html:strong>The frontier (future work, not v1).</html:strong> <html:em>Directed type theory</html:em>
+(Riehl--Shulman simplicial TT; Max New's directed work) is the directed analog of
+cubical: a directed interval whose endpoints are asymmetric. It would unify both
+regimes --- the directed interval as the timeline of an irreversible reduction, its
+core groupoid as a reversible isotopy --- under one "sample the (directed)
+interval" renderer. Open questions: does a sampled directed path give well-defined
+<fr:tex display="inline"><![CDATA[\varphi ]]></fr:tex> correspondences at each step? How do <fr:tex display="inline"><![CDATA[\mathsf {hcomp}]]></fr:tex> fillers render
+(as simultaneous multi-part morphs)? Can naturality (a <html:code>funExt</html:code> path) be shown
+literally as the squares sweeping out? Begin with the undirected sampling
+experiment above; treat directed TT as the horizon.</html:p>
+          </fr:mainmatter>
+        </fr:tree>
+        <fr:tree show-metadata="true" expanded="false" toc="false" numbered="false">
+          <fr:frontmatter>
+            <fr:authors>
+              <fr:author>
+                <fr:link href="/stevenschaefer/" title="Steven Schaefer" uri="https://stevenschaefer.net/stevenschaefer/" display-uri="stevenschaefer" type="local">Steven Schaefer</fr:link>
+              </fr:author>
+            </fr:authors>
+            <fr:date>
+              <fr:year>2026</fr:year>
+              <fr:month>6</fr:month>
+              <fr:day>2</fr:day>
+            </fr:date>
+            <fr:source-path>/Users/stevenschaefer/forest/trees/sss-00DW.tree</fr:source-path>
+            <fr:uri>https://stevenschaefer.net/sss-00DW/</fr:uri>
+            <fr:display-uri>sss-00DW</fr:display-uri>
+            <fr:route>/sss-00DW/</fr:route>
+            <fr:title text="Agda integration: three pipelines from proof to animation">Agda integration: three pipelines from proof to animation</fr:title>
+          </fr:frontmatter>
+          <fr:mainmatter>
+            <html:p>How existing Agda becomes an animation in Forester. The guiding split: Agda owns
+<html:em>what</html:em> (the structure and its transformation), TypeScript/SVG owns <html:em>how it
+looks</html:em>. The structures live in your developments already (see
+<fr:link href="/sss-00DV/" title="The object zoo: structures and their signature animations" uri="https://stevenschaefer.net/sss-00DV/" display-uri="sss-00DV" type="local">the object zoo</fr:link>); these pipelines move them to the page.</html:p>
+            <html:p><html:strong>1. Build-time extraction (pragmatic v1).</html:strong> An Agda function
+<fr:tex display="inline"><![CDATA[\mathsf {toSpec} : \mathsf {Structure} \to  \mathsf {AnimationSpec}]]></fr:tex> --- a list of
+scenes plus the correspondence <fr:tex display="inline"><![CDATA[\varphi ]]></fr:tex> --- compiled via Agda's JS or GHC
+backend and run at build time to emit JSON beside the tree. A
+<html:code><![CDATA[\animation{spec-id}]]></html:code> macro references it; the theme's JS
+lays each scene out and lets <fr:link href="/sss-00DP/" title="Tier 0: enable auto-animate, the declarative keyframe layer" uri="https://stevenschaefer.net/sss-00DP/" display-uri="sss-00DP" type="local">auto-animate</fr:link> tween between them.</html:p>
+            <html:p><html:strong>2. Client-side Agda-as-JS (the interactive frontier).</html:strong> Compile the
+development to JS, ship it, and let the reader type a term that <html:em>Agda in the
+browser</html:em> reduces, playing the animation live. Your free-CCC normalizer becomes a
+reduction engine on the page. This is past Manim entirely --- the output is not a
+video but a running evaluator. Aligns with <fr:link href="/sss-00DS/" title="Tier 3: timeline, scrubbing, and reactive updaters" uri="https://stevenschaefer.net/sss-00DS/" display-uri="sss-00DS" type="local">Tier 3</fr:link> interactivity.</html:p>
+            <html:p><html:strong>3. Reflection.</html:strong> Use <html:code>Cubical/Reflection</html:code> and
+<html:code>Tactics/Reflection</html:code> to quote a term or derivation's AST directly into a spec,
+avoiding a hand-written <fr:tex display="inline"><![CDATA[\mathsf {toSpec}]]></fr:tex> for the common cases.</html:p>
+            <html:p><html:strong>What the spec is.</html:strong> A small declarative format: an ordered list of scenes,
+each a laid-out structure with ided elements, plus per-transition correspondence
+and timing. It is the value produced by <fr:link href="/sss-00DX/" title="The animation category (a monad in spans is a category)" uri="https://stevenschaefer.net/sss-00DX/" display-uri="sss-00DX" type="local">the animation category</fr:link> or its
+free-monad presentation --- the "description of code input to an animation" made
+precise.</html:p>
+            <html:p><html:strong>Open question.</html:strong> Layout itself: do we compute geometry in Agda
+(portable, but reimplementing tree/quiver/string-diagram layout), or emit only the
+combinatorial structure and lay out in TS with an existing engine (d3-hierarchy for
+trees, a quiver layout, a progressive-plane-graph layout for string diagrams)?
+Leaning TS for layout, Agda for structure and correspondence.</html:p>
+          </fr:mainmatter>
+        </fr:tree>
+        <fr:tree show-metadata="true" expanded="false" toc="false" numbered="false">
+          <fr:frontmatter>
+            <fr:authors>
+              <fr:author>
+                <fr:link href="/stevenschaefer/" title="Steven Schaefer" uri="https://stevenschaefer.net/stevenschaefer/" display-uri="stevenschaefer" type="local">Steven Schaefer</fr:link>
+              </fr:author>
+            </fr:authors>
+            <fr:date>
+              <fr:year>2026</fr:year>
+              <fr:month>6</fr:month>
+              <fr:day>2</fr:day>
+            </fr:date>
+            <fr:source-path>/Users/stevenschaefer/forest/trees/sss-00DU.tree</fr:source-path>
+            <fr:uri>https://stevenschaefer.net/sss-00DU/</fr:uri>
+            <fr:display-uri>sss-00DU</fr:display-uri>
+            <fr:route>/sss-00DU/</fr:route>
+            <fr:title text="Beyond parity: structure-driven animation">Beyond parity: structure-driven animation</fr:title>
+          </fr:frontmatter>
+          <fr:mainmatter>
+            <html:p>The <fr:link href="/sss-00DO/" title="Manim-style mathematical animations in Forester" uri="https://stevenschaefer.net/sss-00DO/" display-uri="sss-00DO" type="local">main animation doc</fr:link> stops at Manim <html:em>parity</html:em>. This axis goes
+past it: animating the structured objects of category theory and type theory ---
+typing derivations, proof trees, commutative diagrams, string diagrams,
+step-by-step term reduction --- which Manim handles poorly precisely because its
+primitives are geometric, not structural.</html:p>
+            <html:p><html:strong>The reframe.</html:strong> Manim's primitives are <html:code>Mobjects</html:code> at absolute
+coordinates: a commutative square is four hand-placed nodes and four hand-placed
+arrows, with no "square" as an object --- only its picture. Every object we care
+about is instead <html:em>combinatorial</html:em>: a tree of rules, a functor from a free
+category, a morphism in a monoidal category, an AST plus a rewrite. See
+<fr:link href="/sss-00DV/" title="The object zoo: structures and their signature animations" uri="https://stevenschaefer.net/sss-00DV/" display-uri="sss-00DV" type="local">the object zoo</fr:link>.</html:p>
+            <html:p><html:strong>Layout is a functor.</html:strong> Write <fr:tex display="inline"><![CDATA[\mathsf {Layout} : \mathcal {S} \to 
+\mathcal {G}]]></fr:tex> from a category of structures to a category of geometric scenes. A
+structural morphism <fr:tex display="inline"><![CDATA[S \to  S']]></fr:tex> is transported through <fr:tex display="inline"><![CDATA[\mathsf {Layout}]]></fr:tex> to a
+geometric morph. Because the picture is <html:em>generated from</html:em> the structure, we can
+emit stable, semantically meaningful <html:code>data-id</html:code>s.</html:p>
+            <html:p><html:strong>Payoff over Tier 1.</html:strong> Manim's <html:code>TransformMatchingTex</html:code>
+<html:em>heuristically recovers</html:em> the before/after correspondence from rendered LaTeX,
+and often guesses wrong. Here the correspondence is a map we already hold,
+<fr:tex display="inline"><![CDATA[\varphi  : \mathsf {elts}(S) \rightharpoonup  \mathsf {elts}(S')]]></fr:tex>. Then
+<fr:link href="/sss-00DP/" title="Tier 0: enable auto-animate, the declarative keyframe layer" uri="https://stevenschaefer.net/sss-00DP/" display-uri="sss-00DP" type="local">reveal auto-animate</fr:link> just consumes it: matched ids tween, unmatched in
+<fr:tex display="inline"><![CDATA[S]]></fr:tex> fade out, unmatched in <fr:tex display="inline"><![CDATA[S']]></fr:tex> fade in. One engine for proof trees, diagrams,
+and reductions.</html:p>
+            <html:p>This axis has four parts: <fr:link href="/sss-00DV/" title="The object zoo: structures and their signature animations" uri="https://stevenschaefer.net/sss-00DV/" display-uri="sss-00DV" type="local">the object zoo</fr:link>, how to drive it from
+<fr:link href="/sss-00DW/" title="Agda integration: three pipelines from proof to animation" uri="https://stevenschaefer.net/sss-00DW/" display-uri="sss-00DW" type="local">existing Agda</fr:link>, <fr:link href="/sss-00DX/" title="The animation category (a monad in spans is a category)" uri="https://stevenschaefer.net/sss-00DX/" display-uri="sss-00DX" type="local">the animation category</fr:link> (your "monad /
+object in a category" guesses, unified), and <fr:link href="/sss-00DY/" title="Cubical paths as animations" uri="https://stevenschaefer.net/sss-00DY/" display-uri="sss-00DY" type="local">cubical paths as
+animations</fr:link> (where your existing equality proofs <html:em>are</html:em> the content).</html:p>
+            <fr:tree show-metadata="false" expanded="false">
+              <fr:frontmatter>
+                <fr:authors>
+                  <fr:author>
+                    <fr:link href="/stevenschaefer/" title="Steven Schaefer" uri="https://stevenschaefer.net/stevenschaefer/" display-uri="stevenschaefer" type="local">Steven Schaefer</fr:link>
+                  </fr:author>
+                </fr:authors>
+                <fr:date>
+                  <fr:year>2026</fr:year>
+                  <fr:month>6</fr:month>
+                  <fr:day>2</fr:day>
+                </fr:date>
+                <fr:source-path>/Users/stevenschaefer/forest/trees/sss-00DV.tree</fr:source-path>
+                <fr:uri>https://stevenschaefer.net/sss-00DV/</fr:uri>
+                <fr:display-uri>sss-00DV</fr:display-uri>
+                <fr:route>/sss-00DV/</fr:route>
+                <fr:title text="The object zoo: structures and their signature animations">The object zoo: structures and their signature animations</fr:title>
+              </fr:frontmatter>
+              <fr:mainmatter>
+                <html:p>Each structure on the <fr:link href="/sss-00DU/" title="Beyond parity: structure-driven animation" uri="https://stevenschaefer.net/sss-00DU/" display-uri="sss-00DU" type="local">structure-driven</fr:link> list has a representation we
+mostly already have in Agda, and a signature animation that is hard or impossible
+to do <html:em>structurally</html:em> in Manim. The recurring engine reduces every case to a
+partial map <fr:tex display="inline"><![CDATA[\varphi ]]></fr:tex> between element-sets plus appear/disappear sets --- exactly
+what <fr:link href="/sss-00DP/" title="Tier 0: enable auto-animate, the declarative keyframe layer" uri="https://stevenschaefer.net/sss-00DP/" display-uri="sss-00DP" type="local">auto-animate</fr:link> consumes.</html:p>
+                <html:p><html:strong>Typing derivations / proof trees.</html:strong> An inductive tree of rules. Animate:
+grow bottom-up (proof search, goal to subgoals), <html:em>cut-elimination</html:em> as a rewrite,
+and the substitution lemma as a <html:em>derivation-to-derivation</html:em> transform --- a proof
+of a metatheorem played as an animation.</html:p>
+                <html:p><html:strong>Categories as arrows / commutative diagrams.</html:strong> A quiver plus a functor
+from the free category --- you have <html:code>Free/Category/Quiver</html:code> and <html:code>QuiverPath</html:code>
+(a morphism <html:em>is</html:em> a path of edges). Animate: composition arcing in, a
+<html:em>functor action</html:em> sweeping the whole diagram onto its image, naturality squares
+filling in, and <html:em>element-chasing</html:em> (a dot pushed along arrows until two paths
+converge).</html:p>
+                <html:p><html:strong>String diagrams.</html:strong> A morphism in a monoidal category --- you have
+<html:code>Categories/Monoidal/Base</html:code>. Animate: <html:em>planar isotopy</html:em> (sliding boxes past
+each other, the interchange law), <html:em>yanking</html:em>/snake equations for adjunctions, and
+sub-diagram rewriting. This is the one genuinely <html:em>continuous</html:em> case: <fr:tex display="inline"><![CDATA[\varphi ]]></fr:tex> is
+a bijection and only positions move, so wires may want true path interpolation
+(<fr:link href="/sss-00DR/" title="Tier 2: SVG primitives and path morphing" uri="https://stevenschaefer.net/sss-00DR/" display-uri="sss-00DR" type="local">Tier 2</fr:link>).</html:p>
+                <html:p><html:strong>Step-by-step reduction.</html:strong> An AST plus a rewrite relation; your free CCC
+normalizer (<html:code>Free/CartesianClosedCategory/Base</html:code>) is exactly STLC with
+reduction. Animate: <fr:tex display="inline"><![CDATA[\beta ]]></fr:tex> as <html:em>substitution = copy the argument subtree to each
+variable occurrence</html:em>, with the redex highlighted inside its evaluation context
+(a one-hole context = a highlighted path to the hole), then the local rewrite.</html:p>
+                <html:p><html:strong>The shared primitives.</html:strong> highlight, rewrite/replace, copy (substitution,
+contraction), delete (weakening, cut, yanking), paste (composition), map (functor
+action), and the lone continuous one, deform (isotopy). All but the last are a
+partial element-map plus appear/disappear.</html:p>
+              </fr:mainmatter>
+            </fr:tree>
+            <fr:tree show-metadata="false" expanded="false">
+              <fr:frontmatter>
+                <fr:authors>
+                  <fr:author>
+                    <fr:link href="/stevenschaefer/" title="Steven Schaefer" uri="https://stevenschaefer.net/stevenschaefer/" display-uri="stevenschaefer" type="local">Steven Schaefer</fr:link>
+                  </fr:author>
+                </fr:authors>
+                <fr:date>
+                  <fr:year>2026</fr:year>
+                  <fr:month>6</fr:month>
+                  <fr:day>2</fr:day>
+                </fr:date>
+                <fr:source-path>/Users/stevenschaefer/forest/trees/sss-00DW.tree</fr:source-path>
+                <fr:uri>https://stevenschaefer.net/sss-00DW/</fr:uri>
+                <fr:display-uri>sss-00DW</fr:display-uri>
+                <fr:route>/sss-00DW/</fr:route>
+                <fr:title text="Agda integration: three pipelines from proof to animation">Agda integration: three pipelines from proof to animation</fr:title>
+              </fr:frontmatter>
+              <fr:mainmatter>
+                <html:p>How existing Agda becomes an animation in Forester. The guiding split: Agda owns
+<html:em>what</html:em> (the structure and its transformation), TypeScript/SVG owns <html:em>how it
+looks</html:em>. The structures live in your developments already (see
+<fr:link href="/sss-00DV/" title="The object zoo: structures and their signature animations" uri="https://stevenschaefer.net/sss-00DV/" display-uri="sss-00DV" type="local">the object zoo</fr:link>); these pipelines move them to the page.</html:p>
+                <html:p><html:strong>1. Build-time extraction (pragmatic v1).</html:strong> An Agda function
+<fr:tex display="inline"><![CDATA[\mathsf {toSpec} : \mathsf {Structure} \to  \mathsf {AnimationSpec}]]></fr:tex> --- a list of
+scenes plus the correspondence <fr:tex display="inline"><![CDATA[\varphi ]]></fr:tex> --- compiled via Agda's JS or GHC
+backend and run at build time to emit JSON beside the tree. A
+<html:code><![CDATA[\animation{spec-id}]]></html:code> macro references it; the theme's JS
+lays each scene out and lets <fr:link href="/sss-00DP/" title="Tier 0: enable auto-animate, the declarative keyframe layer" uri="https://stevenschaefer.net/sss-00DP/" display-uri="sss-00DP" type="local">auto-animate</fr:link> tween between them.</html:p>
+                <html:p><html:strong>2. Client-side Agda-as-JS (the interactive frontier).</html:strong> Compile the
+development to JS, ship it, and let the reader type a term that <html:em>Agda in the
+browser</html:em> reduces, playing the animation live. Your free-CCC normalizer becomes a
+reduction engine on the page. This is past Manim entirely --- the output is not a
+video but a running evaluator. Aligns with <fr:link href="/sss-00DS/" title="Tier 3: timeline, scrubbing, and reactive updaters" uri="https://stevenschaefer.net/sss-00DS/" display-uri="sss-00DS" type="local">Tier 3</fr:link> interactivity.</html:p>
+                <html:p><html:strong>3. Reflection.</html:strong> Use <html:code>Cubical/Reflection</html:code> and
+<html:code>Tactics/Reflection</html:code> to quote a term or derivation's AST directly into a spec,
+avoiding a hand-written <fr:tex display="inline"><![CDATA[\mathsf {toSpec}]]></fr:tex> for the common cases.</html:p>
+                <html:p><html:strong>What the spec is.</html:strong> A small declarative format: an ordered list of scenes,
+each a laid-out structure with ided elements, plus per-transition correspondence
+and timing. It is the value produced by <fr:link href="/sss-00DX/" title="The animation category (a monad in spans is a category)" uri="https://stevenschaefer.net/sss-00DX/" display-uri="sss-00DX" type="local">the animation category</fr:link> or its
+free-monad presentation --- the "description of code input to an animation" made
+precise.</html:p>
+                <html:p><html:strong>Open question.</html:strong> Layout itself: do we compute geometry in Agda
+(portable, but reimplementing tree/quiver/string-diagram layout), or emit only the
+combinatorial structure and lay out in TS with an existing engine (d3-hierarchy for
+trees, a quiver layout, a progressive-plane-graph layout for string diagrams)?
+Leaning TS for layout, Agda for structure and correspondence.</html:p>
+              </fr:mainmatter>
+            </fr:tree>
+            <fr:tree show-metadata="false" expanded="false">
+              <fr:frontmatter>
+                <fr:authors>
+                  <fr:author>
+                    <fr:link href="/stevenschaefer/" title="Steven Schaefer" uri="https://stevenschaefer.net/stevenschaefer/" display-uri="stevenschaefer" type="local">Steven Schaefer</fr:link>
+                  </fr:author>
+                </fr:authors>
+                <fr:date>
+                  <fr:year>2026</fr:year>
+                  <fr:month>6</fr:month>
+                  <fr:day>2</fr:day>
+                </fr:date>
+                <fr:source-path>/Users/stevenschaefer/forest/trees/sss-00DX.tree</fr:source-path>
+                <fr:uri>https://stevenschaefer.net/sss-00DX/</fr:uri>
+                <fr:display-uri>sss-00DX</fr:display-uri>
+                <fr:route>/sss-00DX/</fr:route>
+                <fr:title text="The animation category (a monad in spans is a category)">The animation category (a monad in spans is a category)</fr:title>
+              </fr:frontmatter>
+              <fr:mainmatter>
+                <html:p>You wondered whether an animation should be "a monad," "an object in a category,"
+or "a whole category." These are the same guess, and pinning it down gives the type
+of the spec that <fr:link href="/sss-00DW/" title="Agda integration: three pipelines from proof to animation" uri="https://stevenschaefer.net/sss-00DW/" display-uri="sss-00DW" type="local">the Agda pipelines</fr:link> produce.</html:p>
+                <html:p><html:strong>Animations form a category.</html:strong> Take an animation type indexed by its
+endpoints, <fr:tex display="inline"><![CDATA[\mathsf {Anim} : \mathsf {Scene} \to  \mathsf {Scene} \to  \mathsf {Type}]]></fr:tex>,
+with <fr:tex display="inline"><![CDATA[\mathsf {id} : \mathsf {Anim}\, s\, s]]></fr:tex> (the still/hold) and composition
+<fr:tex display="inline"><![CDATA[\mathsf {Anim}\, a\, b \to  \mathsf {Anim}\, b\, c \to  \mathsf {Anim}\, a\, c]]></fr:tex>
+("play, then play"). That is exactly a category: objects are scenes, morphisms are
+animations. A reduction step <html:em>inhabits</html:em> it directly as a generator.</html:p>
+                <html:p><html:strong>It is monoidal.</html:strong> Add <fr:tex display="inline"><![CDATA[\otimes ]]></fr:tex> = play two animations in parallel /
+place two scenes side by side. Now compound animations are described by <html:em>string
+diagrams of animations</html:em> --- sequential <fr:tex display="inline"><![CDATA[\circ ]]></fr:tex> and parallel <fr:tex display="inline"><![CDATA[\otimes ]]></fr:tex>.</html:p>
+                <html:p><html:strong>Why "monad" was also right.</html:strong> A monad in the bicategory of spans <html:em>is</html:em> a
+category: an indexed family <fr:tex display="inline"><![CDATA[M : \mathsf {Scene} \to  \mathsf {Scene} \to 
+\mathsf {Type}]]></fr:tex> with a unit <fr:tex display="inline"><![CDATA[\mathsf {id} : M\, s\, s]]></fr:tex> and a multiplication
+<fr:tex display="inline"><![CDATA[M\, a\, b \to  M\, b\, c \to  M\, a\, c]]></fr:tex> is a category presented as a monad. So "the
+animation monad" and "the animation category" are one object, two views.</html:p>
+                <html:p><html:strong>Free-monad presentation (for authoring).</html:strong> For writing animations by hand,
+take the free monad over an edit-functor with operations <fr:tex display="inline"><![CDATA[\mathsf {highlight}]]></fr:tex>,
+<fr:tex display="inline"><![CDATA[\mathsf {rewrite}]]></fr:tex>, <fr:tex display="inline"><![CDATA[\mathsf {wait}]]></fr:tex>, <fr:tex display="inline"><![CDATA[\mathsf {paste}]]></fr:tex>, ... This gives
+do-notation in Agda and an <html:em>inspectable</html:em> term that an interpreter folds into the
+keyframe spec --- precisely the "monad that generates a description input to an
+animation."</html:p>
+                <html:p>The indexed/typed presentation keeps endpoints honest (an animation knows its
+before and after); the free-monad presentation is ergonomic. They interconvert: the
+free monad's terms are morphisms of the category. Which to expose to authors is an
+API choice, not a foundational one.</html:p>
+              </fr:mainmatter>
+            </fr:tree>
+            <fr:tree show-metadata="false" expanded="false">
+              <fr:frontmatter>
+                <fr:authors>
+                  <fr:author>
+                    <fr:link href="/stevenschaefer/" title="Steven Schaefer" uri="https://stevenschaefer.net/stevenschaefer/" display-uri="stevenschaefer" type="local">Steven Schaefer</fr:link>
+                  </fr:author>
+                </fr:authors>
+                <fr:date>
+                  <fr:year>2026</fr:year>
+                  <fr:month>6</fr:month>
+                  <fr:day>2</fr:day>
+                </fr:date>
+                <fr:source-path>/Users/stevenschaefer/forest/trees/sss-00DY.tree</fr:source-path>
+                <fr:uri>https://stevenschaefer.net/sss-00DY/</fr:uri>
+                <fr:display-uri>sss-00DY</fr:display-uri>
+                <fr:route>/sss-00DY/</fr:route>
+                <fr:title text="Cubical paths as animations">Cubical paths as animations</fr:title>
+              </fr:frontmatter>
+              <fr:mainmatter>
+                <html:p>The deepest connection, and the one you were unsure where to start. The claim:
+in cubical Agda, <html:em>a path between two scenes already is an animation</html:em>, so you may
+not need to invent <fr:link href="/sss-00DX/" title="The animation category (a monad in spans is a category)" uri="https://stevenschaefer.net/sss-00DX/" display-uri="sss-00DX" type="local">the animation category</fr:link> from scratch --- <fr:tex display="inline"><![CDATA[\equiv ]]></fr:tex> is
+an instance of it. This tree builds from a concrete first experiment up to a
+research frontier, so there is a clear place to begin.</html:p>
+                <html:p><html:strong>The observation.</html:strong> A path <fr:tex display="inline"><![CDATA[p : a \equiv  b]]></fr:tex> carries an interval variable
+<fr:tex display="inline"><![CDATA[i : \mathbb {I}]]></fr:tex>, and <fr:tex display="inline"><![CDATA[p\, i]]></fr:tex> is "the value at time <fr:tex display="inline"><![CDATA[i]]></fr:tex>." Path concatenation is
+sequencing animations; <fr:tex display="inline"><![CDATA[\mathsf {transp}]]></fr:tex> and <fr:tex display="inline"><![CDATA[\mathsf {hcomp}]]></fr:tex> are combinators
+(transport, fill, whisker). So <fr:tex display="inline"><![CDATA[\mathbb {I}]]></fr:tex> <html:em>is</html:em> the timeline.</html:p>
+                <html:p><html:strong>Where to begin (smallest experiment).</html:strong> Pick a structure type with a
+layout --- say a finite quiver-shaped diagram. Take one equality you can already
+prove between two such values (a <fr:tex display="inline"><![CDATA[\mathsf {CategorySolver}]]></fr:tex>/
+<fr:tex display="inline"><![CDATA[\mathsf {FunctorSolver}]]></fr:tex> output is a ready supply: it proves two morphisms equal).
+Render it by <html:em>sampling</html:em>: evaluate <fr:tex display="inline"><![CDATA[p]]></fr:tex> at <fr:tex display="inline"><![CDATA[i]]></fr:tex> stepped from <fr:tex display="inline"><![CDATA[0]]></fr:tex> to <fr:tex display="inline"><![CDATA[1]]></fr:tex> in <fr:tex display="inline"><![CDATA[n]]></fr:tex>
+steps and lay out each sample. If <fr:tex display="inline"><![CDATA[p]]></fr:tex> is a continuous deformation you get a smooth
+morph; if it is built from discrete rewrites you get the auto-animate steps. That
+one end-to-end path --- prove, sample, render --- is the whole proof of concept.</html:p>
+                <html:p><html:strong>Your proofs are the content.</html:strong> The equalities your solvers and
+hand-written lemmas already establish (two diagram pictures equal, an isotopy of
+string diagrams, a coherence cell) become animations for free under sampling. You
+are not authoring motion; you are <html:em>visualizing proofs you already have</html:em>.</html:p>
+                <html:p><html:strong>Directed vs undirected.</html:strong> Two regimes fall out. <html:em>Undirected</html:em>
+(reversible): isotopies, equalities, coherences --- genuine cubical paths, sampled
+continuously. <html:em>Directed</html:em> (irreversible): reduction, functor action --- a
+morphism in a free category on a rewrite graph (your <html:code>QuiverPath</html:code>), rendered as
+a stepwise trace. Same "sample the interval" renderer, different interval.</html:p>
+                <html:p><html:strong>The frontier (future work, not v1).</html:strong> <html:em>Directed type theory</html:em>
+(Riehl--Shulman simplicial TT; Max New's directed work) is the directed analog of
+cubical: a directed interval whose endpoints are asymmetric. It would unify both
+regimes --- the directed interval as the timeline of an irreversible reduction, its
+core groupoid as a reversible isotopy --- under one "sample the (directed)
+interval" renderer. Open questions: does a sampled directed path give well-defined
+<fr:tex display="inline"><![CDATA[\varphi ]]></fr:tex> correspondences at each step? How do <fr:tex display="inline"><![CDATA[\mathsf {hcomp}]]></fr:tex> fillers render
+(as simultaneous multi-part morphs)? Can naturality (a <html:code>funExt</html:code> path) be shown
+literally as the squares sweeping out? Begin with the undirected sampling
+experiment above; treat directed TT as the horizon.</html:p>
+              </fr:mainmatter>
+            </fr:tree>
+          </fr:mainmatter>
+        </fr:tree>
+        <fr:tree show-metadata="true" expanded="false" toc="false" numbered="false">
+          <fr:frontmatter>
+            <fr:authors>
+              <fr:author>
+                <fr:link href="/stevenschaefer/" title="Steven Schaefer" uri="https://stevenschaefer.net/stevenschaefer/" display-uri="stevenschaefer" type="local">Steven Schaefer</fr:link>
+              </fr:author>
+            </fr:authors>
+            <fr:date>
+              <fr:year>2026</fr:year>
+              <fr:month>6</fr:month>
+              <fr:day>2</fr:day>
+            </fr:date>
+            <fr:source-path>/Users/stevenschaefer/forest/trees/sss-00DT.tree</fr:source-path>
+            <fr:uri>https://stevenschaefer.net/sss-00DT/</fr:uri>
+            <fr:display-uri>sss-00DT</fr:display-uri>
+            <fr:route>/sss-00DT/</fr:route>
+            <fr:title text="References: projects to raid for Forester animation">References: projects to raid for Forester animation</fr:title>
+            <fr:taxon>Reference</fr:taxon>
+          </fr:frontmatter>
+          <fr:mainmatter>
+            <html:p>External projects and techniques relevant to the
+<fr:link href="/sss-00DO/" title="Manim-style mathematical animations in Forester" uri="https://stevenschaefer.net/sss-00DO/" display-uri="sss-00DO" type="local">animation design doc</fr:link>.</html:p>
+            <html:ul><html:li><fr:link href="https://revealjs.com/auto-animate/" type="external">reveal.js auto-animate</fr:link> --- already in
+      our stack; read their <html:em>equation</html:em> auto-animate demo specifically. Drives
+      <fr:link href="/sss-00DP/" title="Tier 0: enable auto-animate, the declarative keyframe layer" uri="https://stevenschaefer.net/sss-00DP/" display-uri="sss-00DP" type="local">Tier 0</fr:link>.</html:li>
+  <html:li><fr:link href="https://motioncanvas.io/" type="external">Motion Canvas</fr:link> --- the closest "Manim for the
+      web"; steal the live scrubbable-preview idea even if not adopted.
+      <fr:link href="/sss-00DS/" title="Tier 3: timeline, scrubbing, and reactive updaters" uri="https://stevenschaefer.net/sss-00DS/" display-uri="sss-00DS" type="local">Tier 3</fr:link>.</html:li>
+  <html:li><fr:link href="https://liqvid.org/" type="external">Liqvid</fr:link> --- interactive browser videos, math-friendly.
+      <fr:link href="/sss-00DS/" title="Tier 3: timeline, scrubbing, and reactive updaters" uri="https://stevenschaefer.net/sss-00DS/" display-uri="sss-00DS" type="local">Tier 3</fr:link>.</html:li>
+  <html:li><fr:link href="https://docs.mathjax.org/" type="external">MathJax v3</fr:link> --- node-tree access for tagging
+      equation sub-terms. <fr:link href="/sss-00DQ/" title="Tier 1: sub-expression equation morphing" uri="https://stevenschaefer.net/sss-00DQ/" display-uri="sss-00DQ" type="local">Tier 1</fr:link>.</html:li>
+  <html:li><fr:link href="https://github.com/veltman/flubber" type="external">flubber</fr:link> and GSAP <html:code>MorphSVG</html:code> ---
+      arbitrary SVG path interpolation. <fr:link href="/sss-00DR/" title="Tier 2: SVG primitives and path morphing" uri="https://stevenschaefer.net/sss-00DR/" display-uri="sss-00DR" type="local">Tier 2</fr:link>.</html:li>
+  <html:li><fr:link href="https://www.manim.community/" type="external">Manim Community</fr:link> --- the reference for
+      <html:em>what</html:em> we are emulating (TransformMatchingTex, updaters, plotting), even as
+      we reject the imperative model.</html:li></html:ul>
+            <html:p><html:strong>Structure-driven animation</html:strong> (<fr:link href="/sss-00DU/" title="Beyond parity: structure-driven animation" uri="https://stevenschaefer.net/sss-00DU/" display-uri="sss-00DU" type="local">that axis</fr:link>) --- prior art for
+animating categorical/type-theoretic objects, not just geometry.</html:p>
+            <html:ul><html:li><fr:link href="https://homotopy.io/" type="external">homotopy.io</fr:link> --- the one to study hardest. A proof
+      assistant for finitely-presented n-categories via string diagrams that
+      renders a <fr:tex display="inline"><![CDATA[k]]></fr:tex>-cell as a <html:em>movie</html:em> of <fr:tex display="inline"><![CDATA[(k-1)]]></fr:tex>-diagrams: "animation = higher
+      morphism," already shipped in the browser. Heavy overlap with
+      <fr:link href="/sss-00DY/" title="Cubical paths as animations" uri="https://stevenschaefer.net/sss-00DY/" display-uri="sss-00DY" type="local">the cubical-paths idea</fr:link>.</html:li>
+  <html:li><fr:link href="https://discopy.org/" type="external">DisCoPy</fr:link> --- string diagrams as morphisms in monoidal
+      categories, with functorial semantics, rewriting, and drawing (Python; the
+      type-safety and web stories are where we would improve). Backs
+      <fr:link href="/sss-00DV/" title="The object zoo: structures and their signature animations" uri="https://stevenschaefer.net/sss-00DV/" display-uri="sss-00DV" type="local">the object zoo</fr:link> and <fr:link href="/sss-00DX/" title="The animation category (a monad in spans is a category)" uri="https://stevenschaefer.net/sss-00DX/" display-uri="sss-00DX" type="local">the animation category</fr:link>.</html:li>
+  <html:li><fr:link href="https://www.algebraicjulia.org/" type="external">AlgebraicJulia</fr:link> (Catlab + AlgebraicRewriting)
+      --- ACSets <html:em>are</html:em> the "diagram = functor" representation, with DPO rewriting
+      of diagrams. The structure layer for <fr:link href="/sss-00DV/" title="The object zoo: structures and their signature animations" uri="https://stevenschaefer.net/sss-00DV/" display-uri="sss-00DV" type="local">the zoo</fr:link>.</html:li>
+  <html:li><fr:link href="https://redex.racket-lang.org/" type="external">PLT Redex</fr:link> --- reduction-relation
+      visualization and traces; prior art for term-reduction animations.</html:li>
+  <html:li><fr:link href="https://www.cl.cam.ac.uk/~pes20/ott/" type="external">Ott</fr:link>, <html:code>bussproofs</html:code>, and the
+      <html:code>prooftrees</html:code> package (built on LaTeX <html:code>forest</html:code>) --- inference-rule and
+      proof-tree typesetting.</html:li>
+  <html:li>Fran / Functional Reactive Animation (Elliott--Hudak) and
+      <fr:link href="https://reanimate.github.io/" type="external">reanimate</fr:link> --- the denotational
+      <fr:tex display="inline"><![CDATA[\mathsf {Behavior} = \mathsf {Time} \to  \mathsf {Scene}]]></fr:tex> model, for the
+      continuous/easing layer alongside <fr:link href="/sss-00DX/" title="The animation category (a monad in spans is a category)" uri="https://stevenschaefer.net/sss-00DX/" display-uri="sss-00DX" type="local">the animation category</fr:link>.</html:li></html:ul>
+          </fr:mainmatter>
+        </fr:tree>
+      </fr:mainmatter>
+    </fr:tree>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors />
+        <fr:title text="Related">Related</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter>
+        <fr:tree show-metadata="true" expanded="false" toc="false" numbered="false">
+          <fr:frontmatter>
+            <fr:authors>
+              <fr:author>
+                <fr:link href="/stevenschaefer/" title="Steven Schaefer" uri="https://stevenschaefer.net/stevenschaefer/" display-uri="stevenschaefer" type="local">Steven Schaefer</fr:link>
+              </fr:author>
+            </fr:authors>
+            <fr:date>
+              <fr:year>2026</fr:year>
+              <fr:month>6</fr:month>
+              <fr:day>2</fr:day>
+            </fr:date>
+            <fr:source-path>/Users/stevenschaefer/forest/trees/sss-00DW.tree</fr:source-path>
+            <fr:uri>https://stevenschaefer.net/sss-00DW/</fr:uri>
+            <fr:display-uri>sss-00DW</fr:display-uri>
+            <fr:route>/sss-00DW/</fr:route>
+            <fr:title text="Agda integration: three pipelines from proof to animation">Agda integration: three pipelines from proof to animation</fr:title>
+          </fr:frontmatter>
+          <fr:mainmatter>
+            <html:p>How existing Agda becomes an animation in Forester. The guiding split: Agda owns
+<html:em>what</html:em> (the structure and its transformation), TypeScript/SVG owns <html:em>how it
+looks</html:em>. The structures live in your developments already (see
+<fr:link href="/sss-00DV/" title="The object zoo: structures and their signature animations" uri="https://stevenschaefer.net/sss-00DV/" display-uri="sss-00DV" type="local">the object zoo</fr:link>); these pipelines move them to the page.</html:p>
+            <html:p><html:strong>1. Build-time extraction (pragmatic v1).</html:strong> An Agda function
+<fr:tex display="inline"><![CDATA[\mathsf {toSpec} : \mathsf {Structure} \to  \mathsf {AnimationSpec}]]></fr:tex> --- a list of
+scenes plus the correspondence <fr:tex display="inline"><![CDATA[\varphi ]]></fr:tex> --- compiled via Agda's JS or GHC
+backend and run at build time to emit JSON beside the tree. A
+<html:code><![CDATA[\animation{spec-id}]]></html:code> macro references it; the theme's JS
+lays each scene out and lets <fr:link href="/sss-00DP/" title="Tier 0: enable auto-animate, the declarative keyframe layer" uri="https://stevenschaefer.net/sss-00DP/" display-uri="sss-00DP" type="local">auto-animate</fr:link> tween between them.</html:p>
+            <html:p><html:strong>2. Client-side Agda-as-JS (the interactive frontier).</html:strong> Compile the
+development to JS, ship it, and let the reader type a term that <html:em>Agda in the
+browser</html:em> reduces, playing the animation live. Your free-CCC normalizer becomes a
+reduction engine on the page. This is past Manim entirely --- the output is not a
+video but a running evaluator. Aligns with <fr:link href="/sss-00DS/" title="Tier 3: timeline, scrubbing, and reactive updaters" uri="https://stevenschaefer.net/sss-00DS/" display-uri="sss-00DS" type="local">Tier 3</fr:link> interactivity.</html:p>
+            <html:p><html:strong>3. Reflection.</html:strong> Use <html:code>Cubical/Reflection</html:code> and
+<html:code>Tactics/Reflection</html:code> to quote a term or derivation's AST directly into a spec,
+avoiding a hand-written <fr:tex display="inline"><![CDATA[\mathsf {toSpec}]]></fr:tex> for the common cases.</html:p>
+            <html:p><html:strong>What the spec is.</html:strong> A small declarative format: an ordered list of scenes,
+each a laid-out structure with ided elements, plus per-transition correspondence
+and timing. It is the value produced by <fr:link href="/sss-00DX/" title="The animation category (a monad in spans is a category)" uri="https://stevenschaefer.net/sss-00DX/" display-uri="sss-00DX" type="local">the animation category</fr:link> or its
+free-monad presentation --- the "description of code input to an animation" made
+precise.</html:p>
+            <html:p><html:strong>Open question.</html:strong> Layout itself: do we compute geometry in Agda
+(portable, but reimplementing tree/quiver/string-diagram layout), or emit only the
+combinatorial structure and lay out in TS with an existing engine (d3-hierarchy for
+trees, a quiver layout, a progressive-plane-graph layout for string diagrams)?
+Leaning TS for layout, Agda for structure and correspondence.</html:p>
+          </fr:mainmatter>
+        </fr:tree>
+      </fr:mainmatter>
+    </fr:tree>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors />
+        <fr:title text="Contributions">Contributions</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter />
+    </fr:tree>
+  </fr:backmatter>
+</fr:tree>

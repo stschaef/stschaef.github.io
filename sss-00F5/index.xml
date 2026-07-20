@@ -1,0 +1,1473 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="/default.xsl"?>
+<fr:tree xmlns:fr="http://www.forester-notes.org" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:xml="http://www.w3.org/XML/1998/namespace" root="false" base-url="/">
+  <fr:frontmatter>
+    <fr:authors>
+      <fr:author>
+        <fr:link href="/stevenschaefer/" title="Steven Schaefer" uri="https://stevenschaefer.net/stevenschaefer/" display-uri="stevenschaefer" type="local">Steven Schaefer</fr:link>
+      </fr:author>
+    </fr:authors>
+    <fr:date>
+      <fr:year>2026</fr:year>
+      <fr:month>7</fr:month>
+      <fr:day>17</fr:day>
+    </fr:date>
+    <fr:source-path>/Users/stevenschaefer/forest/trees/sss-00F5.tree</fr:source-path>
+    <fr:uri>https://stevenschaefer.net/sss-00F5/</fr:uri>
+    <fr:display-uri>sss-00F5</fr:display-uri>
+    <fr:route>/sss-00F5/</fr:route>
+    <fr:title text="Syntactic derivatives as an inductive CFG→CFG operation">Syntactic derivatives as an inductive CFG→CFG operation</fr:title>
+    <fr:taxon>Definition</fr:taxon>
+  </fr:frontmatter>
+  <fr:mainmatter>
+    <html:p>To parse <fr:link href="/sss-00F1/" title="The derivative parser, the automaton, and Löb — end to end" uri="https://stevenschaefer.net/sss-00F1/" display-uri="sss-00F1" type="local">without solving for the reachable states yourself</fr:link>,
+present grammars as a <html:em>syntax</html:em> and define <fr:tex display="inline"><![CDATA[\delta _c]]></fr:tex> once, structurally,
+as a map on that syntax — a total <html:code>CFGDesc → CFGDesc</html:code>
+operation. This spells out the inductive construction sketched in
+<fr:link href="/sss-00A6/" title="Syntactic Derivatives on CFGDesc" uri="https://stevenschaefer.net/sss-00A6/" display-uri="sss-00A6" type="local">sss-00A6</fr:link>: what the datatype is, why <fr:tex display="inline"><![CDATA[\delta _c]]></fr:tex> is total on it,
+and why the recursion case does not diverge. It is the concrete bridge from
+<fr:link href="/sss-00A4/" title="CFGDesc: Embedded Syntax of Guarded CFGs" uri="https://stevenschaefer.net/sss-00A4/" display-uri="sss-00A4" type="local">CFGDesc</fr:link> to the <fr:link href="/sss-00F4/" title="Automaton parsers via Löb" uri="https://stevenschaefer.net/sss-00F4/" display-uri="sss-00F4" type="local">generic Löb parser</fr:link>.</html:p>
+    <fr:tree show-metadata="false">
+      <fr:frontmatter>
+        <fr:authors>
+          <fr:author>
+            <fr:link href="/stevenschaefer/" title="Steven Schaefer" uri="https://stevenschaefer.net/stevenschaefer/" display-uri="stevenschaefer" type="local">Steven Schaefer</fr:link>
+          </fr:author>
+        </fr:authors>
+        <fr:date>
+          <fr:year>2026</fr:year>
+          <fr:month>7</fr:month>
+          <fr:day>17</fr:day>
+        </fr:date>
+        <fr:source-path>/Users/stevenschaefer/forest/trees/sss-00F5.tree</fr:source-path>
+        <fr:title text="The datatype">The datatype</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter>
+        <html:p>Fix a finite context <fr:tex display="inline"><![CDATA[\Gamma ]]></fr:tex> of <html:strong>nonterminals</html:strong>. A
+<html:code>CFGDesc Γ</html:code> is built from</html:p>
+        <html:ul><html:li><html:code>var X</html:code> for <fr:tex display="inline"><![CDATA[X \in  \Gamma ]]></fr:tex> — a nonterminal leaf;</html:li>
+<html:li><html:code>I</html:code> (the <fr:tex display="inline"><![CDATA[\varepsilon ]]></fr:tex> grammar), <html:code>⊥</html:code> (empty),
+<html:code>⌈c⌉</html:code> (a literal);</html:li>
+<html:li><html:code>A ⊗ B</html:code> (concatenation) and <html:code>A ⊕ B</html:code> (alternation).</html:li></html:ul>
+        <html:p>A <html:strong>grammar</html:strong> equips each <fr:tex display="inline"><![CDATA[X \in  \Gamma ]]></fr:tex> with a production
+<html:code>def X : CFGDesc Γ</html:code>, subject to the <html:strong>guard</html:strong>: in every
+<html:code>def X</html:code>, each <html:code>var Y</html:code> occurs under some <html:code>⌈c⌉ ⊗ (−)</html:code> (no
+nonterminal is reachable without first consuming a terminal). This is the
+<fr:link href="/sss-00AC/" title="Later Operator ▶ as Internalised Guard" uri="https://stevenschaefer.net/sss-00AC/" display-uri="sss-00AC" type="local"><fr:tex display="inline"><![CDATA[\rhd ]]></fr:tex>-guard</fr:link> at the level of descriptions. Dyck is
+<html:code>def D = I ⊕ ⌈a⌉ ⊗ var D ⊗ ⌈b⌉ ⊗ var D</html:code>.</html:p>
+      </fr:mainmatter>
+    </fr:tree>
+    <fr:tree show-metadata="false">
+      <fr:frontmatter>
+        <fr:authors>
+          <fr:author>
+            <fr:link href="/stevenschaefer/" title="Steven Schaefer" uri="https://stevenschaefer.net/stevenschaefer/" display-uri="stevenschaefer" type="local">Steven Schaefer</fr:link>
+          </fr:author>
+        </fr:authors>
+        <fr:date>
+          <fr:year>2026</fr:year>
+          <fr:month>7</fr:month>
+          <fr:day>17</fr:day>
+        </fr:date>
+        <fr:source-path>/Users/stevenschaefer/forest/trees/sss-00F5.tree</fr:source-path>
+        <fr:title text="Nullability, inductively">Nullability, inductively</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter>
+        <html:p><html:code>ν? : CFGDesc Γ → Bool</html:code> is structural:</html:p>
+        <html:ul><html:li><html:code>ν? ⊥ = false</html:code>, <html:code>ν? I = true</html:code>, <html:code>ν? ⌈c⌉ = false</html:code>;</html:li>
+<html:li><html:code>ν? (A ⊕ B) = ν? A ∨ ν? B</html:code>;</html:li>
+<html:li><html:code>ν? (A ⊗ B) = ν? A ∧ ν? B</html:code>;</html:li>
+<html:li><html:code>ν? (var X) = ν? (def X)</html:code>.</html:li></html:ul>
+        <html:p>The last clause looks circular but is not, <html:em>because of the guard</html:em>:
+inside <html:code>def X</html:code> every <html:code>var Y</html:code> sits under a <html:code>⌈c⌉ ⊗ (−)</html:code>, and
+<html:code>ν? (⌈c⌉ ⊗ −) = false ∧ − = false</html:code> short-circuits before any
+<html:code>ν? (var Y)</html:code> is consulted. So a nonterminal's nullability depends only
+on its <html:em>terminal-free</html:em> (base) clauses — a finite, non-recursive table.
+This is the "nullability collapses" half of the <fr:link href="/sss-00EZ/" title="The guard makes δ total: derivative parsing for the guarded CFG fragment" uri="https://stevenschaefer.net/sss-00EZ/" display-uri="sss-00EZ" type="local">keystone</fr:link>.</html:p>
+      </fr:mainmatter>
+    </fr:tree>
+    <fr:tree show-metadata="false">
+      <fr:frontmatter>
+        <fr:authors>
+          <fr:author>
+            <fr:link href="/stevenschaefer/" title="Steven Schaefer" uri="https://stevenschaefer.net/stevenschaefer/" display-uri="stevenschaefer" type="local">Steven Schaefer</fr:link>
+          </fr:author>
+        </fr:authors>
+        <fr:date>
+          <fr:year>2026</fr:year>
+          <fr:month>7</fr:month>
+          <fr:day>17</fr:day>
+        </fr:date>
+        <fr:source-path>/Users/stevenschaefer/forest/trees/sss-00F5.tree</fr:source-path>
+        <fr:title text="The derivative, inductively">The derivative, inductively</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter>
+        <html:p><html:code>δ c : CFGDesc Γ → CFGDesc Γ</html:code> — note the <html:em>same</html:em> <fr:tex display="inline"><![CDATA[\Gamma ]]></fr:tex>: the
+residual carries the original nonterminals as leaves. On the description
+formers it is the classical Brzozowski recursion:</html:p>
+        <html:ul><html:li><html:code>δ c ⊥ = ⊥</html:code>, <html:code>δ c I = ⊥</html:code>;</html:li>
+<html:li><html:code>δ c ⌈c'⌉ = I</html:code> if <html:code>c' = c</html:code>, else <html:code>⊥</html:code>;</html:li>
+<html:li><html:code>δ c (A ⊕ B) = δ c A ⊕ δ c B</html:code>;</html:li>
+<html:li><html:code>δ c (A ⊗ B) = δ c A ⊗ B ⊕ (if ν? A then δ c B else ⊥)</html:code>.</html:li></html:ul>
+        <html:p>The <fr:tex display="inline"><![CDATA[\otimes ]]></fr:tex>-clause is the whole game, and it must <html:strong>short-
+circuit</html:strong>: when <html:code>ν? A = false</html:code>, the second summand is <html:code>⊥</html:code> and
+<html:code>δ c B</html:code> is <html:em>not</html:em> computed. The nonterminal case unfolds once:</html:p>
+        <html:ul>
+          <html:li><html:code>δ c (var X) = δ c (def X)</html:code>.</html:li>
+        </html:ul>
+      </fr:mainmatter>
+    </fr:tree>
+    <fr:tree show-metadata="false">
+      <fr:frontmatter>
+        <fr:authors>
+          <fr:author>
+            <fr:link href="/stevenschaefer/" title="Steven Schaefer" uri="https://stevenschaefer.net/stevenschaefer/" display-uri="stevenschaefer" type="local">Steven Schaefer</fr:link>
+          </fr:author>
+        </fr:authors>
+        <fr:date>
+          <fr:year>2026</fr:year>
+          <fr:month>7</fr:month>
+          <fr:day>17</fr:day>
+        </fr:date>
+        <fr:source-path>/Users/stevenschaefer/forest/trees/sss-00F5.tree</fr:source-path>
+        <fr:title text="Why this terminates and stays a CFG">Why this terminates and stays a CFG</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter>
+        <html:p><html:strong>Totality / structurality.</html:strong> The only non-structural clause is
+<html:code>δ c (var X) = δ c (def X)</html:code>, and it fires <html:em>at most once per
+nonterminal per step</html:em>: differentiating <html:code>def X</html:code>, every <html:code>var Y</html:code> it
+contains sits behind a guard <html:code>⌈c'⌉ ⊗ (−)</html:code>, so the <fr:tex display="inline"><![CDATA[\otimes ]]></fr:tex>-clause
+short-circuits (<html:code>ν? ⌈c'⌉ = false</html:code>) and <html:code>δ c (var Y)</html:code> is never
+reached. Hence no nested <html:code>δ c (var −)</html:code> call, no divergence — one
+unfold and a finite structural pass. This is exactly the
+<fr:link href="/sss-00EZ/" title="The guard makes δ total: derivative parsing for the guarded CFG fragment" uri="https://stevenschaefer.net/sss-00EZ/" display-uri="sss-00EZ" type="local">keystone lemma</fr:link>: the guard keeps the self-differentiation gate
+shut, so <html:code>δ</html:code> is total by structural recursion with no auxiliary fixed
+point.</html:p>
+        <html:p><html:strong>Closure.</html:strong> <html:code>δ c G</html:code> is again a <html:code>CFGDesc Γ</html:code> over the same
+nonterminals — the residual mentions <html:code>var X</html:code>, never a differentiated
+nonterminal. So <html:code>CFGDesc Γ</html:code> is closed under <html:code>δ</html:code>, and iterating
+<fr:tex display="inline"><![CDATA[\delta ]]></fr:tex> stays in the syntax. The description <html:em>grows</html:em> (the <fr:tex display="inline"><![CDATA[\otimes ]]></fr:tex>-
+clause copies <html:code>B</html:code>), which is the unbounded state space showing up as
+unbounded term size; keeping it small is <fr:link href="/sss-00EZ/" title="The guard makes δ total: derivative parsing for the guarded CFG fragment" uri="https://stevenschaefer.net/sss-00EZ/" display-uri="sss-00EZ" type="local">compaction</fr:link> —
+generic <fr:tex display="inline"><![CDATA[\bot ]]></fr:tex>/<fr:tex display="inline"><![CDATA[I]]></fr:tex>-unit rewrites, an optimization, decoupled from
+totality.</html:p>
+        <html:p><html:strong>Dyck check.</html:strong> <html:code>δ a (var D) = δ a (def D) = δ a I ⊕
+δ a (⌈a⌉ ⊗ (D ⊗ ⌈b⌉ ⊗ D))</html:code>. The literal clause gives <html:code>I ⊗ (D ⊗ ⌈b⌉ ⊗
+D)</html:code>; the tail branch <html:code>ν? ⌈a⌉ · δ a (…)</html:code> short-circuits to <html:code>⊥</html:code>
+(never touching <html:code>δ a (var D)</html:code>). Result: <html:code>D ⊗ ⌈b⌉ ⊗ D</html:code>.
+Symmetrically <html:code>δ b (var D) = ⊥</html:code>. The <fr:link href="/sss-00F1/" title="The derivative parser, the automaton, and Löb — end to end" uri="https://stevenschaefer.net/sss-00F1/" display-uri="sss-00F1" type="local">stack states</fr:link> are
+whatever these iterates produce — the construction never names them.</html:p>
+      </fr:mainmatter>
+    </fr:tree>
+    <fr:tree show-metadata="false">
+      <fr:frontmatter>
+        <fr:authors>
+          <fr:author>
+            <fr:link href="/stevenschaefer/" title="Steven Schaefer" uri="https://stevenschaefer.net/stevenschaefer/" display-uri="stevenschaefer" type="local">Steven Schaefer</fr:link>
+          </fr:author>
+        </fr:authors>
+        <fr:date>
+          <fr:year>2026</fr:year>
+          <fr:month>7</fr:month>
+          <fr:day>17</fr:day>
+        </fr:date>
+        <fr:source-path>/Users/stevenschaefer/forest/trees/sss-00F5.tree</fr:source-path>
+        <fr:title text="Feeding the parser">Feeding the parser</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter>
+        <html:p>With <html:code>ν?</html:code> and <html:code>δ</html:code> as total structural maps on
+<html:code>CFGDesc Γ</html:code>, the <fr:link href="/sss-00F4/" title="Automaton parsers via Löb" uri="https://stevenschaefer.net/sss-00F4/" display-uri="sss-00F4" type="local">generic Löb parser</fr:link></html:p>
+        <html:p>
+          <html:code>parse : (G : CFGDesc Γ) → ⊤ ⊢ Ans ⟦G⟧</html:code>
+        </html:p>
+        <html:p>is a single term — at <html:code>ε</html:code> answer <html:code>ν? G</html:code>, at <html:code>c ∷ w</html:code>
+recurse (under <fr:tex display="inline"><![CDATA[\rhd ]]></fr:tex>) at <html:code>δ c G</html:code> — instantiated at the Dyck
+description. The soundness datum is the semantic bridge
+<html:code>⟦ δ c G ⟧ ≅ ⟦ G ⟧ ⟜ ⌈c⌉</html:code> of <fr:link href="/sss-00A7/" title="Linear Residual ⟜ as Brzozowski Derivative" uri="https://stevenschaefer.net/sss-00A7/" display-uri="sss-00A7" type="local">sss-00A7</fr:link>, proved once by
+induction on <html:code>CFGDesc</html:code> alongside this definition, so parse trees ride
+the isos. This is phases 1–3 of the <fr:link href="/sss-00A3/" title="Plan: Derivative-Based CFG Parser via Recursive Coalgebras" uri="https://stevenschaefer.net/sss-00A3/" display-uri="sss-00A3" type="local">plan</fr:link> made explicit.</html:p>
+      </fr:mainmatter>
+    </fr:tree>
+  </fr:mainmatter>
+  <fr:backmatter>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors />
+        <fr:title text="References">References</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter />
+    </fr:tree>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors />
+        <fr:title text="Context">Context</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter />
+    </fr:tree>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors />
+        <fr:title text="Backlinks">Backlinks</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter>
+        <fr:tree show-metadata="true" expanded="false" toc="false" numbered="false">
+          <fr:frontmatter>
+            <fr:authors>
+              <fr:author>
+                <fr:link href="/stevenschaefer/" title="Steven Schaefer" uri="https://stevenschaefer.net/stevenschaefer/" display-uri="stevenschaefer" type="local">Steven Schaefer</fr:link>
+              </fr:author>
+            </fr:authors>
+            <fr:date>
+              <fr:year>2026</fr:year>
+              <fr:month>7</fr:month>
+              <fr:day>17</fr:day>
+            </fr:date>
+            <fr:source-path>/Users/stevenschaefer/forest/trees/sss-00F6.tree</fr:source-path>
+            <fr:uri>https://stevenschaefer.net/sss-00F6/</fr:uri>
+            <fr:display-uri>sss-00F6</fr:display-uri>
+            <fr:route>/sss-00F6/</fr:route>
+            <fr:title text="Sketch: the CFG derivative parser internal to LambekD">Sketch: the CFG derivative parser internal to LambekD</fr:title>
+            <fr:taxon>TODO</fr:taxon>
+            <fr:meta name="status">pending</fr:meta>
+          </fr:frontmatter>
+          <fr:mainmatter>
+            <html:p>Feasibility sketch for building the <fr:link href="/sss-00F5/" title="Syntactic derivatives as an inductive CFG→CFG operation" uri="https://stevenschaefer.net/sss-00F5/" display-uri="sss-00F5" type="local">inductive derivative
+parser</fr:link> inside <html:code>Lambek<fr:tex display="inline"><![CDATA[^{D}]]></fr:tex></html:code> in Agda. The claim: it is
+definable and provable by combining the regex <fr:tex display="inline"><![CDATA[\delta ]]></fr:tex> + soundness on the
+<html:code>brzozowski</html:code> branch with <fr:tex display="inline"><![CDATA[\rhd ]]></fr:tex>/<html:code>lob</html:code> on the <html:code>box</html:code> branch;
+the one design decision is to <html:strong>put the guard in the datatype</html:strong>, and
+the one genuine risk is <html:strong>refl-time computation</html:strong>. Signatures below
+are schematic — proofs are holes, never postulates.</html:p>
+            <fr:tree show-metadata="false">
+              <fr:frontmatter>
+                <fr:authors>
+                  <fr:author>
+                    <fr:link href="/stevenschaefer/" title="Steven Schaefer" uri="https://stevenschaefer.net/stevenschaefer/" display-uri="stevenschaefer" type="local">Steven Schaefer</fr:link>
+                  </fr:author>
+                </fr:authors>
+                <fr:date>
+                  <fr:year>2026</fr:year>
+                  <fr:month>7</fr:month>
+                  <fr:day>17</fr:day>
+                </fr:date>
+                <fr:source-path>/Users/stevenschaefer/forest/trees/sss-00F6.tree</fr:source-path>
+                <fr:title text="Datatype: guard as a structural invariant">Datatype: guard as a structural invariant</fr:title>
+              </fr:frontmatter>
+              <fr:mainmatter>
+                <html:p>The naive recursion <html:code>δ c (var X) = δ c (def X)</html:code> does not pass
+Agda's termination checker — <html:code>def X</html:code> is not a subterm and the
+<fr:link href="/sss-00EZ/" title="The guard makes δ total: derivative parsing for the guarded CFG fragment" uri="https://stevenschaefer.net/sss-00EZ/" display-uri="sss-00EZ" type="local">keystone</fr:link> short-circuit is semantic. So encode the guard
+structurally, Greibach-style: a nonterminal <html:em>is</html:em> its finite list of
+guarded clauses <html:code>⌈c⌉ ⊗ tail</html:code>.</html:p>
+                <html:pre><![CDATA[NT : Type                              -- finite context of nonterminals (e.g. Fin n)
+
+data CFGDesc : Type where
+  ⟨I⟩ ⟨⊥⟩ : CFGDesc                    -- ε , empty
+  lit     : ⟨ Alphabet ⟩ → CFGDesc     -- ⌈c⌉
+  var     : NT → CFGDesc               -- nonterminal leaf
+  _⊗_ _⊕_ : CFGDesc → CFGDesc → CFGDesc
+
+record Production : Type where         -- one nonterminal's productions
+  field
+    nullable : Bool                    -- is ε accepted?
+    clauses  : List (Alphabet × CFGDesc)  -- guarded: (leading char , tail)
+
+def : NT → Production                  -- the grammar = a table of productions]]></html:pre>
+                <html:p>The invariant "every <html:code>var</html:code> occurs behind a consumed terminal" is
+now unforgeable: a nonterminal reaches you only <html:em>via</html:em> a <html:code>clauses</html:code>
+entry, whose head is a literal. Unguarded grammars are not expressible.</html:p>
+              </fr:mainmatter>
+            </fr:tree>
+            <fr:tree show-metadata="false">
+              <fr:frontmatter>
+                <fr:authors>
+                  <fr:author>
+                    <fr:link href="/stevenschaefer/" title="Steven Schaefer" uri="https://stevenschaefer.net/stevenschaefer/" display-uri="stevenschaefer" type="local">Steven Schaefer</fr:link>
+                  </fr:author>
+                </fr:authors>
+                <fr:date>
+                  <fr:year>2026</fr:year>
+                  <fr:month>7</fr:month>
+                  <fr:day>17</fr:day>
+                </fr:date>
+                <fr:source-path>/Users/stevenschaefer/forest/trees/sss-00F6.tree</fr:source-path>
+                <fr:title text="Nullability and derivative: both structural, Agda-accepted">Nullability and derivative: both structural, Agda-accepted</fr:title>
+              </fr:frontmatter>
+              <fr:mainmatter>
+                <html:pre><![CDATA[ν? : CFGDesc → Bool
+ν? ⟨I⟩       = true
+ν? ⟨⊥⟩       = false
+ν? (lit _)   = false
+ν? (var X)   = Production.nullable (def X)      -- lookup, NOT recursive
+ν? (A ⊗ B)   = ν? A and ν? B
+ν? (A ⊕ B)   = ν? A or  ν? B
+
+δ : Alphabet → CFGDesc → CFGDesc
+δ c ⟨I⟩       = ⟨⊥⟩
+δ c ⟨⊥⟩       = ⟨⊥⟩
+δ c (lit c′)  = if c == c′ then ⟨I⟩ else ⟨⊥⟩
+δ c (A ⊕ B)   = δ c A ⊕ δ c B
+δ c (A ⊗ B)   = δ c A ⊗ B ⊕ (if ν? A then δ c B else ⟨⊥⟩)   -- MUST short-circuit
+δ c (var X)   = select c (Production.clauses (def X))       -- filter+strip, NO δ recursion
+  where select c = foldr (λ (c′ , t) acc → if c == c′ then t ⊕ acc else acc) ⟨⊥⟩]]></html:pre>
+                <html:p>Both are structural recursions on <html:code>CFGDesc</html:code>: <html:code>ν? (var X)</html:code> and
+<html:code>δ c (var X)</html:code> are <html:em>lookups</html:em>, not recursive calls, so the
+termination checker is satisfied and the keystone is discharged by
+construction. <html:code>CFGDesc</html:code> is visibly closed under <html:code>δ</html:code> (residuals
+mention <html:code>var</html:code>, never a differentiated nonterminal).</html:p>
+              </fr:mainmatter>
+            </fr:tree>
+            <fr:tree show-metadata="false">
+              <fr:frontmatter>
+                <fr:authors>
+                  <fr:author>
+                    <fr:link href="/stevenschaefer/" title="Steven Schaefer" uri="https://stevenschaefer.net/stevenschaefer/" display-uri="stevenschaefer" type="local">Steven Schaefer</fr:link>
+                  </fr:author>
+                </fr:authors>
+                <fr:date>
+                  <fr:year>2026</fr:year>
+                  <fr:month>7</fr:month>
+                  <fr:day>17</fr:day>
+                </fr:date>
+                <fr:source-path>/Users/stevenschaefer/forest/trees/sss-00F6.tree</fr:source-path>
+                <fr:title text="Semantics, soundness, and the parser">Semantics, soundness, and the parser</fr:title>
+              </fr:frontmatter>
+              <fr:mainmatter>
+                <html:p>Interpret into grammars — <html:code>var</html:code> as the guarded fixpoint (this is
+where the datatype's guard earns its keep, making the <fr:tex display="inline"><![CDATA[\mu ]]></fr:tex> well-defined
+via <fr:link href="/sss-00BE/" title="State and Attempt Löb Induction for ▷" uri="https://stevenschaefer.net/sss-00BE/" display-uri="sss-00BE" type="local"><html:code>lob</html:code></fr:link>) — and prove the <fr:link href="/sss-00A7/" title="Linear Residual ⟜ as Brzozowski Derivative" uri="https://stevenschaefer.net/sss-00A7/" display-uri="sss-00A7" type="local">Brzozowski iso</fr:link> by
+induction on <html:code>CFGDesc</html:code>, its <html:code>var</html:code> case discharged by one
+<fr:tex display="inline"><![CDATA[\mu ]]></fr:tex>-unfold. Then the <fr:link href="/sss-00F4/" title="Automaton parsers via Löb" uri="https://stevenschaefer.net/sss-00F4/" display-uri="sss-00F4" type="local">generic Löb parser</fr:link>.</html:p>
+                <html:pre><![CDATA[⟦_⟧ : CFGDesc → Grammar               -- var ↦ μ (guarded), ⊗/⊕/lit/I/⊥ pointwise
+
+δ-sound : (c : Alphabet)(G : CFGDesc) → ⟦ δ c G ⟧ ≅ ⟦ G ⟧ ⟜ lit c
+δ-sound c G = {!!}                     -- induction on G; var: μ-unfold + guard
+
+Ans : CFGDesc → Grammar
+Ans G = ⟦ G ⟧ ⊕ ¬ ⟦ G ⟧
+
+parse : (G : CFGDesc) → ⊤ ⊢ Ans G
+parse = lob λ rec G →
+  {!!}   -- ⊤ ≅ I ⊕ ⊕[c] ⌈c⌉ ⊗ ▷⊤ ;  at I: ν? G ;  at ⌈c⌉⊗▷: transport (rec (δ c G))]]></html:pre>
+                <html:p>The <html:code>parse</html:code> hole needs only: the guarded string decomposition of
+<fr:tex display="inline"><![CDATA[\top ]]></fr:tex> (box branch), the <fr:tex display="inline"><![CDATA[\rhd ]]></fr:tex>-guard discharge for the recursive call
+(<html:code>⌈c⌉ ⊗ (−)</html:code> factors through <fr:tex display="inline"><![CDATA[\rhd ]]></fr:tex>, <fr:link href="/sss-00EX/" title="Open recursion for grammars: the contextual Löb rule" uri="https://stevenschaefer.net/sss-00EX/" display-uri="sss-00EX" type="local">sss-00EX</fr:link>), and
+<html:code>δ-sound</html:code> to move the answer across. Totality and correctness are then
+<html:code>lob</html:code>'s uniqueness.</html:p>
+              </fr:mainmatter>
+            </fr:tree>
+            <fr:tree show-metadata="false">
+              <fr:frontmatter>
+                <fr:authors>
+                  <fr:author>
+                    <fr:link href="/stevenschaefer/" title="Steven Schaefer" uri="https://stevenschaefer.net/stevenschaefer/" display-uri="stevenschaefer" type="local">Steven Schaefer</fr:link>
+                  </fr:author>
+                </fr:authors>
+                <fr:date>
+                  <fr:year>2026</fr:year>
+                  <fr:month>7</fr:month>
+                  <fr:day>17</fr:day>
+                </fr:date>
+                <fr:source-path>/Users/stevenschaefer/forest/trees/sss-00F6.tree</fr:source-path>
+                <fr:title text="The real risk: does it compute?">The real risk: does it compute?</fr:title>
+              </fr:frontmatter>
+              <fr:mainmatter>
+                <html:p>Type-checking and proofs are the easy direction. <html:em>Reducing</html:em>
+<html:code>parse dyck "aabb"</html:code> by <html:code>refl</html:code> is the wall, and the constraints
+are known:</html:p>
+                <html:ul><html:li><html:code>lob</html:code> reduces by <html:code>refl</html:code> <html:em>only in Eq-world</html:em> — the
+well-founded order must be Eq-valued or <html:code>löbWF</html:code> sticks under
+<html:code>transp</html:code> (<fr:link href="/sss-00A8/" title="Parser by Well-Founded Recursion on String Length" uri="https://stevenschaefer.net/sss-00A8/" display-uri="sss-00A8" type="local">reference</fr:link>: the Eq-vs-transp Löb issue).</html:li>
+<html:li>Tensors must be <html:code>SplittingEq</html:code> from the start, or the
+<html:code>hcomp</html:code>/path-<html:code>Splittings</html:code> blowup that stalled witness evaluation
+returns.</html:li>
+<html:li>Derivative descriptions grow; <fr:link href="/sss-00EZ/" title="The guard makes δ total: derivative parsing for the guarded CFG fragment" uri="https://stevenschaefer.net/sss-00EZ/" display-uri="sss-00EZ" type="local">compaction</fr:link> (generic
+<fr:tex display="inline"><![CDATA[\bot ]]></fr:tex>/<fr:tex display="inline"><![CDATA[I]]></fr:tex> unit rewrites) is optional for correctness but may be
+load-bearing for <html:em>computation</html:em>.</html:li></html:ul>
+                <html:p>Empirically Dyck-style refl-evaluation was made tractable this way,
+while regex/greedy parsers did not terminate — so <html:strong>Dyck at refl is
+the first target</html:strong>; a general <html:code>CFGDesc</html:code> interpreter that computes is
+the open question, not a definability one.</html:p>
+              </fr:mainmatter>
+            </fr:tree>
+            <fr:tree show-metadata="false">
+              <fr:frontmatter>
+                <fr:authors>
+                  <fr:author>
+                    <fr:link href="/stevenschaefer/" title="Steven Schaefer" uri="https://stevenschaefer.net/stevenschaefer/" display-uri="stevenschaefer" type="local">Steven Schaefer</fr:link>
+                  </fr:author>
+                </fr:authors>
+                <fr:date>
+                  <fr:year>2026</fr:year>
+                  <fr:month>7</fr:month>
+                  <fr:day>17</fr:day>
+                </fr:date>
+                <fr:source-path>/Users/stevenschaefer/forest/trees/sss-00F6.tree</fr:source-path>
+                <fr:title text="Deliverables">Deliverables</fr:title>
+              </fr:frontmatter>
+              <fr:mainmatter>
+                <html:ol><html:li><html:code>CFGDesc</html:code> + <html:code>Production</html:code> datatype (guard structural), over
+the project's <html:code>Alphabet</html:code>.</html:li>
+<html:li><html:code>ν?</html:code>, <html:code>δ</html:code> (structural, total — no holes; termination free
+from the encoding).</html:li>
+<html:li><html:code>⟦_⟧</html:code> and <html:code>δ-sound</html:code> (holes; induction on <html:code>CFGDesc</html:code>,
+reusing the <html:code>brzozowski</html:code> regex soundness pattern).</html:li>
+<html:li><html:code>parse = lob …</html:code> (hole; reuses <html:code>box</html:code> <html:code>lob</html:code> + <fr:tex display="inline"><![CDATA[\rhd ]]></fr:tex>
+decomposition).</html:li>
+<html:li>Dyck instance; attempt <html:code>refl</html:code>-evaluation in Eq-world +
+<html:code>SplittingEq</html:code>; add compaction only if size blows up.</html:li></html:ol>
+                <html:p>Steps 1–2 are self-contained and hole-free; 3–4 are the real proof
+work; 5 is the empirical gate. Reuses, does not rebuild,
+<fr:link href="/sss-00A6/" title="Syntactic Derivatives on CFGDesc" uri="https://stevenschaefer.net/sss-00A6/" display-uri="sss-00A6" type="local">sss-00A6</fr:link>/<fr:link href="/sss-00A7/" title="Linear Residual ⟜ as Brzozowski Derivative" uri="https://stevenschaefer.net/sss-00A7/" display-uri="sss-00A7" type="local">sss-00A7</fr:link> (regex <fr:tex display="inline"><![CDATA[\delta ]]></fr:tex> + soundness) and
+<fr:link href="/sss-00BE/" title="State and Attempt Löb Induction for ▷" uri="https://stevenschaefer.net/sss-00BE/" display-uri="sss-00BE" type="local">sss-00BE</fr:link>/<fr:link href="/sss-00BD/" title="Construct next : A ⊢ ▷ A" uri="https://stevenschaefer.net/sss-00BD/" display-uri="sss-00BD" type="local">sss-00BD</fr:link> (<fr:tex display="inline"><![CDATA[\rhd ]]></fr:tex>/<html:code>lob</html:code>).</html:p>
+              </fr:mainmatter>
+            </fr:tree>
+          </fr:mainmatter>
+        </fr:tree>
+      </fr:mainmatter>
+    </fr:tree>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors />
+        <fr:title text="Related">Related</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter>
+        <fr:tree show-metadata="true" expanded="false" toc="false" numbered="false">
+          <fr:frontmatter>
+            <fr:authors>
+              <fr:author>
+                <fr:link href="/stevenschaefer/" title="Steven Schaefer" uri="https://stevenschaefer.net/stevenschaefer/" display-uri="stevenschaefer" type="local">Steven Schaefer</fr:link>
+              </fr:author>
+            </fr:authors>
+            <fr:date>
+              <fr:year>2026</fr:year>
+              <fr:month>7</fr:month>
+              <fr:day>17</fr:day>
+            </fr:date>
+            <fr:source-path>/Users/stevenschaefer/forest/trees/sss-00F4.tree</fr:source-path>
+            <fr:uri>https://stevenschaefer.net/sss-00F4/</fr:uri>
+            <fr:display-uri>sss-00F4</fr:display-uri>
+            <fr:route>/sss-00F4/</fr:route>
+            <fr:title text="Automaton parsers via Löb">Automaton parsers via Löb</fr:title>
+            <fr:taxon>Idea</fr:taxon>
+          </fr:frontmatter>
+          <fr:mainmatter>
+            <html:p>The <fr:link href="/sss-00F2/" title="The derivative parser is the run" uri="https://stevenschaefer.net/sss-00F2/" display-uri="sss-00F2" type="local">derivative parser</fr:link> is a guarded fixed point: recurse
+<html:em>inside</html:em> the calculus, the recursive call guarded by <fr:tex display="inline"><![CDATA[\rhd ]]></fr:tex> because it
+sits behind a consumed character. This is the entire implementation —
+there is no separate termination argument.</html:p>
+            <html:p>Package the parser as one grammar: the internal indexed product
+<fr:tex display="inline"><![CDATA[P := \mathchoice {\textstyle \And _{{\mathopen {}\left (G\right )\mathclose {}}}}{\textstyle \And _{{\mathopen {}\left (G\right )\mathclose {}}}}{\scriptstyle \And _{{\mathopen {}\left (G\right )\mathclose {}}}}{\scriptscriptstyle \And _{{\mathopen {}\left (G\right )\mathclose {}}}}\mathrm {Ans}_G]]></fr:tex> over the type of grammars (an internal
+<fr:tex display="inline"><![CDATA[\Pi ]]></fr:tex>, exactly the contextual-Löb setting of <fr:link href="/sss-00EX/" title="Open recursion for grammars: the contextual Löb rule" uri="https://stevenschaefer.net/sss-00EX/" display-uri="sss-00EX" type="local">sss-00EX</fr:link>,
+<fr:link href="/sss-00BZ/" title="Open directions for parser-combinators in dependent Lambek" uri="https://stevenschaefer.net/sss-00BZ/" display-uri="sss-00BZ" type="local">sss-00BZ</fr:link>). A recursive call at <fr:tex display="inline"><![CDATA[\delta _c G]]></fr:tex> sits behind a
+consumed <fr:tex display="inline"><![CDATA[c]]></fr:tex>, hence under <fr:tex display="inline"><![CDATA[\rhd ]]></fr:tex>, so it is available in <fr:tex display="inline"><![CDATA[\rhd  P]]></fr:tex>.</html:p>
+            <html:pre><![CDATA[step : ▷ P ⊢ P
+step G = case-of-input
+  I               → ν? G              -- ε: no ▷ obligation, answer nullability
+  ⌈c⌉ ⊗ ▷P        → later (λ rec → transport (rec (δ c G)))
+                                      -- consumed c ⟹ recursive call is under ▷
+                                      -- δc (Ans G) ≅ Ans (δc G) transports the answer back
+
+parse : ⊤ ⊢ P
+parse = lob step                     -- lob : (▷ A ⊢ A) → (⊤ ⊢ A)]]></html:pre>
+            <html:p>Two points make this precise:</html:p>
+            <html:ul><html:li><html:strong>The guard is discharged by consumption.</html:strong> The recursive
+occurrence is at <fr:tex display="inline"><![CDATA[\delta _c G]]></fr:tex> behind a consumed <fr:tex display="inline"><![CDATA[c]]></fr:tex>, and
+<fr:tex display="inline"><![CDATA[\lceil {c}\rceil \otimes {\mathopen {}\left (-\right )\mathclose {}}]]></fr:tex> factors through <fr:tex display="inline"><![CDATA[\rhd ]]></fr:tex> (<fr:link href="/sss-00EX/" title="Open recursion for grammars: the contextual Löb rule" uri="https://stevenschaefer.net/sss-00EX/" display-uri="sss-00EX" type="local">sss-00EX</fr:link>)
+— the character you read <html:em>is</html:em> the step of <fr:tex display="inline"><![CDATA[\rhd ]]></fr:tex>, so the call lands in
+<fr:tex display="inline"><![CDATA[\rhd  P]]></fr:tex> and no separate termination argument is needed.</html:li>
+<html:li><html:strong>Löb closes it.</html:strong> <fr:tex display="inline"><![CDATA[\mathsf {lob} : {\mathopen {}\left (\rhd  A \vdash  A\right )\mathclose {}} \to 
+{\mathopen {}\left (\top  \vdash  A\right )\mathclose {}}]]></fr:tex> (<fr:link href="/sss-00BE/" title="State and Attempt Löb Induction for ▷" uri="https://stevenschaefer.net/sss-00BE/" display-uri="sss-00BE" type="local">sss-00BE</fr:link>) turns "given the parser later,
+build it now" into the global parser. This is the single-character
+specialisation of the <fr:tex display="inline"><![CDATA[{\mathopen {}\left (\mathrm {Brz}\right )\mathclose {}}]]></fr:tex> rule of <fr:link href="/sss-00EY/" title="Residual and derivative forms of Löb, and ◁ ⊣ ▷" uri="https://stevenschaefer.net/sss-00EY/" display-uri="sss-00EY" type="local">sss-00EY</fr:link>:
+Brzozowski descent <html:em>is</html:em> Löb read through <fr:tex display="inline"><![CDATA[\lhd  \dashv  \rhd ]]></fr:tex>.</html:li></html:ul>
+            <html:p><html:strong>Recursive grammars</html:strong> slot in the same way. Dyck over the
+bracket letters <fr:tex display="inline"><![CDATA[a, b]]></fr:tex>, <fr:tex display="inline"><![CDATA[D = I \oplus  \texttt {"}a\texttt {"}\otimes  D \otimes  \texttt {"}b\texttt {"}\otimes  D]]></fr:tex>,
+is itself <fr:tex display="inline"><![CDATA[\mathsf {lob}\,F]]></fr:tex> for guarded <fr:tex display="inline"><![CDATA[F]]></fr:tex> (<fr:link href="/sss-00AC/" title="Later Operator ▶ as Internalised Guard" uri="https://stevenschaefer.net/sss-00AC/" display-uri="sss-00AC" type="local">sss-00AC</fr:link>,
+<fr:link href="/sss-00EX/" title="Open recursion for grammars: the contextual Löb rule" uri="https://stevenschaefer.net/sss-00EX/" display-uri="sss-00EX" type="local">sss-00EX</fr:link>); running the parser on it needs <fr:tex display="inline"><![CDATA[\delta _c D]]></fr:tex>, which
+the <fr:link href="/sss-00EZ/" title="The guard makes δ total: derivative parsing for the guarded CFG fragment" uri="https://stevenschaefer.net/sss-00EZ/" display-uri="sss-00EZ" type="local">keystone</fr:link> supplies by a single unfold of <fr:tex display="inline"><![CDATA[F]]></fr:tex> (a finite
+residual over <fr:tex display="inline"><![CDATA[D]]></fr:tex>, no auxiliary fixed point), and <fr:tex display="inline"><![CDATA[\nu ?\,D]]></fr:tex> by the same
+guard. So both the grammar and its parser are guarded fixed points, and
+the guard is paid for, once, by reading a character.</html:p>
+            <html:p><html:strong>Summary.</html:strong> The automaton is a grammar with <fr:tex display="inline"><![CDATA[{\mathopen {}\left (\nu ,\ \delta \right )\mathclose {}}]]></fr:tex>
+(<fr:link href="/sss-00F3/" title="The internal automaton" uri="https://stevenschaefer.net/sss-00F3/" display-uri="sss-00F3" type="local">sss-00F3</fr:link>); the derivative parser is its run
+(<fr:link href="/sss-00F2/" title="The derivative parser is the run" uri="https://stevenschaefer.net/sss-00F2/" display-uri="sss-00F2" type="local">sss-00F2</fr:link>); Löb is what writes both the recursive grammars and
+the run as guarded fixed points, entirely inside the calculus. The general
+story of <fr:link href="/sss-00A9/" title="Parser as Unique c2a-Morphism of a Recursive Coalgebra" uri="https://stevenschaefer.net/sss-00A9/" display-uri="sss-00A9" type="local">sss-00A9</fr:link>/<fr:link href="/sss-00F0/" title="Parsing with derivatives for a locally contractive family of grammars" uri="https://stevenschaefer.net/sss-00F0/" display-uri="sss-00F0" type="local">sss-00F0</fr:link> reads the same run as a
+c2a-morphism / family hylomorphism with correctness = uniqueness.</html:p>
+          </fr:mainmatter>
+        </fr:tree>
+        <fr:tree show-metadata="true" expanded="false" toc="false" numbered="false">
+          <fr:frontmatter>
+            <fr:authors>
+              <fr:author>
+                <fr:link href="/stevenschaefer/" title="Steven Schaefer" uri="https://stevenschaefer.net/stevenschaefer/" display-uri="stevenschaefer" type="local">Steven Schaefer</fr:link>
+              </fr:author>
+            </fr:authors>
+            <fr:date>
+              <fr:year>2026</fr:year>
+              <fr:month>7</fr:month>
+              <fr:day>17</fr:day>
+            </fr:date>
+            <fr:source-path>/Users/stevenschaefer/forest/trees/sss-00F1.tree</fr:source-path>
+            <fr:uri>https://stevenschaefer.net/sss-00F1/</fr:uri>
+            <fr:display-uri>sss-00F1</fr:display-uri>
+            <fr:route>/sss-00F1/</fr:route>
+            <fr:title text="The derivative parser, the automaton, and Löb — end to end">The derivative parser, the automaton, and Löb — end to end</fr:title>
+            <fr:taxon>Idea</fr:taxon>
+          </fr:frontmatter>
+          <fr:mainmatter>
+            <html:p>A precise, self-contained account of three things the
+<fr:link href="/sss-00A3/" title="Plan: Derivative-Based CFG Parser via Recursive Coalgebras" uri="https://stevenschaefer.net/sss-00A3/" display-uri="sss-00A3" type="local">derivative-parser plan</fr:link> keeps circling, and how they fit
+together: <html:strong>(1)</html:strong> what the <html:em>derivative parser</html:em> is
+(<fr:link href="/sss-00F2/" title="The derivative parser is the run" uri="https://stevenschaefer.net/sss-00F2/" display-uri="sss-00F2" type="local">sss-00F2</fr:link>), <html:strong>(2)</html:strong> what an <html:em>automaton</html:em> is here
+(<fr:link href="/sss-00F3/" title="The internal automaton" uri="https://stevenschaefer.net/sss-00F3/" display-uri="sss-00F3" type="local">sss-00F3</fr:link>), and <html:strong>(3)</html:strong> how to <html:em>implement</html:em> automaton
+parsers by Löb induction (<fr:link href="/sss-00F4/" title="Automaton parsers via Löb" uri="https://stevenschaefer.net/sss-00F4/" display-uri="sss-00F4" type="local">sss-00F4</fr:link>). The emphasis is on
+getting the variances right — the tempting slogan "automata are
+coalgebras, parsers are algebras, glued by <fr:tex display="inline"><![CDATA[\mu =\nu ]]></fr:tex>" is imprecise, and
+the corrections are the point.</html:p>
+            <fr:tree show-metadata="false">
+              <fr:frontmatter>
+                <fr:authors>
+                  <fr:author>
+                    <fr:link href="/stevenschaefer/" title="Steven Schaefer" uri="https://stevenschaefer.net/stevenschaefer/" display-uri="stevenschaefer" type="local">Steven Schaefer</fr:link>
+                  </fr:author>
+                </fr:authors>
+                <fr:date>
+                  <fr:year>2026</fr:year>
+                  <fr:month>7</fr:month>
+                  <fr:day>17</fr:day>
+                </fr:date>
+                <fr:source-path>/Users/stevenschaefer/forest/trees/sss-00F1.tree</fr:source-path>
+                <fr:title text="Setup">Setup</fr:title>
+              </fr:frontmatter>
+              <fr:mainmatter>
+                <html:p><html:strong>Calculus.</html:strong> Everything is internal to the dependent Lambek
+calculus: grammars are its linear types, <fr:tex display="inline"><![CDATA[A \vdash  B]]></fr:tex> is entailment, and
+<fr:tex display="inline"><![CDATA[\otimes , \multimap , \oplus , \mathrel {\And }, I, \top , \bot ]]></fr:tex> are the internal type
+formers. Write <fr:tex display="inline"><![CDATA[\lceil {c}\rceil ]]></fr:tex> for the one-letter grammar. No appeal to an
+external model or to string length.</html:p>
+                <html:p><html:strong>Derivative (internal).</html:strong> <fr:tex display="inline"><![CDATA[\delta _c A]]></fr:tex> is the residual right
+adjoint of <fr:tex display="inline"><![CDATA[\lceil {c}\rceil  \otimes  {\mathopen {}\left (-\right )\mathclose {}}]]></fr:tex>:
+<fr:tex display="inline"><![CDATA[\lceil {c}\rceil  \otimes  {\mathopen {}\left (-\right )\mathclose {}} \;\dashv \; \delta _c]]></fr:tex>. It is the linear
+residual of <fr:link href="/sss-00A7/" title="Linear Residual ⟜ as Brzozowski Derivative" uri="https://stevenschaefer.net/sss-00A7/" display-uri="sss-00A7" type="local">sss-00A7</fr:link> (there written <html:code>A ⟜ char c</html:code>), an
+<html:em>internal</html:em> grammar — a linear hom — so the <fr:link href="/sss-00F3/" title="The internal automaton" uri="https://stevenschaefer.net/sss-00F3/" display-uri="sss-00F3" type="local">automaton</fr:link>
+transition is an operation of the calculus, not a map on an external state
+set. See also the <fr:link href="/sss-00A6/" title="Syntactic Derivatives on CFGDesc" uri="https://stevenschaefer.net/sss-00A6/" display-uri="sss-00A6" type="local">syntactic derivative</fr:link>.</html:p>
+                <html:p><html:strong>Nullability.</html:strong> <fr:tex display="inline"><![CDATA[\nu  A]]></fr:tex> is the <fr:tex display="inline"><![CDATA[\varepsilon ]]></fr:tex>-part
+(<fr:tex display="inline"><![CDATA[{\mathopen {}\left (\nu  A\right )\mathclose {}}\,\varepsilon  = A\,\varepsilon ]]></fr:tex>, <fr:tex display="inline"><![CDATA[\bot ]]></fr:tex> elsewhere);
+<fr:tex display="inline"><![CDATA[\nu ?\,A]]></fr:tex> its decision. On the <fr:link href="/sss-00AC/" title="Later Operator ▶ as Internalised Guard" uri="https://stevenschaefer.net/sss-00AC/" display-uri="sss-00AC" type="local">guarded fragment</fr:link> both are
+finite structural computations, no fixed point (<fr:link href="/sss-00EZ/" title="The guard makes δ total: derivative parsing for the guarded CFG fragment" uri="https://stevenschaefer.net/sss-00EZ/" display-uri="sss-00EZ" type="local">keystone</fr:link>).</html:p>
+                <html:p><html:strong>Later.</html:strong> <fr:tex display="inline"><![CDATA[{\mathopen {}\left (\rhd  A\right )\mathclose {}}\,w = \prod _{u \sqsubset  w} A\,u]]></fr:tex>
+(product over proper suffixes), with <fr:tex display="inline"><![CDATA[\lhd  \dashv  \rhd ]]></fr:tex> and the adjoint
+tower <fr:tex display="inline"><![CDATA[\lceil {w}\rceil \otimes {\mathopen {}\left (-\right )\mathclose {}} \dashv  \delta _w \dashv  \sqrt [w]{}]]></fr:tex> of
+<fr:link href="/sss-00EY/" title="Residual and derivative forms of Löb, and ◁ ⊣ ▷" uri="https://stevenschaefer.net/sss-00EY/" display-uri="sss-00EY" type="local">sss-00EY</fr:link>. The one fact we need downstream:
+<fr:tex display="inline"><![CDATA[\lceil {c}\rceil \otimes {\mathopen {}\left (-\right )\mathclose {}}]]></fr:tex> factors through <fr:tex display="inline"><![CDATA[\rhd ]]></fr:tex> — consuming a
+character <html:em>is</html:em> one step of <fr:tex display="inline"><![CDATA[\rhd ]]></fr:tex> — so a recursive occurrence behind a
+consumed character is automatically <fr:tex display="inline"><![CDATA[\rhd ]]></fr:tex>-guarded
+(<fr:link href="/sss-00EX/" title="Open recursion for grammars: the contextual Löb rule" uri="https://stevenschaefer.net/sss-00EX/" display-uri="sss-00EX" type="local">sss-00EX</fr:link>).</html:p>
+              </fr:mainmatter>
+            </fr:tree>
+            <fr:tree show-metadata="false">
+              <fr:frontmatter>
+                <fr:authors>
+                  <fr:author>
+                    <fr:link href="/stevenschaefer/" title="Steven Schaefer" uri="https://stevenschaefer.net/stevenschaefer/" display-uri="stevenschaefer" type="local">Steven Schaefer</fr:link>
+                  </fr:author>
+                </fr:authors>
+                <fr:date>
+                  <fr:year>2026</fr:year>
+                  <fr:month>7</fr:month>
+                  <fr:day>17</fr:day>
+                </fr:date>
+                <fr:source-path>/Users/stevenschaefer/forest/trees/sss-00F2.tree</fr:source-path>
+                <fr:uri>https://stevenschaefer.net/sss-00F2/</fr:uri>
+                <fr:display-uri>sss-00F2</fr:display-uri>
+                <fr:route>/sss-00F2/</fr:route>
+                <fr:title text="The derivative parser is the run">The derivative parser is the run</fr:title>
+                <fr:taxon>Idea</fr:taxon>
+              </fr:frontmatter>
+              <fr:mainmatter>
+                <html:p>Fix the internal <html:strong>answer grammar</html:strong>
+<fr:tex display="inline"><![CDATA[\mathrm {Ans}_G := G \oplus  \neg  G]]></fr:tex> (decide-and-produce; the parse forest
+is the left injection). It carries two <html:em>free</html:em>, internal properties
+(setup in <fr:link href="/sss-00F1/" title="The derivative parser, the automaton, and Löb — end to end" uri="https://stevenschaefer.net/sss-00F1/" display-uri="sss-00F1" type="local">sss-00F1</fr:link>):</html:p>
+                <html:ul><html:li><html:strong>nullability</html:strong> <fr:tex display="inline"><![CDATA[\nu ?\,G]]></fr:tex>, a decision of <fr:tex display="inline"><![CDATA[\nu  G]]></fr:tex>: the map that
+at <fr:tex display="inline"><![CDATA[\varepsilon ]]></fr:tex> picks an inhabitant of <fr:tex display="inline"><![CDATA[\mathrm {Ans}_G]]></fr:tex>. Finite and
+structural on the <fr:link href="/sss-00EZ/" title="The guard makes δ total: derivative parsing for the guarded CFG fragment" uri="https://stevenschaefer.net/sss-00EZ/" display-uri="sss-00EZ" type="local">guarded fragment</fr:link>.</html:li>
+<html:li><html:strong>derivative commutes</html:strong>
+<fr:tex display="inline"><![CDATA[\delta _c \mathrm {Ans}_G \;\cong \; \mathrm {Ans}_{\delta _c G}]]></fr:tex>, since
+<fr:tex display="inline"><![CDATA[\delta _c]]></fr:tex> is a right adjoint (preserves <fr:tex display="inline"><![CDATA[\oplus ]]></fr:tex>) and commutes with
+<fr:tex display="inline"><![CDATA[\neg ]]></fr:tex>. Definitional.</html:li></html:ul>
+                <html:p>The <html:strong>derivative parser</html:strong> of <fr:tex display="inline"><![CDATA[G]]></fr:tex> is the entailment</html:p>
+                <fr:tex display="block"><![CDATA[\mathsf {parse}_G \;:\; \top  \;\vdash \; \mathrm {Ans}_G,]]></fr:tex>
+                <html:p>read off the guarded first-character decomposition
+<fr:tex display="inline"><![CDATA[\top  \;\cong \; I \;\oplus \; \bigoplus _c \lceil {c}\rceil \otimes \rhd \top ]]></fr:tex>: at
+the <fr:tex display="inline"><![CDATA[I]]></fr:tex> summand answer <fr:tex display="inline"><![CDATA[\nu ?\,G]]></fr:tex>; at the
+<fr:tex display="inline"><![CDATA[\lceil {c}\rceil \otimes \rhd \top ]]></fr:tex> summand consume <fr:tex display="inline"><![CDATA[c]]></fr:tex> and, <html:em>later</html:em>, run
+<fr:tex display="inline"><![CDATA[\mathsf {parse}_{\delta _c G}]]></fr:tex>, transporting the result along
+<fr:tex display="inline"><![CDATA[\delta _c \mathrm {Ans}_G \cong  \mathrm {Ans}_{\delta _c G}]]></fr:tex>. So the parser
+<html:strong>walks the input, replacing <fr:tex display="inline"><![CDATA[G]]></fr:tex> by <fr:tex display="inline"><![CDATA[\delta _c G]]></fr:tex> at each
+character, and answers with <fr:tex display="inline"><![CDATA[\nu ?]]></fr:tex> at the end</html:strong> — the <fr:link href="/sss-00F3/" title="The internal automaton" uri="https://stevenschaefer.net/sss-00F3/" display-uri="sss-00F3" type="local">automaton
+run</fr:link>, closed by <fr:link href="/sss-00F4/" title="Automaton parsers via Löb" uri="https://stevenschaefer.net/sss-00F4/" display-uri="sss-00F4" type="local">Löb</fr:link>.</html:p>
+                <html:p><html:strong>Why it is a run, not a single-carrier fold.</html:strong> Unfolding a
+<fr:tex display="inline"><![CDATA[\Phi ]]></fr:tex>-algebra on a grammar <fr:tex display="inline"><![CDATA[A]]></fr:tex>, for
+<fr:tex display="inline"><![CDATA[\Phi  X = I \oplus  \bigoplus _c \lceil {c}\rceil \otimes  X]]></fr:tex> (via the coproduct
+and <fr:tex display="inline"><![CDATA[\lceil {c}\rceil \otimes {\mathopen {}\left (-\right )\mathclose {}}\dashv \delta _c]]></fr:tex>), yields a base
+<fr:tex display="inline"><![CDATA[I \vdash  A]]></fr:tex> plus <html:em>prepend</html:em> maps <fr:tex display="inline"><![CDATA[A \vdash  \delta _c A]]></fr:tex>. For
+<fr:tex display="inline"><![CDATA[A = \mathrm {Ans}_G]]></fr:tex> the required prepend
+<fr:tex display="inline"><![CDATA[\mathrm {Ans}_G \vdash  \mathrm {Ans}_{\delta _c G}]]></fr:tex> does not exist —
+deciding <fr:tex display="inline"><![CDATA[G]]></fr:tex> does not decide <fr:tex display="inline"><![CDATA[\delta _c G]]></fr:tex>. The run instead transports
+the answer the <html:em>other</html:em> way,
+<fr:tex display="inline"><![CDATA[\delta _c\mathrm {Ans}_G \cong  \mathrm {Ans}_{\delta _c G}]]></fr:tex>, moving the
+grammar <fr:tex display="inline"><![CDATA[G \rightsquigarrow  \delta _c G]]></fr:tex> under the guard. So it is not a
+catamorphism into a fixed carrier; it is the guarded unfolding of
+<fr:link href="/sss-00F4/" title="Automaton parsers via Löb" uri="https://stevenschaefer.net/sss-00F4/" display-uri="sss-00F4" type="local">sss-00F4</fr:link>.</html:p>
+                <html:p>Existence and uniqueness are <fr:link href="/sss-00F4/" title="Automaton parsers via Löb" uri="https://stevenschaefer.net/sss-00F4/" display-uri="sss-00F4" type="local">Löb</fr:link>'s, internal to the
+calculus: the recursive occurrence sits under <fr:tex display="inline"><![CDATA[\rhd ]]></fr:tex>, so
+<fr:tex display="inline"><![CDATA[\mathsf {parse}_G]]></fr:tex> is the <html:em>unique</html:em> entailment satisfying the two
+clauses above. Uniqueness is the correctness statement — the c2a /
+family-hylomorphism reading of <fr:link href="/sss-00A9/" title="Parser as Unique c2a-Morphism of a Recursive Coalgebra" uri="https://stevenschaefer.net/sss-00A9/" display-uri="sss-00A9" type="local">sss-00A9</fr:link>/<fr:link href="/sss-00F0/" title="Parsing with derivatives for a locally contractive family of grammars" uri="https://stevenschaefer.net/sss-00F0/" display-uri="sss-00F0" type="local">sss-00F0</fr:link>.</html:p>
+              </fr:mainmatter>
+            </fr:tree>
+            <fr:tree show-metadata="false">
+              <fr:frontmatter>
+                <fr:authors>
+                  <fr:author>
+                    <fr:link href="/stevenschaefer/" title="Steven Schaefer" uri="https://stevenschaefer.net/stevenschaefer/" display-uri="stevenschaefer" type="local">Steven Schaefer</fr:link>
+                  </fr:author>
+                </fr:authors>
+                <fr:date>
+                  <fr:year>2026</fr:year>
+                  <fr:month>7</fr:month>
+                  <fr:day>17</fr:day>
+                </fr:date>
+                <fr:source-path>/Users/stevenschaefer/forest/trees/sss-00F3.tree</fr:source-path>
+                <fr:uri>https://stevenschaefer.net/sss-00F3/</fr:uri>
+                <fr:display-uri>sss-00F3</fr:display-uri>
+                <fr:route>/sss-00F3/</fr:route>
+                <fr:title text="The internal automaton">The internal automaton</fr:title>
+                <fr:taxon>Idea</fr:taxon>
+              </fr:frontmatter>
+              <fr:mainmatter>
+                <html:p>An <html:strong>automaton</html:strong> is a grammar <fr:tex display="inline"><![CDATA[A]]></fr:tex> read as a <fr:tex display="inline"><![CDATA[\rhd ]]></fr:tex>-guarded
+coalgebra of internal Brzozowski shape: an output <fr:tex display="inline"><![CDATA[\nu  A]]></fr:tex> and, per letter
+<fr:tex display="inline"><![CDATA[c]]></fr:tex>, a transition to the derivative <fr:tex display="inline"><![CDATA[\delta _c A]]></fr:tex>. Both are internal —
+the transition is the linear residual <fr:tex display="inline"><![CDATA[\delta _c A]]></fr:tex> (right adjoint of
+<fr:tex display="inline"><![CDATA[\lceil {c}\rceil \otimes {\mathopen {}\left (-\right )\mathclose {}}]]></fr:tex>; <html:code>A ⟜ char c</html:code> of <fr:link href="/sss-00A7/" title="Linear Residual ⟜ as Brzozowski Derivative" uri="https://stevenschaefer.net/sss-00A7/" display-uri="sss-00A7" type="local">sss-00A7</fr:link>),
+an operation of the calculus, not a map on a state set outside it.</html:p>
+                <html:p>The coalgebra law is the <html:strong>first-character decomposition</html:strong>, an
+internal isomorphism</html:p>
+                <fr:tex display="block"><![CDATA[A \;\cong \; \nu  A \;\oplus \; \bigoplus _c \lceil {c}\rceil \otimes \delta _c A.]]></fr:tex>
+                <html:p>It is <html:em>guarded</html:em>: <fr:tex display="inline"><![CDATA[\lceil {c}\rceil \otimes {\mathopen {}\left (-\right )\mathclose {}}]]></fr:tex> factors through <fr:tex display="inline"><![CDATA[\rhd ]]></fr:tex>
+(<fr:link href="/sss-00EX/" title="Open recursion for grammars: the contextual Löb rule" uri="https://stevenschaefer.net/sss-00EX/" display-uri="sss-00EX" type="local">sss-00EX</fr:link>), so each recursive occurrence <fr:tex display="inline"><![CDATA[\delta _c A]]></fr:tex> sits
+under a <fr:tex display="inline"><![CDATA[\rhd ]]></fr:tex>. Every grammar carries this canonically — the derivative
+<html:em>is</html:em> the transition — so "automaton" is not extra data but the internal
+reading of a grammar as its own Brzozowski coalgebra.</html:p>
+                <fr:tree show-metadata="false">
+                  <fr:frontmatter>
+                    <fr:authors>
+                      <fr:author>
+                        <fr:link href="/stevenschaefer/" title="Steven Schaefer" uri="https://stevenschaefer.net/stevenschaefer/" display-uri="stevenschaefer" type="local">Steven Schaefer</fr:link>
+                      </fr:author>
+                    </fr:authors>
+                    <fr:date>
+                      <fr:year>2026</fr:year>
+                      <fr:month>7</fr:month>
+                      <fr:day>17</fr:day>
+                    </fr:date>
+                    <fr:source-path>/Users/stevenschaefer/forest/trees/sss-00F3.tree</fr:source-path>
+                    <fr:title text="The state space is internal, and Löb runs it without enumerating it">The state space is internal, and Löb runs it without enumerating it</fr:title>
+                  </fr:frontmatter>
+                  <fr:mainmatter>
+                    <html:p>Reading <fr:tex display="inline"><![CDATA[w]]></fr:tex> moves <fr:tex display="inline"><![CDATA[A]]></fr:tex> to the iterated residual <fr:tex display="inline"><![CDATA[\delta _w A]]></fr:tex>; the
+reachable states are these residuals, an internal family. For
+non-regular <fr:tex display="inline"><![CDATA[A]]></fr:tex> it is not finitely presented (e.g. Dyck's unbounded
+stack), but that never obstructs a parse: the <fr:link href="/sss-00F2/" title="The derivative parser is the run" uri="https://stevenschaefer.net/sss-00F2/" display-uri="sss-00F2" type="local">run</fr:link> is a
+<fr:link href="/sss-00F4/" title="Automaton parsers via Löb" uri="https://stevenschaefer.net/sss-00F4/" display-uri="sss-00F4" type="local">Löb</fr:link> fixed point visiting only the states along the input,
+generating each transition <fr:tex display="inline"><![CDATA[\delta _c]]></fr:tex> on demand. There is nothing to
+enumerate.</html:p>
+                    <html:p><html:strong>One internal caveat on variance.</html:strong> The decomposition above
+exhibits <fr:tex display="inline"><![CDATA[A]]></fr:tex> as an <html:em>algebra-shaped</html:em> fixed point through a free iso.
+The genuinely-extra coalgebra structure is
+<fr:tex display="inline"><![CDATA[\mathsf {next} : A \vdash  \rhd  A]]></fr:tex> (suffix-closure), which is <html:em>not</html:em>
+free (<fr:link href="/sss-00BD/" title="Construct next : A ⊢ ▷ A" uri="https://stevenschaefer.net/sss-00BD/" display-uri="sss-00BD" type="local">sss-00BD</fr:link>) — via <fr:tex display="inline"><![CDATA[\lhd  \dashv  \rhd ]]></fr:tex> it is equivalently
+<fr:tex display="inline"><![CDATA[\lhd  A \vdash  A]]></fr:tex>, "every derivative maps back into <fr:tex display="inline"><![CDATA[A]]></fr:tex>". The run needs
+neither <fr:tex display="inline"><![CDATA[\mathsf {next}]]></fr:tex> nor any chosen coalgebra as extra data — only
+<fr:tex display="inline"><![CDATA[\nu ]]></fr:tex> and <fr:tex display="inline"><![CDATA[\delta ]]></fr:tex> — but the gap is why <html:em>observing</html:em> (a <fr:tex display="inline"><![CDATA[\rhd ]]></fr:tex>-
+coalgebra) and <html:em>building</html:em> (a Löb fixed point) are distinct internal
+capabilities, related by <fr:tex display="inline"><![CDATA[\lhd \dashv \rhd ]]></fr:tex> rather than equal.</html:p>
+                  </fr:mainmatter>
+                </fr:tree>
+              </fr:mainmatter>
+            </fr:tree>
+            <fr:tree show-metadata="false">
+              <fr:frontmatter>
+                <fr:authors>
+                  <fr:author>
+                    <fr:link href="/stevenschaefer/" title="Steven Schaefer" uri="https://stevenschaefer.net/stevenschaefer/" display-uri="stevenschaefer" type="local">Steven Schaefer</fr:link>
+                  </fr:author>
+                </fr:authors>
+                <fr:date>
+                  <fr:year>2026</fr:year>
+                  <fr:month>7</fr:month>
+                  <fr:day>17</fr:day>
+                </fr:date>
+                <fr:source-path>/Users/stevenschaefer/forest/trees/sss-00F4.tree</fr:source-path>
+                <fr:uri>https://stevenschaefer.net/sss-00F4/</fr:uri>
+                <fr:display-uri>sss-00F4</fr:display-uri>
+                <fr:route>/sss-00F4/</fr:route>
+                <fr:title text="Automaton parsers via Löb">Automaton parsers via Löb</fr:title>
+                <fr:taxon>Idea</fr:taxon>
+              </fr:frontmatter>
+              <fr:mainmatter>
+                <html:p>The <fr:link href="/sss-00F2/" title="The derivative parser is the run" uri="https://stevenschaefer.net/sss-00F2/" display-uri="sss-00F2" type="local">derivative parser</fr:link> is a guarded fixed point: recurse
+<html:em>inside</html:em> the calculus, the recursive call guarded by <fr:tex display="inline"><![CDATA[\rhd ]]></fr:tex> because it
+sits behind a consumed character. This is the entire implementation —
+there is no separate termination argument.</html:p>
+                <html:p>Package the parser as one grammar: the internal indexed product
+<fr:tex display="inline"><![CDATA[P := \mathchoice {\textstyle \And _{{\mathopen {}\left (G\right )\mathclose {}}}}{\textstyle \And _{{\mathopen {}\left (G\right )\mathclose {}}}}{\scriptstyle \And _{{\mathopen {}\left (G\right )\mathclose {}}}}{\scriptscriptstyle \And _{{\mathopen {}\left (G\right )\mathclose {}}}}\mathrm {Ans}_G]]></fr:tex> over the type of grammars (an internal
+<fr:tex display="inline"><![CDATA[\Pi ]]></fr:tex>, exactly the contextual-Löb setting of <fr:link href="/sss-00EX/" title="Open recursion for grammars: the contextual Löb rule" uri="https://stevenschaefer.net/sss-00EX/" display-uri="sss-00EX" type="local">sss-00EX</fr:link>,
+<fr:link href="/sss-00BZ/" title="Open directions for parser-combinators in dependent Lambek" uri="https://stevenschaefer.net/sss-00BZ/" display-uri="sss-00BZ" type="local">sss-00BZ</fr:link>). A recursive call at <fr:tex display="inline"><![CDATA[\delta _c G]]></fr:tex> sits behind a
+consumed <fr:tex display="inline"><![CDATA[c]]></fr:tex>, hence under <fr:tex display="inline"><![CDATA[\rhd ]]></fr:tex>, so it is available in <fr:tex display="inline"><![CDATA[\rhd  P]]></fr:tex>.</html:p>
+                <html:pre><![CDATA[step : ▷ P ⊢ P
+step G = case-of-input
+  I               → ν? G              -- ε: no ▷ obligation, answer nullability
+  ⌈c⌉ ⊗ ▷P        → later (λ rec → transport (rec (δ c G)))
+                                      -- consumed c ⟹ recursive call is under ▷
+                                      -- δc (Ans G) ≅ Ans (δc G) transports the answer back
+
+parse : ⊤ ⊢ P
+parse = lob step                     -- lob : (▷ A ⊢ A) → (⊤ ⊢ A)]]></html:pre>
+                <html:p>Two points make this precise:</html:p>
+                <html:ul><html:li><html:strong>The guard is discharged by consumption.</html:strong> The recursive
+occurrence is at <fr:tex display="inline"><![CDATA[\delta _c G]]></fr:tex> behind a consumed <fr:tex display="inline"><![CDATA[c]]></fr:tex>, and
+<fr:tex display="inline"><![CDATA[\lceil {c}\rceil \otimes {\mathopen {}\left (-\right )\mathclose {}}]]></fr:tex> factors through <fr:tex display="inline"><![CDATA[\rhd ]]></fr:tex> (<fr:link href="/sss-00EX/" title="Open recursion for grammars: the contextual Löb rule" uri="https://stevenschaefer.net/sss-00EX/" display-uri="sss-00EX" type="local">sss-00EX</fr:link>)
+— the character you read <html:em>is</html:em> the step of <fr:tex display="inline"><![CDATA[\rhd ]]></fr:tex>, so the call lands in
+<fr:tex display="inline"><![CDATA[\rhd  P]]></fr:tex> and no separate termination argument is needed.</html:li>
+<html:li><html:strong>Löb closes it.</html:strong> <fr:tex display="inline"><![CDATA[\mathsf {lob} : {\mathopen {}\left (\rhd  A \vdash  A\right )\mathclose {}} \to 
+{\mathopen {}\left (\top  \vdash  A\right )\mathclose {}}]]></fr:tex> (<fr:link href="/sss-00BE/" title="State and Attempt Löb Induction for ▷" uri="https://stevenschaefer.net/sss-00BE/" display-uri="sss-00BE" type="local">sss-00BE</fr:link>) turns "given the parser later,
+build it now" into the global parser. This is the single-character
+specialisation of the <fr:tex display="inline"><![CDATA[{\mathopen {}\left (\mathrm {Brz}\right )\mathclose {}}]]></fr:tex> rule of <fr:link href="/sss-00EY/" title="Residual and derivative forms of Löb, and ◁ ⊣ ▷" uri="https://stevenschaefer.net/sss-00EY/" display-uri="sss-00EY" type="local">sss-00EY</fr:link>:
+Brzozowski descent <html:em>is</html:em> Löb read through <fr:tex display="inline"><![CDATA[\lhd  \dashv  \rhd ]]></fr:tex>.</html:li></html:ul>
+                <html:p><html:strong>Recursive grammars</html:strong> slot in the same way. Dyck over the
+bracket letters <fr:tex display="inline"><![CDATA[a, b]]></fr:tex>, <fr:tex display="inline"><![CDATA[D = I \oplus  \texttt {"}a\texttt {"}\otimes  D \otimes  \texttt {"}b\texttt {"}\otimes  D]]></fr:tex>,
+is itself <fr:tex display="inline"><![CDATA[\mathsf {lob}\,F]]></fr:tex> for guarded <fr:tex display="inline"><![CDATA[F]]></fr:tex> (<fr:link href="/sss-00AC/" title="Later Operator ▶ as Internalised Guard" uri="https://stevenschaefer.net/sss-00AC/" display-uri="sss-00AC" type="local">sss-00AC</fr:link>,
+<fr:link href="/sss-00EX/" title="Open recursion for grammars: the contextual Löb rule" uri="https://stevenschaefer.net/sss-00EX/" display-uri="sss-00EX" type="local">sss-00EX</fr:link>); running the parser on it needs <fr:tex display="inline"><![CDATA[\delta _c D]]></fr:tex>, which
+the <fr:link href="/sss-00EZ/" title="The guard makes δ total: derivative parsing for the guarded CFG fragment" uri="https://stevenschaefer.net/sss-00EZ/" display-uri="sss-00EZ" type="local">keystone</fr:link> supplies by a single unfold of <fr:tex display="inline"><![CDATA[F]]></fr:tex> (a finite
+residual over <fr:tex display="inline"><![CDATA[D]]></fr:tex>, no auxiliary fixed point), and <fr:tex display="inline"><![CDATA[\nu ?\,D]]></fr:tex> by the same
+guard. So both the grammar and its parser are guarded fixed points, and
+the guard is paid for, once, by reading a character.</html:p>
+                <html:p><html:strong>Summary.</html:strong> The automaton is a grammar with <fr:tex display="inline"><![CDATA[{\mathopen {}\left (\nu ,\ \delta \right )\mathclose {}}]]></fr:tex>
+(<fr:link href="/sss-00F3/" title="The internal automaton" uri="https://stevenschaefer.net/sss-00F3/" display-uri="sss-00F3" type="local">sss-00F3</fr:link>); the derivative parser is its run
+(<fr:link href="/sss-00F2/" title="The derivative parser is the run" uri="https://stevenschaefer.net/sss-00F2/" display-uri="sss-00F2" type="local">sss-00F2</fr:link>); Löb is what writes both the recursive grammars and
+the run as guarded fixed points, entirely inside the calculus. The general
+story of <fr:link href="/sss-00A9/" title="Parser as Unique c2a-Morphism of a Recursive Coalgebra" uri="https://stevenschaefer.net/sss-00A9/" display-uri="sss-00A9" type="local">sss-00A9</fr:link>/<fr:link href="/sss-00F0/" title="Parsing with derivatives for a locally contractive family of grammars" uri="https://stevenschaefer.net/sss-00F0/" display-uri="sss-00F0" type="local">sss-00F0</fr:link> reads the same run as a
+c2a-morphism / family hylomorphism with correctness = uniqueness.</html:p>
+              </fr:mainmatter>
+            </fr:tree>
+            <fr:tree show-metadata="false">
+              <fr:frontmatter>
+                <fr:authors>
+                  <fr:author>
+                    <fr:link href="/stevenschaefer/" title="Steven Schaefer" uri="https://stevenschaefer.net/stevenschaefer/" display-uri="stevenschaefer" type="local">Steven Schaefer</fr:link>
+                  </fr:author>
+                </fr:authors>
+                <fr:date>
+                  <fr:year>2026</fr:year>
+                  <fr:month>7</fr:month>
+                  <fr:day>17</fr:day>
+                </fr:date>
+                <fr:source-path>/Users/stevenschaefer/forest/trees/sss-00F1.tree</fr:source-path>
+                <fr:title text="The pipeline">The pipeline</fr:title>
+              </fr:frontmatter>
+              <fr:mainmatter>
+                <html:p>To parse a grammar <fr:tex display="inline"><![CDATA[G]]></fr:tex> (possibly recursively defined):</html:p>
+                <html:ol><html:li><html:strong>Define</html:strong> <fr:tex display="inline"><![CDATA[G]]></fr:tex> by guarded fixed point — <fr:tex display="inline"><![CDATA[G = \mathsf {lob}\,F]]></fr:tex>
+for guarded <fr:tex display="inline"><![CDATA[F]]></fr:tex> (<fr:link href="/sss-00EX/" title="Open recursion for grammars: the contextual Löb rule" uri="https://stevenschaefer.net/sss-00EX/" display-uri="sss-00EX" type="local">sss-00EX</fr:link>, <fr:link href="/sss-00AC/" title="Later Operator ▶ as Internalised Guard" uri="https://stevenschaefer.net/sss-00AC/" display-uri="sss-00AC" type="local">sss-00AC</fr:link>).</html:li>
+<html:li><html:strong>Derive</html:strong> <fr:tex display="inline"><![CDATA[\delta _c G]]></fr:tex> total, by one unfold of <fr:tex display="inline"><![CDATA[F]]></fr:tex>
+(<fr:link href="/sss-00EZ/" title="The guard makes δ total: derivative parsing for the guarded CFG fragment" uri="https://stevenschaefer.net/sss-00EZ/" display-uri="sss-00EZ" type="local">keystone</fr:link>); <fr:tex display="inline"><![CDATA[\nu ?\,G]]></fr:tex> decidable by the same guard.</html:li>
+<html:li><html:strong>Run</html:strong> — <fr:tex display="inline"><![CDATA[\mathsf {parse} = \mathsf {lob}\,\mathsf {step}]]></fr:tex>
+(<fr:link href="/sss-00F4/" title="Automaton parsers via Löb" uri="https://stevenschaefer.net/sss-00F4/" display-uri="sss-00F4" type="local">sss-00F4</fr:link>), the automaton of <fr:link href="/sss-00F3/" title="The internal automaton" uri="https://stevenschaefer.net/sss-00F3/" display-uri="sss-00F3" type="local">sss-00F3</fr:link> executed on
+the input, recursion discharged by <fr:tex display="inline"><![CDATA[\rhd ]]></fr:tex>.</html:li></html:ol>
+                <html:p>Correctness is not a separate proof: each derivative step is an
+equality of answer types, so <fr:tex display="inline"><![CDATA[\mathsf {parse}]]></fr:tex> is the <html:em>unique</html:em> family
+satisfying its two defining equations — the uniqueness half of the
+<fr:link href="/sss-00A9/" title="Parser as Unique c2a-Morphism of a Recursive Coalgebra" uri="https://stevenschaefer.net/sss-00A9/" display-uri="sss-00A9" type="local">c2a-morphism</fr:link> reading, sharpened by <fr:link href="/sss-00F0/" title="Parsing with derivatives for a locally contractive family of grammars" uri="https://stevenschaefer.net/sss-00F0/" display-uri="sss-00F0" type="local">locally-contractive
+parsing</fr:link>.</html:p>
+              </fr:mainmatter>
+            </fr:tree>
+          </fr:mainmatter>
+        </fr:tree>
+        <fr:tree show-metadata="true" expanded="false" toc="false" numbered="false">
+          <fr:frontmatter>
+            <fr:authors>
+              <fr:author>
+                <fr:link href="/stevenschaefer/" title="Steven Schaefer" uri="https://stevenschaefer.net/stevenschaefer/" display-uri="stevenschaefer" type="local">Steven Schaefer</fr:link>
+              </fr:author>
+            </fr:authors>
+            <fr:date>
+              <fr:year>2026</fr:year>
+              <fr:month>7</fr:month>
+              <fr:day>16</fr:day>
+            </fr:date>
+            <fr:source-path>/Users/stevenschaefer/forest/trees/sss-00EZ.tree</fr:source-path>
+            <fr:uri>https://stevenschaefer.net/sss-00EZ/</fr:uri>
+            <fr:display-uri>sss-00EZ</fr:display-uri>
+            <fr:route>/sss-00EZ/</fr:route>
+            <fr:title text="The guard makes δ total: derivative parsing for the guarded CFG fragment">The guard makes δ total: derivative parsing for the guarded CFG fragment</fr:title>
+            <fr:taxon>Idea</fr:taxon>
+          </fr:frontmatter>
+          <fr:mainmatter>
+            <html:p><html:strong>Claim.</html:strong> If we restrict parsing-with-derivatives to the
+<html:em>guarded</html:em> (productive) grammar fragment — the same well-formedness
+condition of <fr:link href="/sss-00AC/" title="Later Operator ▶ as Internalised Guard" uri="https://stevenschaefer.net/sss-00AC/" display-uri="sss-00AC" type="local">sss-00AC</fr:link> that we already impose to make recursive
+grammar definitions meaningful — then the two things that make
+parsing-with-derivatives hard for general context-free grammars both
+disappear, and the derivative becomes an ordinary total, structurally-defined
+operation. This tree spells out <html:em>why</html:em>, because the reason is not obvious
+and is the whole basis for the feasibility claim.</html:p>
+            <html:p>Throughout, <html:code>ε</html:code> is the grammar matching only the empty string (the
+tensor unit), <html:code>⊥</html:code> the grammar matching nothing, <html:code>·</html:code> concatenation,
+<html:code>⊕</html:code> alternation, <html:code>A*</html:code> Kleene star, and <html:code>char a</html:code> the
+single-character grammar. <html:code>δ c G</html:code> is the <fr:link href="/sss-00A6/" title="Syntactic Derivatives on CFGDesc" uri="https://stevenschaefer.net/sss-00A6/" display-uri="sss-00A6" type="local">syntactic
+derivative</fr:link> and <html:code>ν? G</html:code> the <fr:link href="/sss-00A5/" title="Decidable Nullability for CFGDesc" uri="https://stevenschaefer.net/sss-00A5/" display-uri="sss-00A5" type="local">nullability</fr:link> gate
+(<html:code>ν? G = ε</html:code> if <html:code>G</html:code> accepts the empty string, else <html:code>⊥</html:code>).</html:p>
+            <fr:tree show-metadata="false">
+              <fr:frontmatter>
+                <fr:authors>
+                  <fr:author>
+                    <fr:link href="/stevenschaefer/" title="Steven Schaefer" uri="https://stevenschaefer.net/stevenschaefer/" display-uri="stevenschaefer" type="local">Steven Schaefer</fr:link>
+                  </fr:author>
+                </fr:authors>
+                <fr:date>
+                  <fr:year>2026</fr:year>
+                  <fr:month>7</fr:month>
+                  <fr:day>16</fr:day>
+                </fr:date>
+                <fr:source-path>/Users/stevenschaefer/forest/trees/sss-00EZ.tree</fr:source-path>
+                <fr:title text="Background: what parsing-with-derivatives does, and why general CFGs are hard">Background: what parsing-with-derivatives does, and why general CFGs are hard</fr:title>
+              </fr:frontmatter>
+              <fr:mainmatter>
+                <html:p>The Brzozowski derivative <html:code>δ c G</html:code> is "<html:code>G</html:code>, assuming the first
+character <html:code>c</html:code> has already been read": it is a proof-relevant iso
+<html:code>(δ c G) w ≅ G (c ∷ w)</html:code> (<fr:link href="/sss-00A7/" title="Linear Residual ⟜ as Brzozowski Derivative" uri="https://stevenschaefer.net/sss-00A7/" display-uri="sss-00A7" type="local">sss-00A7</fr:link>), so it <html:em>transports parse
+trees</html:em>, not just acceptance. <html:strong>Parsing</html:strong> is then a fold over the input —
+one derivative per character — that at the end reads off the empty-string parse
+trees of the residual and reshapes them back through the derivative isos into a
+parse of the whole input (the full construction, and why it is a genuine
+tree-producing parser rather than a recognizer, is <fr:link href="/sss-00F0/" title="Parsing with derivatives for a locally contractive family of grammars" uri="https://stevenschaefer.net/sss-00F0/" display-uri="sss-00F0" type="local">sss-00F0</fr:link>):</html:p>
+                <html:p>
+                  <html:code>parse G []      =  ε-parses of G</html:code>
+                </html:p>
+                <html:p>
+                  <html:code>parse G (c ∷ w) =  deriv⁻¹ (parse (δ c G) w)</html:code>
+                </html:p>
+                <html:p>Here <html:code>ν? </html:code> below is only the nullability <html:em>gate</html:em> inside <html:code>δ</html:code>'s
+definition (does the empty-string part exist), not the output.</html:p>
+                <html:p>The derivative is computed by pushing <html:code>δ c</html:code> through the grammar
+structure. The two rules that recurse into subgrammars are the ones to watch:</html:p>
+                <html:p>
+                  <html:code>δ c (A ⊕ B) = δ c A ⊕ δ c B</html:code>
+                </html:p>
+                <html:p>
+                  <html:code>δ c (A · B) = δ c A · B  ⊕  ν? A · δ c B</html:code>
+                </html:p>
+                <html:p>The product rule is the subtle one. Differentiating a concatenation
+<html:code>A · B</html:code> has two cases: either the first character came from <html:code>A</html:code>
+(giving <html:code>δ c A · B</html:code>), or <html:code>A</html:code> could match the empty string and the
+first character came from <html:code>B</html:code> (giving <html:code>δ c B</html:code>, but only if <html:code>A</html:code>
+is nullable — hence the <html:code>ν? A</html:code> gate).</html:p>
+                <html:p><html:strong>Where general CFGs break.</html:strong> For a <html:em>recursive</html:em> grammar the
+derivative can refer back to itself. Take the left-recursive
+<html:code>E = (E · char a) ⊕ char b</html:code>. Differentiating:</html:p>
+                <html:p>
+                  <html:code>δ a E = δ a (E · char a) ⊕ δ a (char b)
+             = (δ a E · char a ⊕ ν? E · δ a (char a)) ⊕ ⊥</html:code>
+                </html:p>
+                <html:p>which is an <html:em>equation defining <html:code>δ a E</html:code> in terms of <html:code>δ a E</html:code></html:em>.
+There is no structural computation here: <html:code>δ a E</html:code> can only be obtained as
+the least fixed point of that equation. This is exactly why the classical
+functional-pearl implementation (Might–Darais–Spiewak 2011) needs laziness,
+observable sharing, and memoized fixed points — and why nullability there is
+also a least-fixed-point computation. Both difficulties come from a nonterminal
+being reachable by <html:code>δ</html:code> <html:em>without any character being consumed first</html:em>.</html:p>
+              </fr:mainmatter>
+            </fr:tree>
+            <fr:tree show-metadata="false">
+              <fr:frontmatter>
+                <fr:authors>
+                  <fr:author>
+                    <fr:link href="/stevenschaefer/" title="Steven Schaefer" uri="https://stevenschaefer.net/stevenschaefer/" display-uri="stevenschaefer" type="local">Steven Schaefer</fr:link>
+                  </fr:author>
+                </fr:authors>
+                <fr:date>
+                  <fr:year>2026</fr:year>
+                  <fr:month>7</fr:month>
+                  <fr:day>16</fr:day>
+                </fr:date>
+                <fr:source-path>/Users/stevenschaefer/forest/trees/sss-00EZ.tree</fr:source-path>
+                <fr:title text="The keystone: guardedness cuts every self-differentiation branch">The keystone: guardedness cuts every self-differentiation branch</fr:title>
+              </fr:frontmatter>
+              <fr:mainmatter>
+                <html:p>A grammar is <html:strong>guarded</html:strong> when, in every production, each nonterminal
+occurrence is preceded by a non-nullable prefix — you cannot reach the
+nonterminal without first consuming at least one terminal. (<html:code>E</html:code> above is
+<html:em>not</html:em> guarded: its recursive <html:code>E</html:code> is the leading factor, preceded by
+nothing.)</html:p>
+                <html:p><html:strong>Keystone Lemma.</html:strong> On the guarded fragment, <html:code>δ c</html:code> is a total
+function definable by structural recursion, computed with one unfolding of
+each fixed point and <html:em>no</html:em> auxiliary fixed point or memoization; moreover it
+sends guarded grammars to guarded grammars.</html:p>
+                <html:p><html:strong>Why.</html:strong> The only way <html:code>δ c</html:code> fails to terminate structurally is
+if computing <html:code>δ c X</html:code> for a nonterminal <html:code>X</html:code> requires computing
+<html:code>δ c X</html:code> again — the cyclic equation we saw for <html:code>E</html:code>. That happens iff
+<html:code>δ c</html:code> can descend to a differentiated occurrence of <html:code>X</html:code>, i.e. iff
+<html:code>X</html:code> is reachable in the production body without passing a consuming
+prefix. Guardedness forbids exactly this. Consider where a guarded <html:code>X</html:code>
+sits: behind a non-nullable prefix <html:code>A</html:code>, as <html:code>A · (⋯X⋯)</html:code>. The product
+rule splits differentiation of <html:code>A · (⋯X⋯)</html:code> into two branches:</html:p>
+                <html:ul><html:li><html:code>δ c A · (⋯X⋯)</html:code> — keeps the <html:code>X</html:code>-containing tail <html:em>unchanged</html:em>,
+so <html:code>X</html:code> is carried along as an undifferentiated leaf; and</html:li>
+<html:li><html:code>ν? A · δ c (⋯X⋯)</html:code> — the branch that <html:em>would</html:em> recurse toward
+<html:code>δ c X</html:code>, but <html:code>A</html:code> is non-nullable, so <html:code>ν? A = ⊥</html:code> and this whole
+branch is <html:code>⊥</html:code>.</html:li></html:ul>
+                <html:p>So <html:code>δ c</html:code> reaches every nonterminal only through the first branch, as a
+leaf it does not differentiate. Concretely, computing <html:code>δ c X</html:code> for a
+guarded <html:code>X</html:code> unfolds <html:code>X</html:code>'s body once and makes a <html:em>single
+structural pass</html:em>, treating every nonterminal in the body (recursive or not) as
+an opaque leaf, because each is guarded and its <html:code>ν?</html:code>-gate is <html:code>⊥</html:code>.
+The pass therefore calls <html:code>δ c</html:code> on no nonterminal at all — it cannot
+diverge, and it cannot form a cycle (even a mutual one). The output is a finite
+expression over the <html:em>original</html:em> nonterminals. ∎</html:p>
+                <html:p>The contrast with <html:code>E</html:code>: for <html:code>E</html:code> the recursive
+occurrence has an <html:em>empty</html:em> (hence nullable) prefix, so the <html:code>ν? A</html:code> gate
+is <html:code>ε</html:code> rather than <html:code>⊥</html:code>, the second branch survives, and
+<html:code>δ a E</html:code> is forced to recurse into <html:code>δ a E</html:code>. The guard is precisely
+the syntactic condition that keeps that gate shut.</html:p>
+              </fr:mainmatter>
+            </fr:tree>
+            <fr:tree show-metadata="false">
+              <fr:frontmatter>
+                <fr:authors>
+                  <fr:author>
+                    <fr:link href="/stevenschaefer/" title="Steven Schaefer" uri="https://stevenschaefer.net/stevenschaefer/" display-uri="stevenschaefer" type="local">Steven Schaefer</fr:link>
+                  </fr:author>
+                </fr:authors>
+                <fr:date>
+                  <fr:year>2026</fr:year>
+                  <fr:month>7</fr:month>
+                  <fr:day>16</fr:day>
+                </fr:date>
+                <fr:source-path>/Users/stevenschaefer/forest/trees/sss-00EZ.tree</fr:source-path>
+                <fr:title text="Worked example: aⁿbⁿ (guarded, not regular)">Worked example: aⁿbⁿ (guarded, not regular)</fr:title>
+              </fr:frontmatter>
+              <fr:mainmatter>
+                <html:p>Let <html:code>S = (char a · S · char b) ⊕ ε</html:code>. The recursive <html:code>S</html:code> is guarded
+— it sits behind the non-nullable <html:code>char a</html:code>. First derivative:</html:p>
+                <html:p>
+                  <html:code>δ a S = δ a (char a · (S · char b)) ⊕ δ a ε</html:code>
+                </html:p>
+                <html:p>
+                  <html:code>      = [ δ a (char a) · (S · char b)  ⊕  ν?(char a) · δ a (S · char b) ] ⊕ ⊥</html:code>
+                </html:p>
+                <html:p>
+                  <html:code>      = [ ε · (S · char b)  ⊕  ⊥ · δ a (S · char b) ] ⊕ ⊥</html:code>
+                </html:p>
+                <html:p>
+                  <html:code>      = S · char b</html:code>
+                </html:p>
+                <html:p>Notice the second branch <html:code>ν?(char a) · δ a (S · char b)</html:code> became
+<html:code>⊥</html:code> because <html:code>ν?(char a) = ⊥</html:code>. This is the gate closing: we never had
+to compute <html:code>δ a (S · char b)</html:code>, so the computation of <html:code>δ a S</html:code>
+terminates in one unfold, and the result <html:code>S · char b</html:code> carries the
+<html:em>original</html:em> <html:code>S</html:code> undifferentiated.</html:p>
+                <html:p>Now a <html:em>residual</html:em> like <html:code>S · char b</html:code> does have <html:code>S</html:code> as its
+leading factor, so its own derivative genuinely calls <html:code>δ a S</html:code>:</html:p>
+                <html:p>
+                  <html:code>δ a (S · char b) = δ a S · char b  ⊕  ν? S · δ a (char b)
+                        = (S · char b) · char b  ⊕  (ε · ⊥)
+                        = S · char b · char b</html:code>
+                </html:p>
+                <html:p>But <html:code>δ a S</html:code> here is just the terminating one-unfold computation above
+(<html:code>= S · char b</html:code>), so there is no infinite regress — only a finite chain
+of residuals <html:code>S</html:code>, <html:code>S · char b</html:code>, <html:code>S · char b · char b</html:code>, …, each
+a finite expression over the original <html:code>S</html:code>. The state space is infinite
+(this grammar is not regular), but see below: that never matters for a single
+parse.</html:p>
+              </fr:mainmatter>
+            </fr:tree>
+            <fr:tree show-metadata="false">
+              <fr:frontmatter>
+                <fr:authors>
+                  <fr:author>
+                    <fr:link href="/stevenschaefer/" title="Steven Schaefer" uri="https://stevenschaefer.net/stevenschaefer/" display-uri="stevenschaefer" type="local">Steven Schaefer</fr:link>
+                  </fr:author>
+                </fr:authors>
+                <fr:date>
+                  <fr:year>2026</fr:year>
+                  <fr:month>7</fr:month>
+                  <fr:day>16</fr:day>
+                </fr:date>
+                <fr:source-path>/Users/stevenschaefer/forest/trees/sss-00EZ.tree</fr:source-path>
+                <fr:title text="Nullability collapses for the same reason">Nullability collapses for the same reason</fr:title>
+              </fr:frontmatter>
+              <fr:mainmatter>
+                <html:p>For general CFGs, <html:code>ν?</html:code> is itself a least fixed point: whether a
+nonterminal is nullable can depend recursively on whether it is nullable. The
+guard removes this too, by the identical mechanism. A guarded recursive
+occurrence sits behind a non-nullable prefix, and</html:p>
+                <html:p><html:code>ν?(char a · X) = ν?(char a) · ν? X = ⊥ · ν? X = ⊥</html:code>,   for any <html:code>X</html:code>.</html:p>
+                <html:p>So a production containing a guarded recursive occurrence is non-nullable
+outright, regardless of the occurrence's own nullability — the recursive
+dependency is severed. Nullability of <html:code>μX. F</html:code> is then determined entirely
+by the non-recursive (base) alternatives of <html:code>F</html:code>, computable by structural
+recursion with no iteration to a fixed point. For <html:code>aⁿbⁿ</html:code>:</html:p>
+                <html:p><html:code>ν? S = ν?(char a · S · char b) ⊕ ν? ε = ⊥ ⊕ ε = ε</html:code>   (nullable, via
+the <html:code>ε</html:code> branch), computed without ever consulting <html:code>ν? S</html:code>.</html:p>
+                <html:p>This is why <fr:link href="/sss-00A5/" title="Decidable Nullability for CFGDesc" uri="https://stevenschaefer.net/sss-00A5/" display-uri="sss-00A5" type="local">sss-00A5</fr:link> is clean on the guarded fragment, and the
+same <html:code>ν?</html:code>-computation doubles as the check that a grammar really is
+guarded.</html:p>
+              </fr:mainmatter>
+            </fr:tree>
+            <fr:tree show-metadata="false">
+              <fr:frontmatter>
+                <fr:authors>
+                  <fr:author>
+                    <fr:link href="/stevenschaefer/" title="Steven Schaefer" uri="https://stevenschaefer.net/stevenschaefer/" display-uri="stevenschaefer" type="local">Steven Schaefer</fr:link>
+                  </fr:author>
+                </fr:authors>
+                <fr:date>
+                  <fr:year>2026</fr:year>
+                  <fr:month>7</fr:month>
+                  <fr:day>16</fr:day>
+                </fr:date>
+                <fr:source-path>/Users/stevenschaefer/forest/trees/sss-00EZ.tree</fr:source-path>
+                <fr:title text="What does not collapse — and why it is harmless">What does not collapse — and why it is harmless</fr:title>
+              </fr:frontmatter>
+              <fr:mainmatter>
+                <html:p><html:strong>Infinitely many derivatives.</html:strong> As the <html:code>aⁿbⁿ</html:code> example shows, a
+guarded (indeed any non-regular) grammar has infinitely many distinct
+derivative states, so there is no finite derivative automaton to precompute.
+This sounds alarming but is irrelevant to actually parsing: parsing a
+fixed input <html:code>w</html:code> takes exactly <html:code>|w|</html:code> derivative steps, each a total
+finite operation, and the parser is structurally recursive on the input
+list. You never enumerate the state space; you only ever walk one path of
+length <html:code>|w|</html:code> through it. (This is the same observation
+<fr:link href="/sss-00A6/" title="Syntactic Derivatives on CFGDesc" uri="https://stevenschaefer.net/sss-00A6/" display-uri="sss-00A6" type="local">sss-00A6</fr:link> makes as "infinite but regular-in-the-right-sense".)</html:p>
+                <html:p><html:strong>Description blow-up.</html:strong> The product rule duplicates subgrammars —
+<html:code>δ c (A · B)</html:code> mentions <html:code>B</html:code> in one branch and <html:code>δ c B</html:code> in the
+other — so a naively-represented residual can grow exponentially in <html:code>|w|</html:code>.
+The remedy is <html:strong>compaction</html:strong>: algebraic simplification after each step
+(<html:code>⊥ · x = ⊥</html:code>, <html:code>ε · x = x</html:code>, <html:code>x ⊕ ⊥ = x</html:code>, and sharing of common
+nonterminals). The essential point for us is that compaction is an
+<html:em>optimization, not a correctness requirement</html:em>: a total, correct parser
+exists without it (each step is already total), so compaction and its
+semantics-preservation proof can be added later, purely for performance. This
+is the one place where the general-CFG performance story (cubic only with
+compaction, per Adams–Hollenbeck–Might 2016) still applies — but it is
+decoupled from totality and correctness.</html:p>
+              </fr:mainmatter>
+            </fr:tree>
+            <fr:tree show-metadata="false">
+              <fr:frontmatter>
+                <fr:authors>
+                  <fr:author>
+                    <fr:link href="/stevenschaefer/" title="Steven Schaefer" uri="https://stevenschaefer.net/stevenschaefer/" display-uri="stevenschaefer" type="local">Steven Schaefer</fr:link>
+                  </fr:author>
+                </fr:authors>
+                <fr:date>
+                  <fr:year>2026</fr:year>
+                  <fr:month>7</fr:month>
+                  <fr:day>16</fr:day>
+                </fr:date>
+                <fr:source-path>/Users/stevenschaefer/forest/trees/sss-00EZ.tree</fr:source-path>
+                <fr:title text="Deliverables">Deliverables</fr:title>
+              </fr:frontmatter>
+              <fr:mainmatter>
+                <html:p>With the keystone lemma in hand the remaining work is small and
+well-scoped:</html:p>
+                <html:ol><html:li><html:strong>Totality and guard-preservation of <html:code>δ</html:code></html:strong> — formalize the
+keystone lemma: on the guarded fragment <html:code>δ c</html:code> is total, structural, and
+maps guarded grammars to guarded grammars. This discharges the "<html:code>μ</html:code> is
+the part most likely to need care" flag of <fr:link href="/sss-00A6/" title="Syntactic Derivatives on CFGDesc" uri="https://stevenschaefer.net/sss-00A6/" display-uri="sss-00A6" type="local">sss-00A6</fr:link> and the
+corresponding <fr:link href="/sss-00AA/" title="Risks and Open Questions — Derivative-Based CFG Parser" uri="https://stevenschaefer.net/sss-00AA/" display-uri="sss-00AA" type="local">risk</fr:link>; the care needed is precisely the <html:code>ν?</html:code>-gate
+argument above.</html:li>
+<html:li><html:strong>The parser as a fold / Löb fixed point</html:strong> — the length-recursion
+parser of <fr:link href="/sss-00A8/" title="Parser by Well-Founded Recursion on String Length" uri="https://stevenschaefer.net/sss-00A8/" display-uri="sss-00A8" type="local">sss-00A8</fr:link>,
+<html:code>parse G (c ∷ w) = deriv⁻¹ (parse (δ c G) w)</html:code>, producing parse trees by
+reshaping along the derivative iso, optionally recast as the <html:code>(Brz)</html:code> Löb
+fixed point of <fr:link href="/sss-00EY/" title="Residual and derivative forms of Löb, and ◁ ⊣ ▷" uri="https://stevenschaefer.net/sss-00EY/" display-uri="sss-00EY" type="local">sss-00EY</fr:link> / <fr:link href="/sss-00EX/" title="Open recursion for grammars: the contextual Löb rule" uri="https://stevenschaefer.net/sss-00EX/" display-uri="sss-00EX" type="local">sss-00EX</fr:link> for a
+modality-native presentation (the guarded recursion is exactly what Löb
+discharges). Its output is the parse forest <html:code>⟦G⟧ w</html:code>, per
+<fr:link href="/sss-00F0/" title="Parsing with derivatives for a locally contractive family of grammars" uri="https://stevenschaefer.net/sss-00F0/" display-uri="sss-00F0" type="local">sss-00F0</fr:link>.</html:li>
+<html:li><html:strong>Soundness and completeness are automatic</html:strong> — the derivative
+commutation <html:code>⟦ δ c G ⟧ ≅ ⟦ G ⟧ ⟜ char c</html:code> of <fr:link href="/sss-00A7/" title="Linear Residual ⟜ as Brzozowski Derivative" uri="https://stevenschaefer.net/sss-00A7/" display-uri="sss-00A7" type="local">sss-00A7</fr:link> is a
+proof-relevant <html:em>iso</html:em>, so the fold <html:em>is</html:em> the bijection
+<html:code>⟦G⟧ w ≅ ⟦δ_w G⟧ ε</html:code>; there is no separate correctness proof, and parse
+trees / semantic actions ride along the isos. Because <html:code>δ</html:code> is structural,
+no fixed-point / domain-theoretic reasoning is needed.</html:li>
+<html:li><html:strong>(Optional) Compaction with preservation</html:strong> — for performance only:
+prove each simplification rule is a grammar isomorphism, so parse trees /
+semantic actions are preserved.</html:li></html:ol>
+              </fr:mainmatter>
+            </fr:tree>
+            <fr:tree show-metadata="false">
+              <fr:frontmatter>
+                <fr:authors>
+                  <fr:author>
+                    <fr:link href="/stevenschaefer/" title="Steven Schaefer" uri="https://stevenschaefer.net/stevenschaefer/" display-uri="stevenschaefer" type="local">Steven Schaefer</fr:link>
+                  </fr:author>
+                </fr:authors>
+                <fr:date>
+                  <fr:year>2026</fr:year>
+                  <fr:month>7</fr:month>
+                  <fr:day>16</fr:day>
+                </fr:date>
+                <fr:source-path>/Users/stevenschaefer/forest/trees/sss-00EZ.tree</fr:source-path>
+                <fr:title text="Precision: &quot;guarded&quot;, not &quot;non-left-recursive&quot;">Precision: "guarded", not "non-left-recursive"</fr:title>
+              </fr:frontmatter>
+              <fr:mainmatter>
+                <html:p>The exact restriction is the <html:code>▷</html:code>-guard of <fr:link href="/sss-00AC/" title="Later Operator ▶ as Internalised Guard" uri="https://stevenschaefer.net/sss-00AC/" display-uri="sss-00AC" type="local">sss-00AC</fr:link>: every
+self-reference under a non-nullable prefix. This is strictly stronger than
+"not <html:em>directly</html:em> left-recursive". Consider <html:em>hidden</html:em> left recursion,
+<html:code>A = (B · A) ⊕ c</html:code> with <html:code>B</html:code> nullable: <html:code>A</html:code> is not the syntactic
+leading factor, but because <html:code>B</html:code> can vanish, <html:code>A</html:code> is still reachable
+with no character consumed, so <html:code>ν? B = ε</html:code> keeps the dangerous branch open
+and <html:code>δ c A</html:code> again becomes cyclic. Guardedness rules this out too — it is
+about consumption, not syntactic position. So state the fragment as
+<html:strong>guarded / productive</html:strong>.</html:p>
+              </fr:mainmatter>
+            </fr:tree>
+          </fr:mainmatter>
+        </fr:tree>
+        <fr:tree show-metadata="true" expanded="false" toc="false" numbered="false">
+          <fr:frontmatter>
+            <fr:authors>
+              <fr:author>
+                <fr:link href="/stevenschaefer/" title="Steven Schaefer" uri="https://stevenschaefer.net/stevenschaefer/" display-uri="stevenschaefer" type="local">Steven Schaefer</fr:link>
+              </fr:author>
+            </fr:authors>
+            <fr:date>
+              <fr:year>2026</fr:year>
+              <fr:month>4</fr:month>
+              <fr:day>20</fr:day>
+            </fr:date>
+            <fr:source-path>/Users/stevenschaefer/forest/trees/sss-00AC.tree</fr:source-path>
+            <fr:uri>https://stevenschaefer.net/sss-00AC/</fr:uri>
+            <fr:display-uri>sss-00AC</fr:display-uri>
+            <fr:route>/sss-00AC/</fr:route>
+            <fr:title text="Later Operator ▶ as Internalised Guard">Later Operator ▶ as Internalised Guard</fr:title>
+            <fr:taxon>Idea</fr:taxon>
+          </fr:frontmatter>
+          <fr:mainmatter>
+            <html:p>The <fr:link href="/sss-00A3/" title="Plan: Derivative-Based CFG Parser via Recursive Coalgebras" uri="https://stevenschaefer.net/sss-00A3/" display-uri="sss-00A3" type="local">plan</fr:link> is self-contained without any modalities: productivity
+is a <html:em>side condition</html:em> on <fr:link href="/sss-00A4/" title="CFGDesc: Embedded Syntax of Guarded CFGs" uri="https://stevenschaefer.net/sss-00A4/" display-uri="sss-00A4" type="local">CFGDesc</fr:link>, nullability is an
+<html:em>external</html:em> decision <fr:link href="/sss-00A5/" title="Decidable Nullability for CFGDesc" uri="https://stevenschaefer.net/sss-00A5/" display-uri="sss-00A5" type="local">sss-00A5</fr:link>, and well-foundedness is
+<html:em>operational</html:em> recursion on length <fr:link href="/sss-00A8/" title="Parser by Well-Founded Recursion on String Length" uri="https://stevenschaefer.net/sss-00A8/" display-uri="sss-00A8" type="local">sss-00A8</fr:link>. A later operator
+<html:code>▶</html:code> would internalise each of these into the type system, making the
+same construction fall out of guarded fixpoint rather than a sequence of
+external theorems.</html:p>
+            <html:p>Two natural slots for <html:code>▶</html:code>:</html:p>
+            <html:p>
+              <html:strong>1. As the guard on <html:code>μ</html:code> in CFGDesc.</html:strong>
+            </html:p>
+            <html:p>The current productivity condition on <fr:link href="/sss-00A4/" title="CFGDesc: Embedded Syntax of Guarded CFGs" uri="https://stevenschaefer.net/sss-00A4/" display-uri="sss-00A4" type="local">CFGDesc</fr:link> ("every
+self-reference sits under a non-nullable prefix") is a bespoke later
+modality indexed by "must consume ≥1 char." First-class <html:code>▶</html:code> replaces
+the side condition with a syntactic requirement:</html:p>
+            <html:p>
+              <html:code>μ X. F (▶ X)</html:code>
+            </html:p>
+            <html:p>where <html:code>F</html:code> is any <html:em>unconstrained</html:em> CFGDesc-style functor. This is
+exactly the trade-up that the <html:code>Grammar.SequentialUnambiguity.Nullable</html:code>
+scaffolding already gestures at: <html:code>¬Nullable A</html:code> is a proposition <html:em>about</html:em>
+a grammar; <html:code>▶</html:code> would be a grammar <html:em>constructor</html:em>.</html:p>
+            <html:p>The paper's guard functor <html:code>(F ↓₀) X i = F (λ j → (j ≺ i) × X j) i</html:code>
+is already a parameterised later modality: the parameter is the well-founded
+relation <html:code>≺</html:code>, not a global clock. So the machinery in
+<html:code>IntrinsicallyRecursiveCoalgs.lagda</html:code> is morally a <html:em>per-index ▶</html:em>,
+and moving to a syntactic <html:code>▶</html:code> is just factoring that indexing into
+the type theory.</html:p>
+            <html:p>
+              <html:strong>2. As the meaning of <html:code>A ⟜ char c</html:code>.</html:strong>
+            </html:p>
+            <html:p>Recall from <fr:link href="/sss-00A7/" title="Linear Residual ⟜ as Brzozowski Derivative" uri="https://stevenschaefer.net/sss-00A7/" display-uri="sss-00A7" type="local">⟜-as-derivative</fr:link> that</html:p>
+            <html:p><html:code>(A ⟜ char c) w = A (c ∷ w)</html:code>,</html:p>
+            <html:p>i.e. inhabiting <html:code>A ⟜ char c</html:code> requires <html:em>being fed one character</html:em>
+before producing an <html:code>A</html:code>. This is the defining behaviour of a later
+modality: availability delayed by one step, where "step" = "one character
+consumed."</html:p>
+            <html:p>Under this reading the Brzozowski identity <html:code>char c · A ≅ δ c A</html:code>
+becomes an applicativity law:</html:p>
+            <html:p><html:code>char c · (A ⟜ char c) ⊢ A</html:code>   (<html:code>▶</html:code>-apply)</html:p>
+            <html:p>and the <fr:link href="/sss-00A8/" title="Parser by Well-Founded Recursion on String Length" uri="https://stevenschaefer.net/sss-00A8/" display-uri="sss-00A8" type="local">derivative-based parser</fr:link> is a guarded fixpoint:</html:p>
+            <html:p>
+              <html:code>parse : μ self. (char? ⟜ ε ⊕ (Σ c. ▶ (parse (δ c G))))</html:code>
+            </html:p>
+            <html:p>where the self-reference is guarded by <html:code>▶ ≡ (_ ⟜ char c)</html:code>, and the
+well-foundedness witness <html:code>F-ε⁻¹</html:code> of <fr:link href="/sss-00A9/" title="Parser as Unique c2a-Morphism of a Recursive Coalgebra" uri="https://stevenschaefer.net/sss-00A9/" display-uri="sss-00A9" type="local">c2a-morph</fr:link> is exactly
+the "take a later and cash it in" rule.</html:p>
+            <html:p>
+              <html:strong>What this buys.</html:strong>
+            </html:p>
+            <html:ul><html:li><html:strong>Nullability becomes decidable by typing.</html:strong> <html:code>ε ⊢ A</html:code> iff
+    <html:code>A</html:code> is <html:code>▶</html:code>-free at the outer layer; no external decision
+    needed.</html:li>
+  <html:li><html:strong>Length-well-foundedness becomes automatic.</html:strong> Each
+    <html:code>▶</html:code>-unfold consumes exactly one character, so recursion depth ≤
+    input length <html:em>by construction</html:em>. <fr:link href="/sss-00A8/" title="Parser by Well-Founded Recursion on String Length" uri="https://stevenschaefer.net/sss-00A8/" display-uri="sss-00A8" type="local">sss-00A8</fr:link>'s use of
+    <html:code>&lt;-wellFounded</html:code> disappears.</html:li>
+  <html:li><html:strong>c2a-morph becomes guarded fixpoint.</html:strong> The paper's uniqueness
+    theorem specialises to the Löb-style uniqueness of guarded fixpoints
+    <html:em>in the appropriate topos</html:em>. Computational content is the same;
+    meta-theory is cleaner.</html:li></html:ul>
+            <html:p>
+              <html:strong>Tradeoffs.</html:strong>
+            </html:p>
+            <html:ul><html:li><html:strong>Not on the critical path.</html:strong> The plan works without <html:code>▶</html:code>;
+    this tree is about a cleaner re-foundation, not a missing step.</html:li>
+  <html:li><html:strong>Integration cost.</html:strong> Adding <html:code>▶</html:code> as a primitive means
+    revisiting every grammar operation (tensor, residual, fixed points) to
+    specify its interaction with <html:code>▶</html:code>. Feasible, but a larger design
+    commitment than "a few side conditions."</html:li>
+  <html:li><html:strong>Which ▶?</html:strong> Classical guarded type theory's <html:code>▶</html:code> is
+    character-agnostic (one "tick" per step). Ours is character-indexed
+    (<html:code>▶_c A = A ⟜ char c</html:code>). The paper's <html:code>(F ↓₀)</html:code> sits in
+    between — indexed by an abstract <html:code>≺</html:code>. Whether to use a single
+    <html:code>▶</html:code> or a character-indexed family is itself a design question.</html:li></html:ul>
+            <html:p>
+              <html:strong>Next steps if we adopt ▶.</html:strong>
+            </html:p>
+            <html:ol><html:li>Prototype <html:code>▶ A</html:code> as an alias for
+    <html:code>Σ c : Alphabet. A ⟜ char c</html:code> (character-indexed form) inside the
+    existing calculus, <html:em>without</html:em> new primitives.</html:li>
+  <html:li>Re-state <fr:link href="/sss-00A5/" title="Decidable Nullability for CFGDesc" uri="https://stevenschaefer.net/sss-00A5/" display-uri="sss-00A5" type="local">nullability</fr:link> as a syntactic check on
+    <html:code>▶</html:code>-absence at the top of a description.</html:li>
+  <html:li>Re-derive <fr:link href="/sss-00A9/" title="Parser as Unique c2a-Morphism of a Recursive Coalgebra" uri="https://stevenschaefer.net/sss-00A9/" display-uri="sss-00A9" type="local">c2a-morph</fr:link> for the single-step case and see
+    whether the <html:code>▶</html:code>-elimination rule does the work currently done by
+    <html:code>F-ε⁻¹</html:code>.</html:li>
+  <html:li>Only then consider adding <html:code>▶</html:code> to CFGDesc as a primitive
+    constructor (step 1 of <fr:link href="/sss-00A4/" title="CFGDesc: Embedded Syntax of Guarded CFGs" uri="https://stevenschaefer.net/sss-00A4/" display-uri="sss-00A4" type="local">sss-00A4</fr:link>).</html:li></html:ol>
+            <html:p>Open: does a character-indexed <html:code>▶</html:code> compose into a <html:em>single</html:em>
+modality after applying the "erase the character" projection? That would
+bridge the specific (Brzozowski-style) and generic (Löb-style) readings.</html:p>
+          </fr:mainmatter>
+        </fr:tree>
+        <fr:tree show-metadata="true" expanded="false" toc="false" numbered="false">
+          <fr:frontmatter>
+            <fr:authors>
+              <fr:author>
+                <fr:link href="/stevenschaefer/" title="Steven Schaefer" uri="https://stevenschaefer.net/stevenschaefer/" display-uri="stevenschaefer" type="local">Steven Schaefer</fr:link>
+              </fr:author>
+            </fr:authors>
+            <fr:date>
+              <fr:year>2026</fr:year>
+              <fr:month>4</fr:month>
+              <fr:day>20</fr:day>
+            </fr:date>
+            <fr:source-path>/Users/stevenschaefer/forest/trees/sss-00A7.tree</fr:source-path>
+            <fr:uri>https://stevenschaefer.net/sss-00A7/</fr:uri>
+            <fr:display-uri>sss-00A7</fr:display-uri>
+            <fr:route>/sss-00A7/</fr:route>
+            <fr:title text="Linear Residual ⟜ as Brzozowski Derivative">Linear Residual ⟜ as Brzozowski Derivative</fr:title>
+            <fr:taxon>Idea</fr:taxon>
+          </fr:frontmatter>
+          <fr:mainmatter>
+            <html:p>In <html:code>Grammar.LinearFunction.Base</html:code>, the right residual is
+<html:code>(A ⟜ B) w = ∀ (w' : String) → B w' → A (w' ++ w)</html:code>.
+Reading this at a single-character grammar <html:code>char c</html:code> we get</html:p>
+            <html:p><html:code>(G ⟜ char c) w  =  ∀ w' → (char c) w' → G (w' ++ w)
+                    ≅  G (c ∷ w)</html:code>,</html:p>
+            <html:p>i.e. <html:em>the Brzozowski derivative of <html:code>G</html:code> by <html:code>c</html:code></html:em>, up to the
+canonical iso <html:code>char c · w ≅ c ∷ w</html:code> for singleton matches.</html:p>
+            <html:p>So the calculus already has a semantic notion of derivative <html:em>as a type
+constructor</html:em>, not just as an operation on descriptions. The <fr:link href="/sss-00A6/" title="Syntactic Derivatives on CFGDesc" uri="https://stevenschaefer.net/sss-00A6/" display-uri="sss-00A6" type="local">syntactic
+derivative</fr:link> <html:code>δ c G</html:code> should then denote exactly
+<html:code>⟦ G ⟧cfg ⟜ char c</html:code>, and the Brzozowski adjointness
+<html:code>c · G ≅ δ c G</html:code> is an instance of the tensor/residual adjunction
+<html:code>char c · G ⊢ H  ⟺  G ⊢ H ⟜ char c</html:code>.</html:p>
+            <html:p>Why this matters for the <fr:link href="/sss-00A3/" title="Plan: Derivative-Based CFG Parser via Recursive Coalgebras" uri="https://stevenschaefer.net/sss-00A3/" display-uri="sss-00A3" type="local">plan</fr:link>:</html:p>
+            <html:ul><html:li>It grounds <html:code>δ</html:code> in the calculus rather than treating it as an
+    external device: <html:code>δ c G = G ⟜ char c</html:code> <html:em>already has the right
+    type</html:em>.</html:li>
+  <html:li>It means the parser's recursive structure can be phrased internally
+    as currying over <html:code>char c · -</html:code> / uncurrying over <html:code>- ⟜ char c</html:code>,
+    without leaving the calculus.</html:li>
+  <html:li>It suggests CFGDesc may not need <html:code>⟜</html:code> as a primitive — the
+    operator can live outside the description as long as we can compute
+    <html:code>δ</html:code> on descriptions and prove <html:code>⟦ δ c G ⟧cfg ≅ ⟦ G ⟧cfg ⟜ char c</html:code>.</html:li></html:ul>
+            <html:p>Open question: for grammars with <html:em>nullable</html:em> residuals the adjunction
+interacts with the nullability gating in <html:code>δ c (G · H)</html:code>; make sure the
+semantic direction of the iso stays available in both cases. This is tracked
+in <fr:link href="/sss-00AA/" title="Risks and Open Questions — Derivative-Based CFG Parser" uri="https://stevenschaefer.net/sss-00AA/" display-uri="sss-00AA" type="local">risks</fr:link>.</html:p>
+          </fr:mainmatter>
+        </fr:tree>
+        <fr:tree show-metadata="true" expanded="false" toc="false" numbered="false">
+          <fr:frontmatter>
+            <fr:authors>
+              <fr:author>
+                <fr:link href="/stevenschaefer/" title="Steven Schaefer" uri="https://stevenschaefer.net/stevenschaefer/" display-uri="stevenschaefer" type="local">Steven Schaefer</fr:link>
+              </fr:author>
+            </fr:authors>
+            <fr:date>
+              <fr:year>2026</fr:year>
+              <fr:month>4</fr:month>
+              <fr:day>20</fr:day>
+            </fr:date>
+            <fr:source-path>/Users/stevenschaefer/forest/trees/sss-00A6.tree</fr:source-path>
+            <fr:uri>https://stevenschaefer.net/sss-00A6/</fr:uri>
+            <fr:display-uri>sss-00A6</fr:display-uri>
+            <fr:route>/sss-00A6/</fr:route>
+            <fr:title text="Syntactic Derivatives on CFGDesc">Syntactic Derivatives on CFGDesc</fr:title>
+            <fr:taxon>Idea</fr:taxon>
+          </fr:frontmatter>
+          <fr:mainmatter>
+            <html:p>Given a character <html:code>c : Alphabet</html:code> and a description
+<html:code>G : </html:code><fr:link href="/sss-00A4/" title="CFGDesc: Embedded Syntax of Guarded CFGs" uri="https://stevenschaefer.net/sss-00A4/" display-uri="sss-00A4" type="local"><html:code>CFGDesc</html:code></fr:link>, define a description
+<html:code>δ c G : CFGDesc</html:code> and a morphism at the semantics</html:p>
+            <html:p><html:code>deriv c G : char c · ⟦ G ⟧cfg ⊢ ⟦ δ c G ⟧cfg</html:code> ,</html:p>
+            <html:p>together with an inverse
+<html:code>deriv⁻¹ c G : ⟦ δ c G ⟧cfg ⊢ char c · ⟦ G ⟧cfg</html:code> , so the pair
+witnesses the Brzozowski identity <html:code>c · G ≅ δ c G</html:code> inside
+<html:em>grammar</html:em> (not language) semantics.</html:p>
+            <html:p>Regex case is classical:</html:p>
+            <html:ul><html:li><html:code>δ c ε = ⊥</html:code>;</html:li>
+  <html:li><html:code>δ c (char a) = if a ≟ c then ε else ⊥</html:code>;</html:li>
+  <html:li><html:code>δ c (G · H) = (δ c G) · H ⊕ ν? G · δ c H</html:code>, where <html:code>ν?</html:code> gates
+     the second summand by <fr:link href="/sss-00A5/" title="Decidable Nullability for CFGDesc" uri="https://stevenschaefer.net/sss-00A5/" display-uri="sss-00A5" type="local">nullability</fr:link>;</html:li>
+  <html:li><html:code>δ c (G ⊕ H) = δ c G ⊕ δ c H</html:code>;</html:li>
+  <html:li><html:code>δ c (G *) = δ c G · G *</html:code>.</html:li></html:ul>
+            <html:p>For <html:code>μ</html:code> we unfold once before deriving, using the productivity side
+condition to ensure the derivative terminates at the description level (the
+description does not grow under <html:code>δ</html:code> past a bounded residual form). This
+is the part most likely to need care — see <fr:link href="/sss-00AA/" title="Risks and Open Questions — Derivative-Based CFG Parser" uri="https://stevenschaefer.net/sss-00AA/" display-uri="sss-00AA" type="local">risks</fr:link>.</html:p>
+            <html:p>CFG derivatives in general (Might, Darais, Spiewak 2011) form an infinite
+but regular-in-the-right-sense family; the reachable derivative states for a
+given <html:code>G</html:code> correspond to the states of a PDA for <html:code>G</html:code>. We do not need
+<html:em>finitely many</html:em> residuals; we only need each derivative to be well-typed
+and to decrease the string length we feed it.</html:p>
+            <html:p>For Dyck specifically, the derivative by LP moves us to a state
+"expecting one extra RP before completion", and iterating gives the
+unbounded stack. The <html:em>state space</html:em> is infinite; the <html:em>per-string
+computation</html:em> is still well-founded on input length, which is where
+<fr:link href="/sss-00A8/" title="Parser by Well-Founded Recursion on String Length" uri="https://stevenschaefer.net/sss-00A8/" display-uri="sss-00A8" type="local">well-founded recursion on length</fr:link> comes in.</html:p>
+          </fr:mainmatter>
+        </fr:tree>
+        <fr:tree show-metadata="true" expanded="false" toc="false" numbered="false">
+          <fr:frontmatter>
+            <fr:authors>
+              <fr:author>
+                <fr:link href="/stevenschaefer/" title="Steven Schaefer" uri="https://stevenschaefer.net/stevenschaefer/" display-uri="stevenschaefer" type="local">Steven Schaefer</fr:link>
+              </fr:author>
+            </fr:authors>
+            <fr:date>
+              <fr:year>2026</fr:year>
+              <fr:month>4</fr:month>
+              <fr:day>20</fr:day>
+            </fr:date>
+            <fr:source-path>/Users/stevenschaefer/forest/trees/sss-00A4.tree</fr:source-path>
+            <fr:uri>https://stevenschaefer.net/sss-00A4/</fr:uri>
+            <fr:display-uri>sss-00A4</fr:display-uri>
+            <fr:route>/sss-00A4/</fr:route>
+            <fr:title text="CFGDesc: Embedded Syntax of Guarded CFGs">CFGDesc: Embedded Syntax of Guarded CFGs</fr:title>
+            <fr:taxon>Idea</fr:taxon>
+          </fr:frontmatter>
+          <fr:mainmatter>
+            <html:p>The first ingredient of the <fr:link href="/sss-00A3/" title="Plan: Derivative-Based CFG Parser via Recursive Coalgebras" uri="https://stevenschaefer.net/sss-00A3/" display-uri="sss-00A3" type="local">plan</fr:link> is a data type <html:code>CFGDesc</html:code>
+describing a class of grammars closed under the operations we need, for which
+nullability and derivatives can be computed <html:em>syntactically</html:em>.</html:p>
+            <html:p>Mirrors <html:code>Grammar.RegularExpression.Base.RegularExpression</html:code> and its
+denotation <html:code>⟦ _ ⟧r</html:code>. The regex case is a useful template because the
+<html:em>syntactic</html:em> structure is what makes derivative-based parsing work: we can
+induct on the description while the semantics does not support such induction
+in general.</html:p>
+            <html:p>Sketch of constructors:</html:p>
+            <html:ul><html:li><html:code>ε</html:code>, <html:code>⊥</html:code>, <html:code>char a</html:code> (atoms);</html:li>
+  <html:li><html:code>_·_</html:code> (tensor), <html:code>_⊕_</html:code> (alternation), <html:code>_*</html:code> (Kleene star);</html:li>
+  <html:li><html:code>μ</html:code> (fixed points) — the CFG extension over regexes — with a
+     <html:em>productivity side condition</html:em> (every self-reference must occur under
+     a non-nullable prefix). This mirrors how the
+     <fr:link href="/sss-009B/" title="Read: Intrinsically Correct Algorithms and Recursive Coalgebras" uri="https://stevenschaefer.net/sss-009B/" display-uri="sss-009B" type="local">intrinsically-recursive paper</fr:link> uses non-nullable tensors to
+     get a guarded list / tree functor.</html:li>
+  <html:li><html:code>⟜</html:code> and <html:code>⊸</html:code> — tentatively, to match
+     <fr:link href="/sss-00A7/" title="Linear Residual ⟜ as Brzozowski Derivative" uri="https://stevenschaefer.net/sss-00A7/" display-uri="sss-00A7" type="local">the linear-residual derivative</fr:link>.</html:li></html:ul>
+            <html:p>The productivity/guardedness side condition is the syntactic counterpart
+of the paper's well-foundedness of the base functor. Intended denotation:
+<html:code>⟦ _ ⟧cfg : CFGDesc → Grammar ℓ-zero</html:code> (exactly as for regexes).</html:p>
+            <html:p>The Dyck language is representable as
+<html:code>μ D. ε ⊕ (LP · D · RP · D)</html:code>, where both recursive occurrences sit
+under non-nullable LP. This is the first concrete witness that the
+productivity condition admits the grammars we care about.</html:p>
+            <html:p>Downstream this tree is consumed by:</html:p>
+            <html:ul><html:li><fr:link href="/sss-00A5/" title="Decidable Nullability for CFGDesc" uri="https://stevenschaefer.net/sss-00A5/" display-uri="sss-00A5" type="local">Decidable nullability</fr:link>;</html:li>
+  <html:li><fr:link href="/sss-00A6/" title="Syntactic Derivatives on CFGDesc" uri="https://stevenschaefer.net/sss-00A6/" display-uri="sss-00A6" type="local">Syntactic derivatives</fr:link>;</html:li>
+  <html:li><fr:link href="/sss-00A8/" title="Parser by Well-Founded Recursion on String Length" uri="https://stevenschaefer.net/sss-00A8/" display-uri="sss-00A8" type="local">Parser construction</fr:link>.</html:li></html:ul>
+          </fr:mainmatter>
+        </fr:tree>
+        <fr:tree show-metadata="true" expanded="false" toc="false" numbered="false">
+          <fr:frontmatter>
+            <fr:authors>
+              <fr:author>
+                <fr:link href="/stevenschaefer/" title="Steven Schaefer" uri="https://stevenschaefer.net/stevenschaefer/" display-uri="stevenschaefer" type="local">Steven Schaefer</fr:link>
+              </fr:author>
+            </fr:authors>
+            <fr:date>
+              <fr:year>2026</fr:year>
+              <fr:month>4</fr:month>
+              <fr:day>20</fr:day>
+            </fr:date>
+            <fr:source-path>/Users/stevenschaefer/forest/trees/sss-00A3.tree</fr:source-path>
+            <fr:uri>https://stevenschaefer.net/sss-00A3/</fr:uri>
+            <fr:display-uri>sss-00A3</fr:display-uri>
+            <fr:route>/sss-00A3/</fr:route>
+            <fr:title text="Plan: Derivative-Based CFG Parser via Recursive Coalgebras">Plan: Derivative-Based CFG Parser via Recursive Coalgebras</fr:title>
+            <fr:taxon>Plan</fr:taxon>
+          </fr:frontmatter>
+          <fr:mainmatter>
+            <html:p>A concrete path for exercising
+<fr:link href="/sss-009A/" title="Well-Founded Recursion in Dependent Lambek Calculus" uri="https://stevenschaefer.net/sss-009A/" display-uri="sss-009A" type="local">well-founded recursive coalgebras in dep-Lambek</fr:link>: build a
+<html:em>generic derivative-based parser</html:em> for a syntactically-delimited class of
+context-free grammars, in direct analogy with the existing regular-expression
+infrastructure (<html:code>Grammar.RegularExpression</html:code>). Every step should admit a
+compositional, well-founded account, and the whole thing should ultimately
+factor through the c2a-morph theorem of
+<fr:link href="/alexandruIntrinsicallyCorrectAlgorithms2025-preprint/" title="Intrinsically Correct Algorithms and Recursive Coalgebras" uri="https://stevenschaefer.net/alexandruIntrinsicallyCorrectAlgorithms2025-preprint/" display-uri="alexandruIntrinsicallyCorrectAlgorithms2025-preprint" type="local">[alexandruIntrinsicallyCorrectAlgorithms2025-preprint]</fr:link>.</html:p>
+            <html:p>The Dyck language serves as the running test: it is not regular, its
+derivatives form an infinite (PDA-shaped) state space, and it cannot admit a
+map <html:code>string ⊢ Dyck</html:code> — only a
+<fr:link href="https://github.com/maxsnew/grammars-and-semantic-actions/blob/main/src/Parser/Base.agda" type="external">Parser Dyck ¬Dyck</fr:link>.
+We want to <html:em>derive</html:em> the automaton shape, not assume it.</html:p>
+            <html:p>The phases:</html:p>
+            <html:ol><html:li><fr:link href="/sss-00A4/" title="CFGDesc: Embedded Syntax of Guarded CFGs" uri="https://stevenschaefer.net/sss-00A4/" display-uri="sss-00A4" type="local">CFGDesc: an embedded syntax of guarded CFGs</fr:link>.</html:li>
+  <html:li><fr:link href="/sss-00A5/" title="Decidable Nullability for CFGDesc" uri="https://stevenschaefer.net/sss-00A5/" display-uri="sss-00A5" type="local">Decidable nullability for CFGDesc</fr:link>.</html:li>
+  <html:li><fr:link href="/sss-00A6/" title="Syntactic Derivatives on CFGDesc" uri="https://stevenschaefer.net/sss-00A6/" display-uri="sss-00A6" type="local">Syntactic derivatives on CFGDesc</fr:link>.</html:li>
+  <html:li><fr:link href="/sss-00A7/" title="Linear Residual ⟜ as Brzozowski Derivative" uri="https://stevenschaefer.net/sss-00A7/" display-uri="sss-00A7" type="local">Linear residual ⟜ as Brzozowski derivative</fr:link>.</html:li>
+  <html:li><fr:link href="/sss-00A8/" title="Parser by Well-Founded Recursion on String Length" uri="https://stevenschaefer.net/sss-00A8/" display-uri="sss-00A8" type="local">Parser by well-founded recursion on string length</fr:link>.</html:li>
+  <html:li><fr:link href="/sss-00A9/" title="Parser as Unique c2a-Morphism of a Recursive Coalgebra" uri="https://stevenschaefer.net/sss-00A9/" display-uri="sss-00A9" type="local">Parser as unique c2a-morphism of a recursive coalgebra</fr:link>.</html:li></html:ol>
+            <html:p>Risks and open questions are tracked in <fr:link href="/sss-00AA/" title="Risks and Open Questions — Derivative-Based CFG Parser" uri="https://stevenschaefer.net/sss-00AA/" display-uri="sss-00AA" type="local">sss-00AA</fr:link>.</html:p>
+            <html:p>An orthogonal re-foundation that would internalise phases 2 and 5 into
+the type system is discussed in
+<fr:link href="/sss-00AC/" title="Later Operator ▶ as Internalised Guard" uri="https://stevenschaefer.net/sss-00AC/" display-uri="sss-00AC" type="local">Later operator ▶ as internalised guard</fr:link>.</html:p>
+            <html:p>First concrete deliverable: a hand-coded Dyck parser <html:em>at the semantic
+level</html:em> (outside CFGDesc) that matches what the generic pipeline should later
+produce automatically. Only then do we generalise to CFGDesc.</html:p>
+            <html:p><html:strong>Execution track in progress:</html:strong>
+<fr:link href="/sss-00AD/" title="Finish Derivative-Based Parsing on brzozowski Branch" uri="https://stevenschaefer.net/sss-00AD/" display-uri="sss-00AD" type="local">Finish derivative-based parsing on <html:code>brzozowski</html:code></fr:link>. The
+<html:code>brzozowski</html:code> branch already has the derivative machinery and a regex
+derivative operator with soundness; the Zippy LL(1) description type is
+also present. Closing the existing holes and building the regex + LL(1)
+parsers is phases 1–3 of this plan for a narrower grammar class.</html:p>
+          </fr:mainmatter>
+        </fr:tree>
+      </fr:mainmatter>
+    </fr:tree>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors />
+        <fr:title text="Contributions">Contributions</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter />
+    </fr:tree>
+  </fr:backmatter>
+</fr:tree>

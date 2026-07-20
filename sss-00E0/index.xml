@@ -1,0 +1,417 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="/default.xsl"?>
+<fr:tree xmlns:fr="http://www.forester-notes.org" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:xml="http://www.w3.org/XML/1998/namespace" root="false" base-url="/">
+  <fr:frontmatter>
+    <fr:authors>
+      <fr:author>
+        <fr:link href="/stevenschaefer/" title="Steven Schaefer" uri="https://stevenschaefer.net/stevenschaefer/" display-uri="stevenschaefer" type="local">Steven Schaefer</fr:link>
+      </fr:author>
+    </fr:authors>
+    <fr:date>
+      <fr:year>2026</fr:year>
+      <fr:month>6</fr:month>
+      <fr:day>2</fr:day>
+    </fr:date>
+    <fr:source-path>/Users/stevenschaefer/forest/trees/sss-00E0.tree</fr:source-path>
+    <fr:uri>https://stevenschaefer.net/sss-00E0/</fr:uri>
+    <fr:display-uri>sss-00E0</fr:display-uri>
+    <fr:route>/sss-00E0/</fr:route>
+    <fr:title text="The category solver, animated">The category solver, animated</fr:title>
+    <fr:meta name="author">false</fr:meta>
+    <fr:meta name="layout">reveal</fr:meta>
+    <fr:meta name="theme">paper</fr:meta>
+    <fr:meta name="font-size">28px</fr:meta>
+  </fr:frontmatter>
+  <fr:mainmatter>
+  <html:section data-auto-animate="true">
+  
+  <html:div style="display: flex; flex-direction: column; align-items: center; justify-content: center">
+    
+  <html:span style="font-size: 2em">The category solver, animated</html:span>
+
+    <html:p><html:em>How associativity evaporates.</html:em></html:p>
+    <html:p><html:span style="font-size: 0.75em">depicting <html:code>solveCat!</html:code> from
+       <html:code><![CDATA[ Cubical.Tactics.CategorySolver]]></html:code></html:span></html:p>
+  </html:div>
+
+</html:section>
+
+  <html:section data-auto-animate="true">
+  
+  <html:div style="text-align: center"><html:p><html:strong>The goal</html:strong></html:p></html:div>
+
+  <html:p><html:code>solveCat!</html:code> proves equations that hold up to associativity and units.
+     Take the associator:</html:p>
+  
+  <html:div style="display: flex; flex-direction: column; align-items: center; justify-content: center">
+  <html:span style="font-size: 1.4em">
+    
+  <html:span data-id="lp"><fr:tex display="inline"><![CDATA[\lparen ]]></fr:tex></html:span>
+
+  <html:span data-id="f"><fr:tex display="inline"><![CDATA[f]]></fr:tex></html:span>
+
+  <html:span data-id="op1a"><fr:tex display="inline"><![CDATA[\;\star \;]]></fr:tex></html:span>
+
+  <html:span data-id="g"><fr:tex display="inline"><![CDATA[g]]></fr:tex></html:span>
+
+  <html:span data-id="rp"><fr:tex display="inline"><![CDATA[\rparen ]]></fr:tex></html:span>
+
+  <html:span data-id="op2a"><fr:tex display="inline"><![CDATA[\;\star \;]]></fr:tex></html:span>
+
+  <html:span data-id="h"><fr:tex display="inline"><![CDATA[h]]></fr:tex></html:span>
+
+  </html:span>
+</html:div>
+
+  <html:p><html:span style="font-size: 0.75em">We must prove this equals <fr:tex display="inline"><![CDATA[f \star  \lparen  g \star  h\rparen ]]></fr:tex>. In a bare
+     category that is the associativity axiom --- a long chain needs quadratically
+     many.</html:span></html:p>
+</html:section>
+
+  <html:section data-auto-animate="true">
+  
+  <html:div style="text-align: center"><html:p><html:strong>Step 1 --- reflect into the free category</html:strong></html:p></html:div>
+
+  
+  <html:div style="display: flex; flex-direction: column; align-items: center; justify-content: center">
+  <html:span style="font-size: 1.4em">
+    
+  <html:span data-id="lp"><fr:tex display="inline"><![CDATA[\lparen ]]></fr:tex></html:span>
+
+  <html:span data-id="up1"><fr:tex display="inline"><![CDATA[\uparrow ]]></fr:tex></html:span>
+
+  <html:span data-id="f"><fr:tex display="inline"><![CDATA[f]]></fr:tex></html:span>
+
+  <html:span data-id="op1b"><fr:tex display="inline"><![CDATA[\;\star _e\;]]></fr:tex></html:span>
+
+  <html:span data-id="up2"><fr:tex display="inline"><![CDATA[\uparrow ]]></fr:tex></html:span>
+
+  <html:span data-id="g"><fr:tex display="inline"><![CDATA[g]]></fr:tex></html:span>
+
+  <html:span data-id="rp"><fr:tex display="inline"><![CDATA[\rparen ]]></fr:tex></html:span>
+
+  <html:span data-id="op2b"><fr:tex display="inline"><![CDATA[\;\star _e\;]]></fr:tex></html:span>
+
+  <html:span data-id="up3"><fr:tex display="inline"><![CDATA[\uparrow ]]></fr:tex></html:span>
+
+  <html:span data-id="h"><fr:tex display="inline"><![CDATA[h]]></fr:tex></html:span>
+
+  </html:span>
+</html:div>
+
+  <html:p><html:span style="font-size: 0.75em"><html:code>solveCat!</html:code> quotes the syntax into
+     <fr:tex display="inline"><![CDATA[W_{\mathcal  C}]]></fr:tex> = <html:code><![CDATA[ FreeCat(Cat→Quiver 𝓒)]]></html:code>: each
+     atom becomes an edge <fr:tex display="inline"><![CDATA[\uparrow  f]]></fr:tex>, each <fr:tex display="inline"><![CDATA[\star ]]></fr:tex> a formal <fr:tex display="inline"><![CDATA[\star _e]]></fr:tex>. The
+     brackets remain --- the free category is just syntax.</html:span></html:p>
+</html:section>
+
+  <html:section data-auto-animate="true">
+  
+  <html:div style="text-align: center"><html:p><html:strong>Step 2 --- quote into the presheaf category</html:strong></html:p></html:div>
+
+  
+  <html:div style="display: flex; flex-direction: column; align-items: center; justify-content: center">
+  <html:span style="font-size: 1.4em">
+    
+  <html:span data-id="lp"><fr:tex display="inline"><![CDATA[\lparen ]]></fr:tex></html:span>
+
+  <html:span data-id="y1"><fr:tex display="inline"><![CDATA[\mathsf {y}\,]]></fr:tex></html:span>
+
+  <html:span data-id="f"><fr:tex display="inline"><![CDATA[f]]></fr:tex></html:span>
+
+  <html:span data-id="op1c"><fr:tex display="inline"><![CDATA[\;\circ \;]]></fr:tex></html:span>
+
+  <html:span data-id="y2"><fr:tex display="inline"><![CDATA[\mathsf {y}\,]]></fr:tex></html:span>
+
+  <html:span data-id="g"><fr:tex display="inline"><![CDATA[g]]></fr:tex></html:span>
+
+  <html:span data-id="rp"><fr:tex display="inline"><![CDATA[\rparen ]]></fr:tex></html:span>
+
+  <html:span data-id="op2c"><fr:tex display="inline"><![CDATA[\;\circ \;]]></fr:tex></html:span>
+
+  <html:span data-id="y3"><fr:tex display="inline"><![CDATA[\mathsf {y}\,]]></fr:tex></html:span>
+
+  <html:span data-id="h"><fr:tex display="inline"><![CDATA[h]]></fr:tex></html:span>
+
+  </html:span>
+</html:div>
+
+  <html:p><html:span style="font-size: 0.75em"><html:code>eval</html:code> applies <fr:tex display="inline"><![CDATA[\mathcal  I]]></fr:tex> = <html:code>PseudoYoneda</html:code> into
+     <fr:tex display="inline"><![CDATA[\mathcal  P]]></fr:tex> = <html:code><![CDATA[ PowerCategory(W𝓒.ob) SET]]></html:code>. Each
+     morphism becomes a <html:em>function</html:em> on hom-sets --- its CPS form <fr:tex display="inline"><![CDATA[\mathsf {y}\,f]]></fr:tex>
+     --- and <fr:tex display="inline"><![CDATA[\star _e]]></fr:tex> becomes function composition <fr:tex display="inline"><![CDATA[\circ ]]></fr:tex>.</html:span></html:p>
+</html:section>
+
+  <html:section data-auto-animate="true">
+  
+  <html:div style="text-align: center"><html:p><html:strong>Step 3 --- the brackets evaporate</html:strong></html:p></html:div>
+
+  
+  <html:div style="display: flex; flex-direction: column; align-items: center; justify-content: center">
+  <html:span style="font-size: 1.4em">
+    
+  <html:span data-id="y1"><fr:tex display="inline"><![CDATA[\mathsf {y}\,]]></fr:tex></html:span>
+
+  <html:span data-id="f"><fr:tex display="inline"><![CDATA[f]]></fr:tex></html:span>
+
+  <html:span data-id="op1c"><fr:tex display="inline"><![CDATA[\;\circ \;]]></fr:tex></html:span>
+
+  <html:span data-id="y2"><fr:tex display="inline"><![CDATA[\mathsf {y}\,]]></fr:tex></html:span>
+
+  <html:span data-id="g"><fr:tex display="inline"><![CDATA[g]]></fr:tex></html:span>
+
+  <html:span data-id="op2c"><fr:tex display="inline"><![CDATA[\;\circ \;]]></fr:tex></html:span>
+
+  <html:span data-id="y3"><fr:tex display="inline"><![CDATA[\mathsf {y}\,]]></fr:tex></html:span>
+
+  <html:span data-id="h"><fr:tex display="inline"><![CDATA[h]]></fr:tex></html:span>
+
+  </html:span>
+</html:div>
+
+  <html:p><html:span style="font-size: 0.75em">Function composition is <html:em>definitionally</html:em> associative:
+     <fr:tex display="inline"><![CDATA[\lparen  p \circ  q\rparen  \circ  r]]></fr:tex> and <fr:tex display="inline"><![CDATA[p \circ  \lparen  q \circ  r\rparen ]]></fr:tex>
+     are the same <fr:tex display="inline"><![CDATA[\lambda  x.\, p\,\lparen  q\,\lparen  r\,x\rparen \rparen ]]></fr:tex>. Both
+     bracketings reduce to this one normal form --- so downstairs the equation is
+     literally <html:code>refl</html:code>.</html:span></html:p>
+</html:section>
+
+  <html:section data-auto-animate="true">
+  
+  <html:div style="text-align: center"><html:p><html:strong>Step 4 --- reflect it back</html:strong></html:p></html:div>
+
+  
+  <html:div style="display: flex; flex-direction: column; align-items: center; justify-content: center">
+  <html:span style="font-size: 1.4em">
+    
+  <html:span data-id="y1"><fr:tex display="inline"><![CDATA[\mathsf {y}\,]]></fr:tex></html:span>
+
+  <html:span data-id="f"><fr:tex display="inline"><![CDATA[f]]></fr:tex></html:span>
+
+  <html:span data-id="op1c"><fr:tex display="inline"><![CDATA[\;\circ \;]]></fr:tex></html:span>
+
+  <html:span data-id="y2"><fr:tex display="inline"><![CDATA[\mathsf {y}\,]]></fr:tex></html:span>
+
+  <html:span data-id="g"><fr:tex display="inline"><![CDATA[g]]></fr:tex></html:span>
+
+  <html:span data-id="op2c"><fr:tex display="inline"><![CDATA[\;\circ \;]]></fr:tex></html:span>
+
+  <html:span data-id="y3"><fr:tex display="inline"><![CDATA[\mathsf {y}\,]]></fr:tex></html:span>
+
+  <html:span data-id="h"><fr:tex display="inline"><![CDATA[h]]></fr:tex></html:span>
+
+  </html:span>
+</html:div>
+
+  <html:p><html:span style="font-size: 0.75em"><html:code>PseudoYoneda</html:code> is faithful (<html:code>isFaithfulPseudoYoneda</html:code>), so the
+     <html:code>refl</html:code> downstairs reflects back up to equality in <fr:tex display="inline"><![CDATA[W_{\mathcal  C}]]></fr:tex>, and
+     <fr:tex display="inline"><![CDATA[\llbracket  - \rrbracket _c]]></fr:tex> transports it into <fr:tex display="inline"><![CDATA[\mathcal  C]]></fr:tex>. The associator
+     you needed is recovered --- from <html:code>refl</html:code>.</html:span></html:p>
+</html:section>
+
+  <html:section data-auto-animate="true">
+  
+  <html:div style="display: flex; flex-direction: column; align-items: center; justify-content: center">
+    <html:p><html:span style="font-size: 1.4em">The formal associations were never really there.</html:span></html:p>
+    <html:p>In the strict world of functions they <html:em>evaporate</html:em>; the Yoneda embedding
+       carries the triviality home.</html:p>
+    <html:p><html:span style="font-size: 0.75em">Same trick as <html:em>difference lists</html:em> / Cayley's theorem: represent an
+       element by what you compose onto it, and reassociation becomes free.</html:span></html:p>
+  </html:div>
+
+</html:section>
+</fr:mainmatter>
+  <fr:backmatter>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors />
+        <fr:title text="References">References</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter />
+    </fr:tree>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors />
+        <fr:title text="Context">Context</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter />
+    </fr:tree>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors />
+        <fr:title text="Backlinks">Backlinks</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter>
+        <fr:tree show-metadata="true" expanded="false" toc="false" numbered="false">
+          <fr:frontmatter>
+            <fr:authors>
+              <fr:author>
+                <fr:link href="/stevenschaefer/" title="Steven Schaefer" uri="https://stevenschaefer.net/stevenschaefer/" display-uri="stevenschaefer" type="local">Steven Schaefer</fr:link>
+              </fr:author>
+            </fr:authors>
+            <fr:date>
+              <fr:year>2026</fr:year>
+              <fr:month>6</fr:month>
+              <fr:day>2</fr:day>
+            </fr:date>
+            <fr:source-path>/Users/stevenschaefer/forest/trees/sss-00DZ.tree</fr:source-path>
+            <fr:uri>https://stevenschaefer.net/sss-00DZ/</fr:uri>
+            <fr:display-uri>sss-00DZ</fr:display-uri>
+            <fr:route>/sss-00DZ/</fr:route>
+            <fr:title text="Manipulating expressions, animated">Manipulating expressions, animated</fr:title>
+            <fr:meta name="author">false</fr:meta>
+            <fr:meta name="layout">reveal</fr:meta>
+            <fr:meta name="theme">paper</fr:meta>
+            <fr:meta name="font-size">30px</fr:meta>
+          </fr:frontmatter>
+          <fr:mainmatter>
+  <html:section data-auto-animate="true">
+  
+  <html:div style="display: flex; flex-direction: column; align-items: center; justify-content: center">
+    
+  <html:span style="font-size: 2em">Manipulating expressions</html:span>
+
+    <html:p><html:em>Auto-animate, by hand. Each token keeps its identity; reveal tweens
+       the rest.</html:em></html:p>
+  </html:div>
+
+</html:section>
+
+  <html:section data-auto-animate="true">
+  
+  <html:div style="text-align: center"><html:p><html:strong>Commutativity</html:strong></html:p></html:div>
+
+  
+  <html:div style="display: flex; flex-direction: column; align-items: center; justify-content: center">
+  <html:span style="font-size: 2em">
+    
+  <html:span data-id="a"><fr:tex display="inline"><![CDATA[a]]></fr:tex></html:span>
+
+  <html:span data-id="plus"><fr:tex display="inline"><![CDATA[\;+\;]]></fr:tex></html:span>
+
+  <html:span data-id="b"><fr:tex display="inline"><![CDATA[b]]></fr:tex></html:span>
+
+  </html:span>
+</html:div>
+
+  
+  <html:div style="text-align: center">
+  <html:span style="font-size: 0.75em">press <html:em>space</html:em></html:span>
+</html:div>
+
+</html:section>
+
+  <html:section data-auto-animate="true">
+  
+  <html:div style="text-align: center"><html:p><html:strong>Commutativity</html:strong></html:p></html:div>
+
+  
+  <html:div style="display: flex; flex-direction: column; align-items: center; justify-content: center">
+  <html:span style="font-size: 2em">
+    
+  <html:span data-id="b"><fr:tex display="inline"><![CDATA[b]]></fr:tex></html:span>
+
+  <html:span data-id="plus"><fr:tex display="inline"><![CDATA[\;+\;]]></fr:tex></html:span>
+
+  <html:span data-id="a"><fr:tex display="inline"><![CDATA[a]]></fr:tex></html:span>
+
+  </html:span>
+</html:div>
+
+  
+  <html:div style="text-align: center">
+  <html:span style="font-size: 0.75em"><fr:tex display="inline"><![CDATA[a]]></fr:tex> and <fr:tex display="inline"><![CDATA[b]]></fr:tex> glide past each other; <fr:tex display="inline"><![CDATA[+]]></fr:tex> stays put</html:span>
+</html:div>
+
+</html:section>
+
+  <html:section data-auto-animate="true">
+  
+  <html:div style="text-align: center"><html:p><html:strong>Associativity</html:strong></html:p></html:div>
+
+  
+  <html:div style="display: flex; flex-direction: column; align-items: center; justify-content: center">
+  <html:span style="font-size: 2em">
+    
+  <html:span data-id="lp"><fr:tex display="inline"><![CDATA[\lparen ]]></fr:tex></html:span>
+
+  <html:span data-id="a"><fr:tex display="inline"><![CDATA[a]]></fr:tex></html:span>
+
+  <html:span data-id="dotL"><fr:tex display="inline"><![CDATA[\;\cdot \;]]></fr:tex></html:span>
+
+  <html:span data-id="b"><fr:tex display="inline"><![CDATA[b]]></fr:tex></html:span>
+
+  <html:span data-id="rp"><fr:tex display="inline"><![CDATA[\rparen ]]></fr:tex></html:span>
+
+  <html:span data-id="dotR"><fr:tex display="inline"><![CDATA[\;\cdot \;]]></fr:tex></html:span>
+
+  <html:span data-id="c"><fr:tex display="inline"><![CDATA[c]]></fr:tex></html:span>
+
+  </html:span>
+</html:div>
+
+</html:section>
+
+  <html:section data-auto-animate="true">
+  
+  <html:div style="text-align: center"><html:p><html:strong>Associativity</html:strong></html:p></html:div>
+
+  
+  <html:div style="display: flex; flex-direction: column; align-items: center; justify-content: center">
+  <html:span style="font-size: 2em">
+    
+  <html:span data-id="a"><fr:tex display="inline"><![CDATA[a]]></fr:tex></html:span>
+
+  <html:span data-id="dotR"><fr:tex display="inline"><![CDATA[\;\cdot \;]]></fr:tex></html:span>
+
+  <html:span data-id="lp"><fr:tex display="inline"><![CDATA[\lparen ]]></fr:tex></html:span>
+
+  <html:span data-id="b"><fr:tex display="inline"><![CDATA[b]]></fr:tex></html:span>
+
+  <html:span data-id="dotL"><fr:tex display="inline"><![CDATA[\;\cdot \;]]></fr:tex></html:span>
+
+  <html:span data-id="c"><fr:tex display="inline"><![CDATA[c]]></fr:tex></html:span>
+
+  <html:span data-id="rp"><fr:tex display="inline"><![CDATA[\rparen ]]></fr:tex></html:span>
+
+  </html:span>
+</html:div>
+
+  
+  <html:div style="text-align: center">
+  <html:span style="font-size: 0.75em">the parentheses slide to re-bracket; <fr:tex display="inline"><![CDATA[a,b,c]]></fr:tex> keep their identity</html:span>
+</html:div>
+
+</html:section>
+
+  <html:section data-auto-animate="true">
+  
+  <html:div style="text-align: center"><html:p><html:strong>How</html:strong></html:p></html:div>
+
+  <html:p>Each movable token is <html:code><![CDATA[\anim{id}{...}]]></html:code> with a stable
+     id. <html:code><![CDATA[\slideAnim{...}]]></html:code> marks a slide that tweens to its
+     neighbour: matched ids glide, unmatched fade in/out.</html:p>
+  <html:p>No timeline, no keyframes, no <html:code>run_time</html:code> --- you write two <html:em>states</html:em>
+     and the motion is derived. That is the whole engine behind
+     <fr:link href="/sss-00E0/" title="The category solver, animated" uri="https://stevenschaefer.net/sss-00E0/" display-uri="sss-00E0" type="local">the category solver demo</fr:link>.</html:p>
+</html:section>
+</fr:mainmatter>
+        </fr:tree>
+      </fr:mainmatter>
+    </fr:tree>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors />
+        <fr:title text="Related">Related</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter />
+    </fr:tree>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors />
+        <fr:title text="Contributions">Contributions</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter />
+    </fr:tree>
+  </fr:backmatter>
+</fr:tree>

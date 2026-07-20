@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="/default.xsl"?>
+<fr:tree xmlns:fr="http://www.forester-notes.org" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:xml="http://www.w3.org/XML/1998/namespace" root="false" base-url="/">
+  <fr:frontmatter>
+    <fr:authors>
+      <fr:author>
+        <fr:link href="/stevenschaefer/" title="Steven Schaefer" uri="https://stevenschaefer.net/stevenschaefer/" display-uri="stevenschaefer" type="local">Steven Schaefer</fr:link>
+      </fr:author>
+    </fr:authors>
+    <fr:date>
+      <fr:year>2026</fr:year>
+      <fr:month>3</fr:month>
+      <fr:day>26</fr:day>
+    </fr:date>
+    <fr:source-path>/Users/stevenschaefer/forest/trees/sss-0081.tree</fr:source-path>
+    <fr:uri>https://stevenschaefer.net/sss-0081/</fr:uri>
+    <fr:display-uri>sss-0081</fr:display-uri>
+    <fr:route>/sss-0081/</fr:route>
+    <fr:title text="Vocal synthesis + prismatizer: findings and next steps">Vocal synthesis + prismatizer: findings and next steps</fr:title>
+  </fr:frontmatter>
+  <fr:mainmatter>
+    <html:p>Attempted to build a vocal harmonizer system for TidalCycles (prismatizer + vocal synthesis). Documenting what was built, what works, what doesn't, and the path forward.</html:p>
+    <fr:tree show-metadata="false">
+      <fr:frontmatter>
+        <fr:authors>
+          <fr:author>
+            <fr:link href="/stevenschaefer/" title="Steven Schaefer" uri="https://stevenschaefer.net/stevenschaefer/" display-uri="stevenschaefer" type="local">Steven Schaefer</fr:link>
+          </fr:author>
+        </fr:authors>
+        <fr:date>
+          <fr:year>2026</fr:year>
+          <fr:month>3</fr:month>
+          <fr:day>26</fr:day>
+        </fr:date>
+        <fr:source-path>/Users/stevenschaefer/forest/trees/sss-0081.tree</fr:source-path>
+        <fr:title text="What was built">What was built</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter>
+        <html:p>
+          <html:ul><html:li>TTS word sample bank: <html:code>lib/gen-words.sh</html:code> generates per-word sample directories from a wordlist using macOS <html:code>say</html:code> + <html:code>ffmpeg</html:code>. Each word becomes its own SuperDirt sample bank (e.g. <html:code>s "home love light"</html:code>). Samples play at half speed in SuperDirt for unknown reasons; <html:code>tts = speed 1.6</html:code> workaround in Vocab.hs.</html:li>
+<html:li>Prismatizer effect: <html:code>lib/sc/prismatizer.scd</html:code> — SuperDirt per-event effect using <html:code>PitchShift.ar</html:code> with 3 harmony voices, per-voice detuning/vibrato, stereo spread. Registered as a SuperDirt module. Controlled via <html:code>prism</html:code>, <html:code>prismh1-3</html:code>, <html:code>prismgld</html:code>, <html:code>prismspr</html:code> params.</html:li>
+<html:li>Formant vocal synth: <html:code>lib/sc/supervocal.scd</html:code> — <html:code>Formant.ar</html:code>-based synth with interpolatable vowel selection (<html:code>vow 0-4</html:code> for a/e/i/o/u), vibrato, breathiness. Registered as <html:code><![CDATA[\supervocal]]></html:code> in SuperDirt.</html:li>
+<html:li>Tidal helpers: <html:code>lib/hs/Vocab.hs</html:code> — param definitions, dynamics helpers (<html:code>cresc</html:code>, <html:code>swell</html:code>), pitch helpers (<html:code>gliss</html:code>, <html:code>slurup</html:code>), prismatizer presets. Loaded via <html:code>:script</html:code>.</html:li>
+<html:li>Boot script: <html:code>synths/boot-superdirt.scd</html:code> loads custom sample banks from <html:code>samples/vocab/*</html:code> and loads supervocal + prismatizer on startup.</html:li></html:ul>
+        </html:p>
+      </fr:mainmatter>
+    </fr:tree>
+    <fr:tree show-metadata="false">
+      <fr:frontmatter>
+        <fr:authors>
+          <fr:author>
+            <fr:link href="/stevenschaefer/" title="Steven Schaefer" uri="https://stevenschaefer.net/stevenschaefer/" display-uri="stevenschaefer" type="local">Steven Schaefer</fr:link>
+          </fr:author>
+        </fr:authors>
+        <fr:date>
+          <fr:year>2026</fr:year>
+          <fr:month>3</fr:month>
+          <fr:day>26</fr:day>
+        </fr:date>
+        <fr:source-path>/Users/stevenschaefer/forest/trees/sss-0081.tree</fr:source-path>
+        <fr:title text="What doesn't work">What doesn't work</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter>
+        <html:p>
+          <html:ul><html:li><html:strong>Vocal synth sounds bad.</html:strong> <html:code>Formant.ar</html:code> produces a buzzy, synthetic sound nothing like a human voice. Filtered sawtooth waves were even worse. SuperCollider's built-in synthesis primitives cannot produce convincing vocal timbre from scratch.</html:li>
+<html:li><html:strong>Prismatizer sounds robotic.</html:strong> <html:code>PitchShift.ar</html:code> is a granular pitch shifter that introduces artifacts. It lacks formant preservation — shifted voices sound chipmunked or monstrous rather than like natural singers. Not close to the Bon Iver / Imogen Heap / Francis and the Lights sound.</html:li>
+<html:li><html:strong>TTS samples play at half speed.</html:strong> Samples generated by macOS <html:code>say</html:code> play at approximately half the expected speed in SuperDirt. The bd sample from SuperDirt's own library plays correctly when placed in the same custom bank. Root cause unknown — not a sample rate issue, not a WAV header issue, not a format issue.</html:li></html:ul>
+        </html:p>
+      </fr:mainmatter>
+    </fr:tree>
+    <fr:tree show-metadata="false">
+      <fr:frontmatter>
+        <fr:authors>
+          <fr:author>
+            <fr:link href="/stevenschaefer/" title="Steven Schaefer" uri="https://stevenschaefer.net/stevenschaefer/" display-uri="stevenschaefer" type="local">Steven Schaefer</fr:link>
+          </fr:author>
+        </fr:authors>
+        <fr:date>
+          <fr:year>2026</fr:year>
+          <fr:month>3</fr:month>
+          <fr:day>26</fr:day>
+        </fr:date>
+        <fr:source-path>/Users/stevenschaefer/forest/trees/sss-0081.tree</fr:source-path>
+        <fr:title text="Path forward">Path forward</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter>
+        <html:p>The Bon Iver vocal harmonizer sound requires <html:strong>real vocal input</html:strong>, not synthesis. Three viable directions:</html:p>
+        <html:p>
+          <html:ol><html:li><html:strong>Recorded vocal samples</html:strong>: Record sustained vowel notes at different pitches, use as sample banks. Loop with SuperDirt's <html:code>loopAt</html:code>/<html:code>legato</html:code>. Apply prismatizer for harmonies.</html:li>
+<html:li><html:strong>Live mic input</html:strong>: Route microphone through SuperCollider, apply prismatizer in real-time. This is literally what Bon Iver does live.</html:li>
+<html:li><html:strong>Better pitch shifting</html:strong>: Replace <html:code>PitchShift.ar</html:code> with a formant-preserving approach — e.g. analysis/resynthesis via FFT, or use an external VST plugin via SuperCollider's VSTPlugin quark.</html:li></html:ol>
+        </html:p>
+      </fr:mainmatter>
+    </fr:tree>
+  </fr:mainmatter>
+  <fr:backmatter>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors />
+        <fr:title text="References">References</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter />
+    </fr:tree>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors />
+        <fr:title text="Context">Context</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter />
+    </fr:tree>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors />
+        <fr:title text="Backlinks">Backlinks</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter />
+    </fr:tree>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors />
+        <fr:title text="Related">Related</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter />
+    </fr:tree>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors />
+        <fr:title text="Contributions">Contributions</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter />
+    </fr:tree>
+  </fr:backmatter>
+</fr:tree>

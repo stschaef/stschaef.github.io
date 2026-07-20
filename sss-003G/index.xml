@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="/default.xsl"?>
+<fr:tree xmlns:fr="http://www.forester-notes.org" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:xml="http://www.w3.org/XML/1998/namespace" root="false" base-url="/">
+  <fr:frontmatter>
+    <fr:authors>
+      <fr:author>
+        <fr:link href="/stevenschaefer/" title="Steven Schaefer" uri="https://stevenschaefer.net/stevenschaefer/" display-uri="stevenschaefer" type="local">Steven Schaefer</fr:link>
+      </fr:author>
+    </fr:authors>
+    <fr:date>
+      <fr:year>2026</fr:year>
+      <fr:month>2</fr:month>
+      <fr:day>20</fr:day>
+    </fr:date>
+    <fr:source-path>/Users/stevenschaefer/forest/trees/sss-003G.tree</fr:source-path>
+    <fr:uri>https://stevenschaefer.net/sss-003G/</fr:uri>
+    <fr:display-uri>sss-003G</fr:display-uri>
+    <fr:route>/sss-003G/</fr:route>
+    <fr:title text="Cycling TODOs">Cycling TODOs</fr:title>
+    <fr:taxon>TODO</fr:taxon>
+    <fr:meta name="status">done</fr:meta>
+    <fr:meta name="completed">2026-02-21</fr:meta>
+  </fr:frontmatter>
+  <fr:mainmatter>
+    <html:p>
+Cycling TODOs in a query buffer (from <html:code>SPC r q t</html:code>) is lossy. It can only go from pending to in progress, or from in progress to done. Then once it is done, it is removed from the preview. We should be able to arbitrarily cycle. The initial query should only show pending or in progress TODOs, but the ones that are cycled to done should not disappear unless the preview is refreshed.
+</html:p>
+    <html:p>Resolved. Full cycling (pending \to  in-progress \to  done \to  cancelled \to  pending)
+implemented via <html:code>forester-cycle-todo-state</html:code>. The query buffer
+<html:code>forester-query-cycle-state</html:code> updates status in-place so done items
+remain visible until manual refresh. Completion metadata is set/removed
+correctly when entering/leaving done state. The earlier <html:code>replace-match</html:code>
+backslash error was fixed by using literal mode.</html:p>
+  </fr:mainmatter>
+  <fr:backmatter>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors />
+        <fr:title text="References">References</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter />
+    </fr:tree>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors />
+        <fr:title text="Context">Context</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter />
+    </fr:tree>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors />
+        <fr:title text="Backlinks">Backlinks</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter />
+    </fr:tree>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors />
+        <fr:title text="Related">Related</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter />
+    </fr:tree>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors />
+        <fr:title text="Contributions">Contributions</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter />
+    </fr:tree>
+  </fr:backmatter>
+</fr:tree>

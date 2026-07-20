@@ -1,0 +1,989 @@
+/* SPDX-License-Identifier: CC0-1.0
+   Forester theme — Theme Studio design.
+   Base tokens + 6 themes (Paper · Dracula · Academic · Solarized · Editorial · Blueprint).
+   Theme is dispatched by `\meta{theme}{...}` → `article.theme-X`; tokens live on
+   `:root:has(article.theme-X)` so the whole document picks them up.
+   The persistent left identity rail is built by forester.js.
+   ============================================================ */
+
+/* ============================================================
+   Self-hosted fonts
+   Jost is a variable font — one woff2 file covers weights 100–900.
+   Italic is woff-only (Google does not ship an italic woff2 cut).
+   Loaded as a fallback for the paper theme's Futura → Jost → Century Gothic stack
+   so non-Apple visitors still get a Futura-like rendering.
+   ============================================================ */
+@font-face {
+  font-family: 'Jost';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url('fonts/jost-v20-latin-regular.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Jost';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url('fonts/jost-v20-latin-ext-regular.woff2') format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: 'Jost';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url('fonts/jost-v20-latin-italic.woff') format('woff');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+/* ============================================================
+   Tokens (defaults — Academic-light fallback)
+   ============================================================ */
+:root {
+  --maxw: 125ex;
+  --side-w: 27ex;             /* persistent left identity rail */
+  --content-gap: 1rem;
+  --radius: 4px;
+
+  --pad-block: 0.55rem;
+  --gap-section: 1.15em;
+  --line: 1.6;
+
+  --font-head: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-body: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, "SF Mono", Menlo, monospace;
+
+  --bg: #ffffff;
+  --surface: #ffffff;
+  --fg: #16181d;
+  --fg-muted: #5b6068;
+  --fg-faint: #9aa0a8;
+  --rule: #e4e6ea;
+  --rule-strong: #c9ccd2;
+  --accent: oklch(0.55 0.13 255);
+  --accent-2: oklch(0.55 0.13 25);
+  --link: var(--accent);
+  --block-hover: oklch(0.96 0.02 255);
+  --code-bg: #f4f5f7;
+  --code-fg: #1c2330;
+  --highlight-bg: oklch(0.95 0.09 95);
+  --highlight-border: oklch(0.82 0.10 95);
+  --taxon-color: var(--fg-muted);
+  --shadow: none;
+
+  /* TODO state colors (per-theme overrides below) */
+  --todo-pending: #b07d1e;
+  --todo-inprogress: #2680c2;
+  --todo-done: #2f7d3a;
+  --todo-blocked: #b03030;
+
+  /* Taxon stamp palette — four "tones" themes can remap; per-taxon bindings live
+     in the Taxonomy-specific layouts block below. Defaults fall back to taxon-color. */
+  --tone-1: var(--accent);
+  --tone-2: var(--accent-2);
+  --tone-3: var(--taxon-color);
+  --tone-4: var(--fg-muted);
+}
+
+/* ============================================================
+   Page frame
+   ============================================================ */
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--fg);
+  font-family: var(--font-body);
+  font-size: 17px;
+  line-height: var(--line);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  hyphens: auto;
+  transition: background .25s ease, color .25s ease;
+}
+
+/* Old top nav bar — replaced by the persistent left identity rail (.site-sidebar) */
+header.header { display: none; }
+
+#grid-wrapper {
+  max-width: calc(var(--maxw) + var(--side-w) + 9ex);
+  margin: 0;
+  padding: 2.6rem 2.5ex 6rem 3ex;
+}
+@media (min-width: 1000px) {
+  #grid-wrapper {
+    display: grid;
+    grid-template-columns: var(--side-w) minmax(0, 1fr);
+    column-gap: 5ex;
+    align-items: start;
+  }
+}
+#grid-wrapper > .site-sidebar { grid-column: 1; }
+#grid-wrapper > article { grid-column: 2; max-width: var(--maxw); min-width: 0; }
+
+/* ── persistent left identity rail: name → home, email, then the page TOC ── */
+.site-sidebar {
+  position: sticky;
+  top: 2.2rem;
+  align-self: start;
+  max-height: calc(100vh - 3rem);
+  overflow-y: auto;
+}
+@media (max-width: 999px) {
+  .site-sidebar { position: static; max-height: none; margin-bottom: 1.8em; }
+}
+.site-id { margin-bottom: 0.4em; }
+.site-name {
+  display: block;
+  font-family: var(--font-head);
+  font-size: 1.3rem;
+  font-weight: 700;
+  line-height: 1.12;
+  letter-spacing: -0.015em;
+  color: var(--fg);
+  text-decoration: none;
+}
+.site-name:hover { color: var(--accent); }
+.site-email {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--fg-muted);
+  text-decoration: none;
+  margin-top: 0.5em;
+  word-break: break-all;
+}
+.site-email:hover { color: var(--accent); }
+.site-nav { display: flex; flex-direction: column; gap: 0.25em; margin-top: 0.9em; }
+.site-nav a {
+  font-family: var(--font-head);
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--fg-muted);
+  text-decoration: none;
+}
+.site-nav a:hover { color: var(--accent); }
+.site-social {
+  display: flex;
+  flex-direction: row;
+  gap: 0.55em;
+  margin-top: 0.9em;
+  align-items: center;
+}
+.site-social-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.25rem;
+  height: 1.25rem;
+  color: var(--fg-muted);
+  text-decoration: none;
+  transition: color 0.15s ease;
+}
+.site-social-link svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.site-social-link:hover { color: var(--accent); }
+hr.site-div { margin: 1.3em 0; height: 1px; background: var(--rule); border: 0; width: 100%; }
+.site-sidebar nav#toc {
+  position: static;
+  top: auto;
+  margin: 0;
+  max-width: none;
+  max-height: none;
+  overflow: visible;
+}
+
+/* ============================================================
+   Typography
+   ============================================================ */
+article { font-size: 1rem; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-head);
+  line-height: 1.18;
+  font-weight: 600;
+  margin: 0;
+  text-wrap: balance;
+}
+p { margin: 0 0 0.85em; text-wrap: pretty; }
+p:last-child { margin-bottom: 0; }
+
+em { font-style: italic; }
+strong { font-weight: 650; }
+
+/* ---- the root tree title ---- */
+article > section.block > details > summary > header { display: block; margin-bottom: 1.1em; }
+article > section.block > details > summary > header > h1 {
+  font-size: 2.05rem;
+  font-weight: 650;
+  letter-spacing: -0.012em;
+  line-height: 1.12;
+}
+/* Root tree's NAMED taxon → solid knockout stamp, block above title */
+article > section.block[data-taxon] > details > summary > header > h1 > .taxon {
+  display: block;
+  width: fit-content;
+  font-family: var(--font-mono);
+  font-weight: 700;
+  font-size: 0.7rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  background: var(--taxon-stamp, var(--taxon-color));
+  color: var(--bg);
+  border-radius: 3px;
+  padding: 0.24em 0.55em 0.2em;
+  margin-bottom: 0.85em;
+  word-spacing: -0.5em;
+}
+
+/* ---- subtree headings ---- */
+details h1 { font-size: 1.15rem; display: inline; font-weight: 650; }
+details > summary > header { display: inline; }
+section.block .block > details > summary > header > h1 { font-size: 1.12rem; }
+/* default taxon text — covers subtree NUMBERS ("1.", "2."), which are NEVER stamped */
+span.taxon { color: var(--taxon-color); font-weight: 700; }
+.tree-container span.taxon:empty { display: none; }
+
+/* NAMED taxons only (Talk, Reference, Course, …) → solid knockout stamp */
+.tree-content section[data-taxon] > details > summary > header > h1 > span.taxon {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-weight: 700;
+  font-size: 0.6em;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  line-height: 1.05;
+  background: var(--taxon-stamp, var(--taxon-color));
+  color: var(--bg);
+  border-radius: 3px;
+  padding: 0.24em 0.5em 0.2em;
+  margin-right: 0.7ex;
+  vertical-align: 0.16em;
+  white-space: nowrap;
+  word-spacing: -0.5em;       /* absorb the trailing ". " baked into the source */
+}
+
+/* hide the duplicated metadata inside summary headers of hide-metadata blocks */
+.block.hide-metadata > details > summary > header > .metadata { display: none; }
+
+/* slug ([sss-00xx]) chips */
+a.slug {
+  font-family: var(--font-mono);
+  font-size: 0.72em;
+  font-weight: 400;
+  color: var(--fg-faint);
+  text-decoration: none;
+  white-space: nowrap;
+}
+a.slug:hover { color: var(--accent); background: var(--block-hover); border-radius: 3px; }
+
+/* edit button */
+a.edit-button {
+  font-family: var(--font-mono);
+  font-size: 0.72em;
+  color: var(--fg-faint);
+  text-decoration: none;
+  white-space: nowrap;
+}
+a.edit-button:hover { color: var(--accent); }
+
+/* ============================================================
+   Blocks / details / nesting (transclusions, up to 4+ deep)
+   ============================================================ */
+section.block { border-radius: var(--radius); }
+section.block > details { margin-bottom: var(--gap-section); }
+section.block > details:not([open]) { margin-bottom: calc(var(--gap-section) * 0.35); }
+
+.tree-content { margin-top: 0.2em; }
+
+/* indent + left rule for every nested subtree.
+   Color priority: per-taxon stamp → depth-cycling --lvl → neutral --rule. */
+.tree-content > section.block {
+  margin-top: 1.1em;
+  padding-left: 1.6ex;
+  border-left: 2px solid var(--taxon-stamp, var(--lvl, var(--rule)));
+  transition: border-color .15s, background .15s;
+}
+
+/* summary affordance */
+details > summary { list-style: none; cursor: pointer; }
+details > summary::marker, details > summary::-webkit-details-marker { display: none; }
+.tree-content > section.block > details > summary:hover header > h1 { color: var(--accent); }
+
+/* collapse caret on subtree summaries */
+.tree-content > section.block > details > summary > header > h1::before {
+  content: "›";
+  display: inline-block;
+  width: 0.9ex;
+  margin-right: 0.7ex;
+  color: var(--fg-faint);
+  font-family: var(--font-mono);
+  font-weight: 400;
+  transition: transform .15s;
+}
+.tree-content > section.block > details[open] > summary > header > h1::before { transform: rotate(90deg); }
+
+/* hover — highlight ONLY the innermost hovered subtree, not every ancestor */
+.block:hover { background: transparent; }
+.tree-content > section.block:hover {
+  background: var(--block-hover);
+  box-shadow: inset 3px 0 0 0 var(--taxon-stamp, var(--lvl, var(--accent)));   /* "you are here" left marker */
+}
+/* a subtree containing a more deeply hovered subtree drops its own highlight */
+.tree-content > section.block:hover:has(.tree-content > section.block:hover) {
+  background: transparent;
+  box-shadow: none;
+}
+
+/* highlighted / transcluded emphasis */
+.block.highlighted, .highlighted {
+  background: var(--highlight-bg);
+  border: 1px solid var(--highlight-border);
+  border-radius: var(--radius);
+  padding: 0.2em 0.6ex;
+}
+.highlighted:hover { filter: brightness(0.99) saturate(1.1); }
+
+/* ============================================================
+   Metadata bar
+   ============================================================ */
+.metadata {
+  font-family: var(--font-mono);
+  font-size: 0.74rem;
+  color: var(--fg-muted);
+  margin-top: 0.35em;
+  letter-spacing: 0.01em;
+}
+.metadata ul { list-style: none; padding: 0; margin: 0; display: inline; }
+.metadata ul li { display: inline; }
+.metadata li.meta-item::after { content: "·"; margin: 0 0.7ex; color: var(--fg-faint); }
+.metadata li.meta-item:last-child::after { content: ""; }
+.metadata address { display: inline; font-style: normal; }
+.metadata .author { color: var(--fg-muted); }
+
+/* ============================================================
+   Links
+   ============================================================ */
+a { color: var(--fg); text-decoration: none; }
+.link { cursor: pointer; }
+a.link.local, .link.local a {
+  color: var(--link);
+  text-decoration: underline;
+  text-decoration-style: dotted;
+  text-underline-offset: 2px;
+  text-decoration-thickness: 1px;
+}
+.link.external, .link.external a {
+  color: var(--link);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  text-decoration-thickness: 1px;
+}
+a.link.local:hover, .link.local a:hover, .link.external a:hover, .link.external:hover {
+  background: var(--block-hover);
+  border-radius: 2px;
+}
+.doi, .slug.doi { color: var(--fg-faint); }
+a.link.pdf-open { color: var(--accent-2); font-weight: 500; }
+
+/* ============================================================
+   Code & math
+   ============================================================ */
+code {
+  font-family: var(--font-mono);
+  font-size: 0.85em;
+  background: var(--code-bg);
+  color: var(--code-fg);
+  padding: 0.12em 0.4em;
+  border-radius: 3px;
+}
+pre {
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  line-height: 1.5;
+  background: var(--code-bg);
+  color: var(--code-fg);
+  padding: 1em 1.2em;
+  border-radius: var(--radius);
+  border: 1px solid var(--rule);
+  overflow-x: auto;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  margin: 0.6em 0 1em;
+}
+pre code { background: none; padding: 0; font-size: 1em; }
+
+.katex { font-size: 1.04em; }
+.katex-display { margin: 1em 0; overflow-x: auto; overflow-y: hidden; padding: 0.2em 0; }
+
+/* lists */
+ul, ol { padding-left: 2.2ex; margin: 0 0 0.85em; }
+li { margin-bottom: 0.2em; }
+ol { list-style-type: decimal; }
+ol li ol { list-style-type: lower-alpha; }
+ol li ol li ol { list-style-type: lower-roman; }
+
+blockquote {
+  margin: 0.8em 0;
+  padding-left: 1.4ex;
+  border-left: 3px solid var(--accent);
+  color: var(--fg-muted);
+  font-style: italic;
+}
+
+img { max-width: 100%; object-fit: cover; border-radius: var(--radius); }
+figure { text-align: center; margin: 1em 0; }
+figcaption { font-style: italic; font-size: 0.85em; color: var(--fg-muted); padding-top: 0.4em; }
+
+table { border-collapse: collapse; margin: 0.5em 0 1em; font-size: 0.92em; }
+th, td { text-align: left; padding: 0.3em 1.4ex; vertical-align: top; }
+th { font-family: var(--font-head); font-weight: 600; }
+
+hr { border: 0; height: 1px; background: var(--rule); margin: 1.6em 0; }
+
+/* ============================================================
+   Backmatter (footer): references, related, contributions
+   ============================================================ */
+footer {
+  display: block;
+  margin-top: 3rem;
+  padding-top: 1.4rem;
+  border-top: 2px solid var(--rule);
+}
+footer > section { margin-bottom: 1.4em; }
+footer h1 { font-size: 1.05rem; letter-spacing: 0.04em; text-transform: uppercase; color: var(--fg-muted); }
+footer .taxon { display: none; }
+
+/* ============================================================
+   Taxonomy-specific layouts  (CSS dispatch on data-taxon / data-status)
+   ============================================================ */
+
+/* — Per-taxon stamp color bindings (hardcoded, not depth-driven). The tones
+   themselves are theme tokens (--tone-1..4) so each theme stays coherent.   */
+section[data-taxon="Talk"]        { --taxon-stamp: var(--tone-2); }
+section[data-taxon="Reference"]   { --taxon-stamp: var(--tone-3); }
+section[data-taxon="Course"]      { --taxon-stamp: var(--tone-1); }
+section[data-taxon="Definition"]  { --taxon-stamp: var(--tone-1); }
+section[data-taxon="Daily"]       { --taxon-stamp: var(--tone-4); }
+section[data-taxon="Journal"]     { --taxon-stamp: var(--tone-2); }
+section[data-taxon="Milestone"]   { --taxon-stamp: var(--tone-3); }
+section[data-taxon="Note"]        { --taxon-stamp: var(--tone-4); }
+section[data-taxon="Plan"]        { --taxon-stamp: var(--tone-2); }
+section[data-taxon="Question"]    { --taxon-stamp: var(--tone-1); }
+section[data-taxon="Recipe"]      { --taxon-stamp: var(--tone-4); }
+section[data-taxon="Reflection"]  { --taxon-stamp: var(--tone-2); }
+section[data-taxon="Risks"]       { --taxon-stamp: var(--tone-3); }
+section[data-taxon="TODO"]        { --taxon-stamp: var(--tone-3); }
+section[data-taxon="Idea"]        { --taxon-stamp: var(--tone-1); }
+section[data-taxon="Handwriting"] { --taxon-stamp: var(--tone-4); }
+section[data-taxon="Person"]      { --taxon-stamp: var(--tone-2); }
+section[data-taxon="person"]      { --taxon-stamp: var(--tone-2); }
+section[data-taxon="proof"]       { --taxon-stamp: var(--tone-1); }
+section[data-taxon="solution"]    { --taxon-stamp: var(--tone-1); }
+
+/* — REFERENCE — plain-text authors + dashed BibTeX block (border comes from --taxon-stamp) — */
+section[data-taxon="Reference"] > details > summary > header > h1 { font-size: 1.02rem; font-weight: 600; }
+section[data-taxon="Reference"] .metadata .author { font-style: normal; color: var(--fg); }
+section[data-taxon="Reference"] pre {
+  font-size: 0.72rem;
+  background: var(--surface);
+  color: var(--fg-muted);
+  border-style: dashed;
+}
+
+/* — TALK — venue / slides / video meta become a row of pill link-buttons — */
+section[data-taxon="Talk"] .metadata ul { display: inline-flex; flex-wrap: wrap; gap: 0.4em 0.9ex; align-items: center; }
+section[data-taxon="Talk"] .metadata li.meta-item::after { content: none; }
+section[data-taxon="Talk"] .metadata .link.external,
+section[data-taxon="Talk"] .metadata .doi.link { text-decoration: none; }
+section[data-taxon="Talk"] .metadata a.link.external,
+section[data-taxon="Talk"] .metadata .link.external > a,
+section[data-taxon="Talk"] .metadata a.link.pdf-open,
+section[data-taxon="Talk"] .metadata a.doi.link {
+  display: inline-block;
+  border: 1px solid var(--accent-2);
+  border-radius: 999px;
+  padding: 0.05em 0.9ex 0.1em;
+  text-decoration: none;
+  white-space: nowrap;
+  line-height: 1.35;
+}
+section[data-taxon="Talk"] .metadata a.link.external:hover,
+section[data-taxon="Talk"] .metadata .link.external > a:hover,
+section[data-taxon="Talk"] .metadata a.link.pdf-open:hover,
+section[data-taxon="Talk"] .metadata a.doi.link:hover { background: var(--accent-2); color: var(--bg); }
+
+/* — PERSON — compact profile heading — */
+section[data-taxon="Person"] > details > summary > header > h1 { font-size: 1.02rem; font-weight: 600; }
+
+/* — TODO notes — status drives the per-taxon stamp color, so the section's
+   left bar (when transcluded) tracks status. No bar is drawn on the inner
+   <details> — that previously produced a double bar when transcluded and a
+   full-height bar on standalone TODOs. */
+section[data-status] { position: relative; }
+section[data-status="pending"]     { --taxon-stamp: var(--todo-pending); }
+section[data-status="in-progress"] { --taxon-stamp: var(--todo-inprogress); }
+section[data-status="done"]        { --taxon-stamp: var(--todo-done); }
+section[data-status="blocked"]     { --taxon-stamp: var(--todo-blocked); }
+section[data-status="cancelled"]   { --taxon-stamp: var(--fg-faint); }
+
+/* status label — small text-only by default (TOC, nested), stamp at title scale */
+.todo-status {
+  font-family: var(--font-mono);
+  font-weight: 700;
+  font-size: 0.66em;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  word-spacing: -0.5em;        /* absorb the trailing ". " baked into the source */
+  vertical-align: middle;
+}
+.todo-status-pending { --st: var(--todo-pending); color: var(--todo-pending); }
+.todo-status-in-progress { --st: var(--todo-inprogress); color: var(--todo-inprogress); }
+.todo-status-done { --st: var(--todo-done); color: var(--todo-done); }
+.todo-status-blocked { --st: var(--todo-blocked); color: var(--todo-blocked); }
+.todo-status-cancelled { --st: var(--fg-faint); color: var(--fg-faint); text-decoration: line-through; }
+
+/* inverted rubber-stamp on a status, at ANY depth (root title or transcluded subtree) */
+.tree-container h1 .todo-status {
+  display: inline-block;
+  font-size: 0.8em;
+  letter-spacing: 0.06em;
+  padding: 0.12em 0.42em 0.16em;
+  background: var(--st);
+  color: var(--bg);
+  border-radius: 3px;
+  margin-right: 0.7ex;
+  vertical-align: 0.08em;
+}
+
+.error, .info { border-radius: 4px; padding: 0.1em 0.5ex; font-weight: 600; color: #fff; }
+.error { background: #d04545; }
+.info { background: var(--fg-faint); }
+
+/* ============================================================
+   Table of contents
+   ============================================================ */
+nav#toc {
+  font-family: var(--font-head);
+  font-size: 0.8rem;
+  line-height: 1.5;
+  color: var(--fg-muted);
+  position: sticky;
+  top: 5rem;
+  align-self: start;
+  max-height: calc(100vh - 7rem);
+  overflow-y: auto;
+}
+nav#toc h1 {
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--fg-faint);
+  margin-bottom: 0.9em;
+}
+nav#toc .block { background: none !important; }
+nav#toc ul { list-style: none; padding-left: 0; margin: 0; }
+nav#toc li > ul { padding-left: 1.4ex; border-left: 1px solid var(--rule); margin-left: 0.3ex; }
+nav#toc li { margin-bottom: 0.25em; }
+nav#toc a, nav#toc .link.local { color: var(--fg-muted); text-decoration: none; box-shadow: none; cursor: pointer; }
+nav#toc .link.local:hover { color: var(--accent); }
+nav#toc a.bullet {
+  color: var(--fg-faint);
+  font-size: 0.6em;
+  margin-right: 0.7ex;
+  text-decoration: none;
+  vertical-align: middle;
+  transition: color .15s;
+}
+nav#toc a.bullet:hover { color: var(--accent); background: none; }
+nav#toc .taxon { color: var(--fg-faint); font-weight: 600; }
+
+/* upstream toggle UI — we present TOC via the identity rail, so hide the chrome */
+#toc-toggle, .toc-toggle-btn { display: none; }
+
+/* ============================================================
+   PDF viewer (preserved from upstream)
+   ============================================================ */
+.pdf-viewer-details { margin: 0.5em 0; }
+.pdf-viewer { width: 100%; height: 80vh; border: 1px solid var(--rule-strong); border-radius: var(--radius); }
+
+/* ============================================================
+   ninja-keys command palette (ctrl/cmd+k)
+   Wired to forest design tokens so it adopts the active theme.
+   ============================================================ */
+ninja-keys {
+  --ninja-font-family: var(--font-body);
+  --ninja-font-size: 15px;
+  --ninja-key-border-radius: 3px;          /* matches stamp corner radius */
+  --ninja-accent-color: var(--accent);
+  --ninja-text-color: var(--fg);
+  --ninja-keys-text-color: var(--fg);
+  --ninja-secondary-text-color: var(--fg-muted);
+  --ninja-selected-text-color: var(--fg);
+  --ninja-group-text-color: var(--fg-faint);
+  --ninja-icon-color: var(--fg-muted);
+  --ninja-placeholder-color: var(--fg-faint);
+  --ninja-modal-background: var(--surface);
+  --ninja-secondary-background-color: var(--code-bg);
+  --ninja-selected-background: var(--block-hover);
+  --ninja-overflow-background: color-mix(in oklab, var(--fg) 35%, transparent);
+  --ninja-modal-shadow: 0 16px 48px color-mix(in oklab, var(--fg) 28%, transparent);
+  --ninja-separate-border: 1px solid var(--rule);
+  --ninja-footer-background: var(--code-bg);
+  --ninja-z-index: 10000;
+}
+
+/* Search input — same head font + tracking as our titles */
+ninja-keys::part(ninja-input) {
+  font-family: var(--font-head);
+  font-weight: 500;
+  letter-spacing: -0.005em;
+}
+ninja-keys::part(ninja-input-wrapper) {
+  border-bottom: 1px solid var(--rule);
+}
+
+/* Inline section/icon column uses our mono face so hotkeys read like stamps */
+ninja-keys::part(ninja-icon) {
+  font-family: var(--font-mono);
+}
+
+/* Section group headers — knockout rubber-stamp, same recipe as named-taxon stamps */
+ninja-keys::part(ninja-group-header) {
+  font-family: var(--font-mono);
+  font-weight: 700;
+  font-size: 0.6rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  background: var(--accent);
+  color: var(--bg);
+  border-radius: 3px;
+  padding: 0.24em 0.55em 0.2em;
+  margin: 0.9em 1em 0.35em;
+  width: fit-content;
+  height: auto;
+  line-height: 1.05;
+}
+
+/* Result title proper — head font, matching tree titles */
+ninja-keys::part(ninja-title) {
+  font-family: var(--font-head);
+  font-weight: 500;
+  letter-spacing: -0.005em;
+  display: flex;
+  align-items: baseline;
+  gap: 0.6ex;
+}
+ninja-keys::part(ninja-result-title) {
+  font-family: var(--font-head);
+  font-weight: 500;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Taxon prefix on each result — knockout rubber-stamp, mirrors named-taxon stamps */
+ninja-keys::part(ninja-result-taxon) {
+  font-family: var(--font-mono);
+  font-weight: 700;
+  font-size: 0.62em;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  background: var(--taxon-color);
+  color: var(--bg);
+  border-radius: 3px;
+  padding: 0.24em 0.55em 0.2em;
+  line-height: 1.05;
+  white-space: nowrap;
+  flex: 0 0 auto;
+  vertical-align: 0.16em;
+}
+/* Same per-taxon binding as document stamps */
+ninja-keys::part(ninja-result-taxon)[data-taxon="Talk"]        { background: var(--tone-2); }
+ninja-keys::part(ninja-result-taxon)[data-taxon="Reference"]   { background: var(--tone-3); }
+ninja-keys::part(ninja-result-taxon)[data-taxon="Course"]      { background: var(--tone-1); }
+ninja-keys::part(ninja-result-taxon)[data-taxon="Definition"]  { background: var(--tone-1); }
+ninja-keys::part(ninja-result-taxon)[data-taxon="Daily"]       { background: var(--tone-4); }
+ninja-keys::part(ninja-result-taxon)[data-taxon="Journal"]     { background: var(--tone-2); }
+ninja-keys::part(ninja-result-taxon)[data-taxon="Milestone"]   { background: var(--tone-3); }
+ninja-keys::part(ninja-result-taxon)[data-taxon="Note"]        { background: var(--tone-4); }
+ninja-keys::part(ninja-result-taxon)[data-taxon="Plan"]        { background: var(--tone-2); }
+ninja-keys::part(ninja-result-taxon)[data-taxon="Question"]    { background: var(--tone-1); }
+ninja-keys::part(ninja-result-taxon)[data-taxon="Recipe"]      { background: var(--tone-4); }
+ninja-keys::part(ninja-result-taxon)[data-taxon="Reflection"]  { background: var(--tone-2); }
+ninja-keys::part(ninja-result-taxon)[data-taxon="Risks"]       { background: var(--tone-3); }
+ninja-keys::part(ninja-result-taxon)[data-taxon="TODO"]        { background: var(--tone-3); }
+ninja-keys::part(ninja-result-taxon)[data-taxon="Idea"]        { background: var(--tone-1); }
+ninja-keys::part(ninja-result-taxon)[data-taxon="Handwriting"] { background: var(--tone-4); }
+ninja-keys::part(ninja-result-taxon)[data-taxon="Person"]      { background: var(--tone-2); }
+ninja-keys::part(ninja-result-taxon)[data-taxon="person"]      { background: var(--tone-2); }
+ninja-keys::part(ninja-result-taxon)[data-taxon="proof"]       { background: var(--tone-1); }
+ninja-keys::part(ninja-result-taxon)[data-taxon="solution"]    { background: var(--tone-1); }
+
+/* Trailing slug chip — mono, faint, like the slugs in the body */
+ninja-keys::part(ninja-result-slug) {
+  font-family: var(--font-mono);
+  font-size: 0.72em;
+  font-weight: 400;
+  color: var(--fg-faint);
+  flex: 0 0 auto;
+  margin-left: auto;
+  white-space: nowrap;
+}
+
+/* Hotkey chips — mono knockout, like the keyboard glyphs printed on the doc stamps */
+ninja-keys::part(ninja-hotkey) {
+  font-family: var(--font-mono);
+  font-weight: 700;
+  font-size: 0.68em;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+/* ============================================================
+   ============================================================
+   THEMES — each one a token override block via :root:has(article.theme-X)
+   plus a small set of theme-internal flourishes via article.theme-X.
+   ============================================================
+   ============================================================ */
+
+/* ---------- 1. PAPER  (Field Notes / Wes Anderson) ---------- */
+/* Flat warm-retro palette: burnt orange · burgundy · slate blue · mustard */
+:root:has(article.theme-paper) {
+  --orange:   oklch(0.585 0.145 47);
+  --burgundy: oklch(0.430 0.125 22);
+  --blue:     oklch(0.500 0.090 245);
+  --mustard:  oklch(0.730 0.130 86);
+
+  --bg: #f1e8d2;
+  --surface: #f7f0dd;
+  --fg: #38301f;
+  --fg-muted: #7c6a4f;
+  --fg-faint: #ab9a78;
+  --rule: #ddccaa;
+  --rule-strong: #c4ab7c;
+  --accent: var(--orange);
+  --accent-2: var(--blue);
+  --link: var(--burgundy);
+  --block-hover: #ebdfc1;
+  --code-bg: #e8dbbb;
+  --code-fg: #564731;
+  --highlight-bg: oklch(0.86 0.115 88);
+  --highlight-border: var(--mustard);
+  --taxon-color: var(--burgundy);
+  --todo-pending: oklch(0.66 0.13 78);
+  --todo-inprogress: var(--blue);
+  --todo-done: oklch(0.56 0.09 135);
+  --todo-blocked: var(--burgundy);
+
+  --font-head: "Futura", "Jost", "Century Gothic", sans-serif;
+  --font-body: "Futura", "Jost", "Century Gothic", sans-serif;
+
+  --tone-1: var(--orange);
+  --tone-2: var(--blue);
+  --tone-3: var(--burgundy);
+  --tone-4: var(--mustard);
+}
+
+/* section numbers in burgundy; root named taxon keeps its knockout stamp from the base rule */
+article.theme-paper span.taxon { color: var(--burgundy); }
+/* two-tone links: internal burgundy, external slate blue */
+article.theme-paper a.link.local, article.theme-paper .link.local a { color: var(--burgundy); }
+article.theme-paper .link.external, article.theme-paper .link.external a { color: var(--blue); }
+
+/* ── nested subtree rules cycle through the four-color palette by depth ── */
+article.theme-paper .tree-content > section.block { --lvl: var(--orange); }
+article.theme-paper .tree-content .tree-content > section.block { --lvl: var(--blue); }
+article.theme-paper .tree-content .tree-content .tree-content > section.block { --lvl: var(--burgundy); }
+article.theme-paper .tree-content .tree-content .tree-content .tree-content > section.block { --lvl: var(--mustard); }
+article.theme-paper .tree-content .tree-content .tree-content .tree-content .tree-content > section.block { --lvl: var(--orange); }
+article.theme-paper .tree-content > section.block {
+  border-left-width: 3px;
+}
+article.theme-paper .tree-content > section.block > details > summary > header > h1::before { color: var(--lvl); }
+article.theme-paper .tree-content > section.block > details > summary:hover header > h1 { color: var(--lvl); }
+/* subtree section NUMBERS pick up their depth color (named taxons keep their knockout stamp) */
+article.theme-paper .tree-content > section.block:not([data-taxon]) > details > summary > header > h1 > span.taxon { color: var(--lvl); }
+
+/* retro accents */
+article.theme-paper a.link.pdf-open { color: var(--orange); }
+article.theme-paper blockquote { border-left-color: var(--mustard); }
+article.theme-paper pre { background: #ece0c0; border-color: #d6c499; }
+article.theme-paper code { color: var(--burgundy); }
+article.theme-paper hr { background: var(--mustard); height: 2px; }
+article.theme-paper footer { border-top-color: var(--burgundy); }
+article.theme-paper footer h1 { color: var(--burgundy); }
+article.theme-paper nav#toc a.bullet { color: var(--orange); }
+article.theme-paper nav#toc li > ul { border-left-color: var(--orange); }
+article.theme-paper nav#toc li > ul li > ul { border-left-color: var(--blue); }
+article.theme-paper nav#toc li > ul li > ul li > ul { border-left-color: var(--burgundy); }
+
+/* ---------- 2. DRACULA  (refined dark) ---------- */
+:root:has(article.theme-dracula) {
+  --bg: #282a36;
+  --surface: #21222c;
+  --fg: #f8f8f2;
+  --fg-muted: #a9b0d0;
+  --fg-faint: #6272a4;
+  --rule: #3a3d4d;
+  --rule-strong: #565a73;
+  --accent: #bd93f9;
+  --accent-2: #8be9fd;
+  --link: #8be9fd;
+  --block-hover: #2f3240;
+  --code-bg: #21222c;
+  --code-fg: #f1fa8c;
+  --highlight-bg: rgba(189,147,249,0.16);
+  --highlight-border: #bd93f9;
+  --taxon-color: #ff79c6;
+  --todo-pending: #ffb86c;
+  --todo-inprogress: #8be9fd;
+  --todo-done: #50fa7b;
+  --todo-blocked: #ff5555;
+
+  --font-head: "Jost", sans-serif;
+  --font-body: "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+  --tone-1: #ff79c6;   /* pink — formal, mathematical */
+  --tone-2: #8be9fd;   /* cyan — communication, plans */
+  --tone-3: #bd93f9;   /* purple — references, milestones */
+  --tone-4: #f1fa8c;   /* yellow — narrative, notes */
+}
+article.theme-dracula strong { color: #fff; }
+article.theme-dracula em { color: #f1fa8c; font-style: italic; }
+article.theme-dracula pre { box-shadow: inset 0 0 0 1px #44475a; }
+
+/* ---------- 3. ACADEMIC  (high-contrast scholarly light) ---------- */
+:root:has(article.theme-academic) {
+  --bg: #fcfcfb;
+  --surface: #ffffff;
+  --fg: #14161a;
+  --fg-muted: #4c525c;
+  --fg-faint: #9298a2;
+  --rule: #e2e3e6;
+  --rule-strong: #b8bbc1;
+  --accent: oklch(0.42 0.13 25);
+  --accent-2: oklch(0.42 0.10 250);
+  --link: oklch(0.42 0.13 25);
+  --block-hover: #f5f4f2;
+  --code-bg: #f4f4f2;
+  --code-fg: #222;
+  --highlight-bg: #fbf3d0;
+  --highlight-border: #e6d28a;
+  --taxon-color: var(--fg-muted);
+  --todo-pending: #b07d1e;
+  --todo-done: #2f7d3a;
+  --todo-blocked: #b03030;
+
+  --font-head: "Newsreader", Georgia, serif;
+  --font-body: "Newsreader", Georgia, serif;
+}
+article.theme-academic > section.block > details > summary > header > h1 { letter-spacing: -0.01em; }
+article.theme-academic > section.block > details > summary > header > h1 > .taxon {
+  font-family: var(--font-head); text-transform: none; letter-spacing: 0.02em; font-style: italic; font-weight: 500; font-size: 0.95rem;
+}
+
+/* ---------- 4. SOLARIZED  (warm-neutral light) ---------- */
+:root:has(article.theme-solarized) {
+  --bg: #fdf6e3;
+  --surface: #f5eed5;
+  --fg: #586e75;
+  --fg-muted: #93a1a1;
+  --fg-faint: #b3a98a;
+  --rule: #e9dfc3;
+  --rule-strong: #c9bd96;
+  --accent: #268bd2;
+  --accent-2: #cb4b16;
+  --link: #268bd2;
+  --block-hover: #f1e9cf;
+  --code-bg: #f1e9cf;
+  --code-fg: #657b83;
+  --highlight-bg: rgba(181,137,0,0.14);
+  --highlight-border: #b58900;
+  --taxon-color: #859900;
+  --todo-pending: #b58900;
+  --todo-inprogress: #268bd2;
+  --todo-done: #859900;
+  --todo-blocked: #dc322f;
+
+  --font-head: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-body: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+article.theme-solarized h1, article.theme-solarized h2, article.theme-solarized h3 { color: #073642; }
+
+/* ---------- 5. EDITORIAL  (Swiss / bold Helvetica, vermilion) ---------- */
+:root:has(article.theme-editorial) {
+  --bg: #fbfaf8;
+  --surface: #ffffff;
+  --fg: #111111;
+  --fg-muted: #555;
+  --fg-faint: #a0a0a0;
+  --rule: #111111;
+  --rule-strong: #111111;
+  --accent: #e63312;
+  --accent-2: #111111;
+  --link: #e63312;
+  --block-hover: #f3f1ec;
+  --code-bg: #f2f0ec;
+  --code-fg: #111;
+  --highlight-bg: #ffe8a3;
+  --highlight-border: #111;
+  --taxon-color: #e63312;
+  --todo-pending: #e6900f;
+  --todo-done: #1f8a3b;
+  --todo-blocked: #e63312;
+
+  --font-head: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-body: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+article.theme-editorial > section.block > details > summary > header > h1 {
+  font-size: 2.6rem; font-weight: 800; letter-spacing: -0.03em; line-height: 1.02;
+}
+article.theme-editorial > section.block > details > summary > header > h1 > .taxon {
+  letter-spacing: 0.2em; font-weight: 700;
+}
+article.theme-editorial .tree-content > section.block { border-left-width: 1px; border-left-color: #111; }
+article.theme-editorial footer { border-top-width: 3px; border-top-color: #111; }
+article.theme-editorial nav#toc h1 { color: #111; }
+
+/* ---------- 6. BLUEPRINT  (ice-on-navy, bold/unexpected dark) ---------- */
+:root:has(article.theme-blueprint) {
+  --bg: #0d2440;
+  --surface: #0a1d34;
+  --fg: #dceaf7;
+  --fg-muted: #8fb4d6;
+  --fg-faint: #5a7da0;
+  --rule: #1d3e63;
+  --rule-strong: #356193;
+  --accent: #5fd0e0;
+  --accent-2: #f6c560;
+  --link: #5fd0e0;
+  --block-hover: #112c4d;
+  --code-bg: #08182c;
+  --code-fg: #9fe6f0;
+  --highlight-bg: rgba(95,208,224,0.12);
+  --highlight-border: #5fd0e0;
+  --taxon-color: #f6c560;
+  --todo-pending: #f6c560;
+  --todo-inprogress: #5fd0e0;
+  --todo-done: #7fe0a0;
+  --todo-blocked: #ff8a8a;
+
+  --font-head: "Jost", sans-serif;
+  --font-body: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+/* blueprint grid backdrop */
+body:has(article.theme-blueprint) {
+  background-image:
+    linear-gradient(rgba(95,208,224,0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(95,208,224,0.05) 1px, transparent 1px);
+  background-size: 26px 26px;
+}
+article.theme-blueprint pre { box-shadow: inset 0 0 0 1px #1d3e63; }

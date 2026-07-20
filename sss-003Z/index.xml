@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="/default.xsl"?>
+<fr:tree xmlns:fr="http://www.forester-notes.org" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:xml="http://www.w3.org/XML/1998/namespace" root="false" base-url="/">
+  <fr:frontmatter>
+    <fr:authors>
+      <fr:author>
+        <fr:link href="/stevenschaefer/" title="Steven Schaefer" uri="https://stevenschaefer.net/stevenschaefer/" display-uri="stevenschaefer" type="local">Steven Schaefer</fr:link>
+      </fr:author>
+    </fr:authors>
+    <fr:date>
+      <fr:year>2026</fr:year>
+      <fr:month>2</fr:month>
+      <fr:day>21</fr:day>
+    </fr:date>
+    <fr:source-path>/Users/stevenschaefer/forest/trees/sss-003Z.tree</fr:source-path>
+    <fr:uri>https://stevenschaefer.net/sss-003Z/</fr:uri>
+    <fr:display-uri>sss-003Z</fr:display-uri>
+    <fr:route>/sss-003Z/</fr:route>
+    <fr:title text="Set up an RSS reader">Set up an RSS reader</fr:title>
+    <fr:taxon>TODO</fr:taxon>
+    <fr:meta name="status">done</fr:meta>
+    <fr:meta name="apple-id">x-apple-reminder://71B16241-8C97-427C-A936-67FB38137DEF</fr:meta>
+    <fr:meta name="forester-addr">sss-003Z</fr:meta>
+  </fr:frontmatter>
+  <fr:mainmatter>
+    <html:p>Self-hosted <fr:link href="https://freshrss.org/" type="external">FreshRSS</fr:link> on macproseph (port 8090, Tailscale-only). Client: NetNewsWire on iOS, connected via GReader API at <html:code>http://100.83.148.105:8090/api/greader.php</html:code>.</html:p>
+  </fr:mainmatter>
+  <fr:backmatter>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors />
+        <fr:title text="References">References</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter />
+    </fr:tree>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors />
+        <fr:title text="Context">Context</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter />
+    </fr:tree>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors />
+        <fr:title text="Backlinks">Backlinks</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter>
+        <fr:tree show-metadata="true" expanded="false" toc="false" numbered="false">
+          <fr:frontmatter>
+            <fr:authors>
+              <fr:author>
+                <fr:link href="/stevenschaefer/" title="Steven Schaefer" uri="https://stevenschaefer.net/stevenschaefer/" display-uri="stevenschaefer" type="local">Steven Schaefer</fr:link>
+              </fr:author>
+            </fr:authors>
+            <fr:date>
+              <fr:year>2026</fr:year>
+              <fr:month>4</fr:month>
+              <fr:day>18</fr:day>
+            </fr:date>
+            <fr:source-path>/Users/stevenschaefer/forest/trees/sss-009M.tree</fr:source-path>
+            <fr:uri>https://stevenschaefer.net/sss-009M/</fr:uri>
+            <fr:display-uri>sss-009M</fr:display-uri>
+            <fr:route>/sss-009M/</fr:route>
+            <fr:title text="Deploy Readeck as Read-Later service">Deploy Readeck as Read-Later service</fr:title>
+            <fr:taxon>TODO</fr:taxon>
+            <fr:meta name="status">done</fr:meta>
+          </fr:frontmatter>
+          <fr:mainmatter>
+            <html:p>Self-host <fr:link href="https://readeck.org/" type="external">Readeck</fr:link> on macproseph (NixOS) alongside <fr:link href="/sss-003Z/" title="Set up an RSS reader" uri="https://stevenschaefer.net/sss-003Z/" display-uri="sss-003Z" type="local">FreshRSS</fr:link>, expose it on the Tailscale interface only, and subscribe FreshRSS to Readeck's per-collection RSS so saved items show up in the reader.</html:p>
+            <html:p>nixpkgs ships both the <html:code>readeck</html:code> package (0.21.3) and a <html:code>services.readeck</html:code> NixOS module with a hardened <html:code>systemd</html:code> unit (DynamicUser, protected filesystem, restricted syscalls). Deployment mirrors the existing <html:code>freshrss.nix</html:code> pattern.</html:p>
+            <html:p>Steps:</html:p>
+            <html:ul><html:li>Add a new host module <html:code>hosts/macproseph/readeck.nix</html:code> enabling <html:code>services.readeck</html:code> with settings <html:code>server.host = "0.0.0.0"</html:code> and <html:code>server.port = 8091</html:code>.</html:li>
+<html:li>Provide an <html:code>environmentFile</html:code> at <html:code>/mnt/nvme/secrets/readeck.env</html:code> containing <html:code>READECK_SECRET_KEY</html:code> (generated once with <html:code>openssl rand -hex 32</html:code>).</html:li>
+<html:li>Import the new module from <html:code>configuration.nix</html:code>.</html:li>
+<html:li>Open port <html:code>8091</html:code> on <html:code>tailscale0</html:code> only by adding it to <html:code>networking.firewall.interfaces.tailscale0.allowedTCPPorts</html:code>. This matches the FreshRSS pattern — bind to <html:code>0.0.0.0</html:code> internally, rely on the per-interface firewall for Tailscale-only exposure.</html:li>
+<html:li>Deploy with <html:code>nixos-rebuild switch</html:code>, create the admin account at <html:code>http://100.83.148.105:8091</html:code>, and enable the feed token for a "Read Later" collection.</html:li>
+<html:li>Set up iOS saving via the Readeck PWA "Add to Home Screen" — it registers a Web Share Target, so the iOS share sheet can post into Readeck. (Alternatively, a Shortcuts action posting to <html:code>/api/bookmarks</html:code> with an API token.)</html:li>
+<html:li>Subscribe FreshRSS to the collection's RSS URL and file it under a "Queue" category.</html:li></html:ul>
+            <html:p>Out of scope for this task: browser extension install on each machine (follow-up), full-text highlight workflow.</html:p>
+          </fr:mainmatter>
+        </fr:tree>
+        <fr:tree show-metadata="true" expanded="false" toc="false" numbered="false">
+          <fr:frontmatter>
+            <fr:authors>
+              <fr:author>
+                <fr:link href="/stevenschaefer/" title="Steven Schaefer" uri="https://stevenschaefer.net/stevenschaefer/" display-uri="stevenschaefer" type="local">Steven Schaefer</fr:link>
+              </fr:author>
+            </fr:authors>
+            <fr:date>
+              <fr:year>2026</fr:year>
+              <fr:month>4</fr:month>
+              <fr:day>18</fr:day>
+            </fr:date>
+            <fr:source-path>/Users/stevenschaefer/forest/trees/sss-009L.tree</fr:source-path>
+            <fr:uri>https://stevenschaefer.net/sss-009L/</fr:uri>
+            <fr:display-uri>sss-009L</fr:display-uri>
+            <fr:route>/sss-009L/</fr:route>
+            <fr:title text="Curating RSS feeds">Curating RSS feeds</fr:title>
+            <fr:taxon>Milestone</fr:taxon>
+          </fr:frontmatter>
+          <fr:mainmatter>
+            <html:p>Goal: a distraction-free place to take in curated content, plus a self-managed <html:em>Read Later</html:em> stream where manually flagged links, videos, and Mastodon posts all surface as ordinary RSS entries in <fr:link href="/sss-003Z/" title="Set up an RSS reader" uri="https://stevenschaefer.net/sss-003Z/" display-uri="sss-003Z" type="local">FreshRSS</fr:link>.</html:p>
+            <html:p>Two layers:</html:p>
+            <html:ul><html:li><html:strong>Input feeds</html:strong> — sources I actively subscribe to (blogs, arXiv categories, YouTube channels, Mastodon users, HN, etc.). Fetched directly by FreshRSS.</html:li>
+<html:li><html:strong>Read-Later stream</html:strong> — a self-hosted bookmarking service (Readeck, chosen for being a lightweight single Go binary) that exposes my saved items as an RSS feed. FreshRSS subscribes to that feed, so "save this for later" from any iOS share sheet lands next to everything else I read.</html:li></html:ul>
+            <html:p>YouTube's "Watch Later" is implemented by creating a public-unlisted playlist and subscribing to its Atom feed (<html:code>https://www.youtube.com/feeds/videos.xml?playlist_id=...</html:code>). Mastodon flagging is handled by saving the post URL into Readeck via the share sheet, which is a stronger signal than a favourite.</html:p>
+            <html:p>Source candidates still to curate: arXiv categories, academic blogs (n-Cat Café, Bauer, Milewski, Baez, Carette, etc.), HN front page, selected Mastodon users. Undecided on Reddit; Lobsters (<html:code>lobste.rs</html:code>) is a small, high-signal tech community — worth trying its front-page feed.</html:p>
+            <fr:tree show-metadata="false" expanded="false">
+              <fr:frontmatter>
+                <fr:authors>
+                  <fr:author>
+                    <fr:link href="/stevenschaefer/" title="Steven Schaefer" uri="https://stevenschaefer.net/stevenschaefer/" display-uri="stevenschaefer" type="local">Steven Schaefer</fr:link>
+                  </fr:author>
+                </fr:authors>
+                <fr:date>
+                  <fr:year>2026</fr:year>
+                  <fr:month>4</fr:month>
+                  <fr:day>18</fr:day>
+                </fr:date>
+                <fr:source-path>/Users/stevenschaefer/forest/trees/sss-009L.tree</fr:source-path>
+                <fr:title text="Subtasks">Subtasks</fr:title>
+              </fr:frontmatter>
+              <fr:mainmatter>
+                <fr:tree show-metadata="true" expanded="false" toc="false" numbered="false">
+                  <fr:frontmatter>
+                    <fr:authors>
+                      <fr:author>
+                        <fr:link href="/stevenschaefer/" title="Steven Schaefer" uri="https://stevenschaefer.net/stevenschaefer/" display-uri="stevenschaefer" type="local">Steven Schaefer</fr:link>
+                      </fr:author>
+                    </fr:authors>
+                    <fr:date>
+                      <fr:year>2026</fr:year>
+                      <fr:month>4</fr:month>
+                      <fr:day>18</fr:day>
+                    </fr:date>
+                    <fr:source-path>/Users/stevenschaefer/forest/trees/sss-009O.tree</fr:source-path>
+                    <fr:uri>https://stevenschaefer.net/sss-009O/</fr:uri>
+                    <fr:display-uri>sss-009O</fr:display-uri>
+                    <fr:route>/sss-009O/</fr:route>
+                    <fr:title text="Curate initial feed list in FreshRSS">Curate initial feed list in FreshRSS</fr:title>
+                    <fr:taxon>TODO</fr:taxon>
+                    <fr:meta name="status">done</fr:meta>
+                    <fr:meta name="completed">2026-05-29</fr:meta>
+                    <fr:meta name="apple-id">x-apple-reminder://3C02AD03-27C9-4B05-9146-57D7B49B4616</fr:meta>
+                    <fr:meta name="forester-addr">sss-009O</fr:meta>
+                  </fr:frontmatter>
+                  <fr:mainmatter>
+                    <html:p>Populate FreshRSS with an initial set of feeds grouped into coherent categories, then iterate. This is an ongoing task — the first pass should cover the sources already decided on, with later edits expanding into arXiv and academic blogs once those have been thought through.</html:p>
+                    <html:p>First-pass status:</html:p>
+                    <html:ul><html:li><html:strong>Queue</html:strong> — Readeck Read-Later feed (<html:code>http://127.0.0.1:8091/api/bookmarks/feed</html:code> with HTTP Basic auth, token from Readeck's API tokens page) wired up via <fr:link href="/sss-009M/" title="Deploy Readeck as Read-Later service" uri="https://stevenschaefer.net/sss-009M/" display-uri="sss-009M" type="local">sss-009M</fr:link>. <html:em>Done</html:em>. YouTube playlist feed (<fr:link href="/sss-009N/" title="Set up YouTube Watch Later playlist as RSS" uri="https://stevenschaefer.net/sss-009N/" display-uri="sss-009N" type="local">sss-009N</fr:link>) is blocked on YouTube's RSS endpoint situation.</html:li>
+<html:li><html:strong>News</html:strong> — Hacker News (<html:code>https://news.ycombinator.com/rss</html:code>) and Lobsters (<html:code>https://lobste.rs/rss</html:code>) added. <html:em>Done</html:em>.</html:li>
+<html:li><html:strong>Blogs</html:strong> — <html:em>TBD</html:em>. Seed candidates: n-Category Café, Math3ma (Tai-Danae Bradley), John Baez (Azimuth + n-cat), Bartosz Milewski, Andrej Bauer, Conal Elliott, Jacques Carette.</html:li>
+<html:li><html:strong>arXiv</html:strong> — <html:em>TBD</html:em>. Likely <html:code>cs.LO</html:code>, <html:code>cs.PL</html:code>, <html:code>math.CT</html:code>, with an author-based filter later if volume is too high.</html:li>
+<html:li><html:strong>YouTube</html:strong> — <html:em>TBD</html:em>. Channel feeds for lecture / conference channels: POPL, OPLSS, Topos Institute, etc. (Same endpoint as the playlist trick — verify it isn't broadly blocked before investing time.)</html:li>
+<html:li><html:strong>Mastodon</html:strong> — <html:em>TBD</html:em>. Per-user feeds of the form <html:code>https://INSTANCE/@user.rss</html:code> for people whose posts warrant a read-later signal rather than in-client following.</html:li></html:ul>
+                    <html:p>Quirk discovered during setup: the FreshRSS main-UI "Actualize feeds" button respects per-feed cache TTL and may skip a recently-added feed; <html:strong>Settings → Subscription management → Refresh</html:strong> forces a full re-fetch and is the right way to verify a newly-added feed is fetching correctly.</html:p>
+                    <html:p>Undecided: Reddit via RSS. Most subreddits support <html:code>/.rss</html:code>, but the signal-to-noise of even filtered subs is usually worse than HN/Lobsters for the same time budget. Revisit if a specific subreddit proves worth it.</html:p>
+                    <html:p>Organization principle: Queue first (curated by me), then high-signal news, then blogs and arXiv (research input), then video and social last. FreshRSS respects category order in NetNewsWire.</html:p>
+                  </fr:mainmatter>
+                </fr:tree>
+                <fr:tree show-metadata="true" expanded="false" toc="false" numbered="false">
+                  <fr:frontmatter>
+                    <fr:authors>
+                      <fr:author>
+                        <fr:link href="/stevenschaefer/" title="Steven Schaefer" uri="https://stevenschaefer.net/stevenschaefer/" display-uri="stevenschaefer" type="local">Steven Schaefer</fr:link>
+                      </fr:author>
+                    </fr:authors>
+                    <fr:date>
+                      <fr:year>2026</fr:year>
+                      <fr:month>4</fr:month>
+                      <fr:day>18</fr:day>
+                    </fr:date>
+                    <fr:source-path>/Users/stevenschaefer/forest/trees/sss-009N.tree</fr:source-path>
+                    <fr:uri>https://stevenschaefer.net/sss-009N/</fr:uri>
+                    <fr:display-uri>sss-009N</fr:display-uri>
+                    <fr:route>/sss-009N/</fr:route>
+                    <fr:title text="Set up YouTube Watch Later playlist as RSS">Set up YouTube Watch Later playlist as RSS</fr:title>
+                    <fr:taxon>TODO</fr:taxon>
+                    <fr:meta name="status">done</fr:meta>
+                    <fr:meta name="completed">2026-05-29</fr:meta>
+                    <fr:meta name="apple-id">x-apple-reminder://118A8B83-173F-4C03-812E-D8814A744B32</fr:meta>
+                    <fr:meta name="forester-addr">sss-009N</fr:meta>
+                  </fr:frontmatter>
+                  <fr:mainmatter>
+                    <html:p>YouTube's built-in "Watch Later" is not exposed as RSS, but any regular playlist is. Create a dedicated playlist, set it to <html:em>Unlisted</html:em>, and subscribe to its Atom feed from FreshRSS — adding a video to the playlist from the mobile app then surfaces it in the reader.</html:p>
+                    <html:p>Status: <html:strong>blocked</html:strong>. Created a playlist (<html:code>PL1oS9FSTb4Og8ew1ym4TC7D0qvnIItfHB</html:code>) and tried both Unlisted and Public, but the canonical feed URL <html:code>https://www.youtube.com/feeds/videos.xml?playlist_id=...</html:code> returns 404 in both cases. The endpoint header still advertises <html:code>server: YouTube RSS Feeds server</html:code>, so it isn't fully removed — most likely YouTube has restricted user-playlist feeds, or some IPs are bot-blocked from the endpoint. Needs a fresh check from a non-flagged IP, or a fallback (RSSHub-based scraper, third-party Invidious instance with feed support).</html:p>
+                    <html:p>Original plan, kept for when the endpoint situation is sorted:</html:p>
+                    <html:ul><html:li>Create a playlist named "Queue" on youtube.com (privacy: Unlisted ideally; Public if Unlisted is rejected).</html:li>
+<html:li>Take the playlist ID (the part of the URL after <html:code>list=</html:code>, typically beginning with <html:code>PL</html:code>).</html:li>
+<html:li>Subscribe FreshRSS to <html:code>https://www.youtube.com/feeds/videos.xml?playlist_id=&lt;PLAYLIST_ID&gt;</html:code>.</html:li>
+<html:li>File under the "Queue" category alongside the Readeck Read-Later feed.</html:li></html:ul>
+                    <html:p>Adding a video to the playlist from the YouTube mobile app ("Save to playlist → Queue") would make it appear in FreshRSS on the next poll. Removing a video does <html:em>not</html:em> remove it retroactively from FreshRSS, which is fine — read state is tracked in the reader.</html:p>
+                    <html:p>The same <html:code>videos.xml</html:code> endpoint also works with <html:code>channel_id=</html:code> for channel subscriptions, which will be the primary way YouTube channels enter the feed (see <fr:link href="/sss-009O/" title="Curate initial feed list in FreshRSS" uri="https://stevenschaefer.net/sss-009O/" display-uri="sss-009O" type="local">curate feeds</fr:link>).</html:p>
+                  </fr:mainmatter>
+                </fr:tree>
+                <fr:tree show-metadata="true" expanded="false" toc="false" numbered="false">
+                  <fr:frontmatter>
+                    <fr:authors>
+                      <fr:author>
+                        <fr:link href="/stevenschaefer/" title="Steven Schaefer" uri="https://stevenschaefer.net/stevenschaefer/" display-uri="stevenschaefer" type="local">Steven Schaefer</fr:link>
+                      </fr:author>
+                    </fr:authors>
+                    <fr:date>
+                      <fr:year>2026</fr:year>
+                      <fr:month>4</fr:month>
+                      <fr:day>18</fr:day>
+                    </fr:date>
+                    <fr:source-path>/Users/stevenschaefer/forest/trees/sss-009M.tree</fr:source-path>
+                    <fr:uri>https://stevenschaefer.net/sss-009M/</fr:uri>
+                    <fr:display-uri>sss-009M</fr:display-uri>
+                    <fr:route>/sss-009M/</fr:route>
+                    <fr:title text="Deploy Readeck as Read-Later service">Deploy Readeck as Read-Later service</fr:title>
+                    <fr:taxon>TODO</fr:taxon>
+                    <fr:meta name="status">done</fr:meta>
+                  </fr:frontmatter>
+                  <fr:mainmatter>
+                    <html:p>Self-host <fr:link href="https://readeck.org/" type="external">Readeck</fr:link> on macproseph (NixOS) alongside <fr:link href="/sss-003Z/" title="Set up an RSS reader" uri="https://stevenschaefer.net/sss-003Z/" display-uri="sss-003Z" type="local">FreshRSS</fr:link>, expose it on the Tailscale interface only, and subscribe FreshRSS to Readeck's per-collection RSS so saved items show up in the reader.</html:p>
+                    <html:p>nixpkgs ships both the <html:code>readeck</html:code> package (0.21.3) and a <html:code>services.readeck</html:code> NixOS module with a hardened <html:code>systemd</html:code> unit (DynamicUser, protected filesystem, restricted syscalls). Deployment mirrors the existing <html:code>freshrss.nix</html:code> pattern.</html:p>
+                    <html:p>Steps:</html:p>
+                    <html:ul><html:li>Add a new host module <html:code>hosts/macproseph/readeck.nix</html:code> enabling <html:code>services.readeck</html:code> with settings <html:code>server.host = "0.0.0.0"</html:code> and <html:code>server.port = 8091</html:code>.</html:li>
+<html:li>Provide an <html:code>environmentFile</html:code> at <html:code>/mnt/nvme/secrets/readeck.env</html:code> containing <html:code>READECK_SECRET_KEY</html:code> (generated once with <html:code>openssl rand -hex 32</html:code>).</html:li>
+<html:li>Import the new module from <html:code>configuration.nix</html:code>.</html:li>
+<html:li>Open port <html:code>8091</html:code> on <html:code>tailscale0</html:code> only by adding it to <html:code>networking.firewall.interfaces.tailscale0.allowedTCPPorts</html:code>. This matches the FreshRSS pattern — bind to <html:code>0.0.0.0</html:code> internally, rely on the per-interface firewall for Tailscale-only exposure.</html:li>
+<html:li>Deploy with <html:code>nixos-rebuild switch</html:code>, create the admin account at <html:code>http://100.83.148.105:8091</html:code>, and enable the feed token for a "Read Later" collection.</html:li>
+<html:li>Set up iOS saving via the Readeck PWA "Add to Home Screen" — it registers a Web Share Target, so the iOS share sheet can post into Readeck. (Alternatively, a Shortcuts action posting to <html:code>/api/bookmarks</html:code> with an API token.)</html:li>
+<html:li>Subscribe FreshRSS to the collection's RSS URL and file it under a "Queue" category.</html:li></html:ul>
+                    <html:p>Out of scope for this task: browser extension install on each machine (follow-up), full-text highlight workflow.</html:p>
+                  </fr:mainmatter>
+                </fr:tree>
+              </fr:mainmatter>
+            </fr:tree>
+          </fr:mainmatter>
+        </fr:tree>
+      </fr:mainmatter>
+    </fr:tree>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors />
+        <fr:title text="Related">Related</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter />
+    </fr:tree>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors />
+        <fr:title text="Contributions">Contributions</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter />
+    </fr:tree>
+  </fr:backmatter>
+</fr:tree>

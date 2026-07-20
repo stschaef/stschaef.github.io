@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="/default.xsl"?>
+<fr:tree xmlns:fr="http://www.forester-notes.org" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:xml="http://www.w3.org/XML/1998/namespace" root="false" base-url="/">
+  <fr:frontmatter>
+    <fr:authors>
+      <fr:author>
+        <fr:link href="/stevenschaefer/" title="Steven Schaefer" uri="https://stevenschaefer.net/stevenschaefer/" display-uri="stevenschaefer" type="local">Steven Schaefer</fr:link>
+      </fr:author>
+    </fr:authors>
+    <fr:date>
+      <fr:year>2026</fr:year>
+      <fr:month>2</fr:month>
+      <fr:day>21</fr:day>
+    </fr:date>
+    <fr:source-path>/Users/stevenschaefer/forest/trees/sss-003Y.tree</fr:source-path>
+    <fr:uri>https://stevenschaefer.net/sss-003Y/</fr:uri>
+    <fr:display-uri>sss-003Y</fr:display-uri>
+    <fr:route>/sss-003Y/</fr:route>
+    <fr:title text="Manage Grocery lists">Manage Grocery lists</fr:title>
+    <fr:taxon>TODO</fr:taxon>
+    <fr:meta name="status">done</fr:meta>
+    <fr:meta name="completed">2026-02-21</fr:meta>
+  </fr:frontmatter>
+  <fr:mainmatter>
+    <html:p>Hook into the groceries list on my apple reminders for two
+directional grocery list sync.</html:p>
+    <html:p>Implemented in <html:code>forester-org.el</html:code> with bidirectional Apple Reminders sync:</html:p>
+    <html:ul><html:li><html:code>forester-grocery-add</html:code> — quick-add an item (creates tree + pushes to Apple)</html:li>
+<html:li><html:code>forester-grocery-add-multi</html:code> — add multiple items at once (comma or newline separated)</html:li>
+<html:li><html:code>forester-grocery-list</html:code> — view pending items in a query buffer</html:li>
+<html:li><html:code>forester-grocery-pull</html:code> — pull items added via Siri/phone into forester</html:li>
+<html:li><html:code>forester-grocery-push</html:code> — push local items to Apple Reminders</html:li>
+<html:li><html:code>forester-grocery-clear-done</html:code> — sync completion status from Apple</html:li>
+<html:li><html:code>forester-grocery-sync</html:code> — full bidirectional sync (pull + push + clear done)</html:li></html:ul>
+    <html:p>Uses a configurable Apple Reminders list (default "Groceries") via
+<html:code>forester-org-grocery-list</html:code>. Items added via Siri to the Groceries list
+are automatically pulled into forester as trees with <![CDATA[\tag{grocery}]]>.</html:p>
+  </fr:mainmatter>
+  <fr:backmatter>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors />
+        <fr:title text="References">References</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter />
+    </fr:tree>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors />
+        <fr:title text="Context">Context</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter />
+    </fr:tree>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors />
+        <fr:title text="Backlinks">Backlinks</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter>
+        <fr:tree show-metadata="true" expanded="false" toc="false" numbered="false">
+          <fr:frontmatter>
+            <fr:authors>
+              <fr:author>
+                <fr:link href="/stevenschaefer/" title="Steven Schaefer" uri="https://stevenschaefer.net/stevenschaefer/" display-uri="stevenschaefer" type="local">Steven Schaefer</fr:link>
+              </fr:author>
+            </fr:authors>
+            <fr:date>
+              <fr:year>2026</fr:year>
+              <fr:month>4</fr:month>
+              <fr:day>17</fr:day>
+            </fr:date>
+            <fr:source-path>/Users/stevenschaefer/forest/trees/sss-0095.tree</fr:source-path>
+            <fr:uri>https://stevenschaefer.net/sss-0095/</fr:uri>
+            <fr:display-uri>sss-0095</fr:display-uri>
+            <fr:route>/sss-0095/</fr:route>
+            <fr:title text="Automate Apple Reminders and Calendar sync for Forester TODOs">Automate Apple Reminders and Calendar sync for Forester TODOs</fr:title>
+            <fr:taxon>TODO</fr:taxon>
+            <fr:meta name="status">cancelled</fr:meta>
+            <fr:meta name="completed">2026-05-29</fr:meta>
+            <fr:meta name="cancelled">true</fr:meta>
+            <fr:meta name="priority">medium</fr:meta>
+          </fr:frontmatter>
+          <fr:mainmatter>
+            <html:p>Get Forester TODOs syncing into Apple Reminders (and scheduled work blocks into Apple Calendar) without per-tree manual pushes. The plumbing is already in place; what's missing is a bulk / automatic layer.</html:p>
+            <fr:tree show-metadata="false">
+              <fr:frontmatter>
+                <fr:authors>
+                  <fr:author>
+                    <fr:link href="/stevenschaefer/" title="Steven Schaefer" uri="https://stevenschaefer.net/stevenschaefer/" display-uri="stevenschaefer" type="local">Steven Schaefer</fr:link>
+                  </fr:author>
+                </fr:authors>
+                <fr:date>
+                  <fr:year>2026</fr:year>
+                  <fr:month>4</fr:month>
+                  <fr:day>17</fr:day>
+                </fr:date>
+                <fr:source-path>/Users/stevenschaefer/forest/trees/sss-0095.tree</fr:source-path>
+                <fr:title text="Current state">Current state</fr:title>
+              </fr:frontmatter>
+              <fr:mainmatter>
+                <html:p>
+                  <html:strong>What works today.</html:strong>
+                </html:p>
+                <html:ul><html:li><html:code>forester-apple-push</html:code> in <html:code>forester-org.el</html:code> pushes the <html:em>current buffer</html:em> to Apple Reminders (if tagged <html:code>todo</html:code>) or Apple Calendar (if tagged <html:code>event</html:code>).</html:li>
+<html:li><html:code>forester-apple-pull</html:code> pulls status changes back from Apple Reminders into the corresponding <html:code>.tree</html:code> files (matched by an <html:code>apple-id</html:code> meta entry — see the parser bug subtree below for why we don't write the literal markup here).</html:li>
+<html:li>The AppleScript layer (<html:code>forester-org--osascript</html:code>) is reliable; <html:code>osascript</html:code> round-trips work.</html:li>
+<html:li>Reminders list defaults to <html:code>Forester</html:code> (<html:code>forester-org-reminders-list</html:code>); calendar defaults to <html:code>Forester</html:code> (<html:code>forester-org-calendar-name</html:code>).</html:li>
+<html:li>The <html:code>schedule-day</html:code> skill uses AppleScript directly to create time-blocked events on the <html:code>Tasks</html:code> calendar with start/end alarms and a <html:code>forester:sss-XXXX</html:code> marker in the notes. This works today.</html:li>
+<html:li>Bidirectional grocery-list sync is fully working (see <fr:link href="/sss-003Y/" title="Manage Grocery lists" uri="https://stevenschaefer.net/sss-003Y/" display-uri="sss-003Y" type="local">Manage Grocery lists</fr:link>) and is a good reference implementation for what a full todo sync should look like.</html:li></html:ul>
+                <html:p>
+                  <html:strong>What's missing.</html:strong>
+                </html:p>
+                <html:ul><html:li><html:strong>No bulk push.</html:strong> Current active TODO trees (~19 pending) are not in the <html:code>Forester</html:code> Reminders list — it has 4 total, 0 pending, so it has gone stale.</html:li>
+<html:li><html:strong>No automatic sync on save.</html:strong> Editing a TODO's status or due date does not propagate to the associated reminder.</html:li>
+<html:li><html:strong>No scheduled sync.</html:strong> No cron / launchd job runs <html:code>forester-apple-pull</html:code> or a bulk push periodically.</html:li>
+<html:li><html:strong>Milestone trees</html:strong> (new pattern — see <fr:link href="/sss-008Z/" title="Finishing Logical Relations on Display" uri="https://stevenschaefer.net/sss-008Z/" display-uri="sss-008Z" type="local">this milestone</fr:link>) are not a TODO and should be <html:em>excluded</html:em> from any bulk sync. The sync should filter by <html:code><![CDATA[\taxon{TODO}]]></html:code> (or equivalently <html:code><![CDATA[\tag{todo}]]></html:code>) and skip anything with <html:code><![CDATA[\taxon{Milestone}]]></html:code>.</html:li></html:ul>
+              </fr:mainmatter>
+            </fr:tree>
+            <fr:tree show-metadata="false">
+              <fr:frontmatter>
+                <fr:authors>
+                  <fr:author>
+                    <fr:link href="/stevenschaefer/" title="Steven Schaefer" uri="https://stevenschaefer.net/stevenschaefer/" display-uri="stevenschaefer" type="local">Steven Schaefer</fr:link>
+                  </fr:author>
+                </fr:authors>
+                <fr:date>
+                  <fr:year>2026</fr:year>
+                  <fr:month>4</fr:month>
+                  <fr:day>17</fr:day>
+                </fr:date>
+                <fr:source-path>/Users/stevenschaefer/forest/trees/sss-0095.tree</fr:source-path>
+                <fr:title text="Proposed approaches">Proposed approaches</fr:title>
+                <fr:meta name="status">pending</fr:meta>
+              </fr:frontmatter>
+              <fr:mainmatter>
+                <html:ul><html:li><html:strong>(A) Bulk push command</html:strong> — <html:code>forester-sync-all-todos</html:code>: iterate every <html:code>.tree</html:code> with <html:code /> or <html:code />, call <html:code>forester-org--push-reminder</html:code> on each. Pair with a pull. Run manually at start of day.</html:li>
+<html:li><html:strong>(B) Save hook</html:strong> — after-save on any <html:code>.tree</html:code> under <html:code>~/forest/trees/</html:code>: if it has <html:code><![CDATA[\taxon{TODO}]]></html:code> (and not <html:code><![CDATA[\taxon{Milestone}]]></html:code>), auto-push. Low latency, no cron needed.</html:li>
+<html:li><html:strong>(C) Launchd / cron</html:strong> — schedule (A) every N hours. Best for keeping Reminders fresh even when Emacs isn't open; worst for latency.</html:li>
+<html:li>(A) + (B) together is probably the right answer: (A) for bootstrap and recovery, (B) for steady state.</html:li></html:ul>
+              </fr:mainmatter>
+            </fr:tree>
+            <fr:tree show-metadata="false">
+              <fr:frontmatter>
+                <fr:authors>
+                  <fr:author>
+                    <fr:link href="/stevenschaefer/" title="Steven Schaefer" uri="https://stevenschaefer.net/stevenschaefer/" display-uri="stevenschaefer" type="local">Steven Schaefer</fr:link>
+                  </fr:author>
+                </fr:authors>
+                <fr:date>
+                  <fr:year>2026</fr:year>
+                  <fr:month>4</fr:month>
+                  <fr:day>17</fr:day>
+                </fr:date>
+                <fr:source-path>/Users/stevenschaefer/forest/trees/sss-0095.tree</fr:source-path>
+                <fr:title text="Parser bug encountered during bootstrap">Parser bug encountered during bootstrap</fr:title>
+                <fr:meta name="apple-id">x-apple-reminder://83A15A56-16E7-458B-A734-16181EC043A5</fr:meta>
+                <fr:meta name="forester-addr">sss-0095</fr:meta>
+              </fr:frontmatter>
+              <fr:mainmatter>
+                <html:p>The first bulk push from <html:code>forester-apple-sync</html:code> crashed on <html:em>this very tree</html:em>. The cause: <html:code>forester-org--parse-meta</html:code> is a regex that scans the entire file rather than only the frontmatter. The body originally contained an example showing how the apple-id meta is written, embedded in a <html:code><html:code>...</html:code></html:code> block. The parser treated that example as a real frontmatter declaration, extracted its placeholder value as the apple-id, and fed it to AppleScript, which failed with <html:code>Invalid index (-1719)</html:code>. The literal example is omitted from this tree on purpose to avoid re-triggering the bug.</html:p>
+                <html:p><html:strong>Workaround applied.</html:strong> The prose on line 23 was rewritten to describe the meta entry by name rather than embedding the literal markup. This is a hack — any future tree that documents this meta key by writing the literal markup would re-trigger the bug.</html:p>
+                <html:p><html:strong>Proper fix (not done).</html:strong> <html:code>forester-org--parse-meta</html:code> (and likely <html:code>forester-org--parse-tag</html:code> and <html:code>forester-org--parse-taxon</html:code>) should restrict their search to the frontmatter region — i.e. lines before the first body element such as a paragraph or subtree. That would also fix any other tree that mentions meta or tag declarations in its body.</html:p>
+                <html:p><html:strong>Defensive secondary fix (also not done).</html:strong> <html:code>forester-org--push-reminder</html:code> could catch the <html:code>Invalid index</html:code> osascript error on the update path and fall back to creating a fresh reminder. Useful regardless of the parser fix, since stale apple-ids can also arise from the user manually deleting reminders.</html:p>
+              </fr:mainmatter>
+            </fr:tree>
+          </fr:mainmatter>
+        </fr:tree>
+      </fr:mainmatter>
+    </fr:tree>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors />
+        <fr:title text="Related">Related</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter />
+    </fr:tree>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors />
+        <fr:title text="Contributions">Contributions</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter />
+    </fr:tree>
+  </fr:backmatter>
+</fr:tree>

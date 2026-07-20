@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="/default.xsl"?>
+<fr:tree xmlns:fr="http://www.forester-notes.org" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:xml="http://www.w3.org/XML/1998/namespace" root="false" base-url="/">
+  <fr:frontmatter>
+    <fr:authors>
+      <fr:author>
+        <fr:link href="/stevenschaefer/" title="Steven Schaefer" uri="https://stevenschaefer.net/stevenschaefer/" display-uri="stevenschaefer" type="local">Steven Schaefer</fr:link>
+      </fr:author>
+    </fr:authors>
+    <fr:date>
+      <fr:year>2026</fr:year>
+      <fr:month>4</fr:month>
+      <fr:day>17</fr:day>
+    </fr:date>
+    <fr:source-path>/Users/stevenschaefer/forest/trees/sss-008X.tree</fr:source-path>
+    <fr:uri>https://stevenschaefer.net/sss-008X/</fr:uri>
+    <fr:display-uri>sss-008X</fr:display-uri>
+    <fr:route>/sss-008X/</fr:route>
+    <fr:title text="Rich Forest Rendering in Emacs">Rich Forest Rendering in Emacs</fr:title>
+    <fr:taxon>TODO</fr:taxon>
+    <fr:meta name="status">icebox</fr:meta>
+    <fr:meta name="apple-id">x-apple-reminder://8A6A3CD1-568E-44B2-9A99-7C2C63A63F9B</fr:meta>
+    <fr:meta name="forester-addr">sss-008X</fr:meta>
+  </fr:frontmatter>
+  <fr:mainmatter>
+    <html:p>Part of <fr:link href="/sss-008V/" title="Modern Web Browser from Within Emacs" uri="https://stevenschaefer.net/sss-008V/" display-uri="sss-008V" type="local">Modern Web Browser from Within Emacs</fr:link>. Supersedes the text-rendering half of <fr:link href="/sss-003B/" title="Tree Rendering in Emacs" uri="https://stevenschaefer.net/sss-003B/" display-uri="sss-003B" type="local">Tree Rendering in Emacs</fr:link> by aiming instead for full HTML-quality rendering inside an Emacs buffer.</html:p>
+    <html:p>Goal: when previewing a tree in Emacs, show a rendering that matches what the Forester-compiled HTML shows in a real browser — rendered math, transclusions expanded inline, working links, Datalog query results, figure images — rather than the plain-text-with-markup view we have today.</html:p>
+    <html:p>For a demonstration of what current rendering looks like versus what rich rendering would produce, see <fr:link href="/sss-008Y/" title="Example: Current vs. Rich Rendering" uri="https://stevenschaefer.net/sss-008Y/" display-uri="sss-008Y" type="local">Example: Current vs. Rich Rendering</fr:link>.</html:p>
+    <html:p>Implementation routes:</html:p>
+    <html:ul><html:li><html:strong>Embed the forester dev server output directly.</html:strong> We already serve the rendered forest at <html:code>http://localhost:1313</html:code>. An embedded browser (EAF / <html:code>xwidget-webkit</html:code>) could visit the URL for the current tree. This is the cheapest path: no new rendering code, and every Forester feature (math, Datalog, transclusions, themes) works out of the box.</html:li>
+<html:li><html:strong>Parse tree + render to a rich Emacs buffer.</html:strong> Convert Forester markup to overlays, images (for math), and text properties in a native buffer. Keeps everything Emacs-native but requires reimplementing a nontrivial fraction of the compiler.</html:li>
+<html:li><html:strong>Hybrid.</html:strong> Use native buffer for editing, embedded browser in a side window for preview. Auto-refresh on save.</html:li></html:ul>
+    <html:p>Open questions:</html:p>
+    <html:ul><html:li>Does <html:code>xwidget-webkit</html:code> reliably handle KaTeX / MathJax? Forester uses KaTeX; if the embedded browser can't run it, math renders as raw source.</html:li>
+<html:li>How do we round-trip clicks in the embedded rendering back to "open this tree in Emacs"? The existing <html:code>[edit]</html:code> button (see <fr:link href="/sss-003H/" title="Open Editor" uri="https://stevenschaefer.net/sss-003H/" display-uri="sss-003H" type="local">Open Editor</fr:link>) already goes the other way.</html:li>
+<html:li>Server dependency: option 1 assumes a live <html:code>./server.sh</html:code>. Fine on my laptop; less fine if I open a tree on a machine without the forester toolchain.</html:li></html:ul>
+  </fr:mainmatter>
+  <fr:backmatter>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors />
+        <fr:title text="References">References</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter />
+    </fr:tree>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors />
+        <fr:title text="Context">Context</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter />
+    </fr:tree>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors />
+        <fr:title text="Backlinks">Backlinks</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter>
+        <fr:tree show-metadata="true" expanded="false" toc="false" numbered="false">
+          <fr:frontmatter>
+            <fr:authors>
+              <fr:author>
+                <fr:link href="/stevenschaefer/" title="Steven Schaefer" uri="https://stevenschaefer.net/stevenschaefer/" display-uri="stevenschaefer" type="local">Steven Schaefer</fr:link>
+              </fr:author>
+            </fr:authors>
+            <fr:date>
+              <fr:year>2026</fr:year>
+              <fr:month>4</fr:month>
+              <fr:day>17</fr:day>
+            </fr:date>
+            <fr:source-path>/Users/stevenschaefer/forest/trees/sss-008Y.tree</fr:source-path>
+            <fr:uri>https://stevenschaefer.net/sss-008Y/</fr:uri>
+            <fr:display-uri>sss-008Y</fr:display-uri>
+            <fr:route>/sss-008Y/</fr:route>
+            <fr:title text="Example: Current vs. Rich Rendering">Example: Current vs. Rich Rendering</fr:title>
+          </fr:frontmatter>
+          <fr:mainmatter>
+            <html:p>Referenced from <fr:link href="/sss-008X/" title="Rich Forest Rendering in Emacs" uri="https://stevenschaefer.net/sss-008X/" display-uri="sss-008X" type="local">Rich Forest Rendering in Emacs</fr:link>. Shows concrete examples of Forester markup that renders well in a browser but degrades to plain text in the current Emacs preview.</html:p>
+            <html:p><html:strong>Inline math.</html:strong> Source: <html:code><![CDATA[#{e^{i \pi} + 1 = 0}]]></html:code>. In-browser: <fr:tex display="inline"><![CDATA[e^{i \pi } + 1 = 0]]></fr:tex>. In current Emacs preview: the raw source, with no KaTeX rendering.</html:p>
+            <html:p><html:strong>Display math.</html:strong> Source: <html:code><![CDATA[##{\sum_{n=0}^{\infty} \frac{1}{n!} = e}]]></html:code>. In-browser:</html:p>
+            <fr:tex display="block"><![CDATA[\sum _{n=0}^{\infty } \frac {1}{n!} = e]]></fr:tex>
+            <html:p>In the current Emacs preview this shows up as one long line of TeX-looking source with no formatting.</html:p>
+            <html:p><html:strong>Inline markup.</html:strong> <html:code><![CDATA[\em{italic}]]></html:code>, <html:code><![CDATA[\strong{bold}]]></html:code>, and <html:code><![CDATA[\code{monospace}]]></html:code> all have visual distinction in the browser but currently flatten to indistinguishable runs of characters in the text preview.</html:p>
+            <html:p><html:strong>Transclusion.</html:strong> A <html:code><![CDATA[\transclude{sss-XXXX}]]></html:code> call in the browser expands the target tree inline, often with its own math, code, and links. In the Emacs preview it shows as a literal <html:code><![CDATA[\transclude]]></html:code> call — the reader has to navigate away to see the content.</html:p>
+            <html:p><html:strong>Datalog queries.</html:strong> Source like the <html:code>status-pending</html:code> query in <fr:link href="/forkester-features/" title="Features for Forking Forester" uri="https://stevenschaefer.net/forkester-features/" display-uri="forkester-features" type="local">Features for Forking Forester</fr:link> produces a live list of trees in the browser but renders as a raw <html:code><![CDATA[\query\datalog{...}]]></html:code> block in Emacs with no results.</html:p>
+            <html:p><html:strong>Links and cross-references.</html:strong> <html:code><![CDATA[[title](sss-XXXX)]]></html:code> is a clickable navigation in the browser; in the Emacs preview it's plain text with no indication that it's a link target.</html:p>
+          </fr:mainmatter>
+        </fr:tree>
+        <fr:tree show-metadata="true" expanded="false" toc="false" numbered="false">
+          <fr:frontmatter>
+            <fr:authors>
+              <fr:author>
+                <fr:link href="/stevenschaefer/" title="Steven Schaefer" uri="https://stevenschaefer.net/stevenschaefer/" display-uri="stevenschaefer" type="local">Steven Schaefer</fr:link>
+              </fr:author>
+            </fr:authors>
+            <fr:date>
+              <fr:year>2026</fr:year>
+              <fr:month>4</fr:month>
+              <fr:day>17</fr:day>
+            </fr:date>
+            <fr:source-path>/Users/stevenschaefer/forest/trees/sss-008V.tree</fr:source-path>
+            <fr:uri>https://stevenschaefer.net/sss-008V/</fr:uri>
+            <fr:display-uri>sss-008V</fr:display-uri>
+            <fr:route>/sss-008V/</fr:route>
+            <fr:title text="Modern Web Browser from Within Emacs">Modern Web Browser from Within Emacs</fr:title>
+            <fr:taxon>TODO</fr:taxon>
+            <fr:meta name="status">icebox</fr:meta>
+            <fr:meta name="apple-id">x-apple-reminder://C32ED9F5-0CB8-4C00-AFD9-483CCF23AB9C</fr:meta>
+            <fr:meta name="forester-addr">sss-008V</fr:meta>
+          </fr:frontmatter>
+          <fr:mainmatter>
+            <html:p>Investigate embedding a modern web browser (full HTML/CSS/JS, not just <html:code>eww</html:code>) inside Emacs. Candidates include <html:code>emacs-application-framework</html:code> (EAF), <html:code>xwidget-webkit</html:code>, and similar WebKit-based options.</html:p>
+            <html:p>Motivations:</html:p>
+            <html:ul><html:li><html:strong>Stay in Emacs.</html:strong> Browsing the web without leaving the editor keeps keybindings, buffer management, and workflow consistent.</html:li>
+<html:li><html:strong>Lean proof widgets.</html:strong> Running a real React-capable renderer inside Emacs would let <html:code>lean-mode</html:code> display the interactive proof widgets that are currently Lean-exclusive to VSCode. See <fr:link href="/sss-008W/" title="Lean Proof Widgets in Emacs" uri="https://stevenschaefer.net/sss-008W/" display-uri="sss-008W" type="local">Lean Proof Widgets in Emacs</fr:link>.</html:li>
+<html:li><html:strong>Rich forest rendering.</html:strong> Replace the plain-text tree preview with a proper rendering of the compiled Forester HTML (math, transclusions, layouts, Datalog query results). See <fr:link href="/sss-008X/" title="Rich Forest Rendering in Emacs" uri="https://stevenschaefer.net/sss-008X/" display-uri="sss-008X" type="local">Rich Forest Rendering in Emacs</fr:link>.</html:li></html:ul>
+            <html:p>Open questions:</html:p>
+            <html:ul><html:li>EAF vs. <html:code>xwidget-webkit</html:code>: which is more maintainable on macOS? EAF requires a Python backend and a compatible Qt/WebEngine; <html:code>xwidget-webkit</html:code> needs Emacs built with the <html:code>--with-xwidgets</html:code> flag, which is not default in Homebrew builds.</html:li>
+<html:li>How much of this can be done with a headless render + image display instead of a live embedded browser? For static forest previews that may be enough; proof widgets need a live JS runtime.</html:li>
+<html:li>Security posture: an embedded browser running arbitrary JS inside Emacs has a bigger blast radius than a normal editor. Should it be sandboxed or scoped to local URLs only?</html:li></html:ul>
+          </fr:mainmatter>
+        </fr:tree>
+      </fr:mainmatter>
+    </fr:tree>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors />
+        <fr:title text="Related">Related</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter>
+        <fr:tree show-metadata="true" expanded="false" toc="false" numbered="false">
+          <fr:frontmatter>
+            <fr:authors>
+              <fr:author>
+                <fr:link href="/stevenschaefer/" title="Steven Schaefer" uri="https://stevenschaefer.net/stevenschaefer/" display-uri="stevenschaefer" type="local">Steven Schaefer</fr:link>
+              </fr:author>
+            </fr:authors>
+            <fr:date>
+              <fr:year>2026</fr:year>
+              <fr:month>4</fr:month>
+              <fr:day>17</fr:day>
+            </fr:date>
+            <fr:source-path>/Users/stevenschaefer/forest/trees/sss-008Y.tree</fr:source-path>
+            <fr:uri>https://stevenschaefer.net/sss-008Y/</fr:uri>
+            <fr:display-uri>sss-008Y</fr:display-uri>
+            <fr:route>/sss-008Y/</fr:route>
+            <fr:title text="Example: Current vs. Rich Rendering">Example: Current vs. Rich Rendering</fr:title>
+          </fr:frontmatter>
+          <fr:mainmatter>
+            <html:p>Referenced from <fr:link href="/sss-008X/" title="Rich Forest Rendering in Emacs" uri="https://stevenschaefer.net/sss-008X/" display-uri="sss-008X" type="local">Rich Forest Rendering in Emacs</fr:link>. Shows concrete examples of Forester markup that renders well in a browser but degrades to plain text in the current Emacs preview.</html:p>
+            <html:p><html:strong>Inline math.</html:strong> Source: <html:code><![CDATA[#{e^{i \pi} + 1 = 0}]]></html:code>. In-browser: <fr:tex display="inline"><![CDATA[e^{i \pi } + 1 = 0]]></fr:tex>. In current Emacs preview: the raw source, with no KaTeX rendering.</html:p>
+            <html:p><html:strong>Display math.</html:strong> Source: <html:code><![CDATA[##{\sum_{n=0}^{\infty} \frac{1}{n!} = e}]]></html:code>. In-browser:</html:p>
+            <fr:tex display="block"><![CDATA[\sum _{n=0}^{\infty } \frac {1}{n!} = e]]></fr:tex>
+            <html:p>In the current Emacs preview this shows up as one long line of TeX-looking source with no formatting.</html:p>
+            <html:p><html:strong>Inline markup.</html:strong> <html:code><![CDATA[\em{italic}]]></html:code>, <html:code><![CDATA[\strong{bold}]]></html:code>, and <html:code><![CDATA[\code{monospace}]]></html:code> all have visual distinction in the browser but currently flatten to indistinguishable runs of characters in the text preview.</html:p>
+            <html:p><html:strong>Transclusion.</html:strong> A <html:code><![CDATA[\transclude{sss-XXXX}]]></html:code> call in the browser expands the target tree inline, often with its own math, code, and links. In the Emacs preview it shows as a literal <html:code><![CDATA[\transclude]]></html:code> call — the reader has to navigate away to see the content.</html:p>
+            <html:p><html:strong>Datalog queries.</html:strong> Source like the <html:code>status-pending</html:code> query in <fr:link href="/forkester-features/" title="Features for Forking Forester" uri="https://stevenschaefer.net/forkester-features/" display-uri="forkester-features" type="local">Features for Forking Forester</fr:link> produces a live list of trees in the browser but renders as a raw <html:code><![CDATA[\query\datalog{...}]]></html:code> block in Emacs with no results.</html:p>
+            <html:p><html:strong>Links and cross-references.</html:strong> <html:code><![CDATA[[title](sss-XXXX)]]></html:code> is a clickable navigation in the browser; in the Emacs preview it's plain text with no indication that it's a link target.</html:p>
+          </fr:mainmatter>
+        </fr:tree>
+        <fr:tree show-metadata="true" expanded="false" toc="false" numbered="false">
+          <fr:frontmatter>
+            <fr:authors>
+              <fr:author>
+                <fr:link href="/stevenschaefer/" title="Steven Schaefer" uri="https://stevenschaefer.net/stevenschaefer/" display-uri="stevenschaefer" type="local">Steven Schaefer</fr:link>
+              </fr:author>
+            </fr:authors>
+            <fr:date>
+              <fr:year>2026</fr:year>
+              <fr:month>4</fr:month>
+              <fr:day>17</fr:day>
+            </fr:date>
+            <fr:source-path>/Users/stevenschaefer/forest/trees/sss-008V.tree</fr:source-path>
+            <fr:uri>https://stevenschaefer.net/sss-008V/</fr:uri>
+            <fr:display-uri>sss-008V</fr:display-uri>
+            <fr:route>/sss-008V/</fr:route>
+            <fr:title text="Modern Web Browser from Within Emacs">Modern Web Browser from Within Emacs</fr:title>
+            <fr:taxon>TODO</fr:taxon>
+            <fr:meta name="status">icebox</fr:meta>
+            <fr:meta name="apple-id">x-apple-reminder://C32ED9F5-0CB8-4C00-AFD9-483CCF23AB9C</fr:meta>
+            <fr:meta name="forester-addr">sss-008V</fr:meta>
+          </fr:frontmatter>
+          <fr:mainmatter>
+            <html:p>Investigate embedding a modern web browser (full HTML/CSS/JS, not just <html:code>eww</html:code>) inside Emacs. Candidates include <html:code>emacs-application-framework</html:code> (EAF), <html:code>xwidget-webkit</html:code>, and similar WebKit-based options.</html:p>
+            <html:p>Motivations:</html:p>
+            <html:ul><html:li><html:strong>Stay in Emacs.</html:strong> Browsing the web without leaving the editor keeps keybindings, buffer management, and workflow consistent.</html:li>
+<html:li><html:strong>Lean proof widgets.</html:strong> Running a real React-capable renderer inside Emacs would let <html:code>lean-mode</html:code> display the interactive proof widgets that are currently Lean-exclusive to VSCode. See <fr:link href="/sss-008W/" title="Lean Proof Widgets in Emacs" uri="https://stevenschaefer.net/sss-008W/" display-uri="sss-008W" type="local">Lean Proof Widgets in Emacs</fr:link>.</html:li>
+<html:li><html:strong>Rich forest rendering.</html:strong> Replace the plain-text tree preview with a proper rendering of the compiled Forester HTML (math, transclusions, layouts, Datalog query results). See <fr:link href="/sss-008X/" title="Rich Forest Rendering in Emacs" uri="https://stevenschaefer.net/sss-008X/" display-uri="sss-008X" type="local">Rich Forest Rendering in Emacs</fr:link>.</html:li></html:ul>
+            <html:p>Open questions:</html:p>
+            <html:ul><html:li>EAF vs. <html:code>xwidget-webkit</html:code>: which is more maintainable on macOS? EAF requires a Python backend and a compatible Qt/WebEngine; <html:code>xwidget-webkit</html:code> needs Emacs built with the <html:code>--with-xwidgets</html:code> flag, which is not default in Homebrew builds.</html:li>
+<html:li>How much of this can be done with a headless render + image display instead of a live embedded browser? For static forest previews that may be enough; proof widgets need a live JS runtime.</html:li>
+<html:li>Security posture: an embedded browser running arbitrary JS inside Emacs has a bigger blast radius than a normal editor. Should it be sandboxed or scoped to local URLs only?</html:li></html:ul>
+          </fr:mainmatter>
+        </fr:tree>
+        <fr:tree show-metadata="true" expanded="false" toc="false" numbered="false">
+          <fr:frontmatter>
+            <fr:authors>
+              <fr:author>
+                <fr:link href="/stevenschaefer/" title="Steven Schaefer" uri="https://stevenschaefer.net/stevenschaefer/" display-uri="stevenschaefer" type="local">Steven Schaefer</fr:link>
+              </fr:author>
+            </fr:authors>
+            <fr:date>
+              <fr:year>2026</fr:year>
+              <fr:month>2</fr:month>
+              <fr:day>20</fr:day>
+            </fr:date>
+            <fr:source-path>/Users/stevenschaefer/forest/trees/sss-003H.tree</fr:source-path>
+            <fr:uri>https://stevenschaefer.net/sss-003H/</fr:uri>
+            <fr:display-uri>sss-003H</fr:display-uri>
+            <fr:route>/sss-003H/</fr:route>
+            <fr:title text="Open Editor">Open Editor</fr:title>
+            <fr:taxon>TODO</fr:taxon>
+            <fr:meta name="status">done</fr:meta>
+          </fr:frontmatter>
+          <fr:mainmatter>
+            <html:p>
+We have correctly pointed the <html:code>[edit]</html:code> button at opening Emacs
+for me and hopefully it is able to be configured to open other
+editors. We should route the <html:code>CMD e</html:code> shortcut to open the same.
+</html:p>
+            <html:p>The command tries to open vscode still </html:p>
+          </fr:mainmatter>
+        </fr:tree>
+        <fr:tree show-metadata="true" expanded="false" toc="false" numbered="false">
+          <fr:frontmatter>
+            <fr:authors>
+              <fr:author>
+                <fr:link href="/stevenschaefer/" title="Steven Schaefer" uri="https://stevenschaefer.net/stevenschaefer/" display-uri="stevenschaefer" type="local">Steven Schaefer</fr:link>
+              </fr:author>
+            </fr:authors>
+            <fr:date>
+              <fr:year>2026</fr:year>
+              <fr:month>2</fr:month>
+              <fr:day>20</fr:day>
+            </fr:date>
+            <fr:source-path>/Users/stevenschaefer/forest/trees/sss-003B.tree</fr:source-path>
+            <fr:uri>https://stevenschaefer.net/sss-003B/</fr:uri>
+            <fr:display-uri>sss-003B</fr:display-uri>
+            <fr:route>/sss-003B/</fr:route>
+            <fr:title text="Tree Rendering in Emacs">Tree Rendering in Emacs</fr:title>
+            <fr:taxon>TODO</fr:taxon>
+            <fr:meta name="status">done</fr:meta>
+          </fr:frontmatter>
+          <fr:mainmatter>
+            <html:p>
+  Both text-based rendering in an emacs buffer and richer rendering that emulates the full xml browser rendering.
+</html:p>
+            <html:p>
+  If possible, we should render things like <html:code>code</html:code> and <html:em>italics</html:em> and <html:strong>bold</html:strong> text specially in the preview buffers. I'm also unsure how math mode a la <fr:tex display="inline"><![CDATA[x]]></fr:tex> ought to be rendered.
+</html:p>
+            <fr:tex display="block"><![CDATA[e^{i \pi } + 1 = 0]]></fr:tex>
+            <html:p>
+I'd like it if these did render the Tex.
+</html:p>
+          </fr:mainmatter>
+        </fr:tree>
+      </fr:mainmatter>
+    </fr:tree>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors />
+        <fr:title text="Contributions">Contributions</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter />
+    </fr:tree>
+  </fr:backmatter>
+</fr:tree>

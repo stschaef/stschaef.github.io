@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="/default.xsl"?>
+<fr:tree xmlns:fr="http://www.forester-notes.org" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:xml="http://www.w3.org/XML/1998/namespace" root="false" base-url="/">
+  <fr:frontmatter>
+    <fr:authors>
+      <fr:author>
+        <fr:link href="/stevenschaefer/" title="Steven Schaefer" uri="https://stevenschaefer.net/stevenschaefer/" display-uri="stevenschaefer" type="local">Steven Schaefer</fr:link>
+      </fr:author>
+    </fr:authors>
+    <fr:date>
+      <fr:year>2026</fr:year>
+      <fr:month>3</fr:month>
+      <fr:day>1</fr:day>
+    </fr:date>
+    <fr:source-path>/Users/stevenschaefer/forest/trees/sss-0076.tree</fr:source-path>
+    <fr:uri>https://stevenschaefer.net/sss-0076/</fr:uri>
+    <fr:display-uri>sss-0076</fr:display-uri>
+    <fr:route>/sss-0076/</fr:route>
+    <fr:title text="Audit and Harden Nix Config">Audit and Harden Nix Config</fr:title>
+    <fr:taxon>TODO</fr:taxon>
+    <fr:meta name="status">done</fr:meta>
+    <fr:meta name="priority">high</fr:meta>
+  </fr:frontmatter>
+  <fr:mainmatter>
+    <html:p>Audit findings from reviewing the nix-config repo. Closed 2026-04-17.</html:p>
+    <fr:tree show-metadata="false">
+      <fr:frontmatter>
+        <fr:authors>
+          <fr:author>
+            <fr:link href="/stevenschaefer/" title="Steven Schaefer" uri="https://stevenschaefer.net/stevenschaefer/" display-uri="stevenschaefer" type="local">Steven Schaefer</fr:link>
+          </fr:author>
+        </fr:authors>
+        <fr:date>
+          <fr:year>2026</fr:year>
+          <fr:month>3</fr:month>
+          <fr:day>1</fr:day>
+        </fr:date>
+        <fr:source-path>/Users/stevenschaefer/forest/trees/sss-0076.tree</fr:source-path>
+        <fr:title text="Resolved">Resolved</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter>
+        <html:ul><html:li><html:strong>Immich Postgres password</html:strong> — moved to <html:code>environmentFiles</html:code> referencing <html:code>/mnt/nvme/secrets/immich-postgres.env</html:code>.</html:li>
+<html:li><html:strong>SSH PasswordAuthentication</html:strong> — now <html:code>false</html:code> on both <html:code>nixos</html:code> and <html:code>macproseph</html:code>.</html:li>
+<html:li><html:strong>Auto-login on nixos desktop</html:strong> — commented out.</html:li>
+<html:li><html:strong>Local path forester input</html:strong> — forester removed from flake inputs entirely.</html:li>
+<html:li><html:strong>Stale <html:code>flake.lock#</html:code> auto-save file</html:strong> — deleted.</html:li>
+<html:li><html:strong>Lutris listed twice</html:strong> — only the <html:code>.override</html:code> version remains.</html:li>
+<html:li><html:strong>Vulkan packages listed twice</html:strong> — duplicates removed from <html:code>hosts/nixos/packages.nix</html:code>.</html:li>
+<html:li><html:strong>Empty let block</html:strong> in shared <html:code>home.nix</html:code> — removed.</html:li>
+<html:li><html:strong>Flake description</html:strong> — rewritten to describe the three machines (schmapple / nixos / macproseph).</html:li>
+<html:li><html:strong>Double fzf sourcing</html:strong> — manual <html:code>source &lt;(fzf --zsh)</html:code> removed; relying on <html:code>programs.fzf.enableZshIntegration</html:code>.</html:li>
+<html:li><html:strong>Duplicated git config</html:strong> — moved to shared <html:code>home.nix</html:code> using the new <html:code>programs.git.settings.user</html:code> API; removed from all three host <html:code>home.nix</html:code> files.</html:li></html:ul>
+      </fr:mainmatter>
+    </fr:tree>
+    <fr:tree show-metadata="false">
+      <fr:frontmatter>
+        <fr:authors>
+          <fr:author>
+            <fr:link href="/stevenschaefer/" title="Steven Schaefer" uri="https://stevenschaefer.net/stevenschaefer/" display-uri="stevenschaefer" type="local">Steven Schaefer</fr:link>
+          </fr:author>
+        </fr:authors>
+        <fr:date>
+          <fr:year>2026</fr:year>
+          <fr:month>3</fr:month>
+          <fr:day>1</fr:day>
+        </fr:date>
+        <fr:source-path>/Users/stevenschaefer/forest/trees/sss-0076.tree</fr:source-path>
+        <fr:title text="Accepted (not a bug)">Accepted (not a bug)</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter>
+        <html:ul><html:li><html:strong>allow-import-from-derivation = true</html:strong> — verified this is still required: <html:code>~/ocaml-forester</html:code> uses <html:code>opam-nix</html:code>, which performs IFD during evaluation, and <html:code>~/forest</html:code>'s flake consumes it. Comment in <html:code>configuration.nix</html:code> updated to reflect the real dependency.</html:li>
+<html:li><html:strong>Three zsh plugin systems</html:strong> — the original audit cited a <html:code>syntaxHighlighting</html:code>/<html:code>fast-syntax-highlighting</html:code> conflict, but <html:code>fast-syntax-highlighting</html:code> is no longer in the config. Current setup (zplug for pure + vi-mode, oh-my-zsh for <html:code>git</html:code> aliases, home-manager native options) works without a concrete defect. Not worth churning.</html:li>
+<html:li><html:strong>trusted-users includes stevenschaefer</html:strong> (LOW) — acceptable for single-user Mac.</html:li>
+<html:li><html:strong>Third-party claude-code-nix flake</html:strong> — accepted for now; may self-package later.</html:li>
+<html:li><html:strong>Duplicated Emacs, Agda+Rust overlays, <html:code>.agda/libraries</html:code>, and <html:code>i18n</html:code></html:strong> — cosmetic DRY cleanups, not priority.</html:li></html:ul>
+      </fr:mainmatter>
+    </fr:tree>
+  </fr:mainmatter>
+  <fr:backmatter>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors />
+        <fr:title text="References">References</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter />
+    </fr:tree>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors />
+        <fr:title text="Context">Context</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter />
+    </fr:tree>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors />
+        <fr:title text="Backlinks">Backlinks</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter />
+    </fr:tree>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors />
+        <fr:title text="Related">Related</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter />
+    </fr:tree>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors />
+        <fr:title text="Contributions">Contributions</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter />
+    </fr:tree>
+  </fr:backmatter>
+</fr:tree>

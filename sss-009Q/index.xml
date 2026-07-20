@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="/default.xsl"?>
+<fr:tree xmlns:fr="http://www.forester-notes.org" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:xml="http://www.w3.org/XML/1998/namespace" root="false" base-url="/">
+  <fr:frontmatter>
+    <fr:authors>
+      <fr:author>
+        <fr:link href="/stevenschaefer/" title="Steven Schaefer" uri="https://stevenschaefer.net/stevenschaefer/" display-uri="stevenschaefer" type="local">Steven Schaefer</fr:link>
+      </fr:author>
+    </fr:authors>
+    <fr:date>
+      <fr:year>2026</fr:year>
+      <fr:month>4</fr:month>
+      <fr:day>20</fr:day>
+    </fr:date>
+    <fr:source-path>/Users/stevenschaefer/forest/trees/sss-009Q.tree</fr:source-path>
+    <fr:uri>https://stevenschaefer.net/sss-009Q/</fr:uri>
+    <fr:display-uri>sss-009Q</fr:display-uri>
+    <fr:route>/sss-009Q/</fr:route>
+    <fr:title text="Audit the existing Lean elaborator sketch">Audit the existing Lean elaborator sketch</fr:title>
+    <fr:taxon>TODO</fr:taxon>
+    <fr:meta name="status">pending</fr:meta>
+    <fr:meta name="priority">high</fr:meta>
+    <fr:meta name="apple-id">x-apple-reminder://823874AD-3C3B-4EA3-AF22-0D8C0E10D6B1</fr:meta>
+    <fr:meta name="forester-addr">sss-009Q</fr:meta>
+  </fr:frontmatter>
+  <fr:mainmatter>
+    <html:p>Read <html:code>~/grammars-and-semantic-actions/Lean/LambekD/Elab/</html:code> end-to-end and produce a written summary covering: surface syntax categories (<html:code>gterm</html:code>, <html:code>gpat</html:code>), the <html:code>OrderedCtx</html:code> discipline, how <html:code>findSplit</html:code> and the application-resolution rules are implemented, and what <html:code>Elaborator.lean</html:code> actually emits for each surface form.</html:p>
+    <html:p>The goal is to know, for every elaboration rule, which Lambek<fr:tex display="inline"><![CDATA[^D]]></fr:tex> typing rule it implements and where any informal/incorrect choices were made by the AI sketch. Output: a tree (or set of trees) that maps surface form <fr:tex display="inline"><![CDATA[\to ]]></fr:tex> typing rule <fr:tex display="inline"><![CDATA[\to ]]></fr:tex> emitted Lean term.</html:p>
+  </fr:mainmatter>
+  <fr:backmatter>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors />
+        <fr:title text="References">References</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter />
+    </fr:tree>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors />
+        <fr:title text="Context">Context</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter>
+        <fr:tree show-metadata="true" expanded="false" toc="false" numbered="false">
+          <fr:frontmatter>
+            <fr:authors>
+              <fr:author>
+                <fr:link href="/stevenschaefer/" title="Steven Schaefer" uri="https://stevenschaefer.net/stevenschaefer/" display-uri="stevenschaefer" type="local">Steven Schaefer</fr:link>
+              </fr:author>
+            </fr:authors>
+            <fr:date>
+              <fr:year>2026</fr:year>
+              <fr:month>4</fr:month>
+              <fr:day>20</fr:day>
+            </fr:date>
+            <fr:source-path>/Users/stevenschaefer/forest/trees/sss-009U.tree</fr:source-path>
+            <fr:uri>https://stevenschaefer.net/sss-009U/</fr:uri>
+            <fr:display-uri>sss-009U</fr:display-uri>
+            <fr:route>/sss-009U/</fr:route>
+            <fr:title text="Parameterize the elaborator over the target category">Parameterize the elaborator over the target category</fr:title>
+            <fr:taxon>TODO</fr:taxon>
+            <fr:meta name="status">done</fr:meta>
+            <fr:meta name="completed">2026-05-29</fr:meta>
+            <fr:meta name="priority">medium</fr:meta>
+            <fr:meta name="apple-id">x-apple-reminder://1F1652D2-D177-4498-9D21-558C53DBC132</fr:meta>
+            <fr:meta name="forester-addr">sss-009U</fr:meta>
+          </fr:frontmatter>
+          <fr:mainmatter>
+            <html:p>The current sketch hardwires the target: <html:code>Grammar = String → Type</html:code>, <html:code>A ⊢ B = ∀ w, A w → B w</html:code>, tensor as splittings, etc. Refactor so the elaborator emits terms in an abstract categorical interface — a typeclass packaging the structure required by each connective (monoidal biclosed, finite (co)products, indexed (co)products, initial algebras for <html:code>grammar_inductive</html:code>, the LNL adjunction once <fr:link href="/sss-009T/" title="Embed the full linear / non-linear DSL" uri="https://stevenschaefer.net/sss-009T/" display-uri="sss-009T" type="local">Embed the full linear / non-linear DSL</fr:link> lands, etc.).</html:p>
+            <html:p>Recover the existing grammars semantics as one instance of this interface. Track exactly which connectives need which structure so users can elaborate fragments of the DSL in categories that don't satisfy the full bill.</html:p>
+            <html:p>Merged into <fr:tree show-metadata="false"><fr:frontmatter><fr:authors><fr:author><fr:link href="/stevenschaefer/" title="Steven Schaefer" uri="https://stevenschaefer.net/stevenschaefer/" display-uri="stevenschaefer" type="local">Steven Schaefer</fr:link></fr:author></fr:authors><fr:date><fr:year>2026</fr:year><fr:month>4</fr:month><fr:day>20</fr:day></fr:date><fr:source-path>/Users/stevenschaefer/forest/trees/sss-009Q.tree</fr:source-path><fr:uri>https://stevenschaefer.net/sss-009Q/</fr:uri><fr:display-uri>sss-009Q</fr:display-uri><fr:route>/sss-009Q/</fr:route><fr:title text="Audit the existing Lean elaborator sketch">Audit the existing Lean elaborator sketch</fr:title><fr:taxon>TODO</fr:taxon><fr:meta name="status">pending</fr:meta><fr:meta name="priority">high</fr:meta><fr:meta name="apple-id">x-apple-reminder://823874AD-3C3B-4EA3-AF22-0D8C0E10D6B1</fr:meta><fr:meta name="forester-addr">sss-009Q</fr:meta></fr:frontmatter><fr:mainmatter><html:p>Read <html:code>~/grammars-and-semantic-actions/Lean/LambekD/Elab/</html:code> end-to-end and produce a written summary covering: surface syntax categories (<html:code>gterm</html:code>, <html:code>gpat</html:code>), the <html:code>OrderedCtx</html:code> discipline, how <html:code>findSplit</html:code> and the application-resolution rules are implemented, and what <html:code>Elaborator.lean</html:code> actually emits for each surface form.</html:p><html:p>The goal is to know, for every elaboration rule, which Lambek<fr:tex display="inline"><![CDATA[^D]]></fr:tex> typing rule it implements and where any informal/incorrect choices were made by the AI sketch. Output: a tree (or set of trees) that maps surface form <fr:tex display="inline"><![CDATA[\to ]]></fr:tex> typing rule <fr:tex display="inline"><![CDATA[\to ]]></fr:tex> emitted Lean term.</html:p></fr:mainmatter></fr:tree>.</html:p>
+          </fr:mainmatter>
+        </fr:tree>
+        <fr:tree show-metadata="true" expanded="false" toc="false" numbered="false">
+          <fr:frontmatter>
+            <fr:authors>
+              <fr:author>
+                <fr:link href="/stevenschaefer/" title="Steven Schaefer" uri="https://stevenschaefer.net/stevenschaefer/" display-uri="stevenschaefer" type="local">Steven Schaefer</fr:link>
+              </fr:author>
+            </fr:authors>
+            <fr:date>
+              <fr:year>2026</fr:year>
+              <fr:month>4</fr:month>
+              <fr:day>20</fr:day>
+            </fr:date>
+            <fr:source-path>/Users/stevenschaefer/forest/trees/sss-009T.tree</fr:source-path>
+            <fr:uri>https://stevenschaefer.net/sss-009T/</fr:uri>
+            <fr:display-uri>sss-009T</fr:display-uri>
+            <fr:route>/sss-009T/</fr:route>
+            <fr:title text="Embed the full linear / non-linear DSL">Embed the full linear / non-linear DSL</fr:title>
+            <fr:taxon>TODO</fr:taxon>
+            <fr:meta name="status">done</fr:meta>
+            <fr:meta name="completed">2026-05-29</fr:meta>
+            <fr:meta name="priority">high</fr:meta>
+            <fr:meta name="apple-id">x-apple-reminder://9A91FC96-8ECF-45DF-A03B-405CAF5D5EFC</fr:meta>
+            <fr:meta name="forester-addr">sss-009T</fr:meta>
+          </fr:frontmatter>
+          <fr:mainmatter>
+            <html:p>The current sketch elaborates only the ordered linear fragment. Extend the surface syntax and elaborator to cover the full <html:em>linear / non-linear</html:em> calculus: a non-linear (intuitionistic) zone alongside the ordered linear zone, with the appropriate adjoint modalities mediating between them.</html:p>
+            <html:p>Concretely: surface-level binders for non-linear variables, weakening / contraction allowed in the non-linear zone only, and elaboration rules for the modalities (e.g. <html:code>F ⊣ G</html:code> or <html:code>! ⊣ ?</html:code> in DILL/LNL style — exact form to be settled in the spec subtask). Without this, the DSL cannot express the dependent fragment, since dependency is on non-linear data.</html:p>
+            <html:p>Merged into <fr:tree show-metadata="false"><fr:frontmatter><fr:authors><fr:author><fr:link href="/stevenschaefer/" title="Steven Schaefer" uri="https://stevenschaefer.net/stevenschaefer/" display-uri="stevenschaefer" type="local">Steven Schaefer</fr:link></fr:author></fr:authors><fr:date><fr:year>2026</fr:year><fr:month>4</fr:month><fr:day>20</fr:day></fr:date><fr:source-path>/Users/stevenschaefer/forest/trees/sss-009Q.tree</fr:source-path><fr:uri>https://stevenschaefer.net/sss-009Q/</fr:uri><fr:display-uri>sss-009Q</fr:display-uri><fr:route>/sss-009Q/</fr:route><fr:title text="Audit the existing Lean elaborator sketch">Audit the existing Lean elaborator sketch</fr:title><fr:taxon>TODO</fr:taxon><fr:meta name="status">pending</fr:meta><fr:meta name="priority">high</fr:meta><fr:meta name="apple-id">x-apple-reminder://823874AD-3C3B-4EA3-AF22-0D8C0E10D6B1</fr:meta><fr:meta name="forester-addr">sss-009Q</fr:meta></fr:frontmatter><fr:mainmatter><html:p>Read <html:code>~/grammars-and-semantic-actions/Lean/LambekD/Elab/</html:code> end-to-end and produce a written summary covering: surface syntax categories (<html:code>gterm</html:code>, <html:code>gpat</html:code>), the <html:code>OrderedCtx</html:code> discipline, how <html:code>findSplit</html:code> and the application-resolution rules are implemented, and what <html:code>Elaborator.lean</html:code> actually emits for each surface form.</html:p><html:p>The goal is to know, for every elaboration rule, which Lambek<fr:tex display="inline"><![CDATA[^D]]></fr:tex> typing rule it implements and where any informal/incorrect choices were made by the AI sketch. Output: a tree (or set of trees) that maps surface form <fr:tex display="inline"><![CDATA[\to ]]></fr:tex> typing rule <fr:tex display="inline"><![CDATA[\to ]]></fr:tex> emitted Lean term.</html:p></fr:mainmatter></fr:tree>.</html:p>
+          </fr:mainmatter>
+        </fr:tree>
+        <fr:tree show-metadata="true" expanded="false" toc="false" numbered="false">
+          <fr:frontmatter>
+            <fr:authors>
+              <fr:author>
+                <fr:link href="/stevenschaefer/" title="Steven Schaefer" uri="https://stevenschaefer.net/stevenschaefer/" display-uri="stevenschaefer" type="local">Steven Schaefer</fr:link>
+              </fr:author>
+            </fr:authors>
+            <fr:date>
+              <fr:year>2026</fr:year>
+              <fr:month>4</fr:month>
+              <fr:day>20</fr:day>
+            </fr:date>
+            <fr:source-path>/Users/stevenschaefer/forest/trees/sss-009S.tree</fr:source-path>
+            <fr:uri>https://stevenschaefer.net/sss-009S/</fr:uri>
+            <fr:display-uri>sss-009S</fr:display-uri>
+            <fr:route>/sss-009S/</fr:route>
+            <fr:title text="Reconstruct the elaborator from spec">Reconstruct the elaborator from spec</fr:title>
+            <fr:taxon>TODO</fr:taxon>
+            <fr:meta name="status">done</fr:meta>
+            <fr:meta name="completed">2026-05-29</fr:meta>
+            <fr:meta name="priority">high</fr:meta>
+            <fr:meta name="apple-id">x-apple-reminder://C069A1B9-0FAC-4836-BF6C-1917BB979CD3</fr:meta>
+            <fr:meta name="forester-addr">sss-009S</fr:meta>
+          </fr:frontmatter>
+          <fr:mainmatter>
+            <html:p>Using the audit (<fr:link href="/sss-009Q/" title="Audit the existing Lean elaborator sketch" uri="https://stevenschaefer.net/sss-009Q/" display-uri="sss-009Q" type="local">Audit the existing Lean elaborator sketch</fr:link>) and the on-paper spec (<fr:link href="/sss-009R/" title="Pin down the on-paper Lambek^D syntax and its Lean target" uri="https://stevenschaefer.net/sss-009R/" display-uri="sss-009R" type="local">Pin down the on-paper Lambek<fr:tex display="inline"><![CDATA[^D]]></fr:tex> syntax and its Lean target</fr:link>), rewrite <html:code>LambekD/Elab/Elaborator.lean</html:code> (and supporting files) so each elaboration rule corresponds to a specific typing rule and emits the term I expect.</html:p>
+            <html:p>Where the existing sketch is correct, keep it; where it is heuristic or wrong, replace it. The rewrite should keep the existing test suite (<html:code>Examples/ElabExamples.lean</html:code>) green and add tests for any rule the sketch was missing or implementing incorrectly.</html:p>
+            <html:p>Merged into <fr:tree show-metadata="false"><fr:frontmatter><fr:authors><fr:author><fr:link href="/stevenschaefer/" title="Steven Schaefer" uri="https://stevenschaefer.net/stevenschaefer/" display-uri="stevenschaefer" type="local">Steven Schaefer</fr:link></fr:author></fr:authors><fr:date><fr:year>2026</fr:year><fr:month>4</fr:month><fr:day>20</fr:day></fr:date><fr:source-path>/Users/stevenschaefer/forest/trees/sss-009Q.tree</fr:source-path><fr:uri>https://stevenschaefer.net/sss-009Q/</fr:uri><fr:display-uri>sss-009Q</fr:display-uri><fr:route>/sss-009Q/</fr:route><fr:title text="Audit the existing Lean elaborator sketch">Audit the existing Lean elaborator sketch</fr:title><fr:taxon>TODO</fr:taxon><fr:meta name="status">pending</fr:meta><fr:meta name="priority">high</fr:meta><fr:meta name="apple-id">x-apple-reminder://823874AD-3C3B-4EA3-AF22-0D8C0E10D6B1</fr:meta><fr:meta name="forester-addr">sss-009Q</fr:meta></fr:frontmatter><fr:mainmatter><html:p>Read <html:code>~/grammars-and-semantic-actions/Lean/LambekD/Elab/</html:code> end-to-end and produce a written summary covering: surface syntax categories (<html:code>gterm</html:code>, <html:code>gpat</html:code>), the <html:code>OrderedCtx</html:code> discipline, how <html:code>findSplit</html:code> and the application-resolution rules are implemented, and what <html:code>Elaborator.lean</html:code> actually emits for each surface form.</html:p><html:p>The goal is to know, for every elaboration rule, which Lambek<fr:tex display="inline"><![CDATA[^D]]></fr:tex> typing rule it implements and where any informal/incorrect choices were made by the AI sketch. Output: a tree (or set of trees) that maps surface form <fr:tex display="inline"><![CDATA[\to ]]></fr:tex> typing rule <fr:tex display="inline"><![CDATA[\to ]]></fr:tex> emitted Lean term.</html:p></fr:mainmatter></fr:tree>.</html:p>
+          </fr:mainmatter>
+        </fr:tree>
+      </fr:mainmatter>
+    </fr:tree>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors />
+        <fr:title text="Backlinks">Backlinks</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter>
+        <fr:tree show-metadata="true" expanded="false" toc="false" numbered="false">
+          <fr:frontmatter>
+            <fr:authors>
+              <fr:author>
+                <fr:link href="/stevenschaefer/" title="Steven Schaefer" uri="https://stevenschaefer.net/stevenschaefer/" display-uri="stevenschaefer" type="local">Steven Schaefer</fr:link>
+              </fr:author>
+            </fr:authors>
+            <fr:date>
+              <fr:year>2026</fr:year>
+              <fr:month>4</fr:month>
+              <fr:day>20</fr:day>
+            </fr:date>
+            <fr:source-path>/Users/stevenschaefer/forest/trees/sss-009S.tree</fr:source-path>
+            <fr:uri>https://stevenschaefer.net/sss-009S/</fr:uri>
+            <fr:display-uri>sss-009S</fr:display-uri>
+            <fr:route>/sss-009S/</fr:route>
+            <fr:title text="Reconstruct the elaborator from spec">Reconstruct the elaborator from spec</fr:title>
+            <fr:taxon>TODO</fr:taxon>
+            <fr:meta name="status">done</fr:meta>
+            <fr:meta name="completed">2026-05-29</fr:meta>
+            <fr:meta name="priority">high</fr:meta>
+            <fr:meta name="apple-id">x-apple-reminder://C069A1B9-0FAC-4836-BF6C-1917BB979CD3</fr:meta>
+            <fr:meta name="forester-addr">sss-009S</fr:meta>
+          </fr:frontmatter>
+          <fr:mainmatter>
+            <html:p>Using the audit (<fr:link href="/sss-009Q/" title="Audit the existing Lean elaborator sketch" uri="https://stevenschaefer.net/sss-009Q/" display-uri="sss-009Q" type="local">Audit the existing Lean elaborator sketch</fr:link>) and the on-paper spec (<fr:link href="/sss-009R/" title="Pin down the on-paper Lambek^D syntax and its Lean target" uri="https://stevenschaefer.net/sss-009R/" display-uri="sss-009R" type="local">Pin down the on-paper Lambek<fr:tex display="inline"><![CDATA[^D]]></fr:tex> syntax and its Lean target</fr:link>), rewrite <html:code>LambekD/Elab/Elaborator.lean</html:code> (and supporting files) so each elaboration rule corresponds to a specific typing rule and emits the term I expect.</html:p>
+            <html:p>Where the existing sketch is correct, keep it; where it is heuristic or wrong, replace it. The rewrite should keep the existing test suite (<html:code>Examples/ElabExamples.lean</html:code>) green and add tests for any rule the sketch was missing or implementing incorrectly.</html:p>
+            <html:p>Merged into <fr:tree show-metadata="false"><fr:frontmatter><fr:authors><fr:author><fr:link href="/stevenschaefer/" title="Steven Schaefer" uri="https://stevenschaefer.net/stevenschaefer/" display-uri="stevenschaefer" type="local">Steven Schaefer</fr:link></fr:author></fr:authors><fr:date><fr:year>2026</fr:year><fr:month>4</fr:month><fr:day>20</fr:day></fr:date><fr:source-path>/Users/stevenschaefer/forest/trees/sss-009Q.tree</fr:source-path><fr:uri>https://stevenschaefer.net/sss-009Q/</fr:uri><fr:display-uri>sss-009Q</fr:display-uri><fr:route>/sss-009Q/</fr:route><fr:title text="Audit the existing Lean elaborator sketch">Audit the existing Lean elaborator sketch</fr:title><fr:taxon>TODO</fr:taxon><fr:meta name="status">pending</fr:meta><fr:meta name="priority">high</fr:meta><fr:meta name="apple-id">x-apple-reminder://823874AD-3C3B-4EA3-AF22-0D8C0E10D6B1</fr:meta><fr:meta name="forester-addr">sss-009Q</fr:meta></fr:frontmatter><fr:mainmatter><html:p>Read <html:code>~/grammars-and-semantic-actions/Lean/LambekD/Elab/</html:code> end-to-end and produce a written summary covering: surface syntax categories (<html:code>gterm</html:code>, <html:code>gpat</html:code>), the <html:code>OrderedCtx</html:code> discipline, how <html:code>findSplit</html:code> and the application-resolution rules are implemented, and what <html:code>Elaborator.lean</html:code> actually emits for each surface form.</html:p><html:p>The goal is to know, for every elaboration rule, which Lambek<fr:tex display="inline"><![CDATA[^D]]></fr:tex> typing rule it implements and where any informal/incorrect choices were made by the AI sketch. Output: a tree (or set of trees) that maps surface form <fr:tex display="inline"><![CDATA[\to ]]></fr:tex> typing rule <fr:tex display="inline"><![CDATA[\to ]]></fr:tex> emitted Lean term.</html:p></fr:mainmatter></fr:tree>.</html:p>
+          </fr:mainmatter>
+        </fr:tree>
+        <fr:tree show-metadata="true" expanded="false" toc="false" numbered="false">
+          <fr:frontmatter>
+            <fr:authors>
+              <fr:author>
+                <fr:link href="/stevenschaefer/" title="Steven Schaefer" uri="https://stevenschaefer.net/stevenschaefer/" display-uri="stevenschaefer" type="local">Steven Schaefer</fr:link>
+              </fr:author>
+            </fr:authors>
+            <fr:date>
+              <fr:year>2026</fr:year>
+              <fr:month>4</fr:month>
+              <fr:day>20</fr:day>
+            </fr:date>
+            <fr:source-path>/Users/stevenschaefer/forest/trees/sss-009R.tree</fr:source-path>
+            <fr:uri>https://stevenschaefer.net/sss-009R/</fr:uri>
+            <fr:display-uri>sss-009R</fr:display-uri>
+            <fr:route>/sss-009R/</fr:route>
+            <fr:title text="Pin down the on-paper Lambek^D syntax and its Lean target">Pin down the on-paper Lambek<fr:tex display="inline"><![CDATA[^D]]></fr:tex> syntax and its Lean target</fr:title>
+            <fr:taxon>TODO</fr:taxon>
+            <fr:meta name="status">pending</fr:meta>
+            <fr:meta name="priority">high</fr:meta>
+            <fr:meta name="apple-id">x-apple-reminder://E07640F9-7CF0-4BA1-9417-08F74A731173</fr:meta>
+            <fr:meta name="forester-addr">sss-009R</fr:meta>
+          </fr:frontmatter>
+          <fr:mainmatter>
+            <html:p>Write down the canonical on-paper presentation of Dependent Lambek Calculus that the Lean DSL is intended to embed: judgements, contexts (linear / ordered / non-linear zones), and the formation / introduction / elimination rules for each connective.</html:p>
+            <html:p>For each rule, specify the target Lean term it should elaborate to under the shallow embedding (grammars as <html:code>String → Type</html:code>, morphisms as <html:code>∀ w, A w → B w</html:code>). This is the spec the elaborator is implementing — without it the audit in <fr:link href="/sss-009Q/" title="Audit the existing Lean elaborator sketch" uri="https://stevenschaefer.net/sss-009Q/" display-uri="sss-009Q" type="local">Audit the existing Lean elaborator sketch</fr:link> and the rewrite in <fr:link href="/sss-009S/" title="Reconstruct the elaborator from spec" uri="https://stevenschaefer.net/sss-009S/" display-uri="sss-009S" type="local">Reconstruct the elaborator from spec</fr:link> have no reference point.</html:p>
+          </fr:mainmatter>
+        </fr:tree>
+      </fr:mainmatter>
+    </fr:tree>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors />
+        <fr:title text="Related">Related</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter />
+    </fr:tree>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors />
+        <fr:title text="Contributions">Contributions</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter />
+    </fr:tree>
+  </fr:backmatter>
+</fr:tree>

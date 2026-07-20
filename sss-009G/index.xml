@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="/default.xsl"?>
+<fr:tree xmlns:fr="http://www.forester-notes.org" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:xml="http://www.w3.org/XML/1998/namespace" root="false" base-url="/">
+  <fr:frontmatter>
+    <fr:authors>
+      <fr:author>
+        <fr:link href="/stevenschaefer/" title="Steven Schaefer" uri="https://stevenschaefer.net/stevenschaefer/" display-uri="stevenschaefer" type="local">Steven Schaefer</fr:link>
+      </fr:author>
+    </fr:authors>
+    <fr:date>
+      <fr:year>2026</fr:year>
+      <fr:month>4</fr:month>
+      <fr:day>17</fr:day>
+    </fr:date>
+    <fr:source-path>/Users/stevenschaefer/forest/trees/sss-009G.tree</fr:source-path>
+    <fr:uri>https://stevenschaefer.net/sss-009G/</fr:uri>
+    <fr:display-uri>sss-009G</fr:display-uri>
+    <fr:route>/sss-009G/</fr:route>
+    <fr:title text="Add has-meta Datalog Relation">Add has-meta Datalog Relation</fr:title>
+    <fr:taxon>TODO</fr:taxon>
+    <fr:meta name="status">cancelled</fr:meta>
+    <fr:meta name="completed">2026-05-29</fr:meta>
+    <fr:meta name="cancelled">true</fr:meta>
+    <fr:meta name="priority">medium</fr:meta>
+  </fr:frontmatter>
+  <fr:mainmatter>
+    <html:p>Add a built-in <html:code><![CDATA[\rel/has-meta]]></html:code> Datalog relation to the forester fork so that trees can be queried by <html:code><![CDATA[\meta{...}{...}]]></html:code> values, not just by tags.</html:p>
+    <html:p>Motivation: task status is currently tracked redundantly via both <html:code><![CDATA[\tag{status-*}]]></html:code> (for Datalog) and <html:code><![CDATA[\meta{status}{...}]]></html:code> (for the XSL display badge). With <html:code><![CDATA[\rel/has-meta]]></html:code>, the tags become unnecessary and status lives in one place.</html:p>
+    <html:p>Example query after this change:</html:p>
+    <html:pre><![CDATA[\query\datalog{
+  ?X -:
+    {\rel/has-taxon ?X '{TODO}}
+    {\rel/has-meta ?X '{status} '{pending}}
+}]]></html:pre>
+    <html:p>Implementation sketch — three places to touch in <html:code>~/ocaml-forester</html:code>:</html:p>
+    <html:ul><html:li><html:strong><html:code>lib/core/Builtin_relation.ml</html:code></html:strong>: add <html:code>let has_meta = make_builtin "has-meta"</html:code> alongside <html:code>has_tag</html:code>, <html:code>has_taxon</html:code>, etc.</html:li>
+  <html:li><html:strong>Population logic</html:strong> (wherever <html:code>has-tag</html:code> facts are asserted from <html:code>fr:tag</html:code> elements): iterate over each <html:code>fr:meta name="K" value="V"</html:code> and assert <html:code>has_meta(tree_id, K, V)</html:code>.</html:li>
+  <html:li><html:strong>Datalog arity</html:strong>: <html:code>has-tag</html:code> is binary; <html:code>has-meta</html:code> needs to be ternary (<html:code>?X</html:code>, key, value) — verify <html:code>lib/core/Datalog_engine.ml</html:code> supports 3-arity or adapt.</html:li></html:ul>
+    <html:p>Once landed, migrate dashboard/todos/finished queries off <html:code><![CDATA[\rel/has-tag ?X '{status-*}]]></html:code> and drop <html:code><![CDATA[\tag{status-*}]]></html:code> from TODO trees in favor of <html:code><![CDATA[\meta{status}{...}]]></html:code> alone.</html:p>
+    <fr:tree show-metadata="false">
+      <fr:frontmatter>
+        <fr:authors>
+          <fr:author>
+            <fr:link href="/stevenschaefer/" title="Steven Schaefer" uri="https://stevenschaefer.net/stevenschaefer/" display-uri="stevenschaefer" type="local">Steven Schaefer</fr:link>
+          </fr:author>
+        </fr:authors>
+        <fr:date>
+          <fr:year>2026</fr:year>
+          <fr:month>4</fr:month>
+          <fr:day>17</fr:day>
+        </fr:date>
+        <fr:source-path>/Users/stevenschaefer/forest/trees/sss-009G.tree</fr:source-path>
+        <fr:title text="Current workaround">Current workaround</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter>
+        <html:p>Until this lands, every TODO tree must carry <html:em>both</html:em> forms redundantly:</html:p>
+        <html:pre><![CDATA[\tag{status-pending}
+\meta{status}{pending}]]></html:pre>
+        <html:p>The tag powers Datalog queries; the meta powers the XSL display badge. Dropping either breaks something.</html:p>
+      </fr:mainmatter>
+    </fr:tree>
+    <fr:tree show-metadata="false">
+      <fr:frontmatter>
+        <fr:authors>
+          <fr:author>
+            <fr:link href="/stevenschaefer/" title="Steven Schaefer" uri="https://stevenschaefer.net/stevenschaefer/" display-uri="stevenschaefer" type="local">Steven Schaefer</fr:link>
+          </fr:author>
+        </fr:authors>
+        <fr:date>
+          <fr:year>2026</fr:year>
+          <fr:month>4</fr:month>
+          <fr:day>17</fr:day>
+        </fr:date>
+        <fr:source-path>/Users/stevenschaefer/forest/trees/sss-009G.tree</fr:source-path>
+        <fr:title text="Downstream changes required">Downstream changes required</fr:title>
+        <fr:meta name="apple-id">x-apple-reminder://71E2B9C1-2A64-4E83-BF07-7895EA954788</fr:meta>
+        <fr:meta name="forester-addr">sss-009G</fr:meta>
+      </fr:frontmatter>
+      <fr:mainmatter>
+        <html:p>Several pieces of software read or write <html:code><![CDATA[\tag{status-*}]]></html:code> and will need updating once the migration is complete:</html:p>
+        <html:ul><html:li><html:strong><html:code>forester-org.el</html:code></html:strong> (<html:code>~/ocaml-forester/forester-org.el</html:code>): the primary Emacs mode for managing todos. Three sites need updating: <html:code>forester-capture-todo</html:code> and <html:code>forester-todo-here</html:code> (which write <html:code><![CDATA[\tag{status-pending}]]></html:code> on creation but no <html:code><![CDATA[\meta{status}]]></html:code>); <html:code>forester-org--current-todo-state</html:code> (reads state by scanning for <html:code>status-</html:code> tag prefix); and <html:code>forester-cycle-todo-state</html:code> (cycles by replacing the tag only, not updating <html:code><![CDATA[\meta{status}]]></html:code>). The <html:code>forester-org--collect-todos</html:code> function similarly infers status from the tag. After the feature lands, these should write/read <html:code><![CDATA[\meta{status}]]></html:code> instead.</html:li>
+  <html:li><html:strong>Claude skills</html:strong>: <html:code>start-coding</html:code> greps for <html:code><![CDATA[\tag{status-pending}]]></html:code> and <html:code><![CDATA[\tag{status-in-progress}]]></html:code> to surface active TODOs. These greps will need to switch to matching <html:code><![CDATA[\meta{status}]]></html:code> patterns.</html:li></html:ul>
+      </fr:mainmatter>
+    </fr:tree>
+  </fr:mainmatter>
+  <fr:backmatter>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors />
+        <fr:title text="References">References</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter />
+    </fr:tree>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors />
+        <fr:title text="Context">Context</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter />
+    </fr:tree>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors />
+        <fr:title text="Backlinks">Backlinks</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter />
+    </fr:tree>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors />
+        <fr:title text="Related">Related</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter />
+    </fr:tree>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors />
+        <fr:title text="Contributions">Contributions</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter />
+    </fr:tree>
+  </fr:backmatter>
+</fr:tree>

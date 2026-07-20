@@ -1,0 +1,142 @@
+/* Reveal.js deck styles for the forest paper theme.
+   Static rules extracted from tree.xsl's reveal-root <style> block.
+   Dynamic rules (per-deck font-size, theme-paper :root tokens) remain inline
+   in reveal.xsl because they interpolate frontmatter meta. */
+
+/* Make the slides legible against the forest paper theme. */
+.reveal { background: var(--bg, #f1e8d2); color: var(--fg, #38301f); }
+.reveal .slides section { text-align: left; font-family: var(--font-body); }
+.reveal h1, .reveal h2, .reveal h3 { color: var(--fg); text-transform: none; font-family: var(--font-head); }
+.reveal .slide-title { color: var(--accent); margin-bottom: 0.5em; }
+.reveal a { color: var(--link); }
+.reveal pre, .reveal code { font-family: var(--font-mono); color: var(--code-fg); }
+.reveal pre { box-shadow: none; width: auto; margin: 0.6em 0; background: transparent; }
+.reveal pre.shiki { background: transparent !important; padding: 0.4em 0; border-radius: 0; }
+.reveal pre.shiki code { background: transparent !important; counter-reset: step; counter-increment: step 0; display: block; }
+.reveal pre.shiki code .line::before {
+  content: counter(step);
+  counter-increment: step;
+  display: inline-block;
+  width: 1.8em;
+  margin-right: 1em;
+  text-align: right;
+  color: var(--fg-faint);
+  user-select: none;
+}
+.reveal aside.notes { display: none; }
+.reveal blockquote { border-left: 3px solid var(--accent); background: var(--surface); padding: 0.6em 1em; }
+
+/* In-slide transclusions render inline; just style the heading. */
+.reveal .transcluded { margin: 0.6em 0; }
+.reveal .transcluded > h3.transcluded-title {
+  font-size: 0.85em; color: var(--accent); margin: 0 0 0.3em 0;
+  text-transform: uppercase; letter-spacing: 0.08em;
+}
+
+/* ===== Per-slide CSS hooks: \meta{slide-class}{...} ===== */
+/* Vertically center this slide's content. */
+.reveal section.center {
+  display: flex !important; flex-direction: column;
+  justify-content: center; min-height: 100%;
+}
+/* Bigger title on this slide. */
+.reveal section.big-title > h2.slide-title { font-size: 2.5em; }
+.reveal section.huge-title > h2.slide-title { font-size: 4em; line-height: 1.05; }
+.reveal section.mega-title > h2.slide-title { font-size: 6em; line-height: 1.0; }
+/* Reverse-video section divider. */
+.reveal section.divider {
+  background: var(--accent); color: var(--bg);
+  margin: 0 -2rem; padding: 2rem;
+}
+.reveal section.divider > h2.slide-title,
+.reveal section.divider > h2.slide-title a { color: var(--bg); }
+/* Plain-title variant: drops the accent color/casing. */
+.reveal section.plain-title > h2.slide-title {
+  color: var(--fg); text-transform: none; letter-spacing: 0;
+}
+
+/* ===== Auto-animate tokens: \anim{id}{...} ===== */
+/* data-id'd spans must be inline-block so reveal can transform them
+   smoothly when tweening between slides. */
+.reveal [data-id] { display: inline-block; }
+
+/* ===== Commutative diagrams: inline addressable SVG ===== */
+/* Each node/edge/label is its own data-id'd element, so it can be drawn,
+   highlighted, faded, or moved independently. */
+.reveal svg.cd { width: min(68vw, 56vh); height: auto; display: block; overflow: visible; }
+.reveal svg.cd text.cd-obj {
+  font-family: var(--font-head); font-size: 8px; fill: var(--fg);
+  text-anchor: middle; dominant-baseline: central;
+}
+.reveal svg.cd text.cd-elabel {
+  font-family: var(--font-head); font-size: 5.5px; font-style: italic;
+  fill: var(--fg-muted); text-anchor: middle; dominant-baseline: central;
+}
+.reveal svg.cd .cd-edge {
+  stroke: var(--fg); stroke-width: 0.7; fill: none;
+  transition: stroke .4s ease, stroke-width .4s ease;
+}
+.reveal svg.cd .cd-ah { fill: var(--fg); stroke: none; }
+/* Draw-on: an edge tagged as a fragment with class cd-draw strokes itself in
+   (pathLength="1" normalizes the dash math). Overrides the default fade. */
+.reveal svg.cd .fragment.cd-draw {
+  opacity: 1; visibility: visible;
+  stroke-dasharray: 1; stroke-dashoffset: 1;
+}
+.reveal svg.cd .fragment.cd-draw.visible {
+  stroke-dashoffset: 0; transition: stroke-dashoffset .8s ease;
+}
+
+/* ===== Declarative animated diagrams: .cd-anim (driven by cd-anim.js) ===== */
+/* Authored via \cdanim/\cdobj/\cdedge/\cdkey; the runtime builds the SVG edge
+   overlay and positions these labels each frame. */
+.reveal .cd-anim {
+  position: relative; width: min(60vw, 52vh); aspect-ratio: 1 / 1;
+  margin: 0.4em auto;
+}
+.reveal .cd-anim .cda-overlay { position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible; }
+.reveal .cd-anim .cda-edge-path { stroke: var(--fg); stroke-width: 0.7; fill: none; }
+.reveal .cd-anim .cda-ah { fill: var(--fg); stroke: none; }
+.reveal .cd-anim .cda-obj {
+  position: absolute; transform: translate(-50%, -50%);
+  font-family: var(--font-head); color: var(--fg); white-space: nowrap;
+}
+.reveal .cd-anim .cda-edge {
+  position: absolute; transform: translate(-50%, -50%);
+  font-family: var(--font-head); font-style: italic; color: var(--fg-muted);
+  font-size: 0.82em; white-space: nowrap;
+}
+.reveal .cd-anim .cda-kf { display: none; }
+
+/* 2-cells: filled regions and natural-transformation lenses. */
+.reveal .cd-anim .cda-face-path { fill: var(--accent); opacity: 0.10; stroke: none; }
+.reveal .cd-anim .cda-lens { fill: var(--accent); opacity: 0.12; stroke: none; }
+.reveal .cd-anim .cda-2arrow { stroke: var(--accent); stroke-width: 0.7; fill: none; }
+.reveal .cd-anim .cda-2head { fill: none; stroke: var(--accent); stroke-width: 0.7; stroke-linecap: round; stroke-linejoin: round; }
+.reveal .cd-anim .cda-face,
+.reveal .cd-anim .cda-2cell {
+  position: absolute; transform: translate(-50%, -50%);
+  font-family: var(--font-head); color: var(--accent); white-space: nowrap;
+}
+/* Stepped diagrams become reveal vertical stacks; the per-keyframe sub-slides
+   are empty (they only drive navigation), so the diagram in the stack shows
+   through. reveal's native down-arrow control indicates the vertical steps. */
+
+/* ===== Derivation / parse trees: .dtree (driven by dtree.js) ===== */
+/* The runtime lays the tree out in pixels (width-aware, no overlap) inside
+   .dt-stage, then scales the stage uniformly to fit this box. */
+.reveal .dtree { position: relative; width: min(90vw, 1200px); aspect-ratio: 16 / 9; margin: 0.2em auto; }
+.reveal .dtree .dt-stage { position: absolute; left: 50%; top: 50%; transform-origin: center center; }
+.reveal .dtree .dt-overlay { position: absolute; left: 0; top: 0; overflow: visible; }
+.reveal .dtree .dt-edge { stroke: var(--fg); stroke-width: 2; fill: none; }
+.reveal .dtree .dt-bar { stroke: var(--fg); stroke-width: 2.4; }
+.reveal .dtree .dconcl,
+.reveal .dtree .dtok,
+.reveal .dtree .drule {
+  position: absolute; transform: translate(-50%, -50%); white-space: nowrap;
+  font-family: var(--font-head); color: var(--fg); transition: opacity .35s ease;
+}
+.reveal .dtree .dtok { color: var(--accent); }
+.reveal .dtree .drule { color: var(--fg-muted); font-style: italic; font-size: 0.7em; }
+/* terminals only show in the parse view; rule names label nodes there too */
+.reveal .dtree[data-mode="inf"] .dtok { display: none; }

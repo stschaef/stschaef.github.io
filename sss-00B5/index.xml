@@ -1,0 +1,1513 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="/default.xsl"?>
+<fr:tree xmlns:fr="http://www.forester-notes.org" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:xml="http://www.w3.org/XML/1998/namespace" root="false" base-url="/">
+  <fr:frontmatter>
+    <fr:authors>
+      <fr:author>
+        <fr:link href="/stevenschaefer/" title="Steven Schaefer" uri="https://stevenschaefer.net/stevenschaefer/" display-uri="stevenschaefer" type="local">Steven Schaefer</fr:link>
+      </fr:author>
+    </fr:authors>
+    <fr:date>
+      <fr:year>2026</fr:year>
+      <fr:month>4</fr:month>
+      <fr:day>24</fr:day>
+    </fr:date>
+    <fr:source-path>/Users/stevenschaefer/forest/trees/sss-00B5.tree</fr:source-path>
+    <fr:uri>https://stevenschaefer.net/sss-00B5/</fr:uri>
+    <fr:display-uri>sss-00B5</fr:display-uri>
+    <fr:route>/sss-00B5/</fr:route>
+    <fr:title text="Fibrations into a 1-category of groupoid-object categories">Fibrations into a 1-category of groupoid-object categories</fr:title>
+    <fr:taxon>TODO</fr:taxon>
+    <fr:meta name="status">cancelled</fr:meta>
+    <fr:meta name="priority">medium</fr:meta>
+  </fr:frontmatter>
+  <fr:mainmatter>
+    <html:p>Explore a streamlined setup for logical relations: work with a <html:em>small</html:em> category <fr:tex display="inline"><![CDATA[\mathcal {GC}]]></fr:tex> whose objects are categories equipped with a groupoid object (or, equivalently, categories in which every map is invertible in the relevant sense), and whose morphisms are the appropriate structure-preserving functors. Define fibrations as functors into <fr:tex display="inline"><![CDATA[\mathcal {GC}]]></fr:tex>. Because each fiber is a groupoid-enriched 1-category, <fr:tex display="inline"><![CDATA[\mathcal {GC}]]></fr:tex> itself is a 1-category — there are no higher coherences to manage.</html:p>
+    <html:p><html:strong>Motivation.</html:strong> The current displayed-category machinery in <fr:link href="/sss-008Z/" title="Finishing Logical Relations on Display" uri="https://stevenschaefer.net/sss-008Z/" display-uri="sss-008Z" type="local">Finishing <html:em>Logical Relations on Display</html:em></fr:link> spends a lot of effort on coherences that evaporate once the fibers are forced to be (truncated to) groupoidal. If the target 1-category is rich enough to express the constructions needed for canonicity and normalization logical relations, this may be a lighter foundation than the thickened / displayed-double-category route.</html:p>
+    <html:p>
+      <html:strong>Deliverables.</html:strong>
+    </html:p>
+    <html:ol><html:li>Define the small 1-category <fr:tex display="inline"><![CDATA[\mathcal {GC}]]></fr:tex> of categories-with-groupoid-objects and verify it is a 1-category (no higher cells).</html:li>
+  <html:li>Define fibrations as functors <fr:tex display="inline"><![CDATA[E \to  \mathcal {GC}]]></fr:tex> and relate them to the displayed-category presentation already in the library.</html:li>
+  <html:li>Encode the universal properties needed for semantics: terminal / binary products / exponentials at the base, plus their fiberwise analogues.</html:li>
+  <html:li>Encode <html:em>universal quantification</html:em> (right adjoint to pullback / reindexing) internally to this framework.</html:li>
+  <html:li>State and prove <html:em>Beck--Chevalley</html:em> for the relevant pullback squares.</html:li>
+  <html:li>State and prove <html:em>Frobenius reciprocity</html:em> for the left-adjoint / existential direction.</html:li>
+  <html:li>Reconstruct the canonicity logical relation in this framework as a first test case.</html:li>
+  <html:li>Reconstruct the normalization logical relation in this framework as a harder stress test.</html:li></html:ol>
+    <html:p>
+      <html:strong>Open questions.</html:strong>
+    </html:p>
+    <html:ul><html:li>What exactly is the right notion of "groupoid object" here — an internal groupoid, a hom-groupoid enrichment, or truncation of hom-sets to sets? The choice affects whether <fr:tex display="inline"><![CDATA[\mathcal {GC}]]></fr:tex> is genuinely small.</html:li>
+  <html:li>Does the 1-categorical structure survive once we add the universal-quantifier / Beck--Chevalley / Frobenius data, or do higher coherences creep back in through the adjoints?</html:li>
+  <html:li>How does this compare to the displayed-category-with-isos setup in <html:code>Cubical/Categories/Displayed/</html:code> and the thickened displayed categories of PR 253?</html:li></html:ul>
+    <html:p>Related: <fr:link href="/sss-008Z/" title="Finishing Logical Relations on Display" uri="https://stevenschaefer.net/sss-008Z/" display-uri="sss-008Z" type="local">Logical Relations on Display milestone</fr:link>, <fr:link href="/sss-0078/" title="Initial Algebras in Gluing Proofs" uri="https://stevenschaefer.net/sss-0078/" display-uri="sss-0078" type="local">Initial Algebras in Gluing Proofs</fr:link>, <fr:link href="/sss-0093/" title="Logical relation for λ-calculus with equations" uri="https://stevenschaefer.net/sss-0093/" display-uri="sss-0093" type="local">Logical relation for λ-calculus with equations</fr:link>.</html:p>
+  </fr:mainmatter>
+  <fr:backmatter>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors />
+        <fr:title text="References">References</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter />
+    </fr:tree>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors />
+        <fr:title text="Context">Context</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter />
+    </fr:tree>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors />
+        <fr:title text="Backlinks">Backlinks</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter>
+        <fr:tree show-metadata="true" expanded="false" toc="false" numbered="false">
+          <fr:frontmatter>
+            <fr:authors>
+              <fr:author>
+                <fr:link href="/stevenschaefer/" title="Steven Schaefer" uri="https://stevenschaefer.net/stevenschaefer/" display-uri="stevenschaefer" type="local">Steven Schaefer</fr:link>
+              </fr:author>
+            </fr:authors>
+            <fr:date>
+              <fr:year>2026</fr:year>
+              <fr:month>5</fr:month>
+              <fr:day>13</fr:day>
+            </fr:date>
+            <fr:source-path>/Users/stevenschaefer/forest/trees/sss-00BX.tree</fr:source-path>
+            <fr:uri>https://stevenschaefer.net/sss-00BX/</fr:uri>
+            <fr:display-uri>sss-00BX</fr:display-uri>
+            <fr:route>/sss-00BX/</fr:route>
+            <fr:title text="PhD roadmap: Dependent Lambek Calculus as the central object">PhD roadmap: Dependent Lambek Calculus as the central object</fr:title>
+            <fr:taxon>Plan</fr:taxon>
+          </fr:frontmatter>
+          <fr:mainmatter>
+            <html:p>Two-year sketch. Expansion of the PhD-roadmap section of the
+<fr:link href="/sss-00BW/" title="Meeting with Max 2026-05-13: agenda and prep" uri="https://stevenschaefer.net/sss-00BW/" display-uri="sss-00BW" type="local">2026-05-13 meeting prep</fr:link>, drafted for discussion with Max.
+Replaces the one-paragraph sketch there.</html:p>
+            <html:p><html:strong>Thesis claim.</html:strong> <html:em>Dependent Lambek Calculus</html:em> (DLC) is the
+central object of the dissertation. DLC is developed along three coupled
+axes: <html:em>categorical-semantic metatheory</html:em> (via displayed categories),
+<html:em>algorithmic content</html:em> (compositional characterizations of practical
+parsing algorithms), and <html:em>implementation</html:em> (a Lean tool usable enough to
+host real-language parser correctness proofs). The synthesis chapter is
+self-hosted parser correctness for the Lean and Agda frontends, written
+inside the host languages themselves.</html:p>
+            <html:p><html:strong>Why the three axes are one PhD, not three.</html:strong> The
+displayed-categorical machinery makes the parsing-theoretic content
+mechanizable; the parsing-theoretic content motivates and stress-tests the
+foundational machinery; the Lean implementation is what makes the
+correctness claims executable on real proof-assistant frontends.
+Strictification (<fr:link href="/sss-00BK/" title="Strictification" uri="https://stevenschaefer.net/sss-00BK/" display-uri="sss-00BK" type="local">Strictification</fr:link>) cuts across as the enabling technique for
+mechanization.</html:p>
+            <html:p><html:strong>Paper 1: <html:em>Logical Relations on Display</html:em>.</html:strong> In flight; target
+submission in ~3 months. Establishes the displayed-categorical framework
+that downstream papers use to mechanize DLC metatheorems. Gated by the
+conservativity rewrite and the formalization-slowness fix; tracked at
+<fr:link href="/sss-008Z/" title="Finishing Logical Relations on Display" uri="https://stevenschaefer.net/sss-008Z/" display-uri="sss-008Z" type="local">the paper milestone</fr:link>. The strictification technique
+(<fr:link href="/sss-00BL/" title="Yoneda Strictification: Tradeoffs and Opportunities" uri="https://stevenschaefer.net/sss-00BL/" display-uri="sss-00BL" type="local">Yoneda Strictification: Tradeoffs and Opportunities</fr:link>, <fr:link href="/sss-00B5/" title="Fibrations into a 1-category of groupoid-object categories" uri="https://stevenschaefer.net/sss-00B5/" display-uri="sss-00B5" type="local">Fibrations into a 1-category of groupoid-object categories</fr:link>) is a likely auxiliary section.</html:p>
+            <html:p><html:strong>Paper 2: LL(1) parsing in Dependent Lambek Calculus</html:strong> (with Max
+and Cass; target ~6–9 months). Characterize LL(1) parsers in DLC
+compositionally; derive a parser-generator algorithm from the
+characterization. Two critical claims from the
+<fr:link href="/sss-00AF/" title="Advisor meeting 2026-04-22 (Max and Cass)" uri="https://stevenschaefer.net/sss-00AF/" display-uri="sss-00AF" type="local">2026-04-22 meeting</fr:link>: <fr:link href="/sss-00AL/" title="Recursive-descent parsers as unfolds" uri="https://stevenschaefer.net/sss-00AL/" display-uri="sss-00AL" type="local">recursive-descent parsers are unfolds,
+not folds</fr:link>, and <fr:link href="/sss-00AK/" title="Subterm ordering and the inverse of the initial algebra as a recursive coalgebra" uri="https://stevenschaefer.net/sss-00AK/" display-uri="sss-00AK" type="local">the inverse of an initial algebra is always a
+recursive coalgebra</fr:link> (Cass's lever — verify against
+<fr:link href="/alexandruIntrinsicallyCorrectAlgorithms2025-preprint/" title="Intrinsically Correct Algorithms and Recursive Coalgebras" uri="https://stevenschaefer.net/alexandruIntrinsicallyCorrectAlgorithms2025-preprint/" display-uri="alexandruIntrinsicallyCorrectAlgorithms2025-preprint" type="local">[alexandruIntrinsicallyCorrectAlgorithms2025-preprint]</fr:link> early). The
+<fr:link href="/sss-00A3/" title="Plan: Derivative-Based CFG Parser via Recursive Coalgebras" uri="https://stevenschaefer.net/sss-00A3/" display-uri="sss-00A3" type="local">derivative-based plan</fr:link> and its
+<fr:link href="/sss-00AD/" title="Finish Derivative-Based Parsing on brzozowski Branch" uri="https://stevenschaefer.net/sss-00AD/" display-uri="sss-00AD" type="local"><html:code>brzozowski</html:code>-branch execution track</fr:link> supply the syntactic
+machinery (Brzozowski derivatives as the linear residual <fr:tex display="inline"><![CDATA[\multimap ]]></fr:tex>,
+decidable nullability, the amazing right adjoint). The regular-grammar
+precursor is <fr:link href="/sss-00AY/" title="Finish the deterministic regex code and generalize it to LL(1)" uri="https://stevenschaefer.net/sss-00AY/" display-uri="sss-00AY" type="local">deterministic regex → LL(1)</fr:link>. Well-founded
+recursion is the recursion principle of record; <fr:link href="/sss-00BE/" title="State and Attempt Löb Induction for ▷" uri="https://stevenschaefer.net/sss-00BE/" display-uri="sss-00BE" type="local">guarded recursion ▷ /
+Löb</fr:link>, tracked at the <fr:link href="/sss-009A/" title="Well-Founded Recursion in Dependent Lambek Calculus" uri="https://stevenschaefer.net/sss-009A/" display-uri="sss-009A" type="local">well-founded-recursion
+milestone</fr:link>, remains as a fallback if Cass's lever does not
+transport to the substructural setting. Likely venue: POPL / ICFP / LICS.</html:p>
+            <html:p><html:strong>Paper 3: Richer parsing classes and a usable Lean tool</html:strong> (target
+~12–15 months). Generalize Paper 2's characterization to LL(k) and LR;
+fold in the <fr:link href="/sss-00BT/" title="What the Chu construction buys for writing parsers" uri="https://stevenschaefer.net/sss-00BT/" display-uri="sss-00BT" type="local">Chu / GL-reduct treatment of parsers with structured
+failure</fr:link> (PEG, negative lookahead) via the
+<fr:link href="/sss-00BS/" title="Atkey's reduct as a recursive-coalgebra / corecursive-algebra stack" uri="https://stevenschaefer.net/sss-00BS/" display-uri="sss-00BS" type="local">recursive-coalgebra synthesis</fr:link>. The <fr:link href="/sss-00AE/" title="How the LinearElab Elaborator Compiles to Category-Polymorphic Morphisms" uri="https://stevenschaefer.net/sss-00AE/" display-uri="sss-00AE" type="local">Lean port of the
+elaborator</fr:link> lands as a real tool — <html:code>LinearElab</html:code> already
+works for the linear core; the new development is the grammar-specific
+extensions and a parser-generation backend. Demonstrate on a non-trivial
+language fragment (an expression-language or JSON-class target). Likely
+venue: PLDI tools / ICFP / CPP.</html:p>
+            <html:p><html:strong>Paper 4: Self-hosting parser correctness for Lean and Agda</html:strong>
+(target ~18–24 months; defense chapter). Encode the actual parser of Lean
+(resp. Agda) inside DLC, within Lean (resp. Agda) itself; prove
+correctness theorems against the language spec. This is the synthesis: it
+brings together Paper 1's metatheory, Papers 2–3's parsing
+characterizations, and Paper 3's implementation. Scope risk acknowledged
+— if lifting to both host languages overruns, narrow to one (Lean is the
+better-resourced bet given the existing <html:code>LinearElab</html:code> port). Likely
+venue: POPL / a top-tier journal / CPP / ITP.</html:p>
+            <html:p><html:strong>Paper 5 (stretch): Transition-system verification by gluing.</html:strong>
+Apply the displayed-categorical-logic framework off-axis — glue over the
+free category of a distributed system's labelled transition system to
+extract safety / liveness proofs for mutex-class algorithms. Concrete and
+applications-flavored; slots in between any of Papers 2–4 if scheduling
+permits. Likely venue: CAV / CONCUR / verification.</html:p>
+            <html:p>
+              <html:strong>Side threads (not required for the PhD).</html:strong>
+            </html:p>
+            <html:ul><html:li><html:strong>DLC metatheorems via cubical-categorical-logic.</html:strong> Likely
+absorbed into the chapter for Paper 2 or Paper 4 as "we mechanize the
+following DLC metatheorems using our own logical-relations framework"
+rather than its own paper.</html:li>
+<html:li><html:strong>CBPV (or similar richer TT) metatheory.</html:strong> Eric Bond is working
+in this direction — collaboration opportunity, more naturally post-PhD or
+as a final-chapter sketch than a core chapter.</html:li>
+<html:li><html:strong>Locally-small / large category theory in Agda.</html:strong> Infrastructure
+for cubical-categorical-logic. Possible tools / library paper, but not a
+core chapter.</html:li>
+<html:li><html:strong>Practical transition-system verification.</html:strong> See Paper 5 above
+if it gets promoted from side thread.</html:li>
+<html:li><html:strong>Fuller 2-category library in Agda.</html:strong> Pure infrastructure;
+absorbed into the cubical-categorical-logic library where needed.</html:li></html:ul>
+            <html:p>
+              <html:strong>Cross-cutting techniques and dependencies.</html:strong>
+            </html:p>
+            <html:ul><html:li><html:em>Displayed categories</html:em> — under Paper 1 (logical relations) and
+Paper 4 (DLC metatheory).</html:li>
+<html:li><html:em>Recursive coalgebras / well-founded recursion</html:em> — under Papers 2–4.
+Cass's lever (<fr:link href="/sss-00AK/" title="Subterm ordering and the inverse of the initial algebra as a recursive coalgebra" uri="https://stevenschaefer.net/sss-00AK/" display-uri="sss-00AK" type="local">Subterm ordering and the inverse of the initial algebra as a recursive coalgebra</fr:link>) is critical for Paper 2; verify early.</html:li>
+<html:li><html:em>Strictification</html:em> (<fr:link href="/sss-00BL/" title="Yoneda Strictification: Tradeoffs and Opportunities" uri="https://stevenschaefer.net/sss-00BL/" display-uri="sss-00BL" type="local">Yoneda Strictification: Tradeoffs and Opportunities</fr:link>, <fr:link href="/sss-00BU/" title="Cayley strictification of grammars: StrictGrammar = Grammar → Grammar" uri="https://stevenschaefer.net/sss-00BU/" display-uri="sss-00BU" type="local">Cayley strictification of grammars: <html:code>StrictGrammar = Grammar → Grammar</html:code></fr:link>, <fr:link href="/sss-00BV/" title="Cayley strictification of a monoidal category" uri="https://stevenschaefer.net/sss-00BV/" display-uri="sss-00BV" type="local">Cayley strictification of a monoidal category</fr:link>,
+<fr:link href="/sss-00B5/" title="Fibrations into a 1-category of groupoid-object categories" uri="https://stevenschaefer.net/sss-00B5/" display-uri="sss-00B5" type="local">Fibrations into a 1-category of groupoid-object categories</fr:link>) — enabling tool for Papers 1 and 2 rather than a
+standalone paper, unless the methodology grows.</html:li>
+<html:li><html:em>Lean implementation</html:em> (<fr:link href="/sss-00AE/" title="How the LinearElab Elaborator Compiles to Category-Polymorphic Morphisms" uri="https://stevenschaefer.net/sss-00AE/" display-uri="sss-00AE" type="local">How the <html:code>LinearElab</html:code> Elaborator Compiles to Category-Polymorphic Morphisms</fr:link>) — foundation for Papers 3 and 4;
+needs grammar-specific extensions beyond the current linear core.</html:li>
+<html:li><html:em>Brzozowski derivatives + amazing right adjoint</html:em> — concrete
+syntactic machinery for Paper 2, currently on the <fr:link href="/sss-00AD/" title="Finish Derivative-Based Parsing on brzozowski Branch" uri="https://stevenschaefer.net/sss-00AD/" display-uri="sss-00AD" type="local"><html:code>brzozowski</html:code>
+worktree</fr:link>.</html:li>
+<html:li><html:em>Guarded recursion ▷ / Löb</html:em> (<fr:link href="/sss-00BE/" title="State and Attempt Löb Induction for ▷" uri="https://stevenschaefer.net/sss-00BE/" display-uri="sss-00BE" type="local">State and Attempt Löb Induction for ▷</fr:link>, <fr:link href="/sss-00B9/" title="▷ as a Later Modality from Tiny Strings" uri="https://stevenschaefer.net/sss-00B9/" display-uri="sss-00B9" type="local">▷ as a Later Modality from Tiny Strings</fr:link>) — fallback
+recursion principle if the recursive-coalgebra story doesn't transport.</html:li></html:ul>
+            <html:p>
+              <html:strong>Sequencing and risks.</html:strong>
+            </html:p>
+            <html:ul><html:li><html:strong>P1 (3 mo)</html:strong> — risk: conservativity rewrite or speed fix
+overruns; impact bounded by absorbing strictification as the rescue.</html:li>
+<html:li><html:strong>P2 (6–9 mo)</html:strong> — risk: Cass's lever doesn't transport. Mitigation:
+front-load verification of the lever; fall back to guarded recursion as
+plan B.</html:li>
+<html:li><html:strong>P3 (12–15 mo)</html:strong> — risk: <html:code>LinearElab</html:code> ergonomics are
+inadequate for non-trivial languages. Mitigation: keep the target
+language modest (expression languages, JSON-class) rather than push to a
+full programming language inside this paper.</html:li>
+<html:li><html:strong>P4 (18–24 mo)</html:strong> — risk: scope blow-up. Mitigation: narrow to
+one host language (Lean) if both is too much.</html:li></html:ul>
+            <html:p>
+              <html:strong>Open questions for Max.</html:strong>
+            </html:p>
+            <html:ul><html:li>Does DLC metatheory absorb into Paper 4, or warrant its own chapter
+(possibly Paper 4.5)?</html:li>
+<html:li>Is the Chu / PEG story a Paper 3 fold-in or a separate paper?</html:li>
+<html:li>Strictification — paper or technique? Standalone methods paper, or
+absorbed into Papers 1 and 2?</html:li>
+<html:li>How to budget the Eric Bond / CBPV thread — final-chapter sketch,
+collaboration in parallel, or strictly post-PhD?</html:li>
+<html:li>Defense timing for a 24-month horizon — does the schedule above
+support a Spring 2028 defense, and what does that imply for proposal /
+candidacy timing?</html:li></html:ul>
+          </fr:mainmatter>
+        </fr:tree>
+        <fr:tree show-metadata="true" expanded="false" toc="false" numbered="false">
+          <fr:frontmatter>
+            <fr:authors>
+              <fr:author>
+                <fr:link href="/stevenschaefer/" title="Steven Schaefer" uri="https://stevenschaefer.net/stevenschaefer/" display-uri="stevenschaefer" type="local">Steven Schaefer</fr:link>
+              </fr:author>
+            </fr:authors>
+            <fr:date>
+              <fr:year>2026</fr:year>
+              <fr:month>5</fr:month>
+              <fr:day>13</fr:day>
+            </fr:date>
+            <fr:source-path>/Users/stevenschaefer/forest/trees/sss-00BW.tree</fr:source-path>
+            <fr:uri>https://stevenschaefer.net/sss-00BW/</fr:uri>
+            <fr:display-uri>sss-00BW</fr:display-uri>
+            <fr:route>/sss-00BW/</fr:route>
+            <fr:title text="Meeting with Max 2026-05-13: agenda and prep">Meeting with Max 2026-05-13: agenda and prep</fr:title>
+            <fr:taxon>Note</fr:taxon>
+          </fr:frontmatter>
+          <fr:mainmatter>
+            <html:p>Pre-meeting agenda. Four items: (1) progress on logical relations, (2)
+progress on gluing, (3) an outline for a talk about the
+<fr:link href="/sss-008Z/" title="Finishing Logical Relations on Display" uri="https://stevenschaefer.net/sss-008Z/" display-uri="sss-008Z" type="local"><html:em>Logical Relations on Display</html:em></fr:link> work, (4) a sketch of the PhD
+roadmap. Follow-up to the <fr:link href="/sss-00BN/" title="Meeting with Max 2026-05-05: strictification, conservativity, slowness" uri="https://stevenschaefer.net/sss-00BN/" display-uri="sss-00BN" type="local">2026-05-05 meeting notes</fr:link>.</html:p>
+            <html:p><html:strong>Logical relations — progress.</html:strong> Since <fr:link href="/sss-00BN/" title="Meeting with Max 2026-05-05: strictification, conservativity, slowness" uri="https://stevenschaefer.net/sss-00BN/" display-uri="sss-00BN" type="local">last meeting</fr:link> the
+work on the paper has split along the two threads Max suggested. The
+<html:em>conservativity-via-extensional-UMP</html:em> fusion is still on the todo list for
+paper writing; the <fr:link href="/sss-008Z/" title="Finishing Logical Relations on Display" uri="https://stevenschaefer.net/sss-008Z/" display-uri="sss-008Z" type="local">paper milestone</fr:link> gates the writing subtree on
+this. On the formalization side, the bottleneck is the slowness in
+<html:code>Displayed.Instances.Sets.Properties</html:code> — the <fr:link href="/sss-00BO/" title="Benchmark cause of slowness in Displayed.Instances.Sets.Properties" uri="https://stevenschaefer.net/sss-00BO/" display-uri="sss-00BO" type="local">benchmark
+investigation</fr:link> is now closed with a sharper cost model: under
+<html:code>--lossy-unification</html:code>, typing is ~1.3 percent of total cost; the
+remaining ~11.5s is post-typing bookkeeping over the unsolved-meta store,
+proportional to <fr:tex display="inline"><![CDATA[(\text {meta count}) \times  (\text {per-meta type complexity})]]></fr:tex>. Three
+independent levers: lossy (16×), explicit-<html:code>refl</html:code> on
+<html:code>reind-filler⁻</html:code> (additional 2×), and strictification of the base
+(attacks per-meta type complexity, the largest residual factor).</html:p>
+            <html:p><html:strong>Gluing — progress.</html:strong> The new piece since <fr:link href="/sss-00BN/" title="Meeting with Max 2026-05-05: strictification, conservativity, slowness" uri="https://stevenschaefer.net/sss-00BN/" display-uri="sss-00BN" type="local">last
+meeting</fr:link> is the <fr:link href="/sss-00B5/" title="Fibrations into a 1-category of groupoid-object categories" uri="https://stevenschaefer.net/sss-00B5/" display-uri="sss-00B5" type="local">displayed-strictness / gluing-via-UMP
+pipeline</fr:link>: build the relevant vertical structure on
+<html:code>YonedaStrictifyᴰ Cᴰ</html:code> where displayed laws are <html:code>refl</html:code>; obtain a
+strict recursor <fr:tex display="inline"><![CDATA[F : \mathrm {Syn} \to  \mathrm {YonedaStrictify}\,\mathcal {C}]]></fr:tex>
+from the syntactic QIIT's UMP; reindex along <fr:tex display="inline"><![CDATA[F]]></fr:tex> (strict because both base
+and displayed laws are <html:code>refl</html:code>, and the recursor maps identity and
+composition constructors to <html:code>id</html:code> and <fr:tex display="inline"><![CDATA[\cdot ]]></fr:tex> on the nose); apply the
+global elimination on the reindexed displayed category to get a section;
+transfer back through the round-trip natural iso at the boundary. The
+delicate observation is that displayed strictness is <html:em>not</html:em> implied by
+base strictness — <html:code>YonedaStrictifyᴰ</html:code> delivers it by composing displayed
+presheaf homomorphisms as functions, the same trick as the base. Open
+question to discuss: which gluing-in-the-library is the right first target,
+and how much of the existing <html:code>Gluing/</html:code> infrastructure already lifts to
+the strictified setting versus needs duplication.</html:p>
+            <html:p><html:strong>Talk outline — draft sections.</html:strong> Proposed shape, target ~45–60
+minutes. (i) Motivation: mechanized metatheory and what displayed categories
+buy over total categories — keep examples small (canonicity, normalization).
+(ii) Setup: the displayed-categories framework over a cubical base, vertical
+structure, the key elimination principle. (iii) Main theorems:
+extensionality / fullness, the worked presented-categories example with
+equational axioms. (iv) Comparison: Twelf, Synthetic Tait Computability,
+Kaposi--Pujet. (v) Lessons from formalization: strictification trade-offs
+and the cost model from the slowness work. (vi) What's next: gluing,
+parser-side applications, parametric uses of displayed categories. Things to
+ask Max: target audience, which examples to actually work in slides, and
+whether (v) belongs in the talk or only in the paper.</html:p>
+            <html:p><html:strong>PhD roadmap — sketch for discussion.</html:strong> See the expanded
+<fr:link href="/sss-00BX/" title="PhD roadmap: Dependent Lambek Calculus as the central object" uri="https://stevenschaefer.net/sss-00BX/" display-uri="sss-00BX" type="local">PhD-roadmap plan</fr:link>. Headline: <html:em>DLC is the central object</html:em>, developed
+along three coupled axes (semantics/metatheory via displayed categories,
+algorithmic content via parser characterizations, Lean implementation), with the
+synthesis chapter being self-hosted parser correctness for Lean and Agda. Four
+papers within the 24-month horizon (Paper 1 = the current one; Paper 2 = LL(1)
+in DLC with Max and Cass; Paper 3 = richer parsing classes + usable Lean tool;
+Paper 4 = self-hosting); a fifth stretch paper on transition-system
+verification by gluing; and side threads (CBPV with Eric Bond, 2-category
+library, large-category-theory infrastructure) explicitly out of scope.</html:p>
+          </fr:mainmatter>
+        </fr:tree>
+        <fr:tree show-metadata="true" expanded="false" toc="false" numbered="false">
+          <fr:frontmatter>
+            <fr:authors>
+              <fr:author>
+                <fr:link href="/stevenschaefer/" title="Steven Schaefer" uri="https://stevenschaefer.net/stevenschaefer/" display-uri="stevenschaefer" type="local">Steven Schaefer</fr:link>
+              </fr:author>
+            </fr:authors>
+            <fr:date>
+              <fr:year>2026</fr:year>
+              <fr:month>4</fr:month>
+              <fr:day>27</fr:day>
+            </fr:date>
+            <fr:source-path>/Users/stevenschaefer/forest/trees/sss-00B6.tree</fr:source-path>
+            <fr:uri>https://stevenschaefer.net/sss-00B6/</fr:uri>
+            <fr:display-uri>sss-00B6</fr:display-uri>
+            <fr:route>/sss-00B6/</fr:route>
+            <fr:title text="Damn, sets not groupoids">Damn, sets not groupoids</fr:title>
+            <fr:taxon>TODO</fr:taxon>
+          </fr:frontmatter>
+          <fr:mainmatter>
+            <html:p>I was wrong in <fr:link href="/sss-00B5/" title="Fibrations into a 1-category of groupoid-object categories" uri="https://stevenschaefer.net/sss-00B5/" display-uri="sss-00B5" type="local">Fibrations into a 1-category of groupoid-object categories</fr:link>. To have a 1-category of categories,
+they need to have a <html:em>set</html:em> of objects rather than a groupoid.</html:p>
+          </fr:mainmatter>
+        </fr:tree>
+      </fr:mainmatter>
+    </fr:tree>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors />
+        <fr:title text="Related">Related</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter>
+        <fr:tree show-metadata="true" expanded="false" toc="false" numbered="false">
+          <fr:frontmatter>
+            <fr:authors>
+              <fr:author>
+                <fr:link href="/stevenschaefer/" title="Steven Schaefer" uri="https://stevenschaefer.net/stevenschaefer/" display-uri="stevenschaefer" type="local">Steven Schaefer</fr:link>
+              </fr:author>
+            </fr:authors>
+            <fr:date>
+              <fr:year>2026</fr:year>
+              <fr:month>4</fr:month>
+              <fr:day>17</fr:day>
+            </fr:date>
+            <fr:source-path>/Users/stevenschaefer/forest/trees/sss-008Z.tree</fr:source-path>
+            <fr:uri>https://stevenschaefer.net/sss-008Z/</fr:uri>
+            <fr:display-uri>sss-008Z</fr:display-uri>
+            <fr:route>/sss-008Z/</fr:route>
+            <fr:title text="Finishing Logical Relations on Display">Finishing <html:em>Logical Relations on Display</html:em></fr:title>
+            <fr:taxon>Milestone</fr:taxon>
+          </fr:frontmatter>
+          <fr:mainmatter>
+            <html:p>Orchestration tree for finishing the paper <html:em>Logical Relations on Display</html:em>. Not a TODO itself; groups and tracks the subtasks below. Status lives on the individual subtask trees.</html:p>
+            <html:p><html:strong>Goal.</html:strong> A submittable draft that (i) uses consistent, well-explained notation, (ii) situates the work against Twelf, Synthetic Tait Computability, and other mechanized-metatheory approaches, and (iii) demonstrates the framework on a fully worked presented-categories example with equational axioms.</html:p>
+            <fr:tree show-metadata="false" expanded="false">
+              <fr:frontmatter>
+                <fr:authors>
+                  <fr:author>
+                    <fr:link href="/stevenschaefer/" title="Steven Schaefer" uri="https://stevenschaefer.net/stevenschaefer/" display-uri="stevenschaefer" type="local">Steven Schaefer</fr:link>
+                  </fr:author>
+                </fr:authors>
+                <fr:date>
+                  <fr:year>2026</fr:year>
+                  <fr:month>4</fr:month>
+                  <fr:day>17</fr:day>
+                </fr:date>
+                <fr:source-path>/Users/stevenschaefer/forest/trees/sss-008Z.tree</fr:source-path>
+                <fr:title text="Paper writing">Paper writing</fr:title>
+              </fr:frontmatter>
+              <fr:mainmatter>
+                <fr:tree show-metadata="true" expanded="false" toc="false" numbered="false">
+                  <fr:frontmatter>
+                    <fr:authors>
+                      <fr:author>
+                        <fr:link href="/stevenschaefer/" title="Steven Schaefer" uri="https://stevenschaefer.net/stevenschaefer/" display-uri="stevenschaefer" type="local">Steven Schaefer</fr:link>
+                      </fr:author>
+                    </fr:authors>
+                    <fr:date>
+                      <fr:year>2026</fr:year>
+                      <fr:month>4</fr:month>
+                      <fr:day>17</fr:day>
+                    </fr:date>
+                    <fr:source-path>/Users/stevenschaefer/forest/trees/sss-0090.tree</fr:source-path>
+                    <fr:uri>https://stevenschaefer.net/sss-0090/</fr:uri>
+                    <fr:display-uri>sss-0090</fr:display-uri>
+                    <fr:route>/sss-0090/</fr:route>
+                    <fr:title text="Fix paper notation">Fix paper notation</fr:title>
+                    <fr:taxon>TODO</fr:taxon>
+                    <fr:meta name="status">pending</fr:meta>
+                    <fr:meta name="priority">high</fr:meta>
+                    <fr:meta name="apple-id">x-apple-reminder://AF73F89C-ED42-48DD-8FF9-93C820D68F76</fr:meta>
+                    <fr:meta name="forester-addr">sss-0090</fr:meta>
+                  </fr:frontmatter>
+                  <fr:mainmatter>
+                    <html:p>Audit and fix the notation throughout <html:em>Logical Relations on Display</html:em>. Current notation is inconsistent and, in places, unexplained. Make a pass that (i) establishes a single convention per concept, (ii) introduces each piece of notation where it is first used, and (iii) updates figures and inline math accordingly.</html:p>
+                    <html:p>Subtask of the <fr:link href="/sss-008Z/" title="Finishing Logical Relations on Display" uri="https://stevenschaefer.net/sss-008Z/" display-uri="sss-008Z" type="local">Finishing <html:em>Logical Relations on Display</html:em></fr:link> milestone.</html:p>
+                  </fr:mainmatter>
+                </fr:tree>
+                <fr:tree show-metadata="true" expanded="false" toc="false" numbered="false">
+                  <fr:frontmatter>
+                    <fr:authors>
+                      <fr:author>
+                        <fr:link href="/stevenschaefer/" title="Steven Schaefer" uri="https://stevenschaefer.net/stevenschaefer/" display-uri="stevenschaefer" type="local">Steven Schaefer</fr:link>
+                      </fr:author>
+                    </fr:authors>
+                    <fr:date>
+                      <fr:year>2026</fr:year>
+                      <fr:month>4</fr:month>
+                      <fr:day>17</fr:day>
+                    </fr:date>
+                    <fr:source-path>/Users/stevenschaefer/forest/trees/sss-0092.tree</fr:source-path>
+                    <fr:uri>https://stevenschaefer.net/sss-0092/</fr:uri>
+                    <fr:display-uri>sss-0092</fr:display-uri>
+                    <fr:route>/sss-0092/</fr:route>
+                    <fr:title text="Improve paper body story">Improve paper body story</fr:title>
+                    <fr:taxon>TODO</fr:taxon>
+                    <fr:meta name="status">pending</fr:meta>
+                    <fr:meta name="apple-id">x-apple-reminder://40C30279-88A7-4195-8532-55F536996E02</fr:meta>
+                    <fr:meta name="forester-addr">sss-0092</fr:meta>
+                  </fr:frontmatter>
+                  <fr:mainmatter>
+                    <html:p>Give the body of <html:em>Logical Relations on Display</html:em> a better narrative arc. The current draft presents the technical material but does not carry a reader through the argument. Identify the central story, rearrange sections to serve it, and add connective tissue between the setup, the general framework, and the worked example.</html:p>
+                    <html:p>Subtask of the <fr:link href="/sss-008Z/" title="Finishing Logical Relations on Display" uri="https://stevenschaefer.net/sss-008Z/" display-uri="sss-008Z" type="local">Finishing <html:em>Logical Relations on Display</html:em></fr:link> milestone.</html:p>
+                  </fr:mainmatter>
+                </fr:tree>
+                <fr:tree show-metadata="true" expanded="false" toc="false" numbered="false">
+                  <fr:frontmatter>
+                    <fr:authors>
+                      <fr:author>
+                        <fr:link href="/stevenschaefer/" title="Steven Schaefer" uri="https://stevenschaefer.net/stevenschaefer/" display-uri="stevenschaefer" type="local">Steven Schaefer</fr:link>
+                      </fr:author>
+                    </fr:authors>
+                    <fr:date>
+                      <fr:year>2026</fr:year>
+                      <fr:month>4</fr:month>
+                      <fr:day>17</fr:day>
+                    </fr:date>
+                    <fr:source-path>/Users/stevenschaefer/forest/trees/sss-0091.tree</fr:source-path>
+                    <fr:uri>https://stevenschaefer.net/sss-0091/</fr:uri>
+                    <fr:display-uri>sss-0091</fr:display-uri>
+                    <fr:route>/sss-0091/</fr:route>
+                    <fr:title text="Write related works section">Write related works section</fr:title>
+                    <fr:taxon>TODO</fr:taxon>
+                    <fr:meta name="status">pending</fr:meta>
+                    <fr:meta name="priority">high</fr:meta>
+                    <fr:meta name="apple-id">x-apple-reminder://1231BCF0-C48B-44E6-924A-3A6B9575AA32</fr:meta>
+                    <fr:meta name="forester-addr">sss-0091</fr:meta>
+                  </fr:frontmatter>
+                  <fr:mainmatter>
+                    <html:p>Write the related works section of <html:em>Logical Relations on Display</html:em>. The section needs to motivate the occasion for better mechanized metatheory by speaking to the drawbacks of existing approaches — in particular Twelf and Synthetic Tait Computability — and position the displayed-logical-relations approach against them.</html:p>
+                    <html:p>This subtask absorbs the content of the cancelled <fr:link href="/sss-0035/" title="Review related approaches to metatheory" uri="https://stevenschaefer.net/sss-0035/" display-uri="sss-0035" type="local">Review related approaches to metatheory</fr:link> TODO.</html:p>
+                    <html:p>Subtask of the <fr:link href="/sss-008Z/" title="Finishing Logical Relations on Display" uri="https://stevenschaefer.net/sss-008Z/" display-uri="sss-008Z" type="local">Finishing <html:em>Logical Relations on Display</html:em></fr:link> milestone.</html:p>
+                  </fr:mainmatter>
+                </fr:tree>
+              </fr:mainmatter>
+            </fr:tree>
+            <fr:tree show-metadata="false" expanded="false">
+              <fr:frontmatter>
+                <fr:authors>
+                  <fr:author>
+                    <fr:link href="/stevenschaefer/" title="Steven Schaefer" uri="https://stevenschaefer.net/stevenschaefer/" display-uri="stevenschaefer" type="local">Steven Schaefer</fr:link>
+                  </fr:author>
+                </fr:authors>
+                <fr:date>
+                  <fr:year>2026</fr:year>
+                  <fr:month>4</fr:month>
+                  <fr:day>17</fr:day>
+                </fr:date>
+                <fr:source-path>/Users/stevenschaefer/forest/trees/sss-008Z.tree</fr:source-path>
+                <fr:title text="Paper formalization">Paper formalization</fr:title>
+              </fr:frontmatter>
+              <fr:mainmatter>
+                <fr:tree show-metadata="true" expanded="false" toc="false" numbered="false">
+                  <fr:frontmatter>
+                    <fr:authors>
+                      <fr:author>
+                        <fr:link href="/stevenschaefer/" title="Steven Schaefer" uri="https://stevenschaefer.net/stevenschaefer/" display-uri="stevenschaefer" type="local">Steven Schaefer</fr:link>
+                      </fr:author>
+                    </fr:authors>
+                    <fr:date>
+                      <fr:year>2026</fr:year>
+                      <fr:month>5</fr:month>
+                      <fr:day>6</fr:day>
+                    </fr:date>
+                    <fr:source-path>/Users/stevenschaefer/forest/trees/sss-00BO.tree</fr:source-path>
+                    <fr:uri>https://stevenschaefer.net/sss-00BO/</fr:uri>
+                    <fr:display-uri>sss-00BO</fr:display-uri>
+                    <fr:route>/sss-00BO/</fr:route>
+                    <fr:title text="Benchmark cause of slowness in Displayed.Instances.Sets.Properties">Benchmark cause of slowness in <html:code>Displayed.Instances.Sets.Properties</html:code></fr:title>
+                    <fr:taxon>TODO</fr:taxon>
+                    <fr:meta name="status">done</fr:meta>
+                    <fr:meta name="priority">high</fr:meta>
+                  </fr:frontmatter>
+                  <fr:mainmatter>
+                    <html:p>Build standalone Agda programs that measure typechecking time as a function
+of reindexing depth and proof style, to confirm or falsify the hypothesis that
+the slowness in <html:code>Displayed.Instances.Sets.Properties</html:code> comes from nested
+reindexings combined with filler-at-a-time proofs (many transports over
+<html:code>refl</html:code>).</html:p>
+                    <html:p>Constraint: do not edit the library. The benchmarks should be contrived
+client programs that import existing library code and exercise the
+suspected-pathological patterns at controlled depth, so the measurement is
+attributable to a specific shape rather than the library as a whole. Compare
+against the <html:code>hcomp</html:code>-en-masse alternative from <fr:link href="/sss-0083/" title="An Idea at Fixing Concrete Performance Issues" uri="https://stevenschaefer.net/sss-0083/" display-uri="sss-0083" type="local">the hcomp speedup
+note</fr:link>.</html:p>
+                    <html:p>Output: a short writeup of which patterns are linear-vs-superlinear in depth
+and which are not, sufficient to decide whether <fr:link href="/sss-00BL/" title="Yoneda Strictification: Tradeoffs and Opportunities" uri="https://stevenschaefer.net/sss-00BL/" display-uri="sss-00BL" type="local">Yoneda
+strictification</fr:link> actually attacks the right cost. This decision
+gates the broader strictification experiments outlined in <fr:link href="/sss-00BN/" title="Meeting with Max 2026-05-05: strictification, conservativity, slowness" uri="https://stevenschaefer.net/sss-00BN/" display-uri="sss-00BN" type="local">the 2026-05-05
+meeting notes</fr:link>.</html:p>
+                    <html:p>Background: <fr:link href="/sss-0082/" title="Slow Chains of Fillers for Reindexings for Instantiating Vertical Exponentials" uri="https://stevenschaefer.net/sss-0082/" display-uri="sss-0082" type="local">the original slowness observation</fr:link> and <fr:link href="/sss-0083/" title="An Idea at Fixing Concrete Performance Issues" uri="https://stevenschaefer.net/sss-0083/" display-uri="sss-0083" type="local">the
+hcomp-based workaround</fr:link>. Subtask of the <fr:link href="/sss-008Z/" title="Finishing Logical Relations on Display" uri="https://stevenschaefer.net/sss-008Z/" display-uri="sss-008Z" type="local"><html:em>Logical Relations on
+Display</html:em></fr:link> milestone.</html:p>
+                    <fr:tree show-metadata="false">
+                      <fr:frontmatter>
+                        <fr:authors>
+                          <fr:author>
+                            <fr:link href="/stevenschaefer/" title="Steven Schaefer" uri="https://stevenschaefer.net/stevenschaefer/" display-uri="stevenschaefer" type="local">Steven Schaefer</fr:link>
+                          </fr:author>
+                        </fr:authors>
+                        <fr:date>
+                          <fr:year>2026</fr:year>
+                          <fr:month>5</fr:month>
+                          <fr:day>6</fr:day>
+                        </fr:date>
+                        <fr:source-path>/Users/stevenschaefer/forest/trees/sss-00BO.tree</fr:source-path>
+                        <fr:title text="Findings (2026-05-06)">Findings (2026-05-06)</fr:title>
+                      </fr:frontmatter>
+                      <fr:mainmatter>
+                        <html:p>Bench files live at <html:code>Bench/ReindFillerChains/</html:code>. The driver is
+<html:code>run-bench.sh</html:code>; <html:code>REPS=3 ./run-bench.sh</html:code> reduces variance.</html:p>
+                        <fr:tree show-metadata="false">
+                          <fr:frontmatter>
+                            <fr:authors>
+                              <fr:author>
+                                <fr:link href="/stevenschaefer/" title="Steven Schaefer" uri="https://stevenschaefer.net/stevenschaefer/" display-uri="stevenschaefer" type="local">Steven Schaefer</fr:link>
+                              </fr:author>
+                            </fr:authors>
+                            <fr:date>
+                              <fr:year>2026</fr:year>
+                              <fr:month>5</fr:month>
+                              <fr:day>6</fr:day>
+                            </fr:date>
+                            <fr:source-path>/Users/stevenschaefer/forest/trees/sss-00BO.tree</fr:source-path>
+                            <fr:title text="Three families of fixtures">Three families of fixtures</fr:title>
+                          </fr:frontmatter>
+                          <fr:mainmatter>
+                            <html:ul><html:li><html:strong>Flat</html:strong> (<html:code>Implicit/Explicit{01..32}.agda</html:code>): Postulated
+<html:code>Z, X : Type</html:code>, <html:code>pt : Z → X</html:code>, <html:code>q : (z : Z) → Yᴰ (pt z)</html:code>, with
+<html:code>mp = refl ∙∙ refl ∙∙ refl</html:code> and a chain
+<html:code>rectifyOut $ reind-filler⁻ _ ∙ ... ∙ reind-filler⁻ _</html:code> of length <fr:tex display="inline"><![CDATA[n]]></fr:tex>.
+The Explicit variants fill <html:code>{a, b, p}</html:code> on every <html:code>reind-filler⁻</html:code>.</html:li>
+<html:li><html:strong>Wrapped</html:strong> (<html:code>Wrapped{01,04}.agda</html:code>): Mirrors the actual goal
+shape — outer <html:code>rectifyOut/reind-filler⁻/congᴰ</html:code> around a
+<html:code>funExt₂/ΣPathP</html:code> that splits Zᴰ-side from Xᴰ-side, with the inner
+chain on the Xᴰ-side. <html:code>mp</html:code> is still <html:code>refl ∙∙ refl ∙∙ refl</html:code>; types
+are still postulated.</html:li>
+<html:li><html:strong>Real</html:strong> (<html:code>Real{00,01,02,03,04,08,16,32,64}.agda</html:code> and
+variants <html:code>Real04NoLossy</html:code>, <html:code>Real04AllRefl</html:code>,
+<html:code>Real04AllReflNoLossy</html:code>, <html:code>RealFlat04</html:code>): Faithful re-derivation of
+<html:code>ExponentialsⱽSETᴰueⱽ.universalⱽ.snd.fst</html:code> from
+<html:code>Sets/Properties.agda</html:code> — imports the real <html:code>SETᴰ</html:code>, <html:code>Fibers</html:code>,
+<html:code>AllLRⱽSETᴰ</html:code>, <html:code>isFibrationSETᴰ</html:code>, and varies inner-chain depth, the
+<html:code>--lossy-unification</html:code> flag, and whether each <html:code>reind-filler⁻</html:code>
+takes <html:code>_</html:code> or <html:code>refl</html:code> as its path argument. <html:code>Real00</html:code> has no
+proof body (baseline for the import cost). <html:code>RealFlat04</html:code> has the
+depth-4 <html:code>∙</html:code>-chain but none of the <html:code>rectifyOut/congᴰ/funExt₂/ΣPathP</html:code>
+wrapping — it controls for the wrapping vs. the chain alone.</html:li></html:ul>
+                            <html:p>Each measured run deletes that file's <html:code>.agdai</html:code> so only the bench
+file is rechecked; library and <html:code>Properties.agda</html:code> imports are cached.</html:p>
+                          </fr:mainmatter>
+                        </fr:tree>
+                        <fr:tree show-metadata="false">
+                          <fr:frontmatter>
+                            <fr:authors>
+                              <fr:author>
+                                <fr:link href="/stevenschaefer/" title="Steven Schaefer" uri="https://stevenschaefer.net/stevenschaefer/" display-uri="stevenschaefer" type="local">Steven Schaefer</fr:link>
+                              </fr:author>
+                            </fr:authors>
+                            <fr:date>
+                              <fr:year>2026</fr:year>
+                              <fr:month>5</fr:month>
+                              <fr:day>6</fr:day>
+                            </fr:date>
+                            <fr:source-path>/Users/stevenschaefer/forest/trees/sss-00BO.tree</fr:source-path>
+                            <fr:title text="Numbers">Numbers</fr:title>
+                          </fr:frontmatter>
+                          <fr:mainmatter>
+                            <html:p>Wall time, single run on the dev machine. Library-import cost has been
+warmed out — these numbers reflect rechecking only the bench file.</html:p>
+                            <html:p>
+                              <html:strong>Flat (Common.agda baseline ≈ 0.88s):</html:strong>
+                            </html:p>
+                            <html:pre>
+STYLE        DEPTH   TIME(s)    Δ-base(s)
+Implicit     01      0.87       -0.01
+Implicit     02      0.86       -0.02
+Implicit     04      0.90       +0.02
+Implicit     08      0.86       -0.02
+Implicit     16      0.86       -0.02
+Implicit     32      ~0.87      ~0
+Explicit     01      0.88        0.00
+Explicit     16      0.86       -0.02
+</html:pre>
+                            <html:p>Flat reind-filler⁻ chains over postulated types are
+<html:strong>not slow at any depth</html:strong>, regardless of whether implicits are filled.
+Up through 32 nested reind-filler⁻'s the marginal cost is below measurement
+noise.</html:p>
+                            <html:p>
+                              <html:strong>Wrapped (CommonWrapped.agda baseline ≈ 0.99s):</html:strong>
+                            </html:p>
+                            <html:pre>
+FILE         TIME(s)
+Wrapped01    0.97
+Wrapped04    0.98
+</html:pre>
+                            <html:p>Adding the <html:code>rectifyOut/reind-filler⁻/congᴰ + funExt₂/ΣPathP</html:code>
+wrapping over postulated types is <html:strong>also not slow</html:strong>. The shape alone
+is not the problem.</html:p>
+                            <html:p>
+                              <html:strong>Real (Real00.agda skeleton baseline ≈ 3.4s):</html:strong>
+                            </html:p>
+                            <html:pre>
+FILE                  TIME(s)    Δ-base(s)
+Real00 (no proof)     3.37       0.00       -- imports only
+Real01                3.37       0.00
+Real02                3.82       0.45
+Real03                4.07       0.70
+Real04               12.97       9.60       &lt;-- jump
+Real08               13.19       9.82
+Real16               13.40      10.03
+
+Real04NoLossy       213.15     209.78       -- --lossy-unification removed
+</html:pre>
+                            <html:p>The Real family reproduces the slowness from <html:code>Sets/Properties.agda</html:code>.
+Three findings:</html:p>
+                            <html:ol><html:li><html:strong>Apparent step function at depth 4 is "first successful
+elaboration", not a unifier threshold:</html:strong> Real01–Real03 fail fast with a
+type-mismatch error because the chain is too short for endpoints to unify
+(see Open Questions). Depth 4 is the minimum chain length that elaborates
+at all, after which post-typing work fires. Past depth 4 the cost
+plateaus (~30ms per added junction through depth 64), so the chain length
+itself is not the expensive part.</html:li>
+<html:li><html:strong>Lossy-unification dominates:</html:strong> removing <html:code>--lossy-unification</html:code>
+turns the depth-4 case from ~13s into 213s — a 16× blowup. The flat
+<html:code>∙</html:code>-chain over real <html:code>SETᴰ.Hom[_][_,_]</html:code> types is what <html:code>lossy</html:code>
+bounds; without it the unifier does real work on every junction trying to
+normalize the deeply-nested fiber types.</html:li>
+<html:li><html:strong>Postulated types don't trigger this:</html:strong> Wrapped04 (same shape,
+postulated types, refl-equivalent <html:code>mp</html:code>) is fast — the unifier blowup
+is type-driven. The cost is in unifying <html:code>SETᴰ</html:code>
+hom-types — concretely <html:code>Hom[ Z , X ][ Zᴰ , g*Xᴰ ]</html:code> where <html:code>g*Xᴰ</html:code>
+unfolds through <html:code>isFibrationSETᴰ._*_</html:code>, presheaf reindexing,
+<html:code>LRⱽObᴰ→LRⱽ</html:code>, etc. — not in unifying <html:code>reind-filler⁻</html:code> implicits
+over a postulated <html:code>P : (Z → X) → Type</html:code>.</html:li></html:ol>
+                          </fr:mainmatter>
+                        </fr:tree>
+                        <fr:tree show-metadata="false">
+                          <fr:frontmatter>
+                            <fr:authors>
+                              <fr:author>
+                                <fr:link href="/stevenschaefer/" title="Steven Schaefer" uri="https://stevenschaefer.net/stevenschaefer/" display-uri="stevenschaefer" type="local">Steven Schaefer</fr:link>
+                              </fr:author>
+                            </fr:authors>
+                            <fr:date>
+                              <fr:year>2026</fr:year>
+                              <fr:month>5</fr:month>
+                              <fr:day>6</fr:day>
+                            </fr:date>
+                            <fr:source-path>/Users/stevenschaefer/forest/trees/sss-00BO.tree</fr:source-path>
+                            <fr:title text="Profile breakdown">Profile breakdown</fr:title>
+                          </fr:frontmatter>
+                          <fr:mainmatter>
+                            <html:p>Where the time goes inside Agda, with <html:code>--lossy-unification</html:code> on.
+<html:code>agda --profile=internal Real04.agda</html:code> (cache warmed, only the bench
+file rechecked):</html:p>
+                            <html:pre>
+                              Real04         Real00-noBody  RealFlat04
+Total                         14,969ms       3,105ms        1,389ms
+  Typing                         193ms          2ms            6ms
+  Typing.OccursCheck             186ms          -              -
+  Typing.CheckRHS                 60ms          -              -
+  Scoping.InverseNameLookup    3,756ms          -              -
+  Miscellaneous                3,723ms         26ms           27ms
+  Deserialization              3,084ms      2,928ms        1,275ms
+  Highlighting                 2,464ms          -              -
+  Serialization.BuildInterface 1,299ms          -              -
+metas                              384           73            174
+
+Typing share of total in Real04: 193 / 14,969 = 1.3 percent.
+</html:pre>
+                            <html:p>Real00 has no proof body and only imports <html:code>Properties.agda</html:code> (3.1s,
+of which 2.9s is interface deserialization — fixed cost, cache-driven).
+RealFlat04 has the depth-4 <html:code>∙</html:code>-chain on real <html:code>SETᴰ.Hom[_][_,_]</html:code>
+types but no wrapping — no <html:code>rectifyOut</html:code>, no <html:code>congᴰ</html:code>, no
+<html:code>funExt₂</html:code>, no <html:code>ΣPathP</html:code>. It costs 1.39s.</html:p>
+                            <html:p>So adding the wrapped proof body on top of the import skeleton spends:</html:p>
+                            <html:ul><html:li><html:strong>~450ms</html:strong> on actual typing/unification under lossy (the
+<html:code>∙</html:code>-chain over <html:code>SETᴰ.Hom</html:code> types — what <html:code>--lossy-unification</html:code>
+bounds, and what the <html:code>_</html:code> → <html:code>refl</html:code> annotation further cuts).</html:li>
+<html:li><html:strong>~11.5s</html:strong> on post-typing bookkeeping: scope-name lookup,
+the <html:code>Miscellaneous</html:code> bucket, syntax highlighting, building the
+interface — driven by the size of the unsolved meta store.</html:li></html:ul>
+                            <html:p>Without <html:code>--lossy-unification</html:code>, the typing budget rises from ~450ms
+to ~210s and dominates everything else; lossy is doing essential work even
+though it doesn't show up as a big slice of the profile under the lossy
+run. The annotation experiment subtree below quantifies what's left of the
+typing budget after lossy and how to attack it further.</html:p>
+                          </fr:mainmatter>
+                        </fr:tree>
+                        <fr:tree show-metadata="false">
+                          <fr:frontmatter>
+                            <fr:authors>
+                              <fr:author>
+                                <fr:link href="/stevenschaefer/" title="Steven Schaefer" uri="https://stevenschaefer.net/stevenschaefer/" display-uri="stevenschaefer" type="local">Steven Schaefer</fr:link>
+                              </fr:author>
+                            </fr:authors>
+                            <fr:date>
+                              <fr:year>2026</fr:year>
+                              <fr:month>5</fr:month>
+                              <fr:day>6</fr:day>
+                            </fr:date>
+                            <fr:source-path>/Users/stevenschaefer/forest/trees/sss-00BO.tree</fr:source-path>
+                            <fr:title text="What the bookkeeping is over: unsolved metas, not an elaborated term">What the bookkeeping is over: unsolved metas, not an elaborated term</fr:title>
+                          </fr:frontmatter>
+                          <fr:mainmatter>
+                            <html:p>Removing <html:code>--allow-unsolved-metas</html:code> from Real04 fails with
+<html:code>[UnsolvedConstraints]</html:code>. Same for RealFlat04. So with
+<html:code>--lossy-unification</html:code> on, <html:strong>Agda doesn't actually finish
+elaborating the proof</html:strong>. The body persisted to the interface is
+<html:em>a single reference to an unsolved meta</html:em> (<html:code>unsolvedmeta.N</html:code>)
+parameterised by the module's level args. The "elaborated term" I
+attributed the cost to in earlier drafts of this tree doesn't exist.</html:p>
+                            <html:p>What does exist in the meta-store: <fr:tex display="inline"><![CDATA[384]]></fr:tex> unsolved metas for Real04,
+<fr:tex display="inline"><![CDATA[174]]></fr:tex> for RealFlat04, <fr:tex display="inline"><![CDATA[73]]></fr:tex> for Real00. Each unsolved meta carries
+a type, a context (telescope of variables in scope), and entries on Agda's
+constraint list. With lossy on, Agda gives up on the trickier ones rather
+than recursing forever, and they remain in the store. <html:strong>The 11.5s of
+bookkeeping is over those 384 meta entries</html:strong>, each of which has a
+<html:code>SETᴰ.Hom[_][_,_]</html:code>-flavoured type that mentions
+<html:code>g*Xᴰ = isFibrationSETᴰ._*_ g Xᴰ</html:code>, the cartesian-product-fibration
+combinator, <html:code>LRⱽObᴰ→LRⱽ</html:code>, etc.</html:p>
+                            <html:p>Direct AST measurements on the <html:em>postulated-type</html:em> fixtures (which DO
+fully elaborate, no unsolved metas) — by reflection in
+<html:code>Bench/ReindFillerChains/SizeReflect.agda</html:code>:</html:p>
+                            <html:pre>
+GOAL              ELABORATED AST NODES   AGDA WALL TIME
+Implicit01            55                 0.87s
+Implicit04           688                 0.90s
+Implicit16         8,350                 0.86s
+Implicit32        31,334                 0.87s
+Wrapped01            688                 0.97s
+Wrapped04          1,507                 0.98s
+</html:pre>
+                            <html:p>Two things stand out. First, on postulated types, term size grows
+<html:strong>quadratically</html:strong> with chain depth — 31k nodes at depth 32. Second,
+<html:strong>none of that matters for time</html:strong>: those cases all check in under
+1s, dominated by interface-deserialization. So size alone is not the cost
+driver.</html:p>
+                            <html:p>The cost driver is the meta store, not the elaborated term. Each
+Implicit/Wrapped AST node is <html:code>R.def (quote postulate)</html:code> — trivial for
+downstream passes to look up, highlight, serialize, and the postulated
+fixtures fully elaborate so no metas are left behind. In the real
+<html:code>SETᴰ</html:code> setting, the analogous pieces reference deep qualified names
+inside the displayed-presheaf infrastructure, the unifier under lossy
+gives up rather than recursing, and <fr:tex display="inline"><![CDATA[384]]></fr:tex> entries remain in the
+meta store. The cost decomposes as</html:p>
+                            <html:pre>
+cost ≈ (meta count) × (per-meta type complexity) × (unifier work per call)
+</html:pre>
+                            <html:p>where the "unifier work per call" factor is what <html:code>--lossy-unification</html:code>
+bounds at typing time, and the bookkeeping passes (<html:code>InverseNameLookup</html:code>,
+<html:code>Highlighting</html:code>, <html:code>Serialization</html:code>, <html:code>Miscellaneous</html:code>) walk the
+remaining <fr:tex display="inline"><![CDATA[(\text {meta count}) \times  (\text {per-meta type complexity})]]></fr:tex> entries
+post-typing. Each lever attacks a different factor and they compose
+multiplicatively — see the annotation experiment below for the
+quantitative split.</html:p>
+                            <html:p>The plateau on depth (Real04=13.0s, Real16=13.4s, Real32=14.1s,
+Real64=14.8s — ~30ms per junction past 4) is consistent: each extra
+junction adds one meta with similar type complexity, so the per-junction
+cost is small relative to the fixed cost of the wrapping itself.</html:p>
+                          </fr:mainmatter>
+                        </fr:tree>
+                        <fr:tree show-metadata="false">
+                          <fr:frontmatter>
+                            <fr:authors>
+                              <fr:author>
+                                <fr:link href="/stevenschaefer/" title="Steven Schaefer" uri="https://stevenschaefer.net/stevenschaefer/" display-uri="stevenschaefer" type="local">Steven Schaefer</fr:link>
+                              </fr:author>
+                            </fr:authors>
+                            <fr:date>
+                              <fr:year>2026</fr:year>
+                              <fr:month>5</fr:month>
+                              <fr:day>6</fr:day>
+                            </fr:date>
+                            <fr:source-path>/Users/stevenschaefer/forest/trees/sss-00BO.tree</fr:source-path>
+                            <fr:title text="Why displayed presheaves are catastrophically worse">Why displayed presheaves are catastrophically worse</fr:title>
+                          </fr:frontmatter>
+                          <fr:mainmatter>
+                            <html:p>The same wrapping pattern, applied to displayed presheaves, has each
+junction's Hom-type be a <html:code>NatTrans</html:code> (component functions + naturality).
+Per-meta type complexity is multiplicatively bigger. Bookkeeping cost is
+<html:strong><fr:tex display="inline"><![CDATA[(\text {meta count}) \times  (\text {per-meta type complexity})]]></fr:tex></html:strong>, so the
+displayed-presheaf case scales worse along the type-complexity axis even at
+the same chain depth.</html:p>
+                          </fr:mainmatter>
+                        </fr:tree>
+                        <fr:tree show-metadata="false">
+                          <fr:frontmatter>
+                            <fr:authors>
+                              <fr:author>
+                                <fr:link href="/stevenschaefer/" title="Steven Schaefer" uri="https://stevenschaefer.net/stevenschaefer/" display-uri="stevenschaefer" type="local">Steven Schaefer</fr:link>
+                              </fr:author>
+                            </fr:authors>
+                            <fr:date>
+                              <fr:year>2026</fr:year>
+                              <fr:month>5</fr:month>
+                              <fr:day>6</fr:day>
+                            </fr:date>
+                            <fr:source-path>/Users/stevenschaefer/forest/trees/sss-00BO.tree</fr:source-path>
+                            <fr:title text="Verdict on the original hypothesis">Verdict on the original hypothesis</fr:title>
+                          </fr:frontmatter>
+                          <fr:mainmatter>
+                            <html:p>The comment in <html:code>Sets/Properties.agda</html:code> hypothesised that the
+slowness comes from "the unification of the implicit arguments to each of
+these reind fillers… we may mitigate the slowness here by removing nested
+reindexings." Sharper picture now:</html:p>
+                            <html:ul><html:li><html:em>Right that unification is implicated and type-driven.</html:em> 213s
+without <html:code>--lossy-unification</html:code> on the depth-4 chain; postulated-type
+fixtures (Wrapped, Implicit, Explicit) cannot reproduce the slowness even
+at depth 32 (31,334 AST nodes), so the cost is in unifying real
+<html:code>SETᴰ.Hom[_][_,_]</html:code> types, not in the chain shape itself.</html:li>
+<html:li><html:em>Right that filling implicits helps — but the path argument, not
+the type implicits.</html:em> Filling <html:code>{a, b, p}</html:code> on every
+<html:code>reind-filler⁻</html:code> (the Explicit fixture) doesn't move the postulated
+case, which was already fast. But replacing the <html:code>e : a ≡ b</html:code>
+<html:em>path argument</html:em> with <html:code>refl</html:code> on the real chain gives a 2× speedup
+(13.13s → 6.20s on the bench, 14.83s → 6.75s in the actual library) by
+short-circuiting the unifier search at each <html:code>reind-filler⁻</html:code> call.</html:li>
+<html:li><html:em>Wrong about "nested reindexings" being the lever.</html:em> Cutting
+nesting depth only saves ~30ms per junction past depth 4 — Real04≈Real16
+≈Real64 under lossy. The proof shape's chain length is not what's
+expensive.</html:li>
+<html:li><html:em>The dominant residual cost is bookkeeping over the meta store.</html:em>
+With lossy on, typing is 1.3 percent of the total; the remaining 11.5s is
+post-typing work over 384 unsolved metas, set by <html:strong><fr:tex display="inline"><![CDATA[(\text {meta count}) \times  (\text {per-meta type complexity})]]></fr:tex></html:strong>. Lossy and explicit-<html:code>refl</html:code>
+attack the typing factor; strictification is what attacks per-meta type
+complexity (and shrinks the bookkeeping bill proportionally).</html:li></html:ul>
+                          </fr:mainmatter>
+                        </fr:tree>
+                        <fr:tree show-metadata="false">
+                          <fr:frontmatter>
+                            <fr:authors>
+                              <fr:author>
+                                <fr:link href="/stevenschaefer/" title="Steven Schaefer" uri="https://stevenschaefer.net/stevenschaefer/" display-uri="stevenschaefer" type="local">Steven Schaefer</fr:link>
+                              </fr:author>
+                            </fr:authors>
+                            <fr:date>
+                              <fr:year>2026</fr:year>
+                              <fr:month>5</fr:month>
+                              <fr:day>6</fr:day>
+                            </fr:date>
+                            <fr:source-path>/Users/stevenschaefer/forest/trees/sss-00BO.tree</fr:source-path>
+                            <fr:title text="Decision on Yoneda strictification">Decision on <fr:link href="/sss-00BL/" title="Yoneda Strictification: Tradeoffs and Opportunities" uri="https://stevenschaefer.net/sss-00BL/" display-uri="sss-00BL" type="local">Yoneda strictification</fr:link></fr:title>
+                          </fr:frontmatter>
+                          <fr:mainmatter>
+                            <html:p><fr:link href="/sss-00BL/" title="Yoneda Strictification: Tradeoffs and Opportunities" uri="https://stevenschaefer.net/sss-00BL/" display-uri="sss-00BL" type="local">Yoneda strictification</fr:link> is still the right fix, with a
+sharper reason than the original comment suggested. The win is not "the
+unifier sees fewer reduction obligations". The win is "each unsolved
+meta in the store has a smaller, simpler type", because the strictified
+fiber types substituted into each junction are smaller. The downstream
+bookkeeping passes (scope lookup, highlighting, interface build) walk those
+meta types and shrink proportionally.</html:p>
+                            <html:p>Concrete prediction: strictification should drop Real04 from ~13s back
+toward Real00's ~3.4s import baseline, mostly by collapsing the
+<html:code>Miscellaneous</html:code> + <html:code>InverseNameLookup</html:code> + <html:code>Highlighting</html:code> +
+<html:code>Serialization</html:code> buckets, <html:em>not</html:em> the Typing bucket (which is already
+small under lossy).</html:p>
+                            <html:p>It will <html:em>not</html:em> eliminate the import cost (Real00 is 3.4s with the
+current import graph, almost entirely in deserialization) — that's a
+separate concern about the size of the displayed-presheaf infrastructure
+being pulled in.</html:p>
+                            <html:p>It does <html:em>not</html:em> obviate <html:code>--lossy-unification</html:code>: removing lossy
+turns the depth-4 case into 213s. The three levers attack different
+factors of <html:code>(meta count) × (per-meta type complexity) × (unifier work
+per call)</html:code> and are independent:</html:p>
+                            <html:ul><html:li><html:code>--lossy-unification</html:code> bounds <html:em>unifier work per call</html:em> (16×).</html:li>
+<html:li><html:code>_</html:code> → <html:code>refl</html:code> annotation further cuts <html:em>unifier work per
+call</html:em> on top of lossy (2× more).</html:li>
+<html:li>Strictification shrinks <html:em>per-meta type complexity</html:em>, which feeds
+through to both the typing cost <html:em>and</html:em> the post-typing bookkeeping.</html:li></html:ul>
+                            <html:p>All three should be applied together. Strictification is the most
+invasive but addresses the largest single multiplier and the only one
+that touches the bookkeeping bill.</html:p>
+                          </fr:mainmatter>
+                        </fr:tree>
+                        <fr:tree show-metadata="false">
+                          <fr:frontmatter>
+                            <fr:authors>
+                              <fr:author>
+                                <fr:link href="/stevenschaefer/" title="Steven Schaefer" uri="https://stevenschaefer.net/stevenschaefer/" display-uri="stevenschaefer" type="local">Steven Schaefer</fr:link>
+                              </fr:author>
+                            </fr:authors>
+                            <fr:date>
+                              <fr:year>2026</fr:year>
+                              <fr:month>5</fr:month>
+                              <fr:day>6</fr:day>
+                            </fr:date>
+                            <fr:source-path>/Users/stevenschaefer/forest/trees/sss-00BO.tree</fr:source-path>
+                            <fr:title text="Annotation experiment: explicit refl gives 2× on top of lossy">Annotation experiment: explicit <html:code>refl</html:code> gives 2× on top of lossy</fr:title>
+                          </fr:frontmatter>
+                          <fr:mainmatter>
+                            <html:p>User hypothesis: "many unification problems with dependencies, where
+later problems depend on earlier ones; filling sufficient annotations should
+disambiguate and give a big speedup." Tested by replacing each <html:code>_</html:code>
+argument to <html:code>reind-filler⁻</html:code> with <html:code>refl</html:code>.</html:p>
+                            <html:p>Bench fixture: <html:code>Bench/ReindFillerChains/Real04AllRefl.agda</html:code>. Wall
+times under <html:code>--lossy-unification --allow-unsolved-metas</html:code>:</html:p>
+                            <html:pre>
+Real04 baseline (`_` × 6, lossy)         13.13 s   384 metas
+Real04AllRefl  (refl × 6, lossy)          6.20 s   389 metas
+Real04 baseline (`_` × 6, NO lossy)     213    s   --
+Real04AllRefl  (refl × 6, NO lossy)     203.82 s   --
+</html:pre>
+                            <html:p><html:strong>Confirmed in the actual library</html:strong> by uncommenting
+<html:code>ExponentialsⱽSETᴰueⱽ</html:code> in
+<html:code>Cubical/Categories/Displayed/Instances/Sets/Properties.agda</html:code> (.snd.snd
+left as a hole, matching the pre-existing comment) and toggling the same
+<html:code>_</html:code> ↔ <html:code>refl</html:code> change:</html:p>
+                            <html:pre>
+Properties.agda (Exp commented out)         3.79 s
+Properties.agda (Exp live, `_` × 6)        14.83 s
+Properties.agda (Exp live, refl × 6)        6.75 s
+</html:pre>
+                            <html:p>2.18× speedup in the real file. The bench was faithful — the same change
+that worked on the contrived bench works on the actual definition. Caveat:
+the <html:code>_</html:code>s in <html:code>isFibrationSETᴰueⱽ</html:code> and <html:code>BinProductsⱽSETᴰueⱽ</html:code>
+do <html:em>not</html:em> accept <html:code>refl</html:code> (those fillers produce non-trivial paths,
+unlike the <html:code>rectifyOut/congᴰ</html:code>-wrapped chain inside Exp). The
+intervention is specific to wrapped reindexing chains.</html:p>
+                            <html:p><html:strong>Two independent factors.</html:strong> Lossy unification gives 16× (213→13s);
+explicit <html:code>refl</html:code> on top of lossy gives an additional 2× (13→6.2s). With
+lossy off, <html:code>refl</html:code> buys only ~5 percent. So:</html:p>
+                            <html:ul><html:li><html:strong>Lossy attacks per-meta type complexity.</html:strong> It bounds how much work
+the unifier does normalizing the huge <html:code>SETᴰ.Hom[_][_,_]</html:code> types attached
+to each meta.</html:li>
+<html:li><html:strong>Annotation attacks per-meta unifier work.</html:strong> Even after lossy makes
+each meta tractable, the unifier still spends real time <html:em>searching</html:em> for
+<html:code>e : a ≡ b</html:code> at each <html:code>reind-filler⁻</html:code> call. Handing it <html:code>refl</html:code>
+short-circuits that search.</html:li></html:ul>
+                            <html:p><html:strong>Meta count is essentially unchanged</html:strong> (384 → 389, basically noise).
+The user's hypothesis that "filling earlier metas resolves later ones" is
+<html:em>not</html:em> what's happening — invisible metas like <html:code>_b_237</html:code>,
+<html:code>_a_276</html:code>, <html:code>_bᴰ.fst_358</html:code> survive both runs. Annotation reduces
+<html:em>work per meta</html:em>, not number of metas.</html:p>
+                            <html:p>
+                              <html:strong>Refined cost model:</html:strong>
+                            </html:p>
+                            <html:pre>
+cost ≈ (meta count) × (per-meta type complexity) × (unifier work per call)
+              ↑                  ↑                          ↑
+        (mostly fixed       (lossy attacks         (annotation attacks
+         by proof shape)     this; strictifi-       this)
+                             cation also)
+</html:pre>
+                            <html:p>Practical take: in real <html:code>Properties.agda</html:code> code, the easy mechanical
+intervention <html:code>reind-filler⁻ _</html:code> → <html:code>reind-filler⁻ refl</html:code> (where
+applicable) should give about a 2× speedup. It does <html:em>not</html:em> obviate
+<html:code>--lossy-unification</html:code> or strictification — those still own the bigger
+factors.</html:p>
+                            <html:p>This explains the user's prior empirical observation: running
+<html:code>C-u C-u C-c C-s</html:code> (Solve constraints at strongest normalization) on
+<html:code>?</html:code> holes returns refl-shaped solutions that, when written back into
+the source, give exactly this 2× speedup. The investigation here just
+quantifies what that interactive workflow was achieving.</html:p>
+                            <html:p>Caveat: writing <html:code>refl</html:code> only works because, in this specific proof
+shape, every <html:code>e : a ≡ b</html:code> arising from <html:code>reind-filler⁻</html:code> reduces
+under the <html:code>rectifyOut/congᴰ</html:code> wrapping to a path of compositions that
+collapses to <html:code>refl</html:code> once the implicit fiber types are pinned. In a
+more general chain you might need a non-trivial composite — but in that
+case <html:code>C-u C-u C-c C-s</html:code> still gives the right thing.</html:p>
+                            <html:p>Decision implication: <html:strong>strictification + lossy + explicit <html:code>refl</html:code></html:strong>
+are the three independent levers. Strictification is the most invasive but
+addresses the largest factor (per-meta type complexity, multiplicatively
+shrinks meta sizes); the <html:code>_</html:code>→<html:code>refl</html:code> cleanup is a cheap mechanical
+2× before doing any structural work.</html:p>
+                          </fr:mainmatter>
+                        </fr:tree>
+                        <fr:tree show-metadata="false">
+                          <fr:frontmatter>
+                            <fr:authors>
+                              <fr:author>
+                                <fr:link href="/stevenschaefer/" title="Steven Schaefer" uri="https://stevenschaefer.net/stevenschaefer/" display-uri="stevenschaefer" type="local">Steven Schaefer</fr:link>
+                              </fr:author>
+                            </fr:authors>
+                            <fr:date>
+                              <fr:year>2026</fr:year>
+                              <fr:month>5</fr:month>
+                              <fr:day>6</fr:day>
+                            </fr:date>
+                            <fr:source-path>/Users/stevenschaefer/forest/trees/sss-00BO.tree</fr:source-path>
+                            <fr:title text="Open questions">Open questions</fr:title>
+                          </fr:frontmatter>
+                          <fr:mainmatter>
+                            <html:ul><html:li>The depth 3→4 <html:em>step</html:em> (Real03 = 4.07s, Real04 = 12.97s) is now
+understood as "first successful elaboration", not a lossy threshold.
+Real01–Real03 fail fast with a type-mismatch error because the chain is
+too short for endpoints to unify. Depth 4 is the minimum chain length that
+elaborates at all, at which point the post-typing bookkeeping fires. Worth
+confirming by a typecheck-only benchmark that disables <html:code>Highlighting</html:code>
+and <html:code>Serialization</html:code>, if Agda exposes the knobs.</html:li>
+<html:li>Does the refl-annotation lever transfer to the
+<html:code>UniversalQuantifierⱽ</html:code> proof shape? <html:code>ExponentialsⱽSETᴰueⱽ</html:code>
+benefits 2× because its <html:code>rectifyOut/congᴰ</html:code>-wrapped chain reduces to
+<html:code>refl</html:code> once implicits are pinned. The non-Eq UQ counterpart isn't
+written in the library yet (the legacy commented block in
+<html:code>Sets/Properties.agda</html:code> uses an obsolete API). When someone is already
+inside that file, attempting the construction is the cheapest way to find
+out.</html:li>
+<html:li>Does the <html:code>snd .snd</html:code> field (currently a <html:code>{!!}</html:code> hole in
+<html:code>ExponentialsⱽSETᴰueⱽ</html:code> and in the bench files) have the same shape
+when filled? It would add another <html:code>rectifyOut/congᴰ/funExt₂/ΣPathP</html:code>
+block and (per the cost model) multiply the meta count again.</html:li>
+<html:li>Is <html:code>Scoping.InverseNameLookup</html:code> actually triggered by typing-time
+pretty-printing of constraints, in which case it's partly typing cost
+masquerading as bookkeeping? <html:code>Highlighting</html:code> and <html:code>Serialization</html:code>
+(3.76s combined) are unambiguously post-typing; the <html:code>Miscellaneous</html:code>
++ <html:code>InverseNameLookup</html:code> attribution is fuzzier. The qualitative claim
+("typing under lossy is a small slice, meta-store bookkeeping dominates")
+holds either way.</html:li></html:ul>
+                          </fr:mainmatter>
+                        </fr:tree>
+                      </fr:mainmatter>
+                    </fr:tree>
+                  </fr:mainmatter>
+                </fr:tree>
+                <fr:tree show-metadata="true" expanded="false" toc="false" numbered="false">
+                  <fr:frontmatter>
+                    <fr:authors>
+                      <fr:author>
+                        <fr:link href="/stevenschaefer/" title="Steven Schaefer" uri="https://stevenschaefer.net/stevenschaefer/" display-uri="stevenschaefer" type="local">Steven Schaefer</fr:link>
+                      </fr:author>
+                    </fr:authors>
+                    <fr:date>
+                      <fr:year>2026</fr:year>
+                      <fr:month>4</fr:month>
+                      <fr:day>24</fr:day>
+                    </fr:date>
+                    <fr:source-path>/Users/stevenschaefer/forest/trees/sss-00B5.tree</fr:source-path>
+                    <fr:uri>https://stevenschaefer.net/sss-00B5/</fr:uri>
+                    <fr:display-uri>sss-00B5</fr:display-uri>
+                    <fr:route>/sss-00B5/</fr:route>
+                    <fr:title text="Fibrations into a 1-category of groupoid-object categories">Fibrations into a 1-category of groupoid-object categories</fr:title>
+                    <fr:taxon>TODO</fr:taxon>
+                    <fr:meta name="status">cancelled</fr:meta>
+                    <fr:meta name="priority">medium</fr:meta>
+                  </fr:frontmatter>
+                  <fr:mainmatter>
+                    <html:p>Explore a streamlined setup for logical relations: work with a <html:em>small</html:em> category <fr:tex display="inline"><![CDATA[\mathcal {GC}]]></fr:tex> whose objects are categories equipped with a groupoid object (or, equivalently, categories in which every map is invertible in the relevant sense), and whose morphisms are the appropriate structure-preserving functors. Define fibrations as functors into <fr:tex display="inline"><![CDATA[\mathcal {GC}]]></fr:tex>. Because each fiber is a groupoid-enriched 1-category, <fr:tex display="inline"><![CDATA[\mathcal {GC}]]></fr:tex> itself is a 1-category — there are no higher coherences to manage.</html:p>
+                    <html:p><html:strong>Motivation.</html:strong> The current displayed-category machinery in <fr:link href="/sss-008Z/" title="Finishing Logical Relations on Display" uri="https://stevenschaefer.net/sss-008Z/" display-uri="sss-008Z" type="local">Finishing <html:em>Logical Relations on Display</html:em></fr:link> spends a lot of effort on coherences that evaporate once the fibers are forced to be (truncated to) groupoidal. If the target 1-category is rich enough to express the constructions needed for canonicity and normalization logical relations, this may be a lighter foundation than the thickened / displayed-double-category route.</html:p>
+                    <html:p>
+                      <html:strong>Deliverables.</html:strong>
+                    </html:p>
+                    <html:ol><html:li>Define the small 1-category <fr:tex display="inline"><![CDATA[\mathcal {GC}]]></fr:tex> of categories-with-groupoid-objects and verify it is a 1-category (no higher cells).</html:li>
+  <html:li>Define fibrations as functors <fr:tex display="inline"><![CDATA[E \to  \mathcal {GC}]]></fr:tex> and relate them to the displayed-category presentation already in the library.</html:li>
+  <html:li>Encode the universal properties needed for semantics: terminal / binary products / exponentials at the base, plus their fiberwise analogues.</html:li>
+  <html:li>Encode <html:em>universal quantification</html:em> (right adjoint to pullback / reindexing) internally to this framework.</html:li>
+  <html:li>State and prove <html:em>Beck--Chevalley</html:em> for the relevant pullback squares.</html:li>
+  <html:li>State and prove <html:em>Frobenius reciprocity</html:em> for the left-adjoint / existential direction.</html:li>
+  <html:li>Reconstruct the canonicity logical relation in this framework as a first test case.</html:li>
+  <html:li>Reconstruct the normalization logical relation in this framework as a harder stress test.</html:li></html:ol>
+                    <html:p>
+                      <html:strong>Open questions.</html:strong>
+                    </html:p>
+                    <html:ul><html:li>What exactly is the right notion of "groupoid object" here — an internal groupoid, a hom-groupoid enrichment, or truncation of hom-sets to sets? The choice affects whether <fr:tex display="inline"><![CDATA[\mathcal {GC}]]></fr:tex> is genuinely small.</html:li>
+  <html:li>Does the 1-categorical structure survive once we add the universal-quantifier / Beck--Chevalley / Frobenius data, or do higher coherences creep back in through the adjoints?</html:li>
+  <html:li>How does this compare to the displayed-category-with-isos setup in <html:code>Cubical/Categories/Displayed/</html:code> and the thickened displayed categories of PR 253?</html:li></html:ul>
+                    <html:p>Related: <fr:link href="/sss-008Z/" title="Finishing Logical Relations on Display" uri="https://stevenschaefer.net/sss-008Z/" display-uri="sss-008Z" type="local">Logical Relations on Display milestone</fr:link>, <fr:link href="/sss-0078/" title="Initial Algebras in Gluing Proofs" uri="https://stevenschaefer.net/sss-0078/" display-uri="sss-0078" type="local">Initial Algebras in Gluing Proofs</fr:link>, <fr:link href="/sss-0093/" title="Logical relation for λ-calculus with equations" uri="https://stevenschaefer.net/sss-0093/" display-uri="sss-0093" type="local">Logical relation for λ-calculus with equations</fr:link>.</html:p>
+                  </fr:mainmatter>
+                </fr:tree>
+                <fr:tree show-metadata="true" expanded="false" toc="false" numbered="false">
+                  <fr:frontmatter>
+                    <fr:authors>
+                      <fr:author>
+                        <fr:link href="/stevenschaefer/" title="Steven Schaefer" uri="https://stevenschaefer.net/stevenschaefer/" display-uri="stevenschaefer" type="local">Steven Schaefer</fr:link>
+                      </fr:author>
+                    </fr:authors>
+                    <fr:date>
+                      <fr:year>2026</fr:year>
+                      <fr:month>4</fr:month>
+                      <fr:day>17</fr:day>
+                    </fr:date>
+                    <fr:source-path>/Users/stevenschaefer/forest/trees/sss-0094.tree</fr:source-path>
+                    <fr:uri>https://stevenschaefer.net/sss-0094/</fr:uri>
+                    <fr:display-uri>sss-0094</fr:display-uri>
+                    <fr:route>/sss-0094/</fr:route>
+                    <fr:title text="Fuse conservativity proof via displayed nerve">Fuse conservativity proof via displayed nerve</fr:title>
+                    <fr:taxon>TODO</fr:taxon>
+                    <fr:meta name="status">pending</fr:meta>
+                    <fr:meta name="priority">high</fr:meta>
+                    <fr:meta name="apple-id">x-apple-reminder://D8475F0B-C353-4A6F-9A50-2F4FABE3C0F4</fr:meta>
+                    <fr:meta name="forester-addr">sss-0094</fr:meta>
+                  </fr:frontmatter>
+                  <fr:mainmatter>
+                    <html:p>Fuse the conservativity proof using the displayed nerve construction. Likely requires a displayed category of displayed isomorphisms to state the right universal property.</html:p>
+                    <html:p>Subtask of the <fr:link href="/sss-008Z/" title="Finishing Logical Relations on Display" uri="https://stevenschaefer.net/sss-008Z/" display-uri="sss-008Z" type="local">Finishing <html:em>Logical Relations on Display</html:em></fr:link> milestone.</html:p>
+                  </fr:mainmatter>
+                </fr:tree>
+                <fr:tree show-metadata="true" expanded="false" toc="false" numbered="false">
+                  <fr:frontmatter>
+                    <fr:authors>
+                      <fr:author>
+                        <fr:link href="/stevenschaefer/" title="Steven Schaefer" uri="https://stevenschaefer.net/stevenschaefer/" display-uri="stevenschaefer" type="local">Steven Schaefer</fr:link>
+                      </fr:author>
+                    </fr:authors>
+                    <fr:date>
+                      <fr:year>2026</fr:year>
+                      <fr:month>4</fr:month>
+                      <fr:day>17</fr:day>
+                    </fr:date>
+                    <fr:source-path>/Users/stevenschaefer/forest/trees/sss-0093.tree</fr:source-path>
+                    <fr:uri>https://stevenschaefer.net/sss-0093/</fr:uri>
+                    <fr:display-uri>sss-0093</fr:display-uri>
+                    <fr:route>/sss-0093/</fr:route>
+                    <fr:title text="Logical relation for λ-calculus with equations">Logical relation for λ-calculus with equations</fr:title>
+                    <fr:taxon>TODO</fr:taxon>
+                    <fr:meta name="status">pending</fr:meta>
+                    <fr:meta name="priority">high</fr:meta>
+                    <fr:meta name="apple-id">x-apple-reminder://2AB46E67-F573-4345-98C8-F20241A9F772</fr:meta>
+                    <fr:meta name="forester-addr">sss-0093</fr:meta>
+                  </fr:frontmatter>
+                  <fr:mainmatter>
+                    <html:p>Work out the logical relation for a λ-calculus <html:em>with equations</html:em>. This operates on quotiented syntax, which distinguishes it from the pure-syntactic case already in the library.</html:p>
+                    <html:p>Subtask of the <fr:link href="/sss-008Z/" title="Finishing Logical Relations on Display" uri="https://stevenschaefer.net/sss-008Z/" display-uri="sss-008Z" type="local">Finishing <html:em>Logical Relations on Display</html:em></fr:link> milestone.</html:p>
+                  </fr:mainmatter>
+                </fr:tree>
+                <fr:tree show-metadata="true" expanded="false" toc="false" numbered="false">
+                  <fr:frontmatter>
+                    <fr:authors>
+                      <fr:author>
+                        <fr:link href="/stevenschaefer/" title="Steven Schaefer" uri="https://stevenschaefer.net/stevenschaefer/" display-uri="stevenschaefer" type="local">Steven Schaefer</fr:link>
+                      </fr:author>
+                    </fr:authors>
+                    <fr:date>
+                      <fr:year>2026</fr:year>
+                      <fr:month>2</fr:month>
+                      <fr:day>21</fr:day>
+                    </fr:date>
+                    <fr:source-path>/Users/stevenschaefer/forest/trees/sss-003T.tree</fr:source-path>
+                    <fr:uri>https://stevenschaefer.net/sss-003T/</fr:uri>
+                    <fr:display-uri>sss-003T</fr:display-uri>
+                    <fr:route>/sss-003T/</fr:route>
+                    <fr:title text="Presented Categories">Presented Categories</fr:title>
+                    <fr:taxon>TODO</fr:taxon>
+                    <fr:meta name="status">pending</fr:meta>
+                    <fr:meta name="priority">high</fr:meta>
+                    <fr:meta name="apple-id">x-apple-reminder://D7B9CC65-0F4E-4BFF-8DEE-BF76186EE81C</fr:meta>
+                    <fr:meta name="forester-addr">sss-003T</fr:meta>
+                  </fr:frontmatter>
+                  <fr:mainmatter>
+                    <html:p>Rather than just including base types and function symbols as
+generating data (via a quiver), we should try to include equational
+axioms as part of a signature.</html:p>
+                    <html:p>This would allow for more compelling canonicity results. Such as a
+language with booleans and if-then-else or naturals with a
+recursor. Provided we can make the free such structures and define
+their recursors, this should reuse the same gluing infrastructure.</html:p>
+                    <html:p>Subtask of the <fr:link href="/sss-008Z/" title="Finishing Logical Relations on Display" uri="https://stevenschaefer.net/sss-008Z/" display-uri="sss-008Z" type="local">Finishing <html:em>Logical Relations on Display</html:em></fr:link> milestone — serves as the worked example instantiation of the framework.</html:p>
+                  </fr:mainmatter>
+                </fr:tree>
+              </fr:mainmatter>
+            </fr:tree>
+            <fr:tree show-metadata="false" expanded="false">
+              <fr:frontmatter>
+                <fr:authors>
+                  <fr:author>
+                    <fr:link href="/stevenschaefer/" title="Steven Schaefer" uri="https://stevenschaefer.net/stevenschaefer/" display-uri="stevenschaefer" type="local">Steven Schaefer</fr:link>
+                  </fr:author>
+                </fr:authors>
+                <fr:date>
+                  <fr:year>2026</fr:year>
+                  <fr:month>4</fr:month>
+                  <fr:day>17</fr:day>
+                </fr:date>
+                <fr:source-path>/Users/stevenschaefer/forest/trees/sss-008Z.tree</fr:source-path>
+                <fr:title text="Adjacent / optional">Adjacent / optional</fr:title>
+              </fr:frontmatter>
+              <fr:mainmatter>
+                <html:p>Not owned by this milestone; linked for context.</html:p>
+                <fr:tree show-metadata="false" expanded="false">
+                  <fr:frontmatter>
+                    <fr:authors>
+                      <fr:author>
+                        <fr:link href="/stevenschaefer/" title="Steven Schaefer" uri="https://stevenschaefer.net/stevenschaefer/" display-uri="stevenschaefer" type="local">Steven Schaefer</fr:link>
+                      </fr:author>
+                    </fr:authors>
+                    <fr:date>
+                      <fr:year>2026</fr:year>
+                      <fr:month>3</fr:month>
+                      <fr:day>16</fr:day>
+                    </fr:date>
+                    <fr:source-path>/Users/stevenschaefer/forest/trees/sss-0078.tree</fr:source-path>
+                    <fr:uri>https://stevenschaefer.net/sss-0078/</fr:uri>
+                    <fr:display-uri>sss-0078</fr:display-uri>
+                    <fr:route>/sss-0078/</fr:route>
+                    <fr:title text="Initial Algebras in Gluing Proofs">Initial Algebras in Gluing Proofs</fr:title>
+                    <fr:taxon>TODO</fr:taxon>
+                    <fr:meta name="status">pending</fr:meta>
+                    <fr:meta name="apple-id">x-apple-reminder://40B9F750-0B4A-4FDA-84CC-47498DB4EC66</fr:meta>
+                    <fr:meta name="forester-addr">sss-0078</fr:meta>
+                  </fr:frontmatter>
+                  <fr:mainmatter>
+                    <html:p>Use initial algebras of endofunctors to give a more categorical
+account of the elimination principles used in our gluing proofs. The
+free categories with their global elimination principles (see
+<fr:link href="/sss-003Q/" title="Mechanized Metatheory Paper Outline" uri="https://stevenschaefer.net/sss-003Q/" display-uri="sss-003Q" type="local">Mechanized Metatheory Paper Outline</fr:link>) can be viewed as initial algebras of appropriate
+endofunctors, and this perspective may yield a more modular and
+reusable infrastructure for canonicity and conservativity theorems.</html:p>
+                    <html:p>Currently the library has no general initial algebra framework
+(i.e. F-algebras, initial F-algebra, fold/catamorphism). The monad
+algebra infrastructure in <html:code>Cubical.Categories.Monad.Algebra</html:code> handles
+algebras of monads but not algebras of arbitrary endofunctors.</html:p>
+                    <html:p>Tasks:
+<html:ol><html:li>Formalize F-algebras and F-algebra homomorphisms for an
+  endofunctor <fr:tex display="inline"><![CDATA[F : \mathcal {C} \to  \mathcal {C}]]></fr:tex></html:li>
+  <html:li>Define initial F-algebra and the universal property (catamorphism / fold)</html:li>
+  <html:li>Connect to the existing free category constructions: show that
+  the free category on a quiver is (or arises from) an initial algebra</html:li>
+  <html:li>Develop displayed initial algebras and investigate how they
+  interact with the gluing framework (displayed elimination principles
+  as displayed initial algebra maps)</html:li>
+  <html:li>Apply to existing gluing proofs in <html:code>Gluing/</html:code> to simplify
+  or generalize the canonicity/conservativity arguments</html:li></html:ol></html:p>
+                    <html:p>Related: <fr:link href="/sss-003Q/" title="Mechanized Metatheory Paper Outline" uri="https://stevenschaefer.net/sss-003Q/" display-uri="sss-003Q" type="local">Mechanized Metatheory Paper Outline</fr:link>, <fr:link href="/sss-003T/" title="Presented Categories" uri="https://stevenschaefer.net/sss-003T/" display-uri="sss-003T" type="local">Presented Categories</fr:link>, <fr:link href="/GluingForTypeTheory/" title="Gluing for Type Theory" uri="https://stevenschaefer.net/GluingForTypeTheory/" display-uri="GluingForTypeTheory" type="local">Gluing for Type Theory</fr:link></html:p>
+                  </fr:mainmatter>
+                </fr:tree>
+                <fr:tree show-metadata="false" expanded="false">
+                  <fr:frontmatter>
+                    <fr:authors>
+                      <fr:author>
+                        <fr:link href="/stevenschaefer/" title="Steven Schaefer" uri="https://stevenschaefer.net/stevenschaefer/" display-uri="stevenschaefer" type="local">Steven Schaefer</fr:link>
+                      </fr:author>
+                    </fr:authors>
+                    <fr:date>
+                      <fr:year>2026</fr:year>
+                      <fr:month>2</fr:month>
+                      <fr:day>21</fr:day>
+                    </fr:date>
+                    <fr:source-path>/Users/stevenschaefer/forest/trees/sss-003U.tree</fr:source-path>
+                    <fr:uri>https://stevenschaefer.net/sss-003U/</fr:uri>
+                    <fr:display-uri>sss-003U</fr:display-uri>
+                    <fr:route>/sss-003U/</fr:route>
+                    <fr:title text="Locally Small Categories">Locally Small Categories</fr:title>
+                    <fr:taxon>TODO</fr:taxon>
+                    <fr:meta name="status">pending</fr:meta>
+                    <fr:meta name="apple-id">x-apple-reminder://46C746C2-0E22-4ED4-A508-D7BC3C9C835C</fr:meta>
+                    <fr:meta name="forester-addr">sss-003U</fr:meta>
+                  </fr:frontmatter>
+                  <fr:mainmatter>
+                    <html:p>We could try to incorporate the locally small library into the
+broader gluing library. It would be nice to have greater universe
+polymorphism here.</html:p>
+                    <html:p>Further, the locally small contributions are so darn cool. By using
+displayed categories over an indiscrete category of levels, we do get
+genuinely interesting categorical structures that captures sets across
+different universe levels. Further, we get access to powerful
+categorical structures/reasoning princples across universe levels. For
+instance, the
+<html:em>obvious</html:em> definition of a universe polymorphic product of sets arises
+as a displayed product structure in a category of sets over
+levels. However, without these categorical structures, the
+<html:em>obvious</html:em> definition lacks any nice universal property.
+</html:p>
+                    <html:p>The locally small contributions are genuinely novel for formalizing
+category theory. I'd like to include that in the mechanized metatheory
+submission, but I don't think the stories align. There doesn't seem to
+be room for locally small stuff in <fr:link href="/sss-003Q/" title="Mechanized Metatheory Paper Outline" uri="https://stevenschaefer.net/sss-003Q/" display-uri="sss-003Q" type="local">Mechanized Metatheory Paper Outline</fr:link>. Perhaps it is better
+to have the locally small contributions be its own paper? But even
+then it doesn't seem like it could ever be enough.</html:p>
+                  </fr:mainmatter>
+                </fr:tree>
+                <fr:tree show-metadata="false" expanded="false">
+                  <fr:frontmatter>
+                    <fr:authors>
+                      <fr:author>
+                        <fr:link href="/stevenschaefer/" title="Steven Schaefer" uri="https://stevenschaefer.net/stevenschaefer/" display-uri="stevenschaefer" type="local">Steven Schaefer</fr:link>
+                      </fr:author>
+                    </fr:authors>
+                    <fr:date>
+                      <fr:year>2026</fr:year>
+                      <fr:month>4</fr:month>
+                      <fr:day>9</fr:day>
+                    </fr:date>
+                    <fr:source-path>/Users/stevenschaefer/forest/trees/sss-0085.tree</fr:source-path>
+                    <fr:uri>https://stevenschaefer.net/sss-0085/</fr:uri>
+                    <fr:display-uri>sss-0085</fr:display-uri>
+                    <fr:route>/sss-0085/</fr:route>
+                    <fr:title text="Groupoid Laws to Fix Performance?">Groupoid Laws to Fix Performance?</fr:title>
+                  </fr:frontmatter>
+                  <fr:mainmatter>
+                    <html:p>
+We have many performance issues due to <html:code>hcomp</html:code> showing up in
+goals, but looking at the solution in <html:code>2Functor.Fibration</html:code>
+
+<html:pre>F.F₂ (λ i → hcomp (doubleComp-faces (λ _ → g) p i) (p (~ i))) ≡
+F.F₂ (λ _ → g)</html:pre>
+
+We can use the groupoid laws on paths to handle goals with these <html:code>hcomp</html:code>s,
+<html:pre>cong F.F₂ (lCancel p)</html:pre></html:p>
+                  </fr:mainmatter>
+                </fr:tree>
+              </fr:mainmatter>
+            </fr:tree>
+            <fr:tree show-metadata="false" expanded="false">
+              <fr:frontmatter>
+                <fr:authors>
+                  <fr:author>
+                    <fr:link href="/stevenschaefer/" title="Steven Schaefer" uri="https://stevenschaefer.net/stevenschaefer/" display-uri="stevenschaefer" type="local">Steven Schaefer</fr:link>
+                  </fr:author>
+                </fr:authors>
+                <fr:date>
+                  <fr:year>2026</fr:year>
+                  <fr:month>4</fr:month>
+                  <fr:day>17</fr:day>
+                </fr:date>
+                <fr:source-path>/Users/stevenschaefer/forest/trees/sss-008Z.tree</fr:source-path>
+                <fr:title text="Superseded">Superseded</fr:title>
+              </fr:frontmatter>
+              <fr:mainmatter>
+                <html:p>This milestone absorbs the following now-cancelled TODOs:</html:p>
+                <fr:tree show-metadata="false" expanded="false">
+                  <fr:frontmatter>
+                    <fr:authors>
+                      <fr:author>
+                        <fr:link href="/stevenschaefer/" title="Steven Schaefer" uri="https://stevenschaefer.net/stevenschaefer/" display-uri="stevenschaefer" type="local">Steven Schaefer</fr:link>
+                      </fr:author>
+                    </fr:authors>
+                    <fr:date>
+                      <fr:year>2026</fr:year>
+                      <fr:month>2</fr:month>
+                      <fr:day>20</fr:day>
+                    </fr:date>
+                    <fr:source-path>/Users/stevenschaefer/forest/trees/sss-0035.tree</fr:source-path>
+                    <fr:uri>https://stevenschaefer.net/sss-0035/</fr:uri>
+                    <fr:display-uri>sss-0035</fr:display-uri>
+                    <fr:route>/sss-0035/</fr:route>
+                    <fr:title text="Review related approaches to metatheory">Review related approaches to metatheory</fr:title>
+                    <fr:taxon>TODO</fr:taxon>
+                    <fr:meta name="status">cancelled</fr:meta>
+                    <fr:meta name="priority">high</fr:meta>
+                    <fr:meta name="completed">2026-04-17</fr:meta>
+                    <fr:meta name="cancelled">true</fr:meta>
+                  </fr:frontmatter>
+                  <fr:mainmatter>
+                    <html:p>
+  Need to motivated the occassion for better mechanized metatheory by speaking on the drawbacks of things like Twelf and Synthetic Tait Computability
+</html:p>
+                    <html:p>Merged into <fr:tree show-metadata="false"><fr:frontmatter><fr:authors><fr:author><fr:link href="/stevenschaefer/" title="Steven Schaefer" uri="https://stevenschaefer.net/stevenschaefer/" display-uri="stevenschaefer" type="local">Steven Schaefer</fr:link></fr:author></fr:authors><fr:date><fr:year>2026</fr:year><fr:month>4</fr:month><fr:day>17</fr:day></fr:date><fr:source-path>/Users/stevenschaefer/forest/trees/sss-008Z.tree</fr:source-path><fr:uri>https://stevenschaefer.net/sss-008Z/</fr:uri><fr:display-uri>sss-008Z</fr:display-uri><fr:route>/sss-008Z/</fr:route><fr:title text="Finishing Logical Relations on Display">Finishing <html:em>Logical Relations on Display</html:em></fr:title><fr:taxon>Milestone</fr:taxon></fr:frontmatter><fr:mainmatter><fr:info>Transclusion loop detected, rendering stopped.</fr:info></fr:mainmatter></fr:tree>. Content now tracked under <fr:link href="/sss-0091/" title="Write related works section" uri="https://stevenschaefer.net/sss-0091/" display-uri="sss-0091" type="local">Write related works section</fr:link>.</html:p>
+                  </fr:mainmatter>
+                </fr:tree>
+                <fr:tree show-metadata="false" expanded="false">
+                  <fr:frontmatter>
+                    <fr:authors>
+                      <fr:author>
+                        <fr:link href="/stevenschaefer/" title="Steven Schaefer" uri="https://stevenschaefer.net/stevenschaefer/" display-uri="stevenschaefer" type="local">Steven Schaefer</fr:link>
+                      </fr:author>
+                    </fr:authors>
+                    <fr:date>
+                      <fr:year>2026</fr:year>
+                      <fr:month>3</fr:month>
+                      <fr:day>25</fr:day>
+                    </fr:date>
+                    <fr:source-path>/Users/stevenschaefer/forest/trees/sss-007B.tree</fr:source-path>
+                    <fr:uri>https://stevenschaefer.net/sss-007B/</fr:uri>
+                    <fr:display-uri>sss-007B</fr:display-uri>
+                    <fr:route>/sss-007B/</fr:route>
+                    <fr:title text="Full Draft of Paper">Full Draft of Paper</fr:title>
+                    <fr:taxon>TODO</fr:taxon>
+                    <fr:meta name="status">cancelled</fr:meta>
+                    <fr:meta name="due">2026-04-08</fr:meta>
+                    <fr:meta name="completed">2026-04-17</fr:meta>
+                    <fr:meta name="cancelled">true</fr:meta>
+                  </fr:frontmatter>
+                  <fr:mainmatter>
+                    <html:p>Merged into <fr:tree show-metadata="false"><fr:frontmatter><fr:authors><fr:author><fr:link href="/stevenschaefer/" title="Steven Schaefer" uri="https://stevenschaefer.net/stevenschaefer/" display-uri="stevenschaefer" type="local">Steven Schaefer</fr:link></fr:author></fr:authors><fr:date><fr:year>2026</fr:year><fr:month>4</fr:month><fr:day>17</fr:day></fr:date><fr:source-path>/Users/stevenschaefer/forest/trees/sss-008Z.tree</fr:source-path><fr:uri>https://stevenschaefer.net/sss-008Z/</fr:uri><fr:display-uri>sss-008Z</fr:display-uri><fr:route>/sss-008Z/</fr:route><fr:title text="Finishing Logical Relations on Display">Finishing <html:em>Logical Relations on Display</html:em></fr:title><fr:taxon>Milestone</fr:taxon></fr:frontmatter><fr:mainmatter><fr:info>Transclusion loop detected, rendering stopped.</fr:info></fr:mainmatter></fr:tree>. The original catch-all has been split into concrete subtasks on that milestone tree.</html:p>
+                  </fr:mainmatter>
+                </fr:tree>
+                <fr:tree show-metadata="false" expanded="false">
+                  <fr:frontmatter>
+                    <fr:authors>
+                      <fr:contributor>
+                        <fr:link href="/stevenschaefer/" title="Steven Schaefer" uri="https://stevenschaefer.net/stevenschaefer/" display-uri="stevenschaefer" type="local">Steven Schaefer</fr:link>
+                      </fr:contributor>
+                    </fr:authors>
+                    <fr:date>
+                      <fr:year>2026</fr:year>
+                      <fr:month>3</fr:month>
+                      <fr:day>25</fr:day>
+                    </fr:date>
+                    <fr:source-path>/Users/stevenschaefer/forest/trees/sss-007A.tree</fr:source-path>
+                    <fr:uri>https://stevenschaefer.net/sss-007A/</fr:uri>
+                    <fr:display-uri>sss-007A</fr:display-uri>
+                    <fr:route>/sss-007A/</fr:route>
+                    <fr:title text="Scheduling Work on Cubical Categorical Logic">Scheduling Work on Cubical Categorical Logic</fr:title>
+                    <fr:taxon>TODO</fr:taxon>
+                    <fr:meta name="status">cancelled</fr:meta>
+                    <fr:meta name="completed">2026-04-17</fr:meta>
+                    <fr:meta name="cancelled">true</fr:meta>
+                  </fr:frontmatter>
+                  <fr:mainmatter>
+                    <html:p>
+I need to do each of the following
+<html:ul><html:li>Work out logical relation for lambda calculus with
+  equations. This operates on quotiented syntax. High priority</html:li>
+  <html:li>Fuse the conservativity proof using the displayed nerve
+  stuff. May need a displayed category of displayed isomorphisms. High
+  priority</html:li>
+  <html:li>Write the related works sections of the paper</html:li>
+  <html:li>Fix the notation of the paper</html:li>
+  <html:li>Give the body of the paper a better story</html:li>
+  <html:li>Semantics of inductive types using initial algebras. This is
+  lower priority due to scope creep</html:li></html:ul></html:p>
+                    <html:p>Merged into <fr:tree show-metadata="false"><fr:frontmatter><fr:authors><fr:author><fr:link href="/stevenschaefer/" title="Steven Schaefer" uri="https://stevenschaefer.net/stevenschaefer/" display-uri="stevenschaefer" type="local">Steven Schaefer</fr:link></fr:author></fr:authors><fr:date><fr:year>2026</fr:year><fr:month>4</fr:month><fr:day>17</fr:day></fr:date><fr:source-path>/Users/stevenschaefer/forest/trees/sss-008Z.tree</fr:source-path><fr:uri>https://stevenschaefer.net/sss-008Z/</fr:uri><fr:display-uri>sss-008Z</fr:display-uri><fr:route>/sss-008Z/</fr:route><fr:title text="Finishing Logical Relations on Display">Finishing <html:em>Logical Relations on Display</html:em></fr:title><fr:taxon>Milestone</fr:taxon></fr:frontmatter><fr:mainmatter><fr:info>Transclusion loop detected, rendering stopped.</fr:info></fr:mainmatter></fr:tree>. Each bullet is now its own TODO:</html:p>
+                    <html:ul><html:li><fr:link href="/sss-0093/" title="Logical relation for λ-calculus with equations" uri="https://stevenschaefer.net/sss-0093/" display-uri="sss-0093" type="local">Logical relation for λ-calculus with equations</fr:link></html:li>
+<html:li><fr:link href="/sss-0094/" title="Fuse conservativity proof via displayed nerve" uri="https://stevenschaefer.net/sss-0094/" display-uri="sss-0094" type="local">Fuse conservativity proof via displayed nerve</fr:link></html:li>
+<html:li><fr:link href="/sss-0091/" title="Write related works section" uri="https://stevenschaefer.net/sss-0091/" display-uri="sss-0091" type="local">Write related works section</fr:link></html:li>
+<html:li><fr:link href="/sss-0090/" title="Fix paper notation" uri="https://stevenschaefer.net/sss-0090/" display-uri="sss-0090" type="local">Fix paper notation</fr:link></html:li>
+<html:li><fr:link href="/sss-0092/" title="Improve paper body story" uri="https://stevenschaefer.net/sss-0092/" display-uri="sss-0092" type="local">Improve paper body story</fr:link></html:li>
+<html:li>The inductive-types bullet is tracked as <fr:link href="/sss-0078/" title="Initial Algebras in Gluing Proofs" uri="https://stevenschaefer.net/sss-0078/" display-uri="sss-0078" type="local">Initial Algebras in Gluing Proofs</fr:link>, kept as adjacent/lower-priority on the milestone.</html:li></html:ul>
+                  </fr:mainmatter>
+                </fr:tree>
+              </fr:mainmatter>
+            </fr:tree>
+          </fr:mainmatter>
+        </fr:tree>
+        <fr:tree show-metadata="true" expanded="false" toc="false" numbered="false">
+          <fr:frontmatter>
+            <fr:authors>
+              <fr:author>
+                <fr:link href="/stevenschaefer/" title="Steven Schaefer" uri="https://stevenschaefer.net/stevenschaefer/" display-uri="stevenschaefer" type="local">Steven Schaefer</fr:link>
+              </fr:author>
+            </fr:authors>
+            <fr:date>
+              <fr:year>2026</fr:year>
+              <fr:month>4</fr:month>
+              <fr:day>17</fr:day>
+            </fr:date>
+            <fr:source-path>/Users/stevenschaefer/forest/trees/sss-0093.tree</fr:source-path>
+            <fr:uri>https://stevenschaefer.net/sss-0093/</fr:uri>
+            <fr:display-uri>sss-0093</fr:display-uri>
+            <fr:route>/sss-0093/</fr:route>
+            <fr:title text="Logical relation for λ-calculus with equations">Logical relation for λ-calculus with equations</fr:title>
+            <fr:taxon>TODO</fr:taxon>
+            <fr:meta name="status">pending</fr:meta>
+            <fr:meta name="priority">high</fr:meta>
+            <fr:meta name="apple-id">x-apple-reminder://2AB46E67-F573-4345-98C8-F20241A9F772</fr:meta>
+            <fr:meta name="forester-addr">sss-0093</fr:meta>
+          </fr:frontmatter>
+          <fr:mainmatter>
+            <html:p>Work out the logical relation for a λ-calculus <html:em>with equations</html:em>. This operates on quotiented syntax, which distinguishes it from the pure-syntactic case already in the library.</html:p>
+            <html:p>Subtask of the <fr:link href="/sss-008Z/" title="Finishing Logical Relations on Display" uri="https://stevenschaefer.net/sss-008Z/" display-uri="sss-008Z" type="local">Finishing <html:em>Logical Relations on Display</html:em></fr:link> milestone.</html:p>
+          </fr:mainmatter>
+        </fr:tree>
+        <fr:tree show-metadata="true" expanded="false" toc="false" numbered="false">
+          <fr:frontmatter>
+            <fr:authors>
+              <fr:author>
+                <fr:link href="/stevenschaefer/" title="Steven Schaefer" uri="https://stevenschaefer.net/stevenschaefer/" display-uri="stevenschaefer" type="local">Steven Schaefer</fr:link>
+              </fr:author>
+            </fr:authors>
+            <fr:date>
+              <fr:year>2026</fr:year>
+              <fr:month>3</fr:month>
+              <fr:day>16</fr:day>
+            </fr:date>
+            <fr:source-path>/Users/stevenschaefer/forest/trees/sss-0078.tree</fr:source-path>
+            <fr:uri>https://stevenschaefer.net/sss-0078/</fr:uri>
+            <fr:display-uri>sss-0078</fr:display-uri>
+            <fr:route>/sss-0078/</fr:route>
+            <fr:title text="Initial Algebras in Gluing Proofs">Initial Algebras in Gluing Proofs</fr:title>
+            <fr:taxon>TODO</fr:taxon>
+            <fr:meta name="status">pending</fr:meta>
+            <fr:meta name="apple-id">x-apple-reminder://40B9F750-0B4A-4FDA-84CC-47498DB4EC66</fr:meta>
+            <fr:meta name="forester-addr">sss-0078</fr:meta>
+          </fr:frontmatter>
+          <fr:mainmatter>
+            <html:p>Use initial algebras of endofunctors to give a more categorical
+account of the elimination principles used in our gluing proofs. The
+free categories with their global elimination principles (see
+<fr:link href="/sss-003Q/" title="Mechanized Metatheory Paper Outline" uri="https://stevenschaefer.net/sss-003Q/" display-uri="sss-003Q" type="local">Mechanized Metatheory Paper Outline</fr:link>) can be viewed as initial algebras of appropriate
+endofunctors, and this perspective may yield a more modular and
+reusable infrastructure for canonicity and conservativity theorems.</html:p>
+            <html:p>Currently the library has no general initial algebra framework
+(i.e. F-algebras, initial F-algebra, fold/catamorphism). The monad
+algebra infrastructure in <html:code>Cubical.Categories.Monad.Algebra</html:code> handles
+algebras of monads but not algebras of arbitrary endofunctors.</html:p>
+            <html:p>Tasks:
+<html:ol><html:li>Formalize F-algebras and F-algebra homomorphisms for an
+  endofunctor <fr:tex display="inline"><![CDATA[F : \mathcal {C} \to  \mathcal {C}]]></fr:tex></html:li>
+  <html:li>Define initial F-algebra and the universal property (catamorphism / fold)</html:li>
+  <html:li>Connect to the existing free category constructions: show that
+  the free category on a quiver is (or arises from) an initial algebra</html:li>
+  <html:li>Develop displayed initial algebras and investigate how they
+  interact with the gluing framework (displayed elimination principles
+  as displayed initial algebra maps)</html:li>
+  <html:li>Apply to existing gluing proofs in <html:code>Gluing/</html:code> to simplify
+  or generalize the canonicity/conservativity arguments</html:li></html:ol></html:p>
+            <html:p>Related: <fr:link href="/sss-003Q/" title="Mechanized Metatheory Paper Outline" uri="https://stevenschaefer.net/sss-003Q/" display-uri="sss-003Q" type="local">Mechanized Metatheory Paper Outline</fr:link>, <fr:link href="/sss-003T/" title="Presented Categories" uri="https://stevenschaefer.net/sss-003T/" display-uri="sss-003T" type="local">Presented Categories</fr:link>, <fr:link href="/GluingForTypeTheory/" title="Gluing for Type Theory" uri="https://stevenschaefer.net/GluingForTypeTheory/" display-uri="GluingForTypeTheory" type="local">Gluing for Type Theory</fr:link></html:p>
+          </fr:mainmatter>
+        </fr:tree>
+      </fr:mainmatter>
+    </fr:tree>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors />
+        <fr:title text="Contributions">Contributions</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter />
+    </fr:tree>
+  </fr:backmatter>
+</fr:tree>

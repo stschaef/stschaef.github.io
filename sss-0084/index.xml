@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="/default.xsl"?>
+<fr:tree xmlns:fr="http://www.forester-notes.org" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:xml="http://www.w3.org/XML/1998/namespace" root="false" base-url="/">
+  <fr:frontmatter>
+    <fr:authors>
+      <fr:author>
+        <fr:link href="/stevenschaefer/" title="Steven Schaefer" uri="https://stevenschaefer.net/stevenschaefer/" display-uri="stevenschaefer" type="local">Steven Schaefer</fr:link>
+      </fr:author>
+    </fr:authors>
+    <fr:date>
+      <fr:year>2026</fr:year>
+      <fr:month>4</fr:month>
+      <fr:day>8</fr:day>
+    </fr:date>
+    <fr:source-path>/Users/stevenschaefer/forest/trees/sss-0084.tree</fr:source-path>
+    <fr:uri>https://stevenschaefer.net/sss-0084/</fr:uri>
+    <fr:display-uri>sss-0084</fr:display-uri>
+    <fr:route>/sss-0084/</fr:route>
+    <fr:title text="Latest Status on Extraction of Parsers to Haskell">Latest Status on Extraction of Parsers to Haskell</fr:title>
+    <fr:meta name="layout">wide</fr:meta>
+  </fr:frontmatter>
+  <fr:mainmatter>
+    <html:p>Revived parser extraction on a new <html:code>extraction-no-glue</html:code> branch in the
+<html:code>gsa-extraction</html:code> worktree. End-to-end <html:code>runDyck.sh</html:code> now produces a
+working 30 MB MAlonzo-compiled Haskell binary that correctly accepts/rejects
+Dyck-bracket inputs.</html:p>
+    <html:p>Phase A — seed + drift fixes — is done. The branch currently sits as three
+commits above <html:code>main</html:code>:</html:p>
+    <html:ul><html:li><html:strong>Seed from extraction_demo (squashed)</html:strong> — overlayed
+<html:code>extraction_demo</html:code>'s <html:code>src/</html:code> tree onto <html:code>extraction-no-glue</html:code>.</html:li>
+<html:li><html:strong>Phase A drift fixes</html:strong> — reconciled the tree with current agda 2.9
+and the pinned cubical at <html:code>.libs/cubical</html:code>.</html:li>
+<html:li><html:strong>runDyck.sh rewrite</html:strong> — uses <html:code>--library-file</html:code> pointing at
+<html:code>.agda-config/libraries</html:code> so the build is hermetic.</html:li></html:ul>
+    <html:p>Concrete drift that had to be fixed before anything typechecked:</html:p>
+    <html:ul><html:li><html:code>--guardedness</html:code> is infective from cubical, added to
+<html:code>grammar.agda-lib</html:code>.</html:li>
+<html:li><html:code>agda-stdlib</html:code> 2.2 is incompatible with agda 2.9 (unrecognized
+<html:code>--warn=noUserWarning</html:code>). Dropped the dep entirely and inlined the three
+functions that needed it: <html:code>_==_</html:code>, <html:code>show</html:code>, <html:code>intersperse</html:code>.</html:li>
+<html:li><html:code>Cubical.Data.Sum.More</html:code> clashed with cubical-categorical-logic —
+renamed local copy to <html:code>Cubical.Data.Sum.Extra</html:code>.</html:li>
+<html:li><html:code>Cubical.Data.FinSet.More</html:code> and
+<html:code>Cubical.Relation.Nullary.DecidablePropositions.More</html:code> had definitions
+that drifted into pinned cubical — added <html:code>hiding</html:code> clauses.</html:li>
+<html:li>Under <html:code>--erased-cubical</html:code>, Path <html:code>refl</html:code> is erased, so postulates
+had to switch from Path <html:code>_≡_</html:code> to <html:code>Eq._≡_</html:code> with <html:code>Eq.refl</html:code>.</html:li>
+<html:li><html:code>IO</html:code> used to come from the stdlib — wrote a tiny local
+<html:code>src/IO.agda</html:code> wrapping <html:code>Agda.Builtin.IO</html:code> with
+<html:code>COMPILE GHC</html:code> pragmas.</html:li></html:ul>
+    <html:p>Verified the extracted binary end-to-end:</html:p>
+    <html:pre><![CDATA[  [][[]]   → inl(bal(literal([), nil, literal(]),
+                  bal(literal([),
+                      bal(literal([), nil, literal(]), nil),
+                      literal(]), nil)))
+  [[[[]]]] → full 4-level nested parse tree
+  [[       → inr(reject)
+  (empty)  → inl(nil)]]></html:pre>
+    <html:p>The extracted Haskell lives at
+<html:code>gsa-extraction/src/MAlonzo/MAlonzo/Code/</html:code> (139 .hs files, 7.5 MB of
+generated source); the binary is at <html:code>gsa-extraction/src/MAlonzo/Dyck</html:code>.</html:p>
+    <html:p>Why <html:code>extraction_demo</html:code> ever worked in the first place — the trick is
+a five-layer stack:</html:p>
+    <html:ol><html:li><html:code>--erased-cubical</html:code> drops cubical primitives at compile time.</html:li>
+<html:li><html:code>@0</html:code> runtime-irrelevance annotations on path-flavoured definitions
+so they never reach the extractor.</html:li>
+<html:li><html:code>SplittingEq</html:code> carries an inductive <html:code>Eq._≡_</html:code> <html:em>inside</html:em>
+<html:code>_⊗_</html:code>'s runtime data instead of a cubical Path, so pattern-matching on
+<html:code>Eq.refl</html:code> needs no <html:code>primTransp</html:code>.</html:li>
+<html:li>Parallel <html:code>AsPath/</html:code> and <html:code>AsEquality/</html:code> module trees per
+connective, with <html:code>Base.agda</html:code> re-exporting the Eq version so runtime
+code transparently uses the non-path variant.</html:li>
+<html:li>A hand-ported <html:code>Erased/Data/*</html:code> subtree of cubical-free
+reimplementations of the stdlib modules that MAlonzo actually wants to
+compile.</html:li></html:ol>
+    <html:p>Phase B (collapsing <html:code>Splitting</html:code> to be Eq-only and deleting the
+parallel <html:code>AsPath/</html:code>/<html:code>AsEquality/</html:code> module trees) was intentionally
+<html:strong>deferred</html:strong>. Extraction already works end-to-end with the parallel
+trees in place, and the cleanup is a pure maintainability win rather than a
+blocker, so it can wait until there's a concrete reason to revisit
+<html:code>String/Base.agda</html:code> and <html:code>Grammar/LinearProduct/Base.agda</html:code>.</html:p>
+    <fr:tree show-metadata="false">
+      <fr:frontmatter>
+        <fr:authors>
+          <fr:author>
+            <fr:link href="/stevenschaefer/" title="Steven Schaefer" uri="https://stevenschaefer.net/stevenschaefer/" display-uri="stevenschaefer" type="local">Steven Schaefer</fr:link>
+          </fr:author>
+        </fr:authors>
+        <fr:date>
+          <fr:year>2026</fr:year>
+          <fr:month>4</fr:month>
+          <fr:day>8</fr:day>
+        </fr:date>
+        <fr:source-path>/Users/stevenschaefer/forest/trees/sss-0084.tree</fr:source-path>
+        <fr:title text="Performance tests">Performance tests</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter>
+        <html:p>Added two new REPL modes to <html:code>Examples/Dyck.agda</html:code> —
+<html:code>(g)</html:code> for linearly-generated balanced strings
+<html:strong>without</html:strong> parsing, and <html:code>(h)</html:code> for linearly-generated
+unbalanced strings without parsing. Running these side-by-side with
+the existing end-to-end modes <html:code>(3)</html:code> and <html:code>(7)</html:code> isolates
+generation cost from parsing cost. Benchmarks were taken on the
+extracted Dyck binary (<html:code>src/MAlonzo/Dyck</html:code>, ~30 MB, Apple M-series
+arm64) via <html:code>/usr/bin/time -l</html:code>, piping input into the REPL so the
+timing captures startup + menu + generation + parse + print. Every
+row is a single cold run (no warm-up), so low-N numbers are dominated
+by RTS startup.</html:p>
+        <html:p>Wall-clock time (seconds), peak resident set size in MiB, and a
+derived <html:em>parse-only</html:em> column computed as
+<html:code>end_to_end - gen_only</html:code>:</html:p>
+        <fr:tree show-metadata="false">
+          <fr:frontmatter>
+            <fr:authors>
+              <fr:author>
+                <fr:link href="/stevenschaefer/" title="Steven Schaefer" uri="https://stevenschaefer.net/stevenschaefer/" display-uri="stevenschaefer" type="local">Steven Schaefer</fr:link>
+              </fr:author>
+            </fr:authors>
+            <fr:date>
+              <fr:year>2026</fr:year>
+              <fr:month>4</fr:month>
+              <fr:day>8</fr:day>
+            </fr:date>
+            <fr:source-path>/Users/stevenschaefer/forest/trees/sss-0084.tree</fr:source-path>
+            <fr:title text="Balanced inputs (mode 3 vs mode g, linearly-generated, short output)">Balanced inputs (mode 3 vs mode g, linearly-generated, short output)</fr:title>
+          </fr:frontmatter>
+          <fr:mainmatter>
+            <html:pre><![CDATA[  N        |   len      | end-to-end |  gen-only  |   parse    | RSS (e2e) | RSS (gen)
+           |            |  wall (s)  |  wall (s)  | wall (s)   |   (MiB)   |   (MiB)
+-----------+------------+------------+------------+------------+-----------+-----------
+       100 |        458 |     0.03   |    0.02    |   ~0.01    |    12.3   |    12.1
+    10,000 |     40,058 |     0.03   |    0.02    |   ~0.01    |    16.5   |    12.3
+   100,000 |    400,058 |     0.20   |    0.03    |    0.17    |    53.3   |    15.4
+   500,000 |  2,000,058 |     0.98   |    0.07    |    0.91    |   238.3   |    28.4
+ 1,000,000 |  4,000,058 |     1.95   |    0.12    |    1.83    |   460.3   |    44.3
+ 2,000,000 |  8,000,058 |     3.86   |    0.24    |    3.62    |   901.4   |    77.3
+ 3,452,435 | 13,809,798 |     7.18   |    0.41    |    6.77    |  1,609.4  |   125.3
+ 5,000,000 | 20,000,058 |    10.19   |    0.60    |    9.59    |  2,089.4  |   175.3
+ 8,000,000 | 32,000,058 |    17.76   |    0.87    |   16.89    |  3,001.2  |   273.3]]></html:pre>
+          </fr:mainmatter>
+        </fr:tree>
+        <fr:tree show-metadata="false">
+          <fr:frontmatter>
+            <fr:authors>
+              <fr:author>
+                <fr:link href="/stevenschaefer/" title="Steven Schaefer" uri="https://stevenschaefer.net/stevenschaefer/" display-uri="stevenschaefer" type="local">Steven Schaefer</fr:link>
+              </fr:author>
+            </fr:authors>
+            <fr:date>
+              <fr:year>2026</fr:year>
+              <fr:month>4</fr:month>
+              <fr:day>8</fr:day>
+            </fr:date>
+            <fr:source-path>/Users/stevenschaefer/forest/trees/sss-0084.tree</fr:source-path>
+            <fr:title text="Unbalanced inputs (mode 7 vs mode h, linearly-generated, short output)">Unbalanced inputs (mode 7 vs mode h, linearly-generated, short output)</fr:title>
+          </fr:frontmatter>
+          <fr:mainmatter>
+            <html:pre><![CDATA[  N        |   len      | end-to-end |  gen-only  |   parse    | RSS (e2e)
+           |            |  wall (s)  |  wall (s)  | wall (s)   |   (MiB)
+-----------+------------+------------+------------+------------+-----------
+       100 |        459 |     0.02   |    0.02    |   ~0.00    |    12.1
+    10,000 |     40,059 |     0.03   |    0.02    |   ~0.01    |    16.3
+   100,000 |    400,059 |     0.20   |    0.02    |    0.18    |    53.5
+   500,000 |  2,000,059 |     0.96   |    0.07    |    0.89    |   238.3
+ 1,000,000 |  4,000,059 |     1.94   |    0.13    |    1.81    |   460.4
+ 2,000,000 |  8,000,059 |     3.89   |    0.23    |    3.66    |   901.3
+ 3,452,435 | 13,809,799 |     6.90   |    0.41    |    6.49    |  1,609.4]]></html:pre>
+          </fr:mainmatter>
+        </fr:tree>
+        <fr:tree show-metadata="false">
+          <fr:frontmatter>
+            <fr:authors>
+              <fr:author>
+                <fr:link href="/stevenschaefer/" title="Steven Schaefer" uri="https://stevenschaefer.net/stevenschaefer/" display-uri="stevenschaefer" type="local">Steven Schaefer</fr:link>
+              </fr:author>
+            </fr:authors>
+            <fr:date>
+              <fr:year>2026</fr:year>
+              <fr:month>4</fr:month>
+              <fr:day>8</fr:day>
+            </fr:date>
+            <fr:source-path>/Users/stevenschaefer/forest/trees/sss-0084.tree</fr:source-path>
+            <fr:title text="GHC RTS breakdown at N = 1,000,000 balanced">GHC RTS breakdown at N = 1,000,000 balanced</fr:title>
+          </fr:frontmatter>
+          <fr:mainmatter>
+            <html:p>Captured with <html:code>+RTS -s -RTS</html:code> on mode 3 and mode g:</html:p>
+            <html:pre><![CDATA[                        end-to-end (3)      gen-only (g)
+  bytes allocated          8.51 GB              553 MB
+  bytes copied (GC)        1.10 GB             46.3 KB
+  max residency          192.0 MB             17.2 MB
+  total memory             454 MiB             38 MiB
+  Gen-0 collections         2,031               119
+  Gen-1 collections            10                 6
+  MUT time                1.236 s             0.081 s
+  GC time                 0.693 s             0.026 s
+  Total time              1.940 s             0.110 s
+  Productivity             63.7 %              73.6 %
+  Alloc rate           6.89 GB / MUT-s     6.84 GB / MUT-s]]></html:pre>
+          </fr:mainmatter>
+        </fr:tree>
+        <fr:tree show-metadata="false">
+          <fr:frontmatter>
+            <fr:authors>
+              <fr:author>
+                <fr:link href="/stevenschaefer/" title="Steven Schaefer" uri="https://stevenschaefer.net/stevenschaefer/" display-uri="stevenschaefer" type="local">Steven Schaefer</fr:link>
+              </fr:author>
+            </fr:authors>
+            <fr:date>
+              <fr:year>2026</fr:year>
+              <fr:month>4</fr:month>
+              <fr:day>8</fr:day>
+            </fr:date>
+            <fr:source-path>/Users/stevenschaefer/forest/trees/sss-0084.tree</fr:source-path>
+            <fr:title text="Observations">Observations</fr:title>
+          </fr:frontmatter>
+          <fr:mainmatter>
+            <html:ul><html:li><html:strong>Parsing dominates.</html:strong> At every size past ~100k characters,
+generation is well under 10 percent of the wall time; the rest is the
+DFA trace construction + the final <html:code>mkTree</html:code> pass. At N = 3.45 M
+the split is ~94 percent parse / ~6 percent gen.</html:li>
+<html:li><html:strong>Linear in N.</html:strong> End-to-end wall time tracks N almost exactly:
+~2 μs per <html:code>N</html:code>-step over the whole range, i.e. ~0.5 μs per
+input character. No super-linear blow-up up to 8 M
+<html:code>N</html:code> (32 M characters).</html:li>
+<html:li><html:strong>Memory is the real ceiling.</html:strong> End-to-end RSS is ~215 bytes
+per character — the parser holds the full input list plus the
+intermediate trace + <html:code>Dyck</html:code> tree in live heap. At 8 M <html:code>N</html:code>
+that's ~3 GB. The interactive 3.45 M ceiling you hit is the point
+where this machine starts feeling it, not a parser-side bug.
+Generation-only memory is ~9 bytes per character, confirming that
+Haskell laziness streams the list just fine when nothing downstream
+is forcing random access.</html:li>
+<html:li><html:strong>GC pressure is high but survivable.</html:strong> Productivity at
+N = 1 M end-to-end is 63.7 percen (2,041 total GCs, 35.7 percent GC time),
+vs. 73.6 percent for generation only. Allocation rate is ~6.9 GB/MUT-s in
+both modes, but the parse path copies 1.1 GB during GC vs. 46 KB for
+gen-only — the intermediate <html:code>Trace</html:code>/<html:code>Dyck</html:code> structures have
+short lifetimes and churn through the nursery aggressively.</html:li>
+<html:li><html:strong>Balanced vs unbalanced is indistinguishable.</html:strong> The linear
+unbalanced generator puts the mismatch at the very end of the
+string, so the parser chews through essentially the same amount of
+work as the balanced case before hitting the rejecting branch of
+<html:code>parseDyck</html:code>. Same wall time, same RSS to within noise.</html:li>
+<html:li><html:strong>Small-N floor is ~30 ms.</html:strong> Below N ≈ 10 k the runtime is
+dominated by GHC RTS startup, binary load, and REPL I/O, so
+low-N entries are only useful as a baseline for overhead.</html:li></html:ul>
+          </fr:mainmatter>
+        </fr:tree>
+      </fr:mainmatter>
+    </fr:tree>
+    <html:p>Next steps if/when this comes back up:</html:p>
+    <html:ul><html:li>Port the other example parsers (<html:code>BinOp</html:code>, <html:code>RegexParser</html:code>) the
+same way and confirm they extract.</html:li>
+<html:li>Decide whether Phase B is worth doing before merging
+<html:code>extraction-no-glue</html:code> back toward <html:code>main</html:code>, or whether the branch
+stays as an extraction-only side-branch.</html:li>
+<html:li>Think about a real IO layer beyond the tiny <html:code>src/IO.agda</html:code>
+shim — the current one only exposes <html:code>putStrLn</html:code>/<html:code>getLine</html:code>.</html:li>
+<html:li>Investigate whether a streaming parse (avoiding the full
+intermediate tree) could cut the ~215 bytes/char memory constant and
+push the interactive ceiling past 10 M without raising the
+machine's RSS watermark.</html:li></html:ul>
+  </fr:mainmatter>
+  <fr:backmatter>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors />
+        <fr:title text="References">References</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter />
+    </fr:tree>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors />
+        <fr:title text="Context">Context</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter />
+    </fr:tree>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors />
+        <fr:title text="Backlinks">Backlinks</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter />
+    </fr:tree>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors />
+        <fr:title text="Related">Related</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter />
+    </fr:tree>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors />
+        <fr:title text="Contributions">Contributions</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter />
+    </fr:tree>
+  </fr:backmatter>
+</fr:tree>

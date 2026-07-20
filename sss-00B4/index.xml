@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="/default.xsl"?>
+<fr:tree xmlns:fr="http://www.forester-notes.org" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:xml="http://www.w3.org/XML/1998/namespace" root="false" base-url="/">
+  <fr:frontmatter>
+    <fr:authors>
+      <fr:author>
+        <fr:link href="/stevenschaefer/" title="Steven Schaefer" uri="https://stevenschaefer.net/stevenschaefer/" display-uri="stevenschaefer" type="local">Steven Schaefer</fr:link>
+      </fr:author>
+    </fr:authors>
+    <fr:date>
+      <fr:year>2026</fr:year>
+      <fr:month>4</fr:month>
+      <fr:day>24</fr:day>
+    </fr:date>
+    <fr:source-path>/Users/stevenschaefer/forest/trees/sss-00B4.tree</fr:source-path>
+    <fr:uri>https://stevenschaefer.net/sss-00B4/</fr:uri>
+    <fr:display-uri>sss-00B4</fr:display-uri>
+    <fr:route>/sss-00B4/</fr:route>
+    <fr:title text="Figure out direnv + git worktrees without blowing up the nix store">Figure out direnv + git worktrees without blowing up the nix store</fr:title>
+    <fr:taxon>TODO</fr:taxon>
+    <fr:meta name="status">done</fr:meta>
+    <fr:meta name="completed">2026-05-29</fr:meta>
+    <fr:meta name="apple-id">x-apple-reminder://B334A5BC-356A-45D4-B026-2E57298218E4</fr:meta>
+    <fr:meta name="forester-addr">sss-00B4</fr:meta>
+  </fr:frontmatter>
+  <fr:mainmatter>
+    <html:p>Agentic programming on multiple feature branches is most natural with one
+git worktree per branch plus direnv for an automatic Nix dev shell per
+directory. But each <html:code>.direnv</html:code> becomes a GC root that pins its full
+flake-input closure, and these accumulate — the April 2026 cleanup found
+157 direnv-originated GC roots across 11 project dirs in <html:code>~</html:code>, most of
+them stale.</html:p>
+    <html:p><html:strong>Goal.</html:strong> A workflow where I can freely spin up worktrees for agent
+sessions and let direnv auto-load shells, without the nix store growing
+unboundedly.</html:p>
+    <html:p>
+      <html:strong>Options to evaluate.</html:strong>
+    </html:p>
+    <html:ul><html:li>Periodic sweep: <html:code>find ~ -maxdepth 3 -type d -name .direnv -atime +N -print</html:code> and delete stale ones.</html:li>
+<html:li>On worktree removal: auto-run <html:code>rm -rf .direnv</html:code> first so GC roots drop immediately (git hook or wrapper around <html:code>git worktree remove</html:code>).</html:li>
+<html:li>Shared flake-inputs cache at a stable path so multiple worktrees of the same repo reuse one closure instead of pinning N copies.</html:li>
+<html:li><html:code>nix-direnv</html:code> TTL / age-out settings — verify current behavior and whether a shorter cache window makes the closure-pinning less painful.</html:li>
+<html:li><html:code>direnv allow</html:code> gating: only allow direnv in <html:em>active</html:em> worktrees; require explicit re-allow when returning to a dormant one.</html:li></html:ul>
+    <html:p><html:strong>Context.</html:strong> See <fr:link href="/sss-00B3/" title="Automatic Nix Store Maintenance" uri="https://stevenschaefer.net/sss-00B3/" display-uri="sss-00B3" type="local">automatic nix store maintenance</fr:link> for the
+baseline GC/optimise config that should be in place regardless of the
+strategy chosen here.</html:p>
+  </fr:mainmatter>
+  <fr:backmatter>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors />
+        <fr:title text="References">References</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter />
+    </fr:tree>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors />
+        <fr:title text="Context">Context</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter />
+    </fr:tree>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors />
+        <fr:title text="Backlinks">Backlinks</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter>
+        <fr:tree show-metadata="true" expanded="false" toc="false" numbered="false">
+          <fr:frontmatter>
+            <fr:authors>
+              <fr:author>
+                <fr:link href="/stevenschaefer/" title="Steven Schaefer" uri="https://stevenschaefer.net/stevenschaefer/" display-uri="stevenschaefer" type="local">Steven Schaefer</fr:link>
+              </fr:author>
+            </fr:authors>
+            <fr:date>
+              <fr:year>2026</fr:year>
+              <fr:month>4</fr:month>
+              <fr:day>24</fr:day>
+            </fr:date>
+            <fr:source-path>/Users/stevenschaefer/forest/trees/sss-00B3.tree</fr:source-path>
+            <fr:uri>https://stevenschaefer.net/sss-00B3/</fr:uri>
+            <fr:display-uri>sss-00B3</fr:display-uri>
+            <fr:route>/sss-00B3/</fr:route>
+            <fr:title text="Automatic Nix Store Maintenance">Automatic Nix Store Maintenance</fr:title>
+          </fr:frontmatter>
+          <fr:mainmatter>
+            <html:p>Without explicit configuration, a nix-darwin store grows monotonically:
+every <html:code>darwin-rebuild switch</html:code> or <html:code>home-manager switch</html:code> pins its
+closure as a rooted generation, and nothing ages out. Three settings in
+<html:code>configuration.nix</html:code> prevent this.</html:p>
+            <html:p><html:strong>Scheduled GC + optimise.</html:strong> Runs on a timer; <html:code>--delete-older-than</html:code>
+keeps enough rollback history to be useful without hoarding ancient
+generations.</html:p>
+            <html:ul><html:li><html:code>nix.gc.automatic = true;</html:code></html:li>
+<html:li><html:code>nix.gc.options = "--delete-older-than 14d";</html:code></html:li>
+<html:li><html:code>nix.optimise.automatic = true;</html:code></html:li></html:ul>
+            <html:p><html:strong>Build-time dedup and emergency GC.</html:strong> <html:code>auto-optimise-store</html:code>
+hardlinks identical files as they arrive in the store, so duplication never
+accumulates — avoiding the multi-hour <html:code>nix store optimise</html:code> of a 48G store
+(which on APFS can freeze the machine). <html:code>min-free</html:code>/<html:code>max-free</html:code>
+triggers GC <html:em>during</html:em> builds when the data volume runs low, so a build never
+fails for want of space.</html:p>
+            <html:ul><html:li><html:code>nix.settings.auto-optimise-store = true;</html:code></html:li>
+<html:li><html:code>nix.settings.min-free = 10737418240;</html:code> (10 GiB)</html:li>
+<html:li><html:code>nix.settings.max-free = 5368709120;</html:code> (5 GiB)</html:li></html:ul>
+            <html:p>The bigger recurring lever in practice is direnv/worktree hygiene — see
+<fr:link href="/sss-00B4/" title="Figure out direnv + git worktrees without blowing up the nix store" uri="https://stevenschaefer.net/sss-00B4/" display-uri="sss-00B4" type="local">the open question</fr:link>.</html:p>
+          </fr:mainmatter>
+        </fr:tree>
+      </fr:mainmatter>
+    </fr:tree>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors />
+        <fr:title text="Related">Related</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter>
+        <fr:tree show-metadata="true" expanded="false" toc="false" numbered="false">
+          <fr:frontmatter>
+            <fr:authors>
+              <fr:author>
+                <fr:link href="/stevenschaefer/" title="Steven Schaefer" uri="https://stevenschaefer.net/stevenschaefer/" display-uri="stevenschaefer" type="local">Steven Schaefer</fr:link>
+              </fr:author>
+            </fr:authors>
+            <fr:date>
+              <fr:year>2026</fr:year>
+              <fr:month>4</fr:month>
+              <fr:day>24</fr:day>
+            </fr:date>
+            <fr:source-path>/Users/stevenschaefer/forest/trees/sss-00B3.tree</fr:source-path>
+            <fr:uri>https://stevenschaefer.net/sss-00B3/</fr:uri>
+            <fr:display-uri>sss-00B3</fr:display-uri>
+            <fr:route>/sss-00B3/</fr:route>
+            <fr:title text="Automatic Nix Store Maintenance">Automatic Nix Store Maintenance</fr:title>
+          </fr:frontmatter>
+          <fr:mainmatter>
+            <html:p>Without explicit configuration, a nix-darwin store grows monotonically:
+every <html:code>darwin-rebuild switch</html:code> or <html:code>home-manager switch</html:code> pins its
+closure as a rooted generation, and nothing ages out. Three settings in
+<html:code>configuration.nix</html:code> prevent this.</html:p>
+            <html:p><html:strong>Scheduled GC + optimise.</html:strong> Runs on a timer; <html:code>--delete-older-than</html:code>
+keeps enough rollback history to be useful without hoarding ancient
+generations.</html:p>
+            <html:ul><html:li><html:code>nix.gc.automatic = true;</html:code></html:li>
+<html:li><html:code>nix.gc.options = "--delete-older-than 14d";</html:code></html:li>
+<html:li><html:code>nix.optimise.automatic = true;</html:code></html:li></html:ul>
+            <html:p><html:strong>Build-time dedup and emergency GC.</html:strong> <html:code>auto-optimise-store</html:code>
+hardlinks identical files as they arrive in the store, so duplication never
+accumulates — avoiding the multi-hour <html:code>nix store optimise</html:code> of a 48G store
+(which on APFS can freeze the machine). <html:code>min-free</html:code>/<html:code>max-free</html:code>
+triggers GC <html:em>during</html:em> builds when the data volume runs low, so a build never
+fails for want of space.</html:p>
+            <html:ul><html:li><html:code>nix.settings.auto-optimise-store = true;</html:code></html:li>
+<html:li><html:code>nix.settings.min-free = 10737418240;</html:code> (10 GiB)</html:li>
+<html:li><html:code>nix.settings.max-free = 5368709120;</html:code> (5 GiB)</html:li></html:ul>
+            <html:p>The bigger recurring lever in practice is direnv/worktree hygiene — see
+<fr:link href="/sss-00B4/" title="Figure out direnv + git worktrees without blowing up the nix store" uri="https://stevenschaefer.net/sss-00B4/" display-uri="sss-00B4" type="local">the open question</fr:link>.</html:p>
+          </fr:mainmatter>
+        </fr:tree>
+      </fr:mainmatter>
+    </fr:tree>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors />
+        <fr:title text="Contributions">Contributions</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter />
+    </fr:tree>
+  </fr:backmatter>
+</fr:tree>

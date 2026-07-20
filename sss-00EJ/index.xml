@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="/default.xsl"?>
+<fr:tree xmlns:fr="http://www.forester-notes.org" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:xml="http://www.w3.org/XML/1998/namespace" root="false" base-url="/">
+  <fr:frontmatter>
+    <fr:authors>
+      <fr:author>
+        <fr:link href="/stevenschaefer/" title="Steven Schaefer" uri="https://stevenschaefer.net/stevenschaefer/" display-uri="stevenschaefer" type="local">Steven Schaefer</fr:link>
+      </fr:author>
+    </fr:authors>
+    <fr:date>
+      <fr:year>2026</fr:year>
+      <fr:month>7</fr:month>
+      <fr:day>15</fr:day>
+    </fr:date>
+    <fr:source-path>/Users/stevenschaefer/forest/trees/sss-00EJ.tree</fr:source-path>
+    <fr:uri>https://stevenschaefer.net/sss-00EJ/</fr:uri>
+    <fr:display-uri>sss-00EJ</fr:display-uri>
+    <fr:route>/sss-00EJ/</fr:route>
+    <fr:title text="Intrinsic hylomorphisms: the output carrier is the specification">Intrinsic hylomorphisms: the output carrier is the specification</fr:title>
+  </fr:frontmatter>
+  <fr:mainmatter>
+    <html:p>The recurring pattern across the examples: index the <fr:link href="/sss-00EI/" title="Direct categories, the later modality, and Löb induction" uri="https://stevenschaefer.net/sss-00EI/" display-uri="sss-00EI" type="local">Löb recursion</fr:link> base by the data the correctness statement mentions, and make the <html:em>output carrier</html:em> the specification itself. The algebra is then forced to produce the proof, so correctness falls out of <html:code>hylo</html:code> by type. The computed value still reduces by <html:code>refl</html:code> --- the proof sits in the second projection.</html:p>
+    <html:p>The roster (<html:code>Direct.Examples</html:code>):</html:p>
+    <html:ul><html:li><html:strong>GCD</html:strong> --- Euclid; carrier <html:code>Σ d, isGCD m n d</html:code>, algebra is <html:code>zeroGCD</html:code>/<html:code>stepGCD</html:code>. Recaptures the AUW intrinsically-recursive GCD.</html:li>
+  <html:li><html:strong>Karatsuba</html:strong> --- carrier <html:code>Σ p, p ≡ x · y</html:code>; the schoolbook identity discharged by <html:code>solveℕ!</html:code> and truncated-subtraction cancellation.</html:li>
+  <html:li><html:strong>Quicksort</html:strong> --- bag-indexed, so permutation is definitional bag-equality; carrier <html:code>Σ ys, Sorted ys × fromList ys ≡ b</html:code>, a sorted permutation by type.</html:li>
+  <html:li><html:strong>Binary search</html:strong> --- input a <html:code>Sorted xs</html:code> proof, output <html:code>Dec (Member xs)</html:code>, returning <html:code>Maybe (Fin (length xs))</html:code>.</html:li>
+  <html:li><html:strong>Bellman--Ford</html:strong> --- the carrier bundles each distance with optimality (a lower bound that is attained).</html:li></html:ul>
+    <html:p>Non-verified demonstrations also present: Towers of Hanoi, CYK parsing, Ackermann.</html:p>
+  </fr:mainmatter>
+  <fr:backmatter>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors />
+        <fr:title text="References">References</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter />
+    </fr:tree>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors />
+        <fr:title text="Context">Context</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter />
+    </fr:tree>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors />
+        <fr:title text="Backlinks">Backlinks</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter>
+        <fr:tree show-metadata="true" expanded="false" toc="false" numbered="false">
+          <fr:frontmatter>
+            <fr:authors>
+              <fr:author>
+                <fr:link href="/stevenschaefer/" title="Steven Schaefer" uri="https://stevenschaefer.net/stevenschaefer/" display-uri="stevenschaefer" type="local">Steven Schaefer</fr:link>
+              </fr:author>
+            </fr:authors>
+            <fr:date>
+              <fr:year>2026</fr:year>
+              <fr:month>7</fr:month>
+              <fr:day>15</fr:day>
+            </fr:date>
+            <fr:source-path>/Users/stevenschaefer/forest/trees/sss-00EO.tree</fr:source-path>
+            <fr:uri>https://stevenschaefer.net/sss-00EO/</fr:uri>
+            <fr:display-uri>sss-00EO</fr:display-uri>
+            <fr:route>/sss-00EO/</fr:route>
+            <fr:title text="Compositional combinators for local contractivity">Compositional combinators for local contractivity</fr:title>
+            <fr:taxon>TODO</fr:taxon>
+            <fr:meta name="status">pending</fr:meta>
+          </fr:frontmatter>
+          <fr:mainmatter>
+            <html:p>Every <fr:link href="/sss-00EJ/" title="Intrinsic hylomorphisms: the output carrier is the specification" uri="https://stevenschaefer.net/sss-00EJ/" display-uri="sss-00EJ" type="local">hylomorphism example</fr:link> currently hand-writes its functor and its contractive strength (the <html:code>δ</html:code>). Local contractivity should instead be a <html:em>closed class</html:em> with combinators, so larger contractive maps are assembled from smaller ones and <html:code>δ</html:code> is derived.</html:p>
+            <html:p>The closure conditions --- the guarded/metric semantics of the <fr:link href="/sss-00EI/" title="Direct categories, the later modality, and Löb induction" uri="https://stevenschaefer.net/sss-00EI/" display-uri="sss-00EI" type="local">later modality</fr:link>:</html:p>
+            <html:ul><html:li>constant functors are contractive;</html:li>
+  <html:li>a recursive position guarded by <fr:tex display="inline"><![CDATA[\triangleright ]]></fr:tex> is contractive --- a bare variable is only non-expansive;</html:li>
+  <html:li>sums, products, and linear/tensor products preserve contractivity positionwise;</html:li>
+  <html:li>composition with a non-expansive functor preserves contractivity on either side.</html:li></html:ul>
+            <html:p>These are exactly the constructors of the <fr:link href="/sss-00EQ/" title="Grammar indexed inductives are the indexed, string-ranked containers" uri="https://stevenschaefer.net/sss-00EQ/" display-uri="sss-00EQ" type="local">grammar functor language</fr:link>, which is a syntactic form of this calculus. Pairs with the <fr:link href="/sss-00EP/" title="A ranked-container interface for hylomorphisms" uri="https://stevenschaefer.net/sss-00EP/" display-uri="sss-00EP" type="local">ranked-container interface</fr:link>.</html:p>
+          </fr:mainmatter>
+        </fr:tree>
+        <fr:tree show-metadata="true" expanded="false" toc="false" numbered="false">
+          <fr:frontmatter>
+            <fr:authors>
+              <fr:author>
+                <fr:link href="/stevenschaefer/" title="Steven Schaefer" uri="https://stevenschaefer.net/stevenschaefer/" display-uri="stevenschaefer" type="local">Steven Schaefer</fr:link>
+              </fr:author>
+            </fr:authors>
+            <fr:date>
+              <fr:year>2026</fr:year>
+              <fr:month>7</fr:month>
+              <fr:day>15</fr:day>
+            </fr:date>
+            <fr:source-path>/Users/stevenschaefer/forest/trees/sss-00EN.tree</fr:source-path>
+            <fr:uri>https://stevenschaefer.net/sss-00EN/</fr:uri>
+            <fr:display-uri>sss-00EN</fr:display-uri>
+            <fr:route>/sss-00EN/</fr:route>
+            <fr:title text="Directions for direct-category recursion in Cubical Agda">Directions for direct-category recursion in Cubical Agda</fr:title>
+          </fr:frontmatter>
+          <fr:mainmatter>
+            <html:p>Feature requests and directions building on the <fr:link href="/sss-00EG/" title="The lob branch: direct categories, Löb induction, and intrinsic hylomorphisms" uri="https://stevenschaefer.net/sss-00EG/" display-uri="sss-00EG" type="local">lob branch</fr:link>: where the <fr:link href="/sss-00EI/" title="Direct categories, the later modality, and Löb induction" uri="https://stevenschaefer.net/sss-00EI/" display-uri="sss-00EI" type="local">Löb-recursion</fr:link> and <fr:link href="/sss-00EJ/" title="Intrinsic hylomorphisms: the output carrier is the specification" uri="https://stevenschaefer.net/sss-00EJ/" display-uri="sss-00EJ" type="local">intrinsic-hylomorphism</fr:link> machinery can go next.</html:p>
+            <html:p><html:strong>A calculus of contractive functors.</html:strong> Make local contractivity a closed class with <fr:link href="/sss-00EO/" title="Compositional combinators for local contractivity" uri="https://stevenschaefer.net/sss-00EO/" display-uri="sss-00EO" type="local">combinators</fr:link> --- constants, the guard, sums, products, composition --- and package the functor plus strength as a <fr:link href="/sss-00EP/" title="A ranked-container interface for hylomorphisms" uri="https://stevenschaefer.net/sss-00EP/" display-uri="sss-00EP" type="local">ranked-container interface</fr:link> so instances stop hand-writing it. This <fr:link href="/sss-00EQ/" title="Grammar indexed inductives are the indexed, string-ranked containers" uri="https://stevenschaefer.net/sss-00EQ/" display-uri="sss-00EQ" type="local">generalises to the indexed-inductive grammars</fr:link>, whose rank is string length.</html:p>
+            <html:p><html:strong>The recursion-scheme zoo.</html:strong> <html:code>hylo</html:code> is the only scheme so far. Add catamorphisms, anamorphisms, para/apomorphisms, and especially <html:em>histomorphisms</html:em> (course-of-values recursion) --- the strict-downset sieve already exposes <html:em>every</html:em> smaller value, so course-of-values falls out directly. Dynamorphisms would package dynamic programming as a scheme.</html:p>
+            <html:p><html:strong>Corecursion and streams.</html:strong> Dualise: guarded corecursion via the later modality, streams and processes productive by construction, anamorphisms as the dual of <html:code>hylo</html:code>. Continues the <fr:link href="/sss-00EM/" title="Intrinsic shortest-path, graphs, and streams (in flight)" uri="https://stevenschaefer.net/sss-00EM/" display-uri="sss-00EM" type="local">in-flight streams work</fr:link>.</html:p>
+            <html:p><html:strong>Cost-aware recursion.</html:strong> Carry a cost in the carrier so the well-founded measure doubles as an intrinsic complexity bound (compare <html:code>calf</html:code>); recover amortized analysis through the potential.</html:p>
+            <html:p><html:strong>More intrinsic algorithms.</html:strong> Broaden the <fr:link href="/sss-00EJ/" title="Intrinsic hylomorphisms: the output carrier is the specification" uri="https://stevenschaefer.net/sss-00EJ/" display-uri="sss-00EJ" type="local">roster</fr:link>: edit distance / LCS / knapsack (DP), mergesort, intrinsic Dijkstra, full CYK returning a parse derivation.</html:p>
+            <html:p><html:strong>Effectful hylomorphisms.</html:strong> Recursion in a Kleisli category --- partial, nondeterministic, probabilistic --- reusing the existing FreeSubst/Kleisli machinery.</html:p>
+            <html:p><html:strong>Semantics and higher structure.</html:strong> Reedy categories (semisimplicial and simplicial diagrams), internal guarded recursive types <fr:tex display="inline"><![CDATA[\mu ]]></fr:tex>/<fr:tex display="inline"><![CDATA[\nu ]]></fr:tex>, and the <fr:tex display="inline"><![CDATA[\square ]]></fr:tex>/<fr:tex display="inline"><![CDATA[\Diamond ]]></fr:tex> modalities as the internal language of the topos of trees.</html:p>
+            <html:p><html:strong>Upstreaming.</html:strong> The <html:code>WFOrder</html:code>, <html:code>pullbackWFOrder</html:code>, direct-category, and Löb kit (<fr:link href="/sss-00EK/" title="Measure-ordered direct categories via pullbackWFOrder" uri="https://stevenschaefer.net/sss-00EK/" display-uri="sss-00EK" type="local">bases</fr:link>) is broadly useful and is a candidate to merge into <html:code>agda/cubical</html:code>.</html:p>
+          </fr:mainmatter>
+        </fr:tree>
+        <fr:tree show-metadata="true" expanded="false" toc="false" numbered="false">
+          <fr:frontmatter>
+            <fr:authors>
+              <fr:author>
+                <fr:link href="/stevenschaefer/" title="Steven Schaefer" uri="https://stevenschaefer.net/stevenschaefer/" display-uri="stevenschaefer" type="local">Steven Schaefer</fr:link>
+              </fr:author>
+            </fr:authors>
+            <fr:date>
+              <fr:year>2026</fr:year>
+              <fr:month>7</fr:month>
+              <fr:day>15</fr:day>
+            </fr:date>
+            <fr:source-path>/Users/stevenschaefer/forest/trees/sss-00EL.tree</fr:source-path>
+            <fr:uri>https://stevenschaefer.net/sss-00EL/</fr:uri>
+            <fr:display-uri>sss-00EL</fr:display-uri>
+            <fr:route>/sss-00EL/</fr:route>
+            <fr:title text="Fold shared integer-halving into a nat-utility home">Fold shared integer-halving into a nat-utility home</fr:title>
+            <fr:taxon>TODO</fr:taxon>
+            <fr:meta name="status">pending</fr:meta>
+            <fr:meta name="priority">low</fr:meta>
+          </fr:frontmatter>
+          <fr:mainmatter>
+            <html:p>Karatsuba (halving over the <fr:tex display="inline"><![CDATA[\Sigma ]]></fr:tex>-order) and <fr:link href="/sss-00EJ/" title="Intrinsic hylomorphisms: the output carrier is the specification" uri="https://stevenschaefer.net/sss-00EJ/" display-uri="sss-00EJ" type="local">binary search</fr:link> (halving over the recursive order) each define integer halving with a strict-decrease bound. They should share one definition, but <html:code>Data.Nat.More</html:code> is already the tropical-cost semiring, so there is no clean home.</html:p>
+            <html:p>Options: rename <html:code>Data.Nat.More</html:code> to <html:code>Data.Nat.Cost</html:code> and open a genuine nat-utility <html:code>More</html:code>, or a small <html:code>Data.Nat.Half</html:code>. Unifying also wants Karatsuba switched to the recursive <html:code>&lt;</html:code>, which simplifies its coalgebra by dropping the <html:code>&lt;→Wo&lt;</html:code> conversion.</html:p>
+          </fr:mainmatter>
+        </fr:tree>
+        <fr:tree show-metadata="true" expanded="false" toc="false" numbered="false">
+          <fr:frontmatter>
+            <fr:authors>
+              <fr:author>
+                <fr:link href="/stevenschaefer/" title="Steven Schaefer" uri="https://stevenschaefer.net/stevenschaefer/" display-uri="stevenschaefer" type="local">Steven Schaefer</fr:link>
+              </fr:author>
+            </fr:authors>
+            <fr:date>
+              <fr:year>2026</fr:year>
+              <fr:month>7</fr:month>
+              <fr:day>15</fr:day>
+            </fr:date>
+            <fr:source-path>/Users/stevenschaefer/forest/trees/sss-00EQ.tree</fr:source-path>
+            <fr:uri>https://stevenschaefer.net/sss-00EQ/</fr:uri>
+            <fr:display-uri>sss-00EQ</fr:display-uri>
+            <fr:route>/sss-00EQ/</fr:route>
+            <fr:title text="Grammar indexed inductives are the indexed, string-ranked containers">Grammar indexed inductives are the indexed, string-ranked containers</fr:title>
+          </fr:frontmatter>
+          <fr:mainmatter>
+            <html:p>Does the <fr:link href="/sss-00EP/" title="A ranked-container interface for hylomorphisms" uri="https://stevenschaefer.net/sss-00EP/" display-uri="sss-00EP" type="local">ranked-container interface</fr:link> generalise to the indexed inductives in the grammars codebase? Yes --- and it is already half-built.</html:p>
+            <html:p>In <html:code>grammars-and-semantic-actions</html:code>, a grammar is <html:code>String → Type</html:code>, and <html:code>Grammar.Inductive.Functor</html:code> is a strictly-positive polynomial-functor language: constants <html:code>k</html:code>, recursive references <html:code>Var</html:code>, indexed sums <html:code>⊕e</html:code> and products <html:code>&amp;e</html:code>, and linear/cartesian products <html:code>⊗e</html:code>/<html:code>&amp;e2</html:code>. Its <html:code>μ F</html:code> is the indexed inductive (initial algebra), with <html:code>rec</html:code>/<html:code>ind</html:code>. That is precisely an <html:em>indexed</html:em> (multi-sorted) container --- the <fr:link href="/sss-00EP/" title="A ranked-container interface for hylomorphisms" uri="https://stevenschaefer.net/sss-00EP/" display-uri="sss-00EP" type="local">ranked container</fr:link> moved from one object to X-indexed grammars.</html:p>
+            <html:p>The rank is string length. <html:code>Grammar.Later</html:code> guards a grammar behind consuming a <html:em>nonempty</html:em> prefix, built over <html:code>Cubical.Induction.WellFounded</html:code>. So a functor is ranked / locally contractive exactly when every <html:code>Var</html:code> sits under <fr:tex display="inline"><![CDATA[\triangleright ]]></fr:tex> --- the same guardedness as the <fr:link href="/sss-00EI/" title="Direct categories, the later modality, and Löb induction" uri="https://stevenschaefer.net/sss-00EI/" display-uri="sss-00EI" type="local">direct-category order</fr:link>. The <fr:link href="/sss-00EO/" title="Compositional combinators for local contractivity" uri="https://stevenschaefer.net/sss-00EO/" display-uri="sss-00EO" type="local">combinators</fr:link> are its <html:code>k</html:code>/<html:code>⊕e</html:code>/<html:code>&amp;e</html:code>/<html:code>⊗e</html:code> constructors.</html:p>
+            <html:p>The <html:code>gsa-lob</html:code> / <html:code>gsa-well-founded-recursion</html:code> worktrees and this branch are the <html:em>same</html:em> theorem over two sites --- strings versus a general direct category. The goal is to unify them into one Löb/hylo kit with two instantiations; CYK (<fr:link href="/sss-00EJ/" title="Intrinsic hylomorphisms: the output carrier is the specification" uri="https://stevenschaefer.net/sss-00EJ/" display-uri="sss-00EJ" type="local">roster</fr:link>) is the toy case, parsing ranked by span length.</html:p>
+          </fr:mainmatter>
+        </fr:tree>
+        <fr:tree show-metadata="true" expanded="false" toc="false" numbered="false">
+          <fr:frontmatter>
+            <fr:authors>
+              <fr:author>
+                <fr:link href="/stevenschaefer/" title="Steven Schaefer" uri="https://stevenschaefer.net/stevenschaefer/" display-uri="stevenschaefer" type="local">Steven Schaefer</fr:link>
+              </fr:author>
+            </fr:authors>
+            <fr:date>
+              <fr:year>2026</fr:year>
+              <fr:month>7</fr:month>
+              <fr:day>15</fr:day>
+            </fr:date>
+            <fr:source-path>/Users/stevenschaefer/forest/trees/sss-00EM.tree</fr:source-path>
+            <fr:uri>https://stevenschaefer.net/sss-00EM/</fr:uri>
+            <fr:display-uri>sss-00EM</fr:display-uri>
+            <fr:route>/sss-00EM/</fr:route>
+            <fr:title text="Intrinsic shortest-path, graphs, and streams (in flight)">Intrinsic shortest-path, graphs, and streams (in flight)</fr:title>
+            <fr:taxon>TODO</fr:taxon>
+            <fr:meta name="status">in-progress</fr:meta>
+          </fr:frontmatter>
+          <fr:mainmatter>
+            <html:p>Untracked work on the <html:code>lob</html:code> branch: directed-graph, weighted-graph, and shortest-path instances, plus shortest-path and stream examples and a perf test. The cost semiring already moved to <html:code>Data.Nat.More</html:code> (min-plus / tropical, with its <fr:tex display="inline"><![CDATA[\sqsubseteq ]]></fr:tex> order).</html:p>
+            <html:p>Goal: an intrinsic shortest-path in the style of <fr:link href="/sss-00EJ/" title="Intrinsic hylomorphisms: the output carrier is the specification" uri="https://stevenschaefer.net/sss-00EJ/" display-uri="sss-00EJ" type="local">Bellman--Ford</fr:link> over a proper (weighted) graph API, and streams as coalgebras of the later modality. Not yet building end-to-end.</html:p>
+          </fr:mainmatter>
+        </fr:tree>
+        <fr:tree show-metadata="true" expanded="false" toc="false" numbered="false">
+          <fr:frontmatter>
+            <fr:authors>
+              <fr:author>
+                <fr:link href="/stevenschaefer/" title="Steven Schaefer" uri="https://stevenschaefer.net/stevenschaefer/" display-uri="stevenschaefer" type="local">Steven Schaefer</fr:link>
+              </fr:author>
+            </fr:authors>
+            <fr:date>
+              <fr:year>2026</fr:year>
+              <fr:month>7</fr:month>
+              <fr:day>15</fr:day>
+            </fr:date>
+            <fr:source-path>/Users/stevenschaefer/forest/trees/sss-00EK.tree</fr:source-path>
+            <fr:uri>https://stevenschaefer.net/sss-00EK/</fr:uri>
+            <fr:display-uri>sss-00EK</fr:display-uri>
+            <fr:route>/sss-00EK/</fr:route>
+            <fr:title text="Measure-ordered direct categories via pullbackWFOrder">Measure-ordered direct categories via pullbackWFOrder</fr:title>
+            <fr:taxon>Definition</fr:taxon>
+          </fr:frontmatter>
+          <fr:mainmatter>
+            <html:p><html:code>Direct.Base</html:code> exports <html:code>pullbackWFOrder Wo isSetA meas</html:code>, pulling a well-founded order back along a measure into its domain. Every base used by the <fr:link href="/sss-00EJ/" title="Intrinsic hylomorphisms: the output carrier is the specification" uri="https://stevenschaefer.net/sss-00EJ/" display-uri="sss-00EJ" type="local">examples</fr:link> is a one-liner over it.</html:p>
+            <html:ul><html:li><html:code>Instances.ListByLength</html:code> --- lists over a carrier, ordered by length.</html:li>
+  <html:li><html:code>Instances.Bag</html:code> --- finite multisets, ordered by size.</html:li>
+  <html:li><html:code>Instances.Nat</html:code> and the lexicographic <html:code>Direct.Product</html:code> --- naturals and pairs.</html:li></html:ul>
+            <html:p><html:code>Instances.Poset</html:code> was generalised to <html:code>WFOrder ℓ ℓ'</html:code> so these bases are level-polymorphic. The single-use <html:code>NatPair</html:code> was inlined and deleted. Shared list predicates <html:code>All</html:code>, <html:code>Sorted</html:code>, and <html:code>lookupD</html:code> live in <html:code>Data.List.More</html:code>.</html:p>
+          </fr:mainmatter>
+        </fr:tree>
+        <fr:tree show-metadata="true" expanded="false" toc="false" numbered="false">
+          <fr:frontmatter>
+            <fr:authors>
+              <fr:author>
+                <fr:link href="/stevenschaefer/" title="Steven Schaefer" uri="https://stevenschaefer.net/stevenschaefer/" display-uri="stevenschaefer" type="local">Steven Schaefer</fr:link>
+              </fr:author>
+            </fr:authors>
+            <fr:date>
+              <fr:year>2026</fr:year>
+              <fr:month>7</fr:month>
+              <fr:day>15</fr:day>
+            </fr:date>
+            <fr:source-path>/Users/stevenschaefer/forest/trees/sss-00EG.tree</fr:source-path>
+            <fr:uri>https://stevenschaefer.net/sss-00EG/</fr:uri>
+            <fr:display-uri>sss-00EG</fr:display-uri>
+            <fr:route>/sss-00EG/</fr:route>
+            <fr:title text="The lob branch: direct categories, Löb induction, and intrinsic hylomorphisms">The lob branch: direct categories, Löb induction, and intrinsic hylomorphisms</fr:title>
+          </fr:frontmatter>
+          <fr:mainmatter>
+            <html:p>Summary of the <html:code>lob</html:code> branch's diffs to <html:code>main</html:code>: a self-contained account of well-founded recursion in Cubical Agda, from categorical foundations up to concrete algorithms verified <html:em>by type</html:em>. Target: Max New's guarded/direct-category development.</html:p>
+            <html:p>The branch stacks three layers.</html:p>
+            <html:ul><html:li><fr:link href="/sss-00EH/" title="Presheaves are monadic and comonadic over families" uri="https://stevenschaefer.net/sss-00EH/" display-uri="sss-00EH" type="local">Presheaves are monadic and comonadic over families</fr:link> --- the (co)Eilenberg--Moore foundation the guarded modality rests on.</html:li>
+  <html:li><fr:link href="/sss-00EI/" title="Direct categories, the later modality, and Löb induction" uri="https://stevenschaefer.net/sss-00EI/" display-uri="sss-00EI" type="local">Direct categories, the later modality, and Löb induction</fr:link> --- the recursion principle.</html:li>
+  <html:li><fr:link href="/sss-00EJ/" title="Intrinsic hylomorphisms: the output carrier is the specification" uri="https://stevenschaefer.net/sss-00EJ/" display-uri="sss-00EJ" type="local">Intrinsic hylomorphisms: the output carrier is the specification</fr:link> --- the payoff, a roster of verified algorithms.</html:li></html:ul>
+            <html:p>Infrastructure: <fr:link href="/sss-00EK/" title="Measure-ordered direct categories via pullbackWFOrder" uri="https://stevenschaefer.net/sss-00EK/" display-uri="sss-00EK" type="local">measure-ordered direct categories via pullbackWFOrder</fr:link>.</html:p>
+            <html:p>Where next: <fr:link href="/sss-00EN/" title="Directions for direct-category recursion in Cubical Agda" uri="https://stevenschaefer.net/sss-00EN/" display-uri="sss-00EN" type="local">directions for direct-category recursion</fr:link>.</html:p>
+            <html:p>Open threads: <fr:link href="/sss-00EL/" title="Fold shared integer-halving into a nat-utility home" uri="https://stevenschaefer.net/sss-00EL/" display-uri="sss-00EL" type="local">a shared <html:code>half</html:code> has no clean home</fr:link>; <fr:link href="/sss-00EM/" title="Intrinsic shortest-path, graphs, and streams (in flight)" uri="https://stevenschaefer.net/sss-00EM/" display-uri="sss-00EM" type="local">intrinsic shortest-path and streams are in flight</fr:link>.</html:p>
+          </fr:mainmatter>
+        </fr:tree>
+      </fr:mainmatter>
+    </fr:tree>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors />
+        <fr:title text="Related">Related</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter>
+        <fr:tree show-metadata="true" expanded="false" toc="false" numbered="false">
+          <fr:frontmatter>
+            <fr:authors>
+              <fr:author>
+                <fr:link href="/stevenschaefer/" title="Steven Schaefer" uri="https://stevenschaefer.net/stevenschaefer/" display-uri="stevenschaefer" type="local">Steven Schaefer</fr:link>
+              </fr:author>
+            </fr:authors>
+            <fr:date>
+              <fr:year>2026</fr:year>
+              <fr:month>7</fr:month>
+              <fr:day>15</fr:day>
+            </fr:date>
+            <fr:source-path>/Users/stevenschaefer/forest/trees/sss-00EI.tree</fr:source-path>
+            <fr:uri>https://stevenschaefer.net/sss-00EI/</fr:uri>
+            <fr:display-uri>sss-00EI</fr:display-uri>
+            <fr:route>/sss-00EI/</fr:route>
+            <fr:title text="Direct categories, the later modality, and Löb induction">Direct categories, the later modality, and Löb induction</fr:title>
+            <fr:taxon>Definition</fr:taxon>
+          </fr:frontmatter>
+          <fr:mainmatter>
+            <html:p>A <html:em>direct category</html:em> carries a well-founded degree functor (<html:code>Direct.Base</html:code>: directness as a displayed <html:code>StructureOver</html:code> plus <html:code>GlobalSection</html:code>; <html:code>Direct.WellFounded</html:code>). The strict-downset sieve of maps of strictly smaller degree (<html:code>Direct.StrictDownset</html:code>) defines the later modality <fr:tex display="inline"><![CDATA[\triangleright ]]></fr:tex> as a presheaf endofunctor with a <html:code>next</html:code> unit.</html:p>
+            <html:p><html:strong>Löb induction</html:strong> is the guarded fixed point: a map <fr:tex display="inline"><![CDATA[\triangleright  A \to  A]]></fr:tex> has a unique fixed point, computing definitionally because <html:code>WFOrder</html:code> lives in the <html:code>Eq</html:code>-world. Exposed as a presheaf-level <html:code>löb</html:code> and a family-level strong recursion <html:code>löbStr</html:code>.</html:p>
+            <html:p><html:code>Direct.LocallyContractive</html:code>: a locally contractive functor is a <fr:tex display="inline"><![CDATA[\Sigma ]]></fr:tex> of an object-action and a <fr:tex display="inline"><![CDATA[\triangleright ]]></fr:tex>-hom action; its <html:code>hylo</html:code> is Löb applied to the fused (co)algebra. <html:code>Direct.Product</html:code> gives lexicographic products of direct categories.</html:p>
+            <html:p>Notation: families are objects of the family category, exposed as <html:code>Löb.Fam</html:code>, so instances never respell <html:code>ob → hSet</html:code> by hand.</html:p>
+          </fr:mainmatter>
+        </fr:tree>
+      </fr:mainmatter>
+    </fr:tree>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors />
+        <fr:title text="Contributions">Contributions</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter />
+    </fr:tree>
+  </fr:backmatter>
+</fr:tree>

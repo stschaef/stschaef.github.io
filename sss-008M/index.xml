@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="/default.xsl"?>
+<fr:tree xmlns:fr="http://www.forester-notes.org" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:xml="http://www.w3.org/XML/1998/namespace" root="false" base-url="/">
+  <fr:frontmatter>
+    <fr:authors>
+      <fr:author>
+        <fr:link href="/stevenschaefer/" title="Steven Schaefer" uri="https://stevenschaefer.net/stevenschaefer/" display-uri="stevenschaefer" type="local">Steven Schaefer</fr:link>
+      </fr:author>
+    </fr:authors>
+    <fr:date>
+      <fr:year>2026</fr:year>
+      <fr:month>4</fr:month>
+      <fr:day>17</fr:day>
+    </fr:date>
+    <fr:source-path>/Users/stevenschaefer/forest/trees/sss-008M.tree</fr:source-path>
+    <fr:uri>https://stevenschaefer.net/sss-008M/</fr:uri>
+    <fr:display-uri>sss-008M</fr:display-uri>
+    <fr:route>/sss-008M/</fr:route>
+    <fr:title text="Forest capture server">Forest capture server</fr:title>
+  </fr:frontmatter>
+  <fr:mainmatter>
+    <html:p><html:code>~/nix-config/hosts/macproseph/capture-server.py</html:code>, reachable at <html:code>http://macproseph:8889/capture</html:code> over Tailscale.</html:p>
+    <html:ul><html:li>Four payload shapes: JSON prose, JSON verbatim, JSON webclip, multipart+form, raw-body file</html:li>
+  <html:li>Every capture gets an ISO-8601 UTC <html:code><![CDATA[\date]]></html:code> — required for the dashboard's "most recent" pane to surface it</html:li>
+  <html:li>PDFs land as <html:code><![CDATA[\meta{pdf}{\route-asset{...}}]]></html:code> (theme renders a viewer); images embed via inline <html:code><![CDATA[\<html:img>]]></html:code>; other files link through <html:code><![CDATA[\a]]></html:code></html:li>
+  <html:li><html:code>kick_sync</html:code> runs in a worker thread that waits for idle then blocking-starts <html:code>forest-pull.service</html:code>, then re-runs if more captures arrived during the cycle — without this, a capture landing mid-build is read after the build's input pass and never makes it to <html:code>output/</html:code></html:li></html:ul>
+  </fr:mainmatter>
+  <fr:backmatter>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors />
+        <fr:title text="References">References</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter />
+    </fr:tree>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors />
+        <fr:title text="Context">Context</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter>
+        <fr:tree show-metadata="true" expanded="false" toc="false" numbered="false">
+          <fr:frontmatter>
+            <fr:authors>
+              <fr:author>
+                <fr:link href="/stevenschaefer/" title="Steven Schaefer" uri="https://stevenschaefer.net/stevenschaefer/" display-uri="stevenschaefer" type="local">Steven Schaefer</fr:link>
+              </fr:author>
+            </fr:authors>
+            <fr:date>
+              <fr:year>2026</fr:year>
+              <fr:month>4</fr:month>
+              <fr:day>15</fr:day>
+            </fr:date>
+            <fr:source-path>/Users/stevenschaefer/forest/trees/sss-0088.tree</fr:source-path>
+            <fr:uri>https://stevenschaefer.net/sss-0088/</fr:uri>
+            <fr:display-uri>sss-0088</fr:display-uri>
+            <fr:route>/sss-0088/</fr:route>
+            <fr:title text="Forest Sync and Capture Architecture">Forest Sync and Capture Architecture</fr:title>
+            <fr:taxon>TODO</fr:taxon>
+            <fr:meta name="status">done</fr:meta>
+          </fr:frontmatter>
+          <fr:mainmatter>
+            <html:p>Design and implement bidirectional sync for the forest between schmapple (laptop) and macproseph (home server), plus a capture endpoint for creating trees from any device.</html:p>
+            <fr:tree show-metadata="false">
+              <fr:frontmatter>
+                <fr:authors>
+                  <fr:author>
+                    <fr:link href="/stevenschaefer/" title="Steven Schaefer" uri="https://stevenschaefer.net/stevenschaefer/" display-uri="stevenschaefer" type="local">Steven Schaefer</fr:link>
+                  </fr:author>
+                </fr:authors>
+                <fr:date>
+                  <fr:year>2026</fr:year>
+                  <fr:month>4</fr:month>
+                  <fr:day>15</fr:day>
+                </fr:date>
+                <fr:source-path>/Users/stevenschaefer/forest/trees/sss-0088.tree</fr:source-path>
+                <fr:title text="Laptop (schmapple)">Laptop (schmapple)</fr:title>
+              </fr:frontmatter>
+              <fr:mainmatter>
+                <html:p>Remove the existing crontab (<html:code>0 19 * * * ~/stschaef.github.io/build.sh</html:code>) which builds and deploys the public website. Website publishing is being redesigned separately (see <fr:link href="/sss-0089/" title="Redesign Website Publishing" uri="https://stevenschaefer.net/sss-0089/" display-uri="sss-0089" type="local">Website Publishing Redesign</fr:link>).</html:p>
+                <html:p>Add a new cron/launchd job that periodically:</html:p>
+                <html:ul><html:li>Stages and commits any uncommitted changes in <html:code>~/forest</html:code></html:li>
+  <html:li>Pushes to <html:code>origin</html:code> (GitHub)</html:li>
+  <html:li>Pulls any new commits (e.g. trees created via the capture endpoint on macproseph)</html:li></html:ul>
+              </fr:mainmatter>
+            </fr:tree>
+            <fr:tree show-metadata="false">
+              <fr:frontmatter>
+                <fr:authors>
+                  <fr:author>
+                    <fr:link href="/stevenschaefer/" title="Steven Schaefer" uri="https://stevenschaefer.net/stevenschaefer/" display-uri="stevenschaefer" type="local">Steven Schaefer</fr:link>
+                  </fr:author>
+                </fr:authors>
+                <fr:date>
+                  <fr:year>2026</fr:year>
+                  <fr:month>4</fr:month>
+                  <fr:day>15</fr:day>
+                </fr:date>
+                <fr:source-path>/Users/stevenschaefer/forest/trees/sss-0088.tree</fr:source-path>
+                <fr:title text="Home server (macproseph)">Home server (macproseph)</fr:title>
+              </fr:frontmatter>
+              <fr:mainmatter>
+                <html:p>Serve the forest on the Tailscale network so iPad/phone can browse it.</html:p>
+                <html:ul><html:li>Clone the forest repo to <html:code>/home/steven/forest</html:code></html:li>
+  <html:li>Run <html:code>forester build forest.toml</html:code> on a 15-minute systemd timer, producing <html:code>output/</html:code></html:li>
+  <html:li>Serve <html:code>output/</html:code> statically via caddy on port 8888 (Tailscale-only)</html:li>
+  <html:li><html:code>forest-pull.service</html:code> commits local captures, rebases against origin, pushes, then chains into <html:code>forest-build.service</html:code></html:li></html:ul>
+                <html:p>We originally planned <html:code>forester serve</html:code> (HTMX mode), but hit URL routing bugs — the slug link generator builds <html:code>/HOST/X/</html:code> paths that don't match the server's <html:code>/trees/X</html:code> router. Static build sidesteps this; the XSLT link routing emits relative hrefs which work from any origin.</html:p>
+              </fr:mainmatter>
+            </fr:tree>
+            <fr:tree show-metadata="false">
+              <fr:frontmatter>
+                <fr:authors>
+                  <fr:author>
+                    <fr:link href="/stevenschaefer/" title="Steven Schaefer" uri="https://stevenschaefer.net/stevenschaefer/" display-uri="stevenschaefer" type="local">Steven Schaefer</fr:link>
+                  </fr:author>
+                </fr:authors>
+                <fr:date>
+                  <fr:year>2026</fr:year>
+                  <fr:month>4</fr:month>
+                  <fr:day>15</fr:day>
+                </fr:date>
+                <fr:source-path>/Users/stevenschaefer/forest/trees/sss-0088.tree</fr:source-path>
+                <fr:title text="Capture endpoint">Capture endpoint</fr:title>
+              </fr:frontmatter>
+              <fr:mainmatter>
+                <html:p>An HTTP endpoint on macproseph (Tailscale-only) that accepts shared content from iPad, phone, or desktop and creates a tree for it.</html:p>
+                <html:ul><html:li>Accepts POST with text, PDF, or URL</html:li>
+  <html:li>Allocates a tree ID via <html:code>forester new</html:code></html:li>
+  <html:li>Writes tree content with appropriate tags (e.g. <html:code>capture</html:code>, <html:code>handwriting</html:code> for PDFs)</html:li>
+  <html:li>Commits and pushes to origin so the laptop picks it up on next sync</html:li></html:ul>
+              </fr:mainmatter>
+            </fr:tree>
+            <fr:tree show-metadata="false">
+              <fr:frontmatter>
+                <fr:authors>
+                  <fr:author>
+                    <fr:link href="/stevenschaefer/" title="Steven Schaefer" uri="https://stevenschaefer.net/stevenschaefer/" display-uri="stevenschaefer" type="local">Steven Schaefer</fr:link>
+                  </fr:author>
+                </fr:authors>
+                <fr:date>
+                  <fr:year>2026</fr:year>
+                  <fr:month>4</fr:month>
+                  <fr:day>15</fr:day>
+                </fr:date>
+                <fr:source-path>/Users/stevenschaefer/forest/trees/sss-0088.tree</fr:source-path>
+                <fr:title text="Sync flow">Sync flow</fr:title>
+              </fr:frontmatter>
+              <fr:mainmatter>
+                <html:p>Bidirectional via git through GitHub as the shared remote:</html:p>
+                <html:ul><html:li>Laptop pushes to origin on a schedule</html:li>
+  <html:li>macproseph pulls from origin on a schedule</html:li>
+  <html:li>Captures on macproseph commit + push to origin</html:li>
+  <html:li>Laptop pulls captured trees on next sync cycle</html:li></html:ul>
+              </fr:mainmatter>
+            </fr:tree>
+            <fr:tree show-metadata="false">
+              <fr:frontmatter>
+                <fr:authors>
+                  <fr:author>
+                    <fr:link href="/stevenschaefer/" title="Steven Schaefer" uri="https://stevenschaefer.net/stevenschaefer/" display-uri="stevenschaefer" type="local">Steven Schaefer</fr:link>
+                  </fr:author>
+                </fr:authors>
+                <fr:date>
+                  <fr:year>2026</fr:year>
+                  <fr:month>4</fr:month>
+                  <fr:day>17</fr:day>
+                </fr:date>
+                <fr:source-path>/Users/stevenschaefer/forest/trees/sss-008L.tree</fr:source-path>
+                <fr:uri>https://stevenschaefer.net/sss-008L/</fr:uri>
+                <fr:display-uri>sss-008L</fr:display-uri>
+                <fr:route>/sss-008L/</fr:route>
+                <fr:title text="iOS Shortcuts for forest capture">iOS Shortcuts for forest capture</fr:title>
+              </fr:frontmatter>
+              <fr:mainmatter>
+                <html:p>Four signed <html:code>.shortcut</html:code> files in <html:code>~/forest/utils/shortcuts/</html:code>, generated by <html:code>gen-capture-shortcuts.py</html:code> and signed with <html:code>shortcuts sign --mode anyone</html:code> for distribution to iPad/iPhone without the removed "Allow Untrusted Shortcuts" toggle.</html:p>
+                <html:p>The shortcuts:</html:p>
+                <html:ul><html:li><fr:link href="/sss-008N/" title="Capture Prose shortcut" uri="https://stevenschaefer.net/sss-008N/" display-uri="sss-008N" type="local">Capture Prose</fr:link></html:li>
+  <html:li><fr:link href="/sss-008O/" title="Capture Dictation shortcut" uri="https://stevenschaefer.net/sss-008O/" display-uri="sss-008O" type="local">Capture Dictation</fr:link></html:li>
+  <html:li><fr:link href="/sss-008P/" title="Capture URL shortcut" uri="https://stevenschaefer.net/sss-008P/" display-uri="sss-008P" type="local">Capture URL</fr:link></html:li>
+  <html:li><fr:link href="/sss-008Q/" title="Capture File shortcut" uri="https://stevenschaefer.net/sss-008Q/" display-uri="sss-008Q" type="local">Capture File</fr:link></html:li></html:ul>
+                <html:p>Gotchas discovered while wiring these up:</html:p>
+                <html:ul><html:li><fr:link href="/sss-008R/" title="Gotcha: Set Variable needs explicit WFInput" uri="https://stevenschaefer.net/sss-008R/" display-uri="sss-008R" type="local">Set Variable needs explicit WFInput</fr:link></html:li>
+  <html:li><fr:link href="/sss-008S/" title="Gotcha: Form-encoded body, not JSON" uri="https://stevenschaefer.net/sss-008S/" display-uri="sss-008S" type="local">Form-encoded body, not JSON</fr:link></html:li>
+  <html:li><fr:link href="/sss-008T/" title="Gotcha: Share-sheet input via WFRequestVariable" uri="https://stevenschaefer.net/sss-008T/" display-uri="sss-008T" type="local">Share-sheet input via WFRequestVariable</fr:link></html:li>
+  <html:li><fr:link href="/sss-008U/" title="Gotcha: Build tag in the URL" uri="https://stevenschaefer.net/sss-008U/" display-uri="sss-008U" type="local">Build tag in the URL</fr:link></html:li></html:ul>
+              </fr:mainmatter>
+            </fr:tree>
+            <fr:tree show-metadata="false">
+              <fr:frontmatter>
+                <fr:authors>
+                  <fr:author>
+                    <fr:link href="/stevenschaefer/" title="Steven Schaefer" uri="https://stevenschaefer.net/stevenschaefer/" display-uri="stevenschaefer" type="local">Steven Schaefer</fr:link>
+                  </fr:author>
+                </fr:authors>
+                <fr:date>
+                  <fr:year>2026</fr:year>
+                  <fr:month>4</fr:month>
+                  <fr:day>17</fr:day>
+                </fr:date>
+                <fr:source-path>/Users/stevenschaefer/forest/trees/sss-008M.tree</fr:source-path>
+                <fr:uri>https://stevenschaefer.net/sss-008M/</fr:uri>
+                <fr:display-uri>sss-008M</fr:display-uri>
+                <fr:route>/sss-008M/</fr:route>
+                <fr:title text="Forest capture server">Forest capture server</fr:title>
+              </fr:frontmatter>
+              <fr:mainmatter>
+                <html:p><html:code>~/nix-config/hosts/macproseph/capture-server.py</html:code>, reachable at <html:code>http://macproseph:8889/capture</html:code> over Tailscale.</html:p>
+                <html:ul><html:li>Four payload shapes: JSON prose, JSON verbatim, JSON webclip, multipart+form, raw-body file</html:li>
+  <html:li>Every capture gets an ISO-8601 UTC <html:code><![CDATA[\date]]></html:code> — required for the dashboard's "most recent" pane to surface it</html:li>
+  <html:li>PDFs land as <html:code><![CDATA[\meta{pdf}{\route-asset{...}}]]></html:code> (theme renders a viewer); images embed via inline <html:code><![CDATA[\<html:img>]]></html:code>; other files link through <html:code><![CDATA[\a]]></html:code></html:li>
+  <html:li><html:code>kick_sync</html:code> runs in a worker thread that waits for idle then blocking-starts <html:code>forest-pull.service</html:code>, then re-runs if more captures arrived during the cycle — without this, a capture landing mid-build is read after the build's input pass and never makes it to <html:code>output/</html:code></html:li></html:ul>
+              </fr:mainmatter>
+            </fr:tree>
+          </fr:mainmatter>
+        </fr:tree>
+      </fr:mainmatter>
+    </fr:tree>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors />
+        <fr:title text="Backlinks">Backlinks</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter>
+        <fr:tree show-metadata="true" expanded="false" toc="false" numbered="false">
+          <fr:frontmatter>
+            <fr:authors>
+              <fr:author>
+                <fr:link href="/stevenschaefer/" title="Steven Schaefer" uri="https://stevenschaefer.net/stevenschaefer/" display-uri="stevenschaefer" type="local">Steven Schaefer</fr:link>
+              </fr:author>
+            </fr:authors>
+            <fr:date>
+              <fr:year>2026</fr:year>
+              <fr:month>4</fr:month>
+              <fr:day>17</fr:day>
+            </fr:date>
+            <fr:source-path>/Users/stevenschaefer/forest/trees/sss-009F.tree</fr:source-path>
+            <fr:uri>https://stevenschaefer.net/sss-009F/</fr:uri>
+            <fr:display-uri>sss-009F</fr:display-uri>
+            <fr:route>/sss-009F/</fr:route>
+            <fr:title text="Debug: Dashboard Not Updating After Sync on macproseph">Debug: Dashboard Not Updating After Sync on macproseph</fr:title>
+            <fr:taxon>TODO</fr:taxon>
+            <fr:meta name="status">done</fr:meta>
+            <fr:meta name="priority">high</fr:meta>
+            <fr:meta name="completed">2026-04-17</fr:meta>
+            <fr:meta name="apple-id">x-apple-reminder://BF64B5FB-3150-4A97-BACF-BA8D1ABAE4FF</fr:meta>
+            <fr:meta name="forester-addr">sss-009F</fr:meta>
+          </fr:frontmatter>
+          <fr:mainmatter>
+            <html:p>New trees are successfully synced to macproseph (pulled from origin), but the dashboard's Datalog queries are not reflecting them — the dashboard appears stale even though the tree files are present on disk.</html:p>
+            <html:p>Server configuration lives in <html:code>~/nix-config/hosts/macproseph/</html:code>. The sync pipeline is documented in <fr:link href="/sss-0088/" title="Forest Sync and Capture Architecture" uri="https://stevenschaefer.net/sss-0088/" display-uri="sss-0088" type="local">Forest Sync and Capture Architecture</fr:link>; the capture server's <html:code>kick_sync</html:code> flow (which chains <html:code>forest-pull.service</html:code> → <html:code>forest-build.service</html:code>) is described in <fr:link href="/sss-008M/" title="Forest capture server" uri="https://stevenschaefer.net/sss-008M/" display-uri="sss-008M" type="local">Forest capture server</fr:link>.</html:p>
+            <html:p>Possible causes to investigate:</html:p>
+            <html:ul><html:li><html:code>forest-build.service</html:code> not triggering after a pull-only sync (i.e. when macproseph pulls from origin but no capture happened, so <html:code>kick_sync</html:code> never fires)</html:li>
+  <html:li><html:code>forester build</html:code> running before the pull completes, so new trees aren't on disk yet when the build reads inputs</html:li>
+  <html:li>Caddy serving stale output from a previous build — check whether caddy is configured with <html:code>file_server</html:code> pointing at the live <html:code>output/</html:code> directory or a cached copy</html:li>
+  <html:li>Datalog query cache inside forester not invalidated across builds (less likely; forester rebuilds from scratch)</html:li>
+  <html:li>The systemd timer for <html:code>forest-pull.service</html:code> not actually firing — verify with <html:code>systemctl status forest-pull.timer</html:code> and <html:code>journalctl -u forest-pull.service</html:code></html:li></html:ul>
+            <html:p>Debugging checklist:</html:p>
+            <html:ul><html:li>SSH into macproseph; confirm new tree files are present under <html:code>/home/steven/forest/trees/</html:code></html:li>
+  <html:li>Check <html:code>journalctl -u forest-build.service</html:code> to see whether a build ran after the most recent pull and what its exit status was</html:li>
+  <html:li>Inspect the <html:code>output/</html:code> directory mtime — is it newer than the pulled tree files?</html:li>
+  <html:li>Check <html:code>~/nix-config/hosts/macproseph/</html:code> for the systemd unit definitions and confirm the dependency chain between pull and build services</html:li>
+  <html:li>Re-run <html:code>forester build --dev forest.toml</html:code> manually on macproseph and verify the dashboard reflects the new trees</html:li></html:ul>
+            <html:p><html:strong>Resolution.</html:strong> Root cause: <html:code>forest.toml</html:code> has <html:code>exclude_tags = ["private", "draft"]</html:code> for the public website build, but macproseph was using the same config. The dashboard tree carries <html:code><![CDATA[\tag{private}]]></html:code>, so forester skipped regenerating its output page on every build — leaving a stale snapshot from April 15. Fix: added <html:code>macproseph.toml</html:code> (no <html:code>exclude_tags</html:code>) and updated <html:code>forest.nix</html:code> to use it. Dashboard now rebuilds correctly every 15 minutes.</html:p>
+          </fr:mainmatter>
+        </fr:tree>
+      </fr:mainmatter>
+    </fr:tree>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors />
+        <fr:title text="Related">Related</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter />
+    </fr:tree>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors />
+        <fr:title text="Contributions">Contributions</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter />
+    </fr:tree>
+  </fr:backmatter>
+</fr:tree>

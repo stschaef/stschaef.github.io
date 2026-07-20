@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="/default.xsl"?>
+<fr:tree xmlns:fr="http://www.forester-notes.org" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:xml="http://www.w3.org/XML/1998/namespace" root="false" base-url="/">
+  <fr:frontmatter>
+    <fr:authors>
+      <fr:author>
+        <fr:link href="/stevenschaefer/" title="Steven Schaefer" uri="https://stevenschaefer.net/stevenschaefer/" display-uri="stevenschaefer" type="local">Steven Schaefer</fr:link>
+      </fr:author>
+    </fr:authors>
+    <fr:date>
+      <fr:year>2025</fr:year>
+      <fr:month>1</fr:month>
+      <fr:day>24</fr:day>
+    </fr:date>
+    <fr:uri>https://stevenschaefer.net/sss-000W/</fr:uri>
+    <fr:display-uri>sss-000W</fr:display-uri>
+    <fr:route>/sss-000W/</fr:route>
+    <fr:title text="Deterministic Regular Expressions">Deterministic Regular Expressions</fr:title>
+    <fr:taxon>Definition</fr:taxon>
+  </fr:frontmatter>
+  <fr:mainmatter>
+    <html:p><html:em>Deterministic regular expressions</html:em> are a grammar formalism for defining regular expressions that correspond to deterministic regular languages.
+
+In the spirit of <fr:link href="/bruggemannkleinwood/" title="Deterministic regular languages" uri="https://stevenschaefer.net/bruggemannkleinwood/" display-uri="bruggemannkleinwood" type="local">Bruggemann-Klein and Wood</fr:link> and <fr:link href="/krishnaswami_typed_2019/" title="A typed, algebraic approach to parsing" uri="https://stevenschaefer.net/krishnaswami_typed_2019/" display-uri="krishnaswami_typed_2019" type="local">Krishaswami and Yallop</fr:link>, inductively define the deterministic regular expressions in terms of their <fr:link href="/sss-0014/" title="Nullable Grammar" uri="https://stevenschaefer.net/sss-0014/" display-uri="sss-0014" type="local">nullability</fr:link>, <fr:link href="/sss-000Y/" title="First Set" uri="https://stevenschaefer.net/sss-000Y/" display-uri="sss-000Y" type="local">first set</fr:link>, and <fr:link href="/sss-0010/" title="FollowLast Set" uri="https://stevenschaefer.net/sss-0010/" display-uri="sss-0010" type="local">followlast set</fr:link>:
+  <html:ul><html:li><fr:tex display="inline"><![CDATA[\epsilon ]]></fr:tex>, the grammar accepting only the empty string.</html:li>
+    <html:li><fr:tex display="inline"><![CDATA[\texttt {"}c\texttt {"}]]></fr:tex>, the grammar only accepting the length 1 string comprising the character <fr:tex display="inline"><![CDATA[c]]></fr:tex> for some character <fr:tex display="inline"><![CDATA[c]]></fr:tex> drawn from the alphabet</html:li>
+    <html:li><fr:tex display="inline"><![CDATA[r \otimes  r']]></fr:tex>, the concatenation of <fr:tex display="inline"><![CDATA[r]]></fr:tex> and <fr:tex display="inline"><![CDATA[r']]></fr:tex> where <fr:tex display="inline"><![CDATA[\neg  \mathsf {Null}(r)]]></fr:tex> and <fr:tex display="inline"><![CDATA[\mathsf {FLast}(r) \cap  \mathsf {First}(r') = \emptyset ]]></fr:tex></html:li>
+    <html:li><fr:tex display="inline"><![CDATA[r \oplus  r']]></fr:tex>, the disjunction of <fr:tex display="inline"><![CDATA[r]]></fr:tex> and <fr:tex display="inline"><![CDATA[r']]></fr:tex> where <fr:tex display="inline"><![CDATA[\neg  (\mathsf {Null}(r) \land  \mathsf {Null}(r'))]]></fr:tex> and <fr:tex display="inline"><![CDATA[\mathsf {First}(r) \cap  \mathsf {First}(r') = \emptyset ]]></fr:tex></html:li>
+    <html:li><fr:tex display="inline"><![CDATA[{r}^{*}]]></fr:tex>, the Kleene star of <fr:tex display="inline"><![CDATA[r]]></fr:tex> where <fr:tex display="inline"><![CDATA[\neg  \mathsf {Null}(r)]]></fr:tex> and <fr:tex display="inline"><![CDATA[\mathsf {FLast}(r) \cap  \mathsf {First}(r) = \emptyset ]]></fr:tex></html:li></html:ul></html:p>
+    <html:p>
+  In each of the above constructors, the constraints on <fr:tex display="inline"><![CDATA[\mathsf {First}(r)]]></fr:tex> and <fr:tex display="inline"><![CDATA[\mathsf {FLast}(r)]]></fr:tex> remove sources of ambiguity in a regular expressions. They provide a sound guarantee that the resulting regular expression has at most one parse for any string.
+</html:p>
+  </fr:mainmatter>
+  <fr:backmatter>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors />
+        <fr:title text="References">References</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter>
+        <fr:tree show-metadata="true" expanded="false" toc="false" numbered="false">
+          <fr:frontmatter>
+            <fr:authors>
+              <fr:author>
+                <fr:link href="/neelakantankrishnaswami/" title="Neelakantan R. Krishnaswami" uri="https://stevenschaefer.net/neelakantankrishnaswami/" display-uri="neelakantankrishnaswami" type="local">Neelakantan R. Krishnaswami</fr:link>
+              </fr:author>
+              <fr:author>
+                <fr:link href="/jeremyyallop/" title="Jeremy Yallop" uri="https://stevenschaefer.net/jeremyyallop/" display-uri="jeremyyallop" type="local">Jeremy Yallop</fr:link>
+              </fr:author>
+            </fr:authors>
+            <fr:date>
+              <fr:year>2019</fr:year>
+              <fr:month>6</fr:month>
+            </fr:date>
+            <fr:uri>https://stevenschaefer.net/krishnaswami_typed_2019/</fr:uri>
+            <fr:display-uri>krishnaswami_typed_2019</fr:display-uri>
+            <fr:route>/krishnaswami_typed_2019/</fr:route>
+            <fr:title text="A typed, algebraic approach to parsing">A typed, algebraic approach to parsing</fr:title>
+            <fr:taxon>Reference</fr:taxon>
+            <fr:meta name="layout">wide</fr:meta>
+            <fr:meta name="doi">10.1145/3314221.3314625</fr:meta>
+            <fr:meta name="external">https://dl.acm.org/doi/10.1145/3314221.3314625</fr:meta>
+            <fr:meta name="pdf" />
+            <fr:meta name="bibtex"><![CDATA[@inproceedings{krishnaswami_typed_2019,
+ title = {A typed, algebraic approach to parsing},
+ author = {Krishnaswami, Neelakantan R. and Yallop, Jeremy},
+ year = {2019},
+ isbn = {978-1-4503-6712-7},
+ doi = {10.1145/3314221.3314625},
+ url = {https://dl.acm.org/doi/10.1145/3314221.3314625},
+ urldate = {2024-04-22},
+ booktitle = {Proceedings of the 40th {ACM} {SIGPLAN} {Conference} on {Programming} {Language} {Design} and {Implementation}},
+ pages = {379--393},
+ publisher = {ACM},
+ address = {Phoenix AZ USA},
+ file = {Krishnaswami and Yallop - 2019 - A typed, algebraic approach to parsing.pdf:/Users/stevenschaefer/Zotero/storage/HUS3NZFK/Krishnaswami and Yallop - 2019 - A typed, algebraic approach to parsing.pdf:application/pdf},
+ month = {June},
+ language = {en}
+}]]></fr:meta>
+          </fr:frontmatter>
+          <fr:mainmatter />
+        </fr:tree>
+        <fr:tree show-metadata="true" expanded="false" toc="false" numbered="false">
+          <fr:frontmatter>
+            <fr:authors>
+              <fr:author>
+                <fr:link href="/annebruggemannklein/" title="Anne Bruggemann-Klein" uri="https://stevenschaefer.net/annebruggemannklein/" display-uri="annebruggemannklein" type="local">Anne Bruggemann-Klein</fr:link>
+              </fr:author>
+              <fr:author>
+                <fr:link href="/derickwood/" title="Derick Wood" uri="https://stevenschaefer.net/derickwood/" display-uri="derickwood" type="local">Derick Wood</fr:link>
+              </fr:author>
+            </fr:authors>
+            <fr:uri>https://stevenschaefer.net/bruggemannkleinwood/</fr:uri>
+            <fr:display-uri>bruggemannkleinwood</fr:display-uri>
+            <fr:route>/bruggemannkleinwood/</fr:route>
+            <fr:title text="Deterministic regular languages">Deterministic regular languages</fr:title>
+            <fr:taxon>Reference</fr:taxon>
+            <fr:meta name="layout">wide</fr:meta>
+            <fr:meta name="doi">10.1007/3-540-55210-3_182</fr:meta>
+            <fr:meta name="bibtex"><![CDATA[@InProceedings{10.1007/3-540-55210-3_182,
+author="Br{\"u}ggemann-Klein, Anne
+and Wood, Derick",
+editor="Finkel, Alain
+and Jantzen, Matthias",
+title="Deterministic regular languages",
+booktitle="STACS 92",
+year="1992",
+publisher="Springer Berlin Heidelberg",
+address="Berlin, Heidelberg",
+pages="173--184",
+abstract="The ISO standard for Standard Generalized Markup Language (SGML) provides a syntactic meta-language for the definition of textual markup systems. In the standard the right hand sides of productions are called content models and they are based on regular expressions. The allowable regular expressions are those that are ``unambiguous'' as defined by the standard. Unfortunately, the standard's use of the term ``unambiguous'' does not correspond to the two well known notions, since not all regular languages are denoted by ``unambiguous'' expressions. Furthermore, the standard's definition of ``unambiguous'' is somewhat vague. Therefore, we provide a precise definition of ``unambiguous expressions'' and rename them deterministic regular expressions to avoid any confusion. A regular expression E is deterministic if the canonical $\epsilon$-free finite automaton Merecognizing L(E) is deterministic. A regular language is deterministic if there is a deterministic expression that denotes it. We give a Kleene-like theorem for deterministic regular languages and we characterize them in terms of the structural properties of the minimal deterministic automata recognizing them. The latter result enables us to decide if a given regular expression denotes a deterministic regular language and, if so, to construct an equivalent deterministic expression.",
+isbn="978-3-540-46775-5"
+}]]></fr:meta>
+          </fr:frontmatter>
+          <fr:mainmatter />
+        </fr:tree>
+      </fr:mainmatter>
+    </fr:tree>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors />
+        <fr:title text="Context">Context</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter />
+    </fr:tree>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors />
+        <fr:title text="Backlinks">Backlinks</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter />
+    </fr:tree>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors />
+        <fr:title text="Related">Related</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter>
+        <fr:tree show-metadata="true" expanded="false" toc="false" numbered="false">
+          <fr:frontmatter>
+            <fr:authors />
+            <fr:date>
+              <fr:year>2025</fr:year>
+              <fr:month>1</fr:month>
+              <fr:day>24</fr:day>
+            </fr:date>
+            <fr:uri>https://stevenschaefer.net/sss-000Y/</fr:uri>
+            <fr:display-uri>sss-000Y</fr:display-uri>
+            <fr:route>/sss-000Y/</fr:route>
+            <fr:title text="First Set">First Set</fr:title>
+            <fr:taxon>Definition</fr:taxon>
+          </fr:frontmatter>
+          <fr:mainmatter>
+            <html:p>
+  The first set (<fr:tex display="inline"><![CDATA[\mathsf {First}(\cdot )]]></fr:tex>) of a grammar <fr:tex display="inline"><![CDATA[A]]></fr:tex> are all the characters that may appear at the beginning of a word in the language of <fr:tex display="inline"><![CDATA[A]]></fr:tex>.
+
+  <fr:tex display="block"><![CDATA[ \mathsf {First}(A) = \{ c ~|~ \exists  w . cw \in  L(A) \}]]></fr:tex></html:p>
+          </fr:mainmatter>
+        </fr:tree>
+        <fr:tree show-metadata="true" expanded="false" toc="false" numbered="false">
+          <fr:frontmatter>
+            <fr:authors />
+            <fr:date>
+              <fr:year>2025</fr:year>
+              <fr:month>1</fr:month>
+              <fr:day>24</fr:day>
+            </fr:date>
+            <fr:uri>https://stevenschaefer.net/sss-0010/</fr:uri>
+            <fr:display-uri>sss-0010</fr:display-uri>
+            <fr:route>/sss-0010/</fr:route>
+            <fr:title text="FollowLast Set">FollowLast Set</fr:title>
+            <fr:taxon>Definition</fr:taxon>
+          </fr:frontmatter>
+          <fr:mainmatter>
+            <html:p>
+  The followlast set (<fr:tex display="inline"><![CDATA[\mathsf {FLast}(\cdot )]]></fr:tex>) of a grammar <fr:tex display="inline"><![CDATA[A]]></fr:tex> are all the characters that may follow a word in the language of <fr:tex display="inline"><![CDATA[A]]></fr:tex> in a string that is in the language of <fr:tex display="inline"><![CDATA[A]]></fr:tex>.
+
+  <fr:tex display="block"><![CDATA[ \mathsf {FLast}(A) = \{ c ~|~ \exists  w , w_A . w_A \in  L(A) \land  w_Acw \in  L(A) \}]]></fr:tex></html:p>
+          </fr:mainmatter>
+        </fr:tree>
+        <fr:tree show-metadata="true" expanded="false" toc="false" numbered="false">
+          <fr:frontmatter>
+            <fr:authors />
+            <fr:date>
+              <fr:year>2025</fr:year>
+              <fr:month>1</fr:month>
+              <fr:day>24</fr:day>
+            </fr:date>
+            <fr:uri>https://stevenschaefer.net/sss-0014/</fr:uri>
+            <fr:display-uri>sss-0014</fr:display-uri>
+            <fr:route>/sss-0014/</fr:route>
+            <fr:title text="Nullable Grammar">Nullable Grammar</fr:title>
+            <fr:taxon>Definition</fr:taxon>
+          </fr:frontmatter>
+          <fr:mainmatter>
+            <html:p>
+  A grammar <fr:tex display="inline"><![CDATA[A]]></fr:tex> is nullable if the empty string belongs to the language of <fr:tex display="inline"><![CDATA[A]]></fr:tex>.
+</html:p>
+          </fr:mainmatter>
+        </fr:tree>
+      </fr:mainmatter>
+    </fr:tree>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors />
+        <fr:title text="Contributions">Contributions</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter />
+    </fr:tree>
+  </fr:backmatter>
+</fr:tree>

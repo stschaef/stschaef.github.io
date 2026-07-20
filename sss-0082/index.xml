@@ -1,0 +1,1019 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="/default.xsl"?>
+<fr:tree xmlns:fr="http://www.forester-notes.org" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:xml="http://www.w3.org/XML/1998/namespace" root="false" base-url="/">
+  <fr:frontmatter>
+    <fr:authors>
+      <fr:author>
+        <fr:link href="/stevenschaefer/" title="Steven Schaefer" uri="https://stevenschaefer.net/stevenschaefer/" display-uri="stevenschaefer" type="local">Steven Schaefer</fr:link>
+      </fr:author>
+    </fr:authors>
+    <fr:date>
+      <fr:year>2026</fr:year>
+      <fr:month>4</fr:month>
+      <fr:day>2</fr:day>
+    </fr:date>
+    <fr:source-path>/Users/stevenschaefer/forest/trees/sss-0082.tree</fr:source-path>
+    <fr:uri>https://stevenschaefer.net/sss-0082/</fr:uri>
+    <fr:display-uri>sss-0082</fr:display-uri>
+    <fr:route>/sss-0082/</fr:route>
+    <fr:title text="Slow Chains of Fillers for Reindexings for Instantiating Vertical Exponentials">Slow Chains of Fillers for Reindexings for Instantiating Vertical Exponentials</fr:title>
+  </fr:frontmatter>
+  <fr:mainmatter>
+    <html:p>
+  In Cubical Categorical Logic we have an issue instantiating vertical (and
+  displayed) universal structures in concrete categories. In
+  particular, vertical exponentials in the displayed category of sets.
+</html:p>
+    <html:p>The following code should in principle work, and technically it
+does, but typechecking is prohibitively slow. It marginally speeds up
+if I fill in the underscores, but there is still something
+fundamentally wrong and typechecking is too slow</html:p>
+    <html:pre>ExponentialsⱽSETᴰueⱽ :
+  {X : hSet ℓ} →
+  (Xᴰ Yᴰ : SETᴰ.ob[ X ]) →
+  UniversalElementⱽ' (SETᴰ ℓ ℓ') X
+    (LRⱽObᴰ→LRⱽ (SETᴰ ℓ ℓ')
+      (Xᴰ , AllLRⱽSETᴰ Xᴰ) ⇒ⱽPshSmall (SETᴰ ℓ ℓ' ⟨ X ⟩[-][-, Yᴰ ]))
+ExponentialsⱽSETᴰueⱽ Xᴰ Yᴰ .vertexⱽ x = (⟨ Xᴰ x ⟩ → ⟨ Yᴰ x ⟩) , isSet→ (Yᴰ x .snd)
+ExponentialsⱽSETᴰueⱽ Xᴰ Yᴰ .elementⱽ = λ x z → z .fst (z .snd)
+ExponentialsⱽSETᴰueⱽ Xᴰ Yᴰ .universalⱽ (Z , Zᴰ , _) .fst = λ z x z₁ z₂ → z x (z₁ , z₂)
+ExponentialsⱽSETᴰueⱽ {X = X} Xᴰ Yᴰ .universalⱽ (Z , Zᴰ , g) .snd .fst f =
+  SETᴰ.rectifyOut $
+    SETᴰ.reind-filler⁻ _
+    ∙ SETᴰ.congᴰ (λ (u : uTy) z zᴰ → f z (u z zᴰ))
+        (funExt₂ λ z zᴰ →
+          ΣPathP ((funExt₂⁻ (SETᴰ.rectifyOut $ SETᴰ.reind-filler⁻ _) z zᴰ) ,
+                   funExt₂⁻ (SETᴰ.rectifyOut $ SETᴰ.reind-filler⁻ _
+                                               ∙ SETᴰ.reind-filler⁻ _
+                                               ∙ SETᴰ.reind-filler⁻ _
+                                               ∙ SETᴰ.reind-filler⁻ _)
+                   z zᴰ))
+    where
+    g*Xᴰ = isFibrationSETᴰ._*_ {x = Z} g Xᴰ
+    uTy = (z : ⟨ Z ⟩) → (⟨ Zᴰ z ⟩ × ⟨ Xᴰ (g z) ⟩) → ⟨ Zᴰ z ⟩ × ⟨ g*Xᴰ z ⟩
+ExponentialsⱽSETᴰueⱽ Xᴰ Yᴰ .universalⱽ (Z , Zᴰ , _) .snd .snd = {!!}
+</html:pre>
+  </fr:mainmatter>
+  <fr:backmatter>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors />
+        <fr:title text="References">References</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter />
+    </fr:tree>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors />
+        <fr:title text="Context">Context</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter />
+    </fr:tree>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors />
+        <fr:title text="Backlinks">Backlinks</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter>
+        <fr:tree show-metadata="true" expanded="false" toc="false" numbered="false">
+          <fr:frontmatter>
+            <fr:authors>
+              <fr:author>
+                <fr:link href="/stevenschaefer/" title="Steven Schaefer" uri="https://stevenschaefer.net/stevenschaefer/" display-uri="stevenschaefer" type="local">Steven Schaefer</fr:link>
+              </fr:author>
+            </fr:authors>
+            <fr:date>
+              <fr:year>2026</fr:year>
+              <fr:month>5</fr:month>
+              <fr:day>6</fr:day>
+            </fr:date>
+            <fr:source-path>/Users/stevenschaefer/forest/trees/sss-00BO.tree</fr:source-path>
+            <fr:uri>https://stevenschaefer.net/sss-00BO/</fr:uri>
+            <fr:display-uri>sss-00BO</fr:display-uri>
+            <fr:route>/sss-00BO/</fr:route>
+            <fr:title text="Benchmark cause of slowness in Displayed.Instances.Sets.Properties">Benchmark cause of slowness in <html:code>Displayed.Instances.Sets.Properties</html:code></fr:title>
+            <fr:taxon>TODO</fr:taxon>
+            <fr:meta name="status">done</fr:meta>
+            <fr:meta name="priority">high</fr:meta>
+          </fr:frontmatter>
+          <fr:mainmatter>
+            <html:p>Build standalone Agda programs that measure typechecking time as a function
+of reindexing depth and proof style, to confirm or falsify the hypothesis that
+the slowness in <html:code>Displayed.Instances.Sets.Properties</html:code> comes from nested
+reindexings combined with filler-at-a-time proofs (many transports over
+<html:code>refl</html:code>).</html:p>
+            <html:p>Constraint: do not edit the library. The benchmarks should be contrived
+client programs that import existing library code and exercise the
+suspected-pathological patterns at controlled depth, so the measurement is
+attributable to a specific shape rather than the library as a whole. Compare
+against the <html:code>hcomp</html:code>-en-masse alternative from <fr:link href="/sss-0083/" title="An Idea at Fixing Concrete Performance Issues" uri="https://stevenschaefer.net/sss-0083/" display-uri="sss-0083" type="local">the hcomp speedup
+note</fr:link>.</html:p>
+            <html:p>Output: a short writeup of which patterns are linear-vs-superlinear in depth
+and which are not, sufficient to decide whether <fr:link href="/sss-00BL/" title="Yoneda Strictification: Tradeoffs and Opportunities" uri="https://stevenschaefer.net/sss-00BL/" display-uri="sss-00BL" type="local">Yoneda
+strictification</fr:link> actually attacks the right cost. This decision
+gates the broader strictification experiments outlined in <fr:link href="/sss-00BN/" title="Meeting with Max 2026-05-05: strictification, conservativity, slowness" uri="https://stevenschaefer.net/sss-00BN/" display-uri="sss-00BN" type="local">the 2026-05-05
+meeting notes</fr:link>.</html:p>
+            <html:p>Background: <fr:link href="/sss-0082/" title="Slow Chains of Fillers for Reindexings for Instantiating Vertical Exponentials" uri="https://stevenschaefer.net/sss-0082/" display-uri="sss-0082" type="local">the original slowness observation</fr:link> and <fr:link href="/sss-0083/" title="An Idea at Fixing Concrete Performance Issues" uri="https://stevenschaefer.net/sss-0083/" display-uri="sss-0083" type="local">the
+hcomp-based workaround</fr:link>. Subtask of the <fr:link href="/sss-008Z/" title="Finishing Logical Relations on Display" uri="https://stevenschaefer.net/sss-008Z/" display-uri="sss-008Z" type="local"><html:em>Logical Relations on
+Display</html:em></fr:link> milestone.</html:p>
+            <fr:tree show-metadata="false">
+              <fr:frontmatter>
+                <fr:authors>
+                  <fr:author>
+                    <fr:link href="/stevenschaefer/" title="Steven Schaefer" uri="https://stevenschaefer.net/stevenschaefer/" display-uri="stevenschaefer" type="local">Steven Schaefer</fr:link>
+                  </fr:author>
+                </fr:authors>
+                <fr:date>
+                  <fr:year>2026</fr:year>
+                  <fr:month>5</fr:month>
+                  <fr:day>6</fr:day>
+                </fr:date>
+                <fr:source-path>/Users/stevenschaefer/forest/trees/sss-00BO.tree</fr:source-path>
+                <fr:title text="Findings (2026-05-06)">Findings (2026-05-06)</fr:title>
+              </fr:frontmatter>
+              <fr:mainmatter>
+                <html:p>Bench files live at <html:code>Bench/ReindFillerChains/</html:code>. The driver is
+<html:code>run-bench.sh</html:code>; <html:code>REPS=3 ./run-bench.sh</html:code> reduces variance.</html:p>
+                <fr:tree show-metadata="false">
+                  <fr:frontmatter>
+                    <fr:authors>
+                      <fr:author>
+                        <fr:link href="/stevenschaefer/" title="Steven Schaefer" uri="https://stevenschaefer.net/stevenschaefer/" display-uri="stevenschaefer" type="local">Steven Schaefer</fr:link>
+                      </fr:author>
+                    </fr:authors>
+                    <fr:date>
+                      <fr:year>2026</fr:year>
+                      <fr:month>5</fr:month>
+                      <fr:day>6</fr:day>
+                    </fr:date>
+                    <fr:source-path>/Users/stevenschaefer/forest/trees/sss-00BO.tree</fr:source-path>
+                    <fr:title text="Three families of fixtures">Three families of fixtures</fr:title>
+                  </fr:frontmatter>
+                  <fr:mainmatter>
+                    <html:ul><html:li><html:strong>Flat</html:strong> (<html:code>Implicit/Explicit{01..32}.agda</html:code>): Postulated
+<html:code>Z, X : Type</html:code>, <html:code>pt : Z → X</html:code>, <html:code>q : (z : Z) → Yᴰ (pt z)</html:code>, with
+<html:code>mp = refl ∙∙ refl ∙∙ refl</html:code> and a chain
+<html:code>rectifyOut $ reind-filler⁻ _ ∙ ... ∙ reind-filler⁻ _</html:code> of length <fr:tex display="inline"><![CDATA[n]]></fr:tex>.
+The Explicit variants fill <html:code>{a, b, p}</html:code> on every <html:code>reind-filler⁻</html:code>.</html:li>
+<html:li><html:strong>Wrapped</html:strong> (<html:code>Wrapped{01,04}.agda</html:code>): Mirrors the actual goal
+shape — outer <html:code>rectifyOut/reind-filler⁻/congᴰ</html:code> around a
+<html:code>funExt₂/ΣPathP</html:code> that splits Zᴰ-side from Xᴰ-side, with the inner
+chain on the Xᴰ-side. <html:code>mp</html:code> is still <html:code>refl ∙∙ refl ∙∙ refl</html:code>; types
+are still postulated.</html:li>
+<html:li><html:strong>Real</html:strong> (<html:code>Real{00,01,02,03,04,08,16,32,64}.agda</html:code> and
+variants <html:code>Real04NoLossy</html:code>, <html:code>Real04AllRefl</html:code>,
+<html:code>Real04AllReflNoLossy</html:code>, <html:code>RealFlat04</html:code>): Faithful re-derivation of
+<html:code>ExponentialsⱽSETᴰueⱽ.universalⱽ.snd.fst</html:code> from
+<html:code>Sets/Properties.agda</html:code> — imports the real <html:code>SETᴰ</html:code>, <html:code>Fibers</html:code>,
+<html:code>AllLRⱽSETᴰ</html:code>, <html:code>isFibrationSETᴰ</html:code>, and varies inner-chain depth, the
+<html:code>--lossy-unification</html:code> flag, and whether each <html:code>reind-filler⁻</html:code>
+takes <html:code>_</html:code> or <html:code>refl</html:code> as its path argument. <html:code>Real00</html:code> has no
+proof body (baseline for the import cost). <html:code>RealFlat04</html:code> has the
+depth-4 <html:code>∙</html:code>-chain but none of the <html:code>rectifyOut/congᴰ/funExt₂/ΣPathP</html:code>
+wrapping — it controls for the wrapping vs. the chain alone.</html:li></html:ul>
+                    <html:p>Each measured run deletes that file's <html:code>.agdai</html:code> so only the bench
+file is rechecked; library and <html:code>Properties.agda</html:code> imports are cached.</html:p>
+                  </fr:mainmatter>
+                </fr:tree>
+                <fr:tree show-metadata="false">
+                  <fr:frontmatter>
+                    <fr:authors>
+                      <fr:author>
+                        <fr:link href="/stevenschaefer/" title="Steven Schaefer" uri="https://stevenschaefer.net/stevenschaefer/" display-uri="stevenschaefer" type="local">Steven Schaefer</fr:link>
+                      </fr:author>
+                    </fr:authors>
+                    <fr:date>
+                      <fr:year>2026</fr:year>
+                      <fr:month>5</fr:month>
+                      <fr:day>6</fr:day>
+                    </fr:date>
+                    <fr:source-path>/Users/stevenschaefer/forest/trees/sss-00BO.tree</fr:source-path>
+                    <fr:title text="Numbers">Numbers</fr:title>
+                  </fr:frontmatter>
+                  <fr:mainmatter>
+                    <html:p>Wall time, single run on the dev machine. Library-import cost has been
+warmed out — these numbers reflect rechecking only the bench file.</html:p>
+                    <html:p>
+                      <html:strong>Flat (Common.agda baseline ≈ 0.88s):</html:strong>
+                    </html:p>
+                    <html:pre>
+STYLE        DEPTH   TIME(s)    Δ-base(s)
+Implicit     01      0.87       -0.01
+Implicit     02      0.86       -0.02
+Implicit     04      0.90       +0.02
+Implicit     08      0.86       -0.02
+Implicit     16      0.86       -0.02
+Implicit     32      ~0.87      ~0
+Explicit     01      0.88        0.00
+Explicit     16      0.86       -0.02
+</html:pre>
+                    <html:p>Flat reind-filler⁻ chains over postulated types are
+<html:strong>not slow at any depth</html:strong>, regardless of whether implicits are filled.
+Up through 32 nested reind-filler⁻'s the marginal cost is below measurement
+noise.</html:p>
+                    <html:p>
+                      <html:strong>Wrapped (CommonWrapped.agda baseline ≈ 0.99s):</html:strong>
+                    </html:p>
+                    <html:pre>
+FILE         TIME(s)
+Wrapped01    0.97
+Wrapped04    0.98
+</html:pre>
+                    <html:p>Adding the <html:code>rectifyOut/reind-filler⁻/congᴰ + funExt₂/ΣPathP</html:code>
+wrapping over postulated types is <html:strong>also not slow</html:strong>. The shape alone
+is not the problem.</html:p>
+                    <html:p>
+                      <html:strong>Real (Real00.agda skeleton baseline ≈ 3.4s):</html:strong>
+                    </html:p>
+                    <html:pre>
+FILE                  TIME(s)    Δ-base(s)
+Real00 (no proof)     3.37       0.00       -- imports only
+Real01                3.37       0.00
+Real02                3.82       0.45
+Real03                4.07       0.70
+Real04               12.97       9.60       &lt;-- jump
+Real08               13.19       9.82
+Real16               13.40      10.03
+
+Real04NoLossy       213.15     209.78       -- --lossy-unification removed
+</html:pre>
+                    <html:p>The Real family reproduces the slowness from <html:code>Sets/Properties.agda</html:code>.
+Three findings:</html:p>
+                    <html:ol><html:li><html:strong>Apparent step function at depth 4 is "first successful
+elaboration", not a unifier threshold:</html:strong> Real01–Real03 fail fast with a
+type-mismatch error because the chain is too short for endpoints to unify
+(see Open Questions). Depth 4 is the minimum chain length that elaborates
+at all, after which post-typing work fires. Past depth 4 the cost
+plateaus (~30ms per added junction through depth 64), so the chain length
+itself is not the expensive part.</html:li>
+<html:li><html:strong>Lossy-unification dominates:</html:strong> removing <html:code>--lossy-unification</html:code>
+turns the depth-4 case from ~13s into 213s — a 16× blowup. The flat
+<html:code>∙</html:code>-chain over real <html:code>SETᴰ.Hom[_][_,_]</html:code> types is what <html:code>lossy</html:code>
+bounds; without it the unifier does real work on every junction trying to
+normalize the deeply-nested fiber types.</html:li>
+<html:li><html:strong>Postulated types don't trigger this:</html:strong> Wrapped04 (same shape,
+postulated types, refl-equivalent <html:code>mp</html:code>) is fast — the unifier blowup
+is type-driven. The cost is in unifying <html:code>SETᴰ</html:code>
+hom-types — concretely <html:code>Hom[ Z , X ][ Zᴰ , g*Xᴰ ]</html:code> where <html:code>g*Xᴰ</html:code>
+unfolds through <html:code>isFibrationSETᴰ._*_</html:code>, presheaf reindexing,
+<html:code>LRⱽObᴰ→LRⱽ</html:code>, etc. — not in unifying <html:code>reind-filler⁻</html:code> implicits
+over a postulated <html:code>P : (Z → X) → Type</html:code>.</html:li></html:ol>
+                  </fr:mainmatter>
+                </fr:tree>
+                <fr:tree show-metadata="false">
+                  <fr:frontmatter>
+                    <fr:authors>
+                      <fr:author>
+                        <fr:link href="/stevenschaefer/" title="Steven Schaefer" uri="https://stevenschaefer.net/stevenschaefer/" display-uri="stevenschaefer" type="local">Steven Schaefer</fr:link>
+                      </fr:author>
+                    </fr:authors>
+                    <fr:date>
+                      <fr:year>2026</fr:year>
+                      <fr:month>5</fr:month>
+                      <fr:day>6</fr:day>
+                    </fr:date>
+                    <fr:source-path>/Users/stevenschaefer/forest/trees/sss-00BO.tree</fr:source-path>
+                    <fr:title text="Profile breakdown">Profile breakdown</fr:title>
+                  </fr:frontmatter>
+                  <fr:mainmatter>
+                    <html:p>Where the time goes inside Agda, with <html:code>--lossy-unification</html:code> on.
+<html:code>agda --profile=internal Real04.agda</html:code> (cache warmed, only the bench
+file rechecked):</html:p>
+                    <html:pre>
+                              Real04         Real00-noBody  RealFlat04
+Total                         14,969ms       3,105ms        1,389ms
+  Typing                         193ms          2ms            6ms
+  Typing.OccursCheck             186ms          -              -
+  Typing.CheckRHS                 60ms          -              -
+  Scoping.InverseNameLookup    3,756ms          -              -
+  Miscellaneous                3,723ms         26ms           27ms
+  Deserialization              3,084ms      2,928ms        1,275ms
+  Highlighting                 2,464ms          -              -
+  Serialization.BuildInterface 1,299ms          -              -
+metas                              384           73            174
+
+Typing share of total in Real04: 193 / 14,969 = 1.3 percent.
+</html:pre>
+                    <html:p>Real00 has no proof body and only imports <html:code>Properties.agda</html:code> (3.1s,
+of which 2.9s is interface deserialization — fixed cost, cache-driven).
+RealFlat04 has the depth-4 <html:code>∙</html:code>-chain on real <html:code>SETᴰ.Hom[_][_,_]</html:code>
+types but no wrapping — no <html:code>rectifyOut</html:code>, no <html:code>congᴰ</html:code>, no
+<html:code>funExt₂</html:code>, no <html:code>ΣPathP</html:code>. It costs 1.39s.</html:p>
+                    <html:p>So adding the wrapped proof body on top of the import skeleton spends:</html:p>
+                    <html:ul><html:li><html:strong>~450ms</html:strong> on actual typing/unification under lossy (the
+<html:code>∙</html:code>-chain over <html:code>SETᴰ.Hom</html:code> types — what <html:code>--lossy-unification</html:code>
+bounds, and what the <html:code>_</html:code> → <html:code>refl</html:code> annotation further cuts).</html:li>
+<html:li><html:strong>~11.5s</html:strong> on post-typing bookkeeping: scope-name lookup,
+the <html:code>Miscellaneous</html:code> bucket, syntax highlighting, building the
+interface — driven by the size of the unsolved meta store.</html:li></html:ul>
+                    <html:p>Without <html:code>--lossy-unification</html:code>, the typing budget rises from ~450ms
+to ~210s and dominates everything else; lossy is doing essential work even
+though it doesn't show up as a big slice of the profile under the lossy
+run. The annotation experiment subtree below quantifies what's left of the
+typing budget after lossy and how to attack it further.</html:p>
+                  </fr:mainmatter>
+                </fr:tree>
+                <fr:tree show-metadata="false">
+                  <fr:frontmatter>
+                    <fr:authors>
+                      <fr:author>
+                        <fr:link href="/stevenschaefer/" title="Steven Schaefer" uri="https://stevenschaefer.net/stevenschaefer/" display-uri="stevenschaefer" type="local">Steven Schaefer</fr:link>
+                      </fr:author>
+                    </fr:authors>
+                    <fr:date>
+                      <fr:year>2026</fr:year>
+                      <fr:month>5</fr:month>
+                      <fr:day>6</fr:day>
+                    </fr:date>
+                    <fr:source-path>/Users/stevenschaefer/forest/trees/sss-00BO.tree</fr:source-path>
+                    <fr:title text="What the bookkeeping is over: unsolved metas, not an elaborated term">What the bookkeeping is over: unsolved metas, not an elaborated term</fr:title>
+                  </fr:frontmatter>
+                  <fr:mainmatter>
+                    <html:p>Removing <html:code>--allow-unsolved-metas</html:code> from Real04 fails with
+<html:code>[UnsolvedConstraints]</html:code>. Same for RealFlat04. So with
+<html:code>--lossy-unification</html:code> on, <html:strong>Agda doesn't actually finish
+elaborating the proof</html:strong>. The body persisted to the interface is
+<html:em>a single reference to an unsolved meta</html:em> (<html:code>unsolvedmeta.N</html:code>)
+parameterised by the module's level args. The "elaborated term" I
+attributed the cost to in earlier drafts of this tree doesn't exist.</html:p>
+                    <html:p>What does exist in the meta-store: <fr:tex display="inline"><![CDATA[384]]></fr:tex> unsolved metas for Real04,
+<fr:tex display="inline"><![CDATA[174]]></fr:tex> for RealFlat04, <fr:tex display="inline"><![CDATA[73]]></fr:tex> for Real00. Each unsolved meta carries
+a type, a context (telescope of variables in scope), and entries on Agda's
+constraint list. With lossy on, Agda gives up on the trickier ones rather
+than recursing forever, and they remain in the store. <html:strong>The 11.5s of
+bookkeeping is over those 384 meta entries</html:strong>, each of which has a
+<html:code>SETᴰ.Hom[_][_,_]</html:code>-flavoured type that mentions
+<html:code>g*Xᴰ = isFibrationSETᴰ._*_ g Xᴰ</html:code>, the cartesian-product-fibration
+combinator, <html:code>LRⱽObᴰ→LRⱽ</html:code>, etc.</html:p>
+                    <html:p>Direct AST measurements on the <html:em>postulated-type</html:em> fixtures (which DO
+fully elaborate, no unsolved metas) — by reflection in
+<html:code>Bench/ReindFillerChains/SizeReflect.agda</html:code>:</html:p>
+                    <html:pre>
+GOAL              ELABORATED AST NODES   AGDA WALL TIME
+Implicit01            55                 0.87s
+Implicit04           688                 0.90s
+Implicit16         8,350                 0.86s
+Implicit32        31,334                 0.87s
+Wrapped01            688                 0.97s
+Wrapped04          1,507                 0.98s
+</html:pre>
+                    <html:p>Two things stand out. First, on postulated types, term size grows
+<html:strong>quadratically</html:strong> with chain depth — 31k nodes at depth 32. Second,
+<html:strong>none of that matters for time</html:strong>: those cases all check in under
+1s, dominated by interface-deserialization. So size alone is not the cost
+driver.</html:p>
+                    <html:p>The cost driver is the meta store, not the elaborated term. Each
+Implicit/Wrapped AST node is <html:code>R.def (quote postulate)</html:code> — trivial for
+downstream passes to look up, highlight, serialize, and the postulated
+fixtures fully elaborate so no metas are left behind. In the real
+<html:code>SETᴰ</html:code> setting, the analogous pieces reference deep qualified names
+inside the displayed-presheaf infrastructure, the unifier under lossy
+gives up rather than recursing, and <fr:tex display="inline"><![CDATA[384]]></fr:tex> entries remain in the
+meta store. The cost decomposes as</html:p>
+                    <html:pre>
+cost ≈ (meta count) × (per-meta type complexity) × (unifier work per call)
+</html:pre>
+                    <html:p>where the "unifier work per call" factor is what <html:code>--lossy-unification</html:code>
+bounds at typing time, and the bookkeeping passes (<html:code>InverseNameLookup</html:code>,
+<html:code>Highlighting</html:code>, <html:code>Serialization</html:code>, <html:code>Miscellaneous</html:code>) walk the
+remaining <fr:tex display="inline"><![CDATA[(\text {meta count}) \times  (\text {per-meta type complexity})]]></fr:tex> entries
+post-typing. Each lever attacks a different factor and they compose
+multiplicatively — see the annotation experiment below for the
+quantitative split.</html:p>
+                    <html:p>The plateau on depth (Real04=13.0s, Real16=13.4s, Real32=14.1s,
+Real64=14.8s — ~30ms per junction past 4) is consistent: each extra
+junction adds one meta with similar type complexity, so the per-junction
+cost is small relative to the fixed cost of the wrapping itself.</html:p>
+                  </fr:mainmatter>
+                </fr:tree>
+                <fr:tree show-metadata="false">
+                  <fr:frontmatter>
+                    <fr:authors>
+                      <fr:author>
+                        <fr:link href="/stevenschaefer/" title="Steven Schaefer" uri="https://stevenschaefer.net/stevenschaefer/" display-uri="stevenschaefer" type="local">Steven Schaefer</fr:link>
+                      </fr:author>
+                    </fr:authors>
+                    <fr:date>
+                      <fr:year>2026</fr:year>
+                      <fr:month>5</fr:month>
+                      <fr:day>6</fr:day>
+                    </fr:date>
+                    <fr:source-path>/Users/stevenschaefer/forest/trees/sss-00BO.tree</fr:source-path>
+                    <fr:title text="Why displayed presheaves are catastrophically worse">Why displayed presheaves are catastrophically worse</fr:title>
+                  </fr:frontmatter>
+                  <fr:mainmatter>
+                    <html:p>The same wrapping pattern, applied to displayed presheaves, has each
+junction's Hom-type be a <html:code>NatTrans</html:code> (component functions + naturality).
+Per-meta type complexity is multiplicatively bigger. Bookkeeping cost is
+<html:strong><fr:tex display="inline"><![CDATA[(\text {meta count}) \times  (\text {per-meta type complexity})]]></fr:tex></html:strong>, so the
+displayed-presheaf case scales worse along the type-complexity axis even at
+the same chain depth.</html:p>
+                  </fr:mainmatter>
+                </fr:tree>
+                <fr:tree show-metadata="false">
+                  <fr:frontmatter>
+                    <fr:authors>
+                      <fr:author>
+                        <fr:link href="/stevenschaefer/" title="Steven Schaefer" uri="https://stevenschaefer.net/stevenschaefer/" display-uri="stevenschaefer" type="local">Steven Schaefer</fr:link>
+                      </fr:author>
+                    </fr:authors>
+                    <fr:date>
+                      <fr:year>2026</fr:year>
+                      <fr:month>5</fr:month>
+                      <fr:day>6</fr:day>
+                    </fr:date>
+                    <fr:source-path>/Users/stevenschaefer/forest/trees/sss-00BO.tree</fr:source-path>
+                    <fr:title text="Verdict on the original hypothesis">Verdict on the original hypothesis</fr:title>
+                  </fr:frontmatter>
+                  <fr:mainmatter>
+                    <html:p>The comment in <html:code>Sets/Properties.agda</html:code> hypothesised that the
+slowness comes from "the unification of the implicit arguments to each of
+these reind fillers… we may mitigate the slowness here by removing nested
+reindexings." Sharper picture now:</html:p>
+                    <html:ul><html:li><html:em>Right that unification is implicated and type-driven.</html:em> 213s
+without <html:code>--lossy-unification</html:code> on the depth-4 chain; postulated-type
+fixtures (Wrapped, Implicit, Explicit) cannot reproduce the slowness even
+at depth 32 (31,334 AST nodes), so the cost is in unifying real
+<html:code>SETᴰ.Hom[_][_,_]</html:code> types, not in the chain shape itself.</html:li>
+<html:li><html:em>Right that filling implicits helps — but the path argument, not
+the type implicits.</html:em> Filling <html:code>{a, b, p}</html:code> on every
+<html:code>reind-filler⁻</html:code> (the Explicit fixture) doesn't move the postulated
+case, which was already fast. But replacing the <html:code>e : a ≡ b</html:code>
+<html:em>path argument</html:em> with <html:code>refl</html:code> on the real chain gives a 2× speedup
+(13.13s → 6.20s on the bench, 14.83s → 6.75s in the actual library) by
+short-circuiting the unifier search at each <html:code>reind-filler⁻</html:code> call.</html:li>
+<html:li><html:em>Wrong about "nested reindexings" being the lever.</html:em> Cutting
+nesting depth only saves ~30ms per junction past depth 4 — Real04≈Real16
+≈Real64 under lossy. The proof shape's chain length is not what's
+expensive.</html:li>
+<html:li><html:em>The dominant residual cost is bookkeeping over the meta store.</html:em>
+With lossy on, typing is 1.3 percent of the total; the remaining 11.5s is
+post-typing work over 384 unsolved metas, set by <html:strong><fr:tex display="inline"><![CDATA[(\text {meta count}) \times  (\text {per-meta type complexity})]]></fr:tex></html:strong>. Lossy and explicit-<html:code>refl</html:code>
+attack the typing factor; strictification is what attacks per-meta type
+complexity (and shrinks the bookkeeping bill proportionally).</html:li></html:ul>
+                  </fr:mainmatter>
+                </fr:tree>
+                <fr:tree show-metadata="false">
+                  <fr:frontmatter>
+                    <fr:authors>
+                      <fr:author>
+                        <fr:link href="/stevenschaefer/" title="Steven Schaefer" uri="https://stevenschaefer.net/stevenschaefer/" display-uri="stevenschaefer" type="local">Steven Schaefer</fr:link>
+                      </fr:author>
+                    </fr:authors>
+                    <fr:date>
+                      <fr:year>2026</fr:year>
+                      <fr:month>5</fr:month>
+                      <fr:day>6</fr:day>
+                    </fr:date>
+                    <fr:source-path>/Users/stevenschaefer/forest/trees/sss-00BO.tree</fr:source-path>
+                    <fr:title text="Decision on Yoneda strictification">Decision on <fr:link href="/sss-00BL/" title="Yoneda Strictification: Tradeoffs and Opportunities" uri="https://stevenschaefer.net/sss-00BL/" display-uri="sss-00BL" type="local">Yoneda strictification</fr:link></fr:title>
+                  </fr:frontmatter>
+                  <fr:mainmatter>
+                    <html:p><fr:link href="/sss-00BL/" title="Yoneda Strictification: Tradeoffs and Opportunities" uri="https://stevenschaefer.net/sss-00BL/" display-uri="sss-00BL" type="local">Yoneda strictification</fr:link> is still the right fix, with a
+sharper reason than the original comment suggested. The win is not "the
+unifier sees fewer reduction obligations". The win is "each unsolved
+meta in the store has a smaller, simpler type", because the strictified
+fiber types substituted into each junction are smaller. The downstream
+bookkeeping passes (scope lookup, highlighting, interface build) walk those
+meta types and shrink proportionally.</html:p>
+                    <html:p>Concrete prediction: strictification should drop Real04 from ~13s back
+toward Real00's ~3.4s import baseline, mostly by collapsing the
+<html:code>Miscellaneous</html:code> + <html:code>InverseNameLookup</html:code> + <html:code>Highlighting</html:code> +
+<html:code>Serialization</html:code> buckets, <html:em>not</html:em> the Typing bucket (which is already
+small under lossy).</html:p>
+                    <html:p>It will <html:em>not</html:em> eliminate the import cost (Real00 is 3.4s with the
+current import graph, almost entirely in deserialization) — that's a
+separate concern about the size of the displayed-presheaf infrastructure
+being pulled in.</html:p>
+                    <html:p>It does <html:em>not</html:em> obviate <html:code>--lossy-unification</html:code>: removing lossy
+turns the depth-4 case into 213s. The three levers attack different
+factors of <html:code>(meta count) × (per-meta type complexity) × (unifier work
+per call)</html:code> and are independent:</html:p>
+                    <html:ul><html:li><html:code>--lossy-unification</html:code> bounds <html:em>unifier work per call</html:em> (16×).</html:li>
+<html:li><html:code>_</html:code> → <html:code>refl</html:code> annotation further cuts <html:em>unifier work per
+call</html:em> on top of lossy (2× more).</html:li>
+<html:li>Strictification shrinks <html:em>per-meta type complexity</html:em>, which feeds
+through to both the typing cost <html:em>and</html:em> the post-typing bookkeeping.</html:li></html:ul>
+                    <html:p>All three should be applied together. Strictification is the most
+invasive but addresses the largest single multiplier and the only one
+that touches the bookkeeping bill.</html:p>
+                  </fr:mainmatter>
+                </fr:tree>
+                <fr:tree show-metadata="false">
+                  <fr:frontmatter>
+                    <fr:authors>
+                      <fr:author>
+                        <fr:link href="/stevenschaefer/" title="Steven Schaefer" uri="https://stevenschaefer.net/stevenschaefer/" display-uri="stevenschaefer" type="local">Steven Schaefer</fr:link>
+                      </fr:author>
+                    </fr:authors>
+                    <fr:date>
+                      <fr:year>2026</fr:year>
+                      <fr:month>5</fr:month>
+                      <fr:day>6</fr:day>
+                    </fr:date>
+                    <fr:source-path>/Users/stevenschaefer/forest/trees/sss-00BO.tree</fr:source-path>
+                    <fr:title text="Annotation experiment: explicit refl gives 2× on top of lossy">Annotation experiment: explicit <html:code>refl</html:code> gives 2× on top of lossy</fr:title>
+                  </fr:frontmatter>
+                  <fr:mainmatter>
+                    <html:p>User hypothesis: "many unification problems with dependencies, where
+later problems depend on earlier ones; filling sufficient annotations should
+disambiguate and give a big speedup." Tested by replacing each <html:code>_</html:code>
+argument to <html:code>reind-filler⁻</html:code> with <html:code>refl</html:code>.</html:p>
+                    <html:p>Bench fixture: <html:code>Bench/ReindFillerChains/Real04AllRefl.agda</html:code>. Wall
+times under <html:code>--lossy-unification --allow-unsolved-metas</html:code>:</html:p>
+                    <html:pre>
+Real04 baseline (`_` × 6, lossy)         13.13 s   384 metas
+Real04AllRefl  (refl × 6, lossy)          6.20 s   389 metas
+Real04 baseline (`_` × 6, NO lossy)     213    s   --
+Real04AllRefl  (refl × 6, NO lossy)     203.82 s   --
+</html:pre>
+                    <html:p><html:strong>Confirmed in the actual library</html:strong> by uncommenting
+<html:code>ExponentialsⱽSETᴰueⱽ</html:code> in
+<html:code>Cubical/Categories/Displayed/Instances/Sets/Properties.agda</html:code> (.snd.snd
+left as a hole, matching the pre-existing comment) and toggling the same
+<html:code>_</html:code> ↔ <html:code>refl</html:code> change:</html:p>
+                    <html:pre>
+Properties.agda (Exp commented out)         3.79 s
+Properties.agda (Exp live, `_` × 6)        14.83 s
+Properties.agda (Exp live, refl × 6)        6.75 s
+</html:pre>
+                    <html:p>2.18× speedup in the real file. The bench was faithful — the same change
+that worked on the contrived bench works on the actual definition. Caveat:
+the <html:code>_</html:code>s in <html:code>isFibrationSETᴰueⱽ</html:code> and <html:code>BinProductsⱽSETᴰueⱽ</html:code>
+do <html:em>not</html:em> accept <html:code>refl</html:code> (those fillers produce non-trivial paths,
+unlike the <html:code>rectifyOut/congᴰ</html:code>-wrapped chain inside Exp). The
+intervention is specific to wrapped reindexing chains.</html:p>
+                    <html:p><html:strong>Two independent factors.</html:strong> Lossy unification gives 16× (213→13s);
+explicit <html:code>refl</html:code> on top of lossy gives an additional 2× (13→6.2s). With
+lossy off, <html:code>refl</html:code> buys only ~5 percent. So:</html:p>
+                    <html:ul><html:li><html:strong>Lossy attacks per-meta type complexity.</html:strong> It bounds how much work
+the unifier does normalizing the huge <html:code>SETᴰ.Hom[_][_,_]</html:code> types attached
+to each meta.</html:li>
+<html:li><html:strong>Annotation attacks per-meta unifier work.</html:strong> Even after lossy makes
+each meta tractable, the unifier still spends real time <html:em>searching</html:em> for
+<html:code>e : a ≡ b</html:code> at each <html:code>reind-filler⁻</html:code> call. Handing it <html:code>refl</html:code>
+short-circuits that search.</html:li></html:ul>
+                    <html:p><html:strong>Meta count is essentially unchanged</html:strong> (384 → 389, basically noise).
+The user's hypothesis that "filling earlier metas resolves later ones" is
+<html:em>not</html:em> what's happening — invisible metas like <html:code>_b_237</html:code>,
+<html:code>_a_276</html:code>, <html:code>_bᴰ.fst_358</html:code> survive both runs. Annotation reduces
+<html:em>work per meta</html:em>, not number of metas.</html:p>
+                    <html:p>
+                      <html:strong>Refined cost model:</html:strong>
+                    </html:p>
+                    <html:pre>
+cost ≈ (meta count) × (per-meta type complexity) × (unifier work per call)
+              ↑                  ↑                          ↑
+        (mostly fixed       (lossy attacks         (annotation attacks
+         by proof shape)     this; strictifi-       this)
+                             cation also)
+</html:pre>
+                    <html:p>Practical take: in real <html:code>Properties.agda</html:code> code, the easy mechanical
+intervention <html:code>reind-filler⁻ _</html:code> → <html:code>reind-filler⁻ refl</html:code> (where
+applicable) should give about a 2× speedup. It does <html:em>not</html:em> obviate
+<html:code>--lossy-unification</html:code> or strictification — those still own the bigger
+factors.</html:p>
+                    <html:p>This explains the user's prior empirical observation: running
+<html:code>C-u C-u C-c C-s</html:code> (Solve constraints at strongest normalization) on
+<html:code>?</html:code> holes returns refl-shaped solutions that, when written back into
+the source, give exactly this 2× speedup. The investigation here just
+quantifies what that interactive workflow was achieving.</html:p>
+                    <html:p>Caveat: writing <html:code>refl</html:code> only works because, in this specific proof
+shape, every <html:code>e : a ≡ b</html:code> arising from <html:code>reind-filler⁻</html:code> reduces
+under the <html:code>rectifyOut/congᴰ</html:code> wrapping to a path of compositions that
+collapses to <html:code>refl</html:code> once the implicit fiber types are pinned. In a
+more general chain you might need a non-trivial composite — but in that
+case <html:code>C-u C-u C-c C-s</html:code> still gives the right thing.</html:p>
+                    <html:p>Decision implication: <html:strong>strictification + lossy + explicit <html:code>refl</html:code></html:strong>
+are the three independent levers. Strictification is the most invasive but
+addresses the largest factor (per-meta type complexity, multiplicatively
+shrinks meta sizes); the <html:code>_</html:code>→<html:code>refl</html:code> cleanup is a cheap mechanical
+2× before doing any structural work.</html:p>
+                  </fr:mainmatter>
+                </fr:tree>
+                <fr:tree show-metadata="false">
+                  <fr:frontmatter>
+                    <fr:authors>
+                      <fr:author>
+                        <fr:link href="/stevenschaefer/" title="Steven Schaefer" uri="https://stevenschaefer.net/stevenschaefer/" display-uri="stevenschaefer" type="local">Steven Schaefer</fr:link>
+                      </fr:author>
+                    </fr:authors>
+                    <fr:date>
+                      <fr:year>2026</fr:year>
+                      <fr:month>5</fr:month>
+                      <fr:day>6</fr:day>
+                    </fr:date>
+                    <fr:source-path>/Users/stevenschaefer/forest/trees/sss-00BO.tree</fr:source-path>
+                    <fr:title text="Open questions">Open questions</fr:title>
+                  </fr:frontmatter>
+                  <fr:mainmatter>
+                    <html:ul><html:li>The depth 3→4 <html:em>step</html:em> (Real03 = 4.07s, Real04 = 12.97s) is now
+understood as "first successful elaboration", not a lossy threshold.
+Real01–Real03 fail fast with a type-mismatch error because the chain is
+too short for endpoints to unify. Depth 4 is the minimum chain length that
+elaborates at all, at which point the post-typing bookkeeping fires. Worth
+confirming by a typecheck-only benchmark that disables <html:code>Highlighting</html:code>
+and <html:code>Serialization</html:code>, if Agda exposes the knobs.</html:li>
+<html:li>Does the refl-annotation lever transfer to the
+<html:code>UniversalQuantifierⱽ</html:code> proof shape? <html:code>ExponentialsⱽSETᴰueⱽ</html:code>
+benefits 2× because its <html:code>rectifyOut/congᴰ</html:code>-wrapped chain reduces to
+<html:code>refl</html:code> once implicits are pinned. The non-Eq UQ counterpart isn't
+written in the library yet (the legacy commented block in
+<html:code>Sets/Properties.agda</html:code> uses an obsolete API). When someone is already
+inside that file, attempting the construction is the cheapest way to find
+out.</html:li>
+<html:li>Does the <html:code>snd .snd</html:code> field (currently a <html:code>{!!}</html:code> hole in
+<html:code>ExponentialsⱽSETᴰueⱽ</html:code> and in the bench files) have the same shape
+when filled? It would add another <html:code>rectifyOut/congᴰ/funExt₂/ΣPathP</html:code>
+block and (per the cost model) multiply the meta count again.</html:li>
+<html:li>Is <html:code>Scoping.InverseNameLookup</html:code> actually triggered by typing-time
+pretty-printing of constraints, in which case it's partly typing cost
+masquerading as bookkeeping? <html:code>Highlighting</html:code> and <html:code>Serialization</html:code>
+(3.76s combined) are unambiguously post-typing; the <html:code>Miscellaneous</html:code>
++ <html:code>InverseNameLookup</html:code> attribution is fuzzier. The qualitative claim
+("typing under lossy is a small slice, meta-store bookkeeping dominates")
+holds either way.</html:li></html:ul>
+                  </fr:mainmatter>
+                </fr:tree>
+              </fr:mainmatter>
+            </fr:tree>
+          </fr:mainmatter>
+        </fr:tree>
+        <fr:tree show-metadata="true" expanded="false" toc="false" numbered="false">
+          <fr:frontmatter>
+            <fr:authors>
+              <fr:author>
+                <fr:link href="/stevenschaefer/" title="Steven Schaefer" uri="https://stevenschaefer.net/stevenschaefer/" display-uri="stevenschaefer" type="local">Steven Schaefer</fr:link>
+              </fr:author>
+            </fr:authors>
+            <fr:date>
+              <fr:year>2026</fr:year>
+              <fr:month>5</fr:month>
+              <fr:day>6</fr:day>
+            </fr:date>
+            <fr:source-path>/Users/stevenschaefer/forest/trees/sss-00BN.tree</fr:source-path>
+            <fr:uri>https://stevenschaefer.net/sss-00BN/</fr:uri>
+            <fr:display-uri>sss-00BN</fr:display-uri>
+            <fr:route>/sss-00BN/</fr:route>
+            <fr:title text="Meeting with Max 2026-05-05: strictification, conservativity, slowness">Meeting with Max 2026-05-05: strictification, conservativity, slowness</fr:title>
+            <fr:taxon>Journal</fr:taxon>
+          </fr:frontmatter>
+          <fr:mainmatter>
+            <html:p>Notes from a meeting with Max about <fr:link href="/sss-00BK/" title="Strictification" uri="https://stevenschaefer.net/sss-00BK/" display-uri="sss-00BK" type="local">strictification</fr:link>, wrapping up
+conservativity for the <fr:link href="/sss-008Z/" title="Finishing Logical Relations on Display" uri="https://stevenschaefer.net/sss-008Z/" display-uri="sss-008Z" type="local"><html:em>Logical Relations on Display</html:em></fr:link> paper, and
+chasing the source of slowness in
+<html:code>Displayed.Instances.Sets.Properties</html:code>.</html:p>
+            <html:p><html:strong>Three layers of strictification are now on the table.</html:strong> The
+<fr:link href="/sss-004A/" title="Normalization Gluing Logical Relation in Agda" uri="https://stevenschaefer.net/sss-004A/" display-uri="sss-004A" type="local"><html:code>ExtraId</html:code></fr:link> category buys judgmental <fr:tex display="inline"><![CDATA[\mathrm {IdL}]]></fr:tex> for free. A
+<fr:link href="/sss-00BL/" title="Yoneda Strictification: Tradeoffs and Opportunities" uri="https://stevenschaefer.net/sss-00BL/" display-uri="sss-00BL" type="local">Yoneda strictification</fr:link> of the base — taking morphisms to be
+<html:code>PshHomStrict</html:code> between representables — promotes both unitors <html:em>and</html:em>
+associativity to <html:code>refl</html:code>. Pushing the same trick one level up, by replacing
+the elements of a presheaf <fr:tex display="inline"><![CDATA[P]]></fr:tex> with <html:code>PshHomStrict</html:code> from the Yoneda
+embedding into <fr:tex display="inline"><![CDATA[P]]></fr:tex>, makes <html:code>F-id</html:code> and <html:code>F-seq</html:code> of every presheaf
+definitional too.</html:p>
+            <html:p><html:strong>Open question: what survives the strictification?</html:strong> The library's
+existing constructions and logical relations live over the non-strict base. We
+need to articulate how the strictified versions relate back — i.e., how the
+same logical relations are extracted from a proof done over the strict side.
+This is the same boundary cost flagged in <fr:link href="/sss-00BL/" title="Yoneda Strictification: Tradeoffs and Opportunities" uri="https://stevenschaefer.net/sss-00BL/" display-uri="sss-00BL" type="local">the Yoneda strictification
+tradeoffs note</fr:link>; the answer is what determines whether
+strictification is worth integrating versus running as a private experiment.</html:p>
+            <html:p><html:strong>Conservativity for the paper.</html:strong> The current presented-lambda
+conservativity proof is split across two steps; Max suggests fusing them by
+proving fullness through an <html:em>extensional</html:em> universal property directly. If
+the strictification experiments work out, including them gives a more direct
+comparison to <fr:link href="/kaposi_pujet_2025/" title="Type Theory in Type Theory using a Strictified Syntax" uri="https://stevenschaefer.net/kaposi_pujet_2025/" display-uri="kaposi_pujet_2025" type="local">Kaposi--Pujet</fr:link> and corroborates their
+strictification observations.</html:p>
+            <html:p><html:strong>Plan for the strictification experiments.</html:strong> (i) Identify the minimal
+amount of library code that would need to be duplicated or rewritten over a
+strict base. (ii) Verify the <html:em>vector</html:em> of slowness — strictification only
+helps if the cost actually lives in unitor/associator reindexing. (iii) Build
+the strict version, conditional on (i) and (ii) being favorable.</html:p>
+            <html:p><html:strong>Slowness measurement.</html:strong> The slowness is concentrated in
+<html:code>Displayed.Instances.Sets.Properties</html:code>: vertical exponentials and the
+universal quantifier over the displayed sets category typecheck pathologically
+slowly despite simple goals. Working hypothesis (consistent with
+<fr:link href="/sss-0082/" title="Slow Chains of Fillers for Reindexings for Instantiating Vertical Exponentials" uri="https://stevenschaefer.net/sss-0082/" display-uri="sss-0082" type="local">the slow filler chains note</fr:link> and <fr:link href="/sss-0083/" title="An Idea at Fixing Concrete Performance Issues" uri="https://stevenschaefer.net/sss-0083/" display-uri="sss-0083" type="local">the hcomp speedup
+note</fr:link>): the cost is the depth of nested reindexings combined with the
+filler-at-a-time proof style, where many of the offending transports are over
+<html:code>refl</html:code>. Tracked separately as <fr:link href="/sss-00BO/" title="Benchmark cause of slowness in Displayed.Instances.Sets.Properties" uri="https://stevenschaefer.net/sss-00BO/" display-uri="sss-00BO" type="local">a benchmark
+TODO</fr:link> — gates the broader strictification decision.</html:p>
+          </fr:mainmatter>
+        </fr:tree>
+        <fr:tree show-metadata="true" expanded="false" toc="false" numbered="false">
+          <fr:frontmatter>
+            <fr:authors>
+              <fr:author>
+                <fr:link href="/stevenschaefer/" title="Steven Schaefer" uri="https://stevenschaefer.net/stevenschaefer/" display-uri="stevenschaefer" type="local">Steven Schaefer</fr:link>
+              </fr:author>
+            </fr:authors>
+            <fr:date>
+              <fr:year>2026</fr:year>
+              <fr:month>5</fr:month>
+              <fr:day>5</fr:day>
+            </fr:date>
+            <fr:source-path>/Users/stevenschaefer/forest/trees/sss-00BL.tree</fr:source-path>
+            <fr:uri>https://stevenschaefer.net/sss-00BL/</fr:uri>
+            <fr:display-uri>sss-00BL</fr:display-uri>
+            <fr:route>/sss-00BL/</fr:route>
+            <fr:title text="Yoneda Strictification: Tradeoffs and Opportunities">Yoneda Strictification: Tradeoffs and Opportunities</fr:title>
+          </fr:frontmatter>
+          <fr:mainmatter>
+            <html:p>Companion to <fr:link href="/sss-00BK/" title="Strictification" uri="https://stevenschaefer.net/sss-00BK/" display-uri="sss-00BK" type="local">Strictification</fr:link>. Notes from a session sketching what the
+<html:code>YonedaStrictify</html:code> construction in <html:code>Categories/Instances/Strictify.agda</html:code>
+buys us, what it costs, and what new constructions it makes plausible.</html:p>
+            <fr:tree show-metadata="false">
+              <fr:frontmatter>
+                <fr:authors>
+                  <fr:author>
+                    <fr:link href="/stevenschaefer/" title="Steven Schaefer" uri="https://stevenschaefer.net/stevenschaefer/" display-uri="stevenschaefer" type="local">Steven Schaefer</fr:link>
+                  </fr:author>
+                </fr:authors>
+                <fr:date>
+                  <fr:year>2026</fr:year>
+                  <fr:month>5</fr:month>
+                  <fr:day>5</fr:day>
+                </fr:date>
+                <fr:source-path>/Users/stevenschaefer/forest/trees/sss-00BL.tree</fr:source-path>
+                <fr:title text="The construction in one paragraph">The construction in one paragraph</fr:title>
+              </fr:frontmatter>
+              <fr:mainmatter>
+                <html:p><html:code>YonedaStrictify C</html:code> has the same objects as <fr:tex display="inline"><![CDATA[\mathcal {C}]]></fr:tex> but takes
+hom-sets to be strict natural transformations between representables
+<fr:tex display="inline"><![CDATA[\mathcal {C}[-, c]]]></fr:tex>. Identity is the identity transformation and composition is
+function composition, so <fr:tex display="inline"><![CDATA[\cdot  \cdot  \mathrm {id}]]></fr:tex>, <fr:tex display="inline"><![CDATA[\mathrm {id} \cdot  \cdot ]]></fr:tex>, and
+associativity hold judgmentally (<html:code>refl</html:code>). <html:code>toYonedaStrictify</html:code> and
+<html:code>fromYonedaStrictify</html:code> give an equivalence to the original <fr:tex display="inline"><![CDATA[\mathcal {C}]]></fr:tex>, but
+<html:em>not</html:em> an isomorphism: the round-trip uses <fr:tex display="inline"><![CDATA[\mathcal {C}.\mathrm {id}]]></fr:tex> and
+<fr:tex display="inline"><![CDATA[\cdot  \mathrm {IdR}]]></fr:tex>.</html:p>
+                <html:p>The companion <html:code>FiberOverStrictify.agda</html:code> observes that for
+<html:code>Categoryᴰ (YonedaStrictify C)</html:code>, the displayed and vertical compositions
+collapse: <html:code>_⋆ᴰⱽ_</html:code> and <html:code>_⋆ⱽᴰ_</html:code> need no <html:code>reind</html:code>, and identity
+laws hold by <html:code>∫Cᴰ.⋆IdL</html:code> / <html:code>⋆IdR</html:code> composed with <html:code>rectifyOut</html:code>
+rather than long <html:code>reind-filler</html:code> chains.</html:p>
+              </fr:mainmatter>
+            </fr:tree>
+            <fr:tree show-metadata="false">
+              <fr:frontmatter>
+                <fr:authors>
+                  <fr:author>
+                    <fr:link href="/stevenschaefer/" title="Steven Schaefer" uri="https://stevenschaefer.net/stevenschaefer/" display-uri="stevenschaefer" type="local">Steven Schaefer</fr:link>
+                  </fr:author>
+                </fr:authors>
+                <fr:date>
+                  <fr:year>2026</fr:year>
+                  <fr:month>5</fr:month>
+                  <fr:day>5</fr:day>
+                </fr:date>
+                <fr:source-path>/Users/stevenschaefer/forest/trees/sss-00BL.tree</fr:source-path>
+                <fr:title text="What we give up">What we give up</fr:title>
+              </fr:frontmatter>
+              <fr:mainmatter>
+                <html:p>The naive view is "we have an equivalence, transport everything back, no
+loss." That's only true for equivalence-invariant content.</html:p>
+                <html:ul><html:li><html:strong>Universe levels jump.</html:strong> Hom-sets in <html:code>YonedaStrictify C</html:code> live
+at <fr:tex display="inline"><![CDATA[\ell _C \sqcup  \ell _{C'}]]></fr:tex> rather than <fr:tex display="inline"><![CDATA[\ell _{C'}]]></fr:tex>. Anything proved on the
+strict side carries that level back. For locally-small <fr:tex display="inline"><![CDATA[\mathcal {C}]]></fr:tex> this can
+contaminate downstream universe-sensitive constructions.</html:li>
+
+<html:li><html:strong>Judgmental computation only on the strict side.</html:strong> If the motivation
+for strictifying was on-the-nose computation, transporting the result to the
+original <fr:tex display="inline"><![CDATA[\mathcal {C}]]></fr:tex> turns <html:code>refl</html:code> back into a propositional path through the
+equivalence. The strictness lives where you build, not where you consume.</html:li>
+
+<html:li><html:strong>Strict preservation properties don't transport.</html:strong> "Functor <fr:tex display="inline"><![CDATA[F]]></fr:tex>
+strictly preserves products" weakens to "preserves up to natural iso" after
+crossing the equivalence. For applications that need on-the-nose preservation
+(syntactic models, CwFs with strict substitution), this defeats the purpose.</html:li>
+
+<html:li><html:strong>Concrete handles on data.</html:strong> A morphism <fr:tex display="inline"><![CDATA[f : \mathcal {C}_0[A,B]]]></fr:tex> lifts
+to <fr:tex display="inline"><![CDATA[\lambda  c\, z \mapsto  z \cdot  f]]></fr:tex>, a natural family. Pattern-matching or
+computation against the underlying <fr:tex display="inline"><![CDATA[f]]></fr:tex> is gone; you reason via universal
+properties.</html:li>
+
+<html:li><html:strong>API costs at the boundary.</html:strong> Every consumer expecting a result
+about <fr:tex display="inline"><![CDATA[\mathcal {C}_0]]></fr:tex> either also strictifies or pays a transport. The cost
+propagates outward: bifunctors, profunctors, fibrations, limits all need
+<html:code>to/fromYonedaStrictify</html:code> insertions.</html:li>
+
+<html:li><html:strong>Specific limit/colimit objects</html:strong> are only iso to the
+strict-side limit, not equal to it. For formalization that wants "the
+syntactic context Γ is <html:em>this</html:em> list," this matters.</html:li></html:ul>
+                <html:p>So: existential and equivalence-invariant content survives intact;
+strict, concrete, or universe-sensitive content does not.</html:p>
+              </fr:mainmatter>
+            </fr:tree>
+            <fr:tree show-metadata="false">
+              <fr:frontmatter>
+                <fr:authors>
+                  <fr:author>
+                    <fr:link href="/stevenschaefer/" title="Steven Schaefer" uri="https://stevenschaefer.net/stevenschaefer/" display-uri="stevenschaefer" type="local">Steven Schaefer</fr:link>
+                  </fr:author>
+                </fr:authors>
+                <fr:date>
+                  <fr:year>2026</fr:year>
+                  <fr:month>5</fr:month>
+                  <fr:day>5</fr:day>
+                </fr:date>
+                <fr:source-path>/Users/stevenschaefer/forest/trees/sss-00BL.tree</fr:source-path>
+                <fr:title text="Opportunities">Opportunities</fr:title>
+              </fr:frontmatter>
+              <fr:mainmatter>
+                <html:ul><html:li><html:strong>Clean β/η for vertical exponentials.</html:strong> The proofs in
+<html:code>Constructions/Exponential/UniversalProperty.agda</html:code> that stall on
+<html:code>reind-filler</html:code> bookkeeping (see <fr:link href="/sss-0082/" title="Slow Chains of Fillers for Reindexings for Instantiating Vertical Exponentials" uri="https://stevenschaefer.net/sss-0082/" display-uri="sss-0082" type="local">Slow Chains of Fillers for Reindexings for Instantiating Vertical Exponentials</fr:link>, <fr:link href="/sss-0083/" title="An Idea at Fixing Concrete Performance Issues" uri="https://stevenschaefer.net/sss-0083/" display-uri="sss-0083" type="local">An Idea at Fixing Concrete Performance Issues</fr:link>) should go
+through with the strict base, since the offending equations are
+identity-composition laws.</html:li>
+
+<html:li><html:strong>Collapse of displayed/vertical composition.</html:strong> <html:code>_⋆ᴰⱽ_</html:code> and
+<html:code>_⋆ⱽᴰ_</html:code> become a single operation; mixed associativity laws become
+<html:code>refl</html:code>. Every proof crossing the displayed/vertical boundary simplifies.</html:li>
+
+<html:li><html:strong>Beck--Chevalley as <html:code>refl</html:code>.</html:strong> For fibrations with strict
+reindexing, BC squares for substitution-stable structure could hold
+judgmentally, yielding something closer to a strict 2-category of fibrations.</html:li>
+
+<html:li><html:strong>Curry/Uncurry as a definitional bijection.</html:strong> The
+<html:code>CurryPshᴰIso</html:code> between curried and uncurried displayed presheaves
+involves <html:code>reind-filler</html:code> rectifications; over a strict base it should
+become a bijection that's <html:code>refl</html:code> on the round-trip.</html:li>
+
+<html:li><html:strong>Strict CwF / model-of-type-theory layer.</html:strong> Bridge to Kaposi--Pujet:
+a CwF over <html:code>YonedaStrictify C</html:code> would have substitution composing
+refl-strictly. This is the same move their QIIT-syntax line uses, just
+internally to one category rather than as a global strict syntax. See
+<fr:link href="/kaposi_pujet_2025/" title="Type Theory in Type Theory using a Strictified Syntax" uri="https://stevenschaefer.net/kaposi_pujet_2025/" display-uri="kaposi_pujet_2025" type="local">Type Theory in Type Theory using a Strictified Syntax</fr:link>.</html:li>
+
+<html:li><html:strong>Strict 2-category structure on Cat itself.</html:strong> Yoneda-strictifying
+every category gives a strictly associative 2-category of functors and
+NatTrans, useful for double-categorical / multicategorical work where
+coherence is the bottleneck.</html:li>
+
+<html:li><html:strong>Cleaner profunctor calculus.</html:strong> Coend-based composition has
+propositional unitor/associator. Over strict bases, parts of this become
+<html:code>refl</html:code>.</html:li>
+
+<html:li><html:strong>Glueing.</html:strong> Glueing constructions in <html:code>Gluing/</html:code> use
+"rectify substitution" steps. Worth checking whether the existing
+infrastructure simplifies over a strict base.</html:li>
+
+<html:li><html:strong>Staged strategy: strictify internally, expose externally.</html:strong> Use
+<html:code>YonedaStrictify</html:code> only inside the proofs of difficult universal
+properties; export the resulting structure transported back to <fr:tex display="inline"><![CDATA[\mathcal {C}_0]]></fr:tex>.
+The public API stays in <fr:tex display="inline"><![CDATA[\mathcal {C}_0]]></fr:tex>, the hard proofs get the win, the
+boundary cost is paid in one place.</html:li></html:ul>
+              </fr:mainmatter>
+            </fr:tree>
+            <fr:tree show-metadata="false">
+              <fr:frontmatter>
+                <fr:authors>
+                  <fr:author>
+                    <fr:link href="/stevenschaefer/" title="Steven Schaefer" uri="https://stevenschaefer.net/stevenschaefer/" display-uri="stevenschaefer" type="local">Steven Schaefer</fr:link>
+                  </fr:author>
+                </fr:authors>
+                <fr:date>
+                  <fr:year>2026</fr:year>
+                  <fr:month>5</fr:month>
+                  <fr:day>5</fr:day>
+                </fr:date>
+                <fr:source-path>/Users/stevenschaefer/forest/trees/sss-00BL.tree</fr:source-path>
+                <fr:title text="Comparison with Kaposi--Pujet">Comparison with Kaposi--Pujet</fr:title>
+              </fr:frontmatter>
+              <fr:mainmatter>
+                <html:p>See <fr:link href="/kaposi_pujet_2025/" title="Type Theory in Type Theory using a Strictified Syntax" uri="https://stevenschaefer.net/kaposi_pujet_2025/" display-uri="kaposi_pujet_2025" type="local">Type Theory in Type Theory using a Strictified Syntax</fr:link>. The technical move is the same: replace a
+structure with propositional equations by an equivalent one with judgmental
+ones, via Yoneda-style embedding into a functor category where laws hold by
+function-composition unitality and associativity.</html:p>
+                <html:p>The asymmetry is scope. They strictify the entire substitution calculus of
+dependent type theory, and the strict version is the canonical object — there
+is no "translate back to a non-strict syntax" because the strict syntax IS
+the syntax. Coherence cost is paid once, internally.</html:p>
+                <html:p>We strictify a single category internally to a richer (cubical) metatheory.
+The original <fr:tex display="inline"><![CDATA[\mathcal {C}]]></fr:tex>_0 still exists, downstream code expects it, and every
+boundary between strict-side proofs and non-strict consumers requires
+mediation. The coherence cost is paid at the boundary, repeatedly.</html:p>
+                <html:p>This suggests a scaling principle: strictification pays off proportionally
+to how much of the surrounding library can be expressed natively over the
+strict base. If <fr:tex display="inline"><![CDATA[\mathcal {C}]]></fr:tex>_0 is one of many displayed categories composed
+through the same metatheory, the boundary cost dominates. If the bulk of
+formalization can live natively over <html:code>YonedaStrictify C</html:code>, the move
+becomes worthwhile — at which point the question shifts to whether the strict
+version should be promoted to canonical, à la Kaposi--Pujet.</html:p>
+              </fr:mainmatter>
+            </fr:tree>
+            <fr:tree show-metadata="false">
+              <fr:frontmatter>
+                <fr:authors>
+                  <fr:author>
+                    <fr:link href="/stevenschaefer/" title="Steven Schaefer" uri="https://stevenschaefer.net/stevenschaefer/" display-uri="stevenschaefer" type="local">Steven Schaefer</fr:link>
+                  </fr:author>
+                </fr:authors>
+                <fr:date>
+                  <fr:year>2026</fr:year>
+                  <fr:month>5</fr:month>
+                  <fr:day>5</fr:day>
+                </fr:date>
+                <fr:source-path>/Users/stevenschaefer/forest/trees/sss-00BL.tree</fr:source-path>
+                <fr:title text="Open question: does it eliminate the displayed-representable transport?">Open question: does it eliminate the displayed-representable transport?</fr:title>
+              </fr:frontmatter>
+              <fr:mainmatter>
+                <html:p><fr:link href="/sss-00BK/" title="Strictification" uri="https://stevenschaefer.net/sss-00BK/" display-uri="sss-00BK" type="local">Strictification</fr:link> notes that strictification "cannot get rid of the transport
+in the (uncurried) displayed representable." This is a real obstruction: the
+elements category <fr:tex display="inline"><![CDATA[(\mathcal {C}^\dagger  / P)]]></fr:tex> carries a triangle equation
+<fr:tex display="inline"><![CDATA[\gamma  \cdot  p \equiv  q]]></fr:tex> as part of its morphism data, and that equation
+remains propositional even after the base is strictified. Strictifying the
+base flattens identity/associativity reinds but leaves the section-relation
+reinds untouched.</html:p>
+                <html:p>Worth tracking whether a parallel strictification on the section side
+(or a different definition of <fr:tex display="inline"><![CDATA[(\mathcal {C}^\dagger  / P)]]></fr:tex> using a
+homotopy-quotient-style equality) eliminates that one too.</html:p>
+              </fr:mainmatter>
+            </fr:tree>
+          </fr:mainmatter>
+        </fr:tree>
+        <fr:tree show-metadata="true" expanded="false" toc="false" numbered="false">
+          <fr:frontmatter>
+            <fr:authors>
+              <fr:author>
+                <fr:link href="/stevenschaefer/" title="Steven Schaefer" uri="https://stevenschaefer.net/stevenschaefer/" display-uri="stevenschaefer" type="local">Steven Schaefer</fr:link>
+              </fr:author>
+            </fr:authors>
+            <fr:date>
+              <fr:year>2026</fr:year>
+              <fr:month>4</fr:month>
+              <fr:day>2</fr:day>
+            </fr:date>
+            <fr:source-path>/Users/stevenschaefer/forest/trees/sss-0083.tree</fr:source-path>
+            <fr:uri>https://stevenschaefer.net/sss-0083/</fr:uri>
+            <fr:display-uri>sss-0083</fr:display-uri>
+            <fr:route>/sss-0083/</fr:route>
+            <fr:title text="An Idea at Fixing Concrete Performance Issues">An Idea at Fixing Concrete Performance Issues</fr:title>
+          </fr:frontmatter>
+          <fr:mainmatter>
+            <html:p>In <fr:link href="/sss-0082/" title="Slow Chains of Fillers for Reindexings for Instantiating Vertical Exponentials" uri="https://stevenschaefer.net/sss-0082/" display-uri="sss-0082" type="local">Slow Chains of Fillers for Reindexings for Instantiating Vertical Exponentials</fr:link>, we mention an intractable slowness when
+instantiating vertical universal properties in the dislayed category
+of sets. There is a similar slowness when shoing that this displayed
+category is a fibration. Our first proof attempt uses <html:code>reind-filler</html:code>,
+</html:p>
+            <html:pre>funExt₂ λ z zᴰ →
+  Xᴰ.Prectify {e' = refl {x = f (g z)}} $
+    Xᴰ.≡out $
+    (sym $ Xᴰ.reind-filler λ i → f (g (transp (λ j → fst Z) i z)))
+    ∙ (sym $ Xᴰ.reind-filler _) -- can't really fill this argument because the resulting term has an hcomp with unfilled arguments
+    ∙ Xᴰ.cong₂ᴰ γᴰ
+        ((sym $ Zᴰ.reind-filler λ i → transp (λ j → fst Z) (~ i) (transp (λ j → fst Z) i0 z))
+        ∙ (sym $ Zᴰ.reind-filler λ i → transp (λ j → fst Z) (~ i) z))
+where
+module Xᴰ = hSetReasoning X (λ x → ⟨ Xᴰ x ⟩)
+module Zᴰ = hSetReasoning Z (λ z → ⟨ Zᴰ z ⟩)</html:pre>
+            <html:p>
+Typechecking the above takes between 5 and 10 seconds. But we can
+upgrade it to typecheck nearly instantaneously by replacing it with
+manual usage of <html:code>hcomp</html:code>. </html:p>
+            <html:pre>λ j → transp (λ _ → (x : fst Z) → fst (Zᴰ x) → fst (Xᴰ (f (g x)))) j
+        (transp
+          (λ i → (x : fst Z) → fst (Zᴰ x) →
+            fst (Xᴰ
+              (hcomp
+                (λ k → λ { (i = i0) → f (g x)
+                         ; (i = i1) → f (g x)
+                         ; (j = i1) → f (g x) })
+                (hcomp
+                  (λ k → λ { (~ i = i0) → f (g x)
+                           ; (~ i = i1) → f (g x)
+                           ; (j = i1) → f (g x) })
+                  (f (g x))))))
+          j (λ x p → γᴰ x p))
+</html:pre>
+            <html:p>I suspect that the reason that this is faster relates to the
+semantics as cubes. My hypothesis is that the chain of
+<html:code>reind-filler</html:code>s is describing a high-dimensional cube by walking
+the edges of it one at a time, whereas the faster version that
+explicitly mentions and <html:code>hcomp</html:code> directly specifies the cube all
+at once. In this manner, there is no coherence overhead in verifying
+that the arguments to the <html:code>reind</html:code>s (which are just opaque
+<html:code>subst</html:code>s) are what they are expect to be. That is, I expect there
+to be a better strategy for proving equalities that look like chains
+of <html:code>transport</html:code> (or <html:code>subst</html:code> or <html:code>reind</html:code>) by instead
+specifying the cube en masse.
+</html:p>
+          </fr:mainmatter>
+        </fr:tree>
+      </fr:mainmatter>
+    </fr:tree>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors />
+        <fr:title text="Related">Related</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter />
+    </fr:tree>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors />
+        <fr:title text="Contributions">Contributions</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter />
+    </fr:tree>
+  </fr:backmatter>
+</fr:tree>

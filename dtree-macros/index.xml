@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="/default.xsl"?>
+<fr:tree xmlns:fr="http://www.forester-notes.org" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:xml="http://www.w3.org/XML/1998/namespace" root="false" base-url="/">
+  <fr:frontmatter>
+    <fr:authors>
+      <fr:author>
+        <fr:link href="/stevenschaefer/" title="Steven Schaefer" uri="https://stevenschaefer.net/stevenschaefer/" display-uri="stevenschaefer" type="local">Steven Schaefer</fr:link>
+      </fr:author>
+    </fr:authors>
+    <fr:uri>https://stevenschaefer.net/dtree-macros/</fr:uri>
+    <fr:display-uri>dtree-macros</fr:display-uri>
+    <fr:route>/dtree-macros/</fr:route>
+    <fr:title text="Derivation / parse tree animation macros">Derivation / parse tree animation macros</fr:title>
+  </fr:frontmatter>
+  <fr:mainmatter>
+    <html:p>Authoring layer for animated derivation trees, rendered by <html:code>dtree.js</html:code>.
+One tree, two views: <html:code>dtreeParse</html:code> draws a parse tree (nodes + edges, grows
+down); <html:code>dtreeInf</html:code> draws the same tree as an inference-rule derivation
+(rule bars, grows up). The structure is shared --- a node carries a rule name,
+a conclusion (judgment), and ordered children (sub-derivations and terminal
+tokens).</html:p>
+    <html:p>Spec-driven variants: the tree is GENERATED from a real inductive term (e.g.
+Agda's <html:code>toSpec : DyckAST -&gt; String</html:code>) and embedded as a JSON spec. Pass the
+JSON via <html:code><![CDATA[...]]></html:code> so its braces are not parsed by Forester.</html:p>
+    <html:p>Keyframe animation: several tree states (each a <html:code>dkf</html:code> JSON spec). Nodes
+are matched by <html:code>id</html:code> across keyframes; reordering or regrouping children
+makes them glide, with edges/bars re-derived each frame. Loops by default.</html:p>
+  </fr:mainmatter>
+  <fr:backmatter>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors />
+        <fr:title text="References">References</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter />
+    </fr:tree>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors />
+        <fr:title text="Context">Context</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter />
+    </fr:tree>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors />
+        <fr:title text="Backlinks">Backlinks</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter />
+    </fr:tree>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors />
+        <fr:title text="Related">Related</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter />
+    </fr:tree>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors />
+        <fr:title text="Contributions">Contributions</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter />
+    </fr:tree>
+  </fr:backmatter>
+</fr:tree>

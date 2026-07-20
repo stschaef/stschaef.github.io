@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="/default.xsl"?>
+<fr:tree xmlns:fr="http://www.forester-notes.org" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:xml="http://www.w3.org/XML/1998/namespace" root="false" base-url="/">
+  <fr:frontmatter>
+    <fr:authors>
+      <fr:author>
+        <fr:link href="/stevenschaefer/" title="Steven Schaefer" uri="https://stevenschaefer.net/stevenschaefer/" display-uri="stevenschaefer" type="local">Steven Schaefer</fr:link>
+      </fr:author>
+    </fr:authors>
+    <fr:date>
+      <fr:year>2026</fr:year>
+      <fr:month>6</fr:month>
+      <fr:day>1</fr:day>
+    </fr:date>
+    <fr:source-path>/Users/stevenschaefer/forest/trees/sss-00DN.tree</fr:source-path>
+    <fr:uri>https://stevenschaefer.net/sss-00DN/</fr:uri>
+    <fr:display-uri>sss-00DN</fr:display-uri>
+    <fr:route>/sss-00DN/</fr:route>
+    <fr:title text="Porting the cubical library to build under Mikan">Porting the cubical library to build under Mikan</fr:title>
+    <fr:taxon>Journal</fr:taxon>
+  </fr:frontmatter>
+  <fr:mainmatter>
+    <html:p>Got the full <html:code>cubical</html:code> library to type-check under <html:strong>Mikan</html:strong>
+(1lab's Agda fork; executable <html:code>mikan</html:code>, built from the flake, a mostly
+drop-in replacement for cubical Agda with a smaller feature set). Build with
+<html:code>mikan -j --build-library</html:code> from the repo root — <html:code>-j</html:code>/<html:code>-j0</html:code>
+enables parallel checking, and the build stops at the first error (exit 42).
+Final state: exit 0, zero errors, with <html:em>nothing commented out</html:em> — every
+break turned out to be properly fixable.</html:p>
+    <html:p>The single most important gap: Mikan's <html:strong>termination checker only
+tracks structural descent across a changing <html:em>index</html:em>, not a changing
+data-type <html:em>parameter</html:em></html:strong>. This breaks accessibility- and W-type-style
+recursion. The fix is uniformly to convert the recursive datatype's changing
+parameter into an index (the constructor interface and all use sites are
+unchanged). This also repairs recursions that go <html:em>through</html:em>
+<html:code>transport</html:code>/<html:code>toPathP</html:code> — the transport is never the real blocker, the
+parameter is. Applied to <html:code>Acc</html:code> (see <fr:link href="/sss-00A8/" title="Parser by Well-Founded Recursion on String Length" uri="https://stevenschaefer.net/sss-00A8/" display-uri="sss-00A8" type="local">well-founded recursion</fr:link>),
+<html:code>IW</html:code>, and <html:code>DeepMonicPresentation</html:code>.</html:p>
+    <html:p>The other gaps found:</html:p>
+    <html:ul><html:li><html:strong>Reflection <html:code>arg-info</html:code></html:strong> carries only <html:code>Visibility</html:code> — no
+    modality/relevance/quantity. Drop the
+    <html:code>R.modality R.relevant R.quantity-ω</html:code> argument.</html:li>
+  <html:li><html:strong>Reflection's <html:code>Type</html:code> synonym is renamed <html:code>Type'</html:code></html:strong>
+    (because <html:code>Type</html:code> is now the universe). Use the portable <html:code>R.Term</html:code>,
+    and <html:code>hiding (Type')</html:code> on unqualified opens.</html:li>
+  <html:li><html:strong>No <html:code>Agda.Builtin.Word</html:code> / <html:code>word64</html:code> literal</html:strong> — drop the
+    import and the literal case.</html:li>
+  <html:li><html:strong>Copattern projection won't resolve</html:strong> when the field name is
+    shadowed by an <html:code>open Record instance</html:code> applied value — qualify it as
+    <html:code>.Record.field</html:code>.</html:li>
+  <html:li><html:strong>A record method defined by copattern that builds the same record
+    inside the record body</html:strong> is rejected — lift it to a top-level definition
+    taking the record value explicitly.</html:li></html:ul>
+    <html:p>Caveat for any non-fixable breakage: Mikan <html:strong>enforces <html:code>--safe</html:code>
+imports</html:strong> (<html:code>CoInfectiveImport</html:code>), so dropping <html:code>--safe</html:code> or adding a
+terminating pragma cascades to every safe importer. Comment a broken
+definition out only after confirming nothing in the build references it.</html:p>
+  </fr:mainmatter>
+  <fr:backmatter>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors />
+        <fr:title text="References">References</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter />
+    </fr:tree>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors />
+        <fr:title text="Context">Context</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter />
+    </fr:tree>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors />
+        <fr:title text="Backlinks">Backlinks</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter />
+    </fr:tree>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors />
+        <fr:title text="Related">Related</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter>
+        <fr:tree show-metadata="true" expanded="false" toc="false" numbered="false">
+          <fr:frontmatter>
+            <fr:authors>
+              <fr:author>
+                <fr:link href="/stevenschaefer/" title="Steven Schaefer" uri="https://stevenschaefer.net/stevenschaefer/" display-uri="stevenschaefer" type="local">Steven Schaefer</fr:link>
+              </fr:author>
+            </fr:authors>
+            <fr:date>
+              <fr:year>2026</fr:year>
+              <fr:month>4</fr:month>
+              <fr:day>20</fr:day>
+            </fr:date>
+            <fr:source-path>/Users/stevenschaefer/forest/trees/sss-00A8.tree</fr:source-path>
+            <fr:uri>https://stevenschaefer.net/sss-00A8/</fr:uri>
+            <fr:display-uri>sss-00A8</fr:display-uri>
+            <fr:route>/sss-00A8/</fr:route>
+            <fr:title text="Parser by Well-Founded Recursion on String Length">Parser by Well-Founded Recursion on String Length</fr:title>
+            <fr:taxon>Idea</fr:taxon>
+          </fr:frontmatter>
+          <fr:mainmatter>
+            <html:p>We want a <html:em>generic</html:em> parser</html:p>
+            <html:p>
+              <html:code>parse G : Parser ⟦ G ⟧cfg (¬ ⟦ G ⟧cfg)</html:code>
+            </html:p>
+            <html:p>for every <html:code>G : </html:code><fr:link href="/sss-00A4/" title="CFGDesc: Embedded Syntax of Guarded CFGs" uri="https://stevenschaefer.net/sss-00A4/" display-uri="sss-00A4" type="local"><html:code>CFGDesc</html:code></fr:link>, where
+<html:code>Parser A B</html:code> (from <html:code>Parser.Base</html:code>) packages a splitting
+<html:code>string ⊢ A ⊕ B</html:code> with a disjointness witness <html:code>disjoint A B</html:code>.</html:p>
+            <html:p>Construction, by induction on input length:</html:p>
+            <html:ol><html:li>If the input is <html:code>ε</html:code>, answer by <fr:link href="/sss-00A5/" title="Decidable Nullability for CFGDesc" uri="https://stevenschaefer.net/sss-00A5/" display-uri="sss-00A5" type="local">decidable
+    nullability</fr:link>: <html:code>G</html:code> is nullable ⟹ inhabit <html:code>⟦ G ⟧cfg</html:code>,
+    otherwise inhabit the rejection side.</html:li>
+  <html:li>If the input is <html:code>c ∷ w</html:code>, recursively
+    <html:code>parse (δ c G) w</html:code> via the <fr:link href="/sss-00A6/" title="Syntactic Derivatives on CFGDesc" uri="https://stevenschaefer.net/sss-00A6/" display-uri="sss-00A6" type="local">syntactic derivative</fr:link>.
+    Using <fr:link href="/sss-00A7/" title="Linear Residual ⟜ as Brzozowski Derivative" uri="https://stevenschaefer.net/sss-00A7/" display-uri="sss-00A7" type="local">⟜ as derivative</fr:link>, a positive answer
+    <html:code>⟦ δ c G ⟧cfg w</html:code> reshapes to <html:code>⟦ G ⟧cfg (c ∷ w)</html:code>; a negative
+    answer <html:code>¬ ⟦ δ c G ⟧cfg w</html:code> lifts to <html:code>¬ ⟦ G ⟧cfg (c ∷ w)</html:code>.</html:li></html:ol>
+            <html:p>Well-foundedness: on each recursive call <html:code>length w</html:code> strictly
+decreases. The <html:em>grammar</html:em> may grow (derivatives of CFGs are unbounded),
+but the well-founded relation is on the <html:em>input</html:em>, not the state. This
+mirrors how <html:code>GCD.&lt;₂-wellFounded</html:code> in the <fr:link href="/sss-009B/" title="Read: Intrinsically Correct Algorithms and Recursive Coalgebras" uri="https://stevenschaefer.net/sss-009B/" display-uri="sss-009B" type="local">intrinsically-recursive
+paper</fr:link> is well-founded on <html:code>proj₂</html:code> of the index, not on the
+full index.</html:p>
+            <html:p>Concretely, the recursion uses <html:code>&lt;-wellFounded</html:code> on <html:code>ℕ</html:code> via
+<html:code>Cubical.Induction.WellFounded</html:code> (already imported by the project's
+dependency on <html:code>agda-stdlib</html:code>).</html:p>
+            <html:p>This tree defines the algorithm <html:em>operationally</html:em>. The next step,
+<fr:link href="/sss-00A9/" title="Parser as Unique c2a-Morphism of a Recursive Coalgebra" uri="https://stevenschaefer.net/sss-00A9/" display-uri="sss-00A9" type="local">parser as c2a-morphism</fr:link>, reinterprets the same definition as a
+unique coalgebra-to-algebra morphism, so the correctness proof becomes a
+uniqueness argument rather than a direct induction.</html:p>
+            <html:p>Milestone: implement this first for a hand-rolled Dyck (bypassing
+<fr:link href="/sss-00A4/" title="CFGDesc: Embedded Syntax of Guarded CFGs" uri="https://stevenschaefer.net/sss-00A4/" display-uri="sss-00A4" type="local">CFGDesc</fr:link> for the moment) to shake out the <html:code>⟜</html:code>/nullability
+gymnastics before trying to generalise.</html:p>
+          </fr:mainmatter>
+        </fr:tree>
+      </fr:mainmatter>
+    </fr:tree>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors />
+        <fr:title text="Contributions">Contributions</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter />
+    </fr:tree>
+  </fr:backmatter>
+</fr:tree>

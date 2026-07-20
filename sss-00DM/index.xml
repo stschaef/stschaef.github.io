@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="/default.xsl"?>
+<fr:tree xmlns:fr="http://www.forester-notes.org" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:xml="http://www.w3.org/XML/1998/namespace" root="false" base-url="/">
+  <fr:frontmatter>
+    <fr:authors>
+      <fr:author>
+        <fr:link href="/stevenschaefer/" title="Steven Schaefer" uri="https://stevenschaefer.net/stevenschaefer/" display-uri="stevenschaefer" type="local">Steven Schaefer</fr:link>
+      </fr:author>
+    </fr:authors>
+    <fr:date>
+      <fr:year>2026</fr:year>
+      <fr:month>6</fr:month>
+      <fr:day>1</fr:day>
+    </fr:date>
+    <fr:source-path>/Users/stevenschaefer/forest/trees/sss-00DM.tree</fr:source-path>
+    <fr:uri>https://stevenschaefer.net/sss-00DM/</fr:uri>
+    <fr:display-uri>sss-00DM</fr:display-uri>
+    <fr:route>/sss-00DM/</fr:route>
+    <fr:title text="My Forester Emacs mode setup">My Forester Emacs mode setup</fr:title>
+    <fr:taxon>Reference</fr:taxon>
+  </fr:frontmatter>
+  <fr:mainmatter>
+    <html:p>My editing environment for <html:code>.tree</html:code> files is a two-layer stack: the upstream <html:code>forester.el</html:code> major mode plus my own large <html:code>forester-org.el</html:code> extension. Both live in one repo at <html:code>~/forester.el</html:code>, which is my fork of <html:code>ToposInstitute/forester.el</html:code> (<html:code>origin = stschaef/forester.el</html:code>, with <html:code>upstream</html:code> pointing at Topos).</html:p>
+    <html:p><html:strong><html:code>forester.el</html:code> (upstream, Topos Institute)</html:strong> — the base major mode: syntax/font-lock for forester markup, rainbow-delimiters, and a handful of wrapper commands. This is the file autoloaded for <html:code>.tree</html:code> buffers. I carry a few personal patches on top of upstream (hard-coded forest root, <html:code>rg</html:code>-based grep, <html:code>forester-find-title</html:code>).</html:p>
+    <html:p><html:strong><html:code>forester-org.el</html:code> (mine, ~168 KB, ~190 interactive commands)</html:strong> — an org-mode-style workflow layer built entirely on tags in <html:code>.tree</html:code> files, with no compiler modifications. It provides tree navigation/creation (find, capture, daily notes), TODO state management, an agenda buffer, a cached query engine (<html:code>forester query all</html:code> plus filter combinators) with result buffers, Apple Reminders/Calendar sync via <html:code>osascript</html:code>, eglot LSP integration, in-Emacs HTML preview via <html:code>shr</html:code>, and the <html:code>SPC r</html:code> keybinding suite via general.el. It was originally developed inside <html:code>~/ocaml-forester</html:code>, then imported into the <html:code>forester.el</html:code> repo (commit <html:code>c0f244c</html:code>); it no longer lives in ocaml-forester.</html:p>
+    <html:p><html:strong>How it loads.</html:strong> <html:code>~/.emacs.d/packages.el</html:code> adds <html:code>~/forester.el</html:code> to <html:code>load-path</html:code>, autoloads <html:code>forester-mode</html:code> for <html:code>.tree</html:code> files, and registers autoload <html:em>stubs</html:em> for the forester-org commands so <html:code>keybinds.el</html:code> can bind them by symbol (the <html:code>commandp</html:code> check passes before bodies exist). <html:code>~/.emacs.d/init.el</html:code> then does <html:code>(require 'forester-org)</html:code> eagerly, after all config files run, to fill in the real command bodies before any keybinding fires.</html:p>
+    <html:p><html:strong>Keybindings.</html:strong> The <html:code>SPC r ...</html:code> prefix and the Evil keymaps for <html:code>forester-org-agenda-mode</html:code>, <html:code>forester-query-mode</html:code>, and <html:code>forester-preview-mode</html:code> are defined in <html:code>~/.emacs.d/keybinds.el</html:code>.</html:p>
+    <html:p><html:strong>Not in use.</html:strong> <html:code>~/forester_emacs_mode</html:code> (GitHub <html:code>stschaef/forester-emacs-mode</html:code>) is an early-2025 standalone <html:code>forester.el</html:code> that has been superseded by the <html:code>~/forester.el</html:code> fork. It can be ignored.</html:p>
+    <html:p>Related: <fr:link href="/sss-009K/" title="forester-apple-sync blocks the Emacs daemon event loop" uri="https://stevenschaefer.net/sss-009K/" display-uri="sss-009K" type="local">forester-apple-sync blocks the Emacs daemon event loop</fr:link>, <fr:link href="/sss-0095/" title="Automate Apple Reminders and Calendar sync for Forester TODOs" uri="https://stevenschaefer.net/sss-0095/" display-uri="sss-0095" type="local">Automate Apple Reminders and Calendar sync</fr:link>.</html:p>
+  </fr:mainmatter>
+  <fr:backmatter>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors />
+        <fr:title text="References">References</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter />
+    </fr:tree>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors />
+        <fr:title text="Context">Context</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter />
+    </fr:tree>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors />
+        <fr:title text="Backlinks">Backlinks</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter>
+        <fr:tree show-metadata="true" expanded="false" toc="false" numbered="false">
+          <fr:frontmatter>
+            <fr:authors>
+              <fr:author>
+                <fr:link href="/stevenschaefer/" title="Steven Schaefer" uri="https://stevenschaefer.net/stevenschaefer/" display-uri="stevenschaefer" type="local">Steven Schaefer</fr:link>
+              </fr:author>
+            </fr:authors>
+            <fr:date>
+              <fr:year>2026</fr:year>
+              <fr:month>6</fr:month>
+              <fr:day>3</fr:day>
+            </fr:date>
+            <fr:source-path>/Users/stevenschaefer/forest/trees/sss-00E7.tree</fr:source-path>
+            <fr:uri>https://stevenschaefer.net/sss-00E7/</fr:uri>
+            <fr:display-uri>sss-00E7</fr:display-uri>
+            <fr:route>/sss-00E7/</fr:route>
+            <fr:title text="claudemacs: an Emacs-native Claude Code frontend (progress)">claudemacs: an Emacs-native Claude Code frontend (progress)</fr:title>
+            <fr:taxon>Journal</fr:taxon>
+          </fr:frontmatter>
+          <fr:mainmatter>
+            <html:p><html:strong>What it is.</html:strong> <html:code>claude-comint</html:code> (working name <html:em>claudemacs</html:em>) is an Emacs-native, multi-session frontend for the Claude Code CLI. It drives <html:code>claude</html:code> in <html:code>stream-json</html:code> mode (<html:code>--input-format stream-json --output-format stream-json</html:code>) and renders the conversation into Emacs buffers, so the agent and I live in the same Emacs session. It currently lives in my nix-config at <html:code>~/nix-config/emacs/.emacs.d/claude/claude-comint.el</html:code>.</html:p>
+            <html:p><html:strong>Design goal.</html:strong> At least the functionality of the Claude Code TUI, but better where Emacs helps: a comint-style input/output split, richer diffs and previews dispatched into real buffers, the agent reaching into the live Emacs session (running elisp, reading and editing buffers), and the agent editing the same session I am working in.</html:p>
+            <html:p><html:strong>Built so far.</html:strong> Multiple concurrent sessions with an agent-view dashboard (dired-style mark/execute deletion); resume and persistent rename, both with column-aligned pickers; per-session working directory; visible streaming with a runtime timer and a live context-token gauge in the header; inline syntax-highlighted diffs and tool-result blocks that expand to the actual file on <html:code>RET</html:code>; a live plan buffer from <html:code>TodoWrite</html:code>; message queueing and mid-turn steering; and background shell jobs that report their output back when they finish.</html:p>
+            <html:p><html:strong>Permissions are one live knob.</html:strong> A <html:code>PreToolUse</html:code> hook bridges each tool call to Emacs via <html:code>emacsclient</html:code> and prompts in a non-blocking buffer — you decide when you choose to, with no keystroke capture from other buffers. The hook is always registered; whether it actually prompts is read live, so toggling needs no process restart. The CLI <html:code>--permission-mode</html:code> is pinned to <html:code>bypassPermissions</html:code> underneath so the hook is the sole gate.</html:p>
+            <html:p><html:strong>Non-blocking approvals throughout.</html:strong> The emacs-shell / eval / edit / read channels and the permission prompt all use the same non-blocking decision buffer instead of a blocking <html:code>read-char</html:code>, via a continuation-passing approval loop — so a prompt never steals input meant for another buffer.</html:p>
+            <html:p><html:strong>Next steps.</html:strong> Hoist the package out of nix-config into its own directory and repo (<html:code>claudemacs</html:code>). Fix the input window auto-grow: it scrolls down a line as it grows, and should be capped at half the frame height. A code-cleanup and audit pass over the whole file. An in-input <html:code>cbonsai</html:code> screensaver (an overlay that yields to typing so steering still works) remains an optional nicety.</html:p>
+            <html:p>Related: <fr:link href="/sss-00DM/" title="My Forester Emacs mode setup" uri="https://stevenschaefer.net/sss-00DM/" display-uri="sss-00DM" type="local">My Forester Emacs mode setup</fr:link>.</html:p>
+          </fr:mainmatter>
+        </fr:tree>
+      </fr:mainmatter>
+    </fr:tree>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors />
+        <fr:title text="Related">Related</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter>
+        <fr:tree show-metadata="true" expanded="false" toc="false" numbered="false">
+          <fr:frontmatter>
+            <fr:authors>
+              <fr:author>
+                <fr:link href="/stevenschaefer/" title="Steven Schaefer" uri="https://stevenschaefer.net/stevenschaefer/" display-uri="stevenschaefer" type="local">Steven Schaefer</fr:link>
+              </fr:author>
+            </fr:authors>
+            <fr:date>
+              <fr:year>2026</fr:year>
+              <fr:month>4</fr:month>
+              <fr:day>18</fr:day>
+            </fr:date>
+            <fr:source-path>/Users/stevenschaefer/forest/trees/sss-009K.tree</fr:source-path>
+            <fr:uri>https://stevenschaefer.net/sss-009K/</fr:uri>
+            <fr:display-uri>sss-009K</fr:display-uri>
+            <fr:route>/sss-009K/</fr:route>
+            <fr:title text="forester-apple-sync blocks the Emacs daemon event loop">forester-apple-sync blocks the Emacs daemon event loop</fr:title>
+            <fr:taxon>TODO</fr:taxon>
+            <fr:meta name="status">done</fr:meta>
+            <fr:meta name="completed">2026-04-18</fr:meta>
+            <fr:meta name="priority">medium</fr:meta>
+          </fr:frontmatter>
+          <fr:mainmatter>
+            <html:p><html:code>sync.sh</html:code> invokes <html:code>forester-apple-sync</html:code> via <html:code>emacsclient --eval '(forester-apple-sync)'</html:code>. Because <html:code>emacsclient --eval</html:code> runs the function synchronously in the Emacs daemon's event loop, and <html:code>forester-apple-sync</html:code> makes one blocking osascript call per TODO, the entire Emacs process is unresponsive for the full duration of the sync (up to several seconds). The sync fires every 30 minutes via launchd, so this happens silently in the background and is easy to miss until it coincides with active editing.</html:p>
+            <html:p>There is no reason the daemon needs to be involved here at all — <html:code>sync.sh</html:code> already has a <html:code>emacs --batch</html:code> fallback path for when the daemon is unavailable. The batch path should be preferred for non-interactive bulk work, not just used as a fallback.</html:p>
+            <html:p>
+              <html:strong>Fix options.</html:strong>
+            </html:p>
+            <html:ul><html:li><html:strong>Prefer batch over daemon for sync.</html:strong> Invert the <html:code>sync.sh</html:code> logic: always use <html:code>emacs --batch -l ~/ocaml-forester/forester-org.el --eval '(forester-apple-sync)'</html:code> for the launchd-triggered sync. The daemon path (emacsclient) can remain for manual <html:code>SPC r s</html:code> invocations where interactive feedback is wanted.</html:li>
+<html:li><html:strong>Run async inside the daemon.</html:strong> If the daemon path is kept, wrap the bulk sync body in <html:code>make-process</html:code> or <html:code>async-start</html:code> so osascript calls do not block the event loop. This is more complex but also fixes the <html:code>SPC r s</html:code> interactive path.</html:li></html:ul>
+            <html:p>See <fr:link href="/sss-0095/" title="Automate Apple Reminders and Calendar sync for Forester TODOs" uri="https://stevenschaefer.net/sss-0095/" display-uri="sss-0095" type="local">Automate Apple Reminders and Calendar sync for Forester TODOs</fr:link> for the broader sync architecture.</html:p>
+            <html:p><html:strong>Resolution (2026-04-18).</html:strong> Took option 1. <html:code>sync.sh</html:code>'s <html:code>apple_sync</html:code> is now batch-only (<html:code>emacs --batch -l ~/ocaml-forester/forester-org.el --eval '(forester-apple-sync)'</html:code>) and the background invocation is re-enabled. The daemon branch is gone entirely — <html:code>SPC r s</html:code> also benefits, since <html:code>forester-sync-all</html:code> shells out to <html:code>sync.sh</html:code> via <html:code>start-process</html:code>, so neither the launchd path nor the interactive path touches the daemon event loop anymore. Batch also picks up latest <html:code>forester-org.el</html:code> from disk, which removes the previous "daemon was started before the elisp was updated" staleness case.</html:p>
+          </fr:mainmatter>
+        </fr:tree>
+        <fr:tree show-metadata="true" expanded="false" toc="false" numbered="false">
+          <fr:frontmatter>
+            <fr:authors>
+              <fr:author>
+                <fr:link href="/stevenschaefer/" title="Steven Schaefer" uri="https://stevenschaefer.net/stevenschaefer/" display-uri="stevenschaefer" type="local">Steven Schaefer</fr:link>
+              </fr:author>
+            </fr:authors>
+            <fr:date>
+              <fr:year>2026</fr:year>
+              <fr:month>4</fr:month>
+              <fr:day>17</fr:day>
+            </fr:date>
+            <fr:source-path>/Users/stevenschaefer/forest/trees/sss-0095.tree</fr:source-path>
+            <fr:uri>https://stevenschaefer.net/sss-0095/</fr:uri>
+            <fr:display-uri>sss-0095</fr:display-uri>
+            <fr:route>/sss-0095/</fr:route>
+            <fr:title text="Automate Apple Reminders and Calendar sync for Forester TODOs">Automate Apple Reminders and Calendar sync for Forester TODOs</fr:title>
+            <fr:taxon>TODO</fr:taxon>
+            <fr:meta name="status">cancelled</fr:meta>
+            <fr:meta name="completed">2026-05-29</fr:meta>
+            <fr:meta name="cancelled">true</fr:meta>
+            <fr:meta name="priority">medium</fr:meta>
+          </fr:frontmatter>
+          <fr:mainmatter>
+            <html:p>Get Forester TODOs syncing into Apple Reminders (and scheduled work blocks into Apple Calendar) without per-tree manual pushes. The plumbing is already in place; what's missing is a bulk / automatic layer.</html:p>
+            <fr:tree show-metadata="false">
+              <fr:frontmatter>
+                <fr:authors>
+                  <fr:author>
+                    <fr:link href="/stevenschaefer/" title="Steven Schaefer" uri="https://stevenschaefer.net/stevenschaefer/" display-uri="stevenschaefer" type="local">Steven Schaefer</fr:link>
+                  </fr:author>
+                </fr:authors>
+                <fr:date>
+                  <fr:year>2026</fr:year>
+                  <fr:month>4</fr:month>
+                  <fr:day>17</fr:day>
+                </fr:date>
+                <fr:source-path>/Users/stevenschaefer/forest/trees/sss-0095.tree</fr:source-path>
+                <fr:title text="Current state">Current state</fr:title>
+              </fr:frontmatter>
+              <fr:mainmatter>
+                <html:p>
+                  <html:strong>What works today.</html:strong>
+                </html:p>
+                <html:ul><html:li><html:code>forester-apple-push</html:code> in <html:code>forester-org.el</html:code> pushes the <html:em>current buffer</html:em> to Apple Reminders (if tagged <html:code>todo</html:code>) or Apple Calendar (if tagged <html:code>event</html:code>).</html:li>
+<html:li><html:code>forester-apple-pull</html:code> pulls status changes back from Apple Reminders into the corresponding <html:code>.tree</html:code> files (matched by an <html:code>apple-id</html:code> meta entry — see the parser bug subtree below for why we don't write the literal markup here).</html:li>
+<html:li>The AppleScript layer (<html:code>forester-org--osascript</html:code>) is reliable; <html:code>osascript</html:code> round-trips work.</html:li>
+<html:li>Reminders list defaults to <html:code>Forester</html:code> (<html:code>forester-org-reminders-list</html:code>); calendar defaults to <html:code>Forester</html:code> (<html:code>forester-org-calendar-name</html:code>).</html:li>
+<html:li>The <html:code>schedule-day</html:code> skill uses AppleScript directly to create time-blocked events on the <html:code>Tasks</html:code> calendar with start/end alarms and a <html:code>forester:sss-XXXX</html:code> marker in the notes. This works today.</html:li>
+<html:li>Bidirectional grocery-list sync is fully working (see <fr:link href="/sss-003Y/" title="Manage Grocery lists" uri="https://stevenschaefer.net/sss-003Y/" display-uri="sss-003Y" type="local">Manage Grocery lists</fr:link>) and is a good reference implementation for what a full todo sync should look like.</html:li></html:ul>
+                <html:p>
+                  <html:strong>What's missing.</html:strong>
+                </html:p>
+                <html:ul><html:li><html:strong>No bulk push.</html:strong> Current active TODO trees (~19 pending) are not in the <html:code>Forester</html:code> Reminders list — it has 4 total, 0 pending, so it has gone stale.</html:li>
+<html:li><html:strong>No automatic sync on save.</html:strong> Editing a TODO's status or due date does not propagate to the associated reminder.</html:li>
+<html:li><html:strong>No scheduled sync.</html:strong> No cron / launchd job runs <html:code>forester-apple-pull</html:code> or a bulk push periodically.</html:li>
+<html:li><html:strong>Milestone trees</html:strong> (new pattern — see <fr:link href="/sss-008Z/" title="Finishing Logical Relations on Display" uri="https://stevenschaefer.net/sss-008Z/" display-uri="sss-008Z" type="local">this milestone</fr:link>) are not a TODO and should be <html:em>excluded</html:em> from any bulk sync. The sync should filter by <html:code><![CDATA[\taxon{TODO}]]></html:code> (or equivalently <html:code><![CDATA[\tag{todo}]]></html:code>) and skip anything with <html:code><![CDATA[\taxon{Milestone}]]></html:code>.</html:li></html:ul>
+              </fr:mainmatter>
+            </fr:tree>
+            <fr:tree show-metadata="false">
+              <fr:frontmatter>
+                <fr:authors>
+                  <fr:author>
+                    <fr:link href="/stevenschaefer/" title="Steven Schaefer" uri="https://stevenschaefer.net/stevenschaefer/" display-uri="stevenschaefer" type="local">Steven Schaefer</fr:link>
+                  </fr:author>
+                </fr:authors>
+                <fr:date>
+                  <fr:year>2026</fr:year>
+                  <fr:month>4</fr:month>
+                  <fr:day>17</fr:day>
+                </fr:date>
+                <fr:source-path>/Users/stevenschaefer/forest/trees/sss-0095.tree</fr:source-path>
+                <fr:title text="Proposed approaches">Proposed approaches</fr:title>
+                <fr:meta name="status">pending</fr:meta>
+              </fr:frontmatter>
+              <fr:mainmatter>
+                <html:ul><html:li><html:strong>(A) Bulk push command</html:strong> — <html:code>forester-sync-all-todos</html:code>: iterate every <html:code>.tree</html:code> with <html:code /> or <html:code />, call <html:code>forester-org--push-reminder</html:code> on each. Pair with a pull. Run manually at start of day.</html:li>
+<html:li><html:strong>(B) Save hook</html:strong> — after-save on any <html:code>.tree</html:code> under <html:code>~/forest/trees/</html:code>: if it has <html:code><![CDATA[\taxon{TODO}]]></html:code> (and not <html:code><![CDATA[\taxon{Milestone}]]></html:code>), auto-push. Low latency, no cron needed.</html:li>
+<html:li><html:strong>(C) Launchd / cron</html:strong> — schedule (A) every N hours. Best for keeping Reminders fresh even when Emacs isn't open; worst for latency.</html:li>
+<html:li>(A) + (B) together is probably the right answer: (A) for bootstrap and recovery, (B) for steady state.</html:li></html:ul>
+              </fr:mainmatter>
+            </fr:tree>
+            <fr:tree show-metadata="false">
+              <fr:frontmatter>
+                <fr:authors>
+                  <fr:author>
+                    <fr:link href="/stevenschaefer/" title="Steven Schaefer" uri="https://stevenschaefer.net/stevenschaefer/" display-uri="stevenschaefer" type="local">Steven Schaefer</fr:link>
+                  </fr:author>
+                </fr:authors>
+                <fr:date>
+                  <fr:year>2026</fr:year>
+                  <fr:month>4</fr:month>
+                  <fr:day>17</fr:day>
+                </fr:date>
+                <fr:source-path>/Users/stevenschaefer/forest/trees/sss-0095.tree</fr:source-path>
+                <fr:title text="Parser bug encountered during bootstrap">Parser bug encountered during bootstrap</fr:title>
+                <fr:meta name="apple-id">x-apple-reminder://83A15A56-16E7-458B-A734-16181EC043A5</fr:meta>
+                <fr:meta name="forester-addr">sss-0095</fr:meta>
+              </fr:frontmatter>
+              <fr:mainmatter>
+                <html:p>The first bulk push from <html:code>forester-apple-sync</html:code> crashed on <html:em>this very tree</html:em>. The cause: <html:code>forester-org--parse-meta</html:code> is a regex that scans the entire file rather than only the frontmatter. The body originally contained an example showing how the apple-id meta is written, embedded in a <html:code><html:code>...</html:code></html:code> block. The parser treated that example as a real frontmatter declaration, extracted its placeholder value as the apple-id, and fed it to AppleScript, which failed with <html:code>Invalid index (-1719)</html:code>. The literal example is omitted from this tree on purpose to avoid re-triggering the bug.</html:p>
+                <html:p><html:strong>Workaround applied.</html:strong> The prose on line 23 was rewritten to describe the meta entry by name rather than embedding the literal markup. This is a hack — any future tree that documents this meta key by writing the literal markup would re-trigger the bug.</html:p>
+                <html:p><html:strong>Proper fix (not done).</html:strong> <html:code>forester-org--parse-meta</html:code> (and likely <html:code>forester-org--parse-tag</html:code> and <html:code>forester-org--parse-taxon</html:code>) should restrict their search to the frontmatter region — i.e. lines before the first body element such as a paragraph or subtree. That would also fix any other tree that mentions meta or tag declarations in its body.</html:p>
+                <html:p><html:strong>Defensive secondary fix (also not done).</html:strong> <html:code>forester-org--push-reminder</html:code> could catch the <html:code>Invalid index</html:code> osascript error on the update path and fall back to creating a fresh reminder. Useful regardless of the parser fix, since stale apple-ids can also arise from the user manually deleting reminders.</html:p>
+              </fr:mainmatter>
+            </fr:tree>
+          </fr:mainmatter>
+        </fr:tree>
+      </fr:mainmatter>
+    </fr:tree>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors />
+        <fr:title text="Contributions">Contributions</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter />
+    </fr:tree>
+  </fr:backmatter>
+</fr:tree>
