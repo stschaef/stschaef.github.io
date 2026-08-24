@@ -364,6 +364,88 @@ recursion from data at all objects strictly below it.
             </fr:authors>
             <fr:date>
               <fr:year>2026</fr:year>
+              <fr:month>8</fr:month>
+              <fr:day>12</fr:day>
+            </fr:date>
+            <fr:uri>https://stevenschaefer.net/sss-00P0/</fr:uri>
+            <fr:display-uri>sss-00P0</fr:display-uri>
+            <fr:route>/sss-00P0/</fr:route>
+            <fr:title text="Weighted limits, nerves, and later">Weighted limits, nerves, and later</fr:title>
+            <fr:taxon>Definition</fr:taxon>
+          </fr:frontmatter>
+          <fr:mainmatter>
+            <html:p>A <html:em>weight</html:em> on a category <fr:tex display="inline"><![CDATA[\mathcal {C}]]></fr:tex> is a functor
+<fr:tex display="inline"><![CDATA[W : \mathcal {C} \to  \mathsf {Psh}\,\mathcal {C}]]></fr:tex>. For a presheaf <fr:tex display="inline"><![CDATA[P : \mathsf {Psh}\,\mathcal {C}]]></fr:tex>, the
+weighted limit of <fr:tex display="inline"><![CDATA[P]]></fr:tex> by <fr:tex display="inline"><![CDATA[W]]></fr:tex> is the presheaf which represents the
+functor of maps from the weight into <fr:tex display="inline"><![CDATA[P]]></fr:tex>. Concretely, it is the
+<html:em>nerve along <fr:tex display="inline"><![CDATA[W]]></fr:tex></html:em>:
+<fr:tex display="block"><![CDATA[\mathsf {Nerve}{\mathopen {}\left (W\right )\mathclose {}} : \mathsf {Psh}\,\mathcal {C} \to  \mathsf {Psh}\,\mathcal {C},
+    \qquad 
+   \mathsf {Nerve}{\mathopen {}\left (W\right )\mathclose {}}{\mathopen {}\left (P\right )\mathclose {}}{\mathopen {}\left (c\right )\mathclose {}}
+   = \mathsf {Psh}\,\mathcal {C}{\mathopen {}\left (W{\mathopen {}\left (c\right )\mathclose {}}, P\right )\mathclose {}}.]]></fr:tex>
+Thus a section of <fr:tex display="inline"><![CDATA[\mathsf {Nerve}{\mathopen {}\left (W\right )\mathclose {}}{\mathopen {}\left (P\right )\mathclose {}}]]></fr:tex> over <fr:tex display="inline"><![CDATA[c]]></fr:tex> is a coherent
+way to evaluate every element of the weighting presheaf <fr:tex display="inline"><![CDATA[W{\mathopen {}\left (c\right )\mathclose {}}]]></fr:tex>
+in <fr:tex display="inline"><![CDATA[P]]></fr:tex>. Naturality of <fr:tex display="inline"><![CDATA[W]]></fr:tex> makes this assignment contravariant in
+<fr:tex display="inline"><![CDATA[c]]></fr:tex>, so it is again a presheaf.</html:p>
+            <html:p>This is the Set-enriched form of the ordinary weighted-limit
+universal property: maps into the weighted limit are natural
+transformations from the weight to the hom-diagram. The implementation
+is the weighted-limit specification in
+<html:code>Cubical.Categories.UniversalConstructions.WeightedLimit</html:code>; the
+formula above is its specialization to the presheaf category.</html:p>
+            <html:p>The abstract hom-set in this formula is itself an ordinary limit in
+<fr:tex display="inline"><![CDATA[\mathbf {Set}]]></fr:tex>. For any presheaf <fr:tex display="inline"><![CDATA[Q : \mathsf {Psh}\,\mathcal {C}]]></fr:tex>, let <fr:tex display="inline"><![CDATA[\mathsf {Element}{\mathopen {}\left (Q\right )\mathclose {}}]]></fr:tex> be its
+category of elements, and form the diagram
+<fr:tex display="block"><![CDATA[\Delta _Q : \mathsf {Element}{\mathopen {}\left (Q\right )\mathclose {}}^{\mathrm {op}} \to  \mathbf {Set},
+    \qquad 
+   \Delta _Q = P \circ  \mathsf {Fst}^{\mathrm {op}}.]]></fr:tex>
+Then there is a natural isomorphism
+<fr:tex display="block"><![CDATA[\mathsf {Psh}\,\mathcal {C}{\mathopen {}\left (Q, P\right )\mathclose {}}
+   \;\cong \;
+   \operatorname {lim}_{{\mathopen {}\left (c,q\right )\mathclose {}}\,\in \,\mathsf {Element}{\mathopen {}\left (Q\right )\mathclose {}}^{\mathrm {op}}} P{\mathopen {}\left (c\right )\mathclose {}}.]]></fr:tex>
+The limiting cone evaluates a natural transformation at its elements:
+for every <fr:tex display="inline"><![CDATA[{\mathopen {}\left (c, q : Q{\mathopen {}\left (c\right )\mathclose {}}\right )\mathclose {}}]]></fr:tex>, its projection is
+<fr:tex display="block"><![CDATA[\mathsf {Psh}\,\mathcal {C}{\mathopen {}\left (Q, P\right )\mathclose {}} \to  P{\mathopen {}\left (c\right )\mathclose {}},
+    \qquad 
+   \alpha  \longmapsto  \alpha _c{\mathopen {}\left (q\right )\mathclose {}}.]]></fr:tex>
+The equations of the cone are exactly the naturality equations for
+<fr:tex display="inline"><![CDATA[\alpha ]]></fr:tex>; conversely, a compatible family of such evaluations
+reconstructs a natural transformation.</html:p>
+            <html:p>Now take the weight to be the strict-downset functor
+<fr:tex display="inline"><![CDATA[\mathsf {StrictDown} : \mathcal {C} \to  \mathsf {Psh}\,\mathcal {C}]]></fr:tex> of a
+<fr:link href="/sss-00FG/" title="Direct categories" uri="https://stevenschaefer.net/sss-00FG/" display-uri="sss-00FG" type="local">direct category</fr:link>. The <fr:link href="/sss-00FN/" title="Later on presheaves" uri="https://stevenschaefer.net/sss-00FN/" display-uri="sss-00FN" type="local">later modality</fr:link> is
+precisely its nerve, or equivalently this weighted limit:
+<fr:tex display="block"><![CDATA[\rhd  P = \mathsf {Nerve}{\mathopen {}\left (\mathsf {StrictDown}\right )\mathclose {}}{\mathopen {}\left (P\right )\mathclose {}},
+    \qquad 
+   \rhd  P{\mathopen {}\left (x\right )\mathclose {}}
+   = \mathsf {Psh}\,\mathcal {C}{\mathopen {}\left (\mathsf {StrictDown}{\mathopen {}\left (x\right )\mathclose {}}, P\right )\mathclose {}}
+   \cong 
+   \operatorname {lim}_{{\mathopen {}\left (y,f\right )\mathclose {}}\,\in \,\mathsf {Element}{\mathopen {}\left (\mathsf {StrictDown}{\mathopen {}\left (x\right )\mathclose {}}\right )\mathclose {}}^{\mathrm {op}}}
+     P{\mathopen {}\left (y\right )\mathclose {}}.]]></fr:tex>
+So the usual presentation of later by coherent restrictions from
+strictly smaller objects is not merely suggestive: it is a genuine
+limit in <fr:tex display="inline"><![CDATA[\mathbf {Set}]]></fr:tex>, indexed by the elements of the strict downset.</html:p>
+            <html:p>When the direct category has a
+<fr:link href="/sss-00GF/" title="Predecessors simplify later" uri="https://stevenschaefer.net/sss-00GF/" display-uri="sss-00GF" type="local">predecessor</fr:link> <fr:tex display="inline"><![CDATA[\rho  : p \to  x]]></fr:tex>, the weighting presheaf is
+representable: <fr:tex display="inline"><![CDATA[\mathsf {StrictDown}{\mathopen {}\left (x\right )\mathclose {}} \cong  \mathsf {y} p]]></fr:tex>. Yoneda
+then reduces the weighted limit, and hence the corresponding Set
+limit, to evaluation:
+<fr:tex display="block"><![CDATA[\rhd  P{\mathopen {}\left (x\right )\mathclose {}}
+   \cong  \mathsf {Psh}\,\mathcal {C}{\mathopen {}\left (\mathsf {y} p, P\right )\mathclose {}}
+   \cong  P{\mathopen {}\left (p\right )\mathclose {}}.]]></fr:tex>
+For the topos of trees, <fr:tex display="inline"><![CDATA[p = n]]></fr:tex> is the predecessor of <fr:tex display="inline"><![CDATA[n+1]]></fr:tex>; later
+is therefore the familiar shift.</html:p>
+          </fr:mainmatter>
+        </fr:tree>
+        <fr:tree show-metadata="true" expanded="false" toc="false" numbered="false">
+          <fr:frontmatter>
+            <fr:authors>
+              <fr:author>
+                <fr:link href="/stevenschaefer/" title="Steven Schaefer" uri="https://stevenschaefer.net/stevenschaefer/" display-uri="stevenschaefer" type="local">Steven Schaefer</fr:link>
+              </fr:author>
+            </fr:authors>
+            <fr:date>
+              <fr:year>2026</fr:year>
               <fr:month>7</fr:month>
               <fr:day>20</fr:day>
             </fr:date>
