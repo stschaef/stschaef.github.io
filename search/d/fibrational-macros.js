@@ -1,0 +1,1 @@
+heliaSearchData("d/fibrational-macros",{"id":"fibrational-macros","title":"Fibrational Macros","kind":"note","tags":[],"authors":[],"venue":[],"date":null,"url":"fibrational-macros.html","headings":[],"body":""});

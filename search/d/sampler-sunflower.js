@@ -1,0 +1,1 @@
+heliaSearchData("d/sampler-sunflower",{"id":"sampler-sunflower","title":"Sampler sunflower","kind":"glyph-art","tags":["ornament","ornament-sampler"],"authors":["Steven Schaefer"],"venue":[],"date":null,"url":"sampler-sunflower.html","headings":[],"body":"A cross-stitch motif for the sampler margin pattern."});

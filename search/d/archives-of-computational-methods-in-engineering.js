@@ -1,0 +1,1 @@
+heliaSearchData("d/archives-of-computational-methods-in-engineering",{"id":"archives-of-computational-methods-in-engineering","title":"Archives of Computational Methods in Engineering","kind":"venue","tags":[],"authors":[],"venue":[],"date":null,"url":"archives-of-computational-methods-in-engineering.html","headings":[],"body":""});

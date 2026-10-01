@@ -1,0 +1,1 @@
+heliaSearchData("d/chom1963",{"id":"chom1963","title":"Formal properties of grammars","kind":"reference","tags":["parsing"],"authors":["Noam Chomsky"],"venue":[],"date":null,"url":"chom1963.html","headings":[],"body":""});

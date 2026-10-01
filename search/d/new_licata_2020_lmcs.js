@@ -1,0 +1,1 @@
+heliaSearchData("d/new_licata_2020_lmcs",{"id":"new_licata_2020_lmcs","title":"Call-by-name Gradual Type Theory","kind":"reference","tags":["gradual-typing","type-theory"],"authors":["Daniel R. Licata","Max S. New"],"venue":["LMCS","Logical Methods in Computer Science"],"date":null,"url":"new_licata_2020_lmcs.html","headings":[],"body":""});

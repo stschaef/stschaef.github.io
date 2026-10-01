@@ -1,0 +1,1 @@
+heliaSearchData("d/vakarSyntaxSemanticsLinear2015",{"id":"vakarSyntaxSemanticsLinear2015","title":"Syntax and Semantics of Linear Dependent Types","kind":"reference","tags":["linear-logic","type-theory"],"authors":["Matthijs Vákár"],"venue":[],"date":null,"url":"vakarSyntaxSemanticsLinear2015.html","headings":[],"body":""});

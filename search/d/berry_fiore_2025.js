@@ -1,0 +1,1 @@
+heliaSearchData("d/berry_fiore_2025",{"id":"berry_fiore_2025","title":"Formal P-Category Theory and Normalization by Evaluation in Rocq","kind":"reference","tags":["category-theory","metatheory"],"authors":["David G. Berry","Marcelo P. Fiore"],"venue":[],"date":null,"url":"berry_fiore_2025.html","headings":[],"body":""});

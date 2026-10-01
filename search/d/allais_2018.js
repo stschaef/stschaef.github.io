@@ -1,0 +1,1 @@
+heliaSearchData("d/allais_2018",{"id":"allais_2018","title":"agdarsec — total parser combinators","kind":"reference","tags":["parsing"],"authors":["Guillaume Allais"],"venue":["JFLA","Journées Francophones des Langages Applicatifs"],"date":null,"url":"allais_2018.html","headings":[],"body":""});

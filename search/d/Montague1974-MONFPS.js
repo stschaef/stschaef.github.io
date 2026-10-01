@@ -1,0 +1,1 @@
+heliaSearchData("d/Montague1974-MONFPS",{"id":"Montague1974-MONFPS","title":"Formal Philosophy: Selected Papers of Richard Montague","kind":"reference","tags":["categorial-grammar"],"authors":["Richard Montague"],"venue":[],"date":null,"url":"Montague1974-MONFPS.html","headings":[],"body":""});

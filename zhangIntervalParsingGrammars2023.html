@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>Interval Parsing Grammars for File Format Parsing</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Ctext y=%22.9em%22 font-size=%2290%22%3E%F0%9F%8C%BB%3C/text%3E%3C/svg%3E">
+<meta name="generator" content="helia">
+<script src="helia/theme-version.js"></script>
+<script src="theme/folio-early.js"></script>
+<link rel="stylesheet" href="helia/theme.css">
+<link rel="stylesheet" href="helia/highlight.css">
+<link rel="stylesheet" href="helia/search.css">
+<link rel="stylesheet" href="theme/katex.css">
+<link rel="stylesheet" href="theme/recipe.css">
+<link rel="stylesheet" href="theme/site.css">
+<link rel="stylesheet" href="theme/folio.css">
+<script defer src="helia/runtime.js"></script>
+<script defer src="helia/search.js"></script>
+<script defer src="theme/glyphcraft.js"></script>
+<script defer src="theme/glyphart.js"></script>
+<script defer src="theme/glyphgen.js"></script>
+<script defer src="theme/ornament.js"></script>
+<script defer src="theme/folio.js"></script>
+<script defer src="theme/portrait.js"></script>
+<script type="application/json" id="helia-widgets">{"helia-cite-formats":"widgets/helia-cite-formats-a3294ac7.js"}</script>
+<link rel="modulepreload" href="widgets/helia-cite-formats-a3294ac7.js">
+<script type="module" src="widgets/runtime.js"></script>
+</head>
+<body>
+<nav class="helia-topbar"><a class="helia-home" href="home.html">Steven Schaefer</a><ul class="helia-nav-links"><li><a href="stevenschaefer.html">About Me</a></li><li><a href="research.html">Research</a></li><li><a href="new.html">New</a></li></ul><button type="button" class="helia-search-button" aria-label="Search (/ or Ctrl+K)" aria-haspopup="dialog"><span class="helia-search-icon">⌕</span><span class="helia-search-label">Search</span><kbd class="helia-search-key">/</kbd></button></nav>
+<div class="helia-page" data-kind="reference">
+<article class="helia-article">
+<header class="helia-header" data-entry="zhangIntervalParsingGrammars2023" data-kind="reference">
+<h2 class="helia-heading"><span class="helia-taxon">Reference.</span> Interval Parsing Grammars for File Format Parsing</h2>
+<div class="helia-meta"><span class="helia-author"><a class="helia-entry-link" href="jialunzhang.html" data-entry="jialunzhang">Jialun Zhang</a>, <a class="helia-entry-link" href="gregmorrisett.html" data-entry="gregmorrisett">Greg Morrisett</a>, <a class="helia-entry-link" href="gangtan.html" data-entry="gangtan">Gang Tan</a></span> · <span class="helia-byline"><a class="helia-entry-link" href="pldi.html" data-entry="pldi">PLDI</a> · 2023</span> · <span class="helia-tags"><span class="helia-tag" data-tag="parsing"><span class="helia-entry-link helia-unavailable">parsing</span></span></span> · <span class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/3591264">DOI</a></span></span></div>
+</header>
+<div class="helia-body">
+<div class="helia-abstract">File formats specify how data is encoded for persistent storage. They cannot be formalized as context-free grammars since their specifications include context-sensitive patterns such as the random access pattern and the type-length-value pattern. We propose a new grammar mechanism called Interval Parsing Grammars IPGs) for file format specifications. An IPG attaches to every nonterminal/terminal an interval, which specifies the range of input the nonterminal/terminal consumes. By connecting intervals and attributes, the context-sensitive patterns in file formats can be well handled. In this paper, we formalize IPGs’ syntax as well as its semantics, and its semantics naturally leads to a parser generator that generates a recursive-descent parser from an IPG. In general, IPGs are declarative, modular, and enable termination checking. We have used IPGs to specify a number of file formats including ZIP, ELF, GIF, PE, and part of PDF; we have also evaluated the performance of the generated parsers.</div>
+</div>
+<div class="helia-cite helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><h3 class="helia-heading">Cite</h3>
+</summary>
+<div class="helia-group-body">
+<div class="helia-widget" data-widget="helia-cite-formats" data-props="{&quot;key&quot;:&quot;zhangIntervalParsingGrammars2023&quot;,&quot;bibtex&quot;:&quot;@article{zhangIntervalParsingGrammars2023,\n title = {Interval {Parsing} {Grammars} for {File} {Format} {Parsing}},\n author = {Zhang, Jialun and Morrisett, Greg and Tan, Gang},\n year = {2023},\n doi = {10.1145/3591264},\n url = {https://dl.acm.org/doi/10.1145/3591264},\n urldate = {2024-04-29},\n journal = {Proceedings of the ACM on Programming Languages},\n volume = {7},\n number = {PLDI},\n pages = {1073--1095},\n month = {June},\n language = {en},\n abstract = {File formats specify how data is encoded for persistent storage. They cannot be formalized as context-free grammars since their specifications include context-sensitive patterns such as the random access pattern and the type-length-value pattern. We propose a new grammar mechanism called Interval Parsing Grammars IPGs) for file format specifications. An IPG attaches to every nonterminal/terminal an interval, which specifies the range of input the nonterminal/terminal consumes. By connecting intervals and attributes, the context-sensitive patterns in file formats can be well handled. In this paper, we formalize IPGs&#39; syntax as well as its semantics, and its semantics naturally leads to a parser generator that generates a recursive-descent parser from an IPG. In general, IPGs are declarative, modular, and enable termination checking. We have used IPGs to specify a number of file formats including ZIP, ELF, GIF, PE, and part of PDF; we have also evaluated the performance of the generated parsers.},\n issn = {2475-1421}\n}&quot;,&quot;bib-file&quot;:&quot;zhangIntervalParsingGrammars2023.bib&quot;,&quot;hayagriva&quot;:&quot;zhangIntervalParsingGrammars2023:\n  type: article\n  title: Interval {Parsing} {Grammars} for {File} {Format} {Parsing}\n  author:\n  - Zhang, Jialun\n  - Morrisett, Greg\n  - Tan, Gang\n  date: 2023-06\n  page-range: 1073-1095\n  url:\n    value: https://dl.acm.org/doi/10.1145/3591264\n    date: 2024-04-29\n  serial-number:\n    doi: 10.1145/3591264\n    issn: 2475-1421\n  abstract: File formats specify how data is encoded for persistent storage. They cannot be formalized as context-free grammars since their specifications include context-sensitive patterns such as the random access pattern and the type-length-value pattern. We propose a new grammar mechanism called Interval Parsing Grammars IPGs) for file format specifications. An IPG attaches to every nonterminal/terminal an interval, which specifies the range of input the nonterminal/terminal consumes. By connecting intervals and attributes, the context-sensitive patterns in file formats can be well handled. In this paper, we formalize IPGs&#39; syntax as well as its semantics, and its semantics naturally leads to a parser generator that generates a recursive-descent parser from an IPG. In general, IPGs are declarative, modular, and enable termination checking. We have used IPGs to specify a number of file formats including ZIP, ELF, GIF, PE, and part of PDF; we have also evaluated the performance of the generated parsers.\n  parent:\n    type: periodical\n    title: Proceedings of the ACM on Programming Languages\n    issue: PLDI\n    volume: 7\n&quot;,&quot;yml-file&quot;:&quot;zhangIntervalParsingGrammars2023.yml&quot;}"><div class="helia-cite-key" data-copy="@zhangIntervalParsingGrammars2023" data-copy-label="citation key"><span class="helia-bib-key">Cite as</span> <code class="helia-raw-inline">@zhangIntervalParsingGrammars2023</code> (helia, typst) · <code class="helia-raw-inline">\cite{zhangIntervalParsingGrammars2023}</code> (LaTeX)</div>
+<div class="helia-cite-format helia-collapsible" data-format="bibtex" data-copy="true" data-copy-label="BibTeX">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">BibTeX</span></summary>
+<div class="helia-group-body">
+<details class="helia-code" open><summary class="helia-code-summary"><span class="helia-code-lang">bibtex</span> · <span class="helia-code-lines">16 lines</span></summary><pre class="helia-raw"><code class="language-bibtex"><span class="hl-text hl-bibtex"><span class="hl-meta hl-entry hl-braces hl-bibtex"><span class="hl-keyword hl-other hl-entry-type hl-bibtex"><span class="hl-punctuation hl-definition hl-keyword hl-bibtex">@</span>article</span><span class="hl-punctuation hl-section hl-entry hl-begin hl-bibtex">{</span><span class="hl-entity hl-name hl-type hl-entry-key hl-bibtex">zhangIntervalParsingGrammars2023</span>,
+ <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">title</span> <span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span> <span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>Interval <span class="hl-punctuation hl-definition hl-group hl-begin hl-bibtex">{</span>Parsing<span class="hl-punctuation hl-definition hl-group hl-end hl-bibtex">}</span> <span class="hl-punctuation hl-definition hl-group hl-begin hl-bibtex">{</span>Grammars<span class="hl-punctuation hl-definition hl-group hl-end hl-bibtex">}</span> for <span class="hl-punctuation hl-definition hl-group hl-begin hl-bibtex">{</span>File<span class="hl-punctuation hl-definition hl-group hl-end hl-bibtex">}</span> <span class="hl-punctuation hl-definition hl-group hl-begin hl-bibtex">{</span>Format<span class="hl-punctuation hl-definition hl-group hl-end hl-bibtex">}</span> <span class="hl-punctuation hl-definition hl-group hl-begin hl-bibtex">{</span>Parsing<span class="hl-punctuation hl-definition hl-group hl-end hl-bibtex">}</span><span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>,
+ <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">author</span> <span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span> <span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>Zhang, Jialun and Morrisett, Greg and Tan, Gang<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>,
+ <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">year</span> <span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span> <span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>2023<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>,
+ <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">doi</span> <span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span> <span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>10.1145/3591264<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>,
+ <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">url</span> <span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span> <span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>https://dl.acm.org/doi/10.1145/3591264<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>,
+ <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">urldate</span> <span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span> <span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>2024-04-29<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>,
+ <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">journal</span> <span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span> <span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>Proceedings of the ACM on Programming Languages<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>,
+ <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">volume</span> <span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span> <span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>7<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>,
+ <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">number</span> <span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span> <span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>PLDI<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>,
+ <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">pages</span> <span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span> <span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>1073--1095<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>,
+ <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">month</span> <span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span> <span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>June<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>,
+ <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">language</span> <span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span> <span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>en<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>,
+ <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">abstract</span> <span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span> <span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>File formats specify how data is encoded for persistent storage. They cannot be formalized as context-free grammars since their specifications include context-sensitive patterns such as the random access pattern and the type-length-value pattern. We propose a new grammar mechanism called Interval Parsing Grammars IPGs) for file format specifications. An IPG attaches to every nonterminal/terminal an interval, which specifies the range of input the nonterminal/terminal consumes. By connecting intervals and attributes, the context-sensitive patterns in file formats can be well handled. In this paper, we formalize IPGs&#39; syntax as well as its semantics, and its semantics naturally leads to a parser generator that generates a recursive-descent parser from an IPG. In general, IPGs are declarative, modular, and enable termination checking. We have used IPGs to specify a number of file formats including ZIP, ELF, GIF, PE, and part of PDF; we have also evaluated the performance of the generated parsers.<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>,
+ <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">issn</span> <span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span> <span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>2475-1421<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span>
+</span><span class="hl-punctuation hl-section hl-entry hl-end hl-bibtex">}</span></span></span></code></pre></details>
+</div>
+</details>
+</div>
+<div class="helia-cite-format helia-collapsible" data-format="hayagriva" data-copy="true" data-copy-label="hayagriva YAML">
+<details>
+<summary class="helia-group-summary"><span class="helia-group-title">hayagriva YAML (typst)</span></summary>
+<div class="helia-group-body">
+<details class="helia-code" open><summary class="helia-code-summary"><span class="helia-code-lang">yaml</span> · <span class="helia-code-lines">21 lines</span></summary><pre class="helia-raw"><code class="language-yaml"><span class="hl-source hl-yaml"><span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">zhangIntervalParsingGrammars2023</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">type</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">article</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">title</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Interval {Parsing} {Grammars} for {File} {Format} {Parsing}</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">author</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Zhang, Jialun</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Morrisett, Greg</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Tan, Gang</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">date</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">2023-06</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">page-range</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">1073-1095</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">url</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">value</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">https://dl.acm.org/doi/10.1145/3591264</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">date</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-constant hl-other hl-timestamp hl-yaml">2024<span class="hl-punctuation hl-separator hl-date hl-yaml">-</span>04<span class="hl-punctuation hl-separator hl-date hl-yaml">-</span>29</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">serial-number</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">doi</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">10.1145/3591264</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">issn</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">2475-1421</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">abstract</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">File formats specify how data is encoded for persistent storage. They cannot be formalized as context-free grammars since their specifications include context-sensitive patterns such as the random access pattern and the type-length-value pattern. We propose a new grammar mechanism called Interval Parsing Grammars IPGs) for file format specifications. An IPG attaches to every nonterminal/terminal an interval, which specifies the range of input the nonterminal/terminal consumes. By connecting intervals and attributes, the context-sensitive patterns in file formats can be well handled. In this paper, we formalize IPGs&#39; syntax as well as its semantics, and its semantics naturally leads to a parser generator that generates a recursive-descent parser from an IPG. In general, IPGs are declarative, modular, and enable termination checking. We have used IPGs to specify a number of file formats including ZIP, ELF, GIF, PE, and part of PDF; we have also evaluated the performance of the generated parsers.</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">parent</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">type</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">periodical</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">title</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Proceedings of the ACM on Programming Languages</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">issue</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">PLDI</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">volume</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-constant hl-numeric hl-integer hl-decimal hl-yaml">7</span>
+</span></code></pre></details>
+</div>
+</details>
+</div>
+<div class="helia-cite-files">Download: <a class="helia-link" href="zhangIntervalParsingGrammars2023.bib">zhangIntervalParsingGrammars2023.bib</a> · <a class="helia-link" href="zhangIntervalParsingGrammars2023.yml">zhangIntervalParsingGrammars2023.yml</a></div>
+</div>
+</div>
+</details>
+</div>
+<div class="helia-reference-cites helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">Cites 24 works (0 here)</span></summary>
+<div class="helia-group-body">
+<div class="helia-reference-cites-away helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">External (24)</span></summary>
+<div class="helia-group-body">
+<ul>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1109/spw59333.2023.00020">DISV: Domain Independent Semantic Validation of Data Files</a> (2023)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.5281/zenodo.7811236">Interval Parsing Grammars for File Format Parsing (artifact)</a> (2023)</li>
+<li>Parsing PEGs with Length Fields in Software and Hardware (2021)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1109/spw50608.2020.00064">Research Report: The Parsley Data Format Definition Language</a> (2020)</li>
+<li>EverParse: Verified Secure Zero-Copy Parsers for Authenticated Message Formats (2019)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1109/ispras.2018.00011">Generation of Code for Reading Data from the Declarative File Format Specifications Written in Language FlexT</a> (2018)</li>
+<li>Scalable Vector Graphics (SVG) 2 (W3C) (2018)</li>
+<li>Kaitai Struct User Guide (2015)</li>
+<li>Nail: a practical tool for parsing and generating data formats (2014)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/2660193.2660202">Adaptive LL(*) parsing: the power of dynamic analysis</a> (2014)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1109/sp.2012.15">Abusing File Processing in Malware Detectors for Fun and Profit</a> (2012)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.2218/ijdc.v7i1.217">Grammar-Based Specification and Parsing of Binary File Formats</a> (2012)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/1707801.1706347">Semantics and algorithms for data-dependent grammars</a> (2010)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-540-78800-3_24">Z3: An Efficient SMT Solver</a> (2008)</li>
+<li>Document management — Portable Document Format — Part 1: PDF 1.7 (Adobe) (2008)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/1111037.1111039">The next 700 data description languages</a> (2006)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/1065010.1065046">PADS: a domain-specific language for processing ad hoc data</a> (2005)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/964001.964011">Parsing Expression Grammars: A Recognition-based Syntactic Foundation</a> (2004)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/3-540-45821-2_4">DataScript- A Specification and Scripting Language for Binary Data</a> (2002)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1017/s0956796898003050">Monadic Parsing in Haskell</a> (1998)</li>
+<li>Executable and Linking Format (ELF) Specification, Version 1.2 (1995)</li>
+<li>Compilers: Principles, Techniques, and Tools (1986)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1137/0204007">Finding All the Elementary Circuits of a Directed Graph</a> (1975)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/bf01692511">Semantics of context-free languages</a> (1968)</li>
+</ul>
+</div>
+</details>
+</div>
+</div>
+</details>
+</div>
+</article>
+<div class="helia-identity"><span class="helia-id">zhangIntervalParsingGrammars2023</span> <span class="helia-kind">reference</span> <span class="helia-path">entries/refs/zhangIntervalParsingGrammars2023/zhangIntervalParsingGrammars2023.hel</span></div>
+</div>
+</body>
+</html>

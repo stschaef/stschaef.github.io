@@ -1,0 +1,1 @@
+heliaSearchData("d/jacqueshenrijourdan",{"id":"jacqueshenrijourdan","title":"Jacques-Henri Jourdan","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"jacqueshenrijourdan.html","headings":[],"body":""});

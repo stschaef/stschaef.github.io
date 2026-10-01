@@ -1,0 +1,1 @@
+heliaSearchData("d/sylvainpogodalla",{"id":"sylvainpogodalla","title":"Sylvain Pogodalla","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"sylvainpogodalla.html","headings":[],"body":""});

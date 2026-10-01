@@ -1,0 +1,1 @@
+heliaSearchData("d/fwilliamlawvere",{"id":"fwilliamlawvere","title":"F. William Lawvere","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"fwilliamlawvere.html","headings":[],"body":""});

@@ -1,0 +1,1 @@
+heliaSearchData("d/ishtiaq_ohearn_bi_2001",{"id":"ishtiaq_ohearn_bi_2001","title":"BI as an assertion language for mutable data structures","kind":"reference","tags":["separation-logic"],"authors":["Peter O’Hearn","Samin Ishtiaq"],"venue":["POPL","Symposium on Principles of Programming Languages"],"date":null,"url":"ishtiaq_ohearn_bi_2001.html","headings":[],"body":""});

@@ -1,0 +1,1 @@
+heliaSearchData("d/leroy_formal_2009",{"id":"leroy_formal_2009","title":"Formal verification of a realistic compiler","kind":"reference","tags":["compilation"],"authors":["Xavier Leroy"],"venue":["CACM","Communications of the ACM"],"date":null,"url":"leroy_formal_2009.html","headings":[],"body":""});

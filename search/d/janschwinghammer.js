@@ -1,0 +1,1 @@
+heliaSearchData("d/janschwinghammer",{"id":"janschwinghammer","title":"Jan Schwinghammer","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"janschwinghammer.html","headings":[],"body":""});

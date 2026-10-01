@@ -1,0 +1,1 @@
+heliaSearchData("d/reference-kind",{"id":"reference-kind","title":"Reference kind","kind":"note","tags":[],"authors":["Steven Schaefer"],"venue":[],"date":null,"url":"reference-kind.html","headings":[],"body":""});

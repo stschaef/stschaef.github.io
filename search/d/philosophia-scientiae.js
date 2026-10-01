@@ -1,0 +1,1 @@
+heliaSearchData("d/philosophia-scientiae",{"id":"philosophia-scientiae","title":"Philosophia Scientiæ","kind":"venue","tags":[],"authors":[],"venue":[],"date":null,"url":"philosophia-scientiae.html","headings":[],"body":""});

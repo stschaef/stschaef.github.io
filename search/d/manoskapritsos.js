@@ -1,0 +1,1 @@
+heliaSearchData("d/manoskapritsos",{"id":"manoskapritsos","title":"Manos Kapritsos","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"manoskapritsos.html","headings":[],"body":""});

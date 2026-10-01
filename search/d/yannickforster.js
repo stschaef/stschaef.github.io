@@ -1,0 +1,1 @@
+heliaSearchData("d/yannickforster",{"id":"yannickforster","title":"Yannick Forster","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"yannickforster.html","headings":[],"body":""});

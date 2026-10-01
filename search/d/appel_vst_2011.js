@@ -1,0 +1,1 @@
+heliaSearchData("d/appel_vst_2011",{"id":"appel_vst_2011","title":"Verified Software Toolchain","kind":"reference","tags":["separation-logic"],"authors":["Andrew W. Appel"],"venue":["ESOP","European Symposium on Programming"],"date":null,"url":"appel_vst_2011.html","headings":[],"body":""});

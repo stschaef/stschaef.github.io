@@ -1,0 +1,1 @@
+heliaSearchData("d/sk-big-dipper",{"id":"sk-big-dipper","title":"Big Dipper (skeleton)","kind":"glyph-art","tags":["constellation","ornament"],"authors":["Steven Schaefer"],"venue":[],"date":null,"url":"sk-big-dipper.html","headings":[],"body":"The star positions of a constellation: links(picture(sk-big-dipper)) joins them into a figure."});

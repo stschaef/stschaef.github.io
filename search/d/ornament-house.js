@@ -1,0 +1,1 @@
+heliaSearchData("d/ornament-house",{"id":"ornament-house","title":"Sampler house","kind":"glyph-art","tags":["ornament","ornament-sampler"],"authors":["Steven Schaefer"],"venue":[],"date":null,"url":"ornament-house.html","headings":[],"body":"A sampler motif."});

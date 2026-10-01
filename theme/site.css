@@ -1,0 +1,140 @@
+/* Site-specific styling for stevenschaefer.net, loaded after the base theme
+ * (`[theme] css` in helia.toml). Generic look and feel lives in the base
+ * theme; this file only styles the home page (entries/home.hel), whose
+ * pieces are `helia.group` roles printed as `helia-home-*` classes. */
+
+/* ---------------------------------------------------------------- hero */
+
+.helia-home-hero {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: 2.25rem;
+  align-items: start;
+  margin: 0.5rem 0 3rem;
+}
+
+.helia-home-hero > p:has(> .helia-home-photo) {
+  margin: 0;
+}
+
+/* The contact links: one row beneath both the photo and the bio. */
+.helia-home-hero > .helia-home-links {
+  grid-column: 1 / -1;
+  justify-content: center;
+  margin: 0;
+}
+
+.helia-home-links a {
+  white-space: nowrap;
+  hyphens: none;
+}
+
+.helia-home-photo {
+  display: block;
+  width: 168px;
+  height: 168px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 1px solid var(--helia-border);
+  box-shadow: var(--helia-shadow);
+}
+
+.helia-home-name {
+  font-size: 2.35rem;
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+  font-weight: 700;
+  margin: 0.15em 0 0.2em;
+}
+
+.helia-home-role {
+  color: var(--helia-muted);
+  font-size: 1.02em;
+  margin-bottom: 1.1em;
+}
+
+.helia-home-intro {
+  hyphens: manual;
+}
+
+.helia-home-intro > p {
+  margin-bottom: 0.8em;
+}
+
+/* Contact links as quiet pills. */
+.helia-home-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5em;
+  margin-top: 1.4em;
+}
+
+.helia-home-links .helia-link-ext::before {
+  content: none;
+}
+
+.helia-home-links a.helia-link {
+  display: inline-block;
+  padding: 0.2em 0.85em;
+  font-size: 0.9em;
+  color: var(--helia-fg);
+  text-decoration: none;
+  border: 1px solid var(--helia-border-strong);
+  border-radius: 999px;
+  background: var(--helia-bg);
+  transition: border-color 0.12s ease, color 0.12s ease, background-color 0.12s ease;
+}
+
+.helia-home-links a.helia-link:hover {
+  color: var(--helia-accent);
+  border-color: var(--helia-accent);
+  background: var(--helia-hover);
+}
+
+.helia-home-links a.helia-external::after {
+  content: none;
+}
+
+@media (max-width: 640px) {
+  .helia-home-hero {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 1.25rem;
+    margin-top: 0;
+  }
+  .helia-home-photo {
+    width: 112px;
+    height: 112px;
+  }
+  .helia-home-name {
+    font-size: 1.9rem;
+  }
+}
+
+/* ---------------------------------------------------------------- lists */
+
+/* Publications, talks and teaching: one row per entry. */
+.helia-home-list {
+  margin: 0.25em 0 1em;
+}
+
+.helia-home-list .helia-query-item {
+  padding: 0.55em 0;
+  border-bottom: 1px solid var(--helia-border);
+}
+
+.helia-home-list .helia-query-item:first-child {
+  padding-top: 0.2em;
+}
+
+.helia-home-list .helia-query-item:last-child {
+  border-bottom: 0;
+}
+
+/* Home sections are top-level outline headings; a little more air. */
+.helia-article:has(.helia-home-hero) .helia-heading-section[data-level="1"] > details > .helia-heading-summary {
+  margin-top: 2.25em;
+}
+
+/* Home lists: each publication/talk is a collapsed transclusion; its title
+   carries the kind's byline (base theme). */
+.helia-home-list .helia-query-item .helia-transclusion-title { font-size: 1.1em; margin: 0; }

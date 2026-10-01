@@ -1,0 +1,1 @@
+heliaSearchData("d/acm-transactions-on-computer-human-interaction",{"id":"acm-transactions-on-computer-human-interaction","title":"ACM Transactions on Computer-Human Interaction","kind":"venue","tags":[],"authors":[],"venue":[],"date":null,"url":"acm-transactions-on-computer-human-interaction.html","headings":[],"body":""});

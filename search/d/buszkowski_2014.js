@@ -1,0 +1,1 @@
+heliaSearchData("d/buszkowski_2014",{"id":"buszkowski_2014","title":"Multi-Sorted Residuation","kind":"reference","tags":["substructural"],"authors":["Wojciech Buszkowski"],"venue":[],"date":null,"url":"buszkowski_2014.html","headings":[],"body":""});

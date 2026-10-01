@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>Stride and Translation Invariance in CNNs</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Ctext y=%22.9em%22 font-size=%2290%22%3E%F0%9F%8C%BB%3C/text%3E%3C/svg%3E">
+<meta name="generator" content="helia">
+<script src="helia/theme-version.js"></script>
+<script src="theme/folio-early.js"></script>
+<link rel="stylesheet" href="helia/theme.css">
+<link rel="stylesheet" href="helia/highlight.css">
+<link rel="stylesheet" href="helia/search.css">
+<link rel="stylesheet" href="theme/katex.css">
+<link rel="stylesheet" href="theme/recipe.css">
+<link rel="stylesheet" href="theme/site.css">
+<link rel="stylesheet" href="theme/folio.css">
+<script defer src="helia/runtime.js"></script>
+<script defer src="helia/search.js"></script>
+<script defer src="theme/glyphcraft.js"></script>
+<script defer src="theme/glyphart.js"></script>
+<script defer src="theme/glyphgen.js"></script>
+<script defer src="theme/ornament.js"></script>
+<script defer src="theme/folio.js"></script>
+<script defer src="theme/portrait.js"></script>
+<script type="application/json" id="helia-widgets">{"helia-cite-formats":"widgets/helia-cite-formats-a3294ac7.js"}</script>
+<link rel="modulepreload" href="widgets/helia-cite-formats-a3294ac7.js">
+<script type="module" src="widgets/runtime.js"></script>
+</head>
+<body>
+<nav class="helia-topbar"><a class="helia-home" href="home.html">Steven Schaefer</a><ul class="helia-nav-links"><li><a href="stevenschaefer.html">About Me</a></li><li><a href="research.html">Research</a></li><li><a href="new.html">New</a></li></ul><button type="button" class="helia-search-button" aria-label="Search (/ or Ctrl+K)" aria-haspopup="dialog"><span class="helia-search-icon">⌕</span><span class="helia-search-label">Search</span><kbd class="helia-search-key">/</kbd></button></nav>
+<div class="helia-page" data-kind="reference">
+<article class="helia-article">
+<header class="helia-header" data-entry="moutonStrideTranslationInvariance2020" data-kind="reference">
+<h2 class="helia-heading"><span class="helia-taxon">Reference.</span> Stride and Translation Invariance in CNNs</h2>
+<div class="helia-meta"><span class="helia-author"><a class="helia-entry-link" href="coenraadmouton.html" data-entry="coenraadmouton">Coenraad Mouton</a>, <a class="helia-entry-link" href="johannesmyburgh.html" data-entry="johannesmyburgh">Johannes C. Myburgh</a>, <a class="helia-entry-link" href="mareliedavel.html" data-entry="mareliedavel">Marelie H. Davel</a></span> · <span class="helia-byline">Artificial Intelligence Research · 2020</span> · <span class="helia-tags"><span class="helia-tag" data-tag="machine-learning"><span class="helia-entry-link helia-unavailable">machine-learning</span></span> <span class="helia-tag" data-tag="machine-learning-verification"><span class="helia-entry-link helia-unavailable">machine-learning-verification</span></span></span> · <span class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-030-66151-9_17">DOI</a></span> · <span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/2103.10097">arXiv</a></span></span></div>
+</header>
+<div class="helia-body">
+<div class="helia-abstract">Convolutional Neural Networks have become the standard for image classification tasks, however, these architectures are not invariant to translations of the input image. This lack of invariance is attributed to the use of stride which ignores the sampling theorem, and fully connected layers which lack spatial reasoning. We show that stride can greatly benefit translation invariance given that it is combined with sufficient similarity between neighbouring pixels, a characteristic which we refer to as local homogeneity. We also observe that this characteristic is dataset-specific and dictates the relationship between pooling kernel size and stride required for translation invariance. Furthermore we find that a trade-off exists between generalization and translation invariance in the case of pooling kernel size, as larger kernel sizes lead to better invariance but poorer generalization. Finally we explore the efficacy of other solutions proposed, namely global average pooling, anti-aliasing, and data augmentation, both empirically and through the lens of local homogeneity.</div>
+</div>
+<div class="helia-cite helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><h3 class="helia-heading">Cite</h3>
+</summary>
+<div class="helia-group-body">
+<div class="helia-widget" data-widget="helia-cite-formats" data-props="{&quot;key&quot;:&quot;moutonStrideTranslationInvariance2020&quot;,&quot;bibtex&quot;:&quot;@incollection{moutonStrideTranslationInvariance2020,\n title = {Stride and {{Translation Invariance}} in {{CNNs}}},\n author = {Mouton, Coenraad and Myburgh, Johannes C. and Davel, Marelie H.},\n date = {2020},\n doi = {10.1007/978-3-030-66151-9_17},\n url = {http://arxiv.org/abs/2103.10097},\n urldate = {2024-01-15},\n volume = {1342},\n pages = {267--281},\n keywords = {Computer Science - Machine Learning},\n abstract = {Convolutional Neural Networks have become the standard for image classification tasks, however, these architectures are not invariant to translations of the input image. This lack of invariance is attributed to the use of stride which ignores the sampling theorem, and fully connected layers which lack spatial reasoning. We show that stride can greatly benefit translation invariance given that it is combined with sufficient similarity between neighbouring pixels, a characteristic which we refer to as local homogeneity. We also observe that this characteristic is dataset-specific and dictates the relationship between pooling kernel size and stride required for translation invariance. Furthermore we find that a trade-off exists between generalization and translation invariance in the case of pooling kernel size, as larger kernel sizes lead to better invariance but poorer generalization. Finally we explore the efficacy of other solutions proposed, namely global average pooling, anti-aliasing, and data augmentation, both empirically and through the lens of local homogeneity.},\n eprintclass = {cs},\n eprinttype = {arXiv},\n eprint = {2103.10097},\n booktitle = {Artificial Intelligence Research (SACAIR 2020)},\n series = {Communications in Computer and Information Science}\n}&quot;,&quot;bib-file&quot;:&quot;moutonStrideTranslationInvariance2020.bib&quot;,&quot;hayagriva&quot;:&quot;moutonStrideTranslationInvariance2020:\n  type: anthos\n  title: Stride and {Translation Invariance} in {CNNs}\n  author:\n  - Mouton, Coenraad\n  - Myburgh, Johannes C.\n  - Davel, Marelie H.\n  date: 2020\n  page-range: 267-281\n  url:\n    value: http://arxiv.org/abs/2103.10097\n    date: 2024-01-15\n  serial-number:\n    arxiv: &#39;2103.10097&#39;\n    doi: 10.1007/978-3-030-66151-9_17\n  abstract: Convolutional Neural Networks have become the standard for image classification tasks, however, these architectures are not invariant to translations of the input image. This lack of invariance is attributed to the use of stride which ignores the sampling theorem, and fully connected layers which lack spatial reasoning. We show that stride can greatly benefit translation invariance given that it is combined with sufficient similarity between neighbouring pixels, a characteristic which we refer to as local homogeneity. We also observe that this characteristic is dataset-specific and dictates the relationship between pooling kernel size and stride required for translation invariance. Furthermore we find that a trade-off exists between generalization and translation invariance in the case of pooling kernel size, as larger kernel sizes lead to better invariance but poorer generalization. Finally we explore the efficacy of other solutions proposed, namely global average pooling, anti-aliasing, and data augmentation, both empirically and through the lens of local homogeneity.\n  parent:\n    type: anthology\n    title: Artificial Intelligence Research (SACAIR 2020)\n    volume: 1342\n    parent:\n      type: anthology\n      title: Communications in Computer and Information Science\n&quot;,&quot;yml-file&quot;:&quot;moutonStrideTranslationInvariance2020.yml&quot;}"><div class="helia-cite-key" data-copy="@moutonStrideTranslationInvariance2020" data-copy-label="citation key"><span class="helia-bib-key">Cite as</span> <code class="helia-raw-inline">@moutonStrideTranslationInvariance2020</code> (helia, typst) · <code class="helia-raw-inline">\cite{moutonStrideTranslationInvariance2020}</code> (LaTeX)</div>
+<div class="helia-cite-format helia-collapsible" data-format="bibtex" data-copy="true" data-copy-label="BibTeX">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">BibTeX</span></summary>
+<div class="helia-group-body">
+<details class="helia-code" open><summary class="helia-code-summary"><span class="helia-code-lang">bibtex</span> · <span class="helia-code-lines">17 lines</span></summary><pre class="helia-raw"><code class="language-bibtex"><span class="hl-text hl-bibtex"><span class="hl-meta hl-entry hl-braces hl-bibtex"><span class="hl-keyword hl-other hl-entry-type hl-bibtex"><span class="hl-punctuation hl-definition hl-keyword hl-bibtex">@</span>incollection</span><span class="hl-punctuation hl-section hl-entry hl-begin hl-bibtex">{</span><span class="hl-entity hl-name hl-type hl-entry-key hl-bibtex">moutonStrideTranslationInvariance2020</span>,
+ <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">title</span> <span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span> <span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>Stride and <span class="hl-punctuation hl-definition hl-group hl-begin hl-bibtex">{</span><span class="hl-punctuation hl-definition hl-group hl-begin hl-bibtex">{</span>Translation Invariance<span class="hl-punctuation hl-definition hl-group hl-end hl-bibtex">}</span><span class="hl-punctuation hl-definition hl-group hl-end hl-bibtex">}</span> in <span class="hl-punctuation hl-definition hl-group hl-begin hl-bibtex">{</span><span class="hl-punctuation hl-definition hl-group hl-begin hl-bibtex">{</span>CNNs<span class="hl-punctuation hl-definition hl-group hl-end hl-bibtex">}</span><span class="hl-punctuation hl-definition hl-group hl-end hl-bibtex">}</span><span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>,
+ <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">author</span> <span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span> <span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>Mouton, Coenraad and Myburgh, Johannes C. and Davel, Marelie H.<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>,
+ <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">date</span> <span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span> <span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>2020<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>,
+ <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">doi</span> <span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span> <span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>10.1007/978-3-030-66151-9_17<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>,
+ <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">url</span> <span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span> <span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>http://arxiv.org/abs/2103.10097<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>,
+ <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">urldate</span> <span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span> <span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>2024-01-15<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>,
+ <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">volume</span> <span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span> <span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>1342<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>,
+ <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">pages</span> <span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span> <span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>267--281<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>,
+ <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">keywords</span> <span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span> <span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>Computer Science - Machine Learning<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>,
+ <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">abstract</span> <span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span> <span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>Convolutional Neural Networks have become the standard for image classification tasks, however, these architectures are not invariant to translations of the input image. This lack of invariance is attributed to the use of stride which ignores the sampling theorem, and fully connected layers which lack spatial reasoning. We show that stride can greatly benefit translation invariance given that it is combined with sufficient similarity between neighbouring pixels, a characteristic which we refer to as local homogeneity. We also observe that this characteristic is dataset-specific and dictates the relationship between pooling kernel size and stride required for translation invariance. Furthermore we find that a trade-off exists between generalization and translation invariance in the case of pooling kernel size, as larger kernel sizes lead to better invariance but poorer generalization. Finally we explore the efficacy of other solutions proposed, namely global average pooling, anti-aliasing, and data augmentation, both empirically and through the lens of local homogeneity.<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>,
+ <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">eprintclass</span> <span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span> <span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>cs<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>,
+ <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">eprinttype</span> <span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span> <span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>arXiv<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>,
+ <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">eprint</span> <span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span> <span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>2103.10097<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>,
+ <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">booktitle</span> <span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span> <span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>Artificial Intelligence Research (SACAIR 2020)<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>,
+ <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">series</span> <span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span> <span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>Communications in Computer and Information Science<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span>
+</span><span class="hl-punctuation hl-section hl-entry hl-end hl-bibtex">}</span></span></span></code></pre></details>
+</div>
+</details>
+</div>
+<div class="helia-cite-format helia-collapsible" data-format="hayagriva" data-copy="true" data-copy-label="hayagriva YAML">
+<details>
+<summary class="helia-group-summary"><span class="helia-group-title">hayagriva YAML (typst)</span></summary>
+<div class="helia-group-body">
+<details class="helia-code" open><summary class="helia-code-summary"><span class="helia-code-lang">yaml</span> · <span class="helia-code-lines">23 lines</span></summary><pre class="helia-raw"><code class="language-yaml"><span class="hl-source hl-yaml"><span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">moutonStrideTranslationInvariance2020</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">type</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">anthos</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">title</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Stride and {Translation Invariance} in {CNNs}</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">author</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Mouton, Coenraad</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Myburgh, Johannes C.</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Davel, Marelie H.</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">date</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-constant hl-numeric hl-integer hl-decimal hl-yaml">2020</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">page-range</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">267-281</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">url</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">value</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">http://arxiv.org/abs/2103.10097</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">date</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-constant hl-other hl-timestamp hl-yaml">2024<span class="hl-punctuation hl-separator hl-date hl-yaml">-</span>01<span class="hl-punctuation hl-separator hl-date hl-yaml">-</span>15</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">serial-number</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">arxiv</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-quoted hl-single hl-yaml"><span class="hl-punctuation hl-definition hl-string hl-begin hl-yaml">&#39;</span>2103.10097<span class="hl-punctuation hl-definition hl-string hl-end hl-yaml">&#39;</span></span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">doi</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">10.1007/978-3-030-66151-9_17</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">abstract</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Convolutional Neural Networks have become the standard for image classification tasks, however, these architectures are not invariant to translations of the input image. This lack of invariance is attributed to the use of stride which ignores the sampling theorem, and fully connected layers which lack spatial reasoning. We show that stride can greatly benefit translation invariance given that it is combined with sufficient similarity between neighbouring pixels, a characteristic which we refer to as local homogeneity. We also observe that this characteristic is dataset-specific and dictates the relationship between pooling kernel size and stride required for translation invariance. Furthermore we find that a trade-off exists between generalization and translation invariance in the case of pooling kernel size, as larger kernel sizes lead to better invariance but poorer generalization. Finally we explore the efficacy of other solutions proposed, namely global average pooling, anti-aliasing, and data augmentation, both empirically and through the lens of local homogeneity.</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">parent</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">type</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">anthology</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">title</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Artificial Intelligence Research (SACAIR 2020)</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">volume</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-constant hl-numeric hl-integer hl-decimal hl-yaml">1342</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">parent</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span>
+      <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">type</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">anthology</span>
+      <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">title</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Communications in Computer and Information Science</span>
+</span></code></pre></details>
+</div>
+</details>
+</div>
+<div class="helia-cite-files">Download: <a class="helia-link" href="moutonStrideTranslationInvariance2020.bib">moutonStrideTranslationInvariance2020.bib</a> · <a class="helia-link" href="moutonStrideTranslationInvariance2020.yml">moutonStrideTranslationInvariance2020.yml</a></div>
+</div>
+</div>
+</details>
+</div>
+<div class="helia-reference-cites helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">Cites 15 works (1 here)</span></summary>
+<div class="helia-group-body">
+<div class="helia-reference-cites-here helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">With notes (1)</span></summary>
+<div class="helia-group-body">
+<section class="helia-transclusion" data-entry="azulayWhyDeepConvolutional" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="azulayWhyDeepConvolutional"><span class="helia-title">Why do deep convolutional networks generalize so poorly to small image transformations?</span>&nbsp;<a class="helia-slug" href="azulayWhyDeepConvolutional.html">azulayWhyDeepConvolutional</a><span class="helia-byline">2019</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="azulayWhyDeepConvolutional" data-kind="reference">
+<div class="helia-abstract">Convolutional Neural Networks (CNNs) are commonly assumed to be invariant to small image transformations: either because of the convolutional architecture or because they were trained using data augmentation. Recently, several authors have shown that this is not the case: small translations or rescalings of the input image can drastically change the network’s prediction. In this paper, we quantify this phenomena and ask why neither the convolutional architecture nor data augmentation are sufficient to achieve the desired invariance. Specifically, we show that the convolutional architecture does not give invariance since architectures ignore the classical sampling theorem, and data augmentation does not give invariance because the CNNs learn to be invariant to transformations only for images that are very similar to typical images from the training set. We discuss two possible solutions to this problem: (1) antialiasing the intermediate representations and (2) increasing data augmentation and show that they provide only a partial solution at best. Taken together, our results indicate that the problem of insuring invariance to small image transformations in neural networks while preserving high accuracy remains unsolved.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.48550/arxiv.1805.12177">DOI</a></span></div>
+</div>
+</div>
+</details>
+</section>
+</div>
+</details>
+</div>
+<div class="helia-reference-cites-away helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">External (14)</span></summary>
+<div class="helia-group-body">
+<ul>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1109/cvpr42600.2020.01428">On translation invariance in CNNs: Convolutional layers can exploit absolute spatial location</a> (2020)</li>
+<li><a class="helia-link helia-external" href="https://arxiv.org/abs/1904.11486">Making convolutional networks shift-invariant again</a> (2019)</li>
+<li><a class="helia-link helia-external" href="https://arxiv.org/abs/1801.01450">Quantifying translation-invariance in convolutional neural networks</a> (2018)</li>
+<li><a class="helia-link helia-external" href="https://arxiv.org/abs/1710.09829">Dynamic routing between capsules</a> (2017)</li>
+<li><a class="helia-link helia-external" href="https://arxiv.org/abs/1506.02025">Spatial transformer networks</a> (2015)</li>
+<li><a class="helia-link helia-external" href="https://arxiv.org/abs/1411.5908">Understanding image representations by measuring their equivariance and equivalence</a> (2014)</li>
+<li><a class="helia-link helia-external" href="https://arxiv.org/abs/1412.1710">Convolutional neural networks at constrained time cost</a> (2014)</li>
+<li><a class="helia-link helia-external" href="https://arxiv.org/abs/1412.6980">Adam: A method for stochastic optimization</a> (2014)</li>
+<li>Learning multiple layers of features from tiny images (2012)</li>
+<li>ImageNet classification with deep convolutional neural networks (2012)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-642-15825-4_10">Evaluation of Pooling Operations in Convolutional Architectures for Object Recognition</a> (2010)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1162/neco.1989.1.4.541">Backpropagation Applied to Handwritten Zip Code Recognition</a> (1989)</li>
+<li>Certain topics in telegraph transmission theory (1928)</li>
+<li>MNIST database of handwritten digits</li>
+</ul>
+</div>
+</details>
+</div>
+</div>
+</details>
+</div>
+<footer class="helia-footer">
+<div class="helia-related helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><h3 class="helia-heading">Related</h3>
+</summary>
+<div class="helia-group-body">
+<ul>
+<li><a class="helia-entry-link" href="gavranovicFundamentalComponentsDeep.html" data-entry="gavranovicFundamentalComponentsDeep">Fundamental Components of Deep Learning: A category-theoretic approach</a> <span class="helia-related-count">· 2 shared tags</span></li>
+<li><a class="helia-entry-link" href="kouvarosFormalVerificationCNNbased2018.html" data-entry="kouvarosFormalVerificationCNNbased2018">Formal Verification of CNN-based Perception Systems</a> <span class="helia-related-count">· 2 shared tags</span></li>
+<li><a class="helia-entry-link" href="mullerPRIMAGeneralPrecise2022.html" data-entry="mullerPRIMAGeneralPrecise2022">PRIMA: General and Precise Neural Network Certification via Scalable Convex Hull Approximations</a> <span class="helia-related-count">· 2 shared tags</span></li>
+<li><a class="helia-entry-link" href="myburghTrackingTranslationInvariance2021.html" data-entry="myburghTrackingTranslationInvariance2021">Tracking translation invariance in CNNs</a> <span class="helia-related-count">· 2 shared tags</span></li>
+<li><a class="helia-entry-link" href="seshiaVerifiedArtificialIntelligence2020.html" data-entry="seshiaVerifiedArtificialIntelligence2020">Towards Verified Artificial Intelligence</a> <span class="helia-related-count">· 2 shared tags</span></li>
+<li><a class="helia-entry-link" href="sotoudehProvableRepairDeep2021.html" data-entry="sotoudehProvableRepairDeep2021">Provable repair of deep neural networks</a> <span class="helia-related-count">· 2 shared tags</span></li>
+<li><a class="helia-entry-link" href="taoArchitecturePreservingProvableRepair2023.html" data-entry="taoArchitecturePreservingProvableRepair2023">Architecture-Preserving Provable Repair of Deep Neural Networks</a> <span class="helia-related-count">· 2 shared tags</span></li>
+<li><a class="helia-entry-link" href="tranVerificationDeepConvolutional2020.html" data-entry="tranVerificationDeepConvolutional2020">Verification of Deep Convolutional Neural Networks Using ImageStars</a> <span class="helia-related-count">· 2 shared tags</span></li>
+</ul>
+</div>
+</details>
+</div>
+</footer>
+</article>
+<div class="helia-identity"><span class="helia-id">moutonStrideTranslationInvariance2020</span> <span class="helia-kind">reference</span> <span class="helia-path">entries/refs/moutonStrideTranslationInvariance2020/moutonStrideTranslationInvariance2020.hel</span></div>
+</div>
+</body>
+</html>

@@ -1,0 +1,1 @@
+heliaSearchData("d/yangFindingUnderstandingBugs",{"id":"yangFindingUnderstandingBugs","title":"Finding and Understanding Bugs in C Compilers","kind":"reference","tags":["compilation"],"authors":["Eric Eide","John Regehr","Xuejun Yang","Yang Chen"],"venue":["SIGPLAN Notices","ACM SIGPLAN Notices"],"date":null,"url":"yangFindingUnderstandingBugs.html","headings":[],"body":""});

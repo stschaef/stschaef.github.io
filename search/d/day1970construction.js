@@ -1,0 +1,1 @@
+heliaSearchData("d/day1970construction",{"id":"day1970construction","title":"Construction of biclosed categories","kind":"reference","tags":["category-theory"],"authors":["Brian John Day"],"venue":[],"date":null,"url":"day1970construction.html","headings":[],"body":""});

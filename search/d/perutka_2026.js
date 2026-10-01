@@ -1,0 +1,1 @@
+heliaSearchData("d/perutka_2026",{"id":"perutka_2026","title":"2-dimensional Lawvere theories, commutativity, and higher Day convolution","kind":"reference","tags":["category-theory"],"authors":["Tomáš Perutka"],"venue":["arXiv"],"date":null,"url":"perutka_2026.html","headings":[],"body":""});

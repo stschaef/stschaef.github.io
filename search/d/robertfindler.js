@@ -1,0 +1,1 @@
+heliaSearchData("d/robertfindler",{"id":"robertfindler","title":"Robert Bruce Findler","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"robertfindler.html","headings":[],"body":""});

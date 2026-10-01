@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>Later on presheaves</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Ctext y=%22.9em%22 font-size=%2290%22%3E%F0%9F%8C%BB%3C/text%3E%3C/svg%3E">
+<meta name="generator" content="helia">
+<script src="helia/theme-version.js"></script>
+<script src="theme/folio-early.js"></script>
+<link rel="stylesheet" href="helia/theme.css">
+<link rel="stylesheet" href="helia/highlight.css">
+<link rel="stylesheet" href="helia/search.css">
+<link rel="stylesheet" href="theme/katex.css">
+<link rel="stylesheet" href="theme/recipe.css">
+<link rel="stylesheet" href="theme/site.css">
+<link rel="stylesheet" href="theme/folio.css">
+<script defer src="helia/runtime.js"></script>
+<script defer src="helia/search.js"></script>
+<script defer src="theme/glyphcraft.js"></script>
+<script defer src="theme/glyphart.js"></script>
+<script defer src="theme/glyphgen.js"></script>
+<script defer src="theme/ornament.js"></script>
+<script defer src="theme/folio.js"></script>
+<script defer src="theme/portrait.js"></script>
+</head>
+<body>
+<nav class="helia-topbar"><a class="helia-home" href="home.html">Steven Schaefer</a><ul class="helia-nav-links"><li><a href="stevenschaefer.html">About Me</a></li><li><a href="research.html">Research</a></li><li><a href="new.html">New</a></li></ul><button type="button" class="helia-search-button" aria-label="Search (/ or Ctrl+K)" aria-haspopup="dialog"><span class="helia-search-icon">⌕</span><span class="helia-search-label">Search</span><kbd class="helia-search-key">/</kbd></button></nav>
+<div class="helia-page" data-kind="definition">
+<article class="helia-article">
+<header class="helia-header" data-entry="later-presheaf" data-kind="definition">
+<h2 class="helia-heading"><span class="helia-taxon">Definition.</span> Later on presheaves</h2>
+<div class="helia-meta"><span class="helia-date">2026-07-19</span> · <span class="helia-author"><a class="helia-entry-link" href="stevenschaefer.html" data-entry="stevenschaefer">Steven Schaefer</a></span> · <span class="helia-tags"><span class="helia-tag" data-tag="category-theory"><span class="helia-entry-link helia-unavailable">category-theory</span></span> <span class="helia-tag" data-tag="presheaf">presheaf</span> <span class="helia-tag" data-tag="guarded-recursion"><span class="helia-entry-link helia-unavailable">guarded-recursion</span></span> <span class="helia-tag" data-tag="well-founded">well-founded</span> <span class="helia-tag" data-tag="right-adjoint">right-adjoint</span></span></div>
+</header>
+<div class="helia-body">
+<p>The <em>later</em> modality on presheaves is given at each object by mapping out of the <a class="helia-entry-link" href="strict-downset-sieve.html" data-entry="strict-downset-sieve">strict downset</a>:</p>
+<div class="helia-math helia-math-display helia-mathml"><math display="block"><mrow><mo stretchy="false">(</mo><mrow><mo form="infix" lspace="0em">⊳</mo><mi>𝑃</mi></mrow><mo stretchy="false">)</mo></mrow><mspace width="0.1667em"/><mrow><mo stretchy="false">(</mo><mi>𝑥</mi><mo stretchy="false">)</mo></mrow><mo>=</mo><mtext>𝖯𝗌𝗁</mtext><mspace width="0.1667em"/><mi>𝒞︀</mi><mrow><mo stretchy="false">(</mo><mrow><mtext>𝖲𝗍𝗋𝗂𝖼𝗍𝖣𝗈𝗐𝗇</mtext><mspace width="0.2222em"/><mrow><mo stretchy="false">(</mo><mi>𝑥</mi><mo stretchy="false">)</mo></mrow><mo rspace="0em">,</mo><mspace width="0.1667em"/><mi>𝑃</mi></mrow><mo stretchy="false">)</mo></mrow><mi>.</mi></math></div>
+<p>An element of <span class="helia-math helia-math-inline helia-mathml"><math><mo form="infix" lspace="0em">⊳</mo><mi>𝑃</mi></math></span> at <span class="helia-math helia-math-inline helia-mathml"><math><mi>𝑥</mi></math></span> is a coherent choice of <span class="helia-math helia-math-inline helia-mathml"><math><mi>𝑃</mi></math></span>-elements for all objects strictly smaller than <span class="helia-math helia-math-inline helia-mathml"><math><mi>𝑥</mi></math></span>.</p>
+<p>Restriction in <span class="helia-math helia-math-inline helia-mathml"><math><mo form="infix" lspace="0em">⊳</mo><mi>𝑃</mi></math></span> along <span class="helia-math helia-math-inline helia-mathml"><math><mi>𝑓</mi><mo lspace="0.2777777777777778em" rspace="0.2777777777777778em">:</mo><mi>𝑦</mi><mo stretchy="false">→</mo><mi>𝑥</mi></math></span> precomposes with the induced map <span class="helia-math helia-math-inline helia-mathml"><math><mtext>𝖲𝗍𝗋𝗂𝖼𝗍𝖣𝗈𝗐𝗇</mtext><mspace width="0.2222em"/><mrow><mo stretchy="false">(</mo><mi>𝑦</mi><mo stretchy="false">)</mo></mrow><mo stretchy="false">→</mo><mtext>𝖲𝗍𝗋𝗂𝖼𝗍𝖣𝗈𝗐𝗇</mtext><mspace width="0.2222em"/><mrow><mo stretchy="false">(</mo><mi>𝑥</mi><mo stretchy="false">)</mo></mrow></math></span>. At an object of minimal degree the strict downset is empty, so <span class="helia-math helia-math-inline helia-mathml"><math><mo form="infix" lspace="0em">⊳</mo><mi>𝑃</mi></math></span> is trivial there.</p>
+<p>Via functoriality, every presheaf restricts to smaller indices: the map</p>
+<div class="helia-math helia-math-display helia-mathml"><math display="block"><mtext>𝗇𝖾𝗑𝗍</mtext><mo lspace="0.2777777777777778em" rspace="0.2777777777777778em">:</mo><mi>𝑃</mi><mo rspace="0em" stretchy="false">→</mo><mo lspace="0em">⊳</mo><mi>𝑃</mi></math></div>
+<p>sends an element <span class="helia-math helia-math-inline helia-mathml"><math><mi>𝑝</mi></math></span> over <span class="helia-math helia-math-inline helia-mathml"><math><mi>𝑥</mi></math></span> to the family of all its restrictions along morphisms from strictly lower objects.</p>
+</div>
+<footer class="helia-footer">
+<div class="helia-backlinks helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><h3 class="helia-heading">Backlinks</h3>
+</summary>
+<div class="helia-group-body">
+<ul>
+<li><a class="helia-entry-link" href="predecessors-simplify-later.html" data-entry="predecessors-simplify-later">Predecessors simplify later</a></li>
+<li><a class="helia-entry-link" href="earlier-presheaf.html" data-entry="earlier-presheaf">Earlier on presheaves</a></li>
+<li><a class="helia-entry-link" href="locally-contractive-functor.html" data-entry="locally-contractive-functor">Locally contractive endofunctors</a></li>
+<li><a class="helia-entry-link" href="grammar-next-presheaf.html" data-entry="grammar-next-presheaf">Next on Grammars Is Presheaf Structure</a></li>
+</ul>
+</div>
+</details>
+</div>
+<div class="helia-related helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><h3 class="helia-heading">Related</h3>
+</summary>
+<div class="helia-group-body">
+<ul>
+<li><a class="helia-entry-link" href="later-family.html" data-entry="later-family">Later on families</a></li>
+<li><a class="helia-entry-link" href="lob-family.html" data-entry="lob-family">Löb induction on families</a></li>
+<li><a class="helia-entry-link" href="lob-presheaf.html" data-entry="lob-presheaf">Löb induction for presheaves on a direct category</a></li>
+<li><a class="helia-entry-link" href="basold_2019.html" data-entry="basold_2019">Coinduction in flow: the later modality in fibrations</a></li>
+<li><a class="helia-entry-link" href="category-of-elements.html" data-entry="category-of-elements">Category of Elements</a></li>
+<li><a class="helia-entry-link" href="constant-presheaf.html" data-entry="constant-presheaf">Constant Presheaf</a></li>
+<li><a class="helia-entry-link" href="day-closed-structure.html" data-entry="day-closed-structure">Day Convolution is Closed</a></li>
+<li><a class="helia-entry-link" href="day-convolution.html" data-entry="day-convolution">Day Convolution</a></li>
+<li><a class="helia-entry-link" href="direct-category.html" data-entry="direct-category">Direct categories</a></li>
+<li><a class="helia-entry-link" href="element-of-presheaf.html" data-entry="element-of-presheaf">Element of a Presheaf</a></li>
+<li><a class="helia-entry-link" href="finite-cardinal-arithmetic-topos.html" data-entry="finite-cardinal-arithmetic-topos">Finite Cardinal Arithmetic in a Topos</a></li>
+<li><a class="helia-entry-link" href="grammar-later.html" data-entry="grammar-later">Later on Grammars</a></li>
+</ul>
+</div>
+</details>
+</div>
+<div class="helia-definitions helia-collapsible">
+<details>
+<summary class="helia-group-summary"><h3 class="helia-heading">Definitions</h3>
+</summary>
+<div class="helia-group-body">
+<div class="helia-def" data-name="next" data-kind="value">
+<div class="helia-def-head"><span class="helia-def-name"><code class="helia-raw-inline">next</code></span> <span class="helia-def-kind" data-kind="value">value</span></div>
+<details class="helia-code" open><summary class="helia-code-summary"><span class="helia-code-lang">typst</span> · <span class="helia-code-lines">1 line</span></summary><pre class="helia-raw"><code class="language-typst"><span class="hl-source hl-typst"><span class="hl-keyword hl-typst">#</span><span class="hl-keyword hl-typst">let</span> next <span class="hl-keyword hl-operator hl-typst">=</span> <span class="hl-punctuation hl-typst">[</span><span class="hl-punctuation hl-definition hl-math hl-typst">$</span><span class="hl-entity hl-name hl-function hl-typst">sans</span><span class="hl-punctuation hl-typst">(</span><span class="hl-string hl-quoted hl-double hl-typst">&quot;next&quot;</span><span class="hl-punctuation hl-typst">)</span><span class="hl-punctuation hl-definition hl-math hl-typst">$</span><span class="hl-punctuation hl-typst">]</span></span></code></pre></details>
+</div>
+</div>
+</details>
+</div>
+</footer>
+</article>
+<div class="helia-identity"><span class="helia-id">later-presheaf</span> <span class="helia-kind">definition</span> <span class="helia-path">entries/category/later-presheaf.hel</span></div>
+</div>
+</body>
+</html>

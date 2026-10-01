@@ -1,0 +1,1 @@
+heliaSearchData("d/ohearn_fromCat2015",{"id":"ohearn_fromCat2015","title":"From categorical logic to facebook engineering","kind":"reference","tags":["separation-logic"],"authors":["Peter O’Hearn"],"venue":["LICS","Symposium on Logic in Computer Science"],"date":null,"url":"ohearn_fromCat2015.html","headings":[],"body":""});

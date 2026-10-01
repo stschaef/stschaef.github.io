@@ -1,0 +1,1 @@
+heliaSearchData("d/wendlasidaouedraogo",{"id":"wendlasidaouedraogo","title":"Wendlasida Ouedraogo","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"wendlasidaouedraogo.html","headings":[],"body":""});

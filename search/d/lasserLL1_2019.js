@@ -1,0 +1,1 @@
+heliaSearchData("d/lasserLL1_2019",{"id":"lasserLL1_2019","title":"A Verified LL(1) Parser Generator","kind":"reference","tags":["parsing","verified"],"authors":["Chris Casinghino","Cody Roux","Kathleen Fisher","Sam Lasser"],"venue":["ITP","Interactive Theorem Proving"],"date":null,"url":"lasserLL1_2019.html","headings":[],"body":"Predecessor to CoStar and CoStar++."});

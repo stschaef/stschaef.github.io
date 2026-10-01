@@ -1,0 +1,1 @@
+heliaSearchData("d/gabrielscherer",{"id":"gabrielscherer","title":"Gabriel Scherer","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"gabrielscherer.html","headings":[],"body":""});

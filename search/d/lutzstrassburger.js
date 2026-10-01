@@ -1,0 +1,1 @@
+heliaSearchData("d/lutzstrassburger",{"id":"lutzstrassburger","title":"Lutz Strassburger","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"lutzstrassburger.html","headings":[],"body":""});

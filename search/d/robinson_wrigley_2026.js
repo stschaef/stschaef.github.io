@@ -1,0 +1,1 @@
+heliaSearchData("d/robinson_wrigley_2026",{"id":"robinson_wrigley_2026","title":"Day algebras","kind":"reference","tags":["category-theory","substructural"],"authors":["Edmund Robinson","Joshua Wrigley"],"venue":["MSCS","Mathematical Structures in Computer Science"],"date":null,"url":"robinson_wrigley_2026.html","headings":[],"body":""});

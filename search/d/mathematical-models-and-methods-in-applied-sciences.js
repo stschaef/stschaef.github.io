@@ -1,0 +1,1 @@
+heliaSearchData("d/mathematical-models-and-methods-in-applied-sciences",{"id":"mathematical-models-and-methods-in-applied-sciences","title":"Mathematical Models and Methods in Applied Sciences","kind":"venue","tags":[],"authors":[],"venue":[],"date":null,"url":"mathematical-models-and-methods-in-applied-sciences.html","headings":[],"body":""});

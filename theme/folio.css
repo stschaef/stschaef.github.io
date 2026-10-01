@@ -1,0 +1,644 @@
+/* Folio: the site's design (parchment and folk colours, blackletter name, glyph
+   ornament in the margins). Locked in from the design lab's "Steven v2" preset; the
+   ornament itself is drawn by theme/folio.js. Icons live in static/folio/theme/. */
+@import url("https://fonts.googleapis.com/css2?family=UnifrakturCook:wght@700&family=IM+Fell+English+SC&family=IM+Fell+English:ital@0;1&family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&family=Cabin:wght@400;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+Symbols+2&family=Noto+Sans+Symbols&family=Noto+Sans+Phoenician&family=Noto+Sans+Canadian+Aboriginal&display=swap");
+
+/* ---- base ---- */
+/* Folio base — shared by the Folio candidates (each sets the variables and imports its fonts). */
+.helia-home-links a.helia-link::after, .helia-home-links .helia-link-ext::before { content: none !important; }
+.helia-home-links a.helia-link::before {
+  content: ""; display: inline-block; width: 1.05em; height: 1.05em; vertical-align: -0.16em; margin-right: 0.4em;
+  background: currentColor; -webkit-mask: var(--icon) center / contain no-repeat; mask: var(--icon) center / contain no-repeat;
+}
+.helia-home-links a[href^="mailto:"] { --icon: url("icon-mail.svg"); }
+.helia-home-links a[href*="github.com"] { --icon: url("icon-github.svg"); }
+.helia-home-links a[href*="mathstodon"], .helia-home-links a[href*="mastodon"] { --icon: url("icon-mastodon.svg"); }
+.helia-home-links a[href*="orcid.org"] { --icon: url("icon-orcid.svg"); }
+/* a kind's link fields (@base/template) that name an account: its logo before the handle */
+.helia-entry-link:is([data-field="github"], [data-field="mastodon"], [data-field="orcid"]) a.helia-link::after { content: none !important; }
+.helia-entry-link:is([data-field="github"], [data-field="mastodon"], [data-field="orcid"]) a.helia-link::before {
+  content: ""; display: inline-block; width: 1.05em; height: 1.05em; vertical-align: -0.16em; margin-right: 0.35em;
+  background: currentColor; -webkit-mask: var(--icon) center / contain no-repeat; mask: var(--icon) center / contain no-repeat;
+}
+.helia-entry-link[data-field="github"] { --icon: url("icon-github.svg"); }
+.helia-entry-link[data-field="mastodon"] { --icon: url("icon-mastodon.svg"); }
+.helia-entry-link[data-field="orcid"] { --icon: url("icon-orcid.svg"); }
+
+:root, :root:not([data-theme="__folio"]) {
+  color-scheme: light;
+  --body-font: "EB Garamond", Garamond, serif;
+  --name-font: "UnifrakturMaguntia", serif;
+  --title-font: "EB Garamond", serif;
+  --title-weight: 500; --title-size: 2.6rem; --title-case: none; --title-spacing: -0.005em;
+  --head-font: "EB Garamond", serif; --head-weight: 500; --head-variant: small-caps; --head-spacing: .03em; --head-style: normal;
+  --initial-font: "IM Fell English", serif;
+  --paper: #f5eedf; --ink: #231c15; --accent: #a52a1f; --accent-2: #a52a1f; --muted: #6c5e4c;
+  --rule: #bda985; --code-bg: #efe6d2;
+  --b1: "\00B6"; --b2: "\2767"; --b3: "\2022";
+  --helia-font-body: var(--body-font); --helia-font-heading: var(--body-font); --helia-font-sans: var(--body-font);
+  --helia-font-size: 20px; --helia-line-height: 1.52; --helia-measure: 42rem; --margin: 11rem;
+  --helia-bg: var(--paper); --helia-fg: var(--ink); --helia-muted: var(--muted); --helia-faint: color-mix(in srgb, var(--muted) 60%, var(--paper));
+  --helia-border: color-mix(in srgb, var(--rule) 55%, var(--paper)); --helia-border-strong: var(--rule); --helia-accent: var(--accent);
+  --helia-link: var(--ink); --helia-link-decoration: color-mix(in srgb, var(--accent) 50%, transparent);
+  --helia-code-bg: var(--code-bg); --helia-code-border: color-mix(in srgb, var(--rule) 40%, var(--paper));
+  --helia-bullet-1: var(--b1); --helia-bullet-2: var(--b2); --helia-bullet-3: var(--b3); --helia-bullet-4: var(--b3); --helia-bullet-5: var(--b3); --helia-bullet-6: var(--b3);
+  --helia-bullet-color: var(--accent); --helia-bullet-folded-color: color-mix(in srgb, var(--accent) 45%, var(--paper)); --helia-bullet-guide-color: transparent;
+  --helia-number: var(--accent);
+}
+body { background-color: var(--paper); color: var(--ink); }
+math { font-family: "STIX Two Math", math; }
+a { text-decoration-color: var(--helia-link-decoration); text-underline-offset: .18em; }
+
+/* Running head, then a sprig instead of a rule. */
+.helia-topbar { background: transparent; border: none !important; flex-direction: row !important; flex-wrap: nowrap; justify-content: space-between; align-items: baseline;
+  padding: 1.1rem 0 .2rem !important; margin: -2.5rem auto 0 !important; max-width: calc(var(--helia-measure) + var(--margin) + 4rem); }
+.helia-home { font-family: var(--name-font); font-weight: 400; font-size: 1.75rem; color: var(--accent) !important; }
+.helia-nav-links { flex-direction: row !important; gap: 0 1.3rem !important; }
+.helia-nav-links a { font-family: var(--head-font); font-variant: small-caps; letter-spacing: .07em; color: var(--ink); text-decoration: none; }
+.helia-search-button { font-size: .8em; border-radius: 0; background: transparent; }
+.helia-page::before { content: ""; display: block; height: 2.2rem; margin: .4rem 0 1.6rem calc(-1 * var(--margin));
+  background: var(--accent-2); -webkit-mask: url("sprig.svg") center / auto 100% no-repeat; mask: url("sprig.svg") center / auto 100% no-repeat; }
+
+/* Page with marginalia. */
+.helia-page { max-width: calc(var(--helia-measure) + var(--margin) + 4rem); margin: 0 auto; padding-left: var(--margin); box-sizing: border-box; }
+.helia-body p { text-align: justify; hyphens: auto; }
+.helia-header { position: relative; margin-top: 1rem; }
+.helia-header .helia-heading { font-family: var(--title-font); font-size: var(--title-size); font-weight: var(--title-weight); text-transform: var(--title-case);
+  letter-spacing: var(--title-spacing); line-height: 1.1; }
+.helia-taxon, .helia-meta { position: absolute; left: calc(-1 * var(--margin)); width: calc(var(--margin) - 1.5rem); text-align: right; }
+.helia-taxon { top: .45rem; font-family: var(--head-font); font-size: .8rem; font-variant: small-caps; letter-spacing: .12em; color: var(--accent); font-weight: 500; text-transform: none; }
+.helia-meta { top: 1.7rem; font-size: 0; }
+.helia-meta .helia-date { font-size: .95rem; font-style: italic; color: var(--muted); }
+.helia-meta > :not(.helia-date):not(.folio-id):not(.helia-byline):not(.helia-author):not(.helia-entry-links) {
+  display: none !important; }
+/* a kind's byline (@base/template), led by the authors, stands where the date would */
+.helia-meta:not(:has(.helia-byline)) > .helia-author { display: none !important; }
+.helia-meta .helia-byline, .helia-meta .helia-author { font-size: .95rem; font-style: italic; color: var(--muted); }
+/* a talk's speaker (talk-kind): upright, since no bold italic is loaded, and in full ink */
+.helia-meta .helia-speaker, .helia-meta .helia-speaker a { font-style: normal; font-weight: 700; color: var(--ink); }
+/* with a byline or a row of links, one line per kind of information: the id, authors, the
+   byline, then the links (folio.js appends the id last, so the column is reordered); an entry
+   whose byline came out empty (a person with no position) still keeps its links apart */
+.helia-header .helia-meta:is(:has(.helia-byline), :has(.helia-entry-links)) { display: flex !important; flex-direction: column;
+  align-items: flex-start !important; }
+.helia-header .helia-meta:is(:has(.helia-byline), :has(.helia-entry-links)) > :is(.helia-author, .helia-byline, .folio-id, .helia-entry-links) {
+  display: block !important; margin-left: 0 !important; }
+.helia-header .helia-meta:is(:has(.helia-byline), :has(.helia-entry-links)) > :is(.helia-author, .helia-byline, .helia-entry-links) {
+  margin-top: .3rem !important; }
+.helia-header .helia-meta > .helia-entry-links { order: 1; font-size: .8rem; letter-spacing: .02em; }
+.helia-meta:has(.folio-id) { display: flex !important; align-items: baseline; justify-content: space-between; }
+.helia-meta .folio-id { display: inline-block; margin-left: auto; font-family: var(--head-font); font-size: .8rem; letter-spacing: .1em; color: var(--muted); text-decoration: none; opacity: .85; }
+.helia-meta .folio-id:hover { color: var(--accent); }
+.helia-header::after { content: ""; display: block; width: 4rem; border-bottom: 1px solid var(--accent); margin-top: 1rem; }
+
+/* The paragraph holds its drop cap, so a short opening line doesn't let it spill into what follows. */
+.helia-body:not(:has(.helia-home-hero)) > p:first-of-type,
+.helia-body > .helia-abstract:not(:has(> p)) { display: flow-root; }
+/* the drop cap opens the entry's text: its abstract (a kind's summary, @base/template) when it has one */
+/* (not on a person's page: a note about someone isn't an essay) */
+.helia-page:not([data-kind="person"]) .helia-body:not(:has(.helia-home-hero)):not(:has(> .helia-abstract)) > p:first-of-type::first-letter,
+.helia-page:not([data-kind="person"]) .helia-body:not(:has(.helia-home-hero)) > .helia-abstract > p:first-of-type::first-letter,
+/* (a one-paragraph abstract is bare text, with no <p>) */
+.helia-page:not([data-kind="person"]) .helia-body:not(:has(.helia-home-hero)) > .helia-abstract:not(:has(> p))::first-letter {
+  font-family: var(--initial-font); color: var(--accent); float: left; font-size: 4.6em; line-height: .82; padding: .04em .07em 0 0; }
+
+.helia-heading-summary > h2, .helia-heading-summary > h3, .helia-heading-summary > h4, .helia-transclusion-title, .helia-group-summary h3 {
+  font-family: var(--head-font); font-weight: var(--head-weight); font-variant: var(--head-variant); letter-spacing: var(--head-spacing); font-style: var(--head-style); }
+.helia-heading-summary::before, .helia-transclusion-summary::before, .helia-group-summary::before { font-size: 1.1em !important; }
+/* a byline under a transcluded title: quiet italic body type, not the heading face */
+.helia-transclusion-title .helia-byline { font-family: var(--body-font); font-style: italic; font-variant: normal;
+  letter-spacing: 0; text-transform: none; }
+pre, .helia-raw { background: var(--code-bg); border: none; border-left: 2px solid var(--accent); border-radius: 0; }
+code { font-size: .8em; }
+
+.helia-footer { border: none; display: grid; grid-template-columns: 1fr 1fr; gap: 0 2rem; font-size: .9em; }
+.helia-footer::before { content: ""; grid-column: 1 / -1; height: 1.8rem; margin: 1rem 0;
+  background: var(--accent-2); -webkit-mask: url("sprig.svg") center / auto 100% no-repeat; mask: url("sprig.svg") center / auto 100% no-repeat; }
+.helia-identity { display: none; }
+
+/* Home: a type-only title page (no photo for now). */
+.helia-page:has(.helia-home-hero) { padding-left: 0; max-width: 58rem; }
+.helia-page:has(.helia-home-hero)::before { margin-left: 0; }
+.helia-page:has(.helia-home-hero) .helia-article { max-width: none; }
+.helia-home-hero { display: block; text-align: center; max-width: 42rem; margin: 1rem auto 2.5rem; padding: 2.2rem 2rem 1.8rem; border: var(--box-rule, 6px double var(--accent)); }
+.helia-home-hero > p:has(> .helia-home-photo), .helia-home-photo { display: none !important; }
+.helia-home-name { font-family: var(--name-font); font-weight: 400; font-size: 3.8rem; color: var(--accent); margin: 0; }
+.helia-home-role { font-family: var(--head-font); font-style: italic; font-size: 1.15rem; margin-bottom: 1.2rem; }
+.helia-home-intro > p { text-align: center; }
+.helia-home-links { justify-content: center; gap: .2rem 1.4rem; }
+.helia-home-links a.helia-link { border: none !important; background: none !important; padding: 0 !important; font-family: var(--head-font); font-variant: small-caps; letter-spacing: .05em; color: var(--ink); }
+.helia-home-links a.helia-link::before { color: var(--accent); }
+.helia-article:has(.helia-home-hero) { counter-reset: part; }
+.helia-article:has(.helia-home-hero) .helia-body > .helia-heading-section { max-width: var(--helia-measure); margin-inline: auto; }
+.helia-article:has(.helia-home-hero) .helia-heading-section[data-level="1"] > details > .helia-heading-summary { text-align: center; }
+.helia-article:has(.helia-home-hero) .helia-heading-section[data-level="1"] > details > .helia-heading-summary::before { content: none !important; }
+.helia-article:has(.helia-home-hero) .helia-heading-section[data-level="1"] > details > .helia-heading-summary > h2 { counter-increment: part; font-size: 1.35rem; }
+.helia-article:has(.helia-home-hero) .helia-heading-section[data-level="1"] > details > .helia-heading-summary > h2::before { content: counter(part, upper-roman) ". "; color: var(--accent); }
+.helia-article:has(.helia-home-hero) .helia-heading-body { border: none !important; }
+.helia-home-list .helia-query-item { border: none !important; }
+
+/* The masthead carries the name; the home title block does not repeat it. */
+.helia-home-name { display: none !important; }
+.helia-home-role { font-size: 1.3rem; margin-top: 0; }
+
+/* ---- the lab settings ---- */
+.helia-heading-summary>h2,.helia-heading-summary>h3{font-family:var(--body-font)!important;font-style:italic!important;font-variant:normal!important;font-weight:400!important;font-size:1.75em!important;letter-spacing:-.005em!important;line-height:1.1}
+.helia-topbar .helia-home{font-size:3.2rem!important}
+
+.helia-nav-links a{text-transform:uppercase;letter-spacing:.16em;font-variant:normal!important;font-size:.82em}
+.helia-topbar .helia-search-button{font:inherit!important;font-family:var(--head-font)!important;font-weight:400!important;color:var(--ink)!important;background:none!important;box-shadow:none!important;border-radius:0!important;cursor:pointer}
+.helia-topbar .helia-search-button .helia-search-key,.helia-topbar .helia-search-button .helia-search-icon{display:none!important}
+.helia-topbar .helia-search-button::before{content:"";display:inline-block;width:1em;height:1em;vertical-align:-.12em;background:var(--accent);-webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2.2' stroke-linecap='round'%3E%3Ccircle cx='10' cy='10' r='6.5'/%3E%3Cpath d='M15 15l6 6'/%3E%3C/svg%3E") center/contain no-repeat;mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2.2' stroke-linecap='round'%3E%3Ccircle cx='10' cy='10' r='6.5'/%3E%3Cpath d='M15 15l6 6'/%3E%3C/svg%3E") center/contain no-repeat}
+.helia-topbar .helia-search-button:hover{color:var(--accent)!important;background:color-mix(in srgb,var(--accent) 7%,transparent)!important}
+.helia-topbar .helia-search-button{align-self:stretch!important;display:flex!important;align-items:center;gap:.55em;border:1px dotted var(--rule)!important;margin-left:calc(-2rem - 1px)!important;padding:0 1.5rem!important;text-transform:uppercase;letter-spacing:.16em;font-size:1.05em!important}
+
+body{padding-bottom:1.5rem!important}
+/* search palette, in the folio's own type and colours */
+.helia-search-backdrop{background:color-mix(in srgb,var(--paper) 55%,transparent)!important;backdrop-filter:blur(2px)}
+.helia-search-dialog{background:var(--paper)!important;color:var(--ink)!important;border:6px double var(--accent)!important;border-radius:2px!important;box-shadow:0 1.2rem 3rem rgb(0 0 0/.28)!important;font-family:var(--body-font)!important}
+.helia-search-bar{border-bottom:1px dotted var(--rule)!important;padding:.7em 1em!important}
+.helia-search-input{font-family:var(--body-font)!important;font-style:italic;font-size:1.3em!important;color:var(--ink)!important}
+.helia-search-input::placeholder{color:var(--muted);opacity:.8}
+.helia-search-close,.helia-search-help kbd{font-family:var(--head-font)!important;font-size:.72rem!important;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)!important;background:none!important;border:1px dotted var(--rule)!important;border-radius:0!important;box-shadow:none!important;padding:.15em .5em!important}
+.helia-search-status{font-family:var(--head-font)!important;text-transform:uppercase;letter-spacing:.16em;font-size:.68em!important;color:var(--muted)!important;padding:.7em 1.2em .2em!important}
+.helia-search-results{padding:.2em .5em .5em!important}
+.helia-search-result{border-radius:0!important;border-bottom:1px dotted color-mix(in srgb,var(--rule) 70%,transparent)}
+.helia-search-result.helia-active{background:color-mix(in srgb,var(--accent) 8%,transparent)!important;box-shadow:inset 3px 0 0 var(--accent)!important}
+.helia-search-link{padding:.6em .8em!important}
+.helia-search-title{font-family:var(--title-font)!important;font-weight:400!important;font-size:1.15em;color:var(--ink)!important;letter-spacing:.01em}
+.helia-search-chip{font-family:var(--head-font)!important;font-size:.7em!important;border:none!important;border-radius:0!important;padding:0!important;letter-spacing:.06em;color:var(--accent-3,var(--muted))!important}
+.helia-search-chip.helia-search-kind{color:var(--accent)!important;text-transform:uppercase;letter-spacing:.14em;font-size:.62em!important}
+.helia-search-chip.helia-search-kind::before{content:"❧ ";color:var(--accent)}
+.helia-search-date{font-family:var(--head-font)!important;font-size:.7em!important;letter-spacing:.08em;color:var(--muted)!important}
+.helia-search-section{font-style:italic;color:var(--accent)!important}
+.helia-search-snippet{font-family:var(--body-font)!important;font-size:.88em!important;color:color-mix(in srgb,var(--ink) 72%,var(--paper))!important;line-height:1.45!important;margin-top:.2em}
+.helia-search-mark{background:none!important;color:var(--accent)!important;padding:0!important;border-bottom:1px solid color-mix(in srgb,var(--accent) 60%,transparent);border-radius:0!important}
+.helia-search-title .helia-search-mark{border-bottom-width:2px}
+.helia-search-help{font-family:var(--head-font)!important;letter-spacing:.06em;color:var(--muted)!important;border-top:1px dotted var(--rule)!important;padding:.55em 1.2em!important}
+
+.helia-home-hero>p:has(>.helia-home-photo),.helia-home-photo{display:block!important}.helia-home-photo{height:auto!important;border-radius:2px!important;box-shadow:none!important;outline:1px solid var(--rule);outline-offset:5px}
+.helia-home-photo{outline:none!important}.helia-home-hero>p:has(>.helia-home-photo){width:fit-content;line-height:0;border-radius:2px;outline:10px double var(--accent-3,var(--accent));outline-offset:4px}
+.helia-home-hero{display:grid!important;grid-template-columns:auto 1fr;gap:0 2.2rem;align-items:start;text-align:left!important;max-width:52rem!important}
+.helia-home-hero>p:has(>.helia-home-photo){margin:0!important}
+.helia-home-photo{width:11rem!important;margin:.35rem 0 0!important}
+.helia-home-intro>p{text-align:left!important;hyphens:auto}
+.helia-home-hero>.helia-home-links{grid-column:1/-1;display:flex!important;flex-wrap:nowrap!important;gap:0 1.6rem!important;justify-content:center!important;margin:1.4rem 0 0!important;padding-top:1rem;border-top:1px dotted var(--rule);font-size:.9em}
+.helia-home-links{align-items:center!important}.helia-home-links>.helia-link-ext{display:inline-flex!important;align-items:center}.helia-home-links a.helia-link{display:inline-flex!important;align-items:center;gap:.5em;line-height:1!important;padding:.25em 0!important;margin:0!important;white-space:nowrap;hyphens:none;font-family:var(--head-font)!important;font-variant:normal!important;text-transform:uppercase;letter-spacing:.16em!important;font-weight:400!important;font-size:.82em!important}.helia-home-links a.helia-link::before{vertical-align:0!important;margin:0!important;flex:none}
+@media (max-width:640px){.helia-home-hero{grid-template-columns:1fr}.helia-home-photo{margin:0 auto 1rem!important}.helia-home-hero>.helia-home-links{flex-wrap:wrap!important;justify-content:center!important;gap:.3rem 1rem!important}}
+.helia-topbar .helia-home{transition:color .25s ease}.helia-topbar .helia-home:hover{color:var(--accent-4,#c9a13b)!important}
+
+:root, :root:not([data-theme="__folio"]){--name-font:"UnifrakturCook",serif;--title-font:"IM Fell English SC",serif;--title-weight:700;--title-size:2.8rem;
+--head-font:"Gill Sans","Gill Sans MT",Cabin,sans-serif;--head-variant:normal;--head-style:normal;--head-weight:600;--head-spacing:0;
+--body-font:"Libre Caslon Text",serif;--helia-font-body:var(--body-font);--helia-font-heading:var(--body-font);--helia-font-sans:var(--body-font);
+--helia-font-size:18px;--helia-measure:56rem;--initial-font:"IM Fell English SC",serif;
+--paper:#f5eedf;--ink:#231c15;--accent:#a52a1f;--accent-2:#a52a1f;--muted:#6c5e4c;--rule:#bda985;
+--code-bg:color-mix(in srgb,#231c15 6%,#f5eedf);--b1:"❦";--b2:"❧";--b3:"☙";}
+
+.helia-topbar{flex-direction:row!important;flex-wrap:nowrap!important;align-items:stretch!important;justify-content:flex-start!important;gap:2rem!important;
+  max-width:none!important;width:auto!important;box-sizing:border-box;margin:-2.5rem calc(-1 * var(--helia-page-pad)) 0!important;padding:1.2rem var(--helia-page-pad) 1rem!important;
+  border-bottom:1px solid color-mix(in srgb,var(--rule) 60%,transparent)!important}
+.helia-topbar .helia-home{flex:0 0 auto;align-self:center;line-height:1;margin:0!important}
+.helia-nav-links{flex:1 1 auto;display:flex!important;flex-wrap:nowrap!important;border:1px dotted var(--rule);gap:0!important;margin:0;padding:0;min-width:0}
+.helia-nav-links li{flex:1 1 0;list-style:none;display:flex}
+.helia-nav-links li+li{border-left:1px dotted var(--rule)}
+.helia-nav-links a{flex:1;display:flex;align-items:center;justify-content:center;padding:.6rem .4rem;font-size:1.05em;white-space:nowrap}
+.helia-nav-links a:hover{background:color-mix(in srgb,var(--accent) 7%,transparent)}
+.helia-search-button{align-self:center;flex:0 0 auto;margin:0!important;position:static!important}
+.helia-page{padding-left:0!important;max-width:var(--helia-measure)!important;margin:0 auto!important}
+.helia-page::before{margin:1.4rem 0 1.6rem!important;-webkit-mask-position:center!important;mask-position:center!important}
+.helia-page:has(.helia-home-hero){max-width:calc(var(--helia-measure) + 8rem)!important}
+.helia-header{text-align:left}
+.helia-header .helia-heading{font-size:calc(var(--title-size)*1.25);line-height:1.02}
+.helia-taxon,.helia-meta{position:static!important;width:auto!important;text-align:left!important;display:block}
+.helia-taxon{margin-bottom:.35rem}
+.helia-meta{margin-top:.5rem}
+.helia-header::after{margin:1.1rem 0 0!important}
+
+.helia-page::before,.helia-footer::before{display:none!important}
+:root{--fl-ink:var(--ink);--fl-red:var(--accent);--fl-paper:var(--paper);--fl-divider:var(--accent);}
+.flourish-divider{color:var(--accent);margin:1.2rem auto 1.4rem}
+
+:root, :root:not([data-theme="__folio"]){color-scheme:light;--paper:#f6efe0;--ink:#2a1f18;--muted:#6f6152;--accent:#c2413b;--accent-2:#4f7d3f;--accent-3:#3f6fb3;--accent-4:#b8860b;--accent-5:#7d4f9e;--rule:#cdb892;--code-bg:#eee4cf;
+ --hl-comment:#6f6152;--hl-keyword:#c2413b;--hl-storage:#4f7d3f;--hl-string:#4f7d3f;--hl-operator:#3f6fb3;--hl-constant:#3f6fb3;--hl-number:#3f6fb3;
+ --hl-function:#3f6fb3;--hl-type:#b8860b;--hl-variable:#2a1f18;--hl-parameter:#b8860b;--hl-punctuation:#6f6152;--hl-tag:#c2413b;--hl-attribute:#b8860b;--hl-support:#3f6fb3}
+@media (prefers-color-scheme: dark){:root, :root:not([data-theme="__folio"]){color-scheme:dark;--paper:#15110e;--ink:#efe4cf;--muted:#b3a58f;--accent:#ef8a86;--accent-2:#93c47d;--accent-3:#86aee8;--accent-4:#f0c65a;--accent-5:#c69be6;--rule:#4a3f33;--code-bg:#1f1a15;
+ --hl-comment:#b3a58f;--hl-keyword:#ef8a86;--hl-storage:#93c47d;--hl-string:#93c47d;--hl-operator:#86aee8;--hl-constant:#86aee8;--hl-number:#86aee8;
+ --hl-function:#86aee8;--hl-type:#f0c65a;--hl-variable:#efe4cf;--hl-parameter:#f0c65a;--hl-punctuation:#b3a58f;--hl-tag:#ef8a86;--hl-attribute:#f0c65a;--hl-support:#86aee8}}
+.hl-comment{color:var(--hl-comment)!important;font-style:italic}.hl-keyword{color:var(--hl-keyword)!important}.hl-storage{color:var(--hl-storage)!important}
+.hl-string{color:var(--hl-string)!important}.hl-constant,.hl-constant.hl-numeric{color:var(--hl-number)!important}.hl-entity.hl-name.hl-function,.hl-support.hl-function{color:var(--hl-function)!important}
+.hl-storage.hl-type,.hl-support.hl-type,.hl-entity.hl-name.hl-type{color:var(--hl-type)!important}.hl-keyword.hl-operator{color:var(--hl-operator)!important}
+.hl-variable{color:var(--hl-variable)!important}.hl-variable.hl-parameter{color:var(--hl-parameter)!important}.hl-entity.hl-name.hl-namespace{color:var(--hl-type)!important;font-style:italic}.hl-keyword.hl-other{color:var(--hl-keyword)!important}.hl-punctuation{color:var(--hl-punctuation)!important}.hl-code{background:var(--code-bg)!important;color:var(--ink)!important}
+
+/* ---- ornament motion (folio.js marks which glyphs move; only bands on screen animate) ---- */
+@media (prefers-reduced-motion: reduce) { .glyph-orn { animation: none !important; } }
+html.folio-plain .glyph-layer { display: none !important; }
+
+/* ---- the ornament switch under the footer ---- */
+.folio-switch { text-align: center; margin: .9rem auto 0; font-family: var(--head-font); font-size: .72rem; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); }
+.folio-switch button { font: inherit; letter-spacing: inherit; text-transform: inherit; color: inherit; background: none; border: none; padding: .1em .35em; cursor: pointer; }
+.folio-switch button:hover { color: var(--accent); }
+.folio-switch button[aria-pressed="true"] { color: var(--ink); text-decoration: underline; text-decoration-color: var(--accent); text-underline-offset: .25em; }
+
+/* ---- person pages (kinds/person-kind.hel) ---- */
+.helia-person { margin: -.4rem 0 1.8rem; }
+.helia-person-role { font-style: italic; font-size: 1.1em; color: var(--muted); margin-bottom: .5rem; }
+.helia-person-links { display: flex; flex-wrap: wrap; gap: .2rem 1.4rem; margin: .2rem 0 1rem; font-family: var(--head-font); font-size: .78em; letter-spacing: .14em; text-transform: uppercase; }
+.helia-person-links a { text-decoration: none; }
+.helia-person-links a::after { content: none !important; }
+.helia-person-facts { display: grid; grid-template-columns: max-content 1fr; gap: .35rem 1.4rem; padding: .8rem 0; border-top: 1px dotted var(--rule); border-bottom: 1px dotted var(--rule); }
+.helia-person-fact { display: contents; }
+.helia-person-fact-label { font-family: var(--head-font); font-size: .78em; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); padding-top: .3em; }
+.helia-person-site a { color: var(--muted); text-decoration: none; font-size: .8em; }
+.helia-person-site a:hover { color: var(--accent); }
+.helia-person-site a::after { content: none !important; }
+.helia-person-work-year { color: var(--muted); font-size: .9em; }
+
+/* ---- top bar too narrow for name, tabs and search on one row (the tabs never wrap) ---- */
+@media (max-width: 980px) {
+  /* the name on its own line, then the tabs (search included) sharing one row */
+  .helia-topbar { display: grid !important; grid-template-columns: 1fr auto; grid-template-areas: "name name" "nav search";
+    gap: .55rem 0 !important; align-items: stretch !important; padding: 1.3rem var(--helia-page-pad) .9rem !important; }
+  .helia-topbar .helia-home { grid-area: name; align-self: flex-start; }
+  .helia-topbar .helia-nav-links { grid-area: nav; }
+  .helia-topbar .helia-search-button { grid-area: search; margin-left: -1px !important; }
+}
+
+/* ---- phones and narrow windows ---- */
+@media (max-width: 760px) {
+  :root, :root:not([data-theme="__folio"]) { --helia-font-size: 16.5px; }
+  .helia-topbar { padding: 1.3rem 1rem .9rem !important; margin: -2.5rem calc(-1 * var(--helia-page-pad)) 0 !important; }
+  .helia-topbar .helia-home { font-size: 2.3rem !important; }
+  .helia-topbar .helia-nav-links, .helia-topbar .helia-search-button { font-size: .8rem !important; }
+  .helia-topbar .helia-search-button { padding: 0 .9rem !important; letter-spacing: .12em; }
+  .helia-nav-links a { padding: .55rem .3rem !important; letter-spacing: .12em !important; }
+  /* the ornament band: fewer, smaller glyphs, never wider than the screen */
+  .glyph-headpiece, .glyph-tailpiece { font-size: .95rem !important; max-width: 100%; }
+  /* clip only the garland row: cats perched on the foot rule sit above it and must stay whole */
+  .glyph-headpiece > div > div, .glyph-tailpiece > div > div { overflow: hidden; }
+  .glyph-tailpiece:has(.glyph-cat) { padding-top: 1.6em; }
+  /* text: no justified rivers in a narrow column */
+  .helia-body p, .helia-body li { text-align: left !important; }
+  .helia-header .helia-heading { font-size: calc(var(--title-size) * .8) !important; }
+  /* wide things scroll inside themselves */
+  .helia-body table, .helia-reference table { display: block; overflow-x: auto; max-width: 100%; }
+  .helia-body pre, .helia-body math[display="block"], .helia-body .helia-math-display { overflow-x: auto; max-width: 100%; }
+  /* home hero: photo centred above the text, framed tightly */
+  .helia-home-hero { padding: 1.2rem 1rem 1rem !important; margin-inline: 0 !important; }
+  .helia-home-hero > p:has(> .helia-home-photo) { margin: .3rem auto 1.4rem !important; }
+  .helia-home-photo { width: 10rem !important; margin: 0 !important; }
+  .helia-home-hero > .helia-home-links { gap: .4rem 1.2rem !important; font-size: .82em; }
+  .helia-person-facts { grid-template-columns: 1fr; gap: .1rem; }
+  .helia-person-fact-label { padding-top: .6em; }
+  .folio-switch { margin-top: .6rem; }
+}
+
+/* ---- a person's portrait on their page, after the facts: framed like the home page's ---- */
+.helia-person-photo { width: fit-content; line-height: 0; margin: 1.8rem 14px 1.8rem;
+  outline: 10px double var(--accent-3, var(--accent)); outline-offset: 4px; }
+.helia-person-photo img { display: block; width: 11rem; height: auto; margin: 0; }
+
+/* ---- embedded videos and PDFs: framed like the portrait ---- */
+.helia-video, .helia-pdf { outline: 10px double var(--accent-3, var(--accent)); outline-offset: 4px;
+  margin: 2em 14px !important; width: calc(100% - 28px) !important; }
+.helia-pdf object { display: block; border: 0 !important; }
+/* a cat perched on the foot rule gets headroom, so it never sits on what's above */
+.glyph-tailpiece:has(.glyph-cat) { padding-top: 1.6em; }
+
+/* ---- home masthead (folio.js): the name centred in an ornamental frame, no top bar ---- */
+html:has(.folio-masthead) .helia-topbar { position: absolute !important; width: 1px !important; height: 1px !important; overflow: hidden !important;
+  clip: rect(0 0 0 0) !important; padding: 0 !important; margin: 0 !important; border: 0 !important; }
+.folio-masthead { text-align: center; padding: 1.2rem 1rem 0; }
+.folio-masthead-art { position: relative; width: min(820px, 100%); margin: 0 auto; height: 14rem; }
+.folio-masthead-name { position: absolute; z-index: 1; left: 50%; top: 4rem; translate: -50% 0; margin: 0; white-space: nowrap;
+  font-family: var(--name-font); font-weight: 400; font-size: clamp(2.4rem, 7vw, 4.6rem); line-height: 1; color: var(--accent);
+  letter-spacing: .01em; transition: color .25s; }
+.folio-masthead-name:hover { color: var(--accent-4, var(--accent)); }
+.folio-masthead-art .glyph-orn { z-index: 0; pointer-events: auto; }
+.folio-masthead-nav { display: flex; justify-content: center; flex-wrap: wrap; gap: .3rem 2.2rem; margin: 1rem 0 0;
+  font-family: var(--head-font); font-size: .82rem; letter-spacing: .2em; text-transform: uppercase; }
+.folio-masthead-nav a { color: var(--ink); text-decoration: none; }
+.folio-masthead-nav a:hover { color: var(--accent); }
+.folio-masthead-nav a::after { content: none !important; }
+.folio-masthead-nav { position: relative; z-index: 1; }   /* above the wreath's glyphs (they swell under the pointer) */
+html:has(.folio-masthead) .helia-page { margin-top: 0 !important; }
+@media (max-width: 760px) {
+  .folio-masthead-nav { gap: .3rem 1.4rem; font-size: .75rem; }
+}
+}
+
+/* ---- colour schemes, chosen from the ⚄ panel (folio.js); none set = folk ---- */
+:root[data-folio-scheme="verdant"] { color-scheme:light;--paper:#f3f1e4;--ink:#1f2a1c;--muted:#5f6b58;--accent:#2f6b3a;--accent-2:#b8860b;--accent-3:#8a3a2e;--accent-4:#4f7fa0;--accent-5:#7a4f86;--rule:#c8cdb0;--code-bg:#e9e8d6;--hl-comment:#5f6b58;--hl-keyword:#2f6b3a;--hl-storage:#b8860b;--hl-string:#b8860b;--hl-operator:#8a3a2e;--hl-constant:#8a3a2e;--hl-number:#8a3a2e;--hl-function:#8a3a2e;--hl-type:#4f7fa0;--hl-variable:#1f2a1c;--hl-parameter:#4f7fa0;--hl-punctuation:#5f6b58;--hl-tag:#2f6b3a;--hl-attribute:#4f7fa0;--hl-support:#8a3a2e }
+@media (prefers-color-scheme: dark) { :root[data-folio-scheme="verdant"] { color-scheme:dark;--paper:#0f1a13;--ink:#e8e6d2;--muted:#a3ae98;--accent:#7fc38a;--accent-2:#e2c15a;--accent-3:#e08a6e;--accent-4:#8fbad6;--accent-5:#c3a0d6;--rule:#26382b;--code-bg:#16241b;--hl-comment:#a3ae98;--hl-keyword:#7fc38a;--hl-storage:#e2c15a;--hl-string:#e2c15a;--hl-operator:#e08a6e;--hl-constant:#e08a6e;--hl-number:#e08a6e;--hl-function:#e08a6e;--hl-type:#8fbad6;--hl-variable:#e8e6d2;--hl-parameter:#8fbad6;--hl-punctuation:#a3ae98;--hl-tag:#7fc38a;--hl-attribute:#8fbad6;--hl-support:#e08a6e } }
+:root[data-folio-scheme="celadon"] { color-scheme:light;--paper:#e9efe4;--ink:#1d2b26;--muted:#5a6b63;--accent:#2e6e5e;--accent-2:#7a9a3a;--accent-3:#b5654a;--accent-4:#3f6f9a;--accent-5:#c29a2e;--rule:#bfcfc2;--code-bg:#dfe7da;--hl-comment:#5a6b63;--hl-keyword:#2e6e5e;--hl-storage:#7a9a3a;--hl-string:#7a9a3a;--hl-operator:#b5654a;--hl-constant:#b5654a;--hl-number:#b5654a;--hl-function:#b5654a;--hl-type:#3f6f9a;--hl-variable:#1d2b26;--hl-parameter:#3f6f9a;--hl-punctuation:#5a6b63;--hl-tag:#2e6e5e;--hl-attribute:#3f6f9a;--hl-support:#b5654a }
+@media (prefers-color-scheme: dark) { :root[data-folio-scheme="celadon"] { color-scheme:dark;--paper:#0e1714;--ink:#e1ece4;--muted:#97aaa0;--accent:#6fc2ad;--accent-2:#b5d37a;--accent-3:#e59a7e;--accent-4:#8ab8e0;--accent-5:#e6c566;--rule:#22332d;--code-bg:#14201c;--hl-comment:#97aaa0;--hl-keyword:#6fc2ad;--hl-storage:#b5d37a;--hl-string:#b5d37a;--hl-operator:#e59a7e;--hl-constant:#e59a7e;--hl-number:#e59a7e;--hl-function:#e59a7e;--hl-type:#8ab8e0;--hl-variable:#e1ece4;--hl-parameter:#8ab8e0;--hl-punctuation:#97aaa0;--hl-tag:#6fc2ad;--hl-attribute:#8ab8e0;--hl-support:#e59a7e } }
+:root[data-folio-scheme="moss"] { color-scheme:light;--paper:#f2ecdc;--ink:#262318;--muted:#6a644e;--accent:#4d5a1f;--accent-2:#a6802a;--accent-3:#7a4a2a;--accent-4:#3b5a4a;--accent-5:#a5512e;--rule:#cfc39e;--code-bg:#e8e0c9;--hl-comment:#6a644e;--hl-keyword:#4d5a1f;--hl-storage:#a6802a;--hl-string:#a6802a;--hl-operator:#7a4a2a;--hl-constant:#7a4a2a;--hl-number:#7a4a2a;--hl-function:#7a4a2a;--hl-type:#3b5a4a;--hl-variable:#262318;--hl-parameter:#3b5a4a;--hl-punctuation:#6a644e;--hl-tag:#4d5a1f;--hl-attribute:#3b5a4a;--hl-support:#7a4a2a }
+@media (prefers-color-scheme: dark) { :root[data-folio-scheme="moss"] { color-scheme:dark;--paper:#14130c;--ink:#ece4cc;--muted:#aaa184;--accent:#a9bb5c;--accent-2:#e0b85a;--accent-3:#d49a6a;--accent-4:#8fbfa4;--accent-5:#e0906a;--rule:#34311f;--code-bg:#1c1b12;--hl-comment:#aaa184;--hl-keyword:#a9bb5c;--hl-storage:#e0b85a;--hl-string:#e0b85a;--hl-operator:#d49a6a;--hl-constant:#d49a6a;--hl-number:#d49a6a;--hl-function:#d49a6a;--hl-type:#8fbfa4;--hl-variable:#ece4cc;--hl-parameter:#8fbfa4;--hl-punctuation:#aaa184;--hl-tag:#a9bb5c;--hl-attribute:#8fbfa4;--hl-support:#d49a6a } }
+:root[data-folio-scheme="lapis"] { color-scheme:light;--paper:#f3efe4;--ink:#1a1f33;--muted:#5d6177;--accent:#1f3f95;--accent-2:#b08a2e;--accent-3:#a0302a;--accent-4:#3f7a5a;--accent-5:#6a3f8f;--rule:#c6c5d6;--code-bg:#e9e6dc;--hl-comment:#5d6177;--hl-keyword:#1f3f95;--hl-storage:#b08a2e;--hl-string:#b08a2e;--hl-operator:#a0302a;--hl-constant:#a0302a;--hl-number:#a0302a;--hl-function:#a0302a;--hl-type:#3f7a5a;--hl-variable:#1a1f33;--hl-parameter:#3f7a5a;--hl-punctuation:#5d6177;--hl-tag:#1f3f95;--hl-attribute:#3f7a5a;--hl-support:#a0302a }
+@media (prefers-color-scheme: dark) { :root[data-folio-scheme="lapis"] { color-scheme:dark;--paper:#0c1024;--ink:#ece6d4;--muted:#a2a6c2;--accent:#8aa6ff;--accent-2:#e8c45a;--accent-3:#ef8a7e;--accent-4:#86c8a0;--accent-5:#b79be0;--rule:#242a4d;--code-bg:#131832;--hl-comment:#a2a6c2;--hl-keyword:#8aa6ff;--hl-storage:#e8c45a;--hl-string:#e8c45a;--hl-operator:#ef8a7e;--hl-constant:#ef8a7e;--hl-number:#ef8a7e;--hl-function:#ef8a7e;--hl-type:#86c8a0;--hl-variable:#ece6d4;--hl-parameter:#86c8a0;--hl-punctuation:#a2a6c2;--hl-tag:#8aa6ff;--hl-attribute:#86c8a0;--hl-support:#ef8a7e } }
+:root[data-folio-scheme="prussian"] { color-scheme:light;--paper:#f1f2f5;--ink:#172033;--muted:#5a6378;--accent:#274b7a;--accent-2:#b58a2e;--accent-3:#9a4a6a;--accent-4:#3f7a7a;--accent-5:#b0603a;--rule:#c9cfdb;--code-bg:#e6e9ef;--hl-comment:#5a6378;--hl-keyword:#274b7a;--hl-storage:#b58a2e;--hl-string:#b58a2e;--hl-operator:#9a4a6a;--hl-constant:#9a4a6a;--hl-number:#9a4a6a;--hl-function:#9a4a6a;--hl-type:#3f7a7a;--hl-variable:#172033;--hl-parameter:#3f7a7a;--hl-punctuation:#5a6378;--hl-tag:#274b7a;--hl-attribute:#3f7a7a;--hl-support:#9a4a6a }
+@media (prefers-color-scheme: dark) { :root[data-folio-scheme="prussian"] { color-scheme:dark;--paper:#0a1120;--ink:#e6e1d3;--muted:#9ea6ba;--accent:#7fa7e8;--accent-2:#e6c170;--accent-3:#e39ab6;--accent-4:#8fd0c8;--accent-5:#e8a07a;--rule:#1f2b44;--code-bg:#101a2e;--hl-comment:#9ea6ba;--hl-keyword:#7fa7e8;--hl-storage:#e6c170;--hl-string:#e6c170;--hl-operator:#e39ab6;--hl-constant:#e39ab6;--hl-number:#e39ab6;--hl-function:#e39ab6;--hl-type:#8fd0c8;--hl-variable:#e6e1d3;--hl-parameter:#8fd0c8;--hl-punctuation:#9ea6ba;--hl-tag:#7fa7e8;--hl-attribute:#8fd0c8;--hl-support:#e39ab6 } }
+:root[data-folio-scheme="cyanotype"] { color-scheme:light;--paper:#eef3f8;--ink:#10304f;--muted:#4f6a85;--accent:#1d5c9c;--accent-2:#1d5c9c;--accent-3:#6f9ccc;--accent-4:#10304f;--accent-5:#5a8fc4;--rule:#bcd0e4;--code-bg:#e2ebf3;--hl-comment:#4f6a85;--hl-keyword:#1d5c9c;--hl-storage:#1d5c9c;--hl-string:#1d5c9c;--hl-operator:#6f9ccc;--hl-constant:#6f9ccc;--hl-number:#6f9ccc;--hl-function:#6f9ccc;--hl-type:#10304f;--hl-variable:#10304f;--hl-parameter:#10304f;--hl-punctuation:#4f6a85;--hl-tag:#1d5c9c;--hl-attribute:#10304f;--hl-support:#6f9ccc }
+@media (prefers-color-scheme: dark) { :root[data-folio-scheme="cyanotype"] { color-scheme:dark;--paper:#0f3a66;--ink:#eaf2fa;--muted:#b3cbe3;--accent:#ffffff;--accent-2:#cfe2f5;--accent-3:#9cc2ea;--accent-4:#ffffff;--accent-5:#7fb3e6;--rule:#3a6591;--code-bg:#134575;--hl-comment:#b3cbe3;--hl-keyword:#ffffff;--hl-storage:#cfe2f5;--hl-string:#cfe2f5;--hl-operator:#9cc2ea;--hl-constant:#9cc2ea;--hl-number:#9cc2ea;--hl-function:#9cc2ea;--hl-type:#ffffff;--hl-variable:#eaf2fa;--hl-parameter:#ffffff;--hl-punctuation:#b3cbe3;--hl-tag:#ffffff;--hl-attribute:#ffffff;--hl-support:#9cc2ea } }
+:root[data-folio-scheme="delft"] { color-scheme:light;--paper:#f7f6f2;--ink:#1d2a4a;--muted:#5b6780;--accent:#1f4ea3;--accent-2:#2f65c0;--accent-3:#6b8fd1;--accent-4:#1d2a4a;--accent-5:#0f2f6f;--rule:#b9c6e0;--code-bg:#eef1f7;--hl-comment:#5b6780;--hl-keyword:#1f4ea3;--hl-storage:#2f65c0;--hl-string:#2f65c0;--hl-operator:#6b8fd1;--hl-constant:#6b8fd1;--hl-number:#6b8fd1;--hl-function:#6b8fd1;--hl-type:#1d2a4a;--hl-variable:#1d2a4a;--hl-parameter:#1d2a4a;--hl-punctuation:#5b6780;--hl-tag:#1f4ea3;--hl-attribute:#1d2a4a;--hl-support:#6b8fd1 }
+@media (prefers-color-scheme: dark) { :root[data-folio-scheme="delft"] { color-scheme:dark;--paper:#0d1630;--ink:#e8ecf5;--muted:#9aa7c4;--accent:#8fb0f0;--accent-2:#6c93e0;--accent-3:#b9cdf5;--accent-4:#e8ecf5;--accent-5:#d6e2fa;--rule:#26345a;--code-bg:#121d3b;--hl-comment:#9aa7c4;--hl-keyword:#8fb0f0;--hl-storage:#6c93e0;--hl-string:#6c93e0;--hl-operator:#b9cdf5;--hl-constant:#b9cdf5;--hl-number:#b9cdf5;--hl-function:#b9cdf5;--hl-type:#e8ecf5;--hl-variable:#e8ecf5;--hl-parameter:#e8ecf5;--hl-punctuation:#9aa7c4;--hl-tag:#8fb0f0;--hl-attribute:#e8ecf5;--hl-support:#b9cdf5 } }
+:root[data-folio-scheme="gilt"] { color-scheme:light;--paper:#f1e6cc;--ink:#26170f;--muted:#6e5a44;--accent:#8e1b1b;--accent-2:#1d3f8f;--accent-3:#b08a2e;--accent-4:#2f5a33;--accent-5:#5e3a7a;--rule:#c9ad76;--code-bg:#e8dbbd;--hl-comment:#6e5a44;--hl-keyword:#8e1b1b;--hl-storage:#1d3f8f;--hl-string:#1d3f8f;--hl-operator:#b08a2e;--hl-constant:#b08a2e;--hl-number:#b08a2e;--hl-function:#b08a2e;--hl-type:#2f5a33;--hl-variable:#26170f;--hl-parameter:#2f5a33;--hl-punctuation:#6e5a44;--hl-tag:#8e1b1b;--hl-attribute:#2f5a33;--hl-support:#b08a2e }
+@media (prefers-color-scheme: dark) { :root[data-folio-scheme="gilt"] { color-scheme:dark;--paper:#140d08;--ink:#efe0c0;--muted:#b09a78;--accent:#d4574a;--accent-2:#6c8fe0;--accent-3:#e2bd5a;--accent-4:#7fb07a;--accent-5:#b595d6;--rule:#3a2b1c;--code-bg:#1e150e;--hl-comment:#b09a78;--hl-keyword:#d4574a;--hl-storage:#6c8fe0;--hl-string:#6c8fe0;--hl-operator:#e2bd5a;--hl-constant:#e2bd5a;--hl-number:#e2bd5a;--hl-function:#e2bd5a;--hl-type:#7fb07a;--hl-variable:#efe0c0;--hl-parameter:#7fb07a;--hl-punctuation:#b09a78;--hl-tag:#d4574a;--hl-attribute:#7fb07a;--hl-support:#e2bd5a } }
+:root[data-folio-scheme="dala"] { color-scheme:light;--paper:#f5ecd9;--ink:#2b1d14;--muted:#75604c;--accent:#b5452a;--accent-2:#2f7a78;--accent-3:#d19a2a;--accent-4:#5b7a3a;--accent-5:#2e5a9a;--rule:#d9c29a;--code-bg:#efe3cb;--hl-comment:#75604c;--hl-keyword:#b5452a;--hl-storage:#2f7a78;--hl-string:#2f7a78;--hl-operator:#d19a2a;--hl-constant:#d19a2a;--hl-number:#d19a2a;--hl-function:#d19a2a;--hl-type:#5b7a3a;--hl-variable:#2b1d14;--hl-parameter:#5b7a3a;--hl-punctuation:#75604c;--hl-tag:#b5452a;--hl-attribute:#5b7a3a;--hl-support:#d19a2a }
+@media (prefers-color-scheme: dark) { :root[data-folio-scheme="dala"] { color-scheme:dark;--paper:#1b120d;--ink:#f1e4cc;--muted:#b39f84;--accent:#e0704f;--accent-2:#5fb3ae;--accent-3:#f0b94a;--accent-4:#93b86b;--accent-5:#7fa6e0;--rule:#3d2c21;--code-bg:#241912;--hl-comment:#b39f84;--hl-keyword:#e0704f;--hl-storage:#5fb3ae;--hl-string:#5fb3ae;--hl-operator:#f0b94a;--hl-constant:#f0b94a;--hl-number:#f0b94a;--hl-function:#f0b94a;--hl-type:#93b86b;--hl-variable:#f1e4cc;--hl-parameter:#93b86b;--hl-punctuation:#b39f84;--hl-tag:#e0704f;--hl-attribute:#93b86b;--hl-support:#f0b94a } }
+:root[data-folio-scheme="matyo"] { color-scheme:light;--paper:#fbf8f1;--ink:#141414;--muted:#5e5a55;--accent:#d6243e;--accent-2:#1f7a4d;--accent-3:#2458b8;--accent-4:#f2a900;--accent-5:#8e3fa8;--rule:#d8cfc0;--code-bg:#f1ece2;--hl-comment:#5e5a55;--hl-keyword:#d6243e;--hl-storage:#1f7a4d;--hl-string:#1f7a4d;--hl-operator:#2458b8;--hl-constant:#2458b8;--hl-number:#2458b8;--hl-function:#2458b8;--hl-type:#f2a900;--hl-variable:#141414;--hl-parameter:#f2a900;--hl-punctuation:#5e5a55;--hl-tag:#d6243e;--hl-attribute:#f2a900;--hl-support:#2458b8 }
+@media (prefers-color-scheme: dark) { :root[data-folio-scheme="matyo"] { color-scheme:dark;--paper:#0b0b0c;--ink:#f4efe6;--muted:#a59f96;--accent:#ff4d6d;--accent-2:#3ccf7a;--accent-3:#4f8bff;--accent-4:#ffc93c;--accent-5:#c58ae6;--rule:#2a2a2c;--code-bg:#151517;--hl-comment:#a59f96;--hl-keyword:#ff4d6d;--hl-storage:#3ccf7a;--hl-string:#3ccf7a;--hl-operator:#4f8bff;--hl-constant:#4f8bff;--hl-number:#4f8bff;--hl-function:#4f8bff;--hl-type:#ffc93c;--hl-variable:#f4efe6;--hl-parameter:#ffc93c;--hl-punctuation:#a59f96;--hl-tag:#ff4d6d;--hl-attribute:#ffc93c;--hl-support:#4f8bff } }
+:root[data-folio-scheme="vyshyvanka"] { color-scheme:light;--paper:#f3eee2;--ink:#1a1714;--muted:#6b645a;--accent:#b3121f;--accent-2:#1a1714;--accent-3:#b3121f;--accent-4:#6b645a;--accent-5:#7a0f18;--rule:#d6c9ae;--code-bg:#ebe4d4;--hl-comment:#6b645a;--hl-keyword:#b3121f;--hl-storage:#1a1714;--hl-string:#1a1714;--hl-operator:#b3121f;--hl-constant:#b3121f;--hl-number:#b3121f;--hl-function:#b3121f;--hl-type:#6b645a;--hl-variable:#1a1714;--hl-parameter:#6b645a;--hl-punctuation:#6b645a;--hl-tag:#b3121f;--hl-attribute:#6b645a;--hl-support:#b3121f }
+@media (prefers-color-scheme: dark) { :root[data-folio-scheme="vyshyvanka"] { color-scheme:dark;--paper:#121010;--ink:#efe6d6;--muted:#a89d8c;--accent:#e0434f;--accent-2:#efe6d6;--accent-3:#e0434f;--accent-4:#a89d8c;--accent-5:#b8434c;--rule:#332a28;--code-bg:#1b1716;--hl-comment:#a89d8c;--hl-keyword:#e0434f;--hl-storage:#efe6d6;--hl-string:#efe6d6;--hl-operator:#e0434f;--hl-constant:#e0434f;--hl-number:#e0434f;--hl-function:#e0434f;--hl-type:#a89d8c;--hl-variable:#efe6d6;--hl-parameter:#a89d8c;--hl-punctuation:#a89d8c;--hl-tag:#e0434f;--hl-attribute:#a89d8c;--hl-support:#e0434f } }
+:root[data-folio-scheme="otomi"] { color-scheme:light;--paper:#fbfbf8;--ink:#202020;--muted:#6a6a6a;--accent:#d6127a;--accent-2:#0a8f8f;--accent-3:#ef6c1a;--accent-4:#6a3fb5;--accent-5:#3f9a2f;--rule:#e2e2dc;--code-bg:#f2f2ee;--hl-comment:#6a6a6a;--hl-keyword:#d6127a;--hl-storage:#0a8f8f;--hl-string:#0a8f8f;--hl-operator:#ef6c1a;--hl-constant:#ef6c1a;--hl-number:#ef6c1a;--hl-function:#ef6c1a;--hl-type:#6a3fb5;--hl-variable:#202020;--hl-parameter:#6a3fb5;--hl-punctuation:#6a6a6a;--hl-tag:#d6127a;--hl-attribute:#6a3fb5;--hl-support:#ef6c1a }
+@media (prefers-color-scheme: dark) { :root[data-folio-scheme="otomi"] { color-scheme:dark;--paper:#111113;--ink:#f2f2f2;--muted:#a1a1a1;--accent:#ff4fa6;--accent-2:#2fd3d3;--accent-3:#ff9a4d;--accent-4:#a98bff;--accent-5:#7ad66a;--rule:#2c2c30;--code-bg:#1a1a1d;--hl-comment:#a1a1a1;--hl-keyword:#ff4fa6;--hl-storage:#2fd3d3;--hl-string:#2fd3d3;--hl-operator:#ff9a4d;--hl-constant:#ff9a4d;--hl-number:#ff9a4d;--hl-function:#ff9a4d;--hl-type:#a98bff;--hl-variable:#f2f2f2;--hl-parameter:#a98bff;--hl-punctuation:#a1a1a1;--hl-tag:#ff4fa6;--hl-attribute:#a98bff;--hl-support:#ff9a4d } }
+:root[data-folio-scheme="night-garden"] { color-scheme:light;--paper:#f0eef6;--ink:#1e1b33;--muted:#5e5a7a;--accent:#7a4fa3;--accent-2:#b8547a;--accent-3:#b89a3a;--accent-4:#3f7a6f;--accent-5:#3f5fa3;--rule:#c9c3dc;--code-bg:#e7e4f0;--hl-comment:#5e5a7a;--hl-keyword:#7a4fa3;--hl-storage:#b8547a;--hl-string:#b8547a;--hl-operator:#b89a3a;--hl-constant:#b89a3a;--hl-number:#b89a3a;--hl-function:#b89a3a;--hl-type:#3f7a6f;--hl-variable:#1e1b33;--hl-parameter:#3f7a6f;--hl-punctuation:#5e5a7a;--hl-tag:#7a4fa3;--hl-attribute:#3f7a6f;--hl-support:#b89a3a }
+@media (prefers-color-scheme: dark) { :root[data-folio-scheme="night-garden"] { color-scheme:dark;--paper:#10102a;--ink:#ece6d8;--muted:#a5a1c0;--accent:#e6b8d0;--accent-2:#f0d58a;--accent-3:#9fc7e8;--accent-4:#b5e0c4;--accent-5:#9fb7f0;--rule:#2a2a50;--code-bg:#181838;--hl-comment:#a5a1c0;--hl-keyword:#e6b8d0;--hl-storage:#f0d58a;--hl-string:#f0d58a;--hl-operator:#9fc7e8;--hl-constant:#9fc7e8;--hl-number:#9fc7e8;--hl-function:#9fc7e8;--hl-type:#b5e0c4;--hl-variable:#ece6d8;--hl-parameter:#b5e0c4;--hl-punctuation:#a5a1c0;--hl-tag:#e6b8d0;--hl-attribute:#b5e0c4;--hl-support:#9fc7e8 } }
+:root[data-folio-scheme="riso"] { color-scheme:light;--paper:#f7f4ee;--ink:#1f2a5c;--muted:#5d648a;--accent:#ff48b0;--accent-2:#0078bf;--accent-3:#ff48b0;--accent-4:#0078bf;--accent-5:#f2c200;--rule:#d9d3e3;--code-bg:#efebe6;--hl-comment:#5d648a;--hl-keyword:#ff48b0;--hl-storage:#0078bf;--hl-string:#0078bf;--hl-operator:#ff48b0;--hl-constant:#ff48b0;--hl-number:#ff48b0;--hl-function:#ff48b0;--hl-type:#0078bf;--hl-variable:#1f2a5c;--hl-parameter:#0078bf;--hl-punctuation:#5d648a;--hl-tag:#ff48b0;--hl-attribute:#0078bf;--hl-support:#ff48b0 }
+@media (prefers-color-scheme: dark) { :root[data-folio-scheme="riso"] { color-scheme:dark;--paper:#14162b;--ink:#f3eef0;--muted:#a3a6c2;--accent:#ff6cc0;--accent-2:#3aa0ff;--accent-3:#ff6cc0;--accent-4:#3aa0ff;--accent-5:#fff27a;--rule:#2d3052;--code-bg:#1b1e38;--hl-comment:#a3a6c2;--hl-keyword:#ff6cc0;--hl-storage:#3aa0ff;--hl-string:#3aa0ff;--hl-operator:#ff6cc0;--hl-constant:#ff6cc0;--hl-number:#ff6cc0;--hl-function:#ff6cc0;--hl-type:#3aa0ff;--hl-variable:#f3eef0;--hl-parameter:#3aa0ff;--hl-punctuation:#a3a6c2;--hl-tag:#ff6cc0;--hl-attribute:#3aa0ff;--hl-support:#ff6cc0 } }
+:root[data-folio-scheme="sampler"] { color-scheme:light;--paper:#efe9dc;--ink:#3a332b;--muted:#7a6f61;--accent:#b0635a;--accent-2:#6f8a6a;--accent-3:#6f7fa3;--accent-4:#b58f5a;--accent-5:#8a6a8f;--rule:#d3c8b3;--code-bg:#e6dfcf;--hl-comment:#7a6f61;--hl-keyword:#b0635a;--hl-storage:#6f8a6a;--hl-string:#6f8a6a;--hl-operator:#6f7fa3;--hl-constant:#6f7fa3;--hl-number:#6f7fa3;--hl-function:#6f7fa3;--hl-type:#b58f5a;--hl-variable:#3a332b;--hl-parameter:#b58f5a;--hl-punctuation:#7a6f61;--hl-tag:#b0635a;--hl-attribute:#b58f5a;--hl-support:#6f7fa3 }
+@media (prefers-color-scheme: dark) { :root[data-folio-scheme="sampler"] { color-scheme:dark;--paper:#1a1714;--ink:#e8e0d0;--muted:#a89e8e;--accent:#d08a80;--accent-2:#9ab596;--accent-3:#9aabcf;--accent-4:#d6b27e;--accent-5:#c4a8c9;--rule:#37312a;--code-bg:#221e1a;--hl-comment:#a89e8e;--hl-keyword:#d08a80;--hl-storage:#9ab596;--hl-string:#9ab596;--hl-operator:#9aabcf;--hl-constant:#9aabcf;--hl-number:#9aabcf;--hl-function:#9aabcf;--hl-type:#d6b27e;--hl-variable:#e8e0d0;--hl-parameter:#d6b27e;--hl-punctuation:#a89e8e;--hl-tag:#d08a80;--hl-attribute:#d6b27e;--hl-support:#9aabcf } }
+:root[data-folio-scheme="cmyk"] { color-scheme:light;--paper:#fbfaf5;--ink:#111111;--muted:#6b6b6b;--accent:#e6007e;--accent-2:#00a0e3;--accent-3:#f5c400;--accent-4:#111111;--accent-5:#e5332a;--rule:#d8d6cf;--code-bg:#f1efe8;--hl-comment:#6b6b6b;--hl-keyword:#e6007e;--hl-storage:#00a0e3;--hl-string:#00a0e3;--hl-operator:#f5c400;--hl-constant:#f5c400;--hl-number:#f5c400;--hl-function:#f5c400;--hl-type:#111111;--hl-variable:#111111;--hl-parameter:#111111;--hl-punctuation:#6b6b6b;--hl-tag:#e6007e;--hl-attribute:#111111;--hl-support:#f5c400 }
+@media (prefers-color-scheme: dark) { :root[data-folio-scheme="cmyk"] { color-scheme:dark;--paper:#0d0d0f;--ink:#f2f2f2;--muted:#a3a3a3;--accent:#ff3aa3;--accent-2:#25c2ff;--accent-3:#ffe14d;--accent-4:#f2f2f2;--accent-5:#ff6a5f;--rule:#2b2b30;--code-bg:#17171a;--hl-comment:#a3a3a3;--hl-keyword:#ff3aa3;--hl-storage:#25c2ff;--hl-string:#25c2ff;--hl-operator:#ffe14d;--hl-constant:#ffe14d;--hl-number:#ffe14d;--hl-function:#ffe14d;--hl-type:#f2f2f2;--hl-variable:#f2f2f2;--hl-parameter:#f2f2f2;--hl-punctuation:#a3a3a3;--hl-tag:#ff3aa3;--hl-attribute:#f2f2f2;--hl-support:#ffe14d } }
+:root[data-folio-scheme="cmyk"] .glyph-orn { mix-blend-mode: multiply; }
+@media (prefers-color-scheme: dark) { :root[data-folio-scheme="cmyk"] .glyph-orn { mix-blend-mode: screen; } }
+:root[data-folio-scheme="cmyk"] .helia-topbar .helia-home, :root[data-folio-scheme="cmyk"] .folio-masthead-name {
+  text-shadow: 2px 1px 0 color-mix(in srgb, #00a0e3 70%, transparent), -1px -1px 0 color-mix(in srgb, #f5c400 80%, transparent); }
+
+/* ---- the ⚙ button and its panel ---- */
+.folio-dice { font: inherit; background: none; border: 0; cursor: pointer; color: var(--accent); font-size: 1.35em; line-height: 1; padding: 0 .5rem; }
+.helia-topbar .folio-dice { align-self: stretch; border: 1px dotted var(--rule); margin-left: -1px; padding: 0 1rem; font-size: 1.5rem; }
+.folio-dice:hover { color: var(--accent-4, var(--accent)); }
+.folio-pop { position: fixed; z-index: 60; width: min(21rem, calc(100vw - 2rem)); background: var(--paper); color: var(--ink);
+  border: 6px double var(--accent); padding: .9rem 1rem 1rem; box-shadow: 0 1rem 2.5rem rgb(0 0 0 / .22); font-family: var(--head-font); }
+.folio-pop[hidden] { display: none; }
+.folio-pop-row { display: flex; align-items: center; gap: .6rem; flex-wrap: wrap; margin: .55rem 0; }
+.folio-pop-label { width: 5.2rem; font-size: .72rem; letter-spacing: .16em; text-transform: uppercase; color: var(--muted); }
+.folio-pop button { font: inherit; font-size: .78rem; letter-spacing: .08em; background: none; color: var(--ink); border: 1px dotted var(--rule); padding: .28rem .6rem; cursor: pointer; }
+.folio-pop button[aria-pressed="true"] { border: 1px solid var(--accent); color: var(--accent); }
+.folio-pop button:hover { color: var(--accent); }
+.folio-pop .folio-chips { display: flex; flex-wrap: wrap; gap: .35rem; flex: 1; }
+.folio-pop .folio-chip { display: inline-flex; align-items: center; gap: .35rem; }
+.folio-pop .folio-sw { display: inline-flex; gap: 2px; }
+.folio-pop .folio-sw i { width: .5rem; height: .5rem; border-radius: 50%; display: inline-block; }
+.folio-pop .folio-shuffle { margin-left: 5.8rem; }
+.folio-pop-more { display: block; margin-top: .8rem; font-size: .75rem; letter-spacing: .08em; color: var(--muted); text-decoration: none; }
+.folio-pop-more:hover { color: var(--accent); }
+.folio-pop .folio-shuffle { margin: .3rem 0 .2rem 5.8rem; }
+.folio-pop button[hidden] { display: none; }
+
+/* ---- the settings entry's configurator (folio.js) ---- */
+.helia-folio-config h3 { font-family: var(--head-font); font-size: .8rem; letter-spacing: .18em; text-transform: uppercase; color: var(--muted); margin: 2rem 0 .3rem; }
+.helia-folio-config .folio-cfg-note { font-size: .88em; color: var(--muted); margin: 0 0 .6rem; }
+.helia-folio-config .folio-cfg-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(13rem, 1fr)); gap: .35rem .9rem; }
+.helia-folio-config .folio-cfg-item { display: flex; align-items: center; gap: .55rem; padding: .3rem .5rem; border: 1px dotted var(--rule); font-family: var(--head-font); font-size: .85rem; cursor: pointer; }
+.helia-folio-config .folio-cfg-item.is-current { border: 1px solid var(--accent); }
+.helia-folio-config .folio-cfg-item button, .helia-folio-config .folio-cfg-item a { margin-left: auto; font: inherit; font-size: .7rem; letter-spacing: .1em; text-transform: uppercase; background: none; border: 0; color: var(--accent); cursor: pointer; text-decoration: none; }
+.helia-folio-config .folio-cfg-item button:disabled { color: var(--muted); cursor: default; }
+.helia-folio-config input { accent-color: var(--accent); }
+.helia-folio-config .folio-sw { display: inline-flex; gap: 2px; }
+.helia-folio-config .folio-sw i { width: .55rem; height: .55rem; border-radius: 50%; display: inline-block; }
+.helia-folio-config .folio-cfg-tools { display: flex; gap: .6rem; margin: 0 0 .4rem; }
+.helia-folio-config .folio-cfg-tools button, .helia-folio-config .folio-cfg-reset { font-family: var(--head-font); font-size: .72rem; letter-spacing: .12em; text-transform: uppercase; background: none; border: 1px dotted var(--rule); color: var(--ink); padding: .2rem .6rem; cursor: pointer; }
+.helia-folio-config .folio-cfg-reset { margin-top: 2rem; }
+
+@media (max-width: 760px) {
+  .helia-topbar { grid-template-columns: 1fr auto auto !important; grid-template-areas: "name name name" "nav search gear" !important; }
+  .helia-topbar .folio-dice { grid-area: gear; padding: 0 .8rem; font-size: 1.25rem; }
+  .folio-pop { left: 0 !important; right: 0; bottom: 0; top: auto !important; width: auto; max-height: 75vh; overflow-y: auto;
+    border-width: 6px 0 0; padding-bottom: calc(1rem + env(safe-area-inset-bottom, 0px)); }
+  .folio-pop-label { width: 100%; }
+  .folio-pop .folio-shuffle { margin-left: 0; }
+}
+
+/* ---- box styles, chosen in the ⚙ panel: double (default), heavy, filled (after Michael Levy) ---- */
+:root[data-folio-box="heavy"] .helia-home-hero { border-width: 10px !important; }
+:root[data-folio-box="filled"] .helia-home-hero { background: var(--accent) !important; color: var(--paper) !important; border: 0 !important;
+  outline: 2px solid var(--paper); outline-offset: -9px; }
+:root[data-folio-box="filled"] .helia-home-hero a, :root[data-folio-box="filled"] .helia-home-hero .helia-home-links a.helia-link { color: var(--paper) !important; border-color: color-mix(in srgb, var(--paper) 55%, transparent) !important; }
+:root[data-folio-box="filled"] .helia-home-hero .helia-home-links a.helia-link::before { background: var(--paper) !important; color: var(--paper) !important; }
+:root[data-folio-box="filled"] .helia-home-hero > .helia-home-links { border-top-color: color-mix(in srgb, var(--paper) 50%, transparent) !important; }
+:root[data-folio-box="filled"] .helia-home-hero > p:has(> .helia-home-photo) { outline-color: var(--paper) !important; }
+.folio-pop { max-height: calc(100vh - 16px); overflow-y: auto; }
+.helia-folio-config .folio-cfg-out { white-space: pre-wrap; word-break: break-all; font-size: .78rem; background: var(--code-bg); padding: .7rem .9rem; margin: 0 0 .5rem; grid-column: 1 / -1; }
+.folio-pop-row { display: block; }
+.folio-pop-label { display: block; width: auto; margin-bottom: .4rem; }
+.folio-pop .folio-shuffle { margin: .5rem 0 .2rem; }
+.folio-pop-row > button + button { margin-left: .35rem; }
+
+/* ---- the portrait: a double rule, evenly spaced round the photo ---- */
+.helia-home-hero > p:has(> .helia-home-photo) { outline: 7px double var(--accent-3, var(--accent)) !important; outline-offset: 0 !important;
+  display: block; width: fit-content; height: fit-content; line-height: 0; font-size: 0; padding: 0 !important; border-radius: 1px; }
+.helia-home-hero .helia-home-photo { display: block; margin: 0 !important; border: 0 !important; outline: 0 !important; box-shadow: none !important; }
+:root[data-folio-box="filled"] .helia-home-hero > p:has(> .helia-home-photo) { outline-color: var(--paper) !important; }
+.folio-pop .folio-pattern-chips { border-top: 1px dotted var(--rule); padding-top: .6rem; }
+
+/* ---- square corners everywhere: outlines follow border-radius, so a 1-2px radius turned into
+   visibly rounded frames next to the square boxes ---- */
+.helia-home-hero > p:has(> .helia-home-photo), .helia-home-hero .helia-home-photo, .helia-home-photo,
+.helia-video, .helia-video iframe, .helia-pdf, .helia-pdf object, .helia-search-dialog, .helia-search-result, .folio-pop, .folio-pop button,
+.helia-home-hero, .helia-reference table, .helia-query-sort-menu { border-radius: 0 !important; }
+
+/* ---- home: the whole introduction on the first screen ---- */
+.folio-masthead { padding-top: .6rem; }
+.folio-masthead-nav { margin-top: .1rem; margin-bottom: .35rem; }
+.folio-masthead .folio-band { margin-bottom: 1.3rem !important; }
+/* the masthead draws its own divider under the name (the wreath's footing), so no headpiece */
+html:has(.folio-masthead):has(.folio-masthead-fraktur, .folio-masthead-flanked) .glyph-headpiece { display: none !important; }
+html:has(.folio-masthead) .glyph-headpiece { margin: .6rem auto .9rem !important; }
+
+/* the title block, tight: taxon, title, then date · id as one byline right under it */
+.helia-article > .helia-header .helia-heading { margin-bottom: 0 !important; }
+.helia-article > .helia-header { margin-bottom: 0 !important; }   /* the divider (or double stroke) spaces the body */
+.helia-article > .helia-header .helia-meta { margin-top: 1.5rem !important; }
+/* date and id: one monospace byline sitting on the divider */
+.helia-article > .helia-header .helia-meta { align-items: baseline; }
+.helia-article > .helia-header .helia-meta .helia-date, .helia-article > .helia-header .helia-meta .folio-id {
+  font-family: var(--helia-font-mono); font-size: .75rem !important; font-style: normal; font-variant: normal;
+  letter-spacing: 0 !important; line-height: 1; color: var(--muted); opacity: 1; }
+.helia-meta:has(.folio-id) { justify-content: flex-start !important; }
+.helia-meta .folio-id { margin-left: 0 !important; }
+/* the id comes first after the title, as "[id]" (like a transcluded entry's); a date follows it */
+.helia-meta .folio-id { order: -1; }
+.helia-meta .folio-id::before { content: "[" !important; margin: 0 !important; }
+.helia-meta .folio-id::after { content: "]"; }
+.helia-meta:not(:has(.helia-byline)):not(:has(.helia-entry-links)) .helia-date:has(~ .folio-id)::before { content: "·"; margin: 0 .45rem; color: var(--muted); }
+/* A note's title block closes with the glyph headpiece (folio.js), the byline sitting on it, and the
+   page ends with the matching tailpiece: the same divider as the home page. The short rule under the
+   date is never drawn while ornamented (hiding it once the headpiece arrives would flash);
+   unornamented, the title block closes with the boxes' double stroke. */
+/* Reserved room: the title block keeps a strip under the byline for the small divider, which is drawn
+   into it, so the body never moves when the ornaments arrive. Unornamented, a double stroke. */
+.helia-article > .helia-header { padding-bottom: 3.5rem !important; }   /* room for the double-rule divider */
+.helia-article > .helia-header > .glyph-headpiece { position: absolute !important; left: 0; right: 0;
+  top: calc(100% - 1.95rem); margin: 0 !important; }
+.helia-article > .helia-header::after { display: none !important; }
+/* no ornamented divider (ornament off, or a screen too narrow for margins): a plain double rule in its place */
+html.folio-plain .helia-article > .helia-header,
+html.glyph-no-margins .helia-article > .helia-header { padding-bottom: 1.3rem !important; }
+html.folio-plain .helia-article > .helia-header::after,
+html.glyph-no-margins .helia-article > .helia-header::after { display: block !important; width: auto; border-bottom: 0;
+  border-top: var(--box-rule, 6px double var(--accent)); margin: .55rem 0 0 !important; }
+/* The flanked masthead: the name set in the flow (no arch to make room for), the side pieces drawn
+   round it; the divider under the nav drawn into room the masthead reserves. */
+.folio-masthead { position: relative; }
+.folio-masthead-flanked .folio-masthead-art { height: auto !important; padding: .9rem 0 .35rem; }
+.folio-masthead-flanked .folio-masthead-name { position: relative !important; left: auto !important; top: auto !important; translate: none !important; display: inline-block; }
+.folio-masthead-flanked { padding-bottom: 1rem !important; }   /* (no divider under the name now) */
+.folio-masthead-flanked > .folio-band { position: absolute !important; left: 0; right: 0; top: calc(100% - 2.9 * 18px - .7rem); margin: 0 auto !important; }
+html.folio-plain .folio-masthead-flanked { padding-bottom: 1rem !important; }
+html:has(.folio-masthead) .helia-home-hero { margin-top: 0 !important; }
+@media (max-width: 760px) {
+  .folio-masthead { padding: .2rem .6rem 0; }
+  .folio-masthead-nav { margin-top: 0; margin-bottom: .25rem; }
+  .folio-masthead .folio-band { margin-bottom: 1rem !important; }
+  html:has(.folio-masthead) .glyph-headpiece { display: none !important; }
+  html:has(.folio-masthead) .helia-page { padding-top: .9rem !important; }
+}
+html:has(.folio-masthead) body { padding-top: 0 !important; }
+@media (max-width: 760px) {
+  html:has(.folio-masthead) .helia-page { padding-top: .5rem !important; }
+  .helia-home-hero { padding: .85rem .9rem .7rem !important; }
+  .helia-home-hero > p:has(> .helia-home-photo) { margin: .15rem auto .9rem !important; }
+  .helia-home-hero .helia-home-photo { width: 8.5rem !important; }
+  .helia-home-intro > p { margin-block: 0 .55rem !important; }
+  .helia-home-hero > .helia-home-links { margin-top: .5rem !important; padding-top: .55rem !important; }
+}
+/* the panel's colour choices are palettes only */
+.folio-pop .folio-chip { padding: .45rem .55rem !important; }
+.folio-pop .folio-chip .folio-sw { gap: 3px; }
+.folio-pop .folio-chip .folio-sw i { width: .75rem; height: .75rem; }
+
+/* ---- footer: always the same shape: backlinks, related, definitions stacked full width, each
+   list a single column ---- */
+.helia-footer { display: block !important; }
+.helia-footer > section, .helia-footer > .helia-section, .helia-footer > .helia-collapsible { width: auto !important; margin-bottom: 1.2rem; }
+.helia-footer .helia-group-body > ul > li { margin-block: 0 !important; padding-block: .14rem; }
+
+/* ---- the floral bullets before headings, transclusions and folds: larger, further from the text ---- */
+:root, :root:not([data-theme="__folio"]) { --helia-bullet-indent: 1.75em; }
+.helia-heading-summary::before, .helia-transclusion-summary::before, .helia-group-summary::before { font-size: 1.5em !important; line-height: 1;
+  font-family: "Noto Sans Symbols 2", "Apple Symbols", "Segoe UI Symbol", serif !important; font-weight: 400 !important; font-style: normal !important; vertical-align: -.12em; }
+:root, :root:not([data-theme="__folio"]) { --helia-bullet-folded-color: color-mix(in srgb, var(--accent) 72%, var(--paper)); --helia-bullet-indent: 1.55em; }
+@media (max-width: 760px) {
+  :root, :root:not([data-theme="__folio"]) { --helia-bullet-indent: 1.3em; }
+  .helia-heading-summary::before, .helia-transclusion-summary::before, .helia-group-summary::before { font-size: 1.35em !important; }
+}
+
+/* ---- hyphenation (site configuration): free, heavy penalty (default), none ---- */
+/* the default applies before the script sets the attribute, so the text never rewraps on load */
+:root:not([data-folio-hyphens]) .helia-body, :root:not([data-folio-hyphens]) .helia-home-intro,
+:root[data-folio-hyphens="penalty"] .helia-body, :root[data-folio-hyphens="penalty"] .helia-home-intro {
+  hyphenate-limit-chars: 10 4 4; -webkit-hyphenate-limit-before: 4; -webkit-hyphenate-limit-after: 4; text-wrap: pretty; }
+:root[data-folio-hyphens="none"] .helia-body, :root[data-folio-hyphens="none"] .helia-home-intro { hyphens: manual !important; -webkit-hyphens: manual !important; text-wrap: pretty; }
+:root[data-folio-hyphens="none"] .helia-body p, :root[data-folio-hyphens="none"] .helia-body li { text-align: left !important; }
+
+/* ---- titles never hyphenate automatically; a soft hyphen (\u{00AD}) in the source still breaks there,
+   and a word too long for the line wraps rather than overflowing; lines balanced ---- */
+.helia-header .helia-heading, .helia-heading-summary > h2, .helia-heading-summary > h3, .helia-heading-summary > h4,
+.helia-transclusion-title, .helia-group-summary h2, .helia-group-summary h3,
+.helia-search-title, .folio-masthead-name, .helia-topbar .helia-home, .helia-nav-links a {
+  hyphens: manual !important; -webkit-hyphens: manual !important; overflow-wrap: break-word; text-wrap: balance; }
+
+/* ---- the gear: bigger, in a symbol font that draws ⚙ at full size ---- */
+.folio-dice { font-family: "Noto Sans Symbols 2", "Apple Symbols", "Segoe UI Symbol", sans-serif !important; line-height: 1; }
+.helia-topbar .folio-dice { font-size: 2rem !important; }
+.folio-masthead-nav .folio-dice { font-size: 1.55rem !important; vertical-align: -.2em; padding: 0 .2rem; }
+@media (max-width: 760px) {
+  .helia-topbar .folio-dice { font-size: 1.7rem !important; }
+  .folio-masthead-nav .folio-dice { font-size: 1.45rem !important; }
+}
+
+/* the gear, drawn (a masked outline in the current colour, like the search magnifier) */
+.folio-gear-icon { display: inline-block; width: 1em; height: 1em; vertical-align: -.14em; background: currentColor;
+  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='12' cy='12' r='3'/%3E%3Cpath d='M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z'/%3E%3C/svg%3E") center / contain no-repeat; mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='12' cy='12' r='3'/%3E%3Cpath d='M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z'/%3E%3C/svg%3E") center / contain no-repeat; }
+.helia-topbar .folio-dice { font-size: 1.6rem !important; }
+.folio-masthead-nav .folio-dice { font-size: 1.35rem !important; vertical-align: -.12em; }
+@media (max-width: 760px) { .helia-topbar .folio-dice { font-size: 1.5rem !important; } .folio-masthead-nav .folio-dice { font-size: 1.3rem !important; } }
+
+/* the panel's pattern choices: small drawn previews */
+.folio-pop .folio-pattern-chip { padding: .2rem !important; line-height: 0; }
+.folio-pop .folio-pattern-preview { display: block; width: 2.6rem; height: 2.6rem; }
+.folio-pop .folio-sw i { box-shadow: 0 0 0 1px color-mix(in srgb, var(--ink) 22%, transparent); }
+
+/* ---- flourishes from the ornament library (folio.js) ---- */
+.folio-divider { text-align: center; margin: 2.2rem auto 1.4rem; line-height: 0; }
+.folio-divider > span, .folio-end > span { display: inline-block; }
+/* the name and the tabs never wrap (the titles rule above turns wrapping on: `text-wrap`
+   is a shorthand, so it also undid the tabs' `white-space: nowrap`) */
+.folio-masthead-name, .helia-topbar .helia-home, .helia-nav-links a { text-wrap: nowrap !important; white-space: nowrap !important; }
+
+/* The flora palette: natural colours for the glyph-art pictures (flowers, fruit, greenery,
+   animals), each pulled toward the scheme's accent so it harmonises, and toward the ink so it
+   reads on the paper in light and dark mode alike. Brushes use them as var(--flora-…). */
+:root {
+  --flora-pull: 18%;
+  --flora-red:        color-mix(in oklab, color-mix(in oklab, #c83a36, var(--accent) var(--flora-pull)) 88%, var(--ink));
+  --flora-pink:       color-mix(in oklab, color-mix(in oklab, #e0879c, var(--accent) var(--flora-pull)) 88%, var(--ink));
+  --flora-orange:     color-mix(in oklab, color-mix(in oklab, #e0782a, var(--accent) var(--flora-pull)) 88%, var(--ink));
+  --flora-yellow:     color-mix(in oklab, color-mix(in oklab, #e3b21e, var(--accent) var(--flora-pull)) 88%, var(--ink));
+  --flora-purple:     color-mix(in oklab, color-mix(in oklab, #7c4db0, var(--accent) var(--flora-pull)) 88%, var(--ink));
+  --flora-blue:       color-mix(in oklab, color-mix(in oklab, #3c6ec6, var(--accent) var(--flora-pull)) 88%, var(--ink));
+  --flora-leaf:       color-mix(in oklab, color-mix(in oklab, #3f7f35, var(--accent) var(--flora-pull)) 88%, var(--ink));
+  --flora-leaf-light: color-mix(in oklab, color-mix(in oklab, #8cba55, var(--accent) var(--flora-pull)) 88%, var(--ink));
+  --flora-brown:      color-mix(in oklab, color-mix(in oklab, #7a4a2a, var(--accent) var(--flora-pull)) 88%, var(--ink));
+  --flora-white:      color-mix(in oklab, #f4eddc 80%, var(--accent) 8%);
+}
+/* the gear sits dead centre in its topbar button */
+.helia-topbar .folio-dice { display: inline-flex !important; align-items: center; justify-content: center; }
+.helia-topbar .folio-dice .folio-gear-icon { display: block; vertical-align: 0; }
+
+/* The site's code font: JetBrains Mono, loaded (the base theme only names it). */
+:root { --helia-font-mono: "JetBrains Mono", "SF Mono", ui-monospace, Menlo, monospace; }
+
+/* Things in the margins you can click: the placed ones (the cats, the name, :wq) and the shapes. */
+.glyph-margins .glyph-orn, .glyph-headpiece .glyph-orn, .glyph-tailpiece .glyph-orn, .glyph-stow, .folio-masthead-art .glyph-orn, .folio-band .glyph-orn { pointer-events: auto; cursor: pointer; }
+.folio-note { position: fixed; inset: 0; z-index: 60; display: grid; place-items: center; background: color-mix(in srgb, var(--paper) 55%, transparent); }
+.folio-note-card { max-width: min(22rem, 86vw); padding: 1.1rem 1.3rem 1rem; background: var(--paper); border: 4px double var(--accent); text-align: center;
+  font-family: var(--body-font, serif); box-shadow: 0 .6rem 2rem color-mix(in srgb, var(--ink) 18%, transparent); }
+/* a photo in a note (the cats) wears the portrait's double rule, on a holder, so it stays when the photo is drawn in symbols */
+.folio-note-card .folio-note-photo { display: block; width: fit-content; margin: 0 auto 1rem; line-height: 0; font-size: 0; outline: 7px double var(--accent-3, var(--accent)); outline-offset: 0; border-radius: 1px; }
+.folio-note-card .folio-note-photo img { display: block; max-width: 100%; max-height: 50vh; margin: 0; border: 0; }
+:root[data-folio-box="filled"] .folio-note-card .folio-note-photo { outline-color: var(--paper); }
+.folio-note-card .folio-note-title { font-family: var(--name-font, serif); font-size: 1.7rem; color: var(--accent); line-height: 1.1; }
+.folio-note-card .folio-note-text { margin-top: .4rem; color: var(--ink); }
+.folio-vim { position: fixed; left: 0; right: 0; bottom: 0; z-index: 60; padding: .25rem .6rem calc(.25rem + env(safe-area-inset-bottom, 0px)); background: var(--ink); color: var(--paper);
+  font-family: var(--helia-font-mono, monospace); font-size: .85rem; white-space: pre; overflow: hidden; }
+.folio-vim .err { color: #ff6b6b; }
+
+.folio-masthead-name { cursor: pointer; }
+
+/* must-place ornaments that don't fit in the margins (phones): a row beneath the foot rule */
+.glyph-perch-row { display: flex; flex-wrap: wrap; justify-content: space-evenly; align-items: center; gap: .9rem 1.4rem; margin: .7rem auto 0; max-width: 34rem; }
+.glyph-perch-row > * { flex: none; }
+
+/* the boxes' border, shared by the dividers and the rules at the top and foot of notes */
+:root { --box-rule: 6px double var(--accent); }
+:root[data-folio-box="heavy"] { --box-rule: 10px double var(--accent); }
+:root[data-folio-box="filled"] { --box-rule: 6px solid var(--accent); }
+
+/* the divider spans the introduction's box exactly, centred (its width is set to the box's) */
+.folio-masthead .folio-band { margin-left: auto !important; margin-right: auto !important; box-sizing: border-box; }
+@media (max-width: 760px) { .folio-masthead .folio-band { max-width: calc(100% + 1.2rem) !important; margin-left: -.6rem !important; margin-right: -.6rem !important; } }
+
+/* the settings gear: after the footer, tucked to the right, quiet until hovered */
+.folio-gear-foot { display: flex; justify-content: flex-end; padding: .4rem 1.2rem calc(1rem + env(safe-area-inset-bottom, 0px)); }
+.folio-gear-foot .folio-dice { font-size: 1.6rem !important; opacity: .85; padding: .3rem; }
+.folio-gear-foot .folio-dice:hover, .folio-gear-foot .folio-dice:focus-visible { opacity: 1; }
+
+/* commands in the search palette (">") */
+.folio-cmds .folio-cmd .helia-search-link { display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
+.folio-cmds .folio-cmd.is-active .helia-search-link { background: color-mix(in srgb, var(--accent) 12%, transparent); }
+.folio-cmds .folio-sw { display: inline-flex; gap: 3px; }
+.folio-cmds .folio-sw i { width: .7rem; height: .7rem; border-radius: 50%; display: inline-block; }
+
+/* ornament off: the home wreath (the name stays, plain) and the glyphs in the dividers go; the rules stay */
+html.folio-plain .folio-masthead-art .glyph-orn, html.folio-plain .folio-band .glyph-orn,
+html.glyph-no-margins .folio-masthead-art .glyph-orn { display: none !important; }
+html.folio-plain .folio-masthead-art, html.glyph-no-margins .folio-masthead-art { height: auto !important; }
+/* no margins (narrow screens) or ornament off: the dividers go entirely */
+html.glyph-no-margins .folio-band, html.folio-plain .folio-band { display: none !important; }
+html.folio-plain .folio-masthead-art .folio-masthead-name, html.glyph-no-margins .folio-masthead-art .folio-masthead-name { position: static !important; transform: none !important; translate: none !important; left: auto !important; top: auto !important;
+  width: 100% !important; text-align: center !important; margin: .6rem 0 .2rem !important; }
+html.folio-plain .folio-masthead-art, html.glyph-no-margins .folio-masthead-art { width: 100% !important; }

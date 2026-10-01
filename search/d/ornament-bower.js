@@ -1,0 +1,1 @@
+heliaSearchData("d/ornament-bower",{"id":"ornament-bower","title":"Bower of rosettes","kind":"glyph-art","tags":["ornament"],"authors":["Steven Schaefer"],"venue":[],"date":null,"url":"ornament-bower.html","headings":[],"body":"A larger structure painted with smaller ones: its brushes are rosettes, leaves and flowers from the ornament library, so each visit draws it afresh."});

@@ -1,0 +1,1 @@
+heliaSearchData("d/Hofmann_1997",{"id":"Hofmann_1997","title":"Syntax and semantics of dependent types","kind":"reference","tags":["type-theory"],"authors":["Martin Hofmann"],"venue":[],"date":null,"url":"Hofmann_1997.html","headings":[],"body":""});

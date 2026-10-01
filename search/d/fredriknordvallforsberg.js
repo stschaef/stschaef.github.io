@@ -1,0 +1,1 @@
+heliaSearchData("d/fredriknordvallforsberg",{"id":"fredriknordvallforsberg","title":"Fredrik Nordvall Forsberg","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"fredriknordvallforsberg.html","headings":[],"body":""});

@@ -1,0 +1,1 @@
+heliaSearchData("d/universite-paul-sabatier",{"id":"universite-paul-sabatier","title":"Université Paul Sabatier","kind":"institution","tags":[],"authors":[],"venue":[],"date":null,"url":"universite-paul-sabatier.html","headings":[],"body":""});

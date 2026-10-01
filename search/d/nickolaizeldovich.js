@@ -1,0 +1,1 @@
+heliaSearchData("d/nickolaizeldovich",{"id":"nickolaizeldovich","title":"Nickolai Zeldovich","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"nickolaizeldovich.html","headings":[],"body":""});

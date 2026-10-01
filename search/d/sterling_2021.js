@@ -1,0 +1,1 @@
+heliaSearchData("d/sterling_2021",{"id":"sterling_2021","title":"First Steps in Synthetic Tait Computability: The Objective Metatheory of Cubical Type Theory","kind":"reference","tags":["cubical","metatheory","synthetic-tait-computability"],"authors":["Jon Sterling"],"venue":[],"date":null,"url":"sterling_2021.html","headings":[],"body":""});

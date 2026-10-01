@@ -1,0 +1,1 @@
+heliaSearchData("d/naokiyoshinaga",{"id":"naokiyoshinaga","title":"Naoki Yoshinaga","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"naokiyoshinaga.html","headings":[],"body":""});

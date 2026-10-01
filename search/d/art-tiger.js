@@ -1,0 +1,1 @@
+heliaSearchData("d/art-tiger",{"id":"art-tiger","title":"Tiger","kind":"glyph-art","tags":["animal","ornament","ornament-art"],"authors":["Steven Schaefer"],"venue":[],"date":null,"url":"art-tiger.html","headings":[],"body":"A tiger sitting for its portrait: black stripes over ginger, pale muzzle and chest, green eyes, and a ringed tail wrapped round its paws."});

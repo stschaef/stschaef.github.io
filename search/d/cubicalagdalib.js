@@ -1,0 +1,1 @@
+heliaSearchData("d/cubicalagdalib",{"id":"cubicalagdalib","title":"The Cubical Agda Library","kind":"reference","tags":["cubical"],"authors":["The agda/cubical Contributors"],"venue":[],"date":null,"url":"cubicalagdalib.html","headings":[],"body":""});

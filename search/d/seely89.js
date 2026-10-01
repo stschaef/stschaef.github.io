@@ -1,0 +1,1 @@
+heliaSearchData("d/seely89",{"id":"seely89","title":"Linear logic, *-autonomous categories and cofree coalgebras","kind":"reference","tags":["linear-logic","star-autonomous-categories"],"authors":["Robert A. G. Seely"],"venue":[],"date":null,"url":"seely89.html","headings":[],"body":""});

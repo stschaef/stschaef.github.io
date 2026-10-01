@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>SAT-Based Model Checking without Unrolling</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Ctext y=%22.9em%22 font-size=%2290%22%3E%F0%9F%8C%BB%3C/text%3E%3C/svg%3E">
+<meta name="generator" content="helia">
+<script src="helia/theme-version.js"></script>
+<script src="theme/folio-early.js"></script>
+<link rel="stylesheet" href="helia/theme.css">
+<link rel="stylesheet" href="helia/highlight.css">
+<link rel="stylesheet" href="helia/search.css">
+<link rel="stylesheet" href="theme/katex.css">
+<link rel="stylesheet" href="theme/recipe.css">
+<link rel="stylesheet" href="theme/site.css">
+<link rel="stylesheet" href="theme/folio.css">
+<script defer src="helia/runtime.js"></script>
+<script defer src="helia/search.js"></script>
+<script defer src="theme/glyphcraft.js"></script>
+<script defer src="theme/glyphart.js"></script>
+<script defer src="theme/glyphgen.js"></script>
+<script defer src="theme/ornament.js"></script>
+<script defer src="theme/folio.js"></script>
+<script defer src="theme/portrait.js"></script>
+<script type="application/json" id="helia-widgets">{"helia-cite-formats":"widgets/helia-cite-formats-a3294ac7.js"}</script>
+<link rel="modulepreload" href="widgets/helia-cite-formats-a3294ac7.js">
+<script type="module" src="widgets/runtime.js"></script>
+</head>
+<body>
+<nav class="helia-topbar"><a class="helia-home" href="home.html">Steven Schaefer</a><ul class="helia-nav-links"><li><a href="stevenschaefer.html">About Me</a></li><li><a href="research.html">Research</a></li><li><a href="new.html">New</a></li></ul><button type="button" class="helia-search-button" aria-label="Search (/ or Ctrl+K)" aria-haspopup="dialog"><span class="helia-search-icon">⌕</span><span class="helia-search-label">Search</span><kbd class="helia-search-key">/</kbd></button></nav>
+<div class="helia-page" data-kind="reference">
+<article class="helia-article">
+<header class="helia-header" data-entry="bradleySATBasedModelChecking2011" data-kind="reference">
+<h2 class="helia-heading"><span class="helia-taxon">Reference.</span> SAT-Based Model Checking without Unrolling</h2>
+<div class="helia-meta"><span class="helia-author"><a class="helia-entry-link" href="aaronbradley.html" data-entry="aaronbradley">Aaron Bradley</a></span> · <span class="helia-byline"><a class="helia-entry-link" href="vmcai.html" data-entry="vmcai">VMCAI</a> · 2011</span> · <span class="helia-tags"><span class="helia-tag" data-tag="distributed-systems"><span class="helia-entry-link helia-unavailable">distributed-systems</span></span> <span class="helia-tag" data-tag="inductive-invariants"><span class="helia-entry-link helia-unavailable">inductive-invariants</span></span></span> · <span class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-642-18275-4_7">DOI</a></span></span></div>
+</header>
+<div class="helia-body">
+<div class="helia-abstract">A new form of SAT-based symbolic model checking is described. Instead of unrolling the transition relation, it incrementally generates clauses that are inductive relative to (and augment) stepwise approximate reachability information. In this way, the algorithm gradually refines the property, eventually producing either an inductive strengthening of the property or a counterexample trace. Our experimental studies show that induction is a powerful tool for generalizing the unreachability of given error states: it can refine away many states at once, and it is effective at focusing the proof search on aspects of the transition system relevant to the property. Furthermore, the incremental structure of the algorithm lends itself to a parallel implementation.</div>
+</div>
+<div class="helia-cite helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><h3 class="helia-heading">Cite</h3>
+</summary>
+<div class="helia-group-body">
+<div class="helia-widget" data-widget="helia-cite-formats" data-props="{&quot;key&quot;:&quot;bradleySATBasedModelChecking2011&quot;,&quot;bibtex&quot;:&quot;@inproceedings{bradleySATBasedModelChecking2011,\n title = {{{SAT-Based Model Checking}} without {{Unrolling}}},\n author = {Bradley, Aaron},\n date = {2011-01-23},\n isbn = {978-3-642-18274-7},\n doi = {10.1007/978-3-642-18275-4_7},\n pages = {70--87},\n abstract = {A new form of SAT-based symbolic model checking is described. Instead of unrolling the transition relation, it incrementally generates clauses that are inductive relative to (and augment) stepwise approximate reachability information. In this way, the algorithm gradually refines the property, eventually producing either an inductive strengthening of the property or a counterexample trace. Our experimental studies show that induction is a powerful tool for generalizing the unreachability of given error states: it can refine away many states at once, and it is effective at focusing the proof search on aspects of the transition system relevant to the property. Furthermore, the incremental structure of the algorithm lends itself to a parallel implementation.},\n booktitle = {Verification, Model Checking, and Abstract Interpretation (VMCAI 2011)},\n series = {Lecture Notes in Computer Science},\n volume = {6538}\n}&quot;,&quot;bib-file&quot;:&quot;bradleySATBasedModelChecking2011.bib&quot;,&quot;hayagriva&quot;:&quot;bradleySATBasedModelChecking2011:\n  type: article\n  title: &#39;{SAT-Based Model Checking} without {Unrolling}&#39;\n  author: Bradley, Aaron\n  date: 2011-01-23\n  page-range: 70-87\n  serial-number:\n    doi: 10.1007/978-3-642-18275-4_7\n    isbn: 978-3-642-18274-7\n  abstract: &#39;A new form of SAT-based symbolic model checking is described. Instead of unrolling the transition relation, it incrementally generates clauses that are inductive relative to (and augment) stepwise approximate reachability information. In this way, the algorithm gradually refines the property, eventually producing either an inductive strengthening of the property or a counterexample trace. Our experimental studies show that induction is a powerful tool for generalizing the unreachability of given error states: it can refine away many states at once, and it is effective at focusing the proof search on aspects of the transition system relevant to the property. Furthermore, the incremental structure of the algorithm lends itself to a parallel implementation.&#39;\n  parent:\n    type: proceedings\n    title: Verification, Model Checking, and Abstract Interpretation (VMCAI 2011)\n    volume: 6538\n    parent:\n      type: proceedings\n      title: Lecture Notes in Computer Science\n&quot;,&quot;yml-file&quot;:&quot;bradleySATBasedModelChecking2011.yml&quot;}"><div class="helia-cite-key" data-copy="@bradleySATBasedModelChecking2011" data-copy-label="citation key"><span class="helia-bib-key">Cite as</span> <code class="helia-raw-inline">@bradleySATBasedModelChecking2011</code> (helia, typst) · <code class="helia-raw-inline">\cite{bradleySATBasedModelChecking2011}</code> (LaTeX)</div>
+<div class="helia-cite-format helia-collapsible" data-format="bibtex" data-copy="true" data-copy-label="BibTeX">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">BibTeX</span></summary>
+<div class="helia-group-body">
+<details class="helia-code" open><summary class="helia-code-summary"><span class="helia-code-lang">bibtex</span> · <span class="helia-code-lines">12 lines</span></summary><pre class="helia-raw"><code class="language-bibtex"><span class="hl-text hl-bibtex"><span class="hl-meta hl-entry hl-braces hl-bibtex"><span class="hl-keyword hl-other hl-entry-type hl-bibtex"><span class="hl-punctuation hl-definition hl-keyword hl-bibtex">@</span>inproceedings</span><span class="hl-punctuation hl-section hl-entry hl-begin hl-bibtex">{</span><span class="hl-entity hl-name hl-type hl-entry-key hl-bibtex">bradleySATBasedModelChecking2011</span>,
+ <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">title</span> <span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span> <span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span><span class="hl-punctuation hl-definition hl-group hl-begin hl-bibtex">{</span><span class="hl-punctuation hl-definition hl-group hl-begin hl-bibtex">{</span>SAT-Based Model Checking<span class="hl-punctuation hl-definition hl-group hl-end hl-bibtex">}</span><span class="hl-punctuation hl-definition hl-group hl-end hl-bibtex">}</span> without <span class="hl-punctuation hl-definition hl-group hl-begin hl-bibtex">{</span><span class="hl-punctuation hl-definition hl-group hl-begin hl-bibtex">{</span>Unrolling<span class="hl-punctuation hl-definition hl-group hl-end hl-bibtex">}</span><span class="hl-punctuation hl-definition hl-group hl-end hl-bibtex">}</span><span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>,
+ <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">author</span> <span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span> <span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>Bradley, Aaron<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>,
+ <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">date</span> <span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span> <span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>2011-01-23<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>,
+ <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">isbn</span> <span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span> <span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>978-3-642-18274-7<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>,
+ <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">doi</span> <span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span> <span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>10.1007/978-3-642-18275-4_7<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>,
+ <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">pages</span> <span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span> <span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>70--87<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>,
+ <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">abstract</span> <span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span> <span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>A new form of SAT-based symbolic model checking is described. Instead of unrolling the transition relation, it incrementally generates clauses that are inductive relative to (and augment) stepwise approximate reachability information. In this way, the algorithm gradually refines the property, eventually producing either an inductive strengthening of the property or a counterexample trace. Our experimental studies show that induction is a powerful tool for generalizing the unreachability of given error states: it can refine away many states at once, and it is effective at focusing the proof search on aspects of the transition system relevant to the property. Furthermore, the incremental structure of the algorithm lends itself to a parallel implementation.<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>,
+ <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">booktitle</span> <span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span> <span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>Verification, Model Checking, and Abstract Interpretation (VMCAI 2011)<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>,
+ <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">series</span> <span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span> <span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>Lecture Notes in Computer Science<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>,
+ <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">volume</span> <span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span> <span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>6538<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span>
+</span><span class="hl-punctuation hl-section hl-entry hl-end hl-bibtex">}</span></span></span></code></pre></details>
+</div>
+</details>
+</div>
+<div class="helia-cite-format helia-collapsible" data-format="hayagriva" data-copy="true" data-copy-label="hayagriva YAML">
+<details>
+<summary class="helia-group-summary"><span class="helia-group-title">hayagriva YAML (typst)</span></summary>
+<div class="helia-group-body">
+<details class="helia-code" open><summary class="helia-code-summary"><span class="helia-code-lang">yaml</span> · <span class="helia-code-lines">17 lines</span></summary><pre class="helia-raw"><code class="language-yaml"><span class="hl-source hl-yaml"><span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">bradleySATBasedModelChecking2011</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">type</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">article</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">title</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-quoted hl-single hl-yaml"><span class="hl-punctuation hl-definition hl-string hl-begin hl-yaml">&#39;</span>{SAT-Based Model Checking} without {Unrolling}<span class="hl-punctuation hl-definition hl-string hl-end hl-yaml">&#39;</span></span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">author</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Bradley, Aaron</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">date</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-constant hl-other hl-timestamp hl-yaml">2011<span class="hl-punctuation hl-separator hl-date hl-yaml">-</span>01<span class="hl-punctuation hl-separator hl-date hl-yaml">-</span>23</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">page-range</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">70-87</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">serial-number</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">doi</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">10.1007/978-3-642-18275-4_7</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">isbn</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">978-3-642-18274-7</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">abstract</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-quoted hl-single hl-yaml"><span class="hl-punctuation hl-definition hl-string hl-begin hl-yaml">&#39;</span>A new form of SAT-based symbolic model checking is described. Instead of unrolling the transition relation, it incrementally generates clauses that are inductive relative to (and augment) stepwise approximate reachability information. In this way, the algorithm gradually refines the property, eventually producing either an inductive strengthening of the property or a counterexample trace. Our experimental studies show that induction is a powerful tool for generalizing the unreachability of given error states: it can refine away many states at once, and it is effective at focusing the proof search on aspects of the transition system relevant to the property. Furthermore, the incremental structure of the algorithm lends itself to a parallel implementation.<span class="hl-punctuation hl-definition hl-string hl-end hl-yaml">&#39;</span></span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">parent</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">type</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">proceedings</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">title</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Verification, Model Checking, and Abstract Interpretation (VMCAI 2011)</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">volume</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-constant hl-numeric hl-integer hl-decimal hl-yaml">6538</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">parent</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span>
+      <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">type</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">proceedings</span>
+      <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">title</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Lecture Notes in Computer Science</span>
+</span></code></pre></details>
+</div>
+</details>
+</div>
+<div class="helia-cite-files">Download: <a class="helia-link" href="bradleySATBasedModelChecking2011.bib">bradleySATBasedModelChecking2011.bib</a> · <a class="helia-link" href="bradleySATBasedModelChecking2011.yml">bradleySATBasedModelChecking2011.yml</a></div>
+</div>
+</div>
+</details>
+</div>
+<div class="helia-reference-cited-by helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">Cited by (8)</span></summary>
+<div class="helia-group-body">
+<section class="helia-transclusion" data-entry="goelRegularityQuantificationNew" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="goelRegularityQuantificationNew"><span class="helia-title">Regularity and Quantification: A New Approach to Verify Distributed Protocols</span>&nbsp;<a class="helia-slug" href="goelRegularityQuantificationNew.html">goelRegularityQuantificationNew</a><span class="helia-byline"><span class="helia-entry-link" data-entry="innovations-in-systems-and-software-engineering">Innovations in Systems and Software Engineering</span> · 2022</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="goelRegularityQuantificationNew" data-kind="reference">
+<div class="helia-abstract">Proving that an unbounded distributed protocol satisfies a given safety property amounts to finding a quantified inductive invariant that implies the property for all possible instance sizes of the protocol. Existing methods for solving this problem can be described as search procedures for an invariant whose quantification prefix fits a particular template. We propose an alternative constructive approach that does not prescribe, a priori, a specific quantifier prefix. Instead, the required prefix is automatically inferred without any enumerative search by carefully analyzing the spatial and temporal regularity of the protocol. The key insight underlying this approach is that structural regularity and quantification are closely related concepts that express protocol invariance under different re-arrangements of its components and its unbounded evolution over time. We extended the finite-domain IC3/PDR algorithm to use these regularities and boost clause learning to automatically derive the required quantified inductive invariant by exploiting the connection between structural regularities and quantification. We also describe a procedure to automatically find a minimal finite size, the cutoff, that yields a quantified invariant proving safety for any size. Our approach is implemented in IC3PO, a new verifier for distributed protocols that significantly outperforms the state-of-the-art, scales orders of magnitude faster, and robustly derives compact inductive invariants fully automatically.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1007/s11334-022-00460-8">DOI</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="maSiftUsingRefinementguided" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="maSiftUsingRefinementguided"><span class="helia-title">Sift: Using Refinement-guided Automation to Verify Complex Distributed Systems</span>&nbsp;<a class="helia-slug" href="maSiftUsingRefinementguided.html">maSiftUsingRefinementguided</a><span class="helia-byline"><span class="helia-entry-link" data-entry="atc">USENIX ATC</span> · 2022</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="maSiftUsingRefinementguided" data-kind="reference">
+<div class="helia-abstract">Distributed systems are hard to design and implement correctly. Recent work has tried to use formal verification techniques to provide rigorous correctness guarantees. These works present a hard choice, though. One must either opt for the power of refinement-based approaches like IronFleet and Verdi, at the cost of large amounts of manual effort; or choose the more automated approach of I4, IC3PO, SWISS and DistAI which give up the ability to prove refinement and the power and scalability that come with it.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="url"><a class="helia-link helia-external" href="https://www.usenix.org/conference/atc22/presentation/ma">Web</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="goelSymmetryQuantificationNew2021" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="goelSymmetryQuantificationNew2021"><span class="helia-title">On Symmetry and Quantification: A New Approach to Verify Distributed Protocols</span>&nbsp;<a class="helia-slug" href="goelSymmetryQuantificationNew2021.html">goelSymmetryQuantificationNew2021</a><span class="helia-byline"><span class="helia-entry-link" data-entry="nfm">NFM</span> · 2021</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="goelSymmetryQuantificationNew2021" data-kind="reference">
+<div class="helia-abstract">Proving that an unbounded distributed protocol satisfies a given safety property amounts to finding a quantified inductive invariant that implies the property for all possible instance sizes of the protocol. Existing methods for solving this problem can be described as search procedures for an invariant whose quantification prefix fits a particular template. We propose an alternative constructive approach that does not prescribe, a priori, a specific quantifier prefix. Instead, the required prefix is automatically inferred without any search by carefully analyzing the structural symmetries of the protocol. The key insight underlying this approach is that symmetry and quantification are closely related concepts that express protocol invariance under different re-arrangements of its components. We propose symmetric incremental induction, an extension of the finite-domain IC3/PDR algorithm, that automatically derives the required quantified inductive invariant by exploiting the connection between symmetry and quantification. While various attempts have been made to exploit symmetry in verification applications, to our knowledge, this is the first demonstration of a direct link between symmetry and quantification in the context of clause learning during incremental induction. We also describe a procedure to automatically find a minimal finite size, the cutoff, that yields a quantified invariant proving safety for any size. Our approach is implemented in IC3PO, a new verifier for distributed protocols that significantly outperforms the state-of-the-art, scales orders of magnitude faster, and robustly derives compact inductive invariants fully automatically.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-030-76384-8_9">DOI</a></span> · <span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/2103.14831">arXiv</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="hanceFindingInvariantsDistributed" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="hanceFindingInvariantsDistributed"><span class="helia-title">Finding Invariants of Distributed Systems: It’s a Small (Enough) World After All</span>&nbsp;<a class="helia-slug" href="hanceFindingInvariantsDistributed.html">hanceFindingInvariantsDistributed</a><span class="helia-byline"><span class="helia-entry-link" data-entry="nsdi">NSDI</span> · 2021</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="hanceFindingInvariantsDistributed" data-kind="reference">
+<div class="helia-abstract">Today’s distributed systems are increasingly complex, leading to subtle bugs that are difficult to detect with standard testing methods. Formal verification can provably rule out such bugs, but historically it has been excessively labor intensive. For distributed systems, recent work shows that, given a correct inductive invariant, nearly all other proof work can be automated; however, the construction of such invariants is still a difficult manual task. In this paper, we demonstrate a new methodology for automating the construction of inductive invariants, given as input a (formal) description of the distributed system and a desired safety condition. Our system performs an exhaustive search within a given space of candidate invariants in order to find and verify inductive invariants which suffice to prove the safety condition. Central to our ability to search efficiently is our algorithm’s ability to learn from counterexamples whenever a candidate fails to be invariant, allowing us to check the remaining candidates more efficiently. We hypothesize that many distributed systems, even complex ones, may have concise invariants that make this approach practical, and in support of this, we show that our system is able to identify and verify inductive invariants for the Paxos protocol, which proved too complex for previous work.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="url"><a class="helia-link helia-external" href="https://www.usenix.org/conference/nsdi21/presentation/hance">Web</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="goelAVRAbstractlyVerifying2020" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="goelAVRAbstractlyVerifying2020"><span class="helia-title">AVR: Abstractly Verifying Reachability</span>&nbsp;<a class="helia-slug" href="goelAVRAbstractlyVerifying2020.html">goelAVRAbstractlyVerifying2020</a><span class="helia-byline"><span class="helia-entry-link" data-entry="tacas">TACAS</span> · 2020</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="goelAVRAbstractlyVerifying2020" data-kind="reference">
+<div class="helia-abstract">We present AVR, a push-button model checker for verifying state transition systems directly at the source-code level. AVR uses information embedded in the word-level syntax of the design representation to automatically perform scalable model checking by combining a novel syntax-guided abstraction-refinement technique with a word-level implementation of the IC3 algorithm. AVR provides independently-verifiable certificates that offer provable assurance and are easy to relate to the word-level system. Moreover, proof certificates can be further used in innovative ways to extract key design information and are useful in a growing number of applications.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-030-45190-5_23">DOI</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="maI4IncrementalInference2019" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="maI4IncrementalInference2019"><span class="helia-title">I4: Incremental inference of inductive invariants for verification of distributed protocols</span>&nbsp;<a class="helia-slug" href="maI4IncrementalInference2019.html">maI4IncrementalInference2019</a><span class="helia-byline"><span class="helia-entry-link" data-entry="sosp">SOSP</span> · 2019</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="maI4IncrementalInference2019" data-kind="reference">
+<div class="helia-abstract">Designing and implementing distributed systems correctly is a very challenging task. Recently, formal verification has been successfully used to prove the correctness of distributed systems. At the heart of formal verification lies a computerchecked proof with an inductive invariant. Finding this inductive invariant, however, is the most difficult part of the proof. Alas, current proof techniques require inductive invariants to be found manually—and painstakingly—by the developer. In this paper, we present a new approach, Incremental Inference of Inductive Invariants (I4), to automatically generate inductive invariants for distributed protocols. The essence of our idea is simple: the inductive invariant of a finite instance of the protocol can be used to infer a general inductive invariant for the infinite distributed protocol. In I4, we create a finite instance of the protocol; use a model checking tool to automatically derive the inductive invariant for this finite instance; and generalize this invariant to an inductive invariant for the infinite protocol. Our experiments show that I4 can prove the correctness of several distributed protocols like Chord, 2PC and Transaction Chains with little to no human effort.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/3341301.3359651">DOI</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="padonIvySafetyVerification" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="padonIvySafetyVerification"><span class="helia-title">Ivy: Safety verification by interactive generalization</span>&nbsp;<a class="helia-slug" href="padonIvySafetyVerification.html">padonIvySafetyVerification</a><span class="helia-byline"><span class="helia-entry-link" data-entry="sigplan-notices">SIGPLAN Notices</span> · 2016</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="padonIvySafetyVerification" data-kind="reference">
+<div class="helia-abstract">Despite several decades of research, the problem of formal verification of infinite-state systems has resisted effective automation. We describe a system — Ivy — for interactively verifying safety of infinite-state systems. Ivy’s key principle is that whenever verification fails, Ivy graphically displays a concrete counterexample to induction. The user then interactively guides generalization from this counterexample. This process continues until an inductive invariant is found. Ivy searches for universally quantified invariants, and uses a restricted modeling language. This ensures that all verification conditions can be checked algorithmically. All user interactions are performed using graphical models, easing the user’s task. We describe our initial experience with verifying several distributed protocols.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/2980983.2908118">DOI</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="padonDecidabilityInferringInductive2016" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="padonDecidabilityInferringInductive2016"><span class="helia-title">Decidability of inferring inductive invariants</span>&nbsp;<a class="helia-slug" href="padonDecidabilityInferringInductive2016.html">padonDecidabilityInferringInductive2016</a><span class="helia-byline"><span class="helia-entry-link" data-entry="popl">POPL</span> · 2016</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="padonDecidabilityInferringInductive2016" data-kind="reference">
+<div class="helia-abstract">Induction is a successful approach for verification of hardware and software systems. A common practice is to model a system using logical formulas, and then use a decision procedure to verify that some logical formula is an inductive safety invariant for the system. A key ingredient in this approach is coming up with the inductive invariant, which is known as invariant inference. This is a major difficulty, and it is often left for humans or addressed by sound but incomplete abstract interpretation. This paper is motivated by the problem of inductive invariants in shape analysis and in distributed protocols. This paper approaches the general problem of inferring first-order inductive invariants by restricting the language L of candidate invariants. Notice that the problem of invariant inference in a restricted language L differs from the safety problem, since a system may be safe and still not have any inductive invariant in L that proves safety. Clearly, if L is finite (and if testing an inductive invariant is decidable), then inferring invariants in L is decidable. This paper presents some interesting cases when inferring inductive invariants in L is decidable even when L is an infinite language of universal formulas. Decidability is obtained by restricting L and defining a suitable well-quasi-order on the state space. We also present some undecidability results that show that our restrictions are necessary. We further present a framework for systematically constructing infinite languages while keeping the invariant inference problem decidable. We illustrate our approach by showing the decidability of inferring invariants for programs manipulating linked-lists, and for distributed protocols.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/2837614.2837640">DOI</a></span></div>
+</div>
+</div>
+</details>
+</section>
+</div>
+</details>
+</div>
+<div class="helia-reference-cites helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">Cites 25 works (0 here)</span></summary>
+<div class="helia-group-body">
+<div class="helia-reference-cites-away helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">External (25)</span></summary>
+<div class="helia-group-body">
+<ul>
+<li>Hardware model checking competition (Hardware Verification Workshop) (2010)</li>
+<li><a class="helia-link helia-external" href="https://arxiv.org/abs/1003.3649">k-step relative inductive generalization</a> (2010)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1109/famcad.2007.15">Checking Safety by Inductive Generalization of Counterexamples to Induction</a> (2007)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-540-72788-0_26">Applying logic synthesis for speeding up SAT</a> (2007)</li>
+<li>Safety Analysis of Systems (Bradley, PhD thesis, Stanford) (2007)</li>
+<li>Cut sweeping (Eén, Cadence tech. report) (2007)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/1146909.1147180">Automatic invariant strengthening to prove properties in bounded model checking</a> (2006)</li>
+<li>Fast illegal state identification for improving SAT-based induction (2006)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/11499107_5">Effective preprocessing in SAT through variable and clause elimination</a> (2005)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-540-24605-3_37">An Extensible SAT-solver</a> (2004)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/876638.876643">Counterexample-guided abstraction refinement for symbolic model checking</a> (2003)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1016/s1571-0661(05)82542-3">Temporal Induction by Incremental SAT Solving</a> (2003)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-540-45069-6_1">Interpolation and SAT-Based Model Checking</a> (2003)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-540-45069-6_2">Bounded Model Checking and Induction: From Refutation to Verification</a> (2003)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/3-540-45657-0_19">Applying SAT Methods in Unbounded Symbolic Model Checking</a> (2002)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/378239.379017">Chaff</a> (2001)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/3-540-40922-x_8">Checking safety properties using induction and a SAT-solver</a> (2000)</li>
+<li>Model Checking (Clarke, Grumberg, Peled) (2000)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/3-540-49059-0_14">Symbolic model checking without BDDs</a> (1999)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/3-540-63166-6_10">Construction of abstract state graphs with PVS</a> (1997)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-1-4612-4222-2">Temporal Verification of Reactive Systems: Safety</a> (1995)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1016/0890-5401(92)90017-a">Symbolic model checking: 1020 States and beyond</a> (1992)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/512950.512973">Abstract interpretation: a unified lattice model for static analysis of programs by construction or approximation of fixpoints</a> (1977)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/363235.363259">An axiomatic basis for computer programming</a> (1969)</li>
+<li>Assigning meanings to programs (1967)</li>
+</ul>
+</div>
+</details>
+</div>
+</div>
+</details>
+</div>
+<footer class="helia-footer">
+<div class="helia-related helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><h3 class="helia-heading">Related</h3>
+</summary>
+<div class="helia-group-body">
+<ul>
+<li><a class="helia-entry-link" href="LuoSatBasedQuantifiedSymmetric.html" data-entry="LuoSatBasedQuantifiedSymmetric">SAT-based quantified symmetric minimization of the reachable states of distributed protocols: An update</a> <span class="helia-related-count">· 2 shared tags</span></li>
+<li><a class="helia-entry-link" href="anderson2014netkat.html" data-entry="anderson2014netkat">NetKAT: Semantic foundations for networks</a> <span class="helia-related-count">· 2 shared tags</span></li>
+<li><a class="helia-entry-link" href="mcmillanDeductiveVerificationDecidable2018.html" data-entry="mcmillanDeductiveVerificationDecidable2018">Deductive Verification in Decidable Fragments with Ivy</a> <span class="helia-related-count">· 2 shared tags</span></li>
+<li><a class="helia-entry-link" href="mcmillanIvyMultimodalVerification2020.html" data-entry="mcmillanIvyMultimodalVerification2020">Ivy: A Multi-modal Verification Tool for Distributed Algorithms</a> <span class="helia-related-count">· 2 shared tags</span></li>
+<li><a class="helia-entry-link" href="padonDeductiveVerificationDistributed2018.html" data-entry="padonDeductiveVerificationDistributed2018">Deductive Verification of Distributed Protocols in First-Order Logic</a> <span class="helia-related-count">· 2 shared tags</span></li>
+<li><a class="helia-entry-link" href="sharmaGroveSeparationLogicLibrary2023.html" data-entry="sharmaGroveSeparationLogicLibrary2023">Grove: A Separation-Logic Library for Verifying Distributed Systems</a> <span class="helia-related-count">· 2 shared tags</span></li>
+<li><a class="helia-entry-link" href="yaoDistAIDataDrivenAutomated.html" data-entry="yaoDistAIDataDrivenAutomated">DistAI: Data-Driven Automated Invariant Learning for Distributed Protocols</a> <span class="helia-related-count">· 2 shared tags</span></li>
+</ul>
+</div>
+</details>
+</div>
+</footer>
+</article>
+<div class="helia-identity"><span class="helia-id">bradleySATBasedModelChecking2011</span> <span class="helia-kind">reference</span> <span class="helia-path">entries/refs/bradleySATBasedModelChecking2011/bradleySATBasedModelChecking2011.hel</span></div>
+</div>
+</body>
+</html>

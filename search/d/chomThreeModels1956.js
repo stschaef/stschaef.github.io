@@ -1,0 +1,1 @@
+heliaSearchData("d/chomThreeModels1956",{"id":"chomThreeModels1956","title":"Three models for the description of language","kind":"reference","tags":["parsing"],"authors":["Noam Chomsky"],"venue":["IRE Transactions on Information Theory"],"date":null,"url":"chomThreeModels1956.html","headings":[],"body":""});

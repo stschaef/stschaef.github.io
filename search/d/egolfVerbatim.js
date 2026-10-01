@@ -1,0 +1,1 @@
+heliaSearchData("d/egolfVerbatim",{"id":"egolfVerbatim","title":"Verbatim: A verified lexer generator","kind":"reference","tags":["parsing"],"authors":["Derek Egolf","Kathleen Fisher","Sam Lasser"],"venue":["SPW","IEEE Security and Privacy Workshops"],"date":null,"url":"egolfVerbatim.html","headings":[],"body":""});

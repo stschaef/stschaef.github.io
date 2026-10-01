@@ -1,0 +1,1 @@
+heliaSearchData("d/universite-cote-d-azur",{"id":"universite-cote-d-azur","title":"Université Côte d’Azur","kind":"institution","tags":[],"authors":[],"venue":[],"date":null,"url":"universite-cote-d-azur.html","headings":[],"body":""});

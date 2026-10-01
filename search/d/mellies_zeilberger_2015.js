@@ -1,0 +1,1 @@
+heliaSearchData("d/mellies_zeilberger_2015",{"id":"mellies_zeilberger_2015","title":"Functors are type refinement systems","kind":"reference","tags":["category-theory","refinement-types"],"authors":["Noam Zeilberger","Paul-André Melliès"],"venue":["POPL","Symposium on Principles of Programming Languages"],"date":null,"url":"mellies_zeilberger_2015.html","headings":[],"body":""});

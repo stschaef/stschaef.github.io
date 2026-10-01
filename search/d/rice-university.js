@@ -1,0 +1,1 @@
+heliaSearchData("d/rice-university",{"id":"rice-university","title":"Rice University","kind":"institution","tags":[],"authors":[],"venue":[],"date":null,"url":"rice-university.html","headings":[],"body":""});

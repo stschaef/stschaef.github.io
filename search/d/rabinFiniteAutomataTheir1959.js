@@ -1,0 +1,1 @@
+heliaSearchData("d/rabinFiniteAutomataTheir1959",{"id":"rabinFiniteAutomataTheir1959","title":"Finite Automata and Their Decision Problems","kind":"reference","tags":["parsing"],"authors":["Dana Scott","M. O. Rabin"],"venue":["IBM Journal of Research and Development"],"date":null,"url":"rabinFiniteAutomataTheir1959.html","headings":[],"body":""});

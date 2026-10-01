@@ -1,0 +1,1 @@
+heliaSearchData("d/blackwell_kelly_power_1989",{"id":"blackwell_kelly_power_1989","title":"Two-dimensional monad theory","kind":"reference","tags":["category-theory"],"authors":["A. John Power","G. Max Kelly","R. Blackwell"],"venue":["JPAA","Journal of Pure and Applied Algebra"],"date":null,"url":"blackwell_kelly_power_1989.html","headings":[],"body":""});

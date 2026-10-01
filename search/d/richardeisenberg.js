@@ -1,0 +1,1 @@
+heliaSearchData("d/richardeisenberg",{"id":"richardeisenberg","title":"Richard A. Eisenberg","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"richardeisenberg.html","headings":[],"body":""});

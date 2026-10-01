@@ -1,0 +1,1 @@
+heliaSearchData("d/christinavasilakopoulou",{"id":"christinavasilakopoulou","title":"Christina Vasilakopoulou","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"christinavasilakopoulou.html","headings":[],"body":""});

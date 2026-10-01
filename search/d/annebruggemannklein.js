@@ -1,0 +1,1 @@
+heliaSearchData("d/annebruggemannklein",{"id":"annebruggemannklein","title":"Anne Bruggemann-Klein","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"annebruggemannklein.html","headings":[],"body":""});

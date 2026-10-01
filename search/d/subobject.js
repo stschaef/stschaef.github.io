@@ -1,0 +1,1 @@
+heliaSearchData("d/subobject",{"id":"subobject","title":"Subobject","kind":"definition","tags":["category-theory","subobject"],"authors":[],"venue":[],"date":"2025-02-07T00:06:36","url":"subobject.html","headings":[],"body":"In a category cal(C) , a subobject of c is an isomorphism class of monomorphisms into c ."});

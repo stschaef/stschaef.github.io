@@ -1,0 +1,1 @@
+heliaSearchData("d/person-kind",{"id":"person-kind","title":"Person kind","kind":"note","tags":[],"authors":["Steven Schaefer"],"venue":[],"date":null,"url":"person-kind.html","headings":[],"body":""});

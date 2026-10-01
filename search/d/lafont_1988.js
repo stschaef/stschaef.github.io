@@ -1,0 +1,1 @@
+heliaSearchData("d/lafont_1988",{"id":"lafont_1988","title":"Logiques, catégories et machines","kind":"reference","tags":["linear-logic"],"authors":["Yves Lafont"],"venue":[],"date":null,"url":"lafont_1988.html","headings":[],"body":""});

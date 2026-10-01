@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>Regularity and Quantification: A New Approach to Verify Distributed Protocols</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Ctext y=%22.9em%22 font-size=%2290%22%3E%F0%9F%8C%BB%3C/text%3E%3C/svg%3E">
+<meta name="generator" content="helia">
+<script src="helia/theme-version.js"></script>
+<script src="theme/folio-early.js"></script>
+<link rel="stylesheet" href="helia/theme.css">
+<link rel="stylesheet" href="helia/highlight.css">
+<link rel="stylesheet" href="helia/search.css">
+<link rel="stylesheet" href="theme/katex.css">
+<link rel="stylesheet" href="theme/recipe.css">
+<link rel="stylesheet" href="theme/site.css">
+<link rel="stylesheet" href="theme/folio.css">
+<script defer src="helia/runtime.js"></script>
+<script defer src="helia/search.js"></script>
+<script defer src="theme/glyphcraft.js"></script>
+<script defer src="theme/glyphart.js"></script>
+<script defer src="theme/glyphgen.js"></script>
+<script defer src="theme/ornament.js"></script>
+<script defer src="theme/folio.js"></script>
+<script defer src="theme/portrait.js"></script>
+<script type="application/json" id="helia-widgets">{"helia-cite-formats":"widgets/helia-cite-formats-a3294ac7.js"}</script>
+<link rel="modulepreload" href="widgets/helia-cite-formats-a3294ac7.js">
+<script type="module" src="widgets/runtime.js"></script>
+</head>
+<body>
+<nav class="helia-topbar"><a class="helia-home" href="home.html">Steven Schaefer</a><ul class="helia-nav-links"><li><a href="stevenschaefer.html">About Me</a></li><li><a href="research.html">Research</a></li><li><a href="new.html">New</a></li></ul><button type="button" class="helia-search-button" aria-label="Search (/ or Ctrl+K)" aria-haspopup="dialog"><span class="helia-search-icon">⌕</span><span class="helia-search-label">Search</span><kbd class="helia-search-key">/</kbd></button></nav>
+<div class="helia-page" data-kind="reference">
+<article class="helia-article">
+<header class="helia-header" data-entry="goelRegularityQuantificationNew" data-kind="reference">
+<h2 class="helia-heading"><span class="helia-taxon">Reference.</span> Regularity and Quantification: A New Approach to Verify Distributed Protocols</h2>
+<div class="helia-meta"><span class="helia-author"><a class="helia-entry-link" href="amangoel.html" data-entry="amangoel">Aman Goel</a>, <a class="helia-entry-link" href="karemsakallah.html" data-entry="karemsakallah">Karem A. Sakallah</a></span> · <span class="helia-byline"><a class="helia-entry-link" href="innovations-in-systems-and-software-engineering.html" data-entry="innovations-in-systems-and-software-engineering">Innovations in Systems and Software Engineering</a> · 2022</span> · <span class="helia-tags"><span class="helia-tag" data-tag="distributed-systems"><span class="helia-entry-link helia-unavailable">distributed-systems</span></span> <span class="helia-tag" data-tag="inductive-invariants"><span class="helia-entry-link helia-unavailable">inductive-invariants</span></span></span> · <span class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1007/s11334-022-00460-8">DOI</a></span></span></div>
+</header>
+<div class="helia-body">
+<div class="helia-abstract">Proving that an unbounded distributed protocol satisfies a given safety property amounts to finding a quantified inductive invariant that implies the property for all possible instance sizes of the protocol. Existing methods for solving this problem can be described as search procedures for an invariant whose quantification prefix fits a particular template. We propose an alternative constructive approach that does not prescribe, a priori, a specific quantifier prefix. Instead, the required prefix is automatically inferred without any enumerative search by carefully analyzing the spatial and temporal regularity of the protocol. The key insight underlying this approach is that structural regularity and quantification are closely related concepts that express protocol invariance under different re-arrangements of its components and its unbounded evolution over time. We extended the finite-domain IC3/PDR algorithm to use these regularities and boost clause learning to automatically derive the required quantified inductive invariant by exploiting the connection between structural regularities and quantification. We also describe a procedure to automatically find a minimal finite size, the cutoff, that yields a quantified invariant proving safety for any size. Our approach is implemented in IC3PO, a new verifier for distributed protocols that significantly outperforms the state-of-the-art, scales orders of magnitude faster, and robustly derives compact inductive invariants fully automatically.</div>
+</div>
+<div class="helia-cite helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><h3 class="helia-heading">Cite</h3>
+</summary>
+<div class="helia-group-body">
+<div class="helia-widget" data-widget="helia-cite-formats" data-props="{&quot;key&quot;:&quot;goelRegularityQuantificationNew&quot;,&quot;bibtex&quot;:&quot;@article{goelRegularityQuantificationNew,\n title = {Regularity and {{Quantification}}: {{A New Approach}} to {{Verify Distributed Protocols}}},\n author = {Goel, Aman and Sakallah, Karem A},\n pages = {359--377},\n langid = {english},\n abstract = {Proving that an unbounded distributed protocol satisfies a given safety property amounts to finding a quantified inductive invariant that implies the property for all possible instance sizes of the protocol. Existing methods for solving this problem can be described as search procedures for an invariant whose quantification prefix fits a particular template. We propose an alternative constructive approach that does not prescribe, a priori, a specific quantifier prefix. Instead, the required prefix is automatically inferred without any enumerative search by carefully analyzing the spatial and temporal regularity of the protocol. The key insight underlying this approach is that structural regularity and quantification are closely related concepts that express protocol invariance under different re-arrangements of its components and its unbounded evolution over time. We extended the finite-domain IC3/PDR algorithm to use these regularities and boost clause learning to automatically derive the required quantified inductive invariant by exploiting the connection between structural regularities and quantification. We also describe a procedure to automatically find a minimal finite size, the cutoff, that yields a quantified invariant proving safety for any size. Our approach is implemented in IC3PO, a new verifier for distributed protocols that significantly outperforms the state-of-the-art, scales orders of magnitude faster, and robustly derives compact inductive invariants fully automatically.},\n year = {2022},\n journal = {Innovations in Systems and Software Engineering},\n volume = {19},\n number = {4},\n doi = {10.1007/s11334-022-00460-8}\n}&quot;,&quot;bib-file&quot;:&quot;goelRegularityQuantificationNew.bib&quot;,&quot;hayagriva&quot;:&quot;goelRegularityQuantificationNew:\n  type: article\n  title: &#39;Regularity and {Quantification}: {A New Approach} to {Verify Distributed Protocols}&#39;\n  author:\n  - Goel, Aman\n  - Sakallah, Karem A\n  date: 2022\n  page-range: 359-377\n  serial-number:\n    doi: 10.1007/s11334-022-00460-8\n  language: en-US\n  abstract: Proving that an unbounded distributed protocol satisfies a given safety property amounts to finding a quantified inductive invariant that implies the property for all possible instance sizes of the protocol. Existing methods for solving this problem can be described as search procedures for an invariant whose quantification prefix fits a particular template. We propose an alternative constructive approach that does not prescribe, a priori, a specific quantifier prefix. Instead, the required prefix is automatically inferred without any enumerative search by carefully analyzing the spatial and temporal regularity of the protocol. The key insight underlying this approach is that structural regularity and quantification are closely related concepts that express protocol invariance under different re-arrangements of its components and its unbounded evolution over time. We extended the finite-domain IC3/PDR algorithm to use these regularities and boost clause learning to automatically derive the required quantified inductive invariant by exploiting the connection between structural regularities and quantification. We also describe a procedure to automatically find a minimal finite size, the cutoff, that yields a quantified invariant proving safety for any size. Our approach is implemented in IC3PO, a new verifier for distributed protocols that significantly outperforms the state-of-the-art, scales orders of magnitude faster, and robustly derives compact inductive invariants fully automatically.\n  parent:\n    type: periodical\n    title: Innovations in Systems and Software Engineering\n    issue: 4\n    volume: 19\n&quot;,&quot;yml-file&quot;:&quot;goelRegularityQuantificationNew.yml&quot;}"><div class="helia-cite-key" data-copy="@goelRegularityQuantificationNew" data-copy-label="citation key"><span class="helia-bib-key">Cite as</span> <code class="helia-raw-inline">@goelRegularityQuantificationNew</code> (helia, typst) · <code class="helia-raw-inline">\cite{goelRegularityQuantificationNew}</code> (LaTeX)</div>
+<div class="helia-cite-format helia-collapsible" data-format="bibtex" data-copy="true" data-copy-label="BibTeX">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">BibTeX</span></summary>
+<div class="helia-group-body">
+<details class="helia-code" open><summary class="helia-code-summary"><span class="helia-code-lang">bibtex</span> · <span class="helia-code-lines">12 lines</span></summary><pre class="helia-raw"><code class="language-bibtex"><span class="hl-text hl-bibtex"><span class="hl-meta hl-entry hl-braces hl-bibtex"><span class="hl-keyword hl-other hl-entry-type hl-bibtex"><span class="hl-punctuation hl-definition hl-keyword hl-bibtex">@</span>article</span><span class="hl-punctuation hl-section hl-entry hl-begin hl-bibtex">{</span><span class="hl-entity hl-name hl-type hl-entry-key hl-bibtex">goelRegularityQuantificationNew</span>,
+ <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">title</span> <span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span> <span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>Regularity and <span class="hl-punctuation hl-definition hl-group hl-begin hl-bibtex">{</span><span class="hl-punctuation hl-definition hl-group hl-begin hl-bibtex">{</span>Quantification<span class="hl-punctuation hl-definition hl-group hl-end hl-bibtex">}</span><span class="hl-punctuation hl-definition hl-group hl-end hl-bibtex">}</span>: <span class="hl-punctuation hl-definition hl-group hl-begin hl-bibtex">{</span><span class="hl-punctuation hl-definition hl-group hl-begin hl-bibtex">{</span>A New Approach<span class="hl-punctuation hl-definition hl-group hl-end hl-bibtex">}</span><span class="hl-punctuation hl-definition hl-group hl-end hl-bibtex">}</span> to <span class="hl-punctuation hl-definition hl-group hl-begin hl-bibtex">{</span><span class="hl-punctuation hl-definition hl-group hl-begin hl-bibtex">{</span>Verify Distributed Protocols<span class="hl-punctuation hl-definition hl-group hl-end hl-bibtex">}</span><span class="hl-punctuation hl-definition hl-group hl-end hl-bibtex">}</span><span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>,
+ <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">author</span> <span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span> <span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>Goel, Aman and Sakallah, Karem A<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>,
+ <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">pages</span> <span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span> <span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>359--377<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>,
+ <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">langid</span> <span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span> <span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>english<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>,
+ <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">abstract</span> <span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span> <span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>Proving that an unbounded distributed protocol satisfies a given safety property amounts to finding a quantified inductive invariant that implies the property for all possible instance sizes of the protocol. Existing methods for solving this problem can be described as search procedures for an invariant whose quantification prefix fits a particular template. We propose an alternative constructive approach that does not prescribe, a priori, a specific quantifier prefix. Instead, the required prefix is automatically inferred without any enumerative search by carefully analyzing the spatial and temporal regularity of the protocol. The key insight underlying this approach is that structural regularity and quantification are closely related concepts that express protocol invariance under different re-arrangements of its components and its unbounded evolution over time. We extended the finite-domain IC3/PDR algorithm to use these regularities and boost clause learning to automatically derive the required quantified inductive invariant by exploiting the connection between structural regularities and quantification. We also describe a procedure to automatically find a minimal finite size, the cutoff, that yields a quantified invariant proving safety for any size. Our approach is implemented in IC3PO, a new verifier for distributed protocols that significantly outperforms the state-of-the-art, scales orders of magnitude faster, and robustly derives compact inductive invariants fully automatically.<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>,
+ <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">year</span> <span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span> <span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>2022<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>,
+ <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">journal</span> <span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span> <span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>Innovations in Systems and Software Engineering<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>,
+ <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">volume</span> <span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span> <span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>19<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>,
+ <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">number</span> <span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span> <span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>4<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>,
+ <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">doi</span> <span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span> <span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>10.1007/s11334-022-00460-8<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span>
+</span><span class="hl-punctuation hl-section hl-entry hl-end hl-bibtex">}</span></span></span></code></pre></details>
+</div>
+</details>
+</div>
+<div class="helia-cite-format helia-collapsible" data-format="hayagriva" data-copy="true" data-copy-label="hayagriva YAML">
+<details>
+<summary class="helia-group-summary"><span class="helia-group-title">hayagriva YAML (typst)</span></summary>
+<div class="helia-group-body">
+<details class="helia-code" open><summary class="helia-code-summary"><span class="helia-code-lang">yaml</span> · <span class="helia-code-lines">17 lines</span></summary><pre class="helia-raw"><code class="language-yaml"><span class="hl-source hl-yaml"><span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">goelRegularityQuantificationNew</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">type</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">article</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">title</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-quoted hl-single hl-yaml"><span class="hl-punctuation hl-definition hl-string hl-begin hl-yaml">&#39;</span>Regularity and {Quantification}: {A New Approach} to {Verify Distributed Protocols}<span class="hl-punctuation hl-definition hl-string hl-end hl-yaml">&#39;</span></span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">author</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Goel, Aman</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Sakallah, Karem A</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">date</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-constant hl-numeric hl-integer hl-decimal hl-yaml">2022</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">page-range</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">359-377</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">serial-number</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">doi</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">10.1007/s11334-022-00460-8</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">language</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">en-US</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">abstract</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Proving that an unbounded distributed protocol satisfies a given safety property amounts to finding a quantified inductive invariant that implies the property for all possible instance sizes of the protocol. Existing methods for solving this problem can be described as search procedures for an invariant whose quantification prefix fits a particular template. We propose an alternative constructive approach that does not prescribe, a priori, a specific quantifier prefix. Instead, the required prefix is automatically inferred without any enumerative search by carefully analyzing the spatial and temporal regularity of the protocol. The key insight underlying this approach is that structural regularity and quantification are closely related concepts that express protocol invariance under different re-arrangements of its components and its unbounded evolution over time. We extended the finite-domain IC3/PDR algorithm to use these regularities and boost clause learning to automatically derive the required quantified inductive invariant by exploiting the connection between structural regularities and quantification. We also describe a procedure to automatically find a minimal finite size, the cutoff, that yields a quantified invariant proving safety for any size. Our approach is implemented in IC3PO, a new verifier for distributed protocols that significantly outperforms the state-of-the-art, scales orders of magnitude faster, and robustly derives compact inductive invariants fully automatically.</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">parent</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">type</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">periodical</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">title</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Innovations in Systems and Software Engineering</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">issue</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-constant hl-numeric hl-integer hl-decimal hl-yaml">4</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">volume</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-constant hl-numeric hl-integer hl-decimal hl-yaml">19</span>
+</span></code></pre></details>
+</div>
+</details>
+</div>
+<div class="helia-cite-files">Download: <a class="helia-link" href="goelRegularityQuantificationNew.bib">goelRegularityQuantificationNew.bib</a> · <a class="helia-link" href="goelRegularityQuantificationNew.yml">goelRegularityQuantificationNew.yml</a></div>
+</div>
+</div>
+</details>
+</div>
+<div class="helia-reference-cites helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">Cites 84 works (5 here)</span></summary>
+<div class="helia-group-body">
+<div class="helia-reference-cites-here helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">With notes (5)</span></summary>
+<div class="helia-group-body">
+<section class="helia-transclusion" data-entry="goelSymmetryQuantificationNew2021" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="goelSymmetryQuantificationNew2021"><span class="helia-title">On Symmetry and Quantification: A New Approach to Verify Distributed Protocols</span>&nbsp;<a class="helia-slug" href="goelSymmetryQuantificationNew2021.html">goelSymmetryQuantificationNew2021</a><span class="helia-byline"><span class="helia-entry-link" data-entry="nfm">NFM</span> · 2021</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="goelSymmetryQuantificationNew2021" data-kind="reference">
+<div class="helia-abstract">Proving that an unbounded distributed protocol satisfies a given safety property amounts to finding a quantified inductive invariant that implies the property for all possible instance sizes of the protocol. Existing methods for solving this problem can be described as search procedures for an invariant whose quantification prefix fits a particular template. We propose an alternative constructive approach that does not prescribe, a priori, a specific quantifier prefix. Instead, the required prefix is automatically inferred without any search by carefully analyzing the structural symmetries of the protocol. The key insight underlying this approach is that symmetry and quantification are closely related concepts that express protocol invariance under different re-arrangements of its components. We propose symmetric incremental induction, an extension of the finite-domain IC3/PDR algorithm, that automatically derives the required quantified inductive invariant by exploiting the connection between symmetry and quantification. While various attempts have been made to exploit symmetry in verification applications, to our knowledge, this is the first demonstration of a direct link between symmetry and quantification in the context of clause learning during incremental induction. We also describe a procedure to automatically find a minimal finite size, the cutoff, that yields a quantified invariant proving safety for any size. Our approach is implemented in IC3PO, a new verifier for distributed protocols that significantly outperforms the state-of-the-art, scales orders of magnitude faster, and robustly derives compact inductive invariants fully automatically.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-030-76384-8_9">DOI</a></span> · <span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/2103.14831">arXiv</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="goelAVRAbstractlyVerifying2020" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="goelAVRAbstractlyVerifying2020"><span class="helia-title">AVR: Abstractly Verifying Reachability</span>&nbsp;<a class="helia-slug" href="goelAVRAbstractlyVerifying2020.html">goelAVRAbstractlyVerifying2020</a><span class="helia-byline"><span class="helia-entry-link" data-entry="tacas">TACAS</span> · 2020</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="goelAVRAbstractlyVerifying2020" data-kind="reference">
+<div class="helia-abstract">We present AVR, a push-button model checker for verifying state transition systems directly at the source-code level. AVR uses information embedded in the word-level syntax of the design representation to automatically perform scalable model checking by combining a novel syntax-guided abstraction-refinement technique with a word-level implementation of the IC3 algorithm. AVR provides independently-verifiable certificates that offer provable assurance and are easy to relate to the word-level system. Moreover, proof certificates can be further used in innovative ways to extract key design information and are useful in a growing number of applications.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-030-45190-5_23">DOI</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="maI4IncrementalInference2019" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="maI4IncrementalInference2019"><span class="helia-title">I4: Incremental inference of inductive invariants for verification of distributed protocols</span>&nbsp;<a class="helia-slug" href="maI4IncrementalInference2019.html">maI4IncrementalInference2019</a><span class="helia-byline"><span class="helia-entry-link" data-entry="sosp">SOSP</span> · 2019</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="maI4IncrementalInference2019" data-kind="reference">
+<div class="helia-abstract">Designing and implementing distributed systems correctly is a very challenging task. Recently, formal verification has been successfully used to prove the correctness of distributed systems. At the heart of formal verification lies a computerchecked proof with an inductive invariant. Finding this inductive invariant, however, is the most difficult part of the proof. Alas, current proof techniques require inductive invariants to be found manually—and painstakingly—by the developer. In this paper, we present a new approach, Incremental Inference of Inductive Invariants (I4), to automatically generate inductive invariants for distributed protocols. The essence of our idea is simple: the inductive invariant of a finite instance of the protocol can be used to infer a general inductive invariant for the infinite distributed protocol. In I4, we create a finite instance of the protocol; use a model checking tool to automatically derive the inductive invariant for this finite instance; and generalize this invariant to an inductive invariant for the infinite protocol. Our experiments show that I4 can prove the correctness of several distributed protocols like Chord, 2PC and Transaction Chains with little to no human effort.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/3341301.3359651">DOI</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="padonIvySafetyVerification" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="padonIvySafetyVerification"><span class="helia-title">Ivy: Safety verification by interactive generalization</span>&nbsp;<a class="helia-slug" href="padonIvySafetyVerification.html">padonIvySafetyVerification</a><span class="helia-byline"><span class="helia-entry-link" data-entry="sigplan-notices">SIGPLAN Notices</span> · 2016</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="padonIvySafetyVerification" data-kind="reference">
+<div class="helia-abstract">Despite several decades of research, the problem of formal verification of infinite-state systems has resisted effective automation. We describe a system — Ivy — for interactively verifying safety of infinite-state systems. Ivy’s key principle is that whenever verification fails, Ivy graphically displays a concrete counterexample to induction. The user then interactively guides generalization from this counterexample. This process continues until an inductive invariant is found. Ivy searches for universally quantified invariants, and uses a restricted modeling language. This ensures that all verification conditions can be checked algorithmically. All user interactions are performed using graphical models, easing the user’s task. We describe our initial experience with verifying several distributed protocols.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/2980983.2908118">DOI</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="bradleySATBasedModelChecking2011" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="bradleySATBasedModelChecking2011"><span class="helia-title">SAT-Based Model Checking without Unrolling</span>&nbsp;<a class="helia-slug" href="bradleySATBasedModelChecking2011.html">bradleySATBasedModelChecking2011</a><span class="helia-byline"><span class="helia-entry-link" data-entry="vmcai">VMCAI</span> · 2011</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="bradleySATBasedModelChecking2011" data-kind="reference">
+<div class="helia-abstract">A new form of SAT-based symbolic model checking is described. Instead of unrolling the transition relation, it incrementally generates clauses that are inductive relative to (and augment) stepwise approximate reachability information. In this way, the algorithm gradually refines the property, eventually producing either an inductive strengthening of the property or a counterexample trace. Our experimental studies show that induction is a powerful tool for generalizing the unreachability of given error states: it can refine away many states at once, and it is effective at focusing the proof search on aspects of the transition system relevant to the property. Furthermore, the incremental structure of the algorithm lends itself to a parallel implementation.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-642-18275-4_7">DOI</a></span></div>
+</div>
+</div>
+</details>
+</section>
+</div>
+</details>
+</div>
+<div class="helia-reference-cites-away helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">External (79)</span></summary>
+<div class="helia-group-body">
+<ul>
+<li><a class="helia-link helia-external" href="https://doi.org/10.34727/2021/isbn.978-3-85448-046-4_20">Towards an Automatic Proof of Lamport's Paxos</a> (2021)</li>
+<li>Finding invariants of distributed systems: it's a small (enough) world after all (NSDI 21) (2021)</li>
+<li>DistAI: data-driven automated invariant learning for distributed protocols (OSDI 21) (2021)</li>
+<li>Proceedings of SAT Competition 2020: Solver and Benchmark Descriptions (2020)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3385412.3386018">First-order quantified separators</a> (2020)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-030-54455-3_37">The Extended UTXO Model</a> (2020)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-030-61467-6_7">Native Custom Tokens in the Extended UTXO Model</a> (2020)</li>
+<li><a class="helia-link helia-external" href="https://arxiv.org/abs/2008.09909">Learning the boundary of inductive invariants</a> (2020)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-030-31514-6_5">Invisible invariants are neither</a> (2019)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-030-20652-9_11">Model Checking of Verilog RTL Using IC3 with Syntax-Guided Abstraction</a> (2019)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.23919/date.2019.8715289">Empirical Evaluation of IC3-Based Model Checking Techniques on Verilog RTL Designs</a> (2019)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-030-25543-5_23">Inferring Inductive Invariants from Phase Structures</a> (2019)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-030-25543-5_15">Verification of Threshold-Based Distributed Algorithms by Decomposition to Decidable Logics</a> (2019)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3371073">Complexity and information in invariant inference</a> (2019)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3317550.3321451">Towards Automatic Inference of Inductive Invariants</a> (2019)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3290372">Pretend synchrony: synchronous verification of asynchronous distributed programs</a> (2019)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.4204/eptcs.310.6">The TLA+ Toolbox</a> (2019)</li>
+<li>A TLA+ specification of the Paxos Consensus algorithm (tlaplus/Examples) (2019)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-030-01090-4_15">Quantifiers on Demand</a> (2018)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3022187">Property-Directed Inference of Universal Invariants or Proving Their Absence</a> (2017)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3140568">Paxos made EPR: decidable reasoning about distributed protocols</a> (2017)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3093333.3009893">Thread modularity at many levels: a pearl in compositional verification</a> (2017)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-319-41528-4_16">Proving Parameterized Systems Safe by Generalizing Clausal Proofs of Small Instances</a> (2016)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/s10009-015-0406-x">Parameterized verification through view abstraction</a> (2016)</li>
+<li>The satisfiability modulo theories library (SMT-LIB) (2016)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/2815400.2815428">IronFleet</a> (2015)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/2737924.2737958">Verdi: a framework for implementing and formally verifying distributed systems</a> (2015)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/2699417">How Amazon web services uses formal methods</a> (2015)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-319-24953-7_15">ParaVerifier: An Automatic Framework for Proving Parameterized Cache Coherence Protocols</a> (2015)</li>
+<li>PySMT: a solver-agnostic library for fast prototyping of SMT-based algorithms (2015)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-319-08867-9_49">Yices 2.2</a> (2014)</li>
+<li>In search of an understandable consensus algorithm (USENIX ATC 14) (2014)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-642-31424-7_55">Cubicle: A Parallel SMT-Based Model Checker for Parameterized Systems</a> (2012)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-642-22110-1_14">CVC4</a> (2011)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-642-24100-0_22">Byzantizing Paxos by Refinement</a> (2011)</li>
+<li>Efficient implementation of property directed reachability (Eén, Mishchenko, Brayton; FMCAD) (2011)</li>
+<li>Verification modulo theories (VMT-LIB) (2011)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-642-14203-1_12">Verifying Safety Properties with the TLA + Proof System</a> (2010)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.2168/lmcs-6(4:10)2010">Backward Reachability of Array-based Systems by SMT solving: Termination and Invariant Synthesis</a> (2010)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-540-78800-3_24">Z3: An Efficient SMT Solver</a> (2008)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/1391469.1391675">Pre-RTL formal verification</a> (2008)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-540-69738-1_22">Symmetry and Completeness in the Analysis of Parameterized Systems</a> (2007)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/1088348.1088355">Verifying haskell programs using constructive type theory</a> (2005)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/11513988_39">IIV: An Invisible Invariant Verifier</a> (2005)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-540-24605-3_37">An Extensible SAT-solver</a> (2004)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1016/j.cl.2004.02.006">Model checking and abstraction to the aid of parameterized systems (a survey)</a> (2004)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1109/tnet.2002.808407">Chord: a scalable peer-to-peer lookup protocol for internet applications</a> (2003)</li>
+<li>Specifying systems: the TLA+ language and tools for hardware and software engineers (2002)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/3-540-45949-9">Isabelle/HOL: a proof assistant for higher-order logic</a> (2002)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/3-540-45657-0_8">Combining Symmetry Reduction and Under-Approximation for Symbolic Model Checking</a> (2002)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/3-540-45319-9_7">Automatic Deductive Verification with Invisible Invariants</a> (2001)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/3-540-44585-4_19">Parameterized Verification with Automatically Computed Inductive Assertions</a> (2001)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/378239.379017">Chaff</a> (2001)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/568425.568433">Paxos made simple</a> (2001)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/350887.350891">A symmetry-based model checker for verification of safety and liveness properties</a> (2000)</li>
+<li>A first course in abstract algebra (6th edn) (2000)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-0-387-35578-8_15">Exploiting Symmetry When Model-Checking Software</a> (1999)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1109/12.769433">GRASP: a search algorithm for propositional satisfiability</a> (1999)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/279227.279229">The part-time parliament</a> (1998)</li>
+<li>The Coq proof assistant reference manual: version 6.1 (1997)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/bf00625970">Symmetry and model checking</a> (1996)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/bf00625968">Better verification through symmetry</a> (1996)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1109/71.406955">A new approach for the verification of cache coherence protocols</a> (1995)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-1-4615-3190-6">Symbolic model checking</a> (1993)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1016/0890-5401(92)90017-a">Symbolic model checking: 1020 States and beyond</a> (1992)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/146637.146681">Reasoning about systems with many processes</a> (1992)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/3-540-55602-8_217">PVS: A prototype verification system</a> (1992)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1109/lics.1990.113767">Symbolic model checking: 10^20 states and beyond</a> (1990)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/72981.72998">A structural induction theorem for processes</a> (1989)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/41840.41865">Avoiding the state explosion problem in temporal logic model checking</a> (1987)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1016/0020-0190(86)90071-2">Limits for automatic verification of finite-state concurrent systems</a> (1986)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1109/tse.1977.229904">Proving the Correctness of Multiprocess Programs</a> (1977)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/360051.360224">Verifying properties of parallel programs</a> (1976)</li>
+<li>Toy consensus protocol (Ivy example, GitHub)</li>
+<li>pySMT: a library for SMT formulae manipulation and solving (GitHub aman-goel/pysmt)</li>
+<li>A collection of distributed protocol verification problems (ivybench, GitHub)</li>
+<li>Averroes 2 (AVR, GitHub)</li>
+<li>The Ivy language and verifier</li>
+<li>Cardano blockchain platform</li>
+</ul>
+</div>
+</details>
+</div>
+</div>
+</details>
+</div>
+<footer class="helia-footer">
+<div class="helia-related helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><h3 class="helia-heading">Related</h3>
+</summary>
+<div class="helia-group-body">
+<ul>
+<li><a class="helia-entry-link" href="LuoSatBasedQuantifiedSymmetric.html" data-entry="LuoSatBasedQuantifiedSymmetric">SAT-based quantified symmetric minimization of the reachable states of distributed protocols: An update</a> <span class="helia-related-count">· 2 shared tags</span></li>
+<li><a class="helia-entry-link" href="anderson2014netkat.html" data-entry="anderson2014netkat">NetKAT: Semantic foundations for networks</a> <span class="helia-related-count">· 2 shared tags</span></li>
+<li><a class="helia-entry-link" href="hanceFindingInvariantsDistributed.html" data-entry="hanceFindingInvariantsDistributed">Finding Invariants of Distributed Systems: It’s a Small (Enough) World After All</a> <span class="helia-related-count">· 2 shared tags</span></li>
+<li><a class="helia-entry-link" href="maSiftUsingRefinementguided.html" data-entry="maSiftUsingRefinementguided">Sift: Using Refinement-guided Automation to Verify Complex Distributed Systems</a> <span class="helia-related-count">· 2 shared tags</span></li>
+<li><a class="helia-entry-link" href="mcmillanDeductiveVerificationDecidable2018.html" data-entry="mcmillanDeductiveVerificationDecidable2018">Deductive Verification in Decidable Fragments with Ivy</a> <span class="helia-related-count">· 2 shared tags</span></li>
+<li><a class="helia-entry-link" href="mcmillanIvyMultimodalVerification2020.html" data-entry="mcmillanIvyMultimodalVerification2020">Ivy: A Multi-modal Verification Tool for Distributed Algorithms</a> <span class="helia-related-count">· 2 shared tags</span></li>
+<li><a class="helia-entry-link" href="padonDecidabilityInferringInductive2016.html" data-entry="padonDecidabilityInferringInductive2016">Decidability of inferring inductive invariants</a> <span class="helia-related-count">· 2 shared tags</span></li>
+<li><a class="helia-entry-link" href="padonDeductiveVerificationDistributed2018.html" data-entry="padonDeductiveVerificationDistributed2018">Deductive Verification of Distributed Protocols in First-Order Logic</a> <span class="helia-related-count">· 2 shared tags</span></li>
+<li><a class="helia-entry-link" href="sharmaGroveSeparationLogicLibrary2023.html" data-entry="sharmaGroveSeparationLogicLibrary2023">Grove: A Separation-Logic Library for Verifying Distributed Systems</a> <span class="helia-related-count">· 2 shared tags</span></li>
+<li><a class="helia-entry-link" href="yaoDistAIDataDrivenAutomated.html" data-entry="yaoDistAIDataDrivenAutomated">DistAI: Data-Driven Automated Invariant Learning for Distributed Protocols</a> <span class="helia-related-count">· 2 shared tags</span></li>
+</ul>
+</div>
+</details>
+</div>
+</footer>
+</article>
+<div class="helia-identity"><span class="helia-id">goelRegularityQuantificationNew</span> <span class="helia-kind">reference</span> <span class="helia-path">entries/refs/goelRegularityQuantificationNew/goelRegularityQuantificationNew.hel</span></div>
+</div>
+</body>
+</html>

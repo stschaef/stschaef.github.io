@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>Modular Hardware Design with Timeline Types</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Ctext y=%22.9em%22 font-size=%2290%22%3E%F0%9F%8C%BB%3C/text%3E%3C/svg%3E">
+<meta name="generator" content="helia">
+<script src="helia/theme-version.js"></script>
+<script src="theme/folio-early.js"></script>
+<link rel="stylesheet" href="helia/theme.css">
+<link rel="stylesheet" href="helia/highlight.css">
+<link rel="stylesheet" href="helia/search.css">
+<link rel="stylesheet" href="theme/katex.css">
+<link rel="stylesheet" href="theme/recipe.css">
+<link rel="stylesheet" href="theme/site.css">
+<link rel="stylesheet" href="theme/folio.css">
+<script defer src="helia/runtime.js"></script>
+<script defer src="helia/search.js"></script>
+<script defer src="theme/glyphcraft.js"></script>
+<script defer src="theme/glyphart.js"></script>
+<script defer src="theme/glyphgen.js"></script>
+<script defer src="theme/ornament.js"></script>
+<script defer src="theme/folio.js"></script>
+<script defer src="theme/portrait.js"></script>
+<script type="application/json" id="helia-widgets">{"helia-cite-formats":"widgets/helia-cite-formats-a3294ac7.js"}</script>
+<link rel="modulepreload" href="widgets/helia-cite-formats-a3294ac7.js">
+<script type="module" src="widgets/runtime.js"></script>
+</head>
+<body>
+<nav class="helia-topbar"><a class="helia-home" href="home.html">Steven Schaefer</a><ul class="helia-nav-links"><li><a href="stevenschaefer.html">About Me</a></li><li><a href="research.html">Research</a></li><li><a href="new.html">New</a></li></ul><button type="button" class="helia-search-button" aria-label="Search (/ or Ctrl+K)" aria-haspopup="dialog"><span class="helia-search-icon">⌕</span><span class="helia-search-label">Search</span><kbd class="helia-search-key">/</kbd></button></nav>
+<div class="helia-page" data-kind="reference">
+<article class="helia-article">
+<header class="helia-header" data-entry="nigam_amorim_sampson_2023" data-kind="reference">
+<h2 class="helia-heading"><span class="helia-taxon">Reference.</span> Modular Hardware Design with Timeline Types</h2>
+<div class="helia-meta"><span class="helia-author"><a class="helia-entry-link" href="rachitnigam.html" data-entry="rachitnigam">Rachit Nigam</a>, <a class="helia-entry-link" href="pedrohaamorim.html" data-entry="pedrohaamorim">Pedro H. Azevedo de Amorim</a>, <a class="helia-entry-link" href="adriansampson.html" data-entry="adriansampson">Adrian Sampson</a></span> · <span class="helia-byline"><a class="helia-entry-link" href="pldi.html" data-entry="pldi">PLDI</a> · 2023</span> · <span class="helia-tags"><span class="helia-tag" data-tag="hardware"><span class="helia-entry-link helia-unavailable">hardware</span></span> <span class="helia-tag" data-tag="type-systems"><span class="helia-entry-link helia-unavailable">type-systems</span></span></span> · <span class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/3591234">DOI</a></span></span></div>
+</header>
+<div class="helia-body">
+<div class="helia-abstract">Modular design is a key challenge for enabling large-scale reuse of hardware modules. Unlike software, however, hardware designs correspond to physical circuits and inherit constraints from them. Timing constraints—which cycle a signal arrives, when an input is read—and structural constraints—how often a multiplier accepts new inputs—are fundamental to hardware interfaces. Existing hardware design languages do not provide a way to encode these constraints; a user must read documentation, build scripts, or in the worst case, a module’s implementation to understand how to use it. We present Filament, a language for modular hardware design that supports the specification and enforcement of timing and structural constraints for statically scheduled pipelines. Filament uses timeline types, which describe the intervals of clock-cycle time when a given signal is available or required. Filament enables safe composition of hardware modules, ensures that the resulting designs are correctly pipelined, and predictably lowers them to efficient hardware.</div>
+</div>
+<div class="helia-cite helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><h3 class="helia-heading">Cite</h3>
+</summary>
+<div class="helia-group-body">
+<div class="helia-widget" data-widget="helia-cite-formats" data-props="{&quot;key&quot;:&quot;nigam_amorim_sampson_2023&quot;,&quot;bibtex&quot;:&quot;@article{nigam_amorim_sampson_2023,\n title = {Modular Hardware Design with Timeline Types},\n author = {Nigam, Rachit and Amorim, Pedro H. Azevedo de and Sampson, Adrian},\n year = {2023},\n doi = {10.1145/3591234},\n url = {https://dl.acm.org/doi/abs/10.1145/3591234},\n publisher = {ACM},\n journal = {Proceedings of the ACM on Programming Languages},\n volume = {7},\n number = {PLDI},\n pages = {343--367}\n}&quot;,&quot;bib-file&quot;:&quot;nigam_amorim_sampson_2023.bib&quot;,&quot;hayagriva&quot;:&quot;nigam_amorim_sampson_2023:\n  type: article\n  title: Modular Hardware Design with Timeline Types\n  author:\n  - Nigam, Rachit\n  - Amorim, Pedro H. Azevedo de\n  - Sampson, Adrian\n  date: 2023\n  page-range: 343-367\n  url: https://dl.acm.org/doi/abs/10.1145/3591234\n  serial-number:\n    doi: 10.1145/3591234\n  parent:\n    type: periodical\n    title: Proceedings of the ACM on Programming Languages\n    publisher: ACM\n    issue: PLDI\n    volume: 7\n&quot;,&quot;yml-file&quot;:&quot;nigam_amorim_sampson_2023.yml&quot;}"><div class="helia-cite-key" data-copy="@nigam_amorim_sampson_2023" data-copy-label="citation key"><span class="helia-bib-key">Cite as</span> <code class="helia-raw-inline">@nigam_amorim_sampson_2023</code> (helia, typst) · <code class="helia-raw-inline">\cite{nigam_amorim_sampson_2023}</code> (LaTeX)</div>
+<div class="helia-cite-format helia-collapsible" data-format="bibtex" data-copy="true" data-copy-label="BibTeX">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">BibTeX</span></summary>
+<div class="helia-group-body">
+<details class="helia-code" open><summary class="helia-code-summary"><span class="helia-code-lang">bibtex</span> · <span class="helia-code-lines">12 lines</span></summary><pre class="helia-raw"><code class="language-bibtex"><span class="hl-text hl-bibtex"><span class="hl-meta hl-entry hl-braces hl-bibtex"><span class="hl-keyword hl-other hl-entry-type hl-bibtex"><span class="hl-punctuation hl-definition hl-keyword hl-bibtex">@</span>article</span><span class="hl-punctuation hl-section hl-entry hl-begin hl-bibtex">{</span><span class="hl-entity hl-name hl-type hl-entry-key hl-bibtex">nigam_amorim_sampson_2023</span>,
+ <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">title</span> <span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span> <span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>Modular Hardware Design with Timeline Types<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>,
+ <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">author</span> <span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span> <span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>Nigam, Rachit and Amorim, Pedro H. Azevedo de and Sampson, Adrian<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>,
+ <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">year</span> <span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span> <span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>2023<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>,
+ <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">doi</span> <span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span> <span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>10.1145/3591234<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>,
+ <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">url</span> <span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span> <span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>https://dl.acm.org/doi/abs/10.1145/3591234<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>,
+ <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">publisher</span> <span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span> <span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>ACM<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>,
+ <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">journal</span> <span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span> <span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>Proceedings of the ACM on Programming Languages<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>,
+ <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">volume</span> <span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span> <span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>7<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>,
+ <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">number</span> <span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span> <span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>PLDI<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>,
+ <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">pages</span> <span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span> <span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>343--367<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span>
+</span><span class="hl-punctuation hl-section hl-entry hl-end hl-bibtex">}</span></span></span></code></pre></details>
+</div>
+</details>
+</div>
+<div class="helia-cite-format helia-collapsible" data-format="hayagriva" data-copy="true" data-copy-label="hayagriva YAML">
+<details>
+<summary class="helia-group-summary"><span class="helia-group-title">hayagriva YAML (typst)</span></summary>
+<div class="helia-group-body">
+<details class="helia-code" open><summary class="helia-code-summary"><span class="helia-code-lang">yaml</span> · <span class="helia-code-lines">18 lines</span></summary><pre class="helia-raw"><code class="language-yaml"><span class="hl-source hl-yaml"><span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">nigam_amorim_sampson_2023</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">type</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">article</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">title</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Modular Hardware Design with Timeline Types</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">author</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Nigam, Rachit</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Amorim, Pedro H. Azevedo de</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Sampson, Adrian</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">date</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-constant hl-numeric hl-integer hl-decimal hl-yaml">2023</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">page-range</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">343-367</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">url</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">https://dl.acm.org/doi/abs/10.1145/3591234</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">serial-number</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">doi</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">10.1145/3591234</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">parent</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">type</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">periodical</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">title</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Proceedings of the ACM on Programming Languages</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">publisher</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">ACM</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">issue</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">PLDI</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">volume</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-constant hl-numeric hl-integer hl-decimal hl-yaml">7</span>
+</span></code></pre></details>
+</div>
+</details>
+</div>
+<div class="helia-cite-files">Download: <a class="helia-link" href="nigam_amorim_sampson_2023.bib">nigam_amorim_sampson_2023.bib</a> · <a class="helia-link" href="nigam_amorim_sampson_2023.yml">nigam_amorim_sampson_2023.yml</a></div>
+</div>
+</div>
+</details>
+</div>
+<div class="helia-reference-cites helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">Cites 54 works (1 here)</span></summary>
+<div class="helia-group-body">
+<div class="helia-reference-cites-here helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">With notes (1)</span></summary>
+<div class="helia-group-body">
+<section class="helia-transclusion" data-entry="reynolds_separation_2002" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="reynolds_separation_2002"><span class="helia-title">Separation logic: A logic for shared mutable data structures</span>&nbsp;<a class="helia-slug" href="reynolds_separation_2002.html">reynolds_separation_2002</a><span class="helia-byline"><span class="helia-entry-link" data-entry="lics">LICS</span> · 2002</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="reynolds_separation_2002" data-kind="reference">
+<div class="helia-abstract">In joint work with Peter O’Hearn and others, based on early ideas of Burstall, we have developed an extension of Hoare logic that permits reasoning about low-level imperative programs that use shared mutable data structure. The simple imperative programming language is extended with commands (not expressions) for accessing and modifying shared structures, and for explicit allocation and deallocation of storage. Assertions are extended by introducing a “separating conjunction” that asserts that its subformulas hold for disjoint parts of the heap, and a closely related “separating implication”. Coupled with the inductive definition of predicates on abstract data structures, this extension permits the concise and flexible description of structures with controlled sharing. In this paper, we survey the current development of this program logic, including extensions that permit unrestricted address arithmetic, dynamically allocated arrays, and recursive procedures. We also discuss promising future directions.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1109/lics.2002.1029817">DOI</a></span></div>
+</div>
+</div>
+</details>
+</section>
+</div>
+</details>
+</div>
+<div class="helia-reference-cites-away helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">External (53)</span></summary>
+<div class="helia-group-body">
+<ul>
+<li>Cocotb: A coroutine based cosimulation library for writing VHDL and Verilog testbenches in Python (2023)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.5281/zenodo.7709916">Artifact for "Modular Hardware Design with Timeline Types"</a> (2023)</li>
+<li><a class="helia-link helia-external" href="https://arxiv.org/abs/2304.10646">Modular Hardware Design with Timeline Types</a> (2023)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.48550/arxiv.2304.03079">Spade: An Expression-Based HDL With Pipelines</a> (2023)</li>
+<li>IP-XACT (IP-XACT Working Group / Accellera standard) (2023)</li>
+<li>Synopsys Design Constraints (Synopsys Inc., web page) (2023)</li>
+<li>Xilinx LogiCORE IP Multiplier v11.2 (AMD Inc., web documentation) (2022)</li>
+<li>Jasper Gold FPV App (Cadence Inc., web page) (2022)</li>
+<li>HardCaml: Register Transfer Level Hardware Design in OCaml (Jane Street, GitHub) (2022)</li>
+<li>PipelineC (Julian Kemmerer, GitHub) (2022)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3453483.3454037">Wire sorts: a language abstraction for safe hardware composition</a> (2021)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3623278.3624767">HIR: An MLIR-based Intermediate Representation for Hardware Accelerator Description</a> (2021)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3445814.3446712">A compiler infrastructure for accelerator generators</a> (2021)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3453483.3454075">Reticle: a virtual machine for programming modern FPGAs</a> (2021)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3485494">Formal verification of high-level synthesis</a> (2021)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3385412.3385965">The essence of Bluespec: a core language for rule-based hardware design</a> (2020)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3385412.3385983">Type-directed scheduling of streaming accelerators</a> (2020)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3385412.3385974">Predictable accelerator design with time-sensitive affine types</a> (2020)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.4230/lipics.ecoop.2019.6">A Typing Discipline for Hardware Interfaces</a> (2019)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3240765.3240838">PolySA: Polyhedral-based systolic array auto-compilation</a> (2018)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3236786">Parallel complexity analysis with temporal session types</a> (2018)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3192366.3192379">Spatial: a language and compiler for application accelerators</a> (2018)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.23919/fmcad.2018.8603014">CoSA: Integrated Verification for Agile Hardware Design</a> (2018)</li>
+<li>Vivado Design Suite User Guide: High-Level Synthesis (2017)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3110268">Kami: a platform for high-level parametric hardware specification and its modular verification</a> (2017)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.23919/fpl.2017.8056860">A pythonic approach for rapid hardware prototyping and instrumentation</a> (2017)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3107953">Programming Heterogeneous Systems from an Image Processing DSL</a> (2017)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/2897824.2925892">Rigel: Flexible multi-rate image processing hardware</a> (2016)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/2601097.2601174">Darkroom: Compiling high-level image processing code into hardware pipelines</a> (2014)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1109/micro.2014.50">PyMTL: A Unified Framework for Vertically Integrated Computer Architecture Research</a> (2014)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/2554688.2554786">Quantifying the cost and benefit of latency insensitive communication on FPGAs</a> (2014)</li>
+<li>Pi-Ware: An Embedded Hardware Description Language using Dependent Types (Master's thesis, J.P. Pizani Flor) (2014)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1109/fpl.2013.6645550">Bambu: A modular framework for the high level synthesis of memory-intensive applications</a> (2013)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/2491956.2462176">Halide: A language and compiler for optimizing parallelism, locality, and recomputation in image processing pipelines</a> (2013)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/2228360.2228584">Chisel: constructing hardware in a Scala embedded language</a> (2012)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/1950413.1950423">LegUp: High-level synthesis for FPGA-based processor/accelerator systems</a> (2011)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1109/dsd.2010.21">CλaSH: Structural Descriptions of Synchronous Hardware Using Haskell</a> (2010)</li>
+<li><a class="helia-link helia-external" href="https://arxiv.org/abs/0907.0749">Function Interface Models for Hardware Compilation: Types, Signatures, Protocols</a> (2009)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1002/9780470611012.ch7">Synchronous functional programming: The Lucid Synchrone experiment</a> (2008)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-1-4020-8588-8_6">AutoPilot: A Platform-Based ESL Synthesis System</a> (2008)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-540-70545-1_44">Validating High-Level Synthesis</a> (2008)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/1146909.1147025">An efficient and versatile scheduling algorithm based on SDC formulation</a> (2006)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/b137011">A practical guide for SystemVerilog assertions</a> (2005)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-540-28644-8_2">A Semantics for Concurrent Separation Logic</a> (2004)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1109/memcod.2004.1459818">Bluespec System Verilog: efficient, correct RTL from high-level specifications</a> (2004)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/3-540-45937-5_14">StreamIt: A Language for Streaming Applications</a> (2002)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/319301.319345">From system F to typed assembly language</a> (1999)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/291251.289440">Lava: hardware design in Haskell</a> (1998)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/bfb0058022">Model checking</a> (1997)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/bf02811340">A hardware implementation of pure ESTEREL</a> (1992)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1109/5.97299">The ESTEREL language</a> (1991)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1109/5.97300">The synchronous data flow programming language LUSTRE</a> (1991)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1109/mc.1982.1653825">Why systolic architectures?</a> (1982)</li>
+</ul>
+</div>
+</details>
+</div>
+</div>
+</details>
+</div>
+</article>
+<div class="helia-identity"><span class="helia-id">nigam_amorim_sampson_2023</span> <span class="helia-kind">reference</span> <span class="helia-path">entries/refs/nigam_amorim_sampson_2023/nigam_amorim_sampson_2023.hel</span></div>
+</div>
+</body>
+</html>

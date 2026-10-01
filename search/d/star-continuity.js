@@ -1,0 +1,1 @@
+heliaSearchData("d/star-continuity",{"id":"star-continuity","title":"Star Continuity","kind":"definition","tags":["kleene-algebra"],"authors":[],"venue":[],"date":"2025-02-03T18:39:51","url":"star-continuity.html","headings":[],"body":"A Kleene Algebra is star continuous if for all x, y, z sup_(n ≥ 0) x y^n z = x y^* z"});

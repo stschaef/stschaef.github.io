@@ -1,0 +1,1 @@
+heliaSearchData("d/maclane_1971",{"id":"maclane_1971","title":"Categories for the Working Mathematician","kind":"reference","tags":["category-theory"],"authors":["Saunders Mac Lane"],"venue":[],"date":null,"url":"maclane_1971.html","headings":[],"body":""});

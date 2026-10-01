@@ -1,0 +1,1 @@
+heliaSearchData("d/art-mushroom-brown",{"id":"art-mushroom-brown","title":"Bolete","kind":"glyph-art","tags":["fruit","ornament","ornament-art"],"authors":["Steven Schaefer"],"venue":[],"date":null,"url":"art-mushroom-brown.html","headings":[],"body":"A penny-bun bolete: a fat brown cap over sponge-like pores and a stout, netted stem."});

@@ -1,0 +1,1 @@
+heliaSearchData("d/bruggemannkleinwood",{"id":"bruggemannkleinwood","title":"Deterministic regular languages","kind":"reference","tags":["parsing"],"authors":["Anne Bruggemann-Klein","Derick Wood"],"venue":["STACS","Symposium on Theoretical Aspects of Computer Science"],"date":null,"url":"bruggemannkleinwood.html","headings":[],"body":""});

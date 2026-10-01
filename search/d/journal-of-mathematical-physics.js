@@ -1,0 +1,1 @@
+heliaSearchData("d/journal-of-mathematical-physics",{"id":"journal-of-mathematical-physics","title":"Journal of Mathematical Physics","kind":"venue","tags":[],"authors":[],"venue":[],"date":null,"url":"journal-of-mathematical-physics.html","headings":[],"body":""});

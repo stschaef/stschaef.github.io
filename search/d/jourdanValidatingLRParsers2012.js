@@ -1,0 +1,1 @@
+heliaSearchData("d/jourdanValidatingLRParsers2012",{"id":"jourdanValidatingLRParsers2012","title":"Validating LR(1) Parsers","kind":"reference","tags":["parsing"],"authors":["François Pottier","Jacques-Henri Jourdan","Xavier Leroy"],"venue":[],"date":null,"url":"jourdanValidatingLRParsers2012.html","headings":[],"body":""});

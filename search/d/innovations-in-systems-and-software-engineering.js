@@ -1,0 +1,1 @@
+heliaSearchData("d/innovations-in-systems-and-software-engineering",{"id":"innovations-in-systems-and-software-engineering","title":"Innovations in Systems and Software Engineering","kind":"venue","tags":[],"authors":[],"venue":[],"date":null,"url":"innovations-in-systems-and-software-engineering.html","headings":[],"body":""});

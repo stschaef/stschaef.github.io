@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>Fundamental Components of Deep Learning: A category-theoretic approach</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Ctext y=%22.9em%22 font-size=%2290%22%3E%F0%9F%8C%BB%3C/text%3E%3C/svg%3E">
+<meta name="generator" content="helia">
+<script src="helia/theme-version.js"></script>
+<script src="theme/folio-early.js"></script>
+<link rel="stylesheet" href="helia/theme.css">
+<link rel="stylesheet" href="helia/highlight.css">
+<link rel="stylesheet" href="helia/search.css">
+<link rel="stylesheet" href="theme/katex.css">
+<link rel="stylesheet" href="theme/recipe.css">
+<link rel="stylesheet" href="theme/site.css">
+<link rel="stylesheet" href="theme/folio.css">
+<script defer src="helia/runtime.js"></script>
+<script defer src="helia/search.js"></script>
+<script defer src="theme/glyphcraft.js"></script>
+<script defer src="theme/glyphart.js"></script>
+<script defer src="theme/glyphgen.js"></script>
+<script defer src="theme/ornament.js"></script>
+<script defer src="theme/folio.js"></script>
+<script defer src="theme/portrait.js"></script>
+<script type="application/json" id="helia-widgets">{"helia-cite-formats":"widgets/helia-cite-formats-a3294ac7.js"}</script>
+<link rel="modulepreload" href="widgets/helia-cite-formats-a3294ac7.js">
+<script type="module" src="widgets/runtime.js"></script>
+</head>
+<body>
+<nav class="helia-topbar"><a class="helia-home" href="home.html">Steven Schaefer</a><ul class="helia-nav-links"><li><a href="stevenschaefer.html">About Me</a></li><li><a href="research.html">Research</a></li><li><a href="new.html">New</a></li></ul><button type="button" class="helia-search-button" aria-label="Search (/ or Ctrl+K)" aria-haspopup="dialog"><span class="helia-search-icon">⌕</span><span class="helia-search-label">Search</span><kbd class="helia-search-key">/</kbd></button></nav>
+<div class="helia-page" data-kind="reference">
+<article class="helia-article">
+<header class="helia-header" data-entry="gavranovicFundamentalComponentsDeep" data-kind="reference">
+<h2 class="helia-heading"><span class="helia-taxon">Reference.</span> Fundamental Components of Deep Learning: A category-theoretic approach</h2>
+<div class="helia-meta"><span class="helia-author"><a class="helia-entry-link" href="brunogavranovic.html" data-entry="brunogavranovic">Bruno Gavranović</a></span> · <span class="helia-byline">2024</span> · <span class="helia-tags"><span class="helia-tag" data-tag="machine-learning"><span class="helia-entry-link helia-unavailable">machine-learning</span></span> <span class="helia-tag" data-tag="machine-learning-verification"><span class="helia-entry-link helia-unavailable">machine-learning-verification</span></span></span> · <span class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.48550/arxiv.2403.13001">DOI</a></span></span></div>
+</header>
+<div class="helia-body">
+<div class="helia-abstract">Deep learning, despite its remarkable achievements, is still a young field. Like the early stages of many scientific disciplines, it is marked by the discovery of new phenomena, ad-hoc design decisions, and the lack of a uniform and compositional mathematical foundation. From the intricacies of the implementation of backpropagation, through a growing zoo of neural network architectures, to the new and poorly understood phenomena such as double descent, scaling laws or in-context learning, there are few unifying principles in deep learning. This thesis develops a novel mathematical foundation for deep learning based on the language of category theory. We develop a new framework that is a) end-to-end, b) unform, and c) not merely descriptive, but prescriptive, meaning it is amenable to direct implementation in programming languages with sufficient features. We also systematise many existing approaches, placing many existing constructions and concepts from the literature under the same umbrella. In Part I we identify and model two main properties of deep learning systems parametricity and bidirectionality by we expand on the previously defined construction of actegories and Para to study the former, and define weighted optics to study the latter. Combining them yields parametric weighted optics, a categorical model of artificial neural networks, and more. Part II justifies the abstractions from Part I, applying them to model backpropagation, architectures, and supervised learning. We provide a lens-theoretic axiomatisation of differentiation, covering not just smooth spaces, but discrete settings of boolean circuits as well. We survey existing, and develop new categorical models of neural network architectures. We formalise the notion of optimisers and lastly, combine all the existing concepts together, providing a uniform and compositional framework for supervised learning.</div>
+</div>
+<div class="helia-cite helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><h3 class="helia-heading">Cite</h3>
+</summary>
+<div class="helia-group-body">
+<div class="helia-widget" data-widget="helia-cite-formats" data-props="{&quot;key&quot;:&quot;gavranovicFundamentalComponentsDeep&quot;,&quot;bibtex&quot;:&quot;@phdthesis{gavranovicFundamentalComponentsDeep,\n title = {Fundamental {{Components}} of {{Deep Learning}}: {{A}} Category-Theoretic Approach},\n author = {Gavranović, Bruno},\n date = {2024},\n langid = {english},\n school = {University of Strathclyde},\n eprint = {2403.13001},\n archiveprefix = {arXiv}\n}&quot;,&quot;bib-file&quot;:&quot;gavranovicFundamentalComponentsDeep.bib&quot;,&quot;hayagriva&quot;:&quot;gavranovicFundamentalComponentsDeep:\n  type: thesis\n  title: &#39;Fundamental {Components} of {Deep Learning}: {A} Category-Theoretic Approach&#39;\n  author: Gavranović, Bruno\n  date: 2024\n  organization: University of Strathclyde\n  serial-number:\n    arxiv: &#39;2403.13001&#39;\n  language: en-US\n  genre: Doctoral dissertation\n&quot;,&quot;yml-file&quot;:&quot;gavranovicFundamentalComponentsDeep.yml&quot;}"><div class="helia-cite-key" data-copy="@gavranovicFundamentalComponentsDeep" data-copy-label="citation key"><span class="helia-bib-key">Cite as</span> <code class="helia-raw-inline">@gavranovicFundamentalComponentsDeep</code> (helia, typst) · <code class="helia-raw-inline">\cite{gavranovicFundamentalComponentsDeep}</code> (LaTeX)</div>
+<div class="helia-cite-format helia-collapsible" data-format="bibtex" data-copy="true" data-copy-label="BibTeX">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">BibTeX</span></summary>
+<div class="helia-group-body">
+<details class="helia-code" open><summary class="helia-code-summary"><span class="helia-code-lang">bibtex</span> · <span class="helia-code-lines">9 lines</span></summary><pre class="helia-raw"><code class="language-bibtex"><span class="hl-text hl-bibtex"><span class="hl-meta hl-entry hl-braces hl-bibtex"><span class="hl-keyword hl-other hl-entry-type hl-bibtex"><span class="hl-punctuation hl-definition hl-keyword hl-bibtex">@</span>phdthesis</span><span class="hl-punctuation hl-section hl-entry hl-begin hl-bibtex">{</span><span class="hl-entity hl-name hl-type hl-entry-key hl-bibtex">gavranovicFundamentalComponentsDeep</span>,
+ <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">title</span> <span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span> <span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>Fundamental <span class="hl-punctuation hl-definition hl-group hl-begin hl-bibtex">{</span><span class="hl-punctuation hl-definition hl-group hl-begin hl-bibtex">{</span>Components<span class="hl-punctuation hl-definition hl-group hl-end hl-bibtex">}</span><span class="hl-punctuation hl-definition hl-group hl-end hl-bibtex">}</span> of <span class="hl-punctuation hl-definition hl-group hl-begin hl-bibtex">{</span><span class="hl-punctuation hl-definition hl-group hl-begin hl-bibtex">{</span>Deep Learning<span class="hl-punctuation hl-definition hl-group hl-end hl-bibtex">}</span><span class="hl-punctuation hl-definition hl-group hl-end hl-bibtex">}</span>: <span class="hl-punctuation hl-definition hl-group hl-begin hl-bibtex">{</span><span class="hl-punctuation hl-definition hl-group hl-begin hl-bibtex">{</span>A<span class="hl-punctuation hl-definition hl-group hl-end hl-bibtex">}</span><span class="hl-punctuation hl-definition hl-group hl-end hl-bibtex">}</span> Category-Theoretic Approach<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>,
+ <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">author</span> <span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span> <span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>Gavranović, Bruno<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>,
+ <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">date</span> <span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span> <span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>2024<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>,
+ <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">langid</span> <span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span> <span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>english<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>,
+ <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">school</span> <span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span> <span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>University of Strathclyde<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>,
+ <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">eprint</span> <span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span> <span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>2403.13001<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>,
+ <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">archiveprefix</span> <span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span> <span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>arXiv<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span>
+</span><span class="hl-punctuation hl-section hl-entry hl-end hl-bibtex">}</span></span></span></code></pre></details>
+</div>
+</details>
+</div>
+<div class="helia-cite-format helia-collapsible" data-format="hayagriva" data-copy="true" data-copy-label="hayagriva YAML">
+<details>
+<summary class="helia-group-summary"><span class="helia-group-title">hayagriva YAML (typst)</span></summary>
+<div class="helia-group-body">
+<details class="helia-code" open><summary class="helia-code-summary"><span class="helia-code-lang">yaml</span> · <span class="helia-code-lines">10 lines</span></summary><pre class="helia-raw"><code class="language-yaml"><span class="hl-source hl-yaml"><span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">gavranovicFundamentalComponentsDeep</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">type</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">thesis</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">title</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-quoted hl-single hl-yaml"><span class="hl-punctuation hl-definition hl-string hl-begin hl-yaml">&#39;</span>Fundamental {Components} of {Deep Learning}: {A} Category-Theoretic Approach<span class="hl-punctuation hl-definition hl-string hl-end hl-yaml">&#39;</span></span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">author</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Gavranović, Bruno</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">date</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-constant hl-numeric hl-integer hl-decimal hl-yaml">2024</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">organization</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">University of Strathclyde</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">serial-number</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">arxiv</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-quoted hl-single hl-yaml"><span class="hl-punctuation hl-definition hl-string hl-begin hl-yaml">&#39;</span>2403.13001<span class="hl-punctuation hl-definition hl-string hl-end hl-yaml">&#39;</span></span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">language</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">en-US</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">genre</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Doctoral dissertation</span>
+</span></code></pre></details>
+</div>
+</details>
+</div>
+<div class="helia-cite-files">Download: <a class="helia-link" href="gavranovicFundamentalComponentsDeep.bib">gavranovicFundamentalComponentsDeep.bib</a> · <a class="helia-link" href="gavranovicFundamentalComponentsDeep.yml">gavranovicFundamentalComponentsDeep.yml</a></div>
+</div>
+</div>
+</details>
+</div>
+<div class="helia-reference-cites helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">Cites 261 works (0 here)</span></summary>
+<div class="helia-group-body">
+<div class="helia-reference-cites-away helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">External (261)</span></summary>
+<div class="helia-group-body">
+<ul>
+<li><a class="helia-link helia-external" href="https://doi.org/10.6028/nist.ai.100-2e2023">Adversarial Machine Learning: A Taxonomy and Terminology of Attacks and Mitigations</a> (2024)</li>
+<li>Rainbow array algebra (2023)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.4230/lipics.mfcs.2023.24">The Compositional Structure of Bayesian Inference</a> (2023)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.32408/compositionality-5-9">Bayesian open games</a> (2023)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.48550/arxiv.2303.03865">Bicategories of automata, automata in bicategories</a> (2023)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1063/5.0089375">Compositional Thermostatics</a> (2023)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.48550/arxiv.2305.16435">Composing Bridges</a> (2023)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.4204/eptcs.380.9">Diegetic Representation of Feedback in Open Games</a> (2023)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.48550/arxiv.2203.16351">Actegories for the Working Amthematician</a> (2023)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.48550/arxiv.2308.01131">Reverse tangent categories</a> (2023)</li>
+<li>Category Theory Resources (2023)</li>
+<li>Theory and Applications of Lenses and Optics (2023)</li>
+<li>Two kinds of Prisms (2023)</li>
+<li>The Lie Derivative for Measuring Learned Equivariance (2023)</li>
+<li>The GAN Zoo (2023)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.4204/eptcs.380.24">Value Iteration is Optic Composition</a> (2023)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.48550/arxiv.2305.03820">A Compositional Framework for Convex Model Predictive Control</a> (2023)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.48550/arxiv.2108.04304">Cartesian Differential Comonads and New Models of Cartesian Differential Categories</a> (2023)</li>
+<li>OpenAI’s CEO Says the Age of Giant AI Models Is Already Over (2023)</li>
+<li>Category Theory is like Java - General (2023)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1017/etds.2023.6">A category-theoretic proof of the ergodic decomposition theorem</a> (2023)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.48550/arxiv.2308.14455">Internal Grothendieck construction for enriched categories</a> (2023)</li>
+<li><a class="helia-link helia-external" href="https://arxiv.org/abs/2312.00990">Polynomial Functors: A Mathematical Theory of Interaction</a> (2023)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.48550/arxiv.2304.10031">Architectures of Topological Deep Learning: A Survey on Topological Neural Networks</a> (2023)</li>
+<li>Compositionality and functorial invariants in machine learning (2023)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1073/pnas.2214840120">Superhuman Artificial Intelligence Can Improve Human Decision Making by Increasing Novelty</a> (2023)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.48550/arxiv.2111.10968">Functorial aggregation</a> (2023)</li>
+<li><a class="helia-link helia-external" href="https://arxiv.org/abs/2202.00534">A reference for categorical structures on Poly</a> (2023)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.48550/arxiv.2309.07245">Entanglement of Sections: The pushout of entangled and parameterized quantum information</a> (2023)</li>
+<li>CCRL 40/15 - Index (2023)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1016/j.sbi.2023.102538">Everything is connected: Graph neural networks</a> (2023)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.4204/eptcs.380.8">Dependent Optics</a> (2023)</li>
+<li>Transformers learn in-context by gradient descent (2023)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1109/lics56636.2023.10175727">Making Concurrency Functional</a> (2023)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.48550/arxiv.2301.10595">Distilling Text into Circuits</a> (2023)</li>
+<li>Applied Category Theory in chemistry, computing, and social networks (2022)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-030-99253-8_9">Categorical composable cryptography</a> (2022)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.4204/eptcs.372.13">String Diagrammatic Electrical Circuit Theory</a> (2022)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.48550/arxiv.2204.10708">Seeing double through dependent optics</a> (2022)</li>
+<li><a class="helia-link helia-external" href="https://arxiv.org/abs/2001.07488">Profunctor Optics, a Categorical Update</a> (2022)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-030-99336-8_1">Categorical Foundations of Gradient-Based Learning</a> (2022)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.4204/eptcs.372.17">Towards Foundations of Categorical Cybernetics</a> (2022)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.4204/eptcs.372.16">Translating Extensive Form Games to Open Games with Agency</a> (2022)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1017/s096012952200038x">Monoidal reverse differential categories</a> (2022)</li>
+<li>Graph Neural Networks are Dynamic Programmers (2022)</li>
+<li>Lenses to the left of me, Prisms to the right (2022)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.48550/arxiv.2209.09351">Space-time tradeoffs of lenses and optics via higher category theory</a> (2022)</li>
+<li><a class="helia-link helia-external" href="https://arxiv.org/abs/2212.00542">Graph Convolutional Neural Networks as Parametric CoKleisli morphisms</a> (2022)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1109/tpami.2021.3079209">Meta-Learning in Neural Networks: A Survey</a> (2022)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.48550/arxiv.2211.15596">A survey of deep learning optimizers-first and second order methods</a> (2022)</li>
+<li>Towards Understanding Grokking: An Effective Theory of Representation Learning (2022)</li>
+<li>Parametric monads and enriched adjunctions (2022)</li>
+<li>Transformers are Meta-Reinforcement Learners (2022)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.48550/arxiv.2203.12022">Compound Optics</a> (2022)</li>
+<li>The Challenge of Compositionality for AI (2022)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/s10817-022-09634-2">Fast Left Kan Extensions Using the Chase</a> (2022)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-031-16912-0_4">Flexibly Graded Monads and Graded Algebras</a> (2022)</li>
+<li>Categorical Systems Theory (2022)</li>
+<li>The Para Construction as a Distributive Law (2022)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-031-16912-0_5">Folding over Neural Networks</a> (2022)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.48550/arxiv.2212.11719">Markov Categories and Entropy</a> (2022)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.48550/arxiv.2207.09238">Formal Algorithms for Transformers</a> (2022)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1016/j.scico.2022.102791">High-level axioms for graphical linear algebra</a> (2022)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1109/tpami.2021.3136921">Hyperbolic Deep Neural Networks: A Survey</a> (2022)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1109/cvpr52688.2022.01042">High-Resolution Image Synthesis with Latent Diffusion Models</a> (2022)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.48550/arxiv.2204.06125">Hierarchical Text-Conditional Image Generation with CLIP Latents</a> (2022)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.48550/arxiv.2203.09018">Kan Extensions in Data Science and Machine Learning</a> (2022)</li>
+<li><a class="helia-link helia-external" href="https://arxiv.org/abs/2212.12538">Mathematical Foundations for a Compositional Account of the Bayesian Brain</a> (2022)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.48550/arxiv.1908.02202">Generalized Lens Categories via functors C^op → Cat</a> (2022)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.4204/eptcs.372.2">Learners' Languages</a> (2022)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3530811">Efficient Transformers: A Survey</a> (2022)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.48550/arxiv.2203.15633">Lenses for Composable Servers</a> (2022)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.48550/arxiv.2202.11097">Message passing all the way up</a> (2022)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3527634">CHAD: Combinatory Homomorphic Automatic Differentiation</a> (2022)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-031-09843-7_5">Categories of Differentiable Polynomial Circuits for Machine Learning</a> (2022)</li>
+<li>Functorial String Diagrams for Reverse-Mode Automatic Differentiation (2021)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.48550/arxiv.2104.13478">Geometric Deep Learning: Grids, Groups, Graphs, Geodesics, and Gauges</a> (2021)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.48550/arxiv.2112.11145">Fibre optics</a> (2021)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.48550/arxiv.2102.06701">Explaining Neural Scaling Laws</a> (2021)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.48550/arxiv.2003.05991">Autoencoders</a> (2021)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.48550/arxiv.2101.12249">A Survey of Complex-Valued Neural Networks</a> (2021)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.3390/e23091195">Entropy as a Topological Operad Derivation</a> (2021)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/s10485-021-09629-x">Differential Equations in a Tangent Category I: Complete Vector Fields, Flows, and Exponentials</a> (2021)</li>
+<li><a class="helia-link helia-external" href="https://arxiv.org/abs/2108.00390">Delta lenses as coalgebras for a comonad</a> (2021)</li>
+<li>Named Tensor Notation (2021)</li>
+<li>An Image is Worth 16x16 Words: Transformers for Image Recognition at Scale (2021)</li>
+<li>Backprop as functor: a compositional perspective on supervised learning (2021)</li>
+<li>Meta-learning and Monads (2021)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.48550/arxiv.2105.10028">Escrows are optics</a> (2021)</li>
+<li>TENSOR-RESTRICTION CATEGORIES (2021)</li>
+<li>Early Stopping in Deep Networks: Double Descent and How to Eliminate it (2021)</li>
+<li>2-Dimensional Categories (2021)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1017/9781108963558">Entropy and Diversity: The Axiomatic Approach</a> (2021)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1017/9781108778657">(Co)end Calculus</a> (2021)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1038/s41586-021-03544-w">A graph placement methodology for fast chip design</a> (2021)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1088/1742-5468/ac3a74">Deep double descent: where bigger models and more data hurt*</a> (2021)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.48550/arxiv.2106.07032">Category Theory in Machine Learning</a> (2021)</li>
+<li>Differentiable causal computations via delayed trace (2021)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.4204/eptcs.343.7">Diagrammatic Differentiation for Quantum Machine Learning</a> (2021)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-030-72019-3_22">Reverse AD at Higher Types: Pure, Principled and Denotationally Correct</a> (2021)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1109/tnnls.2020.2978386">A Comprehensive Survey on Graph Neural Networks</a> (2021)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.4204/eptcs.333.17">Reverse Derivative Ascent: A Categorical Approach to Learning Boolean Circuits</a> (2021)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.48550/arxiv.2002.05256">Change actions: from incremental computation to discrete derivatives</a> (2020)</li>
+<li>Language Models are Few-Shot Learners (2020)</li>
+<li>String Diagrams for Optics (2020)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.4230/lipics.csl.2020.18">Reverse Derivative Categories</a> (2020)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.4204/eptcs.323.13">Internal lenses as functors and cofunctors</a> (2020)</li>
+<li>Natural Graph Networks (2020)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-030-45231-5_10">General Supervised Learning as Change Propagation with Delta Lenses</a> (2020)</li>
+<li>Linear Mode Connectivity and the Lottery Ticket Hypothesis (2020)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1016/j.aim.2020.107239">A synthetic approach to Markov kernels, conditional independence and theorems on sufficient statistics</a> (2020)</li>
+<li>Category Theory in Machine Learning (2020)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.4204/eptcs.323.15">Learning Functors using Gradient Descent</a> (2020)</li>
+<li>The Crossroads of Categorical Algebra and Game Semantics (2020)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-030-51372-6_4">A Categorical Semantics for Guarded Petri Nets</a> (2020)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.48550/arxiv.1606.08415">Gaussian Error Linear Units (GELUs)</a> (2020)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.48550/arxiv.2010.01003">Differentiable Weighted Finite-State Transducers</a> (2020)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-030-45231-5_17">Correctness of Automatic Differentiation via Diffeologies and Categorical Gluing</a> (2020)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.48550/arxiv.2001.08361">Scaling Laws for Neural Language Models</a> (2020)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.4204/eptcs.317.2">Unifying graded and parameterised monads</a> (2020)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1016/j.patcog.2020.107281">Binary Neural Networks: A Survey</a> (2020)</li>
+<li>Machine Learning Needs a Langlands Programme (2020)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.48550/arxiv.2005.01894">Poly: An abundant categorical setting for mode-dependent dynamics</a> (2020)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3373718.3394775">Automata Learning: An Algebraic Approach</a> (2020)</li>
+<li>Dioptics: a common generalization of gradient-based learners and open games (2019)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.3390/e21030302">Category Theory for Autonomous and Networked Dynamical Systems</a> (2019)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/s00165-019-00493-0">Multiple model synchronization with multiary delta lenses with amendment andK-Putput</a> (2019)</li>
+<li>Dioptics: a Common Generalization of Open Games and Gradient-Based Learners (2019)</li>
+<li>Towards safe artificial general intelligence (2019)</li>
+<li>The Lottery Ticket Hypothesis: Finding Sparse, Trainable Neural Networks (2019)</li>
+<li>Lenses and Learners (2019)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1017/9781108668804">An Invitation to Applied Category Theory: Seven Sketches in Compositionality</a> (2019)</li>
+<li><a class="helia-link helia-external" href="https://arxiv.org/abs/1904.08083">A 2-Categorical Study of Graded and Indexed Monads</a> (2019)</li>
+<li><a class="helia-link helia-external" href="https://arxiv.org/abs/1907.08292">Compositional Deep Learning</a> (2019)</li>
+<li>Higher Dimensional Categories: From Double To Multiple Categories (2019)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.48550/arxiv.1905.02072">Characterizing the invariances of learning algorithms using category theory</a> (2019)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.48550/arxiv.1808.05545">Limits of bimorphic lenses</a> (2019)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1177/0008125619864925">A Brief History of Artificial Intelligence: On the Past, Present, and Future of Artificial Intelligence</a> (2019)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.4204/eptcs.287.12">Universal Properties in Quantum Theory</a> (2019)</li>
+<li>Categories for Quantum Theory: An Introduction (2019)</li>
+<li>Compositionality for Recursive Neural Networks (2019)</li>
+<li>Category Theory for Programmers (2019)</li>
+<li>PyTorch: An Imperative Style, High-Performance Deep Learning Library (2019)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1109/access.2019.2905015">Recent Progress on Generative Adversarial Networks (GANs): A Survey</a> (2019)</li>
+<li>Competitive Gradient Descent (2019)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.48550/arxiv.1912.05911">Recurrent Neural Networks (RNNs): A gentle Introduction and Overview</a> (2019)</li>
+<li>Context and Compositionality in Biological and Artificial Neural Systems (2019)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1038/s41586-019-1724-z">Grandmaster level in StarCraft II using multi-agent reinforcement learning</a> (2019)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-030-32236-6_51">Explainable AI: A Brief Survey on History, Research Areas, Approaches and Challenges</a> (2019)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1162/neco_a_01199">A Review of Recurrent Neural Networks: LSTM Cells and Network Architectures</a> (2019)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3209108.3209189">Syntax and Semantics of Quantitative Type Theory</a> (2018)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.48550/arxiv.1504.05625">A Compositional Framework for Passive Linear Networks</a> (2018)</li>
+<li>JAX: composable transformations of Python+NumPy programs (2018)</li>
+<li>Neural Ordinary Differential Equations (2018)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1109/icassp.2018.8462506">Speech-Transformer: A No-Recurrence Sequence-to-Sequence Model for Speech Recognition</a> (2018)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3236765">The simple essence of automatic differentiation</a> (2018)</li>
+<li>Video recording of "The Simple Essence of Automatic Differentiation" (2018)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1016/j.aim.2017.10.039">An embedding theorem for tangent categories</a> (2018)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3209108.3209165">Compositional Game Theory</a> (2018)</li>
+<li>Lenses for philosophers (2018)</li>
+<li>AI researchers allege that machine learning is alchemy (2018)</li>
+<li>Deep Reinforcement Learning Doesn't Work Yet (2018)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.48550/arxiv.1809.07842">Bias Amplification in Artificial Intelligence Systems</a> (2018)</li>
+<li>A Simple Neural Attentive Meta-Learner (2018)</li>
+<li>NIPS 2017 Test of Time Award "Machine learning has become alchemy.” Ali Rahimi, Google (2018)</li>
+<li><a class="helia-link helia-external" href="https://arxiv.org/abs/1809.00738">Categories of Optics</a> (2018)</li>
+<li>Reinforcement Learning: An Introduction (2018)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1126/science.aar6404">A general reinforcement learning algorithm that masters chess, shogi, and Go through self-play</a> (2018)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.48550/arxiv.1701.07875">Wasserstein GAN</a> (2017)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1109/ijcnn.2017.7966082">Nesterov's accelerated gradient and momentum as approximations to regularised update descent</a> (2017)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1142/s0129055x17500283">A Compositional Framework for Reaction Networks</a> (2017)</li>
+<li>Automatic differentiation in machine learning: a survey (2017)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1016/j.ic.2016.03.002">The Calculus of Signal Flow Diagrams I: Linear relations on streams</a> (2017)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1017/9781316219317">Picturing Quantum Processes: A First Course in Quantum Theory and Diagrammatic Reasoning</a> (2017)</li>
+<li>Model-Agnostic Meta-Learning for Fast Adaptation of Deep Networks (2017)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.4230/lipics.csl.2017.24">Diagrammatic Semantics for Digital Circuits</a> (2017)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1109/lics.2017.8005137">A Convenient Category for Higher-Order Probability Theory</a> (2017)</li>
+<li>Closure Conversion as CoYoneda (2017)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.23915/distill.00005">Research Debt</a> (2017)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.22152/programming-journal.org/2017/1/7">Profunctor Optics: Modular Data Accessors</a> (2017)</li>
+<li>Attention is All you Need (2017)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1109/iccv.2017.244">Unpaired Image-to-Image Translation Using Cycle-Consistent Adversarial Networks</a> (2017)</li>
+<li>Learning to learn by gradient descent by gradient descent (2016)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.48550/arxiv.1607.06450">Layer Normalization</a> (2016)</li>
+<li>Type-driven Development With Idris (2016)</li>
+<li>Group Equivariant Convolutional Networks (2016)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.48550/arxiv.1604.06174">Training Deep Nets with Sublinear Memory Cost</a> (2016)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1109/cvpr.2016.522">Inverting Visual Representations with Convolutional Networks</a> (2016)</li>
+<li>Incorporating Nesterov Momentum into ADAM (2016)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1038/nature20101">Hybrid computing using a neural network with dynamic external memory</a> (2016)</li>
+<li>Binarized Neural Networks (2016)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1109/cvpr.2016.90">Deep Residual Learning for Image Recognition</a> (2016)</li>
+<li>Weight Normalization: A Simple Reparameterization to Accelerate Training of Deep Neural Networks (2016)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.48550/arxiv.1405.6881">Categories in Control</a> (2015)</li>
+<li>Batch normalization: accelerating deep network training by reducing internal covariate shift (2015)</li>
+<li><a class="helia-link helia-external" href="https://arxiv.org/abs/1412.6980">Adam: A Method for Stochastic Optimization</a> (2015)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1038/nature14236">Human-level control through deep reinforcement learning</a> (2015)</li>
+<li>Inceptionism: Going Deeper into Neural Networks (2015)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1109/cvpr.2015.7299155">Understanding deep image representations by inverting them</a> (2015)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1109/cvpr.2015.7298640">Deep neural networks are easily fooled: High confidence predictions for unrecognizable images</a> (2015)</li>
+<li>Neural Networks, Types, and Functional Programming - colah's blog (2015)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.48550/arxiv.1406.6030">Categorical Probability Theory</a> (2015)</li>
+<li>Polynomials and models of type theory (2015)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/s10485-013-9312-0">Differential Structure, Tangent Structure, and SDG</a> (2014)</li>
+<li>Deep AutoRegressive Networks (2014)</li>
+<li>Generative Adversarial Nets (2014)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.48550/arxiv.1410.5401">Neural Turing Machines</a> (2014)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-319-06880-0_20">Automata Learning: A Categorical Perspective</a> (2014)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1017/cbo9781107360068">Basic Category Theory</a> (2014)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-642-54789-8_19">Chasing Diagrams in Cryptography</a> (2014)</li>
+<li><a class="helia-link helia-external" href="https://arxiv.org/abs/1312.6034">Deep Inside Convolutional Networks: Visualising Image Classification Models and Saliency Maps</a> (2014)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1017/s0305004112000394">Polynomial functors and polynomial monads</a> (2013)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/2544174.2500578">Unifying structured recursion schemes</a> (2013)</li>
+<li>Call-By-Push-Value (2013)</li>
+<li>Rectifier Nonlinearities Improve Neural Network Acoustic Models (2013)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1016/j.entcs.2013.09.018">A Categorical Theory of Patches</a> (2013)</li>
+<li>On the difficulty of training recurrent neural networks (2013)</li>
+<li>Recursive Deep Models for Semantic Compositionality Over a Sentiment Treebank (2013)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1147/jrd.2012.2184356">Introduction to “This is Watson”</a> (2012)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-642-31113-0_16">Kan Extensions for Program Optimisation Or: Art and Dan Explain an Old Trick</a> (2012)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1016/j.tcs.2012.01.001">Monoidal indeterminates and categories of possible worlds</a> (2012)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.36045/bbms/1354031551">Monoidal categories in, and linking, geometry and algebra</a> (2012)</li>
+<li>The Faà di Bruno construction (2011)</li>
+<li>Adaptive Subgradient Methods for Online Learning and Stochastic Optimization (2011)</li>
+<li>The Magnitude of an Enriched Category (2011)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-642-12821-9_4">A Survey of Graphical Languages for Monoidal Categories</a> (2011)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-642-13962-8_2">Higher-Order Containers</a> (2010)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-1-4419-1524-5_1">Lectures on N-Categories and Cohomology</a> (2010)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.48550/arxiv.1003.4394">Mathematical Foundations for a Compositional Distributional Model of Meaning</a> (2010)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/s10485-008-9136-5">Icons</a> (2010)</li>
+<li>Grothendieck construction for bicategories (2009)</li>
+<li>Cartesian differential categories (2009)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/1330017.1330018">Reverse-mode AD in a functional framework: Lambda the ultimate backpropagator</a> (2008)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1016/j.ic.2005.08.005">Recursive coalgebras from comonads</a> (2006)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/11758549_78">The Data-Flow Equations of Checkpointing in Reverse Automatic Differentiation</a> (2006)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/11783596_15">Recursion Schemes for Dynamic Programming</a> (2006)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.4067/s0716-09172006000200003">DIFFEOLOGICAL SPACES</a> (2006)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/1111320.1111038">Why dependent types matter</a> (2006)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/3-540-36576-1_2">Categories of Containers</a> (2003)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/3-540-44904-3_2">Derivatives of Containers</a> (2003)</li>
+<li>A NOTE ON ACTIONS OF A MONOIDAL CATEGORY (2001)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/347837.347846">Algorithm 799: revolve: an implementation of checkpointing for the reverse or adjoint mode of computational differentiation</a> (2000)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1016/s0304-3975(00)00056-6">Universal coalgebra: a theory of systems</a> (2000)</li>
+<li>Age of Spiritual Machines: When Computers Exceed Human Intelligence (1999)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1016/s0049-237x(98)x8028-6">Categorical logic and type theory</a> (1998)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1006/aima.1997.1649">Monoidal Bicategories and Hopf Algebroids</a> (1997)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1162/neco.1997.9.8.1735">Long short-term memory</a> (1997)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1109/icnn.1996.548916">Learning task-dependent distributed representations by backpropagation through structure</a> (1996)</li>
+<li>Convolutional Networks for Images, Speech, and Time-Series (1995)</li>
+<li>A method of solving a convex programming problem with convergence rate O(1/k^2) (1993)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1090/conm/092/1003194">The Dialectica categories</a> (1989)</li>
+<li>Braided Monoidal Categories (1986)</li>
+<li>Basic Concepts of Enriched Category Theory (1982)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/bfb0061362">V-indexed categories</a> (1978)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1080/00927877608822127">Coalgebras and cartesian categories</a> (1976)</li>
+<li>Indicial methods for relative categories (1976)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/3-540-07142-3_61">A Categorist's view of automata and systems</a> (1975)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/bf00342633">Cognitron: A self-organizing multilayered neural network</a> (1975)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1126/science.177.4047.393">More Is Different</a> (1972)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1016/0041-5553(64)90137-5">Some methods of speeding up the convergence of iteration methods</a> (1964)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1093/mind/lix.236.433">Computing Machinery and Intelligence</a> (1950)</li>
+</ul>
+</div>
+</details>
+</div>
+</div>
+</details>
+</div>
+<footer class="helia-footer">
+<div class="helia-related helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><h3 class="helia-heading">Related</h3>
+</summary>
+<div class="helia-group-body">
+<ul>
+<li><a class="helia-entry-link" href="azulayWhyDeepConvolutional.html" data-entry="azulayWhyDeepConvolutional">Why do deep convolutional networks generalize so poorly to small image transformations?</a> <span class="helia-related-count">· 2 shared tags</span></li>
+<li><a class="helia-entry-link" href="kouvarosFormalVerificationCNNbased2018.html" data-entry="kouvarosFormalVerificationCNNbased2018">Formal Verification of CNN-based Perception Systems</a> <span class="helia-related-count">· 2 shared tags</span></li>
+<li><a class="helia-entry-link" href="moutonStrideTranslationInvariance2020.html" data-entry="moutonStrideTranslationInvariance2020">Stride and Translation Invariance in CNNs</a> <span class="helia-related-count">· 2 shared tags</span></li>
+<li><a class="helia-entry-link" href="mullerPRIMAGeneralPrecise2022.html" data-entry="mullerPRIMAGeneralPrecise2022">PRIMA: General and Precise Neural Network Certification via Scalable Convex Hull Approximations</a> <span class="helia-related-count">· 2 shared tags</span></li>
+<li><a class="helia-entry-link" href="myburghTrackingTranslationInvariance2021.html" data-entry="myburghTrackingTranslationInvariance2021">Tracking translation invariance in CNNs</a> <span class="helia-related-count">· 2 shared tags</span></li>
+<li><a class="helia-entry-link" href="seshiaVerifiedArtificialIntelligence2020.html" data-entry="seshiaVerifiedArtificialIntelligence2020">Towards Verified Artificial Intelligence</a> <span class="helia-related-count">· 2 shared tags</span></li>
+<li><a class="helia-entry-link" href="sotoudehProvableRepairDeep2021.html" data-entry="sotoudehProvableRepairDeep2021">Provable repair of deep neural networks</a> <span class="helia-related-count">· 2 shared tags</span></li>
+<li><a class="helia-entry-link" href="taoArchitecturePreservingProvableRepair2023.html" data-entry="taoArchitecturePreservingProvableRepair2023">Architecture-Preserving Provable Repair of Deep Neural Networks</a> <span class="helia-related-count">· 2 shared tags</span></li>
+<li><a class="helia-entry-link" href="tranVerificationDeepConvolutional2020.html" data-entry="tranVerificationDeepConvolutional2020">Verification of Deep Convolutional Neural Networks Using ImageStars</a> <span class="helia-related-count">· 2 shared tags</span></li>
+</ul>
+</div>
+</details>
+</div>
+</footer>
+</article>
+<div class="helia-identity"><span class="helia-id">gavranovicFundamentalComponentsDeep</span> <span class="helia-kind">reference</span> <span class="helia-path">entries/refs/gavranovicFundamentalComponentsDeep/gavranovicFundamentalComponentsDeep.hel</span></div>
+</div>
+</body>
+</html>

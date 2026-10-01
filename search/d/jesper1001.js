@@ -1,0 +1,1 @@
+heliaSearchData("d/jesper1001",{"id":"jesper1001","title":"1001 Representations of Syntax with Binding","kind":"reference","tags":["abstract-syntax","implementation","type-theory"],"authors":["Jesper Cockx"],"venue":[],"date":null,"url":"jesper1001.html","headings":[],"body":""});

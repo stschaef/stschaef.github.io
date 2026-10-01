@@ -1,0 +1,1 @@
+heliaSearchData("d/garden-bird",{"id":"garden-bird","title":"Garden bird","kind":"glyph-art","tags":["ornament","ornament-garden"],"authors":["Steven Schaefer"],"venue":[],"date":null,"url":"garden-bird.html","headings":[],"body":"A small bird. A small piece for the garden margin patterns."});

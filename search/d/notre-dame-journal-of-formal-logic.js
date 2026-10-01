@@ -1,0 +1,1 @@
+heliaSearchData("d/notre-dame-journal-of-formal-logic",{"id":"notre-dame-journal-of-formal-logic","title":"Notre Dame journal of formal logic","kind":"venue","tags":[],"authors":[],"venue":[],"date":null,"url":"notre-dame-journal-of-formal-logic.html","headings":[],"body":""});

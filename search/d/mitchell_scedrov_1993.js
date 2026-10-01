@@ -1,0 +1,1 @@
+heliaSearchData("d/mitchell_scedrov_1993",{"id":"mitchell_scedrov_1993","title":"Notes on sconing and relators","kind":"reference","tags":["logical-relations"],"authors":["Andre Scedrov","John C. Mitchell"],"venue":["CSL","Computer Science Logic (EACSL Annual Conference)"],"date":null,"url":"mitchell_scedrov_1993.html","headings":[],"body":""});

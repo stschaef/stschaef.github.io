@@ -1,0 +1,1 @@
+heliaSearchData("d/lawvere_1969",{"id":"lawvere_1969","title":"Adjointness in Foundations","kind":"reference","tags":["category-theory"],"authors":["F. William Lawvere"],"venue":["Dialectica"],"date":null,"url":"lawvere_1969.html","headings":[],"body":""});

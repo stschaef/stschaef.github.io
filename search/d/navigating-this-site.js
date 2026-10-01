@@ -1,0 +1,1 @@
+heliaSearchData("d/navigating-this-site",{"id":"navigating-this-site","title":"Navigating This Site","kind":"note","tags":[],"authors":[],"venue":[],"date":null,"url":"navigating-this-site.html","headings":[],"body":"Click a heading to fold or unfold its section. Press Ctrl-K / ⌘K to search."});

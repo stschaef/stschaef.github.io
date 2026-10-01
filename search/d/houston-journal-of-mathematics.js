@@ -1,0 +1,1 @@
+heliaSearchData("d/houston-journal-of-mathematics",{"id":"houston-journal-of-mathematics","title":"Houston Journal of Mathematics","kind":"venue","tags":[],"authors":[],"venue":[],"date":null,"url":"houston-journal-of-mathematics.html","headings":[],"body":""});

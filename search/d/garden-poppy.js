@@ -1,0 +1,1 @@
+heliaSearchData("d/garden-poppy",{"id":"garden-poppy","title":"Garden poppy","kind":"glyph-art","tags":["ornament","ornament-garden"],"authors":["Steven Schaefer"],"venue":[],"date":null,"url":"garden-poppy.html","headings":[],"body":"A poppy with its dark eye. A small piece for the garden margin patterns."});

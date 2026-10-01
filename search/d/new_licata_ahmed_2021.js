@@ -1,0 +1,1 @@
+heliaSearchData("d/new_licata_ahmed_2021",{"id":"new_licata_ahmed_2021","title":"Gradual Type Theory","kind":"reference","tags":["gradual-typing","type-theory"],"authors":["Amal Ahmed","Daniel R. Licata","Max S. New"],"venue":["JFP","Journal of Functional Programming"],"date":null,"url":"new_licata_ahmed_2021.html","headings":[],"body":""});

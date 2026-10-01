@@ -1,0 +1,1 @@
+heliaSearchData("t/gl",{"gleb":[365,128,257,32],"glebmakarchuk":[365,32],"global":[316,130,59,2,2,2,176,1],"glossy":[108,1],"glueing":[412,160],"gluing":[4,128],"gluingfortypetheory":[4,32],"glyph":[366,160,1,160,320,2,6,5]});

@@ -1,0 +1,1 @@
+heliaSearchData("d/samsung-research",{"id":"samsung-research","title":"Samsung Research","kind":"institution","tags":[],"authors":[],"venue":[],"date":null,"url":"samsung-research.html","headings":[],"body":""});

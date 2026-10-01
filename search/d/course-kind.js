@@ -1,0 +1,1 @@
+heliaSearchData("d/course-kind",{"id":"course-kind","title":"Course kind","kind":"note","tags":[],"authors":["Steven Schaefer"],"venue":[],"date":null,"url":"course-kind.html","headings":[],"body":""});

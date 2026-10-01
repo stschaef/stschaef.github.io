@@ -1,0 +1,1 @@
+heliaSearchData("d/buszkowskiTypeLogicsGrammar2003",{"id":"buszkowskiTypeLogicsGrammar2003","title":"Type Logics in Grammar","kind":"reference","tags":["categorial-grammar"],"authors":["Wojciech Buszkowski"],"venue":[],"date":null,"url":"buszkowskiTypeLogicsGrammar2003.html","headings":[],"body":""});

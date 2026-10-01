@@ -1,0 +1,1 @@
+heliaSearchData("d/michaelsammler",{"id":"michaelsammler","title":"Michael Sammler","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"michaelsammler.html","headings":[],"body":""});

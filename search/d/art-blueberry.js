@@ -1,0 +1,1 @@
+heliaSearchData("d/art-blueberry",{"id":"art-blueberry","title":"Blueberries","kind":"glyph-art","tags":["fruit","ornament","ornament-art"],"authors":["Steven Schaefer"],"venue":[],"date":null,"url":"art-blueberry.html","headings":[],"body":"Three blueberries on a sprig, each wearing its little five-pointed crown."});

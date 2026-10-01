@@ -1,0 +1,1 @@
+heliaSearchData("d/dominiquedevriese",{"id":"dominiquedevriese","title":"Dominique Devriese","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"dominiquedevriese.html","headings":[],"body":""});

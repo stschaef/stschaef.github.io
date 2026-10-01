@@ -1,0 +1,1 @@
+heliaSearchData("d/ibm-journal-of-research-and-development",{"id":"ibm-journal-of-research-and-development","title":"IBM Journal of Research and Development","kind":"venue","tags":[],"authors":[],"venue":[],"date":null,"url":"ibm-journal-of-research-and-development.html","headings":[],"body":""});

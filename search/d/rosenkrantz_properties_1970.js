@@ -1,0 +1,1 @@
+heliaSearchData("d/rosenkrantz_properties_1970",{"id":"rosenkrantz_properties_1970","title":"Properties of deterministic top-down grammars","kind":"reference","tags":["parsing"],"authors":["Daniel J. Rosenkrantz","Richard E. Stearns"],"venue":["I&C","Information and Computation"],"date":null,"url":"rosenkrantz_properties_1970.html","headings":[],"body":""});

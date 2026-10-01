@@ -1,0 +1,1 @@
+heliaSearchData("d/rasmusmogelberg",{"id":"rasmusmogelberg","title":"Rasmus Ejlers Møgelberg","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"rasmusmogelberg.html","headings":[],"body":""});

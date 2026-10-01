@@ -1,0 +1,1 @@
+heliaSearchData("d/lautemann_logics_1995",{"id":"lautemann_logics_1995","title":"Logics for context-free languages","kind":"reference","tags":["parsing"],"authors":["Clemens Lautemann","Denis Thérien","Thomas Schwentick"],"venue":["CSL","Computer Science Logic (EACSL Annual Conference)"],"date":null,"url":"lautemann_logics_1995.html","headings":[],"body":""});

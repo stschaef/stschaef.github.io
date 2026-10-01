@@ -1,0 +1,1 @@
+heliaSearchData("t/ce",{"cecchetti":[280,128,120,32],"cecilia":[173,128,342,32],"ceciliapradic":[173,32],"cell":[137,12,1,5,36,160,362,8,1,8,18,5,57,9,69,6,66,3,162,6],"central":[305,1],"centre":[86,1,607,1],"certain":[30,2,839,1],"certainly":[293,1],"certification":[514,128,108,128],"certified":[41,32,135,32,121,160]});

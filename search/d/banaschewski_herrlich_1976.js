@@ -1,0 +1,1 @@
+heliaSearchData("d/banaschewski_herrlich_1976",{"id":"banaschewski_herrlich_1976","title":"Subcategories defined by implications","kind":"reference","tags":["category-theory"],"authors":["Bernhard Banaschewski","Horst Herrlich"],"venue":["Houston Journal of Mathematics"],"date":null,"url":"banaschewski_herrlich_1976.html","headings":[],"body":""});

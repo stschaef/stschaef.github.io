@@ -1,0 +1,1 @@
+heliaSearchData("d/shulman_2008",{"id":"shulman_2008","title":"Framed bicategories and monoidal fibrations","kind":"reference","tags":["category-theory"],"authors":["Michael Shulman"],"venue":["TAC","Theory and Applications of Categories"],"date":null,"url":"shulman_2008.html","headings":[],"body":""});

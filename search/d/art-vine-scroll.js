@@ -1,0 +1,1 @@
+heliaSearchData("d/art-vine-scroll",{"id":"art-vine-scroll","title":"Vine scroll","kind":"glyph-art","tags":["greenery","ornament","ornament-art"],"authors":["Steven Schaefer"],"venue":[],"date":null,"url":"art-vine-scroll.html","headings":[],"body":"A vine scroll: a tendril coiling into a spiral, putting out leaves as it runs."});

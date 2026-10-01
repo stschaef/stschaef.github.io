@@ -1,0 +1,1 @@
+heliaSearchData("d/art-foxglove",{"id":"art-foxglove","title":"Foxglove","kind":"glyph-art","tags":["flower","ornament","ornament-art"],"authors":["Steven Schaefer"],"venue":[],"date":null,"url":"art-foxglove.html","headings":[],"body":"A foxglove spike: tubular bells drooping down one side of the stem, speckled in the throat, tight buds at the tip."});

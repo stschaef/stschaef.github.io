@@ -1,0 +1,1 @@
+heliaSearchData("t/hy",{"hyland":[335,32,77,32,164,128],"hylo":[202,1,212,7,349,1],"hylomorphism":[202,2,211,161,1,162,349,2],"hyperdoctrine":[139,128],"hypotenuse":[612,1],"hypothesis":[317,1,58,2,178,1]});

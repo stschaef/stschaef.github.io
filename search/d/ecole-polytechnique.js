@@ -1,0 +1,1 @@
+heliaSearchData("d/ecole-polytechnique",{"id":"ecole-polytechnique","title":"École Polytechnique","kind":"institution","tags":[],"authors":[],"venue":[],"date":null,"url":"ecole-polytechnique.html","headings":[],"body":""});

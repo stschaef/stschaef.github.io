@@ -1,0 +1,1 @@
+heliaSearchData("d/new_ahmed_2018",{"id":"new_ahmed_2018","title":"Graduality from Embedding-Projection Pairs","kind":"reference","tags":["gradual-typing"],"authors":["Amal Ahmed","Max S. New"],"venue":["ICFP","International Conference on Functional Programming"],"date":null,"url":"new_ahmed_2018.html","headings":[],"body":""});

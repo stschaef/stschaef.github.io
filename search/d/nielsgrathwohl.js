@@ -1,0 +1,1 @@
+heliaSearchData("d/nielsgrathwohl",{"id":"nielsgrathwohl","title":"Niels Bjørn Bugge Grathwohl","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"nielsgrathwohl.html","headings":[],"body":""});

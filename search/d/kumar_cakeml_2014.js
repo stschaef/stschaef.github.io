@@ -1,0 +1,1 @@
+heliaSearchData("d/kumar_cakeml_2014",{"id":"kumar_cakeml_2014","title":"CakeML: A verified implementation of ML","kind":"reference","tags":["compilation"],"authors":["Magnus O. Myreen","Michael Norrish","Ramana Kumar","Scott Owens"],"venue":["POPL","Symposium on Principles of Programming Languages"],"date":null,"url":"kumar_cakeml_2014.html","headings":[],"body":""});

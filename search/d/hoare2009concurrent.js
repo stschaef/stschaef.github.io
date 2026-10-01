@@ -1,0 +1,1 @@
+heliaSearchData("d/hoare2009concurrent",{"id":"hoare2009concurrent","title":"Concurrent Kleene Algebra","kind":"reference","tags":["concurrency","kleene-algebra"],"authors":["Bernhard Möller","Georg Struth","Ian Wehrman","Tony Hoare"],"venue":["CONCUR","International Conference on Concurrency Theory"],"date":null,"url":"hoare2009concurrent.html","headings":[],"body":""});

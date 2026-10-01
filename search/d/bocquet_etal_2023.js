@@ -1,0 +1,1 @@
+heliaSearchData("d/bocquet_etal_2023",{"id":"bocquet_etal_2023","title":"For the Metatheory of Type Theory, Internal Sconing Is Enough","kind":"reference","tags":["metatheory"],"authors":["Ambrus Kaposi","Christian Sattler","Rafaël Bocquet"],"venue":["FSCD","Formal Structures for Computation and Deduction"],"date":null,"url":"bocquet_etal_2023.html","headings":[],"body":""});

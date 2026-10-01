@@ -1,0 +1,1 @@
+heliaSearchData("d/francoispottier",{"id":"francoispottier","title":"François Pottier","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"francoispottier.html","headings":[],"body":""});

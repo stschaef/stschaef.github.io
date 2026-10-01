@@ -1,0 +1,1 @@
+heliaSearchData("d/art-oak-leaf",{"id":"art-oak-leaf","title":"Oak leaf","kind":"glyph-art","tags":["greenery","ornament","ornament-art"],"authors":["Steven Schaefer"],"venue":[],"date":null,"url":"art-oak-leaf.html","headings":[],"body":"An oak leaf, round-lobed, with a pale midrib and veins."});

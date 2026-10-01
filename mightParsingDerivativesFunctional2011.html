@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>Parsing with derivatives: A functional pearl</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Ctext y=%22.9em%22 font-size=%2290%22%3E%F0%9F%8C%BB%3C/text%3E%3C/svg%3E">
+<meta name="generator" content="helia">
+<script src="helia/theme-version.js"></script>
+<script src="theme/folio-early.js"></script>
+<link rel="stylesheet" href="helia/theme.css">
+<link rel="stylesheet" href="helia/highlight.css">
+<link rel="stylesheet" href="helia/search.css">
+<link rel="stylesheet" href="theme/katex.css">
+<link rel="stylesheet" href="theme/recipe.css">
+<link rel="stylesheet" href="theme/site.css">
+<link rel="stylesheet" href="theme/folio.css">
+<script defer src="helia/runtime.js"></script>
+<script defer src="helia/search.js"></script>
+<script defer src="theme/glyphcraft.js"></script>
+<script defer src="theme/glyphart.js"></script>
+<script defer src="theme/glyphgen.js"></script>
+<script defer src="theme/ornament.js"></script>
+<script defer src="theme/folio.js"></script>
+<script defer src="theme/portrait.js"></script>
+<script type="application/json" id="helia-widgets">{"helia-cite-formats":"widgets/helia-cite-formats-a3294ac7.js"}</script>
+<link rel="modulepreload" href="widgets/helia-cite-formats-a3294ac7.js">
+<script type="module" src="widgets/runtime.js"></script>
+</head>
+<body>
+<nav class="helia-topbar"><a class="helia-home" href="home.html">Steven Schaefer</a><ul class="helia-nav-links"><li><a href="stevenschaefer.html">About Me</a></li><li><a href="research.html">Research</a></li><li><a href="new.html">New</a></li></ul><button type="button" class="helia-search-button" aria-label="Search (/ or Ctrl+K)" aria-haspopup="dialog"><span class="helia-search-icon">⌕</span><span class="helia-search-label">Search</span><kbd class="helia-search-key">/</kbd></button></nav>
+<div class="helia-page" data-kind="reference">
+<article class="helia-article">
+<header class="helia-header" data-entry="mightParsingDerivativesFunctional2011" data-kind="reference">
+<h2 class="helia-heading"><span class="helia-taxon">Reference.</span> Parsing with derivatives: A functional pearl</h2>
+<div class="helia-meta"><span class="helia-author"><a class="helia-entry-link" href="matthewmight.html" data-entry="matthewmight">Matthew Might</a>, <a class="helia-entry-link" href="daviddarais.html" data-entry="daviddarais">David Darais</a>, <a class="helia-entry-link" href="danielspiewak.html" data-entry="danielspiewak">Daniel Spiewak</a></span> · <span class="helia-byline"><a class="helia-entry-link" href="icfp.html" data-entry="icfp">ICFP</a> · 2011</span> · <span class="helia-tags"><span class="helia-tag" data-tag="parsing"><span class="helia-entry-link helia-unavailable">parsing</span></span></span> · <span class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/2034773.2034801">DOI</a></span></span></div>
+</header>
+<div class="helia-body">
+<div class="helia-abstract">
+<p>We present a functional approach to parsing unrestricted context-free grammars based on Brzozowski’s derivative of regular expressions. If we consider context-free grammars as recursive regular expressions, Brzozowski’s equational theory extends without modification to context-free grammars (and it generalizes to parser combinators). The supporting actors in this story are three concepts familiar to functional programmers - laziness, memoization and fixed points; these allow Brzozowski’s original equations to be transliterated into purely functional code in about 30 lines spread over three functions.</p>
+<p>Yet, this almost impossibly brief implementation has a drawback: its performance is sour - in both theory and practice. The culprit? Each derivative can double the size of a grammar, and with it, the cost of the next derivative.</p>
+<p>Fortunately, much of the new structure inflicted by the derivative is either dead on arrival, or it dies after the very next derivative. To eliminate it, we once again exploit laziness and memoization to transliterate an equational theory that prunes such debris into working code. Thanks to this compaction, parsing times become reasonable in practice.</p>
+<p>We equip the functional programmer with two equational theories that, when combined, make for an abbreviated understanding and implementation of a system for parsing context-free languages.</p>
+</div>
+</div>
+<div class="helia-cite helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><h3 class="helia-heading">Cite</h3>
+</summary>
+<div class="helia-group-body">
+<div class="helia-widget" data-widget="helia-cite-formats" data-props="{&quot;key&quot;:&quot;mightParsingDerivativesFunctional2011&quot;,&quot;bibtex&quot;:&quot;@inproceedings{mightParsingDerivativesFunctional2011,\n title = {Parsing with derivatives: a functional pearl},\n author = {Might, Matthew and Darais, David and Spiewak, Daniel},\n year = {2011},\n isbn = {978-1-4503-0865-6},\n doi = {10.1145/2034773.2034801},\n url = {https://dl.acm.org/doi/10.1145/2034773.2034801},\n urldate = {2024-04-29},\n booktitle = {Proceedings of the 16th {ACM} {SIGPLAN} international conference on {Functional} programming},\n pages = {189--195},\n publisher = {ACM},\n address = {Tokyo Japan},\n month = {September},\n language = {en},\n shorttitle = {Parsing with derivatives}\n}&quot;,&quot;bib-file&quot;:&quot;mightParsingDerivativesFunctional2011.bib&quot;,&quot;hayagriva&quot;:&quot;mightParsingDerivativesFunctional2011:\n  type: article\n  title:\n    value: &#39;Parsing with derivatives: a functional pearl&#39;\n    short: Parsing with derivatives\n  author:\n  - Might, Matthew\n  - Darais, David\n  - Spiewak, Daniel\n  date: 2011-09\n  page-range: 189-195\n  url:\n    value: https://dl.acm.org/doi/10.1145/2034773.2034801\n    date: 2024-04-29\n  serial-number:\n    doi: 10.1145/2034773.2034801\n    isbn: 978-1-4503-0865-6\n  parent:\n    type: proceedings\n    title: Proceedings of the 16th {ACM} {SIGPLAN} international conference on {Functional} programming\n    publisher:\n      name: ACM\n      location: Tokyo Japan\n&quot;,&quot;yml-file&quot;:&quot;mightParsingDerivativesFunctional2011.yml&quot;}"><div class="helia-cite-key" data-copy="@mightParsingDerivativesFunctional2011" data-copy-label="citation key"><span class="helia-bib-key">Cite as</span> <code class="helia-raw-inline">@mightParsingDerivativesFunctional2011</code> (helia, typst) · <code class="helia-raw-inline">\cite{mightParsingDerivativesFunctional2011}</code> (LaTeX)</div>
+<div class="helia-cite-format helia-collapsible" data-format="bibtex" data-copy="true" data-copy-label="BibTeX">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">BibTeX</span></summary>
+<div class="helia-group-body">
+<details class="helia-code" open><summary class="helia-code-summary"><span class="helia-code-lang">bibtex</span> · <span class="helia-code-lines">16 lines</span></summary><pre class="helia-raw"><code class="language-bibtex"><span class="hl-text hl-bibtex"><span class="hl-meta hl-entry hl-braces hl-bibtex"><span class="hl-keyword hl-other hl-entry-type hl-bibtex"><span class="hl-punctuation hl-definition hl-keyword hl-bibtex">@</span>inproceedings</span><span class="hl-punctuation hl-section hl-entry hl-begin hl-bibtex">{</span><span class="hl-entity hl-name hl-type hl-entry-key hl-bibtex">mightParsingDerivativesFunctional2011</span>,
+ <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">title</span> <span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span> <span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>Parsing with derivatives: a functional pearl<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>,
+ <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">author</span> <span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span> <span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>Might, Matthew and Darais, David and Spiewak, Daniel<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>,
+ <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">year</span> <span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span> <span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>2011<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>,
+ <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">isbn</span> <span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span> <span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>978-1-4503-0865-6<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>,
+ <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">doi</span> <span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span> <span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>10.1145/2034773.2034801<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>,
+ <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">url</span> <span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span> <span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>https://dl.acm.org/doi/10.1145/2034773.2034801<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>,
+ <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">urldate</span> <span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span> <span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>2024-04-29<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>,
+ <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">booktitle</span> <span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span> <span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>Proceedings of the 16th <span class="hl-punctuation hl-definition hl-group hl-begin hl-bibtex">{</span>ACM<span class="hl-punctuation hl-definition hl-group hl-end hl-bibtex">}</span> <span class="hl-punctuation hl-definition hl-group hl-begin hl-bibtex">{</span>SIGPLAN<span class="hl-punctuation hl-definition hl-group hl-end hl-bibtex">}</span> international conference on <span class="hl-punctuation hl-definition hl-group hl-begin hl-bibtex">{</span>Functional<span class="hl-punctuation hl-definition hl-group hl-end hl-bibtex">}</span> programming<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>,
+ <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">pages</span> <span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span> <span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>189--195<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>,
+ <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">publisher</span> <span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span> <span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>ACM<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>,
+ <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">address</span> <span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span> <span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>Tokyo Japan<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>,
+ <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">month</span> <span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span> <span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>September<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>,
+ <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">language</span> <span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span> <span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>en<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>,
+ <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">shorttitle</span> <span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span> <span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>Parsing with derivatives<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span>
+</span><span class="hl-punctuation hl-section hl-entry hl-end hl-bibtex">}</span></span></span></code></pre></details>
+</div>
+</details>
+</div>
+<div class="helia-cite-format helia-collapsible" data-format="hayagriva" data-copy="true" data-copy-label="hayagriva YAML">
+<details>
+<summary class="helia-group-summary"><span class="helia-group-title">hayagriva YAML (typst)</span></summary>
+<div class="helia-group-body">
+<details class="helia-code" open><summary class="helia-code-summary"><span class="helia-code-lang">yaml</span> · <span class="helia-code-lines">23 lines</span></summary><pre class="helia-raw"><code class="language-yaml"><span class="hl-source hl-yaml"><span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">mightParsingDerivativesFunctional2011</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">type</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">article</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">title</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">value</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-quoted hl-single hl-yaml"><span class="hl-punctuation hl-definition hl-string hl-begin hl-yaml">&#39;</span>Parsing with derivatives: a functional pearl<span class="hl-punctuation hl-definition hl-string hl-end hl-yaml">&#39;</span></span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">short</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Parsing with derivatives</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">author</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Might, Matthew</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Darais, David</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Spiewak, Daniel</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">date</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">2011-09</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">page-range</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">189-195</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">url</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">value</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">https://dl.acm.org/doi/10.1145/2034773.2034801</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">date</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-constant hl-other hl-timestamp hl-yaml">2024<span class="hl-punctuation hl-separator hl-date hl-yaml">-</span>04<span class="hl-punctuation hl-separator hl-date hl-yaml">-</span>29</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">serial-number</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">doi</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">10.1145/2034773.2034801</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">isbn</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">978-1-4503-0865-6</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">parent</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">type</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">proceedings</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">title</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Proceedings of the 16th {ACM} {SIGPLAN} international conference on {Functional} programming</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">publisher</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span>
+      <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">name</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">ACM</span>
+      <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">location</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Tokyo Japan</span>
+</span></code></pre></details>
+</div>
+</details>
+</div>
+<div class="helia-cite-files">Download: <a class="helia-link" href="mightParsingDerivativesFunctional2011.bib">mightParsingDerivativesFunctional2011.bib</a> · <a class="helia-link" href="mightParsingDerivativesFunctional2011.yml">mightParsingDerivativesFunctional2011.yml</a></div>
+</div>
+</div>
+</details>
+</div>
+<div class="helia-reference-cited-by helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">Cited by (2)</span></summary>
+<div class="helia-group-body">
+<section class="helia-transclusion" data-entry="lasserCoStarVerifiedALL2021" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="lasserCoStarVerifiedALL2021"><span class="helia-title">CoStar: A verified ALL(*) parser</span>&nbsp;<a class="helia-slug" href="lasserCoStarVerifiedALL2021.html">lasserCoStarVerifiedALL2021</a><span class="helia-byline"><span class="helia-entry-link" data-entry="pldi">PLDI</span> · 2021</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="lasserCoStarVerifiedALL2021" data-kind="reference">
+<div class="helia-abstract">Parsers are security-critical components of many software systems, and verified parsing therefore has a key role to play in secure software design. However, existing verified parsers for context-free grammars are limited in their expressiveness, termination properties, or performance characteristics. They are only compatible with a restricted class of grammars, they are not guaranteed to terminate on all inputs, or they are not designed to be performant on grammars for real-world programming languages and data formats. In this work, we present CoStar, a verified parser that addresses these limitations. The parser is implemented with the Coq Proof Assistant and is based on the ALL(*) parsing algorithm. CoStar is sound and complete for all non-left-recursive grammars; it produces a correct parse tree for its input whenever such a tree exists, and it correctly detects ambiguous inputs. CoStar also provides strong termination guarantees; it terminates without error on all inputs when applied to a non-left-recursive grammar. Finally, CoStar achieves linear-time performance on a range of unambiguous grammars for commonly used languages and data formats.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/3453483.3454053">DOI</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="EdelmannZippy2020" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="EdelmannZippy2020"><span class="helia-title">Zippy LL(1) parsing with derivatives</span>&nbsp;<a class="helia-slug" href="EdelmannZippy2020.html">EdelmannZippy2020</a><span class="helia-byline"><span class="helia-entry-link" data-entry="pldi">PLDI</span> · 2020</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="EdelmannZippy2020" data-kind="reference">
+<div class="helia-abstract">In this paper, we present an efficient, functional, and formally verified parsing algorithm for LL(1) context-free expressions based on the concept of derivatives of formal languages. Parsing with derivatives is an elegant parsing technique, which, in the general case, suffers from cubic worst-case time complexity and slow performance in practice. We specialise the parsing with derivatives algorithm to LL(1) context-free expressions, where alternatives can be chosen given a single token of lookahead. We formalise the notion of LL(1) expressions and show how to efficiently check the LL(1) property. Next, we present a novel linear-time parsing with derivatives algorithm for LL(1) expressions operating on a zipper-inspired data structure. We prove the algorithm correct in Coq and present an implementation as a part of Scallion, a parser combinators framework in Scala with enumeration and pretty printing capabilities.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/3385412.3385992">DOI</a></span></div>
+</div>
+</div>
+</details>
+</section>
+</div>
+</details>
+</div>
+<div class="helia-reference-cites helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">Cites 19 works (5 here)</span></summary>
+<div class="helia-group-body">
+<div class="helia-reference-cites-here helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">With notes (5)</span></summary>
+<div class="helia-group-body">
+<section class="helia-transclusion" data-entry="danielssonTotalParserCombinators2010" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="danielssonTotalParserCombinators2010"><span class="helia-title">Total parser combinators</span>&nbsp;<a class="helia-slug" href="danielssonTotalParserCombinators2010.html">danielssonTotalParserCombinators2010</a><span class="helia-byline"><span class="helia-entry-link" data-entry="icfp">ICFP</span> · 2010</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="danielssonTotalParserCombinators2010" data-kind="reference">
+<div class="helia-abstract">
+<p>A monadic parser combinator library which guarantees termination of parsing, while still allowing many forms of left recursion, is described. The library’s interface is similar to those of many other parser combinator libraries, with two important differences: one is that the interface clearly specifies which parts of the constructed parsers may be infinite, and which parts have to be finite, using dependent types and a combination of induction and coinduction; and the other is that the parser type is unusually informative.</p>
+<p>The library comes with a formal semantics, using which it is proved that the parser combinators are as expressive as possible. The implementation is supported by a machine-checked correctness proof.</p>
+</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/1863543.1863585">DOI</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="owensRegularexpressionDerivativesReexamined2009" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="owensRegularexpressionDerivativesReexamined2009"><span class="helia-title">Regular-expression derivatives re-examined</span>&nbsp;<a class="helia-slug" href="owensRegularexpressionDerivativesReexamined2009.html">owensRegularexpressionDerivativesReexamined2009</a><span class="helia-byline"><span class="helia-entry-link" data-entry="jfp">JFP</span> · 2009</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="owensRegularexpressionDerivativesReexamined2009" data-kind="reference">
+<div class="helia-abstract">Abstract Regular-expression derivatives are an old, but elegant, technique for compiling regular expressions to deterministic finite-state machines. It easily supports extending the regular-expression operators with boolean operations, such as intersection and complement. Unfortunately, this technique has been lost in the sands of time and few computer scientists are aware of it. In this paper, we reexamine regular-expression derivatives and report on our experiences in the context of two different functional-language implementations. The basic implementation is simple and we show how to extend it to handle large character sets (e.g., Unicode). We also show that the derivatives approach leads to smaller state machines than the traditional algorithm given by McNaughton and Yamada.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1017/s0956796808007090">DOI</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="Earley1970" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="Earley1970"><span class="helia-title">An efficient context-free parsing algorithm</span>&nbsp;<a class="helia-slug" href="Earley1970.html">Earley1970</a><span class="helia-byline"><span class="helia-entry-link" data-entry="cacm">CACM</span> · 1970</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="Earley1970" data-kind="reference">
+<div class="helia-abstract">A parsing algorithm which seems to be the most efficient general context-free algorithm known is described. It is similar to both Knuth’s LR(k) algorithm and the familiar top-down algorithm. It has a time bound proportional to n3 (where n is the length of the string being parsed) in general; it has an n2 bound for unambiguous grammars; and it runs in linear time on a large class of grammars, which seems to include most practical context-free programming language grammars. In an empirical comparison it appears to be superior to the top-down and bottom-up algorithms studied by Griffiths and Petrick.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/362007.362035">DOI</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="KNUTH1965607" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="KNUTH1965607"><span class="helia-title">On the translation of languages from left to right</span>&nbsp;<a class="helia-slug" href="KNUTH1965607.html">KNUTH1965607</a><span class="helia-byline"><span class="helia-entry-link" data-entry="iandc">I&amp;C</span> · 1965</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="KNUTH1965607" data-kind="reference">
+<div class="helia-abstract">There has been much recent interest in languages whose grammar is sufficiently simple that an efficient left-to-right parsing algorithm can be mechanically produced from the grammar. In this paper, we define LR(k) grammars, which are perhaps the most general ones of this type, and they provide the basis for understanding all of the special tricks which have been used in the construction of parsing algorithms for languages with simple structure, e.g. algebraic languages. We give algorithms for deciding if a given grammar satisfies the LR(k) condition, for given k, and also give methods for generating recognizes for LR(k) grammars. It is shown that the problem of whether or not a grammar is LR(k) for some k is undecidable, and the paper concludes by establishing various connections between LR(k) grammars and deterministic languages. In particular, the LR(k) condition is a natural analogue, for grammars, of the deterministic condition, for languages.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1016/s0019-9958(65)90426-2">DOI</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="brzozowskiDerivativesRegularExpressions1964" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="brzozowskiDerivativesRegularExpressions1964"><span class="helia-title">Derivatives of Regular Expressions</span>&nbsp;<a class="helia-slug" href="brzozowskiDerivativesRegularExpressions1964.html">brzozowskiDerivativesRegularExpressions1964</a><span class="helia-byline"><span class="helia-entry-link" data-entry="jacm">JACM</span> · 1964</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="brzozowskiDerivativesRegularExpressions1964" data-kind="reference">
+<div class="helia-abstract">Kleene’s regular expressions, which can be used for describing sequential circuits, were defined using three operators (union, concatenation and iterate) on sets of sequences. Word descriptions of problems can be more easily put in the regular expression language if the language is enriched by the inclusion of other logical operations. However, in the problem of converting the regular expression description to a state diagram, the existing methods either cannot handle expressions with additional operators, or are made quite complicated by the presence of such operators.In this paper the notion of a derivative of a regular expression is introduced and the properties of derivatives are discussed. This leads, in a very natural way, to the construction of a state diagram from a regular expression containing any number of logical operators.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/321239.321249">DOI</a></span></div>
+</div>
+</div>
+</details>
+</section>
+</div>
+</details>
+</div>
+<div class="helia-reference-cites-away helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">External (14)</span></summary>
+<div class="helia-group-body">
+<ul>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-642-03153-3_6">Combinator Parsing: A Short Tutorial</a> (2009)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/1328408.1328424">Packrat parsers can support left recursion</a> (2008)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-540-71322-7_9">Grammar analysis and parsing by abstract interpretation</a> (2006)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1016/s0304-3975(02)00034-8">Parsing as abstract interpretation of grammar semantics</a> (2002)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/581478.581483">Packrat parsing: simple, powerful, lazy, linear time</a> (2002)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/10704973_4">Designing and Implementing Combinator Languages</a> (1999)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.3115/980491.980564">LR parsers for natural languages</a> (1984)</li>
+<li>Selected Writings on Computing: A Personal Perspective (1982)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/512927.512931">Top down operator precedence</a> (1973)</li>
+<li>Programming languages and their compilers: Preliminary notes (1970)</li>
+<li>Practical translators for LR(k) languages (1969)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1016/s0019-9958(67)80007-x">Recognition and parsing of context-free languages in time n3</a> (1967)</li>
+<li>An efficient recognition and syntax-analysis algorithm for context-free languages (1965)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/321172.321179">Syntactic Analysis and Operator Precedence</a> (1963)</li>
+</ul>
+</div>
+</details>
+</div>
+</div>
+</details>
+</div>
+</article>
+<div class="helia-identity"><span class="helia-id">mightParsingDerivativesFunctional2011</span> <span class="helia-kind">reference</span> <span class="helia-path">entries/refs/mightParsingDerivativesFunctional2011/mightParsingDerivativesFunctional2011.hel</span></div>
+</div>
+</body>
+</html>

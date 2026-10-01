@@ -1,0 +1,1 @@
+heliaSearchData("d/foundations-and-trends-in-programming-languages",{"id":"foundations-and-trends-in-programming-languages","title":"Foundations and Trends® in Programming Languages","kind":"venue","tags":[],"authors":[],"venue":[],"date":null,"url":"foundations-and-trends-in-programming-languages.html","headings":[],"body":""});

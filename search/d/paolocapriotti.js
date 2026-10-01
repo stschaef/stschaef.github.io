@@ -1,0 +1,1 @@
+heliaSearchData("d/paolocapriotti",{"id":"paolocapriotti","title":"Paolo Capriotti","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"paolocapriotti.html","headings":[],"body":""});

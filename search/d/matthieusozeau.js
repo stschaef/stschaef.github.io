@@ -1,0 +1,1 @@
+heliaSearchData("d/matthieusozeau",{"id":"matthieusozeau","title":"Matthieu Sozeau","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"matthieusozeau.html","headings":[],"body":""});

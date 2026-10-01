@@ -1,0 +1,1 @@
+heliaSearchData("d/element-of-presheaf",{"id":"element-of-presheaf","title":"Element of a Presheaf","kind":"definition","tags":["category-theory","presheaf"],"authors":[],"venue":[],"date":"2025-08-25T15:50:15","url":"element-of-presheaf.html","headings":[],"body":"An element of a presheaf P at an object c is an element x of the set P c ."});

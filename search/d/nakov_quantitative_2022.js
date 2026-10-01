@@ -1,0 +1,1 @@
+heliaSearchData("d/nakov_quantitative_2022",{"id":"nakov_quantitative_2022","title":"Quantitative Polynomial Functors","kind":"reference","tags":["polynomial-functors","type-theory"],"authors":["Fredrik Nordvall Forsberg","Georgi Nakov"],"venue":["TYPES","Types for Proofs and Programs"],"date":null,"url":"nakov_quantitative_2022.html","headings":[],"body":""});

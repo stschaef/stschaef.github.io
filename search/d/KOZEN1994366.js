@@ -1,0 +1,1 @@
+heliaSearchData("d/KOZEN1994366",{"id":"KOZEN1994366","title":"A Completeness Theorem for Kleene Algebras and the Algebra of Regular Events","kind":"reference","tags":["kleene-algebra"],"authors":["Dexter Kozen"],"venue":["I&C","Information and Computation"],"date":null,"url":"KOZEN1994366.html","headings":[],"body":""});

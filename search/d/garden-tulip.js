@@ -1,0 +1,1 @@
+heliaSearchData("d/garden-tulip",{"id":"garden-tulip","title":"Garden tulip","kind":"glyph-art","tags":["ornament","ornament-garden"],"authors":["Steven Schaefer"],"venue":[],"date":null,"url":"garden-tulip.html","headings":[],"body":"A red tulip between two leaves. A small piece for the garden margin patterns."});

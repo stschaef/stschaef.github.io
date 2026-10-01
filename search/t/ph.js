@@ -1,0 +1,1 @@
+heliaSearchData("t/ph",{"phd":[404,1],"phi":[375,6,177,1,1,7],"phil":[617,128],"philip":[12,32,37,32,12,32,235,32,229,32,194,128,1,128],"philipsaville":[719,32],"philipscott":[720,32],"philosophia":[721,160],"philosophical":[722,160],"philosophy":[11,128],"physic":[496,160],"physical":[722,160]});

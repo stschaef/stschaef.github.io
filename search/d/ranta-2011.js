@@ -1,0 +1,1 @@
+heliaSearchData("d/ranta-2011",{"id":"ranta-2011","title":"Grammatical framework: Programming with multilingual grammars","kind":"reference","tags":["categorial-grammar","parsing"],"authors":["Aarne Ranta"],"venue":[],"date":null,"url":"ranta-2011.html","headings":[],"body":""});

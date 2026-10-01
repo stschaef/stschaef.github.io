@@ -1,0 +1,1 @@
+heliaSearchData("d/university-of-michigan",{"id":"university-of-michigan","title":"University of Michigan","kind":"institution","tags":[],"authors":[],"venue":[],"date":null,"url":"university-of-michigan.html","headings":[],"body":""});

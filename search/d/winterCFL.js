@@ -1,0 +1,1 @@
+heliaSearchData("d/winterCFL",{"id":"winterCFL","title":"Context-Free Languages, Coalgebraically","kind":"reference","tags":["coalgebra","parsing"],"authors":["Jan Rutten","Joost Winter","Marcello M. Bonsangue"],"venue":["CALCO","Conference on Algebra and Coalgebra in Computer Science"],"date":null,"url":"winterCFL.html","headings":[],"body":""});

@@ -1,0 +1,1 @@
+heliaSearchData("d/new_dissertation_2020",{"id":"new_dissertation_2020","title":"A Semantic Foundation for Sound Gradual Typing","kind":"reference","tags":["gradual-typing","thesis","type-theory"],"authors":["Max S. New"],"venue":[],"date":null,"url":"new_dissertation_2020.html","headings":[],"body":""});

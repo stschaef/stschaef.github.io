@@ -1,0 +1,1 @@
+heliaSearchData("d/peterlumsdaine",{"id":"peterlumsdaine","title":"Peter LeFanu Lumsdaine","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"peterlumsdaine.html","headings":[],"body":""});

@@ -1,0 +1,1 @@
+heliaSearchData("d/kleene-star",{"id":"kleene-star","title":"Kleene Star in Dependent Lambek Calculus","kind":"definition","tags":["intrinsically-correct","kleene-algebra","lambekd"],"authors":[],"venue":[],"date":"2025-02-03T19:03:14","url":"kleene-star.html","headings":[],"body":"For a grammar A , the Kleene star A^* is defined as a least-fixed point, mu x. ϵ ⊕ (A ⊗ x)"});

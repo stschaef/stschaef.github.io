@@ -1,0 +1,1 @@
+heliaSearchData("d/kaposi_pujet_2025",{"id":"kaposi_pujet_2025","title":"Type Theory in Type Theory using a Strictified Syntax","kind":"reference","tags":["metatheory"],"authors":["Ambrus Kaposi","Loïc Pujet"],"venue":["ICFP","International Conference on Functional Programming"],"date":null,"url":"kaposi_pujet_2025.html","headings":[],"body":""});

@@ -1,0 +1,1 @@
+heliaSearchData("t/qu",{"quad":[230,2,69,1,5,1,248,1,120,1,161,1,62,2],"quantification":[128,1,241,128,1,128],"quantified":[10,128,230,1,144,1],"quantifier":[128,1,611,1],"quantify":[739,1],"quantitative":[626,160],"quilt":[693,1],"quine":[383,1,1,5],"quite":[923,1],"quiver":[750,161],"quote":[299,6,5,6],"quotient":[48,128,267,1],"quotiented":[315,1]});

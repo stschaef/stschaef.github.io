@@ -1,0 +1,1 @@
+heliaSearchData("d/mellies_zeilberger_2013",{"id":"mellies_zeilberger_2013","title":"Type refinement and monoidal closed bifibrations","kind":"reference","tags":["category-theory","refinement-types","substructural"],"authors":["Noam Zeilberger","Paul-André Melliès"],"venue":[],"date":null,"url":"mellies_zeilberger_2013.html","headings":[],"body":""});

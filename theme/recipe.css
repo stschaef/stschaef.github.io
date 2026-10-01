@@ -1,0 +1,213 @@
+/* Project-level theme override for the minimal fixture: styles the `recipe`
+ * kind (min-0003) — its page layout (facts row, ingredients card, numbered
+ * method) and its transcluded card. Listed under [theme] css in helia.toml,
+ * so it loads after the base theme. Only group/span roles are used
+ * (`helia-recipe-*`), never raw HTML. */
+
+:root {
+  --recipe-accent: #b4541a;
+  --recipe-accent-soft: rgba(180, 84, 26, 0.09);
+  --recipe-card-bg: #fffaf5;
+  --recipe-rule: #ecd9c8;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --recipe-accent: #f0a066;
+    --recipe-accent-soft: rgba(240, 160, 102, 0.12);
+    --recipe-card-bg: #211c18;
+    --recipe-rule: #4a3a2e;
+  }
+}
+
+:root[data-theme="dark"] {
+  --recipe-accent: #f0a066;
+  --recipe-accent-soft: rgba(240, 160, 102, 0.12);
+  --recipe-card-bg: #211c18;
+  --recipe-rule: #4a3a2e;
+}
+
+/* ---------------------------------------------------------------- facts row */
+
+.helia-recipe-facts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0;
+  margin: 0.4em 0 1.2em;
+  border-top: 1px solid var(--recipe-rule);
+  border-bottom: 1px solid var(--recipe-rule);
+}
+
+.helia-recipe-fact {
+  display: flex;
+  flex-direction: column;
+  padding: 0.5em 1.2em 0.5em 0;
+  margin-right: 1.2em;
+  border-right: 1px solid var(--recipe-rule);
+}
+
+.helia-recipe-fact:last-child {
+  border-right: 0;
+  margin-right: 0;
+}
+
+.helia-recipe-fact-label {
+  font-size: 0.72em;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--helia-muted);
+}
+
+.helia-recipe-fact-value {
+  font-weight: 700;
+  font-size: 1.05em;
+  font-variant-numeric: tabular-nums;
+}
+
+.helia-recipe-source {
+  margin: -0.6em 0 1.2em;
+  color: var(--helia-muted);
+  font-style: italic;
+  font-size: 0.95em;
+}
+
+/* ---------------------------------------------------------------- page body */
+
+.helia-recipe {
+  container-type: inline-size;
+}
+
+@container (min-width: 40em) {
+  .helia-recipe {
+    display: grid;
+    grid-template-columns: minmax(15em, 1fr) 1.7fr;
+    gap: 0 2em;
+    align-items: start;
+  }
+}
+
+.helia-recipe > .helia-recipe-ingredients {
+  background: var(--recipe-card-bg);
+  border: 1px solid var(--recipe-rule);
+  border-radius: calc(var(--helia-radius) * 2);
+  padding: 0.2em 1.1em 0.6em 1.6em;
+  margin: 0.6em 0 1.4em;
+}
+
+.helia-recipe-yield {
+  display: block;
+  font-size: 0.85em;
+  color: var(--helia-muted);
+  margin-top: -0.2em;
+}
+
+.helia-recipe-ingredients ul {
+  list-style: none;
+  padding: 0;
+  margin: 0.4em 0 0;
+}
+
+.helia-recipe-ingredients li {
+  padding: 0.35em 0;
+  border-bottom: 1px dashed var(--recipe-rule);
+}
+
+.helia-recipe-ingredients li:last-child {
+  border-bottom: 0;
+}
+
+.helia-recipe-qty {
+  display: inline-block;
+  min-width: 4.2em;
+  font-weight: 700;
+  color: var(--recipe-accent);
+  font-variant-numeric: tabular-nums;
+}
+
+.helia-recipe-note {
+  color: var(--helia-muted);
+  font-size: 0.92em;
+}
+
+/* Numbered method steps. */
+
+.helia-recipe-method ol {
+  list-style: none;
+  counter-reset: helia-step;
+  padding: 0;
+  margin: 0.5em 0 1em;
+}
+
+.helia-recipe-method ol > li {
+  counter-increment: helia-step;
+  position: relative;
+  padding: 0.1em 0 0.9em 2.6em;
+  min-height: 2em;
+}
+
+.helia-recipe-method ol > li::before {
+  content: counter(helia-step);
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 1.8em;
+  height: 1.8em;
+  line-height: 1.8em;
+  text-align: center;
+  border-radius: 50%;
+  background: var(--recipe-accent-soft);
+  color: var(--recipe-accent);
+  font-weight: 700;
+  font-size: 0.95em;
+  font-variant-numeric: tabular-nums;
+}
+
+/* ---------------------------------------------------------------- transcluded card */
+
+.helia-recipe-card {
+  container-type: inline-size;
+  background: var(--recipe-card-bg);
+  border: 1px solid var(--recipe-rule);
+  border-left: 4px solid var(--recipe-accent);
+  border-radius: calc(var(--helia-radius) * 1.5);
+  padding: 0.3em 1em 0.4em;
+  margin: 0.2em 0 0.8em;
+}
+
+.helia-recipe-card .helia-recipe-facts {
+  margin: 0.2em 0 0.6em;
+  border-top: 0;
+  font-size: 0.9em;
+}
+
+.helia-recipe-card .helia-recipe-fact {
+  padding: 0.25em 0.9em 0.25em 0;
+  margin-right: 0.9em;
+}
+
+.helia-recipe-label {
+  display: block;
+  font-size: 0.75em;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--recipe-accent);
+}
+
+.helia-recipe-card .helia-recipe-ingredients li {
+  padding: 0.15em 0;
+  font-size: 0.95em;
+}
+
+.helia-recipe-card .helia-recipe-method ol > li {
+  padding-bottom: 0.5em;
+  font-size: 0.95em;
+}
+
+@container (min-width: 34em) {
+  .helia-recipe-card-cols {
+    display: grid;
+    grid-template-columns: minmax(12em, 1fr) 1.8fr;
+    gap: 0 1.6em;
+  }
+}

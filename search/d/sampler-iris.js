@@ -1,0 +1,1 @@
+heliaSearchData("d/sampler-iris",{"id":"sampler-iris","title":"Sampler iris","kind":"glyph-art","tags":["ornament","ornament-sampler"],"authors":["Steven Schaefer"],"venue":[],"date":null,"url":"sampler-iris.html","headings":[],"body":"A cross-stitch motif for the sampler margin pattern."});

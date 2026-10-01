@@ -1,0 +1,1 @@
+heliaSearchData("d/mcbrideFirstorderUnification2003",{"id":"mcbrideFirstorderUnification2003","title":"First-order unification by structural recursion","kind":"reference","tags":["unification"],"authors":["Conor McBride"],"venue":["JFP","Journal of Functional Programming"],"date":null,"url":"mcbrideFirstorderUnification2003.html","headings":[],"body":""});

@@ -1,0 +1,1 @@
+heliaSearchData("d/lambek58",{"id":"lambek58","title":"The mathematics of sentence structure","kind":"reference","tags":["categorial-grammar"],"authors":["Joachim Lambek"],"venue":["Amer. Math. Monthly","The American Mathematical Monthly"],"date":null,"url":"lambek58.html","headings":[],"body":""});

@@ -1,0 +1,1 @@
+heliaSearchData("d/sampler-fox",{"id":"sampler-fox","title":"Sampler fox","kind":"glyph-art","tags":["ornament","ornament-sampler"],"authors":["Steven Schaefer"],"venue":[],"date":null,"url":"sampler-fox.html","headings":[],"body":"A cross-stitch motif for the sampler margin pattern."});

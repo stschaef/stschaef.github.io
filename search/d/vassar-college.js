@@ -1,0 +1,1 @@
+heliaSearchData("d/vassar-college",{"id":"vassar-college","title":"Vassar College","kind":"institution","tags":[],"authors":[],"venue":[],"date":null,"url":"vassar-college.html","headings":[],"body":""});

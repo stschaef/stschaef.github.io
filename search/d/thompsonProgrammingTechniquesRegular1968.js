@@ -1,0 +1,1 @@
+heliaSearchData("d/thompsonProgrammingTechniquesRegular1968",{"id":"thompsonProgrammingTechniquesRegular1968","title":"Programming Techniques: Regular expression search algorithm","kind":"reference","tags":["parsing"],"authors":["Ken Thompson"],"venue":["CACM","Communications of the ACM"],"date":null,"url":"thompsonProgrammingTechniquesRegular1968.html","headings":[],"body":""});

@@ -1,0 +1,1 @@
+heliaSearchData("d/new_licata_2018_fscd",{"id":"new_licata_2018_fscd","title":"Call-by-name Gradual Type Theory","kind":"reference","tags":["gradual-typing","type-theory"],"authors":["Daniel R. Licata","Max S. New"],"venue":["FSCD","Formal Structures for Computation and Deduction"],"date":null,"url":"new_licata_2018_fscd.html","headings":[],"body":""});

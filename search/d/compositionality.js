@@ -1,0 +1,1 @@
+heliaSearchData("d/compositionality",{"id":"compositionality","title":"Compositionality","kind":"venue","tags":[],"authors":[],"venue":[],"date":null,"url":"compositionality.html","headings":[],"body":""});

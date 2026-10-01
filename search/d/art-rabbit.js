@@ -1,0 +1,1 @@
+heliaSearchData("d/art-rabbit",{"id":"art-rabbit","title":"Rabbit","kind":"glyph-art","tags":["animal","ornament","ornament-art"],"authors":["Steven Schaefer"],"venue":[],"date":null,"url":"art-rabbit.html","headings":[],"body":"A rabbit crouched in profile, long ears raised with their pink linings, and a cotton tail."});

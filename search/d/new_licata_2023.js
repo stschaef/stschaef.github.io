@@ -1,0 +1,1 @@
+heliaSearchData("d/new_licata_2023",{"id":"new_licata_2023","title":"A Formal Logic for Formal Category Theory","kind":"reference","tags":["category-theory","type-theory"],"authors":["Daniel R. Licata","Max S. New"],"venue":["FoSSaCS","Foundations of Software Science and Computation Structures"],"date":null,"url":"new_licata_2023.html","headings":[],"body":""});

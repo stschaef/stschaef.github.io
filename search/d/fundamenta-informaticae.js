@@ -1,0 +1,1 @@
+heliaSearchData("d/fundamenta-informaticae",{"id":"fundamenta-informaticae","title":"Fundamenta Informaticae","kind":"venue","tags":[],"authors":[],"venue":[],"date":null,"url":"fundamenta-informaticae.html","headings":[],"body":""});

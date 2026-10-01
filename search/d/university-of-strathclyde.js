@@ -1,0 +1,1 @@
+heliaSearchData("d/university-of-strathclyde",{"id":"university-of-strathclyde","title":"University of Strathclyde","kind":"institution","tags":[],"authors":[],"venue":[],"date":null,"url":"university-of-strathclyde.html","headings":[],"body":""});

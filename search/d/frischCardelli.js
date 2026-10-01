@@ -1,0 +1,1 @@
+heliaSearchData("d/frischCardelli",{"id":"frischCardelli","title":"Greedy regular expression matching","kind":"reference","tags":["parsing"],"authors":["Alain Frisch","Luca Cardelli"],"venue":["ICALP","International Colloquium on Automata, Languages and Programming"],"date":null,"url":"frischCardelli.html","headings":[],"body":""});

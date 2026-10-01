@@ -1,0 +1,1 @@
+heliaSearchData("d/danielrosenkrantz",{"id":"danielrosenkrantz","title":"Daniel J. Rosenkrantz","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"danielrosenkrantz.html","headings":[],"body":""});

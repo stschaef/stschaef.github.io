@@ -1,0 +1,1 @@
+heliaSearchData("d/coleschlesinger",{"id":"coleschlesinger","title":"Cole Schlesinger","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"coleschlesinger.html","headings":[],"body":""});

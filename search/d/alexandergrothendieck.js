@@ -1,0 +1,1 @@
+heliaSearchData("d/alexandergrothendieck",{"id":"alexandergrothendieck","title":"Alexander Grothendieck","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"alexandergrothendieck.html","headings":[],"body":""});

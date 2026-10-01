@@ -1,0 +1,1 @@
+heliaSearchData("d/amorim_lam_2022",{"id":"amorim_lam_2022","title":"Distribution Theoretic Semantics for Non-Smooth Differentiable Programming","kind":"reference","tags":["denotational-semantics","differentiable-programming","preprint"],"authors":["Christopher Lam","Pedro H. Azevedo de Amorim"],"venue":["arXiv"],"date":null,"url":"amorim_lam_2022.html","headings":[],"body":""});

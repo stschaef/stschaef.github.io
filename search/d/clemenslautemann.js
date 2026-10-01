@@ -1,0 +1,1 @@
+heliaSearchData("d/clemenslautemann",{"id":"clemenslautemann","title":"Clemens Lautemann","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"clemenslautemann.html","headings":[],"body":""});

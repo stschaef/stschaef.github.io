@@ -1,0 +1,1 @@
+heliaSearchData("d/art-cherry",{"id":"art-cherry","title":"Cherries","kind":"glyph-art","tags":["fruit","ornament","ornament-art"],"authors":["Steven Schaefer"],"venue":[],"date":null,"url":"art-cherry.html","headings":[],"body":"A pair of cherries hanging from joined stems, with a single leaf at the knot."});

@@ -1,0 +1,1 @@
+heliaSearchData("d/lambek_scott_1986",{"id":"lambek_scott_1986","title":"Introduction to Higher-Order Categorical Logic","kind":"reference","tags":["category-theory","type-theory"],"authors":["Joachim Lambek","Philip Scott"],"venue":[],"date":null,"url":"lambek_scott_1986.html","headings":[],"body":""});

@@ -1,0 +1,1 @@
+heliaSearchData("d/ire-transactions-on-information-theory",{"id":"ire-transactions-on-information-theory","title":"IRE Transactions on Information Theory","kind":"venue","tags":[],"authors":[],"venue":[],"date":null,"url":"ire-transactions-on-information-theory.html","headings":[],"body":""});

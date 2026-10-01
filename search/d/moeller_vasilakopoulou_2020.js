@@ -1,0 +1,1 @@
+heliaSearchData("d/moeller_vasilakopoulou_2020",{"id":"moeller_vasilakopoulou_2020","title":"Monoidal Grothendieck construction","kind":"reference","tags":["category-theory"],"authors":["Christina Vasilakopoulou","Joe Moeller"],"venue":["TAC","Theory and Applications of Categories"],"date":null,"url":"moeller_vasilakopoulou_2020.html","headings":[],"body":""});

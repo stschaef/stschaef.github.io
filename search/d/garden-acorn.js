@@ -1,0 +1,1 @@
+heliaSearchData("d/garden-acorn",{"id":"garden-acorn","title":"Garden acorn","kind":"glyph-art","tags":["ornament","ornament-garden"],"authors":["Steven Schaefer"],"venue":[],"date":null,"url":"garden-acorn.html","headings":[],"body":"An acorn. A small piece for the garden margin patterns."});

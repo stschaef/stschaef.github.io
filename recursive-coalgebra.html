@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>Recursive coalgebra</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Ctext y=%22.9em%22 font-size=%2290%22%3E%F0%9F%8C%BB%3C/text%3E%3C/svg%3E">
+<meta name="generator" content="helia">
+<script src="helia/theme-version.js"></script>
+<script src="theme/folio-early.js"></script>
+<link rel="stylesheet" href="helia/theme.css">
+<link rel="stylesheet" href="helia/highlight.css">
+<link rel="stylesheet" href="helia/search.css">
+<link rel="stylesheet" href="theme/katex.css">
+<link rel="stylesheet" href="theme/recipe.css">
+<link rel="stylesheet" href="theme/site.css">
+<link rel="stylesheet" href="theme/folio.css">
+<script defer src="helia/runtime.js"></script>
+<script defer src="helia/search.js"></script>
+<script defer src="theme/glyphcraft.js"></script>
+<script defer src="theme/glyphart.js"></script>
+<script defer src="theme/glyphgen.js"></script>
+<script defer src="theme/ornament.js"></script>
+<script defer src="theme/folio.js"></script>
+<script defer src="theme/portrait.js"></script>
+</head>
+<body>
+<nav class="helia-topbar"><a class="helia-home" href="home.html">Steven Schaefer</a><ul class="helia-nav-links"><li><a href="stevenschaefer.html">About Me</a></li><li><a href="research.html">Research</a></li><li><a href="new.html">New</a></li></ul><button type="button" class="helia-search-button" aria-label="Search (/ or Ctrl+K)" aria-haspopup="dialog"><span class="helia-search-icon">⌕</span><span class="helia-search-label">Search</span><kbd class="helia-search-key">/</kbd></button></nav>
+<div class="helia-page" data-kind="definition">
+<article class="helia-article">
+<header class="helia-header" data-entry="recursive-coalgebra" data-kind="definition">
+<h2 class="helia-heading"><span class="helia-taxon">Definition.</span> Recursive coalgebra</h2>
+<div class="helia-meta"><span class="helia-tags"><span class="helia-tag" data-tag="category-theory"><span class="helia-entry-link helia-unavailable">category-theory</span></span> <span class="helia-tag" data-tag="F-coalgebra">F-coalgebra</span> <span class="helia-tag" data-tag="F-algebra">F-algebra</span> <span class="helia-tag" data-tag="well-founded">well-founded</span></span></div>
+</header>
+<div class="helia-body">
+<p>Fix an endofunctor <span class="helia-math helia-math-inline helia-mathml"><math><mi>𝐹</mi><mo lspace="0.2777777777777778em" rspace="0.2777777777777778em">:</mo><mi>𝒞︀</mi><mo stretchy="false">→</mo><mi>𝒞︀</mi></math></span>. A <a class="helia-entry-link" href="coalgebras-displayed.html" data-entry="coalgebras-displayed">coalgebra</a> <span class="helia-math helia-math-inline helia-mathml"><math><mi>𝛾</mi><mo lspace="0.2777777777777778em" rspace="0.2777777777777778em">:</mo><mi>𝑋</mi><mo stretchy="false">→</mo><mi>𝐹</mi><mi>𝑋</mi></math></span> is <em>recursive</em> when for every <a class="helia-entry-link" href="algebras-displayed.html" data-entry="algebras-displayed">algebra</a> <span class="helia-math helia-math-inline helia-mathml"><math><mi>𝛼</mi><mo lspace="0.2777777777777778em" rspace="0.2777777777777778em">:</mo><mi>𝐹</mi><mi>𝐵</mi><mo stretchy="false">→</mo><mi>𝐵</mi></math></span> there is exactly one <a class="helia-entry-link" href="hylomorphism.html" data-entry="hylomorphism">hylomorphism</a> <span class="helia-math helia-math-inline helia-mathml"><math><mi>ℎ</mi><mo lspace="0.2777777777777778em" rspace="0.2777777777777778em">:</mo><mi>𝑋</mi><mo stretchy="false">→</mo><mi>𝐵</mi></math></span> from <span class="helia-math helia-math-inline helia-mathml"><math><mi>𝛾</mi></math></span> to <span class="helia-math helia-math-inline helia-mathml"><math><mi>𝛼</mi></math></span>, that is, exactly one solution of</p>
+<div class="helia-math helia-math-display helia-mathml"><math display="block"><mi>ℎ</mi><mo>=</mo><mi>𝛾</mi><mo lspace="0.2222222222222222em" rspace="0.2222222222222222em">⋆</mo><mi>𝐹</mi><mi>ℎ</mi><mo lspace="0.2222222222222222em" rspace="0.2222222222222222em">⋆</mo><mi>𝛼</mi><mi>.</mi></math></div>
+<p>Equivalently, the functor <span class="helia-math helia-math-inline helia-mathml"><math><mtext>𝖧𝗒𝗅𝗈</mtext><mrow><mo stretchy="false">(</mo><mrow><mi>𝛾</mi><mo>,</mo><mo form="prefix">−</mo></mrow><mo stretchy="false">)</mo></mrow></math></span> of the <a class="helia-entry-link" href="hylomorphism-profunctor.html" data-entry="hylomorphism-profunctor">hylomorphism profunctor</a> is constantly a singleton.</p>
+<p>Recursiveness is a coalgebraic form of well-foundedness: <span class="helia-math helia-math-inline helia-mathml"><math><mi>𝛾</mi></math></span> decomposes each input into subproblems, and recursiveness says that every divide-and-conquer program built on this decomposition has a unique meaning, without mentioning an order on inputs. <cite class="helia-cite" data-entry="alexandruIntrinsicallyCorrectAlgorithms2025-preprint"><a href="alexandruIntrinsicallyCorrectAlgorithms2025-preprint.html">[1]</a></cite> use recursive coalgebras on categories of indexed families to obtain algorithms that are correct by the type of the map they compute.</p>
+<p><strong>Example.</strong> If <span class="helia-math helia-math-inline helia-mathml"><math><mrow><mo stretchy="false">(</mo><mrow><mi>𝜇</mi><mi>𝐹</mi><mo>,</mo><mtext>𝗂𝗇</mtext></mrow><mo stretchy="false">)</mo></mrow></math></span> is an <a class="helia-entry-link" href="initial-algebra.html" data-entry="initial-algebra">initial algebra</a>, then <span class="helia-math helia-math-inline helia-mathml"><math><mtext>𝗂𝗇</mtext></math></span> is invertible (Lambek’s lemma) and <span class="helia-math helia-math-inline helia-mathml"><math><msup><mtext>𝗂𝗇</mtext><mrow><mo>−</mo><mn>1</mn></mrow></msup><mo lspace="0.2777777777777778em" rspace="0.2777777777777778em">:</mo><mi>𝜇</mi><mi>𝐹</mi><mo stretchy="false">→</mo><mi>𝐹</mi><mrow><mo stretchy="false">(</mo><mrow><mi>𝜇</mi><mi>𝐹</mi></mrow><mo stretchy="false">)</mo></mrow></math></span> is a recursive coalgebra. Precomposing with the isomorphism <span class="helia-math helia-math-inline helia-mathml"><math><mtext>𝗂𝗇</mtext></math></span>, the equation <span class="helia-math helia-math-inline helia-mathml"><math><mi>ℎ</mi><mo>=</mo><msup><mtext>𝗂𝗇</mtext><mrow><mo>−</mo><mn>1</mn></mrow></msup><mo lspace="0.2222222222222222em" rspace="0.2222222222222222em">⋆</mo><mi>𝐹</mi><mi>ℎ</mi><mo lspace="0.2222222222222222em" rspace="0.2222222222222222em">⋆</mo><mi>𝛼</mi></math></span> is equivalent to <span class="helia-math helia-math-inline helia-mathml"><math><mtext>𝗂𝗇</mtext><mo lspace="0.2222222222222222em" rspace="0.2222222222222222em">⋆</mo><mi>ℎ</mi><mo>=</mo><mi>𝐹</mi><mi>ℎ</mi><mo lspace="0.2222222222222222em" rspace="0.2222222222222222em">⋆</mo><mi>𝛼</mi></math></span>, which says <span class="helia-math helia-math-inline helia-mathml"><math><mi>ℎ</mi></math></span> is an algebra map out of the initial algebra; there is exactly one, <span class="helia-math helia-math-inline helia-mathml"><math><mtext>𝖿𝗈𝗅𝖽</mtext><mspace width="0.1667em"/><mi>𝛼</mi></math></span>.</p>
+<p>The dual notion is a <a class="helia-entry-link" href="corecursive-algebra.html" data-entry="corecursive-algebra">corecursive algebra</a>.</p>
+</div>
+<div class="helia-references helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><h3 class="helia-heading">References</h3>
+</summary>
+<div class="helia-group-body">
+<div class="helia-references">
+<div class="helia-reference" data-key="alexandruIntrinsicallyCorrectAlgorithms2025-preprint" data-label="[1]">Intrinsically Correct Algorithms and Recursive Coalgebras <a class="helia-entry-link" href="alexandruIntrinsicallyCorrectAlgorithms2025-preprint.html" data-entry="alexandruIntrinsicallyCorrectAlgorithms2025-preprint">↗</a></div>
+</div>
+</div>
+</details>
+</div>
+<footer class="helia-footer">
+<div class="helia-backlinks helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><h3 class="helia-heading">Backlinks</h3>
+</summary>
+<div class="helia-group-body">
+<ul>
+<li><a class="helia-entry-link" href="corecursive-algebra.html" data-entry="corecursive-algebra">Corecursive algebra</a></li>
+<li><a class="helia-entry-link" href="hylomorphism-profunctor.html" data-entry="hylomorphism-profunctor">The hylomorphism profunctor</a></li>
+</ul>
+</div>
+</details>
+</div>
+<div class="helia-related helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><h3 class="helia-heading">Related</h3>
+</summary>
+<div class="helia-group-body">
+<ul>
+<li><a class="helia-entry-link" href="co-eilenberg-moore-displayed.html" data-entry="co-eilenberg-moore-displayed">The co-Eilenberg–Moore category as a displayed category</a></li>
+<li><a class="helia-entry-link" href="terminal-coalgebra.html" data-entry="terminal-coalgebra">Terminal coalgebra</a></li>
+<li><a class="helia-entry-link" href="direct-category.html" data-entry="direct-category">Direct categories</a></li>
+<li><a class="helia-entry-link" href="earlier-presheaf.html" data-entry="earlier-presheaf">Earlier on presheaves</a></li>
+<li><a class="helia-entry-link" href="eilenberg-moore-displayed.html" data-entry="eilenberg-moore-displayed">The Eilenberg–Moore category as a displayed category</a></li>
+<li><a class="helia-entry-link" href="later-family.html" data-entry="later-family">Later on families</a></li>
+<li><a class="helia-entry-link" href="later-presheaf.html" data-entry="later-presheaf">Later on presheaves</a></li>
+<li><a class="helia-entry-link" href="lob-family.html" data-entry="lob-family">Löb induction on families</a></li>
+<li><a class="helia-entry-link" href="lob-presheaf.html" data-entry="lob-presheaf">Löb induction for presheaves on a direct category</a></li>
+<li><a class="helia-entry-link" href="locally-contractive-functor.html" data-entry="locally-contractive-functor">Locally contractive endofunctors</a></li>
+<li><a class="helia-entry-link" href="predecessors-simplify-later.html" data-entry="predecessors-simplify-later">Predecessors simplify later</a></li>
+<li><a class="helia-entry-link" href="well-founded-poset-as-thin.html" data-entry="well-founded-poset-as-thin">Well-founded posets are thin direct categories</a></li>
+</ul>
+</div>
+</details>
+</div>
+</footer>
+</article>
+<div class="helia-identity"><span class="helia-id">recursive-coalgebra</span> <span class="helia-kind">definition</span> <span class="helia-path">entries/category/recursive-coalgebra.hel</span></div>
+</div>
+</body>
+</html>

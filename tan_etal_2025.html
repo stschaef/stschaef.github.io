@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>Towards Computational UIP in Cubical Agda</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Ctext y=%22.9em%22 font-size=%2290%22%3E%F0%9F%8C%BB%3C/text%3E%3C/svg%3E">
+<meta name="generator" content="helia">
+<script src="helia/theme-version.js"></script>
+<script src="theme/folio-early.js"></script>
+<link rel="stylesheet" href="helia/theme.css">
+<link rel="stylesheet" href="helia/highlight.css">
+<link rel="stylesheet" href="helia/search.css">
+<link rel="stylesheet" href="theme/katex.css">
+<link rel="stylesheet" href="theme/recipe.css">
+<link rel="stylesheet" href="theme/site.css">
+<link rel="stylesheet" href="theme/folio.css">
+<script defer src="helia/runtime.js"></script>
+<script defer src="helia/search.js"></script>
+<script defer src="theme/glyphcraft.js"></script>
+<script defer src="theme/glyphart.js"></script>
+<script defer src="theme/glyphgen.js"></script>
+<script defer src="theme/ornament.js"></script>
+<script defer src="theme/folio.js"></script>
+<script defer src="theme/portrait.js"></script>
+<script type="application/json" id="helia-widgets">{"helia-cite-formats":"widgets/helia-cite-formats-a3294ac7.js"}</script>
+<link rel="modulepreload" href="widgets/helia-cite-formats-a3294ac7.js">
+<script type="module" src="widgets/runtime.js"></script>
+</head>
+<body>
+<nav class="helia-topbar"><a class="helia-home" href="home.html">Steven Schaefer</a><ul class="helia-nav-links"><li><a href="stevenschaefer.html">About Me</a></li><li><a href="research.html">Research</a></li><li><a href="new.html">New</a></li></ul><button type="button" class="helia-search-button" aria-label="Search (/ or Ctrl+K)" aria-haspopup="dialog"><span class="helia-search-icon">⌕</span><span class="helia-search-label">Search</span><kbd class="helia-search-key">/</kbd></button></nav>
+<div class="helia-page" data-kind="reference">
+<article class="helia-article">
+<header class="helia-header" data-entry="tan_etal_2025" data-kind="reference">
+<h2 class="helia-heading"><span class="helia-taxon">Reference.</span> Towards Computational UIP in Cubical Agda</h2>
+<div class="helia-meta"><span class="helia-author"><a class="helia-entry-link" href="yeejiantan.html" data-entry="yeejiantan">Yee-Jian Tan</a>, <a class="helia-entry-link" href="andreasnuyts.html" data-entry="andreasnuyts">Andreas Nuyts</a>, <a class="helia-entry-link" href="dominiquedevriese.html" data-entry="dominiquedevriese">Dominique Devriese</a></span> · <span class="helia-byline"><a class="helia-entry-link" href="arxiv.html" data-entry="arxiv">arXiv</a> · 2025</span> · <span class="helia-tags"><span class="helia-tag" data-tag="cubical"><span class="helia-entry-link helia-unavailable">cubical</span></span></span> · <span class="helia-entry-links"><span class="helia-entry-link" data-field="url"><a class="helia-link helia-external" href="https://arxiv.org/abs/2511.21209">Web</a></span> · <span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/2511.21209">arXiv</a></span></span></div>
+</header>
+<div class="helia-body">
+<div class="helia-abstract">
+<p>Some advantages of Cubical Type Theory, as implemented by Cubical Agda, over intensional Martin-Löf Type Theory include Quotient Inductive Types (QITs), which exist as instances of Higher Inductive Types, and functional extensionality, which is provable in Cubical Type Theory. However, HoTT features an infinite hierarchy of equalities that may become unwieldy in formalisations. Fortunately, QITs and functional extensionality are both preserved even if the equality levels of Cubical Type Theory are truncated to only homotopical Sets (h-Sets). In other words, removing the univalence axiom from Cubical Type Theory and instead postulating a conflicting axiom: the Uniqueness of Identity Proofs (UIP) postulate. Since univalence is proved in Cubical Type Theory from the so-called Glue Types, therefore, it is known that one can first remove the Glue Types (thus removing univalence) and then set-truncate all equalities (essentially assuming UIP), à la XTT. The result is a “h-Set Cubical Type Theory” that retains features such as functional extensionality and QITs.</p>
+<p>However, in Cubical Agda, there are currently only two unsatisfying ways to achieve h-Set Cubical Type Theory. The first is to give up on the canonicity of the theory and simply postulate the UIP axiom, while the second way is to use a standard result stating “type formers preserve h-levels” to manually prove UIP for every defined type. The latter is, however, laborious work best suited for an automatic implementation by the proof assistant. In this project, we analyse formulations of UIP and detail their computation rules for Cubical Agda, and evaluate their suitability for implementation. We also implement a variant of Cubical Agda without Glue, which is already compatible with postulated UIP, in anticipation of a future implementation of UIP in Cubical Agda.</p>
+</div>
+</div>
+<div class="helia-cite helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><h3 class="helia-heading">Cite</h3>
+</summary>
+<div class="helia-group-body">
+<div class="helia-widget" data-widget="helia-cite-formats" data-props="{&quot;key&quot;:&quot;tan_etal_2025&quot;,&quot;bibtex&quot;:&quot;@article{tan_etal_2025,\n title = {Towards Computational UIP in Cubical Agda},\n author = {Yee-Jian Tan and Andreas Nuyts and Dominique Devriese},\n year = {2025},\n eprint = {2511.21209},\n archiveprefix = {arXiv},\n url = {https://arxiv.org/abs/2511.21209}\n}&quot;,&quot;bib-file&quot;:&quot;tan_etal_2025.bib&quot;,&quot;hayagriva&quot;:&quot;tan_etal_2025:\n  type: article\n  title: Towards Computational UIP in Cubical Agda\n  author:\n  - Tan, Yee-Jian\n  - Nuyts, Andreas\n  - Devriese, Dominique\n  date: 2025\n  url: https://arxiv.org/abs/2511.21209\n  serial-number:\n    arxiv: &#39;2511.21209&#39;\n  parent:\n    type: periodical\n&quot;,&quot;yml-file&quot;:&quot;tan_etal_2025.yml&quot;}"><div class="helia-cite-key" data-copy="@tan_etal_2025" data-copy-label="citation key"><span class="helia-bib-key">Cite as</span> <code class="helia-raw-inline">@tan_etal_2025</code> (helia, typst) · <code class="helia-raw-inline">\cite{tan_etal_2025}</code> (LaTeX)</div>
+<div class="helia-cite-format helia-collapsible" data-format="bibtex" data-copy="true" data-copy-label="BibTeX">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">BibTeX</span></summary>
+<div class="helia-group-body">
+<details class="helia-code" open><summary class="helia-code-summary"><span class="helia-code-lang">bibtex</span> · <span class="helia-code-lines">8 lines</span></summary><pre class="helia-raw"><code class="language-bibtex"><span class="hl-text hl-bibtex"><span class="hl-meta hl-entry hl-braces hl-bibtex"><span class="hl-keyword hl-other hl-entry-type hl-bibtex"><span class="hl-punctuation hl-definition hl-keyword hl-bibtex">@</span>article</span><span class="hl-punctuation hl-section hl-entry hl-begin hl-bibtex">{</span><span class="hl-entity hl-name hl-type hl-entry-key hl-bibtex">tan_etal_2025</span>,
+ <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">title</span> <span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span> <span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>Towards Computational UIP in Cubical Agda<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>,
+ <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">author</span> <span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span> <span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>Yee-Jian Tan and Andreas Nuyts and Dominique Devriese<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>,
+ <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">year</span> <span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span> <span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>2025<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>,
+ <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">eprint</span> <span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span> <span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>2511.21209<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>,
+ <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">archiveprefix</span> <span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span> <span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>arXiv<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>,
+ <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">url</span> <span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span> <span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>https://arxiv.org/abs/2511.21209<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span>
+</span><span class="hl-punctuation hl-section hl-entry hl-end hl-bibtex">}</span></span></span></code></pre></details>
+</div>
+</details>
+</div>
+<div class="helia-cite-format helia-collapsible" data-format="hayagriva" data-copy="true" data-copy-label="hayagriva YAML">
+<details>
+<summary class="helia-group-summary"><span class="helia-group-title">hayagriva YAML (typst)</span></summary>
+<div class="helia-group-body">
+<details class="helia-code" open><summary class="helia-code-summary"><span class="helia-code-lang">yaml</span> · <span class="helia-code-lines">13 lines</span></summary><pre class="helia-raw"><code class="language-yaml"><span class="hl-source hl-yaml"><span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">tan_etal_2025</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">type</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">article</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">title</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Towards Computational UIP in Cubical Agda</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">author</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Tan, Yee-Jian</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Nuyts, Andreas</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Devriese, Dominique</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">date</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-constant hl-numeric hl-integer hl-decimal hl-yaml">2025</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">url</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">https://arxiv.org/abs/2511.21209</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">serial-number</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">arxiv</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-quoted hl-single hl-yaml"><span class="hl-punctuation hl-definition hl-string hl-begin hl-yaml">&#39;</span>2511.21209<span class="hl-punctuation hl-definition hl-string hl-end hl-yaml">&#39;</span></span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">parent</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">type</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">periodical</span>
+</span></code></pre></details>
+</div>
+</details>
+</div>
+<div class="helia-cite-files">Download: <a class="helia-link" href="tan_etal_2025.bib">tan_etal_2025.bib</a> · <a class="helia-link" href="tan_etal_2025.yml">tan_etal_2025.yml</a></div>
+</div>
+</div>
+</details>
+</div>
+<div class="helia-reference-cited-by helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">Cited by (1)</span></summary>
+<div class="helia-group-body">
+<section class="helia-transclusion" data-entry="chen_etal_2026" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="chen_etal_2026"><span class="helia-title">Can We Formalise Type Theory Intrinsically without Any Compromise? A Case Study in Cubical Agda</span>&nbsp;<a class="helia-slug" href="chen_etal_2026.html">chen_etal_2026</a><span class="helia-byline"><span class="helia-entry-link" data-entry="cpp">CPP</span> · 2026</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="chen_etal_2026" data-kind="reference">
+<div class="helia-abstract">We present an intrinsic representation of type theory in the proof assistant Cubical Agda, inspired by Awodey’s natural models of type theory. The initial natural model is defined as quotient inductive-inductive-recursive types, leading us to a syntax accepted by Cubical Agda without using any transports, postulates, or custom rewrite rules. We formalise some meta-properties such as the standard model, normalisation by evaluation for typed terms, and strictification constructions. Since our formalisation is carried out using Cubical Agda’s native support for quotient inductive types, all our constructions compute at a reasonable speed. When we try to develop more sophisticated metatheory, however, the ‘transport hell’ problem reappears. Ultimately, it remains a considerable struggle to develop the metatheory of type theory using an intrinsic representation that lacks strict equations. The effort required is about the same whether or not the notion of natural model is used.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/3779031.3779090">DOI</a></span></div>
+</div>
+</div>
+</details>
+</section>
+</div>
+</details>
+</div>
+<div class="helia-reference-cites helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">Cites 25 works (3 here)</span></summary>
+<div class="helia-group-body">
+<div class="helia-reference-cites-here helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">With notes (3)</span></summary>
+<div class="helia-group-body">
+<section class="helia-transclusion" data-entry="sterling_angiuli_2021" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="sterling_angiuli_2021"><span class="helia-title">Normalization for Cubical Type Theory</span>&nbsp;<a class="helia-slug" href="sterling_angiuli_2021.html">sterling_angiuli_2021</a><span class="helia-byline"><span class="helia-entry-link" data-entry="lics">LICS</span> · 2021</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="sterling_angiuli_2021" data-kind="reference">
+<div class="helia-abstract">We prove normalization for (univalent, Cartesian) cubical type theory, closing the last major open problem in the syntactic metatheory of cubical type theory. Our normalization result is reduction-free, in the sense of yielding a bijection between equivalence classes of terms in context and a tractable language of β/η-normal forms. As corollaries we obtain both decidability of judgmental equality and the injectivity of type constructors.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="url"><a class="helia-link helia-external" href="https://arxiv.org/abs/2101.11479">Web</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="hottbook" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="hottbook"><span class="helia-title">Homotopy Type Theory: Univalent Foundations of Mathematics</span>&nbsp;<a class="helia-slug" href="hottbook.html">hottbook</a><span class="helia-byline"><span class="helia-entry-link" data-entry="arxiv">arXiv</span> · 2013</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="hottbook" data-kind="reference">
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="url"><a class="helia-link helia-external" href="https://homotopytypetheory.org/book">Web</a></span> · <span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/1308.0729">arXiv</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="Hofmann_1997" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="Hofmann_1997"><span class="helia-title">Syntax and semantics of dependent types</span>&nbsp;<a class="helia-slug" href="Hofmann_1997.html">Hofmann_1997</a><span class="helia-byline">Semantics and Logics of Computation · 1997</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="Hofmann_1997" data-kind="reference">
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1017/cbo9780511526619.004">DOI</a></span></div>
+</div>
+</div>
+</details>
+</section>
+</div>
+</details>
+</div>
+<div class="helia-reference-cites-away helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">External (22)</span></summary>
+<div class="helia-group-body">
+<ul>
+<li>Cubical Agda Library (github.com/agda/cubical) (2025)</li>
+<li>The Coq Reference Manual – Release 8.19.0 (2024)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.46298/lmcs-18(1:43)2022">A Cubical Language for Bishop Sets</a> (2022)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1017/s0956796821000034">Cubical Agda: A dependently typed programming language with univalence and higher inductive types</a> (2021)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-030-33636-3_7">Setoid Type Theory - A Syntactic Translation</a> (2019)</li>
+<li>Issue: A variant of Cubical Agda that is consistent with UIP (2019)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1017/s0960129526100656">Separating path and identity types in presheaf models of univalent type theory</a> (2018)</li>
+<li><a class="helia-link helia-external" href="https://arxiv.org/abs/1611.02108">Cubical Type Theory: A Constructive Interpretation of the Univalence Axiom</a> (2017)</li>
+<li>cubical type theory with UIP (2017)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/s10817-018-9469-1">Canonicity for Cubical Type Theory</a> (2016)</li>
+<li>Lecture Notes on Cubical Sets (Coquand) (2015)</li>
+<li>An Interval Type Implies Function Extensionality (2011)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/11617990_12">A Few Constructions on Constructors</a> (2004)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1109/lics.1999.782636">Extensional equality in intensional type theory</a> (1999)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/bfb0014055">A Simple Model for Quotient Types</a> (1995)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1109/lics.1994.316071">The groupoid model refutes uniqueness of identity proofs</a> (1994)</li>
+<li>Investigations Into Intensional Type Theory (Streicher, Habilitation thesis) (1993)</li>
+<li>Proofs and types (1989)</li>
+<li>MPRI M2 - Proof Assistants</li>
+<li>Lecture Notes for 2.7.1 — Foundations of Proof Systems</li>
+<li>Pull Request: Implement a –cubical=no-glue option</li>
+<li>Cubical — Agda 2.9.0 Documentation : Cubical Agda without Glue</li>
+</ul>
+</div>
+</details>
+</div>
+</div>
+</details>
+</div>
+</article>
+<div class="helia-identity"><span class="helia-id">tan_etal_2025</span> <span class="helia-kind">reference</span> <span class="helia-path">entries/refs/tan_etal_2025/tan_etal_2025.hel</span></div>
+</div>
+</body>
+</html>

@@ -1,0 +1,1 @@
+heliaSearchData("d/stanford-university",{"id":"stanford-university","title":"Stanford University","kind":"institution","tags":[],"authors":[],"venue":[],"date":null,"url":"stanford-university.html","headings":[],"body":""});

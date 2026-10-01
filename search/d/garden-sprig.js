@@ -1,0 +1,1 @@
+heliaSearchData("d/garden-sprig",{"id":"garden-sprig","title":"Garden sprig","kind":"glyph-art","tags":["ornament","ornament-garden"],"authors":["Steven Schaefer"],"venue":[],"date":null,"url":"garden-sprig.html","headings":[],"body":"A leafy sprig. A small piece for the garden margin patterns."});

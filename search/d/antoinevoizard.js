@@ -1,0 +1,1 @@
+heliaSearchData("d/antoinevoizard",{"id":"antoinevoizard","title":"Antoine Voizard","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"antoinevoizard.html","headings":[],"body":""});

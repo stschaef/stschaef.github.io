@@ -1,0 +1,1 @@
+heliaSearchData("d/bernhardbanaschewski",{"id":"bernhardbanaschewski","title":"Bernhard Banaschewski","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"bernhardbanaschewski.html","headings":[],"body":""});

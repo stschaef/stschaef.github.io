@@ -1,0 +1,1 @@
+heliaSearchData("d/wojciechbuszkowski",{"id":"wojciechbuszkowski","title":"Wojciech Buszkowski","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"wojciechbuszkowski.html","headings":[],"body":""});

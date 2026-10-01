@@ -1,0 +1,1 @@
+heliaSearchData("d/bicategories-macros",{"id":"bicategories-macros","title":"Bicategories Macros","kind":"note","tags":[],"authors":[],"venue":[],"date":null,"url":"bicategories-macros.html","headings":[],"body":""});

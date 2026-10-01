@@ -1,0 +1,1 @@
+heliaSearchData("d/ethancecchetti",{"id":"ethancecchetti","title":"Ethan Cecchetti","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"ethancecchetti.html","headings":[],"body":""});

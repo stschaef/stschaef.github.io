@@ -1,0 +1,1 @@
+heliaSearchData("d/Ouedraogo_2023",{"id":"Ouedraogo_2023","title":"Coqlex: Generating formally verified lexers","kind":"reference","tags":["parsing"],"authors":["Gabriel Scherer","Lutz Strassburger","Wendlasida Ouedraogo"],"venue":["Programming","The Art, Science, and Engineering of Programming"],"date":null,"url":"Ouedraogo_2023.html","headings":[],"body":""});

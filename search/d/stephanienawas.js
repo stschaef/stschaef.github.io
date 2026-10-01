@@ -1,0 +1,1 @@
+heliaSearchData("d/stephanienawas",{"id":"stephanienawas","title":"Stephanie Nawas","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"stephanienawas.html","headings":[],"body":""});

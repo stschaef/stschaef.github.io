@@ -1,0 +1,1 @@
+heliaSearchData("d/garden-butterfly",{"id":"garden-butterfly","title":"Garden butterfly","kind":"glyph-art","tags":["ornament","ornament-garden"],"authors":["Steven Schaefer"],"venue":[],"date":null,"url":"garden-butterfly.html","headings":[],"body":"A butterfly. A small piece for the garden margin patterns."});

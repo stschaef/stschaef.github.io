@@ -1,0 +1,1 @@
+heliaSearchData("d/enricrodriguezcarbonell",{"id":"enricrodriguezcarbonell","title":"Enric Rodríguez-Carbonell","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"enricrodriguezcarbonell.html","headings":[],"body":""});

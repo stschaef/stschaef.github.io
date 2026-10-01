@@ -1,0 +1,1 @@
+heliaSearchData("d/richardmontague",{"id":"richardmontague","title":"Richard Montague","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"richardmontague.html","headings":[],"body":""});

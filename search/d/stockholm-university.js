@@ -1,0 +1,1 @@
+heliaSearchData("d/stockholm-university",{"id":"stockholm-university","title":"Stockholm University","kind":"institution","tags":[],"authors":[],"venue":[],"date":null,"url":"stockholm-university.html","headings":[],"body":""});

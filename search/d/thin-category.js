@@ -1,0 +1,1 @@
+heliaSearchData("d/thin-category",{"id":"thin-category","title":"Thin Category","kind":"definition","tags":["category-theory"],"authors":[],"venue":[],"date":"2026-02-26T06:18:45","url":"thin-category.html","headings":[],"body":"A category C is thin if there is at most one morphism between any two objects."});

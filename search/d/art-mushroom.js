@@ -1,0 +1,1 @@
+heliaSearchData("d/art-mushroom",{"id":"art-mushroom","title":"Fly agaric","kind":"glyph-art","tags":["fruit","ornament","ornament-art"],"authors":["Steven Schaefer"],"venue":[],"date":null,"url":"art-mushroom.html","headings":[],"body":"A fly agaric: a red cap flecked with white, gills below, a ringed stem rising from its volva."});

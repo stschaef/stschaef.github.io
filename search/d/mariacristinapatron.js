@@ -1,0 +1,1 @@
+heliaSearchData("d/mariacristinapatron",{"id":"mariacristinapatron","title":"Maria-Cristina Patron","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"mariacristinapatron.html","headings":[],"body":""});

@@ -1,0 +1,1 @@
+heliaSearchData("d/januszbrzozowski",{"id":"januszbrzozowski","title":"Janusz A. Brzozowski","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"januszbrzozowski.html","headings":[],"body":""});

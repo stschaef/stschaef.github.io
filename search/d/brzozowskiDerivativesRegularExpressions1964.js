@@ -1,0 +1,1 @@
+heliaSearchData("d/brzozowskiDerivativesRegularExpressions1964",{"id":"brzozowskiDerivativesRegularExpressions1964","title":"Derivatives of Regular Expressions","kind":"reference","tags":["parsing"],"authors":["Janusz A. Brzozowski"],"venue":["JACM","Journal of the ACM"],"date":null,"url":"brzozowskiDerivativesRegularExpressions1964.html","headings":[],"body":""});

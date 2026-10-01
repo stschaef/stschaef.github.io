@@ -1,0 +1,1 @@
+heliaSearchData("d/ohearn_pym_bi_1999",{"id":"ohearn_pym_bi_1999","title":"The logic of bunched implications","kind":"reference","tags":["separation-logic","substructural"],"authors":["David Pym","Peter O’Hearn"],"venue":["BSL","The Bulletin of Symbolic Logic"],"date":null,"url":"ohearn_pym_bi_1999.html","headings":[],"body":""});

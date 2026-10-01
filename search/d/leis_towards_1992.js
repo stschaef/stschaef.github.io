@@ -1,0 +1,1 @@
+heliaSearchData("d/leis_towards_1992",{"id":"leis_towards_1992","title":"Towards Kleene Algebra with recursion","kind":"reference","tags":["kleene-algebra","parsing"],"authors":["Haas Leiß"],"venue":["CSL","Computer Science Logic (EACSL Annual Conference)"],"date":null,"url":"leis_towards_1992.html","headings":[],"body":""});

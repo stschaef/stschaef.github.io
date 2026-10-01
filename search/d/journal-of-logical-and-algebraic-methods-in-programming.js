@@ -1,0 +1,1 @@
+heliaSearchData("d/journal-of-logical-and-algebraic-methods-in-programming",{"id":"journal-of-logical-and-algebraic-methods-in-programming","title":"Journal of Logical and Algebraic Methods in Programming","kind":"venue","tags":[],"authors":[],"venue":[],"date":null,"url":"journal-of-logical-and-algebraic-methods-in-programming.html","headings":[],"body":""});

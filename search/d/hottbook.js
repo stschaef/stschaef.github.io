@@ -1,0 +1,1 @@
+heliaSearchData("d/hottbook",{"id":"hottbook","title":"Homotopy Type Theory: Univalent Foundations of Mathematics","kind":"reference","tags":["homotopy-type-theory","type-theory"],"authors":["The Univalent Foundations Program"],"venue":["arXiv"],"date":null,"url":"hottbook.html","headings":[],"body":""});

@@ -1,0 +1,1 @@
+heliaSearchData("d/sigplan-notices",{"id":"sigplan-notices","title":"SIGPLAN Notices","kind":"venue","tags":[],"authors":[],"venue":[],"date":null,"url":"sigplan-notices.html","headings":[],"body":""});

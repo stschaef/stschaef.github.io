@@ -1,0 +1,1 @@
+heliaSearchData("d/toyota-technological-institute-at-chicago",{"id":"toyota-technological-institute-at-chicago","title":"Toyota Technological Institute at Chicago","kind":"institution","tags":[],"authors":[],"venue":[],"date":null,"url":"toyota-technological-institute-at-chicago.html","headings":[],"body":""});

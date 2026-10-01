@@ -1,0 +1,1 @@
+heliaSearchData("d/ornament-view-widget",{"id":"ornament-view-widget","title":"Ornament view widget","kind":"widget","tags":["ornament"],"authors":["Steven Schaefer"],"venue":[],"date":null,"url":"ornament-view-widget.html","headings":[],"body":""});

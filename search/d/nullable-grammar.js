@@ -1,0 +1,1 @@
+heliaSearchData("d/nullable-grammar",{"id":"nullable-grammar","title":"Nullable Grammar","kind":"definition","tags":["parsing"],"authors":[],"venue":[],"date":"2025-01-24","url":"nullable-grammar.html","headings":[],"body":"A grammar A is nullable if the empty string belongs to the language of A ."});

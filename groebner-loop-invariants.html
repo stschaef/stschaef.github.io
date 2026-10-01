@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>Gröbner Bases for Inferring Polynomial Loop Invariants</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Ctext y=%22.9em%22 font-size=%2290%22%3E%F0%9F%8C%BB%3C/text%3E%3C/svg%3E">
+<meta name="generator" content="helia">
+<script src="helia/theme-version.js"></script>
+<script src="theme/folio-early.js"></script>
+<link rel="stylesheet" href="helia/theme.css">
+<link rel="stylesheet" href="helia/highlight.css">
+<link rel="stylesheet" href="helia/search.css">
+<link rel="stylesheet" href="theme/katex.css">
+<link rel="stylesheet" href="theme/recipe.css">
+<link rel="stylesheet" href="theme/site.css">
+<link rel="stylesheet" href="theme/folio.css">
+<script defer src="helia/runtime.js"></script>
+<script defer src="helia/search.js"></script>
+<script defer src="theme/glyphcraft.js"></script>
+<script defer src="theme/glyphart.js"></script>
+<script defer src="theme/glyphgen.js"></script>
+<script defer src="theme/ornament.js"></script>
+<script defer src="theme/folio.js"></script>
+<script defer src="theme/portrait.js"></script>
+</head>
+<body>
+<nav class="helia-topbar"><a class="helia-home" href="home.html">Steven Schaefer</a><ul class="helia-nav-links"><li><a href="stevenschaefer.html">About Me</a></li><li><a href="research.html">Research</a></li><li><a href="new.html">New</a></li></ul><button type="button" class="helia-search-button" aria-label="Search (/ or Ctrl+K)" aria-haspopup="dialog"><span class="helia-search-icon">⌕</span><span class="helia-search-label">Search</span><kbd class="helia-search-key">/</kbd></button></nav>
+<div class="helia-page" data-kind="note">
+<article class="helia-article">
+<header class="helia-header" data-entry="groebner-loop-invariants" data-kind="note">
+<h2 class="helia-heading">Gröbner Bases for Inferring Polynomial Loop Invariants</h2>
+<div class="helia-meta"><span class="helia-date">2025-02-19</span> · <span class="helia-tags"><span class="helia-tag" data-tag="halfbaked">halfbaked</span> <span class="helia-tag" data-tag="grobner-bases"><span class="helia-entry-link helia-unavailable">grobner-bases</span></span> <span class="helia-tag" data-tag="loop-invariants"><span class="helia-entry-link helia-unavailable">loop-invariants</span></span> <span class="helia-tag" data-tag="inductive-invariants"><span class="helia-entry-link helia-unavailable">inductive-invariants</span></span></span></div>
+</header>
+<div class="helia-body">
+<p>When the tools in <a class="helia-entry-link" href="maI4IncrementalInference2019.html" data-entry="maI4IncrementalInference2019">I4: Incremental inference of inductive invariants for verification of distributed protocols</a> and <a class="helia-entry-link" href="goelSymmetryQuantificationNew2021.html" data-entry="goelSymmetryQuantificationNew2021">On Symmetry and Quantification: A New Approach to Verify Distributed Protocols</a> search for an inductive invariant of a distributed system, the search procedure instantiates a series of small finite models and tries to infer from their truth tables a series of logical formulae that hold over those finite models. These formulae are found by running the Quine-McCluskey algorithm for minimization of Boolean functions. The prime implicants found by Quine-McCluskey have a latent symmetry that can be abstracted into quantified formulae. There are only so many small numbers, and so small finite models may propose formulae that do not hold at larger sizes. However, if you find a formula that holds at size <span class="helia-math helia-math-inline helia-mathml"><math><mi>𝑛</mi></math></span> as well as size <span class="helia-math helia-math-inline helia-mathml"><math><mi>𝑛</mi><mo>+</mo><mn>1</mn></math></span>, then it is likely a good candidate to hold at all sizes. You need to be a little careful if your protocol is indexed by several variables, but mostly this general idea holds when abstracting to a protocol of unbounded size. Further discussion of this idea can be found in <a class="helia-entry-link" href="LuoSatBasedQuantifiedSymmetric.html" data-entry="LuoSatBasedQuantifiedSymmetric">SAT-based quantified symmetric minimization of the reachable states of distributed protocols: An update</a>.</p>
+<p>My observation was that Quine-McCluskey is just a special instance of Buchberger’s algorithm for computing <a class="helia-entry-link" href="groebner-basis.html" data-entry="groebner-basis">Gröbner Bases</a>. That is, you can describe Boolean formulae as polynomials over the field with two elements, and in this translation Quine-McCluskey and Buchberger each compute the same data. This observation isn’t new in and of itself, but it does open up an opportunity to generalize the invariant search procedure that is used above.</p>
+<p>The place I went looking to apply this idea was in the search of polynomial loop invariants. If a loop had an invariant that is expressible as a polynomial relation between the program variables, then you could apply the same idea as above to infer the loop invariant.</p>
+<p>Suppose <span class="helia-math helia-math-inline helia-mathml"><math><msub><mi>𝑥</mi><mn>1</mn></msub><mo>,</mo><mi>…</mi><mo>,</mo><msub><mi>𝑥</mi><mi>𝑛</mi></msub></math></span> are the variables in scope of program <span class="helia-math helia-math-inline helia-mathml"><math><mi>𝑆</mi></math></span> and <span class="helia-math helia-math-inline helia-mathml"><math><mi>𝑆</mi></math></span> contains a loop that we want to infer an invariant for. Denote the value of <span class="helia-math helia-math-inline helia-mathml"><math><msub><mi>𝑥</mi><mi>𝑖</mi></msub></math></span> at the <span class="helia-math helia-math-inline helia-mathml"><math><mi>𝑗</mi></math></span>-th loop iteration by <span class="helia-math helia-math-inline helia-mathml"><math><msub><mi>𝑥</mi><mrow><mi>𝑖</mi><mo rspace="0em">,</mo><mi>𝑗</mi></mrow></msub></math></span>. The invariant search procedure proceeds intuitively as the following: we will keep track of the minimal set of polynomials that could interpolate between all of the variable assignments that we have witnessed thus far. Formally this is kept track of by the ideal of polynomials. At the <span class="helia-math helia-math-inline helia-mathml"><math><mi>𝑗</mi></math></span>-th loop iteration we add a new generator to the ideal which corresponds to the assignments <span class="helia-math helia-math-inline helia-mathml"><math><msub><mi>𝑥</mi><mrow><mn>1</mn><mo rspace="0em">,</mo><mi>𝑗</mi></mrow></msub><mo>,</mo><mi>…</mi><mo>,</mo><msub><mi>𝑥</mi><mrow><mi>𝑛</mi><mo rspace="0em">,</mo><mi>𝑗</mi></mrow></msub></math></span>. The Gröbner basis for this ideal provides the minimal data needed to generate all the assignments witnessed thus far, so if this process saturates then the Gröbner basis encodes a polynomial loop invariant. The nice thing about polynomials is that they have finite degree which guarantees that this process does indeed saturate (provided that the degree of the invariant is smaller than the number of loop iterations).</p>
+<p>I was so excited to find this idea. I’d felt like it was my first good idea in grad school. Then I read <a class="helia-entry-link" href="rodriguez-carbonellAutomaticGenerationPolynomial.html" data-entry="rodriguez-carbonellAutomaticGenerationPolynomial">Automatic Generation of Polynomial Loop Invariants: Algebraic Foundations</a> and found out someone had done this 20 years ago. I still wonder from time to time if there is room to further refine this idea or perhaps further generalize it. For instance, there is further generalization beyond Quine-McCluskey or Buchberger to the Knuth-Bendix algorithm, which seems to be a more general instance of both of these algorithms. So perhaps this search procedure can be weakened to an even more general class? Although, I’m not yet familiar much with the Knuth-Bendix algorithm.</p>
+</div>
+<footer class="helia-footer">
+<div class="helia-backlinks helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><h3 class="helia-heading">Backlinks</h3>
+</summary>
+<div class="helia-group-body">
+<ul>
+<li><a class="helia-entry-link" href="groebner-basis.html" data-entry="groebner-basis">Gröbner Basis</a></li>
+</ul>
+</div>
+</details>
+</div>
+<div class="helia-related helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><h3 class="helia-heading">Related</h3>
+</summary>
+<div class="helia-group-body">
+<ul>
+<li><a class="helia-entry-link" href="anderson2014netkat.html" data-entry="anderson2014netkat">NetKAT: Semantic foundations for networks</a></li>
+<li><a class="helia-entry-link" href="bradleySATBasedModelChecking2011.html" data-entry="bradleySATBasedModelChecking2011">SAT-Based Model Checking without Unrolling</a></li>
+<li><a class="helia-entry-link" href="goelAVRAbstractlyVerifying2020.html" data-entry="goelAVRAbstractlyVerifying2020">AVR: Abstractly Verifying Reachability</a></li>
+<li><a class="helia-entry-link" href="goelRegularityQuantificationNew.html" data-entry="goelRegularityQuantificationNew">Regularity and Quantification: A New Approach to Verify Distributed Protocols</a></li>
+<li><a class="helia-entry-link" href="hanceFindingInvariantsDistributed.html" data-entry="hanceFindingInvariantsDistributed">Finding Invariants of Distributed Systems: It’s a Small (Enough) World After All</a></li>
+<li><a class="helia-entry-link" href="maSiftUsingRefinementguided.html" data-entry="maSiftUsingRefinementguided">Sift: Using Refinement-guided Automation to Verify Complex Distributed Systems</a></li>
+<li><a class="helia-entry-link" href="mcmillanDeductiveVerificationDecidable2018.html" data-entry="mcmillanDeductiveVerificationDecidable2018">Deductive Verification in Decidable Fragments with Ivy</a></li>
+<li><a class="helia-entry-link" href="mcmillanIvyMultimodalVerification2020.html" data-entry="mcmillanIvyMultimodalVerification2020">Ivy: A Multi-modal Verification Tool for Distributed Algorithms</a></li>
+<li><a class="helia-entry-link" href="padonDecidabilityInferringInductive2016.html" data-entry="padonDecidabilityInferringInductive2016">Decidability of inferring inductive invariants</a></li>
+<li><a class="helia-entry-link" href="padonDeductiveVerificationDistributed2018.html" data-entry="padonDeductiveVerificationDistributed2018">Deductive Verification of Distributed Protocols in First-Order Logic</a></li>
+<li><a class="helia-entry-link" href="padonIvySafetyVerification.html" data-entry="padonIvySafetyVerification">Ivy: Safety verification by interactive generalization</a></li>
+<li><a class="helia-entry-link" href="sharmaGroveSeparationLogicLibrary2023.html" data-entry="sharmaGroveSeparationLogicLibrary2023">Grove: A Separation-Logic Library for Verifying Distributed Systems</a></li>
+</ul>
+</div>
+</details>
+</div>
+</footer>
+</article>
+<div class="helia-identity"><span class="helia-id">groebner-loop-invariants</span> <span class="helia-kind">note</span> <span class="helia-path">entries/math/groebner-loop-invariants.hel</span></div>
+</div>
+</body>
+</html>

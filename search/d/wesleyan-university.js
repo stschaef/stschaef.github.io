@@ -1,0 +1,1 @@
+heliaSearchData("d/wesleyan-university",{"id":"wesleyan-university","title":"Wesleyan University","kind":"institution","tags":[],"authors":[],"venue":[],"date":null,"url":"wesleyan-university.html","headings":[],"body":""});

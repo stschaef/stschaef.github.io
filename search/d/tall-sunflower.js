@@ -1,0 +1,1 @@
+heliaSearchData("d/tall-sunflower",{"id":"tall-sunflower","title":"Tall sunflower","kind":"glyph-art","tags":["flower","ornament","ornament-art"],"authors":["Steven Schaefer"],"venue":[],"date":null,"url":"tall-sunflower.html","headings":[],"body":"A tall sunflower: a seed-whorled face ringed with golden petals, on a thick stalk with broad leaves."});

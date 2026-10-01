@@ -1,0 +1,1 @@
+heliaSearchData("d/tan_etal_2025",{"id":"tan_etal_2025","title":"Towards Computational UIP in Cubical Agda","kind":"reference","tags":["cubical"],"authors":["Andreas Nuyts","Dominique Devriese","Yee-Jian Tan"],"venue":["arXiv"],"date":null,"url":"tan_etal_2025.html","headings":[],"body":""});

@@ -1,0 +1,1 @@
+heliaSearchData("d/higher-structures",{"id":"higher-structures","title":"Higher Structures","kind":"venue","tags":[],"authors":[],"venue":[],"date":null,"url":"higher-structures.html","headings":[],"body":""});

@@ -1,0 +1,1 @@
+heliaSearchData("d/michaelnorrish",{"id":"michaelnorrish","title":"Michael Norrish","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"michaelnorrish.html","headings":[],"body":""});

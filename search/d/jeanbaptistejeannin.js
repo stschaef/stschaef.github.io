@@ -1,0 +1,1 @@
+heliaSearchData("d/jeanbaptistejeannin",{"id":"jeanbaptistejeannin","title":"Jean-Baptiste Jeannin","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"jeanbaptistejeannin.html","headings":[],"body":""});

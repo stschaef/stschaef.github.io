@@ -1,0 +1,1 @@
+heliaSearchData("d/andersmortberg",{"id":"andersmortberg","title":"Anders Mörtberg","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"andersmortberg.html","headings":[],"body":""});

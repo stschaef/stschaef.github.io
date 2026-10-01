@@ -1,0 +1,1 @@
+heliaSearchData("d/art-pomegranate",{"id":"art-pomegranate","title":"Pomegranate","kind":"glyph-art","tags":["fruit","ornament","ornament-art"],"authors":["Steven Schaefer"],"venue":[],"date":null,"url":"art-pomegranate.html","headings":[],"body":"A whole pomegranate, crowned, with a gold blush down its flank."});

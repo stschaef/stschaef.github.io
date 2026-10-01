@@ -1,0 +1,1 @@
+heliaSearchData("d/josselinpoiret",{"id":"josselinpoiret","title":"Josselin Poiret","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"josselinpoiret.html","headings":[],"body":""});

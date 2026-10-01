@@ -1,0 +1,1 @@
+heliaSearchData("d/luo",{"id":"luo","title":"Substructural calculi with dependent types","kind":"reference","tags":["categorial-grammar","substructural","type-theory"],"authors":["Zhaohui Luo"],"venue":[],"date":null,"url":"luo.html","headings":[],"body":""});

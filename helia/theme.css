@@ -1,0 +1,2245 @@
+/* helia base theme.
+ *
+ * Every color is a custom property. Light values are the default, dark
+ * values apply under `prefers-color-scheme: dark` (there is no toggle: the
+ * site follows the system setting), and `data-theme="light"` or
+ * `data-theme="dark"` on <html> pins one. A project overrides tokens in its
+ * own stylesheet, listed after this one:
+ *
+ *   :root { --helia-accent: #7a3e9d; --helia-font-body: var(--helia-font-serif); }
+ *
+ * Layout: one centered column (`--helia-measure`) under an optional site top
+ * bar; no sidebar. Class conventions are documented in
+ * crates/helia-render/README.md.
+ */
+
+/* ------------------------------------------------------------------ tokens */
+
+:root {
+  color-scheme: light;
+  --helia-font-sans: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", "Inter", "Roboto", "Helvetica Neue",
+    Arial, sans-serif;
+  --helia-font-serif: "Iowan Old Style", "Charter", "Bitstream Charter", "Source Serif 4", "Palatino Linotype",
+    Palatino, Georgia, serif;
+  --helia-font-body: var(--helia-font-sans);
+  --helia-font-heading: var(--helia-font-body);
+  --helia-font-mono: "JetBrains Mono", "SF Mono", "SFMono-Regular", ui-monospace, "Iosevka", "Fira Code", Menlo,
+    Consolas, monospace;
+  --helia-font-size: 17px;
+  --helia-line-height: 1.65;
+  /* Width of the text column (about 70 characters). */
+  --helia-measure: 44rem;
+  /* Horizontal page padding; the outline bullets hang into it. */
+  --helia-page-pad: clamp(1.25rem, 5vw, 2.5rem);
+  --helia-radius: 6px;
+  --helia-radius-lg: 10px;
+  --helia-gap: 1rem;
+
+  --helia-bg: #fdfdfc;
+  --helia-bg-subtle: #f5f5f3;
+  --helia-fg: #1c1e21;
+  --helia-muted: #585d68;
+  --helia-faint: #8b909b;
+  --helia-border: #e5e5e2;
+  --helia-border-strong: #d2d3d0;
+  --helia-link: #2455a4;
+  --helia-link-decoration: rgba(36, 85, 164, 0.35);
+  --helia-accent: #2455a4;
+  --helia-hover: rgba(36, 85, 164, 0.04);
+  --helia-hover-strong: rgba(36, 85, 164, 0.09);
+  --helia-code-bg: #f4f4f2;
+  --helia-code-border: #e8e8e5;
+  --helia-quote-border: #cfd3da;
+  --helia-mark: rgba(255, 226, 90, 0.45);
+  --helia-error-bg: #c62828;
+  --helia-error-fg: #ffffff;
+  --helia-pending-bg: rgba(0, 90, 110, 0.05);
+  --helia-pending-fg: #6b6b6b;
+  --helia-number: #8b909b;
+  --helia-shadow: 0 1px 2px rgba(20, 22, 26, 0.04), 0 2px 8px rgba(20, 22, 26, 0.04);
+
+  /* org-bullets-style nesting indicators (headings, transclusions). The set
+   * cycles by nesting depth (heading level, already shifted by transclusion
+   * depth — see helia-render/README.md "Headings"); a project may override the
+   * whole set or a single level in its own stylesheet. */
+  --helia-bullets: "\25C9" "\25CB" "\2738" "\2739" "\25C6" "\25B8"; /* ◉ ○ ✸ ✹ ◆ ▸ */
+  --helia-bullet-1: "\25C9";
+  --helia-bullet-2: "\25CB";
+  --helia-bullet-3: "\2738";
+  --helia-bullet-4: "\2739";
+  --helia-bullet-5: "\25C6";
+  --helia-bullet-6: "\25B8";
+  /* Width of the gutter column a bullet hangs in; one outline level. */
+  --helia-bullet-indent: 1.1em;
+  --helia-bullet-color: var(--helia-accent);
+  --helia-bullet-folded-color: var(--helia-faint);
+  --helia-bullet-guide-color: var(--helia-border);
+  --helia-bullet-group-color: var(--helia-faint);
+
+  --hl-comment: #6a737d;
+  --hl-keyword: #a626a4;
+  --hl-storage: #a626a4;
+  --hl-string: #3c7d27;
+  --hl-constant: #b35900;
+  --hl-number: #b35900;
+  --hl-function: #2957b8;
+  --hl-type: #8a6100;
+  --hl-variable: #1c1e21;
+  --hl-parameter: #9a4b00;
+  --hl-operator: #0e7490;
+  --hl-punctuation: #555555;
+  --hl-tag: #c2185b;
+  --hl-attribute: #8a6100;
+  --hl-support: #0e7490;
+  --hl-invalid: #c62828;
+  --hl-inserted: #3c7d27;
+  --hl-deleted: #c62828;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
+    --helia-bg: #121418;
+    --helia-bg-subtle: #191c21;
+    --helia-fg: #e3e5e9;
+    --helia-muted: #a2a8b3;
+    --helia-faint: #737a86;
+    --helia-border: #272b32;
+    --helia-border-strong: #353a43;
+    --helia-link: #8fb8f2;
+    --helia-link-decoration: rgba(143, 184, 242, 0.35);
+    --helia-accent: #8fb8f2;
+    --helia-hover: rgba(143, 184, 242, 0.05);
+    --helia-hover-strong: rgba(143, 184, 242, 0.12);
+    --helia-code-bg: #181b20;
+    --helia-code-border: #262a31;
+    --helia-quote-border: #3e434c;
+    --helia-mark: rgba(200, 170, 40, 0.32);
+    --helia-error-bg: #b3261e;
+    --helia-error-fg: #ffffff;
+    --helia-pending-bg: rgba(160, 220, 220, 0.07);
+    --helia-pending-fg: #9a9a9a;
+    --helia-number: #737a86;
+    --helia-shadow: 0 1px 2px rgba(0, 0, 0, 0.3), 0 2px 10px rgba(0, 0, 0, 0.2);
+
+    --hl-comment: #7f8791;
+    --hl-keyword: #d49ef0;
+    --hl-storage: #d49ef0;
+    --hl-string: #9bd080;
+    --hl-constant: #f0a860;
+    --hl-number: #f0a860;
+    --hl-function: #82aaff;
+    --hl-type: #e8c46a;
+    --hl-variable: #e3e5e9;
+    --hl-parameter: #f0b88a;
+    --hl-operator: #6cd0e0;
+    --hl-punctuation: #a7a7a7;
+    --hl-tag: #f07aa8;
+    --hl-attribute: #e8c46a;
+    --hl-support: #6cd0e0;
+    --hl-invalid: #ff6b6b;
+    --hl-inserted: #9bd080;
+    --hl-deleted: #ff6b6b;
+  }
+}
+
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --helia-bg: #121418;
+  --helia-bg-subtle: #191c21;
+  --helia-fg: #e3e5e9;
+  --helia-muted: #a2a8b3;
+  --helia-faint: #737a86;
+  --helia-border: #272b32;
+  --helia-border-strong: #353a43;
+  --helia-link: #8fb8f2;
+  --helia-link-decoration: rgba(143, 184, 242, 0.35);
+  --helia-accent: #8fb8f2;
+  --helia-hover: rgba(143, 184, 242, 0.05);
+  --helia-hover-strong: rgba(143, 184, 242, 0.12);
+  --helia-code-bg: #181b20;
+  --helia-code-border: #262a31;
+  --helia-quote-border: #3e434c;
+  --helia-mark: rgba(200, 170, 40, 0.32);
+  --helia-error-bg: #b3261e;
+  --helia-error-fg: #ffffff;
+  --helia-pending-bg: rgba(160, 220, 220, 0.07);
+  --helia-pending-fg: #9a9a9a;
+  --helia-number: #737a86;
+  --helia-shadow: 0 1px 2px rgba(0, 0, 0, 0.3), 0 2px 10px rgba(0, 0, 0, 0.2);
+
+  --hl-comment: #7f8791;
+  --hl-keyword: #d49ef0;
+  --hl-storage: #d49ef0;
+  --hl-string: #9bd080;
+  --hl-constant: #f0a860;
+  --hl-number: #f0a860;
+  --hl-function: #82aaff;
+  --hl-type: #e8c46a;
+  --hl-variable: #e3e5e9;
+  --hl-parameter: #f0b88a;
+  --hl-operator: #6cd0e0;
+  --hl-punctuation: #a7a7a7;
+  --hl-tag: #f07aa8;
+  --hl-attribute: #e8c46a;
+  --hl-support: #6cd0e0;
+  --hl-invalid: #ff6b6b;
+  --hl-inserted: #9bd080;
+  --hl-deleted: #ff6b6b;
+}
+
+/* ------------------------------------------------------------------ base */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  background: var(--helia-bg);
+  color: var(--helia-fg);
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  scroll-padding-top: 1.25rem;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+body {
+  margin: 0;
+  padding: 2.5rem var(--helia-page-pad) 5rem;
+  font-family: var(--helia-font-body);
+  font-size: var(--helia-font-size);
+  line-height: var(--helia-line-height);
+  background: var(--helia-bg);
+  color: var(--helia-fg);
+  hyphens: auto;
+  overflow-wrap: break-word;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  font-feature-settings: "kern", "liga";
+}
+
+@media (max-width: 700px) {
+  :root {
+    --helia-font-size: 16px;
+    --helia-line-height: 1.6;
+  }
+  body {
+    padding-top: 1.5rem;
+    padding-bottom: 3.5rem;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--helia-font-heading);
+  line-height: 1.25;
+  margin: 1.6em 0 0.5em;
+  font-weight: 650;
+  letter-spacing: -0.011em;
+  text-wrap: balance;
+}
+
+/* In em, relative to the body size (--helia-font-size), which themes change. */
+h1 {
+  font-size: 1.9em;
+  letter-spacing: -0.02em;
+}
+h2 {
+  font-size: 1.35em;
+}
+h3 {
+  font-size: 1.1em;
+}
+h4,
+h5,
+h6 {
+  font-size: 1em;
+}
+
+p {
+  margin: 0 0 1em;
+}
+
+a {
+  color: var(--helia-link);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration-color: currentColor;
+}
+
+a:focus-visible,
+summary:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--helia-accent);
+  outline-offset: 2px;
+  border-radius: 3px;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+hr {
+  border: 0;
+  height: 1px;
+  background: var(--helia-border);
+  margin: 2em 0;
+}
+
+ul,
+ol {
+  padding-left: 1.5em;
+  margin: 0 0 1em;
+}
+
+li {
+  margin: 0.2em 0;
+}
+
+li::marker {
+  color: var(--helia-faint);
+}
+
+ol ol {
+  list-style-type: lower-alpha;
+}
+
+ol ol ol {
+  list-style-type: lower-roman;
+}
+
+li > p:last-child {
+  margin-bottom: 0.25em;
+}
+
+mark {
+  background: var(--helia-mark);
+  color: inherit;
+  border-radius: 2px;
+  padding: 0 0.1em;
+}
+
+blockquote {
+  margin: 0 0 1em;
+  padding: 0.1em 0 0.1em 1.1em;
+  border-inline-start: 3px solid var(--helia-quote-border);
+  color: var(--helia-muted);
+}
+
+code,
+pre,
+kbd,
+samp {
+  font-family: var(--helia-font-mono);
+}
+
+code {
+  font-size: 0.86em;
+  background: var(--helia-code-bg);
+  border: 1px solid var(--helia-code-border);
+  border-radius: 4px;
+  padding: 0.05em 0.3em;
+}
+
+kbd {
+  font-size: 0.82em;
+  border: 1px solid var(--helia-border-strong);
+  border-bottom-width: 2px;
+  border-radius: 4px;
+  padding: 0 0.35em;
+  background: var(--helia-bg-subtle);
+}
+
+pre {
+  font-size: 0.84em;
+  line-height: 1.55;
+  background: var(--helia-code-bg);
+  border: 1px solid var(--helia-code-border);
+  border-radius: var(--helia-radius);
+  padding: 0.85em 1em;
+  margin: 0 0 1.1em;
+  overflow-x: auto;
+  tab-size: 2;
+}
+
+pre code {
+  background: none;
+  border: 0;
+  padding: 0;
+  font-size: inherit;
+}
+
+table {
+  border-collapse: collapse;
+  font-variant-numeric: tabular-nums;
+}
+
+th {
+  text-align: left;
+  font-weight: 600;
+}
+
+th,
+td {
+  padding: 0.35em 0.9em 0.35em 0;
+  vertical-align: top;
+  border-bottom: 1px solid var(--helia-border);
+}
+
+thead th {
+  border-bottom: 1px solid var(--helia-border-strong);
+}
+
+figure {
+  margin: 1.5em 0;
+  text-align: center;
+}
+
+figcaption {
+  color: var(--helia-muted);
+  font-size: 0.92em;
+  padding: 0.5em 0 0;
+}
+
+/* "Figure 1" before a caption (typst's figure numbering). */
+.helia-figure-number {
+  font-style: normal;
+  font-weight: 600;
+}
+
+details > summary {
+  list-style: none;
+  cursor: pointer;
+}
+
+details > summary::-webkit-details-marker {
+  display: none;
+}
+
+::selection {
+  background: var(--helia-hover-strong);
+}
+
+/* ------------------------------------------------------------------ top bar
+ *
+ * `[project] home` and `[theme] nav`: the site's name (a link to the home
+ * page) and a few links, above every page; the search button joins it at
+ * the end. Full-bleed, its content aligned with the text column. */
+
+.helia-topbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.25rem 1.25rem;
+  margin: -2.5rem calc(-1 * var(--helia-page-pad)) 3rem;
+  /* 100% is the body's content width: the column's edges line up. */
+  padding: 0.9rem max(var(--helia-page-pad), calc((100% + 2 * var(--helia-page-pad) - var(--helia-measure)) / 2));
+  border-bottom: 1px solid var(--helia-border);
+  font-size: 0.94em;
+  line-height: 1.4;
+}
+
+.helia-home {
+  color: var(--helia-fg);
+  font-weight: 650;
+  letter-spacing: -0.01em;
+  text-decoration: none;
+  margin-right: auto;
+}
+
+.helia-home:hover {
+  color: var(--helia-accent);
+}
+
+.helia-home[aria-current="page"] {
+  color: var(--helia-fg);
+}
+
+.helia-nav-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.2rem 1.1rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.helia-nav-links li {
+  margin: 0;
+}
+
+.helia-nav-links a {
+  color: var(--helia-muted);
+  text-decoration: none;
+}
+
+.helia-nav-links a:hover,
+.helia-nav-links a[aria-current="page"] {
+  color: var(--helia-fg);
+}
+
+.helia-nav-links a[aria-current="page"] {
+  text-decoration: underline;
+  text-decoration-color: var(--helia-accent);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 0.45em;
+}
+
+.helia-topbar .helia-search-button {
+  float: none;
+  margin: 0;
+}
+
+@media (max-width: 700px) {
+  .helia-topbar {
+    margin-top: -1.5rem;
+    margin-bottom: 2rem;
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+  }
+}
+
+/* ------------------------------------------------------------------ page layout (used by base layouts) */
+
+/* One centered column. `.helia-rail` (an aside column) is no longer part of
+ * the base layout; a project layout that still prints one gets it stacked
+ * after the article. */
+.helia-page {
+  max-width: var(--helia-measure);
+  margin: 0 auto;
+}
+
+.helia-page > .helia-main,
+.helia-page > main,
+.helia-page > article {
+  min-width: 0;
+}
+
+.helia-rail {
+  margin-top: 2em;
+  border-top: 1px solid var(--helia-border);
+  padding-top: 1em;
+  font-size: 0.92em;
+  color: var(--helia-muted);
+}
+
+.helia-main,
+main,
+article {
+  max-width: var(--helia-measure);
+}
+
+/* ------------------------------------------------------------------ header, metadata, navigation */
+
+.helia-header {
+  margin-bottom: 2rem;
+}
+
+.helia-header > h1,
+.helia-header > h2 {
+  font-size: 2rem;
+  line-height: 1.2;
+  letter-spacing: -0.022em;
+  font-weight: 700;
+  margin: 0 0 0.4em;
+}
+
+@media (max-width: 700px) {
+  .helia-header > h1,
+  .helia-header > h2 {
+    font-size: 1.65rem;
+  }
+}
+
+.helia-site {
+  font-weight: 800;
+  font-size: 1.3em;
+  color: var(--helia-faint);
+}
+
+.helia-site a {
+  color: inherit;
+}
+
+/* The kind label above the title: a small eyebrow. */
+.helia-taxon {
+  display: block;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--helia-accent);
+  padding-bottom: 0.45em;
+}
+
+.helia-meta {
+  color: var(--helia-muted);
+  font-size: 0.92em;
+  line-height: 1.6;
+  margin: 0.25em 0 0;
+}
+
+.helia-meta a {
+  color: inherit;
+}
+
+.helia-meta ul {
+  display: inline;
+  padding: 0;
+  margin: 0;
+}
+
+.helia-meta li {
+  display: inline;
+}
+
+.helia-meta li::after,
+.helia-meta > .helia-meta-item:not(:last-child)::after {
+  content: " \00b7 ";
+  color: var(--helia-faint);
+}
+
+.helia-meta li:last-child::after {
+  content: "";
+}
+
+.helia-slug,
+.helia-id,
+.helia-doi,
+.helia-orcid {
+  color: var(--helia-faint);
+  font-weight: 400;
+  font-size: 0.8em;
+}
+
+/* The entry's ID after a transcluded title, as Forester prints it: "[id]",
+ * always shown, and a link to the entry's own page. */
+.helia-slug {
+  font-family: var(--helia-font-mono);
+  font-size: 0.68em;
+  font-weight: 400;
+  letter-spacing: 0;
+  color: var(--helia-accent);
+  text-decoration: none;
+  /* one unit that moves to the next line whole, and wraps inside only when
+     wider than the column (a long citation key on a phone) */
+  display: inline-block;
+  max-width: 100%;
+  overflow-wrap: anywhere;
+}
+
+.helia-slug::before {
+  content: "[";
+}
+
+.helia-slug::after {
+  content: "]";
+}
+
+.helia-slug:hover,
+.helia-slug:focus-visible {
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
+}
+
+.helia-tags {
+  display: inline;
+}
+
+.helia-tag {
+  display: inline-block;
+  font-size: 0.8em;
+  line-height: 1.5;
+  padding: 0 0.55em;
+  margin: 0 0.1em;
+  background: var(--helia-bg-subtle);
+  border: 1px solid var(--helia-border);
+  border-radius: 999px;
+  color: var(--helia-muted);
+}
+
+.helia-tag a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.helia-tag:has(a):hover {
+  color: var(--helia-accent, inherit);
+  border-color: currentColor;
+}
+
+.helia-nav,
+nav.helia-nav {
+  margin-bottom: 1em;
+}
+
+.helia-context h2,
+.helia-backlinks h2,
+.helia-related h2,
+.helia-references h2 {
+  font-size: 1.05em;
+  margin-top: 0.4em;
+}
+
+/* The table of contents: a compact, folded "Contents" disclosure at the top
+ * of the article (not part of the outline, so no org bullet), whose items
+ * link to headings and transclusions on the page. */
+.helia-toc {
+  margin: 0 0 2rem;
+  font-size: 0.92em;
+  border: 1px solid var(--helia-border);
+  border-radius: var(--helia-radius-lg);
+  background: var(--helia-bg-subtle);
+}
+
+.helia-toc.helia-collapsible > details > .helia-group-summary {
+  margin: 0;
+  padding: 0.55em 1em;
+  color: var(--helia-muted);
+}
+
+.helia-toc.helia-collapsible > details > .helia-group-summary::before {
+  content: "\25B8";
+  width: auto;
+  margin: 0 0.5em 0 0;
+  color: var(--helia-faint);
+  transition: transform 0.12s ease;
+}
+
+.helia-toc.helia-collapsible > details[open] > .helia-group-summary::before {
+  transform: rotate(90deg);
+}
+
+.helia-toc.helia-collapsible > details:not([open]) > .helia-group-summary::after {
+  content: none;
+}
+
+.helia-toc .helia-group-summary > h2,
+.helia-toc .helia-group-summary > h3 {
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.helia-toc.helia-collapsible > details > .helia-group-body {
+  border: 0;
+  margin: 0;
+  padding: 0 1em 0.7em 2.05em;
+}
+
+.helia-toc ul,
+.helia-toc ol {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.helia-toc li {
+  margin: 0.15em 0;
+}
+
+.helia-toc li > p {
+  margin: 0;
+}
+
+.helia-toc li > ul,
+.helia-toc li > ol {
+  padding-left: 1.1em;
+}
+
+.helia-toc a {
+  color: var(--helia-fg);
+  text-decoration: none;
+}
+
+.helia-toc a:hover {
+  color: var(--helia-accent);
+}
+
+.helia-toc .helia-number {
+  margin-right: 0.35em;
+}
+
+.helia-backlinks,
+.helia-related,
+.helia-references,
+.helia-context {
+  margin-top: 2em;
+}
+
+.helia-footer,
+footer.helia-footer {
+  margin-top: 3.5rem;
+  border-top: 1px solid var(--helia-border);
+  padding-top: 1.25rem;
+  color: var(--helia-muted);
+  font-size: 0.94em;
+}
+
+.helia-footer > section,
+.helia-footer > .helia-section {
+  margin-bottom: 1em;
+}
+
+.helia-footer a {
+  color: var(--helia-fg);
+}
+
+/* The entry's identity (ID, kind, source path), quietly at the very end. */
+.helia-identity {
+  margin-top: 2.5rem;
+  font-family: var(--helia-font-mono);
+  font-size: 0.72em;
+  color: var(--helia-faint);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.2em 1em;
+}
+
+.helia-identity .helia-id {
+  font-size: inherit;
+}
+
+/* ------------------------------------------------------------------ links */
+
+a.helia-link,
+a.helia-entry-link,
+a.helia-label-ref,
+.helia-cite a {
+  text-decoration-line: underline;
+  text-decoration-thickness: 1px;
+  text-decoration-color: var(--helia-link-decoration);
+  text-underline-offset: 0.18em;
+  transition: text-decoration-color 0.12s ease;
+}
+
+/* Links to other entries: dotted, the internal-link convention. */
+a.helia-entry-link,
+a.helia-label-ref,
+.helia-cite a {
+  text-decoration-style: dotted;
+}
+
+a.helia-link:hover,
+a.helia-entry-link:hover,
+a.helia-label-ref:hover,
+.helia-cite a:hover {
+  text-decoration-color: currentColor;
+  text-decoration-style: solid;
+}
+
+a.helia-external::after {
+  content: "\2197";
+  font-size: 0.7em;
+  vertical-align: super;
+  line-height: 0;
+  color: var(--helia-faint);
+  margin-left: 0.08em;
+}
+
+code.helia-raw-inline {
+  white-space: break-spaces;
+}
+
+.helia-unavailable {
+  color: var(--helia-muted);
+}
+
+.helia-unsafe {
+  color: var(--helia-muted);
+  text-decoration: line-through;
+}
+
+.helia-cite {
+  font-style: normal;
+}
+
+.helia-number {
+  color: var(--helia-number);
+  font-weight: 400;
+  font-variant-numeric: tabular-nums;
+}
+
+/* ------------------------------------------------------------------ transclusions */
+
+.helia-transclusion {
+  border-radius: var(--helia-radius);
+  padding: 0.1em 0.6em 0.1em 0.4em;
+  margin: 0 -0.6em 0.5em -0.4em;
+  transition: background-color 0.15s ease;
+}
+
+.helia-transclusion:hover {
+  background-color: var(--helia-hover);
+}
+
+.helia-transclusion > details[open] {
+  margin-bottom: 0.6em;
+}
+
+.helia-transclusion-summary {
+  display: block;
+  padding: 0.1em 0;
+}
+
+.helia-transclusion-summary > .helia-transclusion-title {
+  display: inline;
+  margin: 0;
+}
+
+.helia-transclusion-summary::before {
+  content: var(--helia-bullet-6);
+  display: inline-block;
+  width: var(--helia-bullet-indent);
+  margin-left: calc(-1 * var(--helia-bullet-indent));
+  color: var(--helia-bullet-color);
+  font-size: 0.95em;
+  text-align: center;
+}
+
+/* Nesting bullets cycle by transclusion depth (see theme.css tokens above),
+ * continuing the sequence a heading inside the transclusion started at. Depth
+ * 1-6 map directly; deeper nesting repeats the cycle. */
+.helia-transclusion[data-depth="1"] > details > .helia-transclusion-summary::before {
+  content: var(--helia-bullet-1);
+}
+.helia-transclusion[data-depth="2"] > details > .helia-transclusion-summary::before {
+  content: var(--helia-bullet-2);
+}
+.helia-transclusion[data-depth="3"] > details > .helia-transclusion-summary::before {
+  content: var(--helia-bullet-3);
+}
+.helia-transclusion[data-depth="4"] > details > .helia-transclusion-summary::before {
+  content: var(--helia-bullet-4);
+}
+.helia-transclusion[data-depth="5"] > details > .helia-transclusion-summary::before {
+  content: var(--helia-bullet-5);
+}
+.helia-transclusion[data-depth="6"] > details > .helia-transclusion-summary::before,
+.helia-transclusion[data-depth="12"] > details > .helia-transclusion-summary::before {
+  content: var(--helia-bullet-6);
+}
+.helia-transclusion[data-depth="7"] > details > .helia-transclusion-summary::before {
+  content: var(--helia-bullet-1);
+}
+.helia-transclusion[data-depth="8"] > details > .helia-transclusion-summary::before {
+  content: var(--helia-bullet-2);
+}
+.helia-transclusion[data-depth="9"] > details > .helia-transclusion-summary::before {
+  content: var(--helia-bullet-3);
+}
+.helia-transclusion[data-depth="10"] > details > .helia-transclusion-summary::before {
+  content: var(--helia-bullet-4);
+}
+.helia-transclusion[data-depth="11"] > details > .helia-transclusion-summary::before {
+  content: var(--helia-bullet-5);
+}
+
+.helia-transclusion > details:not([open]) > .helia-transclusion-summary::before {
+  color: var(--helia-bullet-folded-color);
+}
+
+
+.helia-transclusion-summary:hover::before {
+  color: var(--helia-accent);
+}
+
+/* Relative to the surrounding text (em, not rem): a theme that sets a larger
+ * body size must not get titles smaller than the body they fold. */
+.helia-transclusion-title {
+  font-size: 1.1em;
+  font-weight: 600;
+}
+
+.helia-transclusion[data-depth="1"] > details > summary > .helia-transclusion-title {
+  font-size: 1.3em;
+}
+
+.helia-transclusion-summary .helia-number {
+  margin-right: 0.15em;
+}
+
+.helia-transclusion-title .helia-title {
+  font-weight: inherit;
+}
+
+/* Footer lists (backlinks, related): each entry's ID after its title, "[id]". */
+.helia-context a.helia-entry-link[data-entry]::after,
+.helia-backlinks a.helia-entry-link[data-entry]::after,
+.helia-related a.helia-entry-link[data-entry]::after {
+  /* one unit that moves to the next line whole, and wraps inside only when
+     wider than the column (a long ID on a phone) */
+  content: "[" attr(data-entry) "]";
+  display: inline-block;
+  max-width: 100%;
+  margin-left: 0.3em;
+  overflow-wrap: anywhere;
+  hyphens: none;
+  font-family: var(--helia-font-mono, monospace);
+  font-size: 0.8em;
+  color: var(--helia-faint);
+}
+
+/* The kind's byline (venue, date, ...): a quiet line under the title and the
+ * entry's ID (the renderer prints it after the slug), starting a new line. */
+.helia-transclusion-title .helia-byline {
+  font-size: 0.8em;
+  font-weight: 400;
+  line-height: 1.6;
+  color: var(--helia-muted);
+}
+
+.helia-transclusion-title .helia-byline::before {
+  content: "\A";
+  white-space: pre;
+}
+
+.helia-transclusion .helia-slug {
+  margin-left: 0.4em;
+}
+
+.helia-transclusion-body {
+  padding-top: 0.35em;
+}
+
+.helia-transclude {
+  color: var(--helia-muted);
+}
+
+.helia-env > :last-child {
+  margin-bottom: 0.4em;
+}
+
+.helia-env-label {
+  font-weight: 700;
+  font-style: normal;
+}
+
+/* ------------------------------------------------------------------ collapsible sections, groups, code
+ *
+ * Headings with their bodies (`.helia-heading-section`), layout groups with a
+ * `collapsible` attribute (`.helia-collapsible`) and code blocks (`.helia-code`)
+ * are native <details>. Headings and transclusions get an org-bullets-style
+ * glyph, cycling by nesting depth (`data-level`, already shifted by
+ * transclusion depth); groups and code keep a small, subdued triangle. Both
+ * are the collapse toggle (they're inside <summary>, which is natively
+ * clickable) and sit in the left gutter via a negative margin, aligned with
+ * the heading's first line. */
+
+.helia-heading-section > details > .helia-heading-summary,
+.helia-collapsible > details > .helia-group-summary {
+  display: block;
+  position: relative;
+  margin: 0.9em 0 0.35em;
+}
+
+.helia-heading-summary > h2,
+.helia-heading-summary > h3,
+.helia-heading-summary > h4,
+.helia-heading-summary > h5,
+.helia-heading-summary > h6,
+.helia-group-summary > h2,
+.helia-group-summary > h3,
+.helia-group-summary > h4,
+.helia-group-summary > h5,
+.helia-group-summary > h6 {
+  display: inline;
+  margin: 0;
+}
+
+.helia-heading-summary::before {
+  content: var(--helia-bullet-6);
+  display: inline-block;
+  width: var(--helia-bullet-indent);
+  margin-left: calc(-1 * var(--helia-bullet-indent));
+  color: var(--helia-bullet-color);
+  font-size: 0.9em;
+  font-weight: 400;
+  text-align: center;
+}
+
+.helia-heading-section[data-level="1"] > details > .helia-heading-summary::before {
+  content: var(--helia-bullet-1);
+}
+.helia-heading-section[data-level="2"] > details > .helia-heading-summary::before {
+  content: var(--helia-bullet-2);
+}
+.helia-heading-section[data-level="3"] > details > .helia-heading-summary::before {
+  content: var(--helia-bullet-3);
+}
+.helia-heading-section[data-level="4"] > details > .helia-heading-summary::before {
+  content: var(--helia-bullet-4);
+}
+.helia-heading-section[data-level="5"] > details > .helia-heading-summary::before {
+  content: var(--helia-bullet-5);
+}
+.helia-heading-section[data-level="6"] > details > .helia-heading-summary::before,
+.helia-heading-section[data-level="12"] > details > .helia-heading-summary::before {
+  content: var(--helia-bullet-6);
+}
+.helia-heading-section[data-level="7"] > details > .helia-heading-summary::before {
+  content: var(--helia-bullet-1);
+}
+.helia-heading-section[data-level="8"] > details > .helia-heading-summary::before {
+  content: var(--helia-bullet-2);
+}
+.helia-heading-section[data-level="9"] > details > .helia-heading-summary::before {
+  content: var(--helia-bullet-3);
+}
+.helia-heading-section[data-level="10"] > details > .helia-heading-summary::before {
+  content: var(--helia-bullet-4);
+}
+.helia-heading-section[data-level="11"] > details > .helia-heading-summary::before {
+  content: var(--helia-bullet-5);
+}
+
+/* Collapsible groups (backlinks, related, query results, ...) are part of
+ * the outline too: an org bullet, faint when folded, like headings. Footer sections are top level (bullet 1), groups in the body
+ * sit one level in (bullet 2). Code keeps a small triangle, rotated when open. */
+.helia-collapsible > details > .helia-group-summary::before {
+  content: var(--helia-bullet-2);
+  display: inline-block;
+  width: var(--helia-bullet-indent);
+  margin-left: calc(-1 * var(--helia-bullet-indent));
+  color: var(--helia-bullet-color);
+  font-size: 0.9em;
+  font-weight: 400;
+  text-align: center;
+}
+
+.helia-footer .helia-collapsible > details > .helia-group-summary::before {
+  content: var(--helia-bullet-1);
+}
+
+.helia-collapsible > details:not([open]) > .helia-group-summary::before {
+  color: var(--helia-bullet-folded-color);
+}
+
+
+/* Footer lists (backlinks, related) continue the outline one level down:
+ * the group body is indented one bullet column (see the indent guides
+ * below), so an item's bullet hangs under the section title's first letter
+ * and its text starts one column further in. */
+.helia-footer .helia-collapsible .helia-group-body > ul {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 0.25em;
+}
+
+.helia-footer .helia-collapsible .helia-group-body > ul > li::before {
+  content: var(--helia-bullet-2);
+  display: inline-block;
+  width: var(--helia-bullet-indent);
+  margin-left: calc(-1 * var(--helia-bullet-indent));
+  color: var(--helia-bullet-color);
+  font-size: 0.85em;
+  text-align: center;
+}
+
+.helia-code-summary::before {
+  content: "\25B8";
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
+  color: var(--helia-bullet-group-color);
+  font-size: 0.85em;
+  font-weight: 400;
+  transition: transform 0.12s ease;
+}
+
+.helia-code[open] > .helia-code-summary::before {
+  transform: rotate(90deg);
+}
+
+.helia-heading-section > details:not([open]) > .helia-heading-summary::before {
+  color: var(--helia-bullet-folded-color);
+}
+
+
+.helia-heading-summary:hover::before,
+.helia-group-summary:hover::before,
+.helia-code-summary:hover::before {
+  color: var(--helia-accent);
+}
+
+.helia-heading-section > details:not([open]) > .helia-heading-summary {
+  margin-bottom: 0.6em;
+}
+
+/* Indent guides: a subtle vertical line down a section's/transclusion's
+ * body, connecting the bullet to its extent. Nesting compounds naturally
+ * since a subsection's own body is inside its parent's. */
+.helia-heading-section > details > .helia-heading-body,
+.helia-transclusion > details > .helia-transclusion-body,
+.helia-collapsible > details > .helia-group-body {
+  min-width: 0;
+  border-inline-start: 1px solid var(--helia-bullet-guide-color);
+  margin-inline-start: calc(-0.5 * var(--helia-bullet-indent));
+  padding-inline-start: calc(1.5 * var(--helia-bullet-indent) - 1px);
+}
+
+.helia-group-body {
+  min-width: 0;
+}
+
+@media (max-width: 480px) {
+  :root {
+    --helia-bullet-indent: 0.95em;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .helia-group-summary::before,
+  .helia-code-summary::before {
+    transition: none;
+  }
+}
+
+.helia-group-title {
+  font-weight: 600;
+  font-size: 1em;
+}
+
+.helia-code {
+  margin: 0 0 0.9em;
+}
+
+.helia-code > pre.helia-raw {
+  margin: 0;
+  border-top-left-radius: 0;
+}
+
+.helia-code-summary {
+  display: inline-block;
+  position: relative;
+  padding: 0.05em 0.7em 0.05em 1.3em;
+  font-family: var(--helia-font-mono);
+  font-size: 0.72em;
+  color: var(--helia-faint);
+  background: var(--helia-code-bg);
+  border-radius: var(--helia-radius) var(--helia-radius) 0 0;
+  user-select: none;
+}
+
+.helia-code-summary::before {
+  margin-left: -1.1em;
+  width: 1.1em;
+}
+
+.helia-code:not([open]) > .helia-code-summary {
+  border-radius: var(--helia-radius);
+}
+
+.helia-code-lang {
+  color: var(--helia-muted);
+  font-weight: 500;
+}
+
+.helia-code-lines {
+  font-variant-numeric: tabular-nums;
+}
+
+/* Page furniture that uses `collapsible` groups in the base layouts. */
+
+/* Definitions sit last in the footer, folded; each one is an outline item
+ * under the section's bullet, like the backlinks and related lists. */
+.helia-definitions h2 {
+  font-size: 1.05em;
+  margin-top: 0.4em;
+}
+
+.helia-def {
+  margin: 0.2em 0 0.8em;
+}
+
+.helia-def-head::before {
+  content: var(--helia-bullet-2);
+  display: inline-block;
+  width: var(--helia-bullet-indent);
+  margin-left: calc(-1 * var(--helia-bullet-indent));
+  margin-right: -0.6em;
+  color: var(--helia-bullet-color);
+  font-size: 0.85em;
+  text-align: center;
+}
+
+.helia-def-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.2em 0.6em;
+  margin-bottom: 0.25em;
+}
+
+.helia-def-name {
+  font-family: var(--helia-font-mono);
+  font-weight: 600;
+  font-size: 0.92em;
+}
+
+.helia-def-kind {
+  font-size: 0.72em;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--helia-muted);
+  border: 1px solid var(--helia-border);
+  border-radius: 1em;
+  padding: 0 0.55em;
+}
+
+.helia-def-signature {
+  font-family: var(--helia-font-mono);
+  font-size: 0.82em;
+  color: var(--helia-faint);
+  overflow-wrap: anywhere;
+}
+
+/* ------------------------------------------------------------------ elements */
+
+.helia-figure > .helia-image,
+.helia-figure > p {
+  margin-bottom: 0.2em;
+}
+
+.helia-quote blockquote {
+  margin-bottom: 0.2em;
+}
+
+.helia-attribution {
+  text-align: right;
+  font-style: normal;
+}
+
+.helia-terms dt {
+  font-weight: 700;
+}
+
+.helia-terms dd {
+  margin: 0 0 0.5em 1.5em;
+}
+
+.helia-table {
+  overflow-x: auto;
+  margin-bottom: 1em;
+}
+
+.helia-image {
+  margin: 0 0 1em;
+}
+
+img.helia-image {
+  margin: 0;
+  vertical-align: middle;
+}
+
+.helia-pdf object {
+  width: 100%;
+  min-height: 70vh;
+  border: 1px solid var(--helia-border);
+  border-radius: var(--helia-radius);
+}
+
+.helia-raw {
+  position: relative;
+}
+
+.helia-footnote-ref {
+  font-size: 0.75em;
+  line-height: 0;
+}
+
+.helia-footnote-ref a {
+  padding: 0 0.1em;
+}
+
+.helia-footnotes {
+  margin-top: 2em;
+  padding-top: 0.6em;
+  border-top: 1px solid var(--helia-border);
+  font-size: 0.92em;
+}
+
+.helia-footnote {
+  display: flex;
+  gap: 0.5em;
+  margin-bottom: 0.4em;
+}
+
+.helia-footnote:target {
+  background: var(--helia-mark);
+  border-radius: var(--helia-radius);
+}
+
+.helia-footnote-back {
+  color: var(--helia-muted);
+  min-width: 1.5em;
+  text-align: right;
+}
+
+.helia-footnote-body > p:last-child {
+  margin-bottom: 0;
+}
+
+.helia-footnote-inline {
+  font-size: 0.85em;
+  color: var(--helia-muted);
+}
+
+.helia-footnote-inline::before {
+  content: "(";
+}
+
+.helia-footnote-inline::after {
+  content: ")";
+}
+
+/* The target of an in-page link (the table of contents, a label
+ * reference): a brief highlight. */
+.helia-heading:target,
+.helia-transclusion:target,
+.helia-transclusion-title:target {
+  background: var(--helia-mark);
+  border-radius: var(--helia-radius);
+  box-shadow: 0 0 0 0.15em var(--helia-mark);
+}
+
+.helia-heading,
+.helia-transclusion,
+.helia-transclusion-title {
+  scroll-margin-top: 1.25rem;
+}
+
+/* ------------------------------------------------------------------ math */
+
+.helia-math-inline {
+  display: inline;
+}
+
+.helia-math-inline > svg {
+  display: inline-block;
+  vertical-align: -0.25em;
+  overflow: visible;
+}
+
+.helia-math-display {
+  display: block;
+  margin: 0.6em 0 0.9em;
+  text-align: center;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+.helia-math-display > svg {
+  display: inline-block;
+  max-width: 100%;
+}
+
+/* typst renders glyphs in black; follow the text color instead. */
+.helia-math svg [fill="#000000"],
+.helia-math svg [fill="#000"] {
+  fill: currentColor;
+}
+
+.helia-math svg [stroke="#000000"],
+.helia-math svg [stroke="#000"] {
+  stroke: currentColor;
+}
+
+/* MathML math (`[math] html = "mathml"`, the default). Formulas render in
+   New Computer Modern Math, the font typst uses for SVG and PDF output; the
+   build writes it next to this file. They inherit the text colour, so they
+   follow the light and dark themes. */
+@font-face {
+  font-family: "Helia Math";
+  src: local("New Computer Modern Math"), local("NewComputerModernMath-Regular"),
+    url("NewCMMath-Regular.otf") format("opentype");
+  font-display: swap;
+}
+
+.helia-mathml math {
+  font-family: "Helia Math", "New Computer Modern Math", "Latin Modern Math", "STIX Two Math", "Cambria Math", math;
+}
+
+.helia-math-display.helia-mathml math {
+  display: block math;
+}
+
+/* BEGIN typst equation CSS: typst's HTML export (typst-html 0.15.1,
+   Apache-2.0, https://github.com/typst/typst) adds these rules to documents
+   with math. Kept verbatim; a test compares them with the embedded typst. */
+/* Alignment */
+mtable.right-align mtd,
+mtable mtd.right-align,
+mtable.left-align mtd.right-align,
+mtable.aligned mtd:nth-child(odd) {
+  justify-items: end;
+  text-align: right;
+}
+mtable.cases mtd,
+mtable.left-align mtd,
+mtable mtd.left-align,
+mtable.aligned mtd:nth-child(even),
+math:is(:not([display])) > mtable.multiline-equation mtd {
+  justify-items: start;
+  text-align: left;
+}
+mtable.cases mtd,
+mtable.aligned mtd,
+mtable mtd.flushed,
+mtable mtd.left-flush {
+  padding-left: 0;
+}
+mtable.cases mtd,
+mtable.aligned mtd,
+mtable mtd.flushed,
+mtable mtd.right-flush {
+  padding-right: 0;
+}
+
+/* Tables */
+mtable {
+  math-style: inherit;
+}
+mtd {
+  math-depth: auto-add;
+  math-style: compact;
+  math-shift: compact;
+}
+
+/* Equations */
+mtable.multiline-equation mtd {
+  math-depth: inherit;
+  math-style: inherit;
+  math-shift: inherit;
+  padding: 0;
+}
+math > mtable.multiline-equation mtr:not(:last-child) mtd {
+  padding-bottom: 0.5em;
+}
+
+/* Fractions */
+mfrac {
+  padding-inline: 0;
+  margin-inline: 0.1em;
+}
+
+/* Accents */
+mover[accent="true" i] > :first-child {
+  font-feature-settings: "dtls";
+}
+mover.dotted[accent="true" i] > :first-child {
+  font-feature-settings: "dtls" 0;
+}
+
+/* Other rules for scriptlevel, displaystyle and math-shift */
+munder > :nth-child(2),
+munderover > :nth-child(2) {
+  math-shift: compact
+}
+munder[accentunder="true" i] > :not(:first-child),
+mover[accent="true" i] > :not(:first-child) {
+  math-depth: inherit;
+  math-style: inherit;
+  math-shift: inherit;
+}
+/* END typst equation CSS */
+
+/* ------------------------------------------------------------------ islands, widgets, placeholders */
+
+.helia-island {
+  max-width: 100%;
+}
+
+div.helia-island {
+  margin: 0 0 1em;
+  overflow-x: auto;
+}
+
+div.helia-island.helia-svg,
+div.helia-island.helia-png {
+  text-align: center;
+}
+
+.helia-island svg {
+  max-width: 100%;
+  height: auto;
+}
+
+span.helia-island > svg {
+  vertical-align: middle;
+}
+
+/* Typst islands (.helia-typst-svg) draw in currentColor and follow the theme;
+   other SVG/PNG islands are typically black on white and get inverted. */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .helia-island.helia-svg:not(.helia-no-invert) svg:not(.helia-typst-svg),
+  :root:not([data-theme="light"]) .helia-island.helia-png:not(.helia-no-invert) img {
+    filter: invert(0.88) hue-rotate(180deg);
+  }
+}
+
+:root[data-theme="dark"] .helia-island.helia-svg:not(.helia-no-invert) svg:not(.helia-typst-svg),
+:root[data-theme="dark"] .helia-island.helia-png:not(.helia-no-invert) img {
+  filter: invert(0.88) hue-rotate(180deg);
+}
+
+.helia-island.helia-text,
+.helia-island.helia-json {
+  white-space: pre-wrap;
+}
+
+span.helia-island.helia-text,
+span.helia-island.helia-json {
+  font-family: var(--helia-font-mono);
+  font-size: 0.88em;
+}
+
+.helia-island.helia-html,
+.helia-island.helia-asset {
+  text-align: left;
+}
+
+.helia-widget {
+  display: block;
+}
+
+span.helia-widget {
+  display: inline;
+}
+
+.helia-pending {
+  background: var(--helia-pending-bg);
+  color: var(--helia-pending-fg);
+  border-radius: var(--helia-radius);
+  border: 1px dashed var(--helia-border);
+  padding: 0.1em 0.35em;
+}
+
+div.helia-pending {
+  padding: 0.6em 0.8em;
+  font-style: italic;
+}
+
+.helia-math.helia-pending code,
+.helia-math.helia-error code {
+  background: none;
+  padding: 0;
+}
+
+.helia-error {
+  background: var(--helia-error-bg);
+  color: var(--helia-error-fg);
+  border-radius: 4px;
+  padding: 0.05em 0.35em 0.1em;
+  font-weight: 600;
+}
+
+div.helia-error {
+  padding: 0.4em 0.7em;
+  margin: 0 0 1em;
+}
+
+.helia-error-code {
+  font-family: var(--helia-font-mono);
+  font-size: 0.85em;
+  opacity: 0.9;
+}
+
+.helia-error a {
+  color: inherit;
+}
+
+/* ------------------------------------------------------------------ syntax highlighting (helia-highlight: class="hl-<scope atom>") */
+
+.hl-comment {
+  color: var(--hl-comment);
+  font-style: italic;
+}
+
+.hl-keyword {
+  color: var(--hl-keyword);
+}
+
+.hl-storage {
+  color: var(--hl-storage);
+}
+
+.hl-string,
+.hl-char {
+  color: var(--hl-string);
+}
+
+.hl-string.hl-regexp,
+.hl-escape {
+  color: var(--hl-operator);
+}
+
+.hl-constant {
+  color: var(--hl-constant);
+}
+
+.hl-numeric,
+.hl-number {
+  color: var(--hl-number);
+}
+
+.hl-function,
+.hl-entity.hl-name.hl-function {
+  color: var(--hl-function);
+}
+
+.hl-type,
+.hl-class,
+.hl-struct,
+.hl-enum,
+.hl-interface,
+.hl-trait,
+.hl-storage.hl-type,
+.hl-entity.hl-name.hl-type {
+  color: var(--hl-type);
+}
+
+.hl-variable {
+  color: var(--hl-variable);
+}
+
+.hl-parameter {
+  color: var(--hl-parameter);
+}
+
+.hl-operator,
+.hl-keyword.hl-operator {
+  color: var(--hl-operator);
+}
+
+.hl-punctuation {
+  color: var(--hl-punctuation);
+}
+
+.hl-tag,
+.hl-entity.hl-name.hl-tag {
+  color: var(--hl-tag);
+}
+
+.hl-attribute-name,
+.hl-attribute {
+  color: var(--hl-attribute);
+}
+
+.hl-support {
+  color: var(--hl-support);
+}
+
+.hl-module,
+.hl-namespace {
+  color: var(--hl-type);
+}
+
+.hl-constructor {
+  color: var(--hl-constant);
+}
+
+.hl-postulate,
+.hl-primitive {
+  color: var(--hl-keyword);
+}
+
+.hl-invalid {
+  color: var(--hl-invalid);
+  text-decoration: wavy underline;
+}
+
+.hl-markup.hl-heading {
+  font-weight: 700;
+  color: var(--hl-function);
+}
+
+.hl-markup.hl-bold {
+  font-weight: 700;
+}
+
+.hl-markup.hl-italic {
+  font-style: italic;
+}
+
+.hl-markup.hl-inserted {
+  color: var(--hl-inserted);
+}
+
+.hl-markup.hl-deleted {
+  color: var(--hl-deleted);
+}
+
+.hl-markup.hl-underline.hl-link {
+  text-decoration: underline;
+}
+
+/* ------------------------------------------------------------------ print */
+
+@media print {
+  .helia-rail,
+  .helia-topbar {
+    display: none;
+  }
+  .helia-page {
+    display: block;
+  }
+  .helia-transclusion:hover {
+    background: none;
+  }
+  .helia-transclusion-summary::before,
+  .helia-heading-summary::before,
+  .helia-group-summary::before,
+  .helia-code-summary::before,
+  .helia-transclusion-summary::after,
+  .helia-heading-summary::after,
+  .helia-group-summary::after {
+    content: none;
+  }
+  .helia-heading-section > details > .helia-heading-body,
+  .helia-transclusion > details > .helia-transclusion-body,
+  .helia-collapsible > details > .helia-group-body {
+    border-inline-start: none;
+    margin-inline-start: 0;
+    padding-inline-start: 0;
+  }
+}
+
+/* ------------------------------------------------------------------ literate chunks and runners */
+/* @base/literate (`helia-chunk*`) and the helia-runner widget (`helia-runner*`). */
+
+.helia-chunk {
+  margin: 0 0 0.9em;
+  scroll-margin-top: 1em;
+}
+.helia-chunk:target > .helia-chunk-header {
+  background: var(--helia-mark);
+}
+.helia-chunk-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.2em 0.75em;
+  font-size: 0.82em;
+  color: var(--helia-muted);
+  padding: 0.15em 0.4em;
+  border-bottom: 1px solid var(--helia-border);
+}
+.helia-chunk-header a {
+  color: inherit;
+}
+.helia-chunk-name,
+.helia-chunk-file,
+.helia-chunk-lang {
+  font-family: var(--helia-font-mono);
+  color: var(--helia-fg);
+}
+.helia-chunk-op,
+.helia-chunk-count {
+  color: var(--helia-faint);
+}
+.helia-chunk-status[data-status="ok"] {
+  color: #2e7d32;
+}
+.helia-chunk-status[data-status="error"] {
+  color: var(--helia-error-bg);
+}
+.helia-chunk-code {
+  font-family: var(--helia-font-mono);
+  font-size: 0.85em;
+  line-height: 1.45;
+  white-space: pre;
+  background: var(--helia-code-bg);
+  border-radius: 0 0 var(--helia-radius) var(--helia-radius);
+  padding: 0.6em 0.8em;
+  overflow-x: auto;
+  tab-size: 2;
+}
+.helia-chunk-code code.helia-raw-inline {
+  white-space: pre;
+  background: none;
+  padding: 0;
+  border-radius: 0;
+  font-size: inherit;
+}
+.helia-chunk-code a,
+.helia-chunk-code a:visited {
+  color: inherit;
+  text-decoration: none;
+}
+.helia-chunk-code a:hover {
+  text-decoration: underline;
+  text-decoration-color: var(--helia-link-decoration);
+}
+.helia-chunk-code .helia-tok:target {
+  background: var(--helia-mark);
+}
+.helia-noweb-ref,
+.helia-noweb-ref-missing {
+  font-style: italic;
+  color: var(--helia-accent);
+}
+.helia-noweb-ref-missing {
+  color: var(--helia-error-bg);
+}
+.helia-chunk-error-line {
+  text-decoration: underline wavy var(--helia-error-bg);
+  text-decoration-skip-ink: none;
+}
+.helia-chunk-messages,
+.helia-chunk-problems {
+  font-size: 0.82em;
+  border-left: 3px solid var(--helia-error-bg);
+  padding: 0.2em 0.6em;
+  margin: 0.3em 0;
+}
+.helia-chunk-messages code {
+  white-space: pre-wrap;
+  background: none;
+}
+.helia-runner {
+  border: 1px solid var(--helia-border);
+  border-radius: var(--helia-radius);
+  margin: 0.4em 0 0.9em;
+  font-size: 0.85em;
+}
+.helia-runner-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4em;
+  align-items: center;
+  padding: 0.3em 0.4em;
+  border-bottom: 1px solid var(--helia-border);
+}
+.helia-runner-bar button {
+  font: inherit;
+  padding: 0.1em 0.6em;
+  border: 1px solid var(--helia-border);
+  border-radius: var(--helia-radius);
+  background: var(--helia-bg);
+  color: var(--helia-fg);
+  cursor: pointer;
+}
+.helia-runner-bar button:disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+.helia-runner-status,
+.helia-runner-label {
+  color: var(--helia-muted);
+}
+.helia-runner-label {
+  margin-left: auto;
+  font-family: var(--helia-font-mono);
+}
+.helia-runner-stdin textarea {
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 3em;
+  font-family: var(--helia-font-mono);
+  font-size: inherit;
+  background: var(--helia-bg);
+  color: var(--helia-fg);
+  border: 0;
+  border-top: 1px solid var(--helia-border);
+}
+.helia-runner-stdin > summary {
+  padding: 0.1em 0.5em;
+  color: var(--helia-muted);
+  cursor: pointer;
+}
+.helia-runner-out {
+  margin: 0;
+  border-radius: 0 0 var(--helia-radius) var(--helia-radius);
+  min-height: 1.5em;
+  max-height: 24em;
+  overflow: auto;
+  white-space: pre-wrap;
+}
+.helia-runner-out:empty::before {
+  content: "output";
+  color: var(--helia-faint);
+}
+.helia-runner-stderr {
+  color: var(--helia-error-bg);
+}
+.helia-runner-note {
+  color: var(--helia-muted);
+  font-style: italic;
+}
+
+/* ------------------------------------------------------------------
+   External sources (@base/external, helia-external).
+   Site typography throughout; each source contributes only an accent
+   (--helia-ext-accent) and a badge (--helia-ext-badge), set on .helia-ext-<name>
+   by the source's scoped stylesheet. */
+.helia-ext, .helia-ext-wrap, .helia-ext-link { --helia-ext-accent-c: var(--helia-ext-accent, var(--helia-accent)); }
+.helia-ext-link > a { text-decoration-color: var(--helia-ext-accent-c); }
+.helia-ext-link > a::after {
+  content: var(--helia-ext-badge, "");
+  font-size: 0.62em;
+  font-family: var(--helia-font-mono);
+  color: var(--helia-ext-accent-c);
+  vertical-align: super;
+  margin-left: 0.2em;
+  opacity: 0.8;
+}
+.helia-ext, .helia-ext-wrap {
+  border-left: 3px solid var(--helia-ext-accent-c);
+  border-radius: var(--helia-radius);
+  margin: 1em 0;
+  padding: 0.25em 0 0.25em 0.9em;
+}
+.helia-ext > details > summary .helia-group-title { font-weight: 600; }
+.helia-ext-body > :first-child { margin-top: 0.4em; }
+.helia-ext-source {
+  font-size: 0.85em;
+  color: var(--helia-muted);
+  border-top: 1px solid var(--helia-border);
+  margin-top: 0.75em;
+  padding-top: 0.3em;
+}
+.helia-ext-badge {
+  font-family: var(--helia-font-mono);
+  font-size: 0.85em;
+  color: var(--helia-ext-accent-c, var(--helia-accent));
+  border: 1px solid currentColor;
+  border-radius: var(--helia-radius);
+  padding: 0 0.3em;
+}
+.helia-ext-card-title { font-weight: 600; margin-bottom: 0.3em; }
+.helia-ext-excerpt { color: var(--helia-fg); }
+.helia-ext-commentary {
+  margin-top: 0.6em;
+  padding-top: 0.4em;
+  border-top: 1px dashed var(--helia-border);
+}
+.helia-ext-html[data-display="block"] { overflow-x: auto; margin: 0.6em 0; text-align: center; }
+.helia-ext-html math { font-size: 1.05em; }
+.helia-ext-tex { font-family: var(--helia-font-mono); font-size: 0.9em; }
+.helia-ext-tree { border-left: 2px solid var(--helia-border); padding-left: 0.75em; margin: 0.75em 0; }
+.helia-ext-svg svg { max-width: 100%; height: auto; }
+/* Wrapped pages (virtual entries `<source>--<page>`): the header card
+   carries the accent; the article itself reads like any page. */
+.helia-ext-page-header { font-size: 0.9em; color: var(--helia-muted); padding: 0.4em 0 0.4em 0.9em; overflow-wrap: anywhere; }
+.helia-ext.helia-ext-page { border-left: 0; padding-left: 0; }
+.helia-ext-page-header .helia-ext-badge { margin-right: 0.2em; }
+.helia-ext-full { margin-top: 0.6em; }
+.helia-ext-wrapped { font-size: 0.95em; }
+section.helia-transclusion > details > .helia-transclusion-body > .helia-ext { margin-top: 0.3em; }
+
+/* Typed links (`link("doi:..")`, @base/links): a small badge before the
+   link, coloured by the link type's `style: (accent:)`. */
+.helia-link-ext { white-space: normal; }
+.helia-link-ext[data-badge]::before {
+  content: attr(data-badge);
+  display: inline-block;
+  margin-right: 0.25em;
+  padding: 0 0.3em;
+  border-radius: 0.25em;
+  font-size: 0.7em;
+  font-weight: 600;
+  line-height: 1.5;
+  vertical-align: 0.12em;
+  letter-spacing: 0.02em;
+  color: var(--helia-link-accent, var(--helia-accent));
+  border: 1px solid color-mix(in srgb, var(--helia-link-accent, var(--helia-accent)) 45%, transparent);
+}
+.helia-link-ext > a { text-decoration-color: color-mix(in srgb, var(--helia-link-accent, var(--helia-accent)) 60%, transparent); }
+
+/* ---- Reference pages: the "Cite" section (@base/reference) ---- */
+.helia-cite-key { margin: 0.4em 0; }
+.helia-cite-format { margin: 0.4em 0; }
+/* The code block's own summary is redundant inside a titled format group. */
+.helia-cite-format details.helia-code > summary { display: none; }
+.helia-cite-format pre { max-height: 24em; overflow: auto; }
+.helia-cite-files { font-size: 0.9em; color: var(--helia-muted); }
+.helia-copy {
+  margin-left: 0.6em;
+  padding: 0.05em 0.6em;
+  font: inherit;
+  font-size: 0.8em;
+  color: var(--helia-muted);
+  background: transparent;
+  border: 1px solid var(--helia-border);
+  border-radius: var(--helia-radius);
+  cursor: pointer;
+}
+.helia-copy:hover { color: var(--helia-fg); background: var(--helia-hover); }
+
+/* Query blocks (@base/query): a quiet "Sort" button beside the "N entries"
+   summary, opening a small menu of orders (runtime.js). */
+.helia-query-sort {
+  position: relative;
+  display: inline-block;
+  margin-left: 0.6em;
+  font-size: 0.8em;
+  font-weight: 400;
+  font-style: normal;
+  vertical-align: baseline;
+}
+
+.helia-query > details:not([open]) > summary .helia-query-sort {
+  display: none;
+}
+
+.helia-query-sort-button {
+  font: inherit;
+  color: var(--helia-muted);
+  background: none;
+  border: none;
+  padding: 0 0.2em;
+  cursor: pointer;
+}
+
+.helia-query-sort-button::after {
+  content: " \25BE";
+  font-size: 0.85em;
+}
+
+.helia-query-sort-button:hover,
+.helia-query-sort-button[aria-expanded="true"] {
+  color: var(--helia-accent);
+}
+
+.helia-query-sort-menu {
+  position: absolute;
+  left: 0;
+  top: calc(100% + 0.3em);
+  z-index: 20;
+  display: flex;
+  flex-direction: column;
+  min-width: 9em;
+  padding: 0.3em 0;
+  background: var(--helia-bg);
+  border: 1px solid var(--helia-border);
+  border-radius: var(--helia-radius);
+  box-shadow: 0 0.4em 1.2em rgb(0 0 0 / 0.12);
+}
+
+.helia-query-sort-menu[hidden] {
+  display: none;
+}
+
+.helia-query-sort-menu button {
+  font: inherit;
+  text-align: left;
+  color: var(--helia-fg);
+  background: none;
+  border: none;
+  padding: 0.25em 0.9em 0.25em 1.6em;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.helia-query-sort-menu button:hover,
+.helia-query-sort-menu button:focus-visible {
+  background: var(--helia-hover);
+  outline: none;
+}
+
+.helia-query-sort-menu button[aria-checked="true"]::before {
+  content: "\2713";
+  display: inline-block;
+  width: 1.3em;
+  margin-left: -1.3em;
+  color: var(--helia-accent);
+}
+
+@media print {
+  .helia-query-sort {
+    display: none;
+  }
+}
+
+/* Link previews (runtime.js): a quiet card under a hovered or focused entry
+   link, cut from the target's page. */
+.helia-preview {
+  position: absolute;
+  z-index: 50;
+  box-sizing: border-box;
+  width: max-content;
+  max-width: min(26rem, calc(100vw - 16px));
+  padding: 0.7em 0.9em 0.75em;
+  background: var(--helia-bg);
+  color: var(--helia-fg);
+  border: 1px solid var(--helia-border-strong);
+  border-radius: var(--helia-radius, 4px);
+  box-shadow: var(--helia-shadow);
+  font-size: 0.86rem;
+  line-height: 1.45;
+  text-align: left;
+  pointer-events: auto;
+  animation: helia-preview-in 120ms ease-out;
+}
+
+@keyframes helia-preview-in {
+  from { opacity: 0; transform: translateY(2px); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .helia-preview { animation: none; }
+}
+
+.helia-preview-title {
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.helia-preview-kind {
+  display: block;
+  margin-bottom: 0.15em;
+  font-size: 0.72em;
+  font-weight: 400;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--helia-faint);
+}
+
+.helia-preview-meta {
+  margin-top: 0.2em;
+  font-size: 0.88em;
+  color: var(--helia-muted);
+}
+
+.helia-preview-body {
+  margin-top: 0.45em;
+  padding-top: 0.45em;
+  border-top: 1px solid var(--helia-border);
+  max-height: 9.5em;
+  overflow: hidden;
+}
+
+.helia-preview-body.helia-preview-clipped {
+  -webkit-mask-image: linear-gradient(to bottom, #000 70%, transparent);
+  mask-image: linear-gradient(to bottom, #000 70%, transparent);
+}
+
+.helia-preview-body > * {
+  margin: 0 0 0.4em;
+}
+
+.helia-preview-body .helia-math-display {
+  margin: 0.3em 0;
+  overflow: hidden;
+}
+
+.helia-preview-body .helia-abstract {
+  font-size: 0.95em;
+}

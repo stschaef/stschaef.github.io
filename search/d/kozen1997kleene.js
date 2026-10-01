@@ -1,0 +1,1 @@
+heliaSearchData("d/kozen1997kleene",{"id":"kozen1997kleene","title":"Kleene algebra with tests","kind":"reference","tags":["kleene-algebra"],"authors":["Dexter Kozen"],"venue":["TOPLAS","ACM Transactions on Programming Languages and Systems"],"date":null,"url":"kozen1997kleene.html","headings":[],"body":""});

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>Notions of Stack-manipulating Computation and Relative Monads</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Ctext y=%22.9em%22 font-size=%2290%22%3E%F0%9F%8C%BB%3C/text%3E%3C/svg%3E">
+<meta name="generator" content="helia">
+<script src="helia/theme-version.js"></script>
+<script src="theme/folio-early.js"></script>
+<link rel="stylesheet" href="helia/theme.css">
+<link rel="stylesheet" href="helia/highlight.css">
+<link rel="stylesheet" href="helia/search.css">
+<link rel="stylesheet" href="theme/katex.css">
+<link rel="stylesheet" href="theme/recipe.css">
+<link rel="stylesheet" href="theme/site.css">
+<link rel="stylesheet" href="theme/folio.css">
+<script defer src="helia/runtime.js"></script>
+<script defer src="helia/search.js"></script>
+<script defer src="theme/glyphcraft.js"></script>
+<script defer src="theme/glyphart.js"></script>
+<script defer src="theme/glyphgen.js"></script>
+<script defer src="theme/ornament.js"></script>
+<script defer src="theme/folio.js"></script>
+<script defer src="theme/portrait.js"></script>
+<script type="application/json" id="helia-widgets">{"helia-cite-formats":"widgets/helia-cite-formats-a3294ac7.js"}</script>
+<link rel="modulepreload" href="widgets/helia-cite-formats-a3294ac7.js">
+<script type="module" src="widgets/runtime.js"></script>
+</head>
+<body>
+<nav class="helia-topbar"><a class="helia-home" href="home.html">Steven Schaefer</a><ul class="helia-nav-links"><li><a href="stevenschaefer.html">About Me</a></li><li><a href="research.html">Research</a></li><li><a href="new.html">New</a></li></ul><button type="button" class="helia-search-button" aria-label="Search (/ or Ctrl+K)" aria-haspopup="dialog"><span class="helia-search-icon">⌕</span><span class="helia-search-label">Search</span><kbd class="helia-search-key">/</kbd></button></nav>
+<div class="helia-page" data-kind="reference">
+<article class="helia-article">
+<header class="helia-header" data-entry="jiang_xue_new_2025" data-kind="reference">
+<h2 class="helia-heading"><span class="helia-taxon">Reference.</span> Notions of Stack-manipulating Computation and Relative Monads</h2>
+<div class="helia-meta"><span class="helia-author"><a class="helia-entry-link" href="yuchenjiang.html" data-entry="yuchenjiang">Yuchen Jiang</a>, <a class="helia-entry-link" href="runzexue.html" data-entry="runzexue">Runze Xue</a>, <a class="helia-entry-link" href="maxsnew.html" data-entry="maxsnew">Max S. New</a></span> · <span class="helia-byline"><a class="helia-entry-link" href="oopsla.html" data-entry="oopsla">OOPSLA</a> · 2025</span> · <span class="helia-tags"><span class="helia-tag" data-tag="type-theory"><span class="helia-entry-link helia-unavailable">type-theory</span></span> <span class="helia-tag" data-tag="call-by-push-value"><span class="helia-entry-link helia-unavailable">call-by-push-value</span></span> <span class="helia-tag" data-tag="effects"><span class="helia-entry-link helia-unavailable">effects</span></span></span> · <span class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/3720434">DOI</a></span></span></div>
+</header>
+<div class="helia-body">
+<div class="helia-abstract">
+<p>Monads provide a simple and concise interface to user-defined computational effects in functional programming languages. This enables equational reasoning about effects, abstraction over monadic interfaces and the development of monad transformer stacks to allow for multiple effects. Compiler implementors and assembly code programmers similarly virtualize effects, and would benefit from similar abstractions if possible. However, the implementation details of effects seem disconnected from the high-level monad interface: at this lower level much of the design is in the layout of the runtime stack, which is not accessible in a high-level programming language.</p>
+<p>We demonstrate that the monadic interface can be faithfully adapted from high-level functional programming to a lower level setting with explicit stack manipulation. We use a polymorphic call-by-push-value (CBPV) calculus as a setting that captures the essence of stack-manipulation, with a type system that allows programs to define domain-specific stack structures. Within this setting, we show that the existing category-theoretic notion of a relative monad can be used to model the stack-based implementation of computational effects. To demonstrate generality, we adapt a variety of standard monads to relative monads. Additionally, we show that stack-manipulating programs can benefit from a generalization of do-notation we call “monadic blocks” that allow all CBPV code to be reinterpreted to work with an arbitrary relative monad. As an application, we show that all relative monads extend automatically to relative monad transformers, a process which is not automatic for monads in pure languages.</p>
+</div>
+</div>
+<div class="helia-cite helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><h3 class="helia-heading">Cite</h3>
+</summary>
+<div class="helia-group-body">
+<div class="helia-widget" data-widget="helia-cite-formats" data-props="{&quot;key&quot;:&quot;jiang_xue_new_2025&quot;,&quot;bibtex&quot;:&quot;@article{jiang_xue_new_2025,\n title = {Notions of Stack-manipulating Computation and Relative Monads},\n author = {Jiang, Yuchen and Xue, Runze and New, Max S.},\n year = {2025},\n doi = {10.1145/3720434},\n url = {https://arxiv.org/abs/2502.15031},\n publisher = {ACM},\n journal = {Proceedings of the ACM on Programming Languages},\n volume = {9},\n number = {OOPSLA1},\n pages = {563--589}\n}&quot;,&quot;bib-file&quot;:&quot;jiang_xue_new_2025.bib&quot;,&quot;hayagriva&quot;:&quot;jiang_xue_new_2025:\n  type: article\n  title: Notions of Stack-manipulating Computation and Relative Monads\n  author:\n  - Jiang, Yuchen\n  - Xue, Runze\n  - New, Max S.\n  date: 2025\n  page-range: 563-589\n  url: https://arxiv.org/abs/2502.15031\n  serial-number:\n    doi: 10.1145/3720434\n  parent:\n    type: periodical\n    title: Proceedings of the ACM on Programming Languages\n    publisher: ACM\n    issue: OOPSLA1\n    volume: 9\n&quot;,&quot;yml-file&quot;:&quot;jiang_xue_new_2025.yml&quot;}"><div class="helia-cite-key" data-copy="@jiang_xue_new_2025" data-copy-label="citation key"><span class="helia-bib-key">Cite as</span> <code class="helia-raw-inline">@jiang_xue_new_2025</code> (helia, typst) · <code class="helia-raw-inline">\cite{jiang_xue_new_2025}</code> (LaTeX)</div>
+<div class="helia-cite-format helia-collapsible" data-format="bibtex" data-copy="true" data-copy-label="BibTeX">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">BibTeX</span></summary>
+<div class="helia-group-body">
+<details class="helia-code" open><summary class="helia-code-summary"><span class="helia-code-lang">bibtex</span> · <span class="helia-code-lines">12 lines</span></summary><pre class="helia-raw"><code class="language-bibtex"><span class="hl-text hl-bibtex"><span class="hl-meta hl-entry hl-braces hl-bibtex"><span class="hl-keyword hl-other hl-entry-type hl-bibtex"><span class="hl-punctuation hl-definition hl-keyword hl-bibtex">@</span>article</span><span class="hl-punctuation hl-section hl-entry hl-begin hl-bibtex">{</span><span class="hl-entity hl-name hl-type hl-entry-key hl-bibtex">jiang_xue_new_2025</span>,
+ <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">title</span> <span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span> <span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>Notions of Stack-manipulating Computation and Relative Monads<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>,
+ <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">author</span> <span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span> <span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>Jiang, Yuchen and Xue, Runze and New, Max S.<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>,
+ <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">year</span> <span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span> <span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>2025<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>,
+ <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">doi</span> <span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span> <span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>10.1145/3720434<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>,
+ <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">url</span> <span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span> <span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>https://arxiv.org/abs/2502.15031<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>,
+ <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">publisher</span> <span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span> <span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>ACM<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>,
+ <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">journal</span> <span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span> <span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>Proceedings of the ACM on Programming Languages<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>,
+ <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">volume</span> <span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span> <span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>9<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>,
+ <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">number</span> <span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span> <span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>OOPSLA1<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>,
+ <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">pages</span> <span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span> <span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>563--589<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span>
+</span><span class="hl-punctuation hl-section hl-entry hl-end hl-bibtex">}</span></span></span></code></pre></details>
+</div>
+</details>
+</div>
+<div class="helia-cite-format helia-collapsible" data-format="hayagriva" data-copy="true" data-copy-label="hayagriva YAML">
+<details>
+<summary class="helia-group-summary"><span class="helia-group-title">hayagriva YAML (typst)</span></summary>
+<div class="helia-group-body">
+<details class="helia-code" open><summary class="helia-code-summary"><span class="helia-code-lang">yaml</span> · <span class="helia-code-lines">18 lines</span></summary><pre class="helia-raw"><code class="language-yaml"><span class="hl-source hl-yaml"><span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">jiang_xue_new_2025</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">type</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">article</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">title</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Notions of Stack-manipulating Computation and Relative Monads</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">author</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Jiang, Yuchen</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Xue, Runze</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">New, Max S.</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">date</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-constant hl-numeric hl-integer hl-decimal hl-yaml">2025</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">page-range</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">563-589</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">url</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">https://arxiv.org/abs/2502.15031</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">serial-number</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">doi</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">10.1145/3720434</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">parent</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">type</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">periodical</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">title</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Proceedings of the ACM on Programming Languages</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">publisher</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">ACM</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">issue</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">OOPSLA1</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">volume</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-constant hl-numeric hl-integer hl-decimal hl-yaml">9</span>
+</span></code></pre></details>
+</div>
+</details>
+</div>
+<div class="helia-cite-files">Download: <a class="helia-link" href="jiang_xue_new_2025.bib">jiang_xue_new_2025.bib</a> · <a class="helia-link" href="jiang_xue_new_2025.yml">jiang_xue_new_2025.yml</a></div>
+</div>
+</div>
+</details>
+</div>
+<div class="helia-reference-cites helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">Cites 33 works (0 here)</span></summary>
+<div class="helia-group-body">
+<div class="helia-reference-cites-away helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">External (33)</span></summary>
+<div class="helia-group-body">
+<ul>
+<li><a class="helia-link helia-external" href="https://doi.org/10.5281/zenodo.14948044">Zydeco Implementation</a> (2025)</li>
+<li><a class="helia-link helia-external" href="https://arxiv.org/abs/2411.12822">Notions of Stack-manipulating Computation and Relative Monads (Extended Version)</a> (2025)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1016/j.jpaa.2024.107676">The formal theory of relative monads</a> (2024)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3674654">Call-by-Unboxed-Value</a> (2024)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3371126">The fire triangle: how to mix substitution, dependent elimination, and effects</a> (2019)</li>
+<li>What is a Monoid? (Levy, CT2019 talk) (2019)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.4230/lipics.csl.2018.21">Beyond Polarity: Towards a Multi-Discipline Intermediate Language with Sharing</a> (2018)</li>
+<li><a class="helia-link helia-external" href="https://arxiv.org/abs/1805.05400">Structural Operational Semantics for Control Flow Graph Machines</a> (2018)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3009837.3009898">Contextual isomorphisms</a> (2017)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3009837.3009897">Do be do be do</a> (2017)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1109/lics.2017.8005113">An effectful way to eliminate addiction to dependence</a> (2017)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/2837614.2837652">A theory of effects and resources: adjunction models and polarised calculi</a> (2016)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/2951913.2951931">Sequent calculus as a compiler intermediate language</a> (2016)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-642-54830-7_26">Models of a Non-associative Composition</a> (2014)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/2480359.2429075">Copatterns</a> (2013)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-642-12032-9_21">Monads Need Not Be Endofunctors</a> (2010)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-642-00590-9_6">Modular Monad Transformers</a> (2009)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1109/lics.2007.40">Relational Parametricity for Computational Effects</a> (2007)</li>
+<li>Adjunction Models for Call-by-Push-Value with Stacks (2005)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1017/s0960129505004962">Modular correspondence between dependent type theories and categories including pretopoi and topoi</a> (2005)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1017/s0956796802004446">Stack-based typed assembly language</a> (2003)</li>
+<li>Call-by-Push-Value (Levy, PhD thesis, Queen Mary) (2001)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1016/s1571-0661(04)80970-8">Semantics for Algebraic Operations</a> (2001)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1016/s1571-0661(04)80974-5">Comparing Control Constructs by Double-barrelled CPS Transforms</a> (2001)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/357766.351258">Deriving backtracking monad transformers</a> (2000)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/199448.199528">Monad transformers and modular interpreters</a> (1995)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/158511.158524">Imperative functional programming</a> (1993)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1016/0890-5401(91)90052-4">Notions of computation and monads</a> (1991)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/91556.91592">Comprehending monads</a> (1990)</li>
+<li>Types, Abstraction and Parametric Polymorphism (1983)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/322169.322183">Continuation-Based Program Transformation Strategies</a> (1980)</li>
+<li>Interprétation fonctionnelle et élimination des coupures de l’arithmétique d’ordre supérieur (1972)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/800194.805852">Definitional interpreters for higher-order programming languages</a> (1972)</li>
+</ul>
+</div>
+</details>
+</div>
+</div>
+</details>
+</div>
+</article>
+<div class="helia-identity"><span class="helia-id">jiang_xue_new_2025</span> <span class="helia-kind">reference</span> <span class="helia-path">entries/refs/jiang_xue_new_2025/jiang_xue_new_2025.hel</span></div>
+</div>
+</body>
+</html>

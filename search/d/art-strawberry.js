@@ -1,0 +1,1 @@
+heliaSearchData("d/art-strawberry",{"id":"art-strawberry","title":"Strawberry","kind":"glyph-art","tags":["fruit","ornament","ornament-art"],"authors":["Steven Schaefer"],"venue":[],"date":null,"url":"art-strawberry.html","headings":[],"body":"A strawberry with its leafy calyx, gold seeds pricked into the red."});

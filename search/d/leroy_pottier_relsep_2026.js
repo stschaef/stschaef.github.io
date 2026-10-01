@@ -1,0 +1,1 @@
+heliaSearchData("d/leroy_pottier_relsep_2026",{"id":"leroy_pottier_relsep_2026","title":"Relational Separation Logic for Compiler Verification","kind":"reference","tags":["compilation","separation-logic"],"authors":["François Pottier","Xavier Leroy"],"venue":[],"date":"2026-01-20","url":"leroy_pottier_relsep_2026.html","headings":[],"body":""});

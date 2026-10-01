@@ -1,0 +1,1 @@
+heliaSearchData("d/christiansattler",{"id":"christiansattler","title":"Christian Sattler","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"christiansattler.html","headings":[],"body":""});

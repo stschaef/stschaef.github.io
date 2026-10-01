@@ -1,0 +1,1 @@
+heliaSearchData("d/krishnaswami_typed_2019",{"id":"krishnaswami_typed_2019","title":"A typed, algebraic approach to parsing","kind":"reference","tags":["parsing"],"authors":["Jeremy Yallop","Neel Krishnaswami"],"venue":["PLDI","Conference on Programming Language Design and Implementation"],"date":null,"url":"krishnaswami_typed_2019.html","headings":[],"body":""});

@@ -1,0 +1,1 @@
+heliaSearchData("d/ornament-library-kind",{"id":"ornament-library-kind","title":"Ornament library kind","kind":"note","tags":["ornament"],"authors":["Steven Schaefer"],"venue":[],"date":null,"url":"ornament-library-kind.html","headings":[],"body":""});

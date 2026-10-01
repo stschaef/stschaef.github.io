@@ -1,0 +1,1 @@
+heliaSearchData("d/saundersmaclane",{"id":"saundersmaclane","title":"Saunders Mac Lane","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"saundersmaclane.html","headings":[],"body":""});

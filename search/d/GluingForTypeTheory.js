@@ -1,0 +1,1 @@
+heliaSearchData("d/GluingForTypeTheory",{"id":"GluingForTypeTheory","title":"Gluing for Type Theory","kind":"reference","tags":["metatheory"],"authors":["Ambrus Kaposi","Christian Sattler","Simon Huber"],"venue":["FSCD","Formal Structures for Computation and Deduction"],"date":null,"url":"GluingForTypeTheory.html","headings":[],"body":""});

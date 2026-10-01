@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>Freely transported terms in dependent type theory</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Ctext y=%22.9em%22 font-size=%2290%22%3E%F0%9F%8C%BB%3C/text%3E%3C/svg%3E">
+<meta name="generator" content="helia">
+<script src="helia/theme-version.js"></script>
+<script src="theme/folio-early.js"></script>
+<link rel="stylesheet" href="helia/theme.css">
+<link rel="stylesheet" href="helia/highlight.css">
+<link rel="stylesheet" href="helia/search.css">
+<link rel="stylesheet" href="theme/katex.css">
+<link rel="stylesheet" href="theme/recipe.css">
+<link rel="stylesheet" href="theme/site.css">
+<link rel="stylesheet" href="theme/folio.css">
+<script defer src="helia/runtime.js"></script>
+<script defer src="helia/search.js"></script>
+<script defer src="theme/glyphcraft.js"></script>
+<script defer src="theme/glyphart.js"></script>
+<script defer src="theme/glyphgen.js"></script>
+<script defer src="theme/ornament.js"></script>
+<script defer src="theme/folio.js"></script>
+<script defer src="theme/portrait.js"></script>
+</head>
+<body>
+<nav class="helia-topbar"><a class="helia-home" href="home.html">Steven Schaefer</a><ul class="helia-nav-links"><li><a href="stevenschaefer.html">About Me</a></li><li><a href="research.html">Research</a></li><li><a href="new.html">New</a></li></ul><button type="button" class="helia-search-button" aria-label="Search (/ or Ctrl+K)" aria-haspopup="dialog"><span class="helia-search-icon">⌕</span><span class="helia-search-label">Search</span><kbd class="helia-search-key">/</kbd></button></nav>
+<div class="helia-page" data-kind="note">
+<article class="helia-article">
+<header class="helia-header" data-entry="freely-transported-terms" data-kind="note">
+<h2 class="helia-heading">Freely transported terms in dependent type theory</h2>
+<div class="helia-meta"><span class="helia-date">2026-06-03</span> · <span class="helia-tags"><span class="helia-tag" data-tag="type-theory"><span class="helia-entry-link helia-unavailable">type-theory</span></span> <span class="helia-tag" data-tag="cubical"><span class="helia-entry-link helia-unavailable">cubical</span></span></span></div>
+</header>
+<div class="helia-body">
+<p>Given <span class="helia-math helia-math-inline helia-mathml"><math><mi>𝐴</mi></math></span> and <span class="helia-math helia-math-inline helia-mathml"><math><mi>𝐵</mi><mo lspace="0.2777777777777778em" rspace="0.2777777777777778em">:</mo><mi>𝐴</mi><mo stretchy="false">→</mo><mtext>𝐓𝐲𝐩𝐞</mtext></math></span> we can make sense of <em>transported</em> terms along equalities between indices in <span class="helia-math helia-math-inline helia-mathml"><math><mi>𝐴</mi></math></span>. Say, with</p>
+<div class="helia-math helia-math-display helia-mathml"><math display="block"><mtext>𝗌𝗎𝖻𝗌𝗍</mtext><mo lspace="0.2777777777777778em" rspace="0.2777777777777778em">:</mo><mrow><mo stretchy="false">(</mo><mrow><mi>𝑝</mi><mo lspace="0.2777777777777778em" rspace="0.2777777777777778em">:</mo><mi>𝑎</mi><mo>=</mo><mrow><mi>𝑎</mi><mo lspace="0em" rspace="0em">′</mo></mrow></mrow><mo stretchy="false">)</mo></mrow><mo stretchy="false">→</mo><mi>𝐵</mi><mspace width="0.2222em"/><mi>𝑎</mi><mo stretchy="false">→</mo><mi>𝐵</mi><mspace width="0.2222em"/><mrow><mi>𝑎</mi><mo lspace="0em" rspace="0em">′</mo></mrow></math></div>
+<p>for <span class="helia-math helia-math-inline helia-mathml"><math><mi>𝑎</mi><mo>,</mo><mrow><mi>𝑎</mi><mo lspace="0em" rspace="0em">′</mo></mrow><mo lspace="0.2777777777777778em" rspace="0.2777777777777778em">:</mo><mi>𝐴</mi></math></span>.</p>
+<p>For instance, if <span class="helia-math helia-math-inline helia-mathml"><math><mi>𝑝</mi><mo lspace="0.2777777777777778em" rspace="0.2777777777777778em">:</mo><mi>𝑎</mi><mo>=</mo><mrow><mi>𝑎</mi><mo lspace="0em" rspace="0em">′</mo></mrow></math></span> and <span class="helia-math helia-math-inline helia-mathml"><math><mi>𝑏</mi><mo lspace="0.2777777777777778em" rspace="0.2777777777777778em">:</mo><mi>𝐵</mi><mspace width="0.2222em"/><mi>𝑎</mi></math></span> then <span class="helia-math helia-math-inline helia-mathml"><math><mtext>𝗌𝗎𝖻𝗌𝗍</mtext><mspace width="0.2222em"/><mi>𝑝</mi><mspace width="0.2222em"/><mi>𝑏</mi><mo lspace="0.2777777777777778em" rspace="0.2777777777777778em">:</mo><mi>𝐵</mi><mspace width="0.2222em"/><mrow><mi>𝑎</mi><mo lspace="0em" rspace="0em">′</mo></mrow></math></span></p>
+<p>To avoid landing in <strong>transport hell</strong>, I suspect that it may be preferable to work inside of a description of <em>freely transported terms</em> instead of taking semantic transports. The hypothesis is that by using descriptions of formal transport rather than actually computing a transport, we may defer the computation of an actual transport until the end of a construction. So instead of working with <span class="helia-math helia-math-inline helia-mathml"><math><mi>𝐵</mi><mspace width="0.2222em"/><mi>𝑎</mi></math></span> directly, perhaps we may work with</p>
+<div class="helia-math helia-math-display helia-mathml"><math display="block"><mtext>𝖥𝗋𝖾𝖾𝖲𝗎𝖻𝗌𝗍</mtext><mspace width="0.2222em"/><mi>𝐵</mi><mspace width="0.2222em"/><mi>𝑎</mi><mo>≔</mo><munder><mo form="prefix" lspace="0em">∑</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mi>𝑎</mi><mo lspace="0em" rspace="0em">′</mo></mrow><mo rspace="0em">:</mo><mi>𝐴</mi></mrow><mo stretchy="false">)</mo></mrow></munder><munder><mo form="prefix" lspace="0em">∑</mo><mrow><mo stretchy="false">(</mo><mrow><mi>𝑝</mi><mo rspace="0em">:</mo><mi>𝑎</mi><mo lspace="0em" rspace="0em">=</mo><mrow><mi>𝑎</mi><mo lspace="0em" rspace="0em">′</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></munder><mi>𝐵</mi><mspace width="0.2222em"/><mrow><mi>𝑎</mi><mo lspace="0em" rspace="0em">′</mo></mrow></math></div>
+<p>I think that this is very closely related to the <em>Fording</em> trick, as a map out of <span class="helia-math helia-math-inline helia-mathml"><math><mtext>𝖥𝗋𝖾𝖾𝖲𝗎𝖻𝗌𝗍</mtext><mspace width="0.2222em"/><mi>𝐵</mi><mspace width="0.2222em"/><mi>𝑎</mi></math></span>,</p>
+<div class="helia-math helia-math-display helia-mathml"><math display="block"><mi>𝑓</mi><mo lspace="0.2777777777777778em" rspace="0.2777777777777778em">:</mo><munder><mo form="prefix" lspace="0em">∑</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mi>𝑎</mi><mo lspace="0em" rspace="0em">′</mo></mrow><mo rspace="0em">:</mo><mi>𝐴</mi></mrow><mo stretchy="false">)</mo></mrow></munder><munder><mo form="prefix" lspace="0em">∑</mo><mrow><mo stretchy="false">(</mo><mrow><mi>𝑝</mi><mo rspace="0em">:</mo><mi>𝑎</mi><mo lspace="0em" rspace="0em">=</mo><mrow><mi>𝑎</mi><mo lspace="0em" rspace="0em">′</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></munder><mi>𝐵</mi><mspace width="0.2222em"/><mrow><mi>𝑎</mi><mo lspace="0em" rspace="0em">′</mo></mrow><mo stretchy="false">→</mo><mi>𝐶</mi></math></div>
+<p>can instead be described as a map,</p>
+<div class="helia-math helia-math-display helia-mathml"><math display="block"><mi>𝑔</mi><mo lspace="0.2777777777777778em" rspace="0.2777777777777778em">:</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mi>𝑎</mi><mo lspace="0em" rspace="0em">′</mo></mrow><mo lspace="0.2777777777777778em" rspace="0.2777777777777778em">:</mo><mi>𝐴</mi></mrow><mo stretchy="false">)</mo></mrow><mo stretchy="false">→</mo><mrow><mo stretchy="false">(</mo><mrow><mi>𝑝</mi><mo lspace="0.2777777777777778em" rspace="0.2777777777777778em">:</mo><mi>𝑎</mi><mo>=</mo><mrow><mi>𝑎</mi><mo lspace="0em" rspace="0em">′</mo></mrow></mrow><mo stretchy="false">)</mo></mrow><mo stretchy="false">→</mo><mi>𝐵</mi><mspace width="0.2222em"/><mrow><mi>𝑎</mi><mo lspace="0em" rspace="0em">′</mo></mrow><mo stretchy="false">→</mo><mi>𝐶</mi></math></div>
+<p>Both this and the fording trick use the Coyoneda lemma to represent an dependent type family.</p>
+</div>
+<footer class="helia-footer">
+<div class="helia-related helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><h3 class="helia-heading">Related</h3>
+</summary>
+<div class="helia-group-body">
+<ul>
+<li><a class="helia-entry-link" href="VezzosiMortbergAbel2019.html" data-entry="VezzosiMortbergAbel2019">Cubical Agda: A Dependently Typed Programming Language with Univalence and Higher Inductive Types</a></li>
+<li><a class="helia-entry-link" href="Hofmann_1997.html" data-entry="Hofmann_1997">Syntax and semantics of dependent types</a></li>
+<li><a class="helia-entry-link" href="alexandruIntrinsicallyCorrectSorting2025.html" data-entry="alexandruIntrinsicallyCorrectSorting2025">Intrinsically Correct Sorting in Cubical Agda</a></li>
+<li><a class="helia-entry-link" href="altenkirch_indexed_2015.html" data-entry="altenkirch_indexed_2015">Indexed containers</a></li>
+<li><a class="helia-entry-link" href="chen_etal_2026.html" data-entry="chen_etal_2026">Can We Formalise Type Theory Intrinsically without Any Compromise? A Case Study in Cubical Agda</a></li>
+<li><a class="helia-entry-link" href="cubicalagdalib.html" data-entry="cubicalagdalib">The Cubical Agda Library</a></li>
+<li><a class="helia-entry-link" href="displayed-categories-as-dependent-types.html" data-entry="displayed-categories-as-dependent-types">Displayed Categories as Dependent Types</a></li>
+<li><a class="helia-entry-link" href="equalizers-in-type-theory.html" data-entry="equalizers-in-type-theory">Constructing Equalizers in Type Theory</a></li>
+<li><a class="helia-entry-link" href="fu2023twolevellineardependenttype.html" data-entry="fu2023twolevellineardependenttype">A two-level linear dependent type theory</a></li>
+<li><a class="helia-entry-link" href="gambino_wellfounded_2004.html" data-entry="gambino_wellfounded_2004">Wellfounded Trees and Dependent Polynomial Functors</a></li>
+<li><a class="helia-entry-link" href="gratzerNutyzBirkedal2021.html" data-entry="gratzerNutyzBirkedal2021">Multimodal Dependent Type Theory</a></li>
+<li><a class="helia-entry-link" href="hottbook.html" data-entry="hottbook">Homotopy Type Theory: Univalent Foundations of Mathematics</a></li>
+</ul>
+</div>
+</details>
+</div>
+</footer>
+</article>
+<div class="helia-identity"><span class="helia-id">freely-transported-terms</span> <span class="helia-kind">note</span> <span class="helia-path">entries/category/freely-transported-terms.hel</span></div>
+</div>
+</body>
+</html>

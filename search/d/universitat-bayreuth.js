@@ -1,0 +1,1 @@
+heliaSearchData("d/universitat-bayreuth",{"id":"universitat-bayreuth","title":"Universität Bayreuth","kind":"institution","tags":[],"authors":[],"venue":[],"date":null,"url":"universitat-bayreuth.html","headings":[],"body":""});

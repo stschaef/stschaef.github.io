@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>POPL</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Ctext y=%22.9em%22 font-size=%2290%22%3E%F0%9F%8C%BB%3C/text%3E%3C/svg%3E">
+<meta name="generator" content="helia">
+<script src="helia/theme-version.js"></script>
+<script src="theme/folio-early.js"></script>
+<link rel="stylesheet" href="helia/theme.css">
+<link rel="stylesheet" href="helia/highlight.css">
+<link rel="stylesheet" href="helia/search.css">
+<link rel="stylesheet" href="theme/katex.css">
+<link rel="stylesheet" href="theme/recipe.css">
+<link rel="stylesheet" href="theme/site.css">
+<link rel="stylesheet" href="theme/folio.css">
+<script defer src="helia/runtime.js"></script>
+<script defer src="helia/search.js"></script>
+<script defer src="theme/glyphcraft.js"></script>
+<script defer src="theme/glyphart.js"></script>
+<script defer src="theme/glyphgen.js"></script>
+<script defer src="theme/ornament.js"></script>
+<script defer src="theme/folio.js"></script>
+<script defer src="theme/portrait.js"></script>
+</head>
+<body>
+<nav class="helia-topbar"><a class="helia-home" href="home.html">Steven Schaefer</a><ul class="helia-nav-links"><li><a href="stevenschaefer.html">About Me</a></li><li><a href="research.html">Research</a></li><li><a href="new.html">New</a></li></ul><button type="button" class="helia-search-button" aria-label="Search (/ or Ctrl+K)" aria-haspopup="dialog"><span class="helia-search-icon">⌕</span><span class="helia-search-label">Search</span><kbd class="helia-search-key">/</kbd></button></nav>
+<div class="helia-page" data-kind="venue">
+<article class="helia-article">
+<header class="helia-header" data-entry="popl" data-kind="venue">
+<h2 class="helia-heading"><span class="helia-taxon">Venue.</span> POPL</h2>
+<div class="helia-meta"><span class="helia-byline">Symposium on Principles of Programming Languages · Conference · ACM</span></div>
+</header>
+<div class="helia-body">
+</div>
+<div class="helia-venue-year">
+<section class="helia-heading-section" data-level="1">
+<details open>
+<summary class="helia-heading-summary"><h2 class="helia-heading">2025</h2>
+</summary>
+<div class="helia-heading-body">
+<section class="helia-transclusion" data-entry="allain_etal_tmc_2025" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="allain_etal_tmc_2025"><span class="helia-title">Tail Modulo Cons, OCaml, and Relational Separation Logic</span>&nbsp;<a class="helia-slug" href="allain_etal_tmc_2025.html">allain_etal_tmc_2025</a><span class="helia-byline"><span class="helia-entry-link" data-entry="popl">POPL</span> · 2025</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="allain_etal_tmc_2025" data-kind="reference">
+<div class="helia-abstract">
+<p>Common functional languages incentivize tail-recursive functions, as opposed to general recursive functions that consume stack space and may not scale to large inputs. This distinction occasionally requires writing functions in a tail-recursive style that may be more complex and slower than the natural, non-tail-recursive definition.</p>
+<p>This work describes our implementation of the tail modulo constructor (TMC) transformation in the OCaml compiler, an optimization that provides stack-efficiency for a larger class of functions — tail-recursive modulo constructors — which includes in particular the natural definition of List.map and many similar recursive data-constructing functions.</p>
+<p>We prove the correctness of this program transformation in a simplified setting — a small untyped calculus — that captures the salient aspects of the OCaml implementation. Our proof is mechanized in the Coq proof assistant, using the Iris base logic. An independent contribution of our work is an extension of the Simuliris approach to define simulation relations that support different calling conventions. To our knowledge, this is the first use of Simuliris to prove the correctness of a compiler transformation.</p>
+</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="url"><a class="helia-link helia-external" href="http://cambium.inria.fr/~fpottier/publis/tmc-popl2025.pdf">Web</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="giovannini_ding_new_2025" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="giovannini_ding_new_2025"><span class="helia-title">Denotational Semantics of Gradual Typing using Synthetic Guarded Domain Theory</span>&nbsp;<a class="helia-slug" href="giovannini_ding_new_2025.html">giovannini_ding_new_2025</a><span class="helia-byline"><span class="helia-entry-link" data-entry="popl">POPL</span> · 2025</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="giovannini_ding_new_2025" data-kind="reference">
+<div class="helia-abstract">
+<p>Gradually typed programming languages, which allow for soundly mixing static and dynamically typed programming styles, present a strong challenge for metatheorists. Even the simplest sound gradually typed languages feature at least recursion and errors, with realistic languages featuring furthermore runtime allocation of memory locations and dynamic type tags. Further, the desired metatheoretic properties of gradually typed languages have become increasingly sophisticated: validity of type-based equational reasoning as well as the relational property known as graduality. Many recent works have tackled verifying these properties, but the resulting mathematical developments are highly repetitive and tedious, with few reusable theorems persisting across different developments.</p>
+<p>In this work, we present a new denotational semantics for gradual typing developed using guarded domain theory. Guarded domain theory combines the generality of step-indexed logical relations for modeling advanced programming features with the modularity and reusability of denotational semantics. We demonstrate the feasibility of this approach with a model of a simple gradually typed lambda calculus and prove the validity of beta-eta equality and the graduality theorem for the denotational model. This model should provide the basis for a reusable mathematical theory of gradually typed program semantics. Finally, we have mechanized most of the core theorems of our development in Guarded Cubical Agda, a recent extension of Agda with support for the guarded recursive constructions we use.</p>
+</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/3704863">DOI</a></span></div>
+</div>
+</div>
+</details>
+</section>
+</div>
+</details>
+</section>
+</div>
+<div class="helia-venue-year">
+<section class="helia-heading-section" data-level="1">
+<details open>
+<summary class="helia-heading-summary"><h2 class="helia-heading">2022</h2>
+</summary>
+<div class="helia-heading-body">
+<section class="helia-transclusion" data-entry="mullerPRIMAGeneralPrecise2022" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="mullerPRIMAGeneralPrecise2022"><span class="helia-title">PRIMA: General and Precise Neural Network Certification via Scalable Convex Hull Approximations</span>&nbsp;<a class="helia-slug" href="mullerPRIMAGeneralPrecise2022.html">mullerPRIMAGeneralPrecise2022</a><span class="helia-byline"><span class="helia-entry-link" data-entry="popl">POPL</span> · 2022</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="mullerPRIMAGeneralPrecise2022" data-kind="reference">
+<div class="helia-abstract">Formal verification of neural networks is critical for their safe adoption in real-world applications. However, designing a precise and scalable verifier which can handle different activation functions, realistic network architectures and relevant specifications remains an open and difficult challenge. In this paper, we take a major step forward in addressing this challenge and present a new verification framework, called PRIMA. PRIMA is both (i) general: it handles any non-linear activation function, and (ii) precise: it computes precise convex abstractions involving multiple neurons via novel convex hull approximation algorithms that leverage concepts from computational geometry. The algorithms have polynomial complexity, yield fewer constraints, and minimize precision loss. We evaluate the effectiveness of PRIMA on a variety of challenging tasks from prior work. Our results show that PRIMA is significantly more precise than the state-of-the-art, verifying robustness to input perturbations for up to 20%, 30%, and 34% more images than existing work on ReLU-, Sigmoid-, and Tanh-based networks, respectively. Further, PRIMA enables, for the first time, the precise verification of a realistic neural network for autonomous driving within a few minutes.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/3498704">DOI</a></span> · <span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/2103.03638">arXiv</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="gaher_etal_simuliris_2022" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="gaher_etal_simuliris_2022"><span class="helia-title">Simuliris: A Separation Logic Framework for Verifying Concurrent Program Optimizations</span>&nbsp;<a class="helia-slug" href="gaher_etal_simuliris_2022.html">gaher_etal_simuliris_2022</a><span class="helia-byline"><span class="helia-entry-link" data-entry="popl">POPL</span> · 2022</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="gaher_etal_simuliris_2022" data-kind="reference">
+<div class="helia-abstract">
+<p>Today’s compilers employ a variety of non-trivial optimizations to achieve good performance. One key trick compilers use to justify transformations of concurrent programs is to assume that the source program has no data races: if it does, they cause the program to have undefined behavior (UB) and give the compiler free rein. However, verifying correctness of optimizations that exploit this assumption is a non-trivial problem. In particular, prior work either has not proven that such optimizations preserve program termination (particularly non-obvious when considering optimizations that move instructions out of loop bodies), or has treated all synchronization operations as external functions (losing the ability to reorder instructions around them).</p>
+<p>In this work we present Simuliris, the first simulation technique to establish termination preservation (under a fair scheduler) for a range of concurrent program transformations that exploit UB in the source language. Simuliris is based on the idea of using ownership to reason modularly about the assumptions the compiler makes about programs with well-defined behavior. This brings the benefits of concurrent separation logics to the space of verifying program transformations: we can combine powerful reasoning techniques such as framing and coinduction to perform thread-local proofs of non-trivial concurrent program optimizations. Simuliris is built on a (non-step-indexed) variant of the Coq-based Iris framework, and is thus not tied to a particular language. In addition to demonstrating the effectiveness of Simuliris on standard compiler optimizations involving data race UB, we also instantiate it with Jung et al.’s Stacked Borrows semantics for Rust and generalize their proofs of interesting type-based aliasing optimizations to account for concurrency.</p>
+</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/3498689">DOI</a></span></div>
+</div>
+</div>
+</details>
+</section>
+</div>
+</details>
+</section>
+</div>
+<div class="helia-venue-year">
+<section class="helia-heading-section" data-level="1">
+<details open>
+<summary class="helia-heading-summary"><h2 class="helia-heading">2020</h2>
+</summary>
+<div class="helia-heading-body">
+<section class="helia-transclusion" data-entry="new_jamner_ahmed_2020" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="new_jamner_ahmed_2020"><span class="helia-title">Graduality and Parametricity: Together Again for the First Time</span>&nbsp;<a class="helia-slug" href="new_jamner_ahmed_2020.html">new_jamner_ahmed_2020</a><span class="helia-byline"><span class="helia-entry-link" data-entry="popl">POPL</span> · 2020</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="new_jamner_ahmed_2020" data-kind="reference">
+<div class="helia-abstract">
+<p>Parametric polymorphism and gradual typing have proven to be a difficult combination, with no language yet produced that satisfies the fundamental theorems of each: parametricity and graduality. Notably, Toro, Labrada, and Tanter (POPL 2019) conjecture that for any gradual extension of System F that uses dynamic type generation, graduality and parametricity are “simply incompatible”. However, we argue that it is not graduality and parametricity that are incompatible per se, but instead that combining the syntax of System F with dynamic type generation as in previous work necessitates type-directed computation, which we show has been a common source of graduality and parametricity violations in previous work.</p>
+<p>We then show that by modifying the syntax of universal and existential types to make the type name generation explicit, we remove the need for type-directed computation, and get a language that satisfies both graduality and parametricity theorems. The language has a simple runtime semantics, which can be explained by translation to a statically typed language where the dynamic type is interpreted as a dynamically extensible sum type. Far from being in conflict, we show that the parametricity theorem follows as a direct corollary of a relational interpretation of the graduality property.</p>
+</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/3371114">DOI</a></span></div>
+</div>
+</div>
+</details>
+</section>
+</div>
+</details>
+</section>
+</div>
+<div class="helia-venue-year">
+<section class="helia-heading-section" data-level="1">
+<details open>
+<summary class="helia-heading-summary"><h2 class="helia-heading">2019</h2>
+</summary>
+<div class="helia-heading-body">
+<section class="helia-transclusion" data-entry="new_licata_ahmed_2019" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="new_licata_ahmed_2019"><span class="helia-title">Gradual Type Theory</span>&nbsp;<a class="helia-slug" href="new_licata_ahmed_2019.html">new_licata_ahmed_2019</a><span class="helia-byline"><span class="helia-entry-link" data-entry="popl">POPL</span> · 2019</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="new_licata_ahmed_2019" data-kind="reference">
+<div class="helia-abstract">
+<p>Gradually typed languages are designed to support both dynamically typed and statically typed programming styles while preserving the benefits of each. While existing gradual type soundness theorems for these languages aim to show that type-based reasoning is preserved when moving from the fully static setting to a gradual one, these theorems do not imply that correctness of type-based refactorings and optimizations is preserved. Establishing correctness of program transformations is technically difficult, because it requires reasoning about program equivalence, and is often neglected in the metatheory of gradual languages.</p>
+<p>In this paper, we propose an axiomatic account of program equivalence in a gradual cast calculus, which we formalize in a logic we call gradual type theory (GTT). Based on Levy’s call-by-push-value, GTT gives an axiomatic account of both call-by-value and call-by-name gradual languages. Based on our axiomatic account we prove many theorems that justify optimizations and refactorings in gradually typed languages. For example, uniqueness principles for gradual type connectives show that if the βη laws hold for a connective, then casts between that connective must be equivalent to the so-called “lazy” cast semantics. Contrapositively, this shows that “eager” cast semantics violates the extensionality of function types. As another example, we show that gradual upcasts are pure functions and, dually, gradual downcasts are strict functions. We show the consistency and applicability of our axiomatic theory by proving that a contract-based implementation using the lazy cast semantics gives a logical relations model of our type theory, where equivalence in GTT implies contextual equivalence of the programs. Since GTT also axiomatizes the dynamic gradual guarantee, our model also establishes this central theorem of gradual typing. The model is parametrized by the implementation of the dynamic types, and so gives a family of implementations that validate type-based optimization and the gradual guarantee.</p>
+</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/3290328">DOI</a></span></div>
+</div>
+</div>
+</details>
+</section>
+</div>
+</details>
+</section>
+</div>
+<div class="helia-venue-year">
+<section class="helia-heading-section" data-level="1">
+<details open>
+<summary class="helia-heading-summary"><h2 class="helia-heading">2016</h2>
+</summary>
+<div class="helia-heading-body">
+<section class="helia-transclusion" data-entry="padonDecidabilityInferringInductive2016" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="padonDecidabilityInferringInductive2016"><span class="helia-title">Decidability of inferring inductive invariants</span>&nbsp;<a class="helia-slug" href="padonDecidabilityInferringInductive2016.html">padonDecidabilityInferringInductive2016</a><span class="helia-byline"><span class="helia-entry-link" data-entry="popl">POPL</span> · 2016</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="padonDecidabilityInferringInductive2016" data-kind="reference">
+<div class="helia-abstract">Induction is a successful approach for verification of hardware and software systems. A common practice is to model a system using logical formulas, and then use a decision procedure to verify that some logical formula is an inductive safety invariant for the system. A key ingredient in this approach is coming up with the inductive invariant, which is known as invariant inference. This is a major difficulty, and it is often left for humans or addressed by sound but incomplete abstract interpretation. This paper is motivated by the problem of inductive invariants in shape analysis and in distributed protocols. This paper approaches the general problem of inferring first-order inductive invariants by restricting the language L of candidate invariants. Notice that the problem of invariant inference in a restricted language L differs from the safety problem, since a system may be safe and still not have any inductive invariant in L that proves safety. Clearly, if L is finite (and if testing an inductive invariant is decidable), then inferring invariants in L is decidable. This paper presents some interesting cases when inferring inductive invariants in L is decidable even when L is an infinite language of universal formulas. Decidability is obtained by restricting L and defining a suitable well-quasi-order on the state space. We also present some undecidability results that show that our restrictions are necessary. We further present a framework for systematically constructing infinite languages while keeping the invariant inference problem decidable. We illustrate our approach by showing the decidability of inferring invariants for programs manipulating linked-lists, and for distributed protocols.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/2837614.2837640">DOI</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="takikawa_etal_2016" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="takikawa_etal_2016"><span class="helia-title">Is Sound Gradual Typing Dead?</span>&nbsp;<a class="helia-slug" href="takikawa_etal_2016.html">takikawa_etal_2016</a><span class="helia-byline"><span class="helia-entry-link" data-entry="popl">POPL</span> · 2016</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="takikawa_etal_2016" data-kind="reference">
+<div class="helia-abstract">Programmers have come to embrace dynamically-typed languages for prototyping and delivering large and complex systems. When it comes to maintaining and evolving these systems, the lack of explicit static typing becomes a bottleneck. In response, researchers have explored the idea of gradually-typed programming languages which allow the incremental addition of type annotations to software written in one of these untyped languages. Some of these new, hybrid languages insert run-time checks at the boundary between typed and untyped code to establish type soundness for the overall system. With sound gradual typing, programmers can rely on the language implementation to provide meaningful error messages when type invariants are violated. While most research on sound gradual typing remains theoretical, the few emerging implementations suffer from performance overheads due to these checks. None of the publications on this topic comes with a comprehensive performance evaluation. Worse, a few report disastrous numbers. In response, this paper proposes a method for evaluating the performance of gradually-typed programming languages. The method hinges on exploring the space of partial conversions from untyped to typed. For each benchmark, the performance of the different versions is reported in a synthetic metric that associates runtime overhead to conversion effort. The paper reports on the results of applying the method to Typed Racket, a mature implementation of sound gradual typing, using a suite of real-world programs of various sizes and complexities. Based on these results the paper concludes that, given the current state of implementation technologies, sound gradual typing faces significant challenges. Conversely, it raises the question of how implementations could reduce the overheads associated with soundness and how tools could be used to steer programmers clear from pathological cases.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="url"><a class="helia-link helia-external" href="http://dl.acm.org/citation.cfm?id=2837630">Web</a></span></div>
+</div>
+</div>
+</details>
+</section>
+</div>
+</details>
+</section>
+</div>
+<div class="helia-venue-year">
+<section class="helia-heading-section" data-level="1">
+<details open>
+<summary class="helia-heading-summary"><h2 class="helia-heading">2015</h2>
+</summary>
+<div class="helia-heading-body">
+<section class="helia-transclusion" data-entry="krishnaswami_integrating_2015" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="krishnaswami_integrating_2015"><span class="helia-title">Integrating Linear and Dependent Types</span>&nbsp;<a class="helia-slug" href="krishnaswami_integrating_2015.html">krishnaswami_integrating_2015</a><span class="helia-byline"><span class="helia-entry-link" data-entry="popl">POPL</span> · 2015</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="krishnaswami_integrating_2015" data-kind="reference">
+<div class="helia-abstract">In this paper, we show how to integrate linear types with type dependency, by extending the linear/non-linear calculus of Benton to support type dependency.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/2676726.2676969">DOI</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="mellies_zeilberger_2015" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="mellies_zeilberger_2015"><span class="helia-title">Functors are type refinement systems</span>&nbsp;<a class="helia-slug" href="mellies_zeilberger_2015.html">mellies_zeilberger_2015</a><span class="helia-byline"><span class="helia-entry-link" data-entry="popl">POPL</span> · 2015</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="mellies_zeilberger_2015" data-kind="reference">
+<div class="helia-abstract">
+<p>The standard reading of type theory through the lens of category theory is based on the idea of viewing a type system as a category of well-typed terms. We propose a basic revision of this reading: rather than interpreting type systems as categories, we describe them as functors from a category of typing derivations to a category of underlying terms. Then, turning this around, we explain how in fact any functor gives rise to a generalized type system, with an abstract notion of typing judgment, typing derivations and typing rules. This leads to a purely categorical reformulation of various natural classes of type systems as natural classes of functors.</p>
+<p>The main purpose of this paper is to describe the general framework (which can also be seen as providing a categorical analysis of refinement types), and to present a few applications. As a larger case study, we revisit Reynolds’ paper on “The Meaning of Types” (2000), showing how the paper’s main results may be reconstructed along these lines.</p>
+</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/2676726.2676970">DOI</a></span></div>
+</div>
+</div>
+</details>
+</section>
+</div>
+</details>
+</section>
+</div>
+<div class="helia-venue-year">
+<section class="helia-heading-section" data-level="1">
+<details open>
+<summary class="helia-heading-summary"><h2 class="helia-heading">2014</h2>
+</summary>
+<div class="helia-heading-body">
+<section class="helia-transclusion" data-entry="anderson2014netkat" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="anderson2014netkat"><span class="helia-title">NetKAT: Semantic foundations for networks</span>&nbsp;<a class="helia-slug" href="anderson2014netkat.html">anderson2014netkat</a><span class="helia-byline"><span class="helia-entry-link" data-entry="popl">POPL</span> · 2014</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="anderson2014netkat" data-kind="reference">
+<div class="helia-abstract">Recent years have seen growing interest in high-level languages for programming networks. But the design of these languages has been largely ad hoc, driven more by the needs of applications and the capabilities of network hardware than by foundational principles. The lack of a semantic foundation has left language designers with little guidance in determining how to incorporate new features, and programmers without a means to reason precisely about their code. This paper presents NetKAT, a new network programming language that is based on a solid mathematical foundation and comes equipped with a sound and complete equational theory. We describe the design of NetKAT, including primitives for filtering, modifying, and transmitting packets; union and sequential composition operators; and a Kleene star operator that iterates programs. We show that NetKAT is an instance of a canonical and well-studied mathematical structure called a Kleene algebra with tests (KAT) and prove that its equational theory is sound and complete with respect to its denotational semantics. Finally, we present practical applications of the equational theory including syntactic techniques for checking reachability, proving non-interference properties that ensure isolation between programs, and establishing the correctness of compilation algorithms.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/2535838.2535862">DOI</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="kumar_cakeml_2014" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="kumar_cakeml_2014"><span class="helia-title">CakeML: A verified implementation of ML</span>&nbsp;<a class="helia-slug" href="kumar_cakeml_2014.html">kumar_cakeml_2014</a><span class="helia-byline"><span class="helia-entry-link" data-entry="popl">POPL</span> · 2014</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="kumar_cakeml_2014" data-kind="reference">
+<div class="helia-abstract">We have developed and mechanically verified an ML system called CakeML, which supports a substantial subset of Standard ML. CakeML is implemented as an interactive read-eval-print loop (REPL) in x86-64 machine code. Our correctness theorem ensures that this REPL implementation prints only those results permitted by the semantics of CakeML. Our verification effort touches on a breadth of topics including lexing, parsing, type checking, incremental and dynamic compilation, garbage collection, arbitraryprecision arithmetic, and compiler bootstrapping.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/2535838.2535841">DOI</a></span></div>
+</div>
+</div>
+</details>
+</section>
+</div>
+</details>
+</section>
+</div>
+<div class="helia-venue-year">
+<section class="helia-heading-section" data-level="1">
+<details open>
+<summary class="helia-heading-summary"><h2 class="helia-heading">2004</h2>
+</summary>
+<div class="helia-heading-body">
+<section class="helia-transclusion" data-entry="benton_relational_2004" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="benton_relational_2004"><span class="helia-title">Simple relational correctness proofs for static analyses and program transformations</span>&nbsp;<a class="helia-slug" href="benton_relational_2004.html">benton_relational_2004</a><span class="helia-byline"><span class="helia-entry-link" data-entry="popl">POPL</span> · 2004</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="benton_relational_2004" data-kind="reference">
+<div class="helia-abstract">We show how some classical static analyses for imperative programs, and the optimizing transformations which they enable, may be expressed and proved correct using elementary logical and denotational techniques. The key ingredients are an interpretation of program properties as relations, rather than predicates, and a realization that although many program analyses are traditionally formulated in very intensional terms, the associated transformations are actually enabled by more liberal extensional properties. We illustrate our approach with formal systems for analysing and transforming while-programs. The first is a simple type system which tracks constancy and dependency information and can be used to perform dead-code elimination, constant propagation and program slicing as well as capturing a form of secure information flow. The second is a relational version of Hoare logic, which significantly generalizes our first type system and can also justify optimizations including hoisting loop invariants. Finally we show how a simple available expression analysis and redundancy elimination transformation may be justified by translation into relational Hoare logic.</div>
+</div>
+</div>
+</details>
+</section>
+</div>
+</details>
+</section>
+</div>
+<div class="helia-venue-year">
+<section class="helia-heading-section" data-level="1">
+<details open>
+<summary class="helia-heading-summary"><h2 class="helia-heading">2001</h2>
+</summary>
+<div class="helia-heading-body">
+<section class="helia-transclusion" data-entry="ishtiaq_ohearn_bi_2001" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="ishtiaq_ohearn_bi_2001"><span class="helia-title">BI as an assertion language for mutable data structures</span>&nbsp;<a class="helia-slug" href="ishtiaq_ohearn_bi_2001.html">ishtiaq_ohearn_bi_2001</a><span class="helia-byline"><span class="helia-entry-link" data-entry="popl">POPL</span> · 2001</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="ishtiaq_ohearn_bi_2001" data-kind="reference">
+<div class="helia-abstract">Reynolds has developed a logic for reasoning about mutable data structures in which the pre- and postconditions are written in an intuitionistic logic enriched with a spatial form of conjunction. We investigate the approach from the point of view of the logic BI of bunched implications of O’Hearn and Pym. We begin by giving a model in which the law of the excluded middle holds, thus showing that the approach is compatible with classical logic. The relationship between the intuitionistic and classical versions of the system is established by a translation, analogous to a translation from intuitionistic logic into the modal logic S4. We also consider the question of completeness of the axioms. BI’s spatial implication is used to express weakest preconditions for object-component assignments, and an axiom for allocating a cons cell is shown to be complete under an interpretation of triples that allows a command to be applied to states with dangling pointers. We make this latter a feature, by incorporating an operation, and axiom, for disposing of memory. Finally, we describe a local character enjoyed by specifications in the logic, and show how this enables a class of frame axioms, which say what parts of the heap don’t change, to be inferred automatically.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/360204.375719">DOI</a></span></div>
+</div>
+</div>
+</details>
+</section>
+</div>
+</details>
+</section>
+</div>
+</article>
+<div class="helia-identity"><span class="helia-id">popl</span> <span class="helia-kind">venue</span> <span class="helia-path">entries/venues/popl.hel</span></div>
+</div>
+</body>
+</html>

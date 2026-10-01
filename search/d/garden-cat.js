@@ -1,0 +1,1 @@
+heliaSearchData("d/garden-cat",{"id":"garden-cat","title":"Garden cat","kind":"glyph-art","tags":["ornament","ornament-garden"],"authors":["Steven Schaefer"],"venue":[],"date":null,"url":"garden-cat.html","headings":[],"body":"A small ginger cat, sitting. A small piece for the garden margin patterns."});

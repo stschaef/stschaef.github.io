@@ -1,0 +1,1 @@
+heliaSearchData("d/category-macros",{"id":"category-macros","title":"Category Macros","kind":"note","tags":[],"authors":[],"venue":[],"date":null,"url":"category-macros.html","headings":[],"body":""});

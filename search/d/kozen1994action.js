@@ -1,0 +1,1 @@
+heliaSearchData("d/kozen1994action",{"id":"kozen1994action","title":"On action algebras","kind":"reference","tags":["kleene-algebra"],"authors":["Dexter Kozen"],"venue":["Logic and Information Flow"],"date":null,"url":"kozen1994action.html","headings":[],"body":""});

@@ -1,0 +1,1 @@
+heliaSearchData("d/topos-institute",{"id":"topos-institute","title":"Topos Institute","kind":"institution","tags":[],"authors":[],"venue":[],"date":null,"url":"topos-institute.html","headings":[],"body":""});

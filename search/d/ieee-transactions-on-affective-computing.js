@@ -1,0 +1,1 @@
+heliaSearchData("d/ieee-transactions-on-affective-computing",{"id":"ieee-transactions-on-affective-computing","title":"IEEE Transactions on Affective Computing","kind":"venue","tags":[],"authors":[],"venue":[],"date":null,"url":"ieee-transactions-on-affective-computing.html","headings":[],"body":""});

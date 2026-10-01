@@ -1,0 +1,1 @@
+heliaSearchData("d/nicolastabareau",{"id":"nicolastabareau","title":"Nicolas Tabareau","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"nicolastabareau.html","headings":[],"body":""});

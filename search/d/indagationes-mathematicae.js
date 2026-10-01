@@ -1,0 +1,1 @@
+heliaSearchData("d/indagationes-mathematicae",{"id":"indagationes-mathematicae","title":"Indagationes Mathematicae","kind":"venue","tags":[],"authors":[],"venue":[],"date":null,"url":"indagationes-mathematicae.html","headings":[],"body":""});

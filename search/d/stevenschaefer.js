@@ -1,0 +1,1 @@
+heliaSearchData("d/stevenschaefer",{"id":"stevenschaefer","title":"Steven Schaefer","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"stevenschaefer.html","headings":[],"body":""});

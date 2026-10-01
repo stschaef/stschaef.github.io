@@ -1,0 +1,1 @@
+heliaSearchData("d/fau-erlangen-nurnberg",{"id":"fau-erlangen-nurnberg","title":"FAU Erlangen-Nürnberg","kind":"institution","tags":[],"authors":[],"venue":[],"date":null,"url":"fau-erlangen-nurnberg.html","headings":[],"body":""});

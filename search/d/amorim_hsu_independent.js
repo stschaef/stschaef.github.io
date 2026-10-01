@@ -1,0 +1,1 @@
+heliaSearchData("d/amorim_hsu_independent",{"id":"amorim_hsu_independent","title":"Separated and Shared Effects in Higher-Order Languages","kind":"reference","tags":["effects","preprint","separation-logic"],"authors":["Justin Hsu","Pedro H. Azevedo de Amorim"],"venue":[],"date":null,"url":"amorim_hsu_independent.html","headings":[],"body":""});

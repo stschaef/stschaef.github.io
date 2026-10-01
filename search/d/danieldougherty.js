@@ -1,0 +1,1 @@
+heliaSearchData("d/danieldougherty",{"id":"danieldougherty","title":"Daniel J. Dougherty","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"danieldougherty.html","headings":[],"body":""});

@@ -1,0 +1,1 @@
+heliaSearchData("d/krzysztofkapulkin",{"id":"krzysztofkapulkin","title":"Krzysztof Kapulkin","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"krzysztofkapulkin.html","headings":[],"body":""});

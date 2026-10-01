@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>Presheaves are monadic and comonadic over families</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Ctext y=%22.9em%22 font-size=%2290%22%3E%F0%9F%8C%BB%3C/text%3E%3C/svg%3E">
+<meta name="generator" content="helia">
+<script src="helia/theme-version.js"></script>
+<script src="theme/folio-early.js"></script>
+<link rel="stylesheet" href="helia/theme.css">
+<link rel="stylesheet" href="helia/highlight.css">
+<link rel="stylesheet" href="helia/search.css">
+<link rel="stylesheet" href="theme/katex.css">
+<link rel="stylesheet" href="theme/recipe.css">
+<link rel="stylesheet" href="theme/site.css">
+<link rel="stylesheet" href="theme/folio.css">
+<script defer src="helia/runtime.js"></script>
+<script defer src="helia/search.js"></script>
+<script defer src="theme/glyphcraft.js"></script>
+<script defer src="theme/glyphart.js"></script>
+<script defer src="theme/glyphgen.js"></script>
+<script defer src="theme/ornament.js"></script>
+<script defer src="theme/folio.js"></script>
+<script defer src="theme/portrait.js"></script>
+</head>
+<body>
+<nav class="helia-topbar"><a class="helia-home" href="home.html">Steven Schaefer</a><ul class="helia-nav-links"><li><a href="stevenschaefer.html">About Me</a></li><li><a href="research.html">Research</a></li><li><a href="new.html">New</a></li></ul><button type="button" class="helia-search-button" aria-label="Search (/ or Ctrl+K)" aria-haspopup="dialog"><span class="helia-search-icon">⌕</span><span class="helia-search-label">Search</span><kbd class="helia-search-key">/</kbd></button></nav>
+<div class="helia-page" data-kind="theorem">
+<article class="helia-article">
+<header class="helia-header" data-entry="presheaves-monadic-comonadic-over-families" data-kind="theorem">
+<h2 class="helia-heading"><span class="helia-taxon">Theorem.</span> Presheaves are monadic and comonadic over families</h2>
+<div class="helia-meta"><span class="helia-date">2026-07-19</span> · <span class="helia-author"><a class="helia-entry-link" href="stevenschaefer.html" data-entry="stevenschaefer">Steven Schaefer</a></span> · <span class="helia-tags"><span class="helia-tag" data-tag="monad">monad</span> <span class="helia-tag" data-tag="category-theory"><span class="helia-entry-link helia-unavailable">category-theory</span></span> <span class="helia-tag" data-tag="presheaf">presheaf</span> <span class="helia-tag" data-tag="families">families</span> <span class="helia-tag" data-tag="adjunction">adjunction</span></span></div>
+</header>
+<div class="helia-body">
+<p>The <a class="helia-entry-link" href="presheaf-family-adjoint-triple.html" data-entry="presheaf-family-adjoint-triple">adjoint triple</a> <span class="helia-math helia-math-inline helia-mathml"><math><mtext>Free</mtext><mo>⊣</mo><mi>𝑈</mi><mo>⊣</mo><mtext>Cofree</mtext></math></span> induces a monad <span class="helia-math helia-math-inline helia-mathml"><math><mi>𝑇</mi><mo>=</mo><mi>𝑈</mi><mo lspace="0.2222222222222222em" rspace="0.2222222222222222em">∘</mo><mtext>Free</mtext></math></span> and a comonad <span class="helia-math helia-math-inline helia-mathml"><math><mi>𝑊</mi><mo>=</mo><mi>𝑈</mi><mo lspace="0.2222222222222222em" rspace="0.2222222222222222em">∘</mo><mtext>Cofree</mtext></math></span> on <span class="helia-math helia-math-inline helia-mathml"><math><mtext>Fam</mtext><mspace width="0.2222em"/><mrow><mo stretchy="false">(</mo><mi>𝒞︀</mi><mo stretchy="false">)</mo></mrow></math></span>.</p>
+<p>Both <a class="helia-entry-link" href="comparison-functor.html" data-entry="comparison-functor">comparison functors</a> are equivalences: presheaves are the <a class="helia-entry-link" href="eilenberg-moore-displayed.html" data-entry="eilenberg-moore-displayed">Eilenberg–Moore algebras</a> of <span class="helia-math helia-math-inline helia-mathml"><math><mi>𝑇</mi></math></span> and the <a class="helia-entry-link" href="co-eilenberg-moore-displayed.html" data-entry="co-eilenberg-moore-displayed">co-Eilenberg–Moore coalgebras</a> of <span class="helia-math helia-math-inline helia-mathml"><math><mi>𝑊</mi></math></span>,</p>
+<div class="helia-math helia-math-display helia-mathml"><math display="block"><mtext>𝖯𝗌𝗁</mtext><mspace width="0.1667em"/><mi>𝒞︀</mi><mo>≃</mo><mtext>EM</mtext><mspace width="0.2222em"/><mrow><mo stretchy="false">(</mo><mi>𝑇</mi><mo stretchy="false">)</mo></mrow><mspace width="2em"/><mtext>𝖯𝗌𝗁</mtext><mspace width="0.1667em"/><mi>𝒞︀</mi><mo>≃</mo><mtext>coEM</mtext><mspace width="0.2222em"/><mrow><mo stretchy="false">(</mo><mi>𝑊</mi><mo stretchy="false">)</mo></mrow><mi>.</mi></math></div>
+<p>So presheaves are both <a class="helia-entry-link" href="monadicity-comonadicity.html" data-entry="monadicity-comonadicity">monadic and comonadic</a> over families.</p>
+<p>Reading the algebra structure concretely: a <span class="helia-math helia-math-inline helia-mathml"><math><mi>𝑇</mi></math></span>-algebra on a family <span class="helia-math helia-math-inline helia-mathml"><math><mi>𝐴</mi></math></span> is a map <span class="helia-math helia-math-inline helia-mathml"><math><msub><mo lspace="0em">∑</mo><mi>𝑦</mi></msub><mi>𝒞︀</mi><mrow><mo stretchy="false">(</mo><mrow><mi>𝑥</mi><mo>,</mo><mi>𝑦</mi></mrow><mo stretchy="false">)</mo></mrow><mo lspace="0.2222222222222222em" rspace="0.2222222222222222em">×</mo><mi>𝐴</mi><mrow><mo stretchy="false">(</mo><mi>𝑦</mi><mo stretchy="false">)</mo></mrow><mo stretchy="false">→</mo><mi>𝐴</mi><mrow><mo stretchy="false">(</mo><mi>𝑥</mi><mo stretchy="false">)</mo></mrow></math></span> for each <span class="helia-math helia-math-inline helia-mathml"><math><mi>𝑥</mi></math></span>, subject to the monad algebra laws — that is, exactly a functorial action of restriction.</p>
+<p>The comonadic reading is the same structure seen from the element’s side: a <span class="helia-math helia-math-inline helia-mathml"><math><mi>𝑊</mi></math></span>-coalgebra is a map <span class="helia-math helia-math-inline helia-mathml"><math><mi>𝐴</mi><mrow><mo stretchy="false">(</mo><mi>𝑥</mi><mo stretchy="false">)</mo></mrow><mo stretchy="false">→</mo><msub><mo form="prefix" lspace="0em">∏</mo><mi>𝑦</mi></msub><mi>𝒞︀</mi><mrow><mo stretchy="false">(</mo><mrow><mi>𝑦</mi><mo>,</mo><mi>𝑥</mi></mrow><mo stretchy="false">)</mo></mrow><mo stretchy="false">→</mo><mi>𝐴</mi><mrow><mo stretchy="false">(</mo><mi>𝑦</mi><mo stretchy="false">)</mo></mrow></math></span>, giving each value its restriction along every morphism into <span class="helia-math helia-math-inline helia-mathml"><math><mi>𝑥</mi></math></span>. Where the monad says restriction <em>acts on</em> values, the comonad says a value <em>already carries</em> all of its restrictions — and the coalgebra laws say it does so coherently.</p>
+</div>
+<footer class="helia-footer">
+<div class="helia-backlinks helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><h3 class="helia-heading">Backlinks</h3>
+</summary>
+<div class="helia-group-body">
+<ul>
+<li><a class="helia-entry-link" href="grammar-next-presheaf.html" data-entry="grammar-next-presheaf">Next on Grammars Is Presheaf Structure</a></li>
+</ul>
+</div>
+</details>
+</div>
+<div class="helia-related helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><h3 class="helia-heading">Related</h3>
+</summary>
+<div class="helia-group-body">
+<ul>
+<li><a class="helia-entry-link" href="beck-chevalley.html" data-entry="beck-chevalley">Beck–Chevalley</a></li>
+<li><a class="helia-entry-link" href="day-closed-structure.html" data-entry="day-closed-structure">Day Convolution is Closed</a></li>
+<li><a class="helia-entry-link" href="frobenius-reciprocity.html" data-entry="frobenius-reciprocity">Frobenius Reciprocity</a></li>
+<li><a class="helia-entry-link" href="later-family.html" data-entry="later-family">Later on families</a></li>
+<li><a class="helia-entry-link" href="lob-family.html" data-entry="lob-family">Löb induction on families</a></li>
+<li><a class="helia-entry-link" href="category-of-elements.html" data-entry="category-of-elements">Category of Elements</a></li>
+<li><a class="helia-entry-link" href="constant-presheaf.html" data-entry="constant-presheaf">Constant Presheaf</a></li>
+<li><a class="helia-entry-link" href="day-convolution.html" data-entry="day-convolution">Day Convolution</a></li>
+<li><a class="helia-entry-link" href="earlier-presheaf.html" data-entry="earlier-presheaf">Earlier on presheaves</a></li>
+<li><a class="helia-entry-link" href="element-of-presheaf.html" data-entry="element-of-presheaf">Element of a Presheaf</a></li>
+<li><a class="helia-entry-link" href="finite-cardinal-arithmetic-topos.html" data-entry="finite-cardinal-arithmetic-topos">Finite Cardinal Arithmetic in a Topos</a></li>
+<li><a class="helia-entry-link" href="later-presheaf.html" data-entry="later-presheaf">Later on presheaves</a></li>
+</ul>
+</div>
+</details>
+</div>
+</footer>
+</article>
+<div class="helia-identity"><span class="helia-id">presheaves-monadic-comonadic-over-families</span> <span class="helia-kind">theorem</span> <span class="helia-path">entries/category/presheaves-monadic-comonadic-over-families.hel</span></div>
+</div>
+</body>
+</html>

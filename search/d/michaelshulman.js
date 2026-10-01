@@ -1,0 +1,1 @@
+heliaSearchData("d/michaelshulman",{"id":"michaelshulman","title":"Michael Shulman","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"michaelshulman.html","headings":[],"body":""});

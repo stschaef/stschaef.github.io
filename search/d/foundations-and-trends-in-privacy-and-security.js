@@ -1,0 +1,1 @@
+heliaSearchData("d/foundations-and-trends-in-privacy-and-security",{"id":"foundations-and-trends-in-privacy-and-security","title":"Foundations and Trends® in Privacy and Security","kind":"venue","tags":[],"authors":[],"venue":[],"date":null,"url":"foundations-and-trends-in-privacy-and-security.html","headings":[],"body":""});

@@ -1,0 +1,1 @@
+heliaSearchData("d/ornament-bird",{"id":"ornament-bird","title":"Masthead bird","kind":"glyph-art","tags":["ornament","ornament-sampler"],"authors":["Steven Schaefer"],"venue":[],"date":null,"url":"ornament-bird.html","headings":[],"body":"The birds on the masthead’s arch, facing the tulip (the right-hand one is mirrored). Also a sampler motif."});

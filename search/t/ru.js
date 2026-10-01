@@ -1,0 +1,1 @@
+heliaSearchData("t/ru",{"ruben":[389,32,397,128],"rubenmartin":[786,32],"ruby":[100,1],"ruffled":[98,1],"rule":[738,1,6,128],"run":[109,1,131,1,131,1],"runming":[545,32,242,128],"runmingli":[787,32],"running":[5,128,379,1,206,128],"runze":[475,32,313,128],"runzexue":[788,32],"runzhou":[789,128,185,32],"runzhoutao":[789,32],"rutger":[790,160],"rutten":[454,128,510,32]});

@@ -1,0 +1,1 @@
+heliaSearchData("d/brigham-young-university",{"id":"brigham-young-university","title":"Brigham Young University","kind":"institution","tags":[],"authors":[],"venue":[],"date":null,"url":"brigham-young-university.html","headings":[],"body":""});

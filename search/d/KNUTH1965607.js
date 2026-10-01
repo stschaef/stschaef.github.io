@@ -1,0 +1,1 @@
+heliaSearchData("d/KNUTH1965607",{"id":"KNUTH1965607","title":"On the translation of languages from left to right","kind":"reference","tags":["parsing"],"authors":["Donald E. Knuth"],"venue":["I&C","Information and Computation"],"date":null,"url":"KNUTH1965607.html","headings":[],"body":""});

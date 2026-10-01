@@ -1,0 +1,1 @@
+heliaSearchData("d/angus2001kleene",{"id":"angus2001kleene","title":"Kleene algebra with tests and program schematology","kind":"reference","tags":["kleene-algebra"],"authors":["Allegra Angus","Dexter Kozen"],"venue":[],"date":null,"url":"angus2001kleene.html","headings":[],"body":""});

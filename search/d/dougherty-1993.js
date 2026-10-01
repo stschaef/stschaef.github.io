@@ -1,0 +1,1 @@
+heliaSearchData("d/dougherty-1993",{"id":"dougherty-1993","title":"Closed Categories and Categorial Grammar","kind":"reference","tags":["categorial-grammar"],"authors":["Daniel J. Dougherty"],"venue":["Notre Dame journal of formal logic"],"date":null,"url":"dougherty-1993.html","headings":[],"body":""});

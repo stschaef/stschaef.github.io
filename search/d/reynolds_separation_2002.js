@@ -1,0 +1,1 @@
+heliaSearchData("d/reynolds_separation_2002",{"id":"reynolds_separation_2002","title":"Separation logic: A logic for shared mutable data structures","kind":"reference","tags":["separation-logic"],"authors":["John C. Reynolds"],"venue":["LICS","Symposium on Logic in Computer Science"],"date":null,"url":"reynolds_separation_2002.html","headings":[],"body":""});

@@ -1,0 +1,1 @@
+heliaSearchData("d/quiver",{"id":"quiver","title":"Quiver","kind":"definition","tags":["category-theory"],"authors":[],"venue":[],"date":"2026-02-26T04:14:27","url":"quiver.html","headings":[],"body":"A quiver is just a directed graph presented via a type of objects, a type of edges, and two projection functions that pick out source and target of an edge."});

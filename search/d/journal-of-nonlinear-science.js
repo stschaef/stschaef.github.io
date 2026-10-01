@@ -1,0 +1,1 @@
+heliaSearchData("d/journal-of-nonlinear-science",{"id":"journal-of-nonlinear-science","title":"Journal of Nonlinear Science","kind":"venue","tags":[],"authors":[],"venue":[],"date":null,"url":"journal-of-nonlinear-science.html","headings":[],"body":""});

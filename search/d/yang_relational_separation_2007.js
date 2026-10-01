@@ -1,0 +1,1 @@
+heliaSearchData("d/yang_relational_separation_2007",{"id":"yang_relational_separation_2007","title":"Relational separation logic","kind":"reference","tags":["separation-logic"],"authors":["Hongseok Yang"],"venue":["TCS","Theoretical Computer Science"],"date":null,"url":"yang_relational_separation_2007.html","headings":[],"body":""});

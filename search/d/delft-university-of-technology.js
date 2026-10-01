@@ -1,0 +1,1 @@
+heliaSearchData("d/delft-university-of-technology",{"id":"delft-university-of-technology","title":"Delft University of Technology","kind":"institution","tags":[],"authors":[],"venue":[],"date":null,"url":"delft-university-of-technology.html","headings":[],"body":""});

@@ -1,0 +1,1 @@
+heliaSearchData("d/journal-of-logic-and-computation",{"id":"journal-of-logic-and-computation","title":"Journal of Logic and Computation","kind":"venue","tags":[],"authors":[],"venue":[],"date":null,"url":"journal-of-logic-and-computation.html","headings":[],"body":""});

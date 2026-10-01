@@ -1,0 +1,1 @@
+heliaSearchData("d/gambino_wellfounded_2004",{"id":"gambino_wellfounded_2004","title":"Wellfounded Trees and Dependent Polynomial Functors","kind":"reference","tags":["polynomial-functors","type-theory"],"authors":["Martin Hyland","Nicola Gambino"],"venue":["TYPES","Types for Proofs and Programs"],"date":null,"url":"gambino_wellfounded_2004.html","headings":[],"body":""});

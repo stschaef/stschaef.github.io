@@ -1,0 +1,1 @@
+heliaSearchData("d/fu2023twolevellineardependenttype",{"id":"fu2023twolevellineardependenttype","title":"A two-level linear dependent type theory","kind":"reference","tags":["linear-logic","type-theory"],"authors":["Hongwei Xi","Qiancheng Fu"],"venue":["arXiv"],"date":null,"url":"fu2023twolevellineardependenttype.html","headings":[],"body":""});

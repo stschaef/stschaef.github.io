@@ -1,0 +1,1 @@
+heliaSearchData("d/institution-kind",{"id":"institution-kind","title":"Institution kind","kind":"note","tags":[],"authors":["Steven Schaefer"],"venue":[],"date":null,"url":"institution-kind.html","headings":[],"body":""});

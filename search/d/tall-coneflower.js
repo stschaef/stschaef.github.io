@@ -1,0 +1,1 @@
+heliaSearchData("d/tall-coneflower",{"id":"tall-coneflower","title":"Tall coneflower","kind":"glyph-art","tags":["flower","ornament","ornament-art"],"authors":["Steven Schaefer"],"venue":[],"date":null,"url":"tall-coneflower.html","headings":[],"body":"A tall coneflower: drooping pink petals round a spiky orange cone, on a long stem with narrow leaves and a tuft at its foot."});

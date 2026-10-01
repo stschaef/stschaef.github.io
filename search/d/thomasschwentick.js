@@ -1,0 +1,1 @@
+heliaSearchData("d/thomasschwentick",{"id":"thomasschwentick","title":"Thomas Schwentick","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"thomasschwentick.html","headings":[],"body":""});

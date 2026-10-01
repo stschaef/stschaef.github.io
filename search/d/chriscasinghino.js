@@ -1,0 +1,1 @@
+heliaSearchData("d/chriscasinghino",{"id":"chriscasinghino","title":"Chris Casinghino","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"chriscasinghino.html","headings":[],"body":""});

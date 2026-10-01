@@ -1,0 +1,1 @@
+heliaSearchData("d/prattActionLogicPure1991",{"id":"prattActionLogicPure1991","title":"Action logic and pure induction","kind":"reference","tags":["kleene-algebra"],"authors":["Vaughan Pratt"],"venue":[],"date":null,"url":"prattActionLogicPure1991.html","headings":[],"body":""});

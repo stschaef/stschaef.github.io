@@ -1,0 +1,1 @@
+heliaSearchData("d/romainedelmann",{"id":"romainedelmann","title":"Romain Edelmann","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"romainedelmann.html","headings":[],"body":""});

@@ -1,0 +1,1 @@
+heliaSearchData("d/bernhardmoller",{"id":"bernhardmoller","title":"Bernhard Möller","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"bernhardmoller.html","headings":[],"body":""});

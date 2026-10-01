@@ -1,0 +1,1 @@
+heliaSearchData("d/henglein_regular_2011",{"id":"henglein_regular_2011","title":"Regular expression containment: Coinductive axiomatization and computational interpretation","kind":"reference","tags":["parsing"],"authors":["Fritz Henglein","Lasse Nielsen"],"venue":["SIGPLAN Notices","ACM SIGPLAN Notices"],"date":null,"url":"henglein_regular_2011.html","headings":[],"body":""});

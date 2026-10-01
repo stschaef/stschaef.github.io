@@ -1,0 +1,1 @@
+heliaSearchData("d/university-of-edinburgh",{"id":"university-of-edinburgh","title":"University of Edinburgh","kind":"institution","tags":[],"authors":[],"venue":[],"date":null,"url":"university-of-edinburgh.html","headings":[],"body":""});

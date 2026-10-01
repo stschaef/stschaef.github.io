@@ -1,0 +1,1 @@
+heliaSearchData("d/aleksandrkarbyshev",{"id":"aleksandrkarbyshev","title":"Aleksandr Karbyshev","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"aleksandrkarbyshev.html","headings":[],"body":""});

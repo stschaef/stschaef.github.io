@@ -1,0 +1,1 @@
+heliaSearchData("d/lawvere_1963",{"id":"lawvere_1963","title":"Functorial Semantics of Algebraic Theories","kind":"reference","tags":["category-theory"],"authors":["F. William Lawvere"],"venue":[],"date":null,"url":"lawvere_1963.html","headings":[],"body":""});

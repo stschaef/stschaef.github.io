@@ -1,0 +1,1 @@
+heliaSearchData("d/nilsdanielsson",{"id":"nilsdanielsson","title":"Nils Anders Danielsson","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"nilsdanielsson.html","headings":[],"body":""});

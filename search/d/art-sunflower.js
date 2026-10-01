@@ -1,0 +1,1 @@
+heliaSearchData("d/art-sunflower",{"id":"art-sunflower","title":"Sunflower","kind":"glyph-art","tags":["flower","ornament","ornament-art"],"authors":["Steven Schaefer"],"venue":[],"date":null,"url":"art-sunflower.html","headings":[],"body":"A sunflower face: a whorl of seeds ringed with golden petals."});

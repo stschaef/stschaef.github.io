@@ -1,0 +1,1 @@
+heliaSearchData("d/garden-tuft",{"id":"garden-tuft","title":"Garden tuft","kind":"glyph-art","tags":["ornament","ornament-garden"],"authors":["Steven Schaefer"],"venue":[],"date":null,"url":"garden-tuft.html","headings":[],"body":"A tuft of grass. A small piece for the garden margin patterns."});

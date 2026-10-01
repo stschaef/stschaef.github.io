@@ -1,0 +1,1 @@
+heliaSearchData("d/richardstearns",{"id":"richardstearns","title":"Richard E. Stearns","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"richardstearns.html","headings":[],"body":""});

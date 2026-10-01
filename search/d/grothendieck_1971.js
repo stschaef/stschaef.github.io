@@ -1,0 +1,1 @@
+heliaSearchData("d/grothendieck_1971",{"id":"grothendieck_1971","title":"Revêtements étales et groupe fondamental (SGA 1)","kind":"reference","tags":[],"authors":["Alexander Grothendieck"],"venue":[],"date":null,"url":"grothendieck_1971.html","headings":[],"body":""});

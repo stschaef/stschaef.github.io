@@ -1,0 +1,1 @@
+heliaSearchData("d/AhoIndexed",{"id":"AhoIndexed","title":"Indexed grammars—an extension of context-free grammars","kind":"reference","tags":["parsing"],"authors":["Alfred V. Aho"],"venue":["JACM","Journal of the ACM"],"date":null,"url":"AhoIndexed.html","headings":[],"body":""});

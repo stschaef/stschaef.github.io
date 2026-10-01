@@ -1,0 +1,1 @@
+heliaSearchData("d/hyland_glueing_2003",{"id":"hyland_glueing_2003","title":"Glueing and orthogonality for models of linear logic","kind":"reference","tags":["linear-logic"],"authors":["Andrea Schalk","Martin Hyland"],"venue":["TCS","Theoretical Computer Science"],"date":null,"url":"hyland_glueing_2003.html","headings":[],"body":""});

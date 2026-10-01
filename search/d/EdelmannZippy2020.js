@@ -1,0 +1,1 @@
+heliaSearchData("d/EdelmannZippy2020",{"id":"EdelmannZippy2020","title":"Zippy LL(1) parsing with derivatives","kind":"reference","tags":["parsing"],"authors":["Jad Hamza","Romain Edelmann","Viktor Kunčak"],"venue":["PLDI","Conference on Programming Language Design and Implementation"],"date":null,"url":"EdelmannZippy2020.html","headings":[],"body":""});

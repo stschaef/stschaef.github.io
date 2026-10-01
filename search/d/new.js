@@ -1,0 +1,1 @@
+heliaSearchData("d/new",{"id":"new","title":"New","kind":"note","tags":[],"authors":["Steven Schaefer"],"venue":[],"date":null,"url":"new.html","headings":[],"body":"The twenty most recently written or updated notes, newest first."});

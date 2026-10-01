@@ -1,0 +1,1 @@
+heliaSearchData("d/marcellobonsangue",{"id":"marcellobonsangue","title":"Marcello M. Bonsangue","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"marcellobonsangue.html","headings":[],"body":""});

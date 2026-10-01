@@ -1,0 +1,1 @@
+heliaSearchData("d/li_etal_2025",{"id":"li_etal_2025","title":"Mechanizing Synthetic Tait Computability in Istari","kind":"reference","tags":["metatheory","synthetic-tait-computability"],"authors":["Robert Harper","Runming Li","Yue Yao"],"venue":["arXiv"],"date":null,"url":"li_etal_2025.html","headings":[],"body":""});

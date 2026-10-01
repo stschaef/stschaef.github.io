@@ -1,0 +1,1 @@
+heliaSearchData("d/pedrohaamorim",{"id":"pedrohaamorim","title":"Pedro H. Azevedo de Amorim","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"pedrohaamorim.html","headings":[],"body":""});

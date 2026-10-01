@@ -1,0 +1,1 @@
+heliaSearchData("d/johnstone-2002",{"id":"johnstone-2002","title":"Sketches of an Elephant: A Topos Theory Compendium","kind":"reference","tags":["category-theory"],"authors":["Peter T. Johnstone"],"venue":["Oxford Logical Guides"],"date":null,"url":"johnstone-2002.html","headings":[],"body":""});

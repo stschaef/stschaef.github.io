@@ -1,0 +1,1 @@
+heliaSearchData("d/rptu-kaiserslautern-landau",{"id":"rptu-kaiserslautern-landau","title":"RPTU Kaiserslautern-Landau","kind":"institution","tags":[],"authors":[],"venue":[],"date":null,"url":"rptu-kaiserslautern-landau.html","headings":[],"body":""});

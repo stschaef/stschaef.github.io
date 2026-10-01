@@ -1,0 +1,1 @@
+heliaSearchData("d/kristianstovring",{"id":"kristianstovring","title":"Kristian Støvring","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"kristianstovring.html","headings":[],"body":""});

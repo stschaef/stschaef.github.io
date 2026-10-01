@@ -1,0 +1,1 @@
+heliaSearchData("d/power_1989",{"id":"power_1989","title":"A general coherence result","kind":"reference","tags":["category-theory"],"authors":["A. John Power"],"venue":["JPAA","Journal of Pure and Applied Algebra"],"date":null,"url":"power_1989.html","headings":[],"body":""});

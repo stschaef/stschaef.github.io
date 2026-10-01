@@ -1,0 +1,1 @@
+heliaSearchData("d/notices-of-the-american-mathematical-society",{"id":"notices-of-the-american-mathematical-society","title":"Notices of the American Mathematical Society","kind":"venue","tags":[],"authors":[],"venue":[],"date":null,"url":"notices-of-the-american-mathematical-society.html","headings":[],"body":""});

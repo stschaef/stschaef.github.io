@@ -1,0 +1,1 @@
+heliaSearchData("d/jeanyvesgirard",{"id":"jeanyvesgirard","title":"Jean-Yves Girard","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"jeanyvesgirard.html","headings":[],"body":""});

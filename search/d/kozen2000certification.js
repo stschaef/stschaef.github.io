@@ -1,0 +1,1 @@
+heliaSearchData("d/kozen2000certification",{"id":"kozen2000certification","title":"Certification of Compiler Optimizations Using Kleene Algebra with Tests","kind":"reference","tags":["kleene-algebra"],"authors":["Dexter Kozen","Maria-Cristina Patron"],"venue":[],"date":null,"url":"kozen2000certification.html","headings":[],"body":""});

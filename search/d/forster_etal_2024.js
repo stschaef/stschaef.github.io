@@ -1,0 +1,1 @@
+heliaSearchData("d/forster_etal_2024",{"id":"forster_etal_2024","title":"Verified Extraction from Coq to OCaml","kind":"reference","tags":["compilation"],"authors":["Matthieu Sozeau","Nicolas Tabareau","Yannick Forster"],"venue":["PLDI","Conference on Programming Language Design and Implementation"],"date":null,"url":"forster_etal_2024.html","headings":[],"body":""});

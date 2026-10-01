@@ -1,0 +1,1 @@
+heliaSearchData("d/fiore_etal_nd",{"id":"fiore_etal_nd","title":"Abstract syntax and variable binding","kind":"reference","tags":["abstract-syntax"],"authors":["Daniele Turi","Gordon Plotkin","Marcelo P. Fiore"],"venue":["LICS","Symposium on Logic in Computer Science"],"date":null,"url":"fiore_etal_nd.html","headings":[],"body":""});

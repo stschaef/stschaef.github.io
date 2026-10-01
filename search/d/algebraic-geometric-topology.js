@@ -1,0 +1,1 @@
+heliaSearchData("d/algebraic-geometric-topology",{"id":"algebraic-geometric-topology","title":"Algebraic & Geometric Topology","kind":"venue","tags":[],"authors":[],"venue":[],"date":null,"url":"algebraic-geometric-topology.html","headings":[],"body":""});

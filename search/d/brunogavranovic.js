@@ -1,0 +1,1 @@
+heliaSearchData("d/brunogavranovic",{"id":"brunogavranovic","title":"Bruno Gavranović","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"brunogavranovic.html","headings":[],"body":""});

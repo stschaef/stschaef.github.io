@@ -1,0 +1,251 @@
+/* helia site search palette (base/theme/search.js). Colors come from the
+ * --helia-* tokens of theme.css, so light/dark and project overrides apply. */
+
+.helia-search-button {
+  font: inherit;
+  font-size: 0.9em;
+  color: var(--helia-muted);
+  background: transparent;
+  border: 1px solid var(--helia-border);
+  border-radius: 1em;
+  padding: 0.1em 0.7em;
+  margin-right: 0.4em;
+  cursor: pointer;
+  float: right;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35em;
+}
+
+.helia-search-button:hover,
+.helia-search-button:focus-visible {
+  background: var(--helia-hover-strong);
+}
+
+.helia-search-button.helia-floating {
+  position: fixed;
+  top: 0.75em;
+  right: 7.5em;
+  float: none;
+  background: var(--helia-bg);
+  z-index: 10;
+}
+
+.helia-search-icon {
+  font-size: 1.1em;
+  line-height: 1;
+}
+
+.helia-search-key,
+.helia-search-help kbd,
+.helia-search-close {
+  font-family: var(--helia-font-mono);
+  font-size: 0.75em;
+  color: var(--helia-muted);
+  border: 1px solid var(--helia-border);
+  border-radius: 3px;
+  padding: 0 0.35em;
+  background: var(--helia-code-bg);
+}
+
+html.helia-search-open {
+  overflow: hidden;
+}
+
+.helia-search-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  background: rgba(0, 0, 0, 0.35);
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 8vh 1rem 1rem;
+  box-sizing: border-box;
+}
+
+.helia-search-backdrop[hidden] {
+  display: none;
+}
+
+.helia-search-dialog {
+  width: 100%;
+  max-width: 42rem;
+  max-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  background: var(--helia-bg);
+  color: var(--helia-fg);
+  border: 1px solid var(--helia-border);
+  border-radius: calc(var(--helia-radius) * 2);
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.3);
+  font-family: var(--helia-font-body);
+  overflow: hidden;
+}
+
+.helia-search-bar {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  padding: 0.6em 0.8em;
+  border-bottom: 1px solid var(--helia-border);
+}
+
+.helia-search-input {
+  flex: 1;
+  min-width: 0;
+  font: inherit;
+  font-size: 1.05em;
+  color: var(--helia-fg);
+  background: transparent;
+  border: none;
+  outline: none;
+  padding: 0.3em 0;
+}
+
+.helia-search-input::-webkit-search-cancel-button {
+  display: none;
+}
+
+.helia-search-close {
+  cursor: pointer;
+  padding: 0.15em 0.45em;
+}
+
+.helia-search-status {
+  font-size: 0.8em;
+  color: var(--helia-faint);
+  padding: 0.3em 0.9em 0;
+  min-height: 1.2em;
+}
+
+.helia-search-results {
+  list-style: none;
+  margin: 0;
+  padding: 0.3em;
+  overflow-y: auto;
+  flex: 1;
+}
+
+.helia-search-result {
+  margin: 0;
+  border-radius: var(--helia-radius);
+}
+
+.helia-search-result.helia-active {
+  background: var(--helia-hover-strong);
+  box-shadow: inset 3px 0 0 var(--helia-accent);
+}
+
+.helia-search-link {
+  display: block;
+  padding: 0.45em 0.6em;
+  color: inherit;
+  text-decoration: none;
+}
+
+.helia-search-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.35em;
+}
+
+.helia-search-title {
+  font-weight: 600;
+  color: var(--helia-fg);
+}
+
+.helia-search-chip {
+  font-size: 0.72em;
+  color: var(--helia-muted);
+  border: 1px solid var(--helia-border);
+  border-radius: 1em;
+  padding: 0 0.5em;
+  white-space: nowrap;
+}
+
+.helia-search-kind {
+  color: var(--helia-accent);
+  border-color: var(--helia-accent);
+}
+
+.helia-search-date {
+  font-size: 0.75em;
+  color: var(--helia-faint);
+  margin-left: auto;
+}
+
+.helia-search-section {
+  display: block;
+  font-size: 0.85em;
+  color: var(--helia-accent);
+}
+
+.helia-search-snippet {
+  display: block;
+  font-size: 0.85em;
+  color: var(--helia-muted);
+  line-height: 1.4;
+  overflow-wrap: anywhere;
+}
+
+.helia-search-why {
+  display: block;
+  font-size: 0.85em;
+  color: var(--helia-muted);
+  line-height: 1.4;
+  overflow-wrap: anywhere;
+}
+
+.helia-search-why-id {
+  font-family: var(--helia-font-mono);
+  font-size: 0.9em;
+}
+
+.helia-search-tag-hit {
+  color: var(--helia-fg);
+  border-color: var(--helia-muted);
+}
+
+.helia-search-mark {
+  background: var(--helia-mark);
+  color: inherit;
+  border-radius: 2px;
+  padding: 0 1px;
+}
+
+.helia-search-help {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.9em;
+  font-size: 0.75em;
+  color: var(--helia-faint);
+  padding: 0.45em 0.9em;
+  border-top: 1px solid var(--helia-border);
+}
+
+@media (max-width: 40rem) {
+  .helia-search-backdrop {
+    padding: 0;
+  }
+  .helia-search-dialog {
+    max-width: none;
+    max-height: 100vh;
+    height: 100%;
+    border-radius: 0;
+    border: none;
+  }
+  .helia-search-label,
+  .helia-search-key,
+  .helia-search-help {
+    display: none;
+  }
+}
+
+@media print {
+  .helia-search-button,
+  .helia-search-backdrop {
+    display: none;
+  }
+}

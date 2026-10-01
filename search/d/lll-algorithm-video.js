@@ -1,0 +1,1 @@
+heliaSearchData("d/lll-algorithm-video",{"id":"lll-algorithm-video","title":"LLL Algorithm","kind":"video","tags":["algorithm","cryptography","lattice","manim","number-theory"],"authors":["Steven Schaefer"],"venue":["M602 Algebraic Number Theory, Indiana University"],"date":"2020-12-04","url":"lll-algorithm-video.html","headings":[],"body":""});

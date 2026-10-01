@@ -1,0 +1,1 @@
+heliaSearchData("d/danielssonTotalParserCombinators2010",{"id":"danielssonTotalParserCombinators2010","title":"Total parser combinators","kind":"reference","tags":["parsing"],"authors":["Nils Anders Danielsson"],"venue":["ICFP","International Conference on Functional Programming"],"date":null,"url":"danielssonTotalParserCombinators2010.html","headings":[],"body":""});

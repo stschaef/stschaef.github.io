@@ -1,0 +1,1 @@
+heliaSearchData("d/university-of-wisconsin-madison",{"id":"university-of-wisconsin-madison","title":"University of Wisconsin–Madison","kind":"institution","tags":[],"authors":[],"venue":[],"date":null,"url":"university-of-wisconsin-madison.html","headings":[],"body":""});

@@ -1,0 +1,1 @@
+heliaSearchData("d/lack_2002",{"id":"lack_2002","title":"Codescent objects and coherence","kind":"reference","tags":["category-theory"],"authors":["Steve Lack"],"venue":["JPAA","Journal of Pure and Applied Algebra"],"date":null,"url":"lack_2002.html","headings":[],"body":""});

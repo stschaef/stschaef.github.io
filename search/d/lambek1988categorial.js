@@ -1,0 +1,1 @@
+heliaSearchData("d/lambek1988categorial",{"id":"lambek1988categorial","title":"Categorial and categorical grammars","kind":"reference","tags":["categorial-grammar"],"authors":["Joachim Lambek"],"venue":[],"date":null,"url":"lambek1988categorial.html","headings":[],"body":""});

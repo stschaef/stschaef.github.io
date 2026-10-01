@@ -1,0 +1,1 @@
+heliaSearchData("d/ericgiovannini",{"id":"ericgiovannini","title":"Eric Giovannini","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"ericgiovannini.html","headings":[],"body":""});

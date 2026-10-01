@@ -1,0 +1,1 @@
+heliaSearchData("d/sterling_angiuli_2021",{"id":"sterling_angiuli_2021","title":"Normalization for Cubical Type Theory","kind":"reference","tags":["cubical","metatheory"],"authors":["Carlo Angiuli","Jon Sterling"],"venue":["LICS","Symposium on Logic in Computer Science"],"date":null,"url":"sterling_angiuli_2021.html","headings":[],"body":""});

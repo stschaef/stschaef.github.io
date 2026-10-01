@@ -1,0 +1,1 @@
+heliaSearchData("d/university-of-california-santa-cruz",{"id":"university-of-california-santa-cruz","title":"University of California, Santa Cruz","kind":"institution","tags":[],"authors":[],"venue":[],"date":null,"url":"university-of-california-santa-cruz.html","headings":[],"body":""});

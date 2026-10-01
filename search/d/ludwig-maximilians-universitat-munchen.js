@@ -1,0 +1,1 @@
+heliaSearchData("d/ludwig-maximilians-universitat-munchen",{"id":"ludwig-maximilians-universitat-munchen","title":"Ludwig-Maximilians-Universität München","kind":"institution","tags":[],"authors":[],"venue":[],"date":null,"url":"ludwig-maximilians-universitat-munchen.html","headings":[],"body":""});

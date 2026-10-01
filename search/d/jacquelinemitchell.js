@@ -1,0 +1,1 @@
+heliaSearchData("d/jacquelinemitchell",{"id":"jacquelinemitchell","title":"Jacqueline Mitchell","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"jacquelinemitchell.html","headings":[],"body":""});

@@ -1,0 +1,1 @@
+heliaSearchData("d/gould_2010",{"id":"gould_2010","title":"Coherence for categorified operadic theories","kind":"reference","tags":["category-theory"],"authors":["M. R. Gould"],"venue":["arXiv"],"date":null,"url":"gould_2010.html","headings":[],"body":""});

@@ -1,0 +1,1 @@
+heliaSearchData("d/Bekić1984",{"id":"Bekić1984","title":"Definable operations in general algebras, and the theory of automata and flowcharts","kind":"reference","tags":["parsing"],"authors":["Hans Bekić"],"venue":[],"date":null,"url":"Bekić1984.html","headings":[],"body":""});

@@ -1,0 +1,1 @@
+heliaSearchData("d/Earley1970",{"id":"Earley1970","title":"An efficient context-free parsing algorithm","kind":"reference","tags":["parsing"],"authors":["Jay Earley"],"venue":["CACM","Communications of the ACM"],"date":null,"url":"Earley1970.html","headings":[],"body":""});

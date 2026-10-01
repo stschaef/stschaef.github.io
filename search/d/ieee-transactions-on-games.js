@@ -1,0 +1,1 @@
+heliaSearchData("d/ieee-transactions-on-games",{"id":"ieee-transactions-on-games","title":"IEEE Transactions on Games","kind":"venue","tags":[],"authors":[],"venue":[],"date":null,"url":"ieee-transactions-on-games.html","headings":[],"body":""});

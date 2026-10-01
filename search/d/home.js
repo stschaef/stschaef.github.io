@@ -1,0 +1,1 @@
+heliaSearchData("d/home",{"id":"home","title":"Steven Schaefer","kind":"home","tags":[],"authors":[],"venue":[],"date":null,"url":"home.html","headings":[],"body":"I am a PhD candidate at the University of Michigan, where I am advised by Max New."});

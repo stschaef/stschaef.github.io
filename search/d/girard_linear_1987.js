@@ -1,0 +1,1 @@
+heliaSearchData("d/girard_linear_1987",{"id":"girard_linear_1987","title":"Linear logic","kind":"reference","tags":["linear-logic"],"authors":["Jean-Yves Girard"],"venue":["TCS","Theoretical Computer Science"],"date":null,"url":"girard_linear_1987.html","headings":[],"body":""});

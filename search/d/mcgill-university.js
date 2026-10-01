@@ -1,0 +1,1 @@
+heliaSearchData("d/mcgill-university",{"id":"mcgill-university","title":"McGill University","kind":"institution","tags":[],"authors":[],"venue":[],"date":null,"url":"mcgill-university.html","headings":[],"body":""});

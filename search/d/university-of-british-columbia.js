@@ -1,0 +1,1 @@
+heliaSearchData("d/university-of-british-columbia",{"id":"university-of-british-columbia","title":"University of British Columbia","kind":"institution","tags":[],"authors":[],"venue":[],"date":null,"url":"university-of-british-columbia.html","headings":[],"body":""});

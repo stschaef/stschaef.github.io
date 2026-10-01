@@ -1,0 +1,1 @@
+heliaSearchData("d/biering_bunched_2004",{"id":"biering_bunched_2004","title":"On the Logic of Bunched Implications — and its relation to separation logic","kind":"reference","tags":["separation-logic","substructural"],"authors":["Bodil Biering"],"venue":[],"date":null,"url":"biering_bunched_2004.html","headings":[],"body":""});

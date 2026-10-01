@@ -1,0 +1,1 @@
+heliaSearchData("d/art-pomegranate-open",{"id":"art-pomegranate-open","title":"Open pomegranate","kind":"glyph-art","tags":["fruit","ornament","ornament-art"],"authors":["Steven Schaefer"],"venue":[],"date":null,"url":"art-pomegranate-open.html","headings":[],"body":"A pomegranate cut open: ruby seeds packed between pale membranes."});

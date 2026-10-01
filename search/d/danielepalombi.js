@@ -1,0 +1,1 @@
+heliaSearchData("d/danielepalombi",{"id":"danielepalombi","title":"Daniele Palombi","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"danielepalombi.html","headings":[],"body":""});

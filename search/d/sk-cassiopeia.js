@@ -1,0 +1,1 @@
+heliaSearchData("d/sk-cassiopeia",{"id":"sk-cassiopeia","title":"Cassiopeia (skeleton)","kind":"glyph-art","tags":["constellation","ornament"],"authors":["Steven Schaefer"],"venue":[],"date":null,"url":"sk-cassiopeia.html","headings":[],"body":"The star positions of a constellation: links(picture(sk-cassiopeia)) joins them into a figure."});

@@ -1,0 +1,1 @@
+heliaSearchData("d/art-rose",{"id":"art-rose","title":"Rose","kind":"glyph-art","tags":["flower","ornament","ornament-art"],"authors":["Steven Schaefer"],"venue":[],"date":null,"url":"art-rose.html","headings":[],"body":"A rose seen from above, its petals wound in a tight spiral, with a few leaves on the stem."});
