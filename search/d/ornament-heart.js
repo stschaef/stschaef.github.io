@@ -1,1 +1,0 @@
-heliaSearchData("d/ornament-heart",{"id":"ornament-heart","title":"Masthead heart","kind":"glyph-art","tags":["ornament","ornament-sampler"],"authors":["Steven Schaefer"],"venue":[],"date":null,"url":"ornament-heart.html","headings":[],"body":"The hearts beside the name on the home page. Also a sampler motif."});

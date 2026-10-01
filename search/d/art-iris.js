@@ -1,1 +1,0 @@
-heliaSearchData("d/art-iris",{"id":"art-iris","title":"Bearded iris","kind":"glyph-art","tags":["flower","ornament","ornament-art"],"authors":["Steven Schaefer"],"venue":[],"date":null,"url":"art-iris.html","headings":[],"body":"A bearded iris: three upright standards above three drooping falls, each with a golden beard."});

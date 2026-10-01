@@ -1,1 +1,1 @@
-heliaSearchData("t/lf",{"lfc":[977,32,1255,160]});
+heliaSearchData("t/lf",{"lfc":[948,32,1234,160]});

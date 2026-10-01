@@ -1,1 +1,1 @@
-heliaSearchData("t/ua",{"uab":[1286,32,2562,128],"uabprecisionmedicineinstitute":[3848,32]});
+heliaSearchData("t/ua",{"uab":[1257,32,2495,128],"uabprecisionmedicineinstitute":[3752,32]});

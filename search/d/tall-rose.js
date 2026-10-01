@@ -1,1 +1,0 @@
-heliaSearchData("d/tall-rose",{"id":"tall-rose","title":"Tall rose","kind":"glyph-art","tags":["flower","ornament","ornament-art"],"authors":["Steven Schaefer"],"venue":[],"date":null,"url":"tall-rose.html","headings":[],"body":"A tall rose: a full red bloom and a bud on a long stem with leaves up it."});

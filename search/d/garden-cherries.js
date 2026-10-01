@@ -1,1 +1,0 @@
-heliaSearchData("d/garden-cherries",{"id":"garden-cherries","title":"Garden cherries","kind":"glyph-art","tags":["ornament","ornament-garden"],"authors":["Steven Schaefer"],"venue":[],"date":null,"url":"garden-cherries.html","headings":[],"body":"A pair of cherries. A small piece for the garden margin patterns."});

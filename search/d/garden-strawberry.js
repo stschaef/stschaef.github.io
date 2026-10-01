@@ -1,1 +1,0 @@
-heliaSearchData("d/garden-strawberry",{"id":"garden-strawberry","title":"Garden strawberry","kind":"glyph-art","tags":["ornament","ornament-garden"],"authors":["Steven Schaefer"],"venue":[],"date":null,"url":"garden-strawberry.html","headings":[],"body":"A strawberry. A small piece for the garden margin patterns."});

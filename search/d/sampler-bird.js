@@ -1,1 +1,0 @@
-heliaSearchData("d/sampler-bird",{"id":"sampler-bird","title":"Sampler distelfink","kind":"glyph-art","tags":["ornament","ornament-sampler"],"authors":["Steven Schaefer"],"venue":[],"date":null,"url":"sampler-bird.html","headings":[],"body":"A cross-stitch motif for the sampler margin pattern."});

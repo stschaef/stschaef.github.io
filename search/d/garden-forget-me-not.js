@@ -1,1 +1,0 @@
-heliaSearchData("d/garden-forget-me-not",{"id":"garden-forget-me-not","title":"Garden forget-me-not","kind":"glyph-art","tags":["ornament","ornament-garden"],"authors":["Steven Schaefer"],"venue":[],"date":null,"url":"garden-forget-me-not.html","headings":[],"body":"A cluster of forget-me-nots. A small piece for the garden margin patterns."});

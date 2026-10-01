@@ -1,1 +1,0 @@
-heliaSearchData("d/art-fish",{"id":"art-fish","title":"Fish","kind":"glyph-art","tags":["animal","ornament","ornament-art"],"authors":["Steven Schaefer"],"venue":[],"date":null,"url":"art-fish.html","headings":[],"body":"A blue fish swimming left: scales in ∩ and ∪, darker along the back and pale on the belly, with orange fins and a forked tail."});

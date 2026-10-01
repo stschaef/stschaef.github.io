@@ -1,1 +1,0 @@
-heliaSearchData("d/tag-ornament-art",{"id":"tag-ornament-art","title":"ornament-art","kind":"tag","tags":[],"authors":[],"venue":[],"date":null,"url":"tag-ornament-art.html","headings":[],"body":""});

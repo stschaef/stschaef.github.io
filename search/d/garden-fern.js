@@ -1,1 +1,0 @@
-heliaSearchData("d/garden-fern",{"id":"garden-fern","title":"Garden fern","kind":"glyph-art","tags":["ornament","ornament-garden"],"authors":["Steven Schaefer"],"venue":[],"date":null,"url":"garden-fern.html","headings":[],"body":"A little fern frond. A small piece for the garden margin patterns."});

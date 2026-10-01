@@ -1,1 +1,1 @@
-heliaSearchData("t/ur",{"urbana":[3968,160],"urbat":[140,32,1453,128],"uri":[3433,32,620,128],"urishaham":[4053,32],"urtasun":[3047,128,1254,32]});
+heliaSearchData("t/ur",{"urbana":[3872,160],"urbat":[140,32,1403,128],"uri":[3350,32,607,128],"urishaham":[3957,32],"urtasun":[2988,128,1217,32]});

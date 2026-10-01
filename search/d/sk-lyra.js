@@ -1,1 +1,0 @@
-heliaSearchData("d/sk-lyra",{"id":"sk-lyra","title":"Lyra (skeleton)","kind":"glyph-art","tags":["constellation","ornament"],"authors":["Steven Schaefer"],"venue":[],"date":null,"url":"sk-lyra.html","headings":[],"body":"The star positions of a constellation: links(picture(sk-lyra)) joins them into a figure."});

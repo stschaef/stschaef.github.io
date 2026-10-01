@@ -1,1 +1,0 @@
-heliaSearchData("d/garden-fish",{"id":"garden-fish","title":"Garden fish","kind":"glyph-art","tags":["ornament","ornament-garden"],"authors":["Steven Schaefer"],"venue":[],"date":null,"url":"garden-fish.html","headings":[],"body":"A small fish. A small piece for the garden margin patterns."});

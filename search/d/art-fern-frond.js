@@ -1,1 +1,0 @@
-heliaSearchData("d/art-fern-frond",{"id":"art-fern-frond","title":"Fern frond","kind":"glyph-art","tags":["greenery","ornament","ornament-art"],"authors":["Steven Schaefer"],"venue":[],"date":null,"url":"art-fern-frond.html","headings":[],"body":"An arching fern frond, its pinnae swept forward along the bending stalk to a curled fiddlehead tip."});

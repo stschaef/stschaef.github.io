@@ -1,1 +1,0 @@
-heliaSearchData("d/art-laurel-branch",{"id":"art-laurel-branch","title":"Laurel branch","kind":"glyph-art","tags":["greenery","ornament","ornament-art"],"authors":["Steven Schaefer"],"venue":[],"date":null,"url":"art-laurel-branch.html","headings":[],"body":"A laurel branch: paired lance-shaped leaves along a slender twig, with a few dark berries."});

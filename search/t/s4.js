@@ -1,1 +1,1 @@
-heliaSearchData("t/s4",{"s4":[639,160]});
+heliaSearchData("t/s4",{"s4":[610,160]});

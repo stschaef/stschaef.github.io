@@ -1,1 +1,0 @@
-heliaSearchData("d/sampler-tulip-purple",{"id":"sampler-tulip-purple","title":"Sampler tulip (purple)","kind":"glyph-art","tags":["ornament","ornament-sampler"],"authors":["Steven Schaefer"],"venue":[],"date":null,"url":"sampler-tulip-purple.html","headings":[],"body":"A cross-stitch motif for the sampler margin pattern."});

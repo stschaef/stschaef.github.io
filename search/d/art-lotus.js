@@ -1,1 +1,0 @@
-heliaSearchData("d/art-lotus",{"id":"art-lotus","title":"Lotus","kind":"glyph-art","tags":["flower","ornament","ornament-art"],"authors":["Steven Schaefer"],"venue":[],"date":null,"url":"art-lotus.html","headings":[],"body":"A lotus opening on still water, rows of petals layered around a golden heart."});

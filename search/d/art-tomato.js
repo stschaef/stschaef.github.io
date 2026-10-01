@@ -1,1 +1,0 @@
-heliaSearchData("d/art-tomato",{"id":"art-tomato","title":"Tomato","kind":"glyph-art","tags":["fruit","ornament","ornament-art"],"authors":["Steven Schaefer"],"venue":[],"date":null,"url":"art-tomato.html","headings":[],"body":"A ripe tomato with a glossy highlight under its star-shaped calyx."});

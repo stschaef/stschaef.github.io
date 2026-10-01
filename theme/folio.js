@@ -2931,8 +2931,13 @@
   function fetchOrnaments() {
     var home = document.querySelector(".helia-topbar .helia-home, link[rel=stylesheet][href$='helia/theme.css']");
     var base = home && home.getAttribute("href") ? home.getAttribute("href").replace(/(helia\/theme\.css|[^/]*)$/, "") : "";
+    // The Ornaments page (private builds); else its data as exported for the public site
+    // (tools/export-ornaments.py: theme/ornaments.json), the art notes themselves being private.
+    var exported = function () {
+      return fetch(base + "theme/ornaments.json").then(function (r) { return r.ok ? r.json() : null; }).catch(function () { return null; });
+    };
     return fetch(base + "ornaments.html").then(function (r) { return r.ok ? r.text() : ""; }).then(function (html) {
-      if (!html) return null;
+      if (!html) return exported();
       // large props are written to a file (data-props-src) instead of inline: fetch those
       var d = new DOMParser().parseFromString(html, "text/html");
       var els = Array.prototype.slice.call(d.querySelectorAll('[data-widget="glyph-art"], [data-widget="ornament-library"]'));

@@ -1,1 +1,0 @@
-heliaSearchData("d/garden-rose",{"id":"garden-rose","title":"Garden rose","kind":"glyph-art","tags":["ornament","ornament-garden"],"authors":["Steven Schaefer"],"venue":[],"date":null,"url":"garden-rose.html","headings":[],"body":"A rose with a leaf either side. A small piece for the garden margin patterns."});

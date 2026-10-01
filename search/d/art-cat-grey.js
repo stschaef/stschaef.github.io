@@ -1,1 +1,0 @@
-heliaSearchData("d/art-cat-grey",{"id":"art-cat-grey","title":"Grey cat","kind":"glyph-art","tags":["animal","ornament","ornament-art"],"authors":["Steven Schaefer"],"venue":[],"date":null,"url":"art-cat-grey.html","headings":[],"body":"The ginger cat’s companion: a grey cat with golden eyes, sitting the same way."});

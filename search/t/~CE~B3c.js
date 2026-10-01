@@ -1,1 +1,1 @@
-heliaSearchData("t/γc",{"γcfa":[2560,128]});
+heliaSearchData("t/γc",{"γcfa":[2510,128]});

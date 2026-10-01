@@ -1,1 +1,0 @@
-heliaSearchData("d/art-bird",{"id":"art-bird","title":"Bird on a branch","kind":"glyph-art","tags":["animal","ornament","ornament-art"],"authors":["Steven Schaefer"],"venue":[],"date":null,"url":"art-bird.html","headings":[],"body":"A robin-breasted bird perched on a branch, its folded wing layered in ⌒ and ∨."});

@@ -1,1 +1,0 @@
-heliaSearchData("d/art-ivy-sprig",{"id":"art-ivy-sprig","title":"Ivy sprig","kind":"glyph-art","tags":["greenery","ornament","ornament-art"],"authors":["Steven Schaefer"],"venue":[],"date":null,"url":"art-ivy-sprig.html","headings":[],"body":"A sprig of ivy, pointed three-lobed leaves with pale veins along a wandering stem."});

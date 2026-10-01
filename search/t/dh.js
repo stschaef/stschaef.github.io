@@ -1,1 +1,1 @@
-heliaSearchData("t/dh",{"dhabi":[2705,160],"dharanikota":[1354,32,1892,128],"dhaval":[995,128,1890,32],"dhavalraval":[995,32],"dhole":[2078,128,1355,32],"dhruv":[21,32,426,32,549,128,2005,32],"dhruvmakwana":[996,32]});
+heliaSearchData("t/dh",{"dhabi":[2655,160],"dharanikota":[1325,32,1843,128],"dhaval":[966,128,1860,32],"dhavalraval":[966,32],"dhole":[2028,128,1322,32],"dhruv":[21,32,397,32,549,128,1975,32],"dhruvmakwana":[967,32]});

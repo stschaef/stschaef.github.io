@@ -1,1 +1,0 @@
-heliaSearchData("d/sampler-blueberry",{"id":"sampler-blueberry","title":"Sampler blueberries","kind":"glyph-art","tags":["ornament","ornament-sampler"],"authors":["Steven Schaefer"],"venue":[],"date":null,"url":"sampler-blueberry.html","headings":[],"body":"A cross-stitch motif for the sampler margin pattern."});

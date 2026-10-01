@@ -1,1 +1,0 @@
-heliaSearchData("d/ornament-cat",{"id":"ornament-cat","title":"Sampler cat","kind":"glyph-art","tags":["ornament","ornament-sampler"],"authors":["Steven Schaefer"],"venue":[],"date":null,"url":"ornament-cat.html","headings":[],"body":"A sampler motif."});

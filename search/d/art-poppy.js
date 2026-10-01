@@ -1,1 +1,0 @@
-heliaSearchData("d/art-poppy",{"id":"art-poppy","title":"Poppy","kind":"glyph-art","tags":["flower","ornament","ornament-art"],"authors":["Steven Schaefer"],"venue":[],"date":null,"url":"art-poppy.html","headings":[],"body":"A scarlet poppy: four papery petals round a dark eye and seed-head, a bud nodding beside it."});

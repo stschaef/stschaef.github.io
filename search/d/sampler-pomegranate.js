@@ -1,1 +1,0 @@
-heliaSearchData("d/sampler-pomegranate",{"id":"sampler-pomegranate","title":"Sampler pomegranate","kind":"glyph-art","tags":["ornament","ornament-sampler"],"authors":["Steven Schaefer"],"venue":[],"date":null,"url":"sampler-pomegranate.html","headings":[],"body":"A cross-stitch motif for the sampler margin pattern."});

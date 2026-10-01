@@ -1,1 +1,0 @@
-heliaSearchData("d/garden-berries",{"id":"garden-berries","title":"Garden berries","kind":"glyph-art","tags":["ornament","ornament-garden"],"authors":["Steven Schaefer"],"venue":[],"date":null,"url":"garden-berries.html","headings":[],"body":"Three blueberries on a twig. A small piece for the garden margin patterns."});

@@ -1,1 +1,0 @@
-heliaSearchData("d/sampler-rabbit",{"id":"sampler-rabbit","title":"Sampler rabbit","kind":"glyph-art","tags":["ornament","ornament-sampler"],"authors":["Steven Schaefer"],"venue":[],"date":null,"url":"sampler-rabbit.html","headings":[],"body":"A cross-stitch motif for the sampler margin pattern."});

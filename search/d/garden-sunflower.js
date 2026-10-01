@@ -1,1 +1,0 @@
-heliaSearchData("d/garden-sunflower",{"id":"garden-sunflower","title":"Garden sunflower","kind":"glyph-art","tags":["ornament","ornament-garden"],"authors":["Steven Schaefer"],"venue":[],"date":null,"url":"garden-sunflower.html","headings":[],"body":"A small sunflower. A small piece for the garden margin patterns."});

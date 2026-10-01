@@ -1,1 +1,0 @@
-heliaSearchData("d/sampler-mushroom",{"id":"sampler-mushroom","title":"Sampler toadstool","kind":"glyph-art","tags":["ornament","ornament-sampler"],"authors":["Steven Schaefer"],"venue":[],"date":null,"url":"sampler-mushroom.html","headings":[],"body":"A cross-stitch motif for the sampler margin pattern."});

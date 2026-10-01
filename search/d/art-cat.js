@@ -1,1 +1,0 @@
-heliaSearchData("d/art-cat",{"id":"art-cat","title":"Ginger cat","kind":"glyph-art","tags":["animal","ornament","ornament-art"],"authors":["Steven Schaefer"],"venue":[],"date":null,"url":"art-cat.html","headings":[],"body":"A ginger tabby sitting for its portrait: striped brow and flanks, green eyes, whiskers, and a ringed tail wrapped round its paws."});

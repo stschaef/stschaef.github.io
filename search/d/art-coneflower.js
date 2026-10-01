@@ -1,1 +1,0 @@
-heliaSearchData("d/art-coneflower",{"id":"art-coneflower","title":"Coneflower","kind":"glyph-art","tags":["flower","ornament","ornament-art"],"authors":["Steven Schaefer"],"venue":[],"date":null,"url":"art-coneflower.html","headings":[],"body":"A coneflower: pink petals drooping from a spiky, domed orange centre."});

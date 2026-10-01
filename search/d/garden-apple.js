@@ -1,1 +1,0 @@
-heliaSearchData("d/garden-apple",{"id":"garden-apple","title":"Garden apple","kind":"glyph-art","tags":["ornament","ornament-garden"],"authors":["Steven Schaefer"],"venue":[],"date":null,"url":"garden-apple.html","headings":[],"body":"An apple with a leaf. A small piece for the garden margin patterns."});

@@ -1,1 +1,0 @@
-heliaSearchData("d/sk-orion",{"id":"sk-orion","title":"Orion (skeleton)","kind":"glyph-art","tags":["constellation","ornament"],"authors":["Steven Schaefer"],"venue":[],"date":null,"url":"sk-orion.html","headings":[],"body":"The star positions of a constellation: links(picture(sk-orion)) joins them into a figure."});

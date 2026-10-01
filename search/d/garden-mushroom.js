@@ -1,1 +1,0 @@
-heliaSearchData("d/garden-mushroom",{"id":"garden-mushroom","title":"Garden toadstool","kind":"glyph-art","tags":["ornament","ornament-garden"],"authors":["Steven Schaefer"],"venue":[],"date":null,"url":"garden-mushroom.html","headings":[],"body":"A red toadstool with pale spots. A small piece for the garden margin patterns."});

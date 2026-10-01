@@ -1,1 +1,0 @@
-heliaSearchData("d/sampler-rose",{"id":"sampler-rose","title":"Sampler rose","kind":"glyph-art","tags":["ornament","ornament-sampler"],"authors":["Steven Schaefer"],"venue":[],"date":null,"url":"sampler-rose.html","headings":[],"body":"A cross-stitch motif for the sampler margin pattern."});

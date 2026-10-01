@@ -1,1 +1,1 @@
-heliaSearchData("t/sl",{"slagel":[2014,128,93,32],"slater":[1898,128],"slattery":[270,128,3114,32,1,32],"slender":[362,1],"slightly":[1413,1,2457,1],"slone":[203,128,3230,32],"slot":[2842,1],"slower":[1458,1]});
+heliaSearchData("t/sl",{"slagel":[1964,128,93,32],"slater":[1848,128],"slattery":[270,128,3031,32,1,32],"slightly":[1363,1,2411,1],"slone":[203,128,3147,32],"slower":[1408,1]});

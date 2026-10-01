@@ -1,1 +1,1 @@
-heliaSearchData("t/ud",{"udacity":[3854,160],"uday":[3433,32,673,128]});
+heliaSearchData("t/ud",{"udacity":[3758,160],"uday":[3350,32,660,128]});

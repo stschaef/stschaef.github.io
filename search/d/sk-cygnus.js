@@ -1,1 +1,0 @@
-heliaSearchData("d/sk-cygnus",{"id":"sk-cygnus","title":"Cygnus (skeleton)","kind":"glyph-art","tags":["constellation","ornament"],"authors":["Steven Schaefer"],"venue":[],"date":null,"url":"sk-cygnus.html","headings":[],"body":"The star positions of a constellation: links(picture(sk-cygnus)) joins them into a figure."});

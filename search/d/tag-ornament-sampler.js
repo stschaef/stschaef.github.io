@@ -1,1 +1,0 @@
-heliaSearchData("d/tag-ornament-sampler",{"id":"tag-ornament-sampler","title":"ornament-sampler","kind":"tag","tags":[],"authors":[],"venue":[],"date":null,"url":"tag-ornament-sampler.html","headings":[],"body":""});

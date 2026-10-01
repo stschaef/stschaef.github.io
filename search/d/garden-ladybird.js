@@ -1,1 +1,0 @@
-heliaSearchData("d/garden-ladybird",{"id":"garden-ladybird","title":"Garden ladybird","kind":"glyph-art","tags":["ornament","ornament-garden"],"authors":["Steven Schaefer"],"venue":[],"date":null,"url":"garden-ladybird.html","headings":[],"body":"A ladybird. A small piece for the garden margin patterns."});

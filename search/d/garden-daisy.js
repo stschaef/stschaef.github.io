@@ -1,1 +1,0 @@
-heliaSearchData("d/garden-daisy",{"id":"garden-daisy","title":"Garden daisy","kind":"glyph-art","tags":["ornament","ornament-garden"],"authors":["Steven Schaefer"],"venue":[],"date":null,"url":"garden-daisy.html","headings":[],"body":"A daisy on its stalk. A small piece for the garden margin patterns."});

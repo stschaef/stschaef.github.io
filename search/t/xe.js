@@ -1,1 +1,1 @@
-heliaSearchData("t/xe",{"xerox":[4192,160]});
+heliaSearchData("t/xe",{"xerox":[4096,160]});

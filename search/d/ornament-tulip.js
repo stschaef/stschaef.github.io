@@ -1,1 +1,0 @@
-heliaSearchData("d/ornament-tulip",{"id":"ornament-tulip","title":"Masthead tulip","kind":"glyph-art","tags":["ornament","ornament-sampler"],"authors":["Steven Schaefer"],"venue":[],"date":null,"url":"ornament-tulip.html","headings":[],"body":"The tulip crowning the name on the home page (also a sampler motif)."});

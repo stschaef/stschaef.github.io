@@ -1,1 +1,0 @@
-heliaSearchData("d/tall-iris",{"id":"tall-iris","title":"Tall iris","kind":"glyph-art","tags":["flower","ornament","ornament-art"],"authors":["Steven Schaefer"],"venue":[],"date":null,"url":"tall-iris.html","headings":[],"body":"A tall bearded iris: purple standards over blue falls with golden beards, on a long stem among sword leaves."});
