@@ -1,1 +1,1 @@
-heliaSearchData("t/lu",{"luca":[318,32,241,128],"lucacardelli":[559,32],"ludwig":[560,160],"lumsdaine":[30,32,220,1,465,128],"luo":[10,32,551,32,418,128,4,128],"luosatbasedquantifiedsymmetric":[10,32,374,1],"lutz":[13,32,549,128],"lutzstrassburger":[562,32]});
+heliaSearchData("t/lu",{"luca":[326,32,244,128],"lucacardelli":[570,32],"ludwig":[571,160],"lumsdaine":[32,32,225,1,472,128],"luo":[10,32,562,32,424,128,4,128],"luosatbasedquantifiedsymmetric":[10,32,384,1],"lutz":[13,32,560,128],"lutzstrassburger":[573,32]});

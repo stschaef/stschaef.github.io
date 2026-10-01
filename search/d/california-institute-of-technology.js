@@ -1,0 +1,1 @@
+heliaSearchData("d/california-institute-of-technology",{"id":"california-institute-of-technology","title":"California Institute of Technology","kind":"institution","tags":[],"authors":[],"venue":[],"date":null,"url":"california-institute-of-technology.html","headings":[],"body":""});

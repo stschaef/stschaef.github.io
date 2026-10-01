@@ -1,1 +1,1 @@
-heliaSearchData("t/ft",{"ftsc":[325,160]});
+heliaSearchData("t/ft",{"ftsc":[333,160]});

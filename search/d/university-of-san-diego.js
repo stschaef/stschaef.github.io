@@ -1,0 +1,1 @@
+heliaSearchData("d/university-of-san-diego",{"id":"university-of-san-diego","title":"University of San Diego","kind":"institution","tags":[],"authors":[],"venue":[],"date":null,"url":"university-of-san-diego.html","headings":[],"body":""});

@@ -1,0 +1,1 @@
+heliaSearchData("d/university-of-alabama-at-birmingham",{"id":"university-of-alabama-at-birmingham","title":"University of Alabama at Birmingham","kind":"institution","tags":[],"authors":[],"venue":[],"date":null,"url":"university-of-alabama-at-birmingham.html","headings":[],"body":""});

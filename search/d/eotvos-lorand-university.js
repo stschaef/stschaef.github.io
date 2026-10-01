@@ -1,0 +1,1 @@
+heliaSearchData("d/eotvos-lorand-university",{"id":"eotvos-lorand-university","title":"Eötvös Loránd University","kind":"institution","tags":[],"authors":[],"venue":[],"date":null,"url":"eotvos-lorand-university.html","headings":[],"body":""});

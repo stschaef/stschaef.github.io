@@ -1,0 +1,1 @@
+heliaSearchData("d/guarded-derivatives-macros",{"id":"guarded-derivatives-macros","title":"Guarded Recursion and Derivative Macros","kind":"note","tags":[],"authors":[],"venue":[],"date":null,"url":"guarded-derivatives-macros.html","headings":[],"body":""});

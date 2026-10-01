@@ -1,1 +1,1 @@
-heliaSearchData("t/sq",{"square":[128,2,409,1,331,1],"squeeze":[371,1],"squinting":[913,1]});
+heliaSearchData("t/sq",{"square":[131,2,417,1,335,1],"squeeze":[379,1],"squinting":[928,1]});

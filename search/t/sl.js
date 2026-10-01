@@ -1,1 +1,1 @@
-heliaSearchData("t/sl",{"slater":[469,128],"slender":[93,1],"slightly":[361,1,561,1],"slot":[693,1],"slower":[371,1]});
+heliaSearchData("t/sl",{"slater":[480,128],"slender":[96,1],"slightly":[369,1,568,1],"slot":[707,1],"slower":[379,1]});

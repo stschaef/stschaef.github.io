@@ -202,8 +202,12 @@
   }
 
 
-  // A snippet around the first match: { text, hl: [[a, b], ...] } with
-  // code point offsets into text.
+  // One formula in a document body (U+FFFC; the formulas are the
+  // document's `math`, in order).
+  var MATH = "\uFFFC";
+
+  // A snippet around the first match: { text, hl: [[a, b], ...], start } with
+  // code point offsets into text; start is where it begins in body.
   function snippet(body, q, max) {
     var chars = Array.from(body || "");
     var n = chars.length;
@@ -242,7 +246,34 @@
       .map(function (t) {
         return [t.start - start + off, t.end - start + off];
       });
-    return { text: text, hl: hl };
+    return { text: text, hl: hl, start: start };
+  }
+
+  // A snippet as plain text (README "Snippets"): each formula becomes
+  // `$source$` from srcs, in order, with the highlights moved along.
+  function expandMath(text, hl, srcs) {
+    var chars = Array.from(text || "");
+    var at = [], out = "", n = 0, k = 0;
+    chars.forEach(function (c) {
+      at.push(n);
+      if (c === MATH && k < srcs.length) {
+        var e = "$" + srcs[k++] + "$";
+        n += Array.from(e).length;
+        out += e;
+      } else {
+        if (c === MATH) k++;
+        n += 1;
+        out += c;
+      }
+    });
+    at.push(n);
+    return { text: out, hl: hl.map(function (r) { return [at[r[0]], at[r[1]]]; }) };
+  }
+
+  function countMath(chars) {
+    var n = 0;
+    for (var i = 0; i < chars.length; i++) if (chars[i] === MATH) n++;
+    return n;
   }
 
   function fragmentEscape(s) {
@@ -579,6 +610,7 @@
           id: e[0], title: e[1], kind: e[2], tags: e[3], url: e[4], date: e[5],
           href: t ? t.href : e[4], score: y.score, heading: t ? t.heading : null,
           snippet: t && !why.length ? t.snippet : "", highlights: t && !why.length ? t.highlights : [],
+          math: t && !why.length ? t.math : [],
           titleHighlights: x.title, why: why, tagHits: x.tags,
         };
       });
@@ -626,6 +658,9 @@
     if (heading && heading.anchor) href += "#" + heading.anchor;
     else if (heading) href += "#:~:text=" + fragmentEscape(heading.text);
     var sn = snippet(d.body, q.words.length ? q : { words: [], prefix: false, filters: [] }, max);
+    // the formulas the snippet shows: [MathML or null, source] each
+    var before = countMath(Array.from(d.body || "").slice(0, sn.start));
+    var math = (d.math || []).slice(before, before + countMath(Array.from(sn.text)));
     return {
       id: d.id,
       title: d.title,
@@ -638,6 +673,7 @@
       heading: heading,
       snippet: sn.text,
       highlights: sn.hl,
+      math: math,
       titleHighlights: highlightsOf(d.title, q),
     };
   }
@@ -731,16 +767,51 @@
       return /^([a-z][a-z0-9+.-]*:|\/)/i.test(url) ? url : base + url;
     }
 
-    function marked(parent, text, hl) {
+    // A formula of a snippet: the page's MathML (the build's own `<math>`
+    // markup, as the page embeds it), shown inline; else its source.
+    function formula(f) {
+      var html = f && f[0];
+      if (html && /^<math[\s>]/.test(html) && doc.createElement) {
+        var tpl = doc.createElement("template");
+        tpl.innerHTML = html;
+        var m = tpl.content && tpl.content.firstElementChild;
+        if (m && m.localName === "math" && tpl.content.childNodes.length === 1) {
+          m.removeAttribute("display");
+          var span = el("span", "helia-search-math helia-mathml");
+          // a multi-line display (an aligned chain): its first line, then "…"
+          var rows = m.querySelectorAll ? m.querySelectorAll("mtable > mtr") : [];
+          for (var i = 1; i < rows.length; i++) rows[i].parentNode.removeChild(rows[i]);
+          span.appendChild(m);
+          if (rows.length > 1) span.appendChild(doc.createTextNode(" …"));
+          return span;
+        }
+      }
+      return el("code", "helia-search-math-src", f ? f[1] : "");
+    }
+
+    // Text into parent, each formula placeholder replaced from math.next().
+    function textInto(parent, str, math) {
+      var parts = str.split(MATH);
+      parts.forEach(function (p, i) {
+        if (i) parent.appendChild(formula(math ? math.next() : null));
+        if (p) parent.appendChild(doc.createTextNode(p));
+      });
+    }
+
+    function marked(parent, text, hl, formulas) {
       var chars = Array.from(text || "");
+      var k = 0;
+      var math = { next: function () { return (formulas || [])[k++] || null; } };
       var pos = 0;
       hl.forEach(function (r) {
         if (r[0] < pos) return;
-        if (r[0] > pos) parent.appendChild(doc.createTextNode(chars.slice(pos, r[0]).join("")));
-        parent.appendChild(el("mark", "helia-search-mark", chars.slice(r[0], r[1]).join("")));
+        if (r[0] > pos) textInto(parent, chars.slice(pos, r[0]).join(""), math);
+        var mk = el("mark", "helia-search-mark");
+        textInto(mk, chars.slice(r[0], r[1]).join(""), math);
+        parent.appendChild(mk);
         pos = r[1];
       });
-      if (pos < chars.length) parent.appendChild(doc.createTextNode(chars.slice(pos).join("")));
+      if (pos < chars.length) textInto(parent, chars.slice(pos).join(""), math);
     }
 
     function build() {
@@ -895,7 +966,7 @@
         }
         if (h.snippet) {
           var sn = el("span", "helia-search-snippet");
-          marked(sn, h.snippet, h.highlights);
+          marked(sn, h.snippet, h.highlights, h.math);
           a.appendChild(sn);
         }
         a.addEventListener("mouseenter", function () {
@@ -1027,6 +1098,7 @@
     parseQuery: parseQuery,
     fieldScore: fieldScore,
     snippet: snippet,
+    expandMath: expandMath,
     fileOf: fileOf,
     Engine: Engine,
     entryLine: entryLine,
