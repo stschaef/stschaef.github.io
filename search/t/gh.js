@@ -1,1 +1,1 @@
-heliaSearchData("t/gh",{"ghani":[52,32,597,128],"ghost":[511,128]});
+heliaSearchData("t/gh",{"ghani":[52,32,598,128],"ghost":[512,128]});

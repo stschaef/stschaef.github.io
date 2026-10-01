@@ -1,1 +1,1 @@
-heliaSearchData("t/mø",{"møgelberg":[145,32,628,128]});
+heliaSearchData("t/mø",{"møgelberg":[145,32,630,128]});

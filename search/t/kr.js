@@ -1,1 +1,1 @@
-heliaSearchData("t/kr",{"kraus":[50,32,619,128],"krebber":[330,32,11,32,169,32,1,32,276,128],"krishnaswami":[526,32,1,32,121,128],"kristian":[145,32,383,128],"kristianstovring":[528,32],"krzysztof":[33,32,496,128],"krzysztofkapulkin":[529,32]});
+heliaSearchData("t/kr",{"kraus":[50,32,620,128],"krebber":[331,32,11,32,169,32,1,32,277,128],"krishnaswami":[527,32,1,32,121,128],"kristian":[145,32,384,128],"kristianstovring":[529,32],"krzysztof":[33,32,497,128],"krzysztofkapulkin":[530,32]});

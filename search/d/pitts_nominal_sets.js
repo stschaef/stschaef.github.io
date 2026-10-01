@@ -1,0 +1,1 @@
+heliaSearchData("d/pitts_nominal_sets",{"id":"pitts_nominal_sets","title":"Nominal Sets: Names and Symmetry in Computer Science","kind":"note","tags":[],"authors":[],"venue":[],"date":null,"url":"pitts_nominal_sets.html","headings":[],"body":""});

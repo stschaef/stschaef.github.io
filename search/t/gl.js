@@ -1,1 +1,1 @@
-heliaSearchData("t/gl",{"gleb":[373,128,261,32],"glebmakarchuk":[373,32],"global":[324,130,60,2,2,2,178,1],"glossy":[111,1],"glueing":[423,160],"gluing":[4,128],"gluingfortypetheory":[4,32],"glyph":[374,160,1,160,326,2,6,5]});
+heliaSearchData("t/gl",{"gleb":[374,128,261,32],"glebmakarchuk":[374,32],"global":[325,130,60,2,2,2,178,1],"glossy":[111,1],"glueing":[424,160],"gluing":[4,128],"gluingfortypetheory":[4,32],"glyph":[375,160,1,160,326,2,6,5]});

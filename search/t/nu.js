@@ -1,1 +1,1 @@
-heliaSearchData("t/nu",{"nuance":[685,160],"nullability":[686,161],"nullable":[384,1,176,1,127,161],"number":[297,2,4,1,93,2,167,32],"numerical":[928,1],"nurnberg":[293,160],"nuyt":[71,128,319,32,509,32]});
+heliaSearchData("t/nu",{"nuance":[686,160],"nullability":[687,161],"nullable":[385,1,176,1,127,161],"number":[298,2,4,1,93,2,167,32],"numerical":[930,1],"nurnberg":[294,160],"nuyt":[71,128,320,32,510,32]});

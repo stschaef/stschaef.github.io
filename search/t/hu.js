@@ -1,1 +1,1 @@
-heliaSearchData("t/hu",{"huber":[4,32,846,128],"hull":[634,128],"human":[23,160],"hundred":[393,2]});
+heliaSearchData("t/hu",{"huber":[4,32,848,128],"hull":[635,128],"human":[23,160],"hundred":[394,2]});
