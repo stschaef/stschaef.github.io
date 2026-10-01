@@ -1,0 +1,1 @@
+heliaSearchData("d/levy-2003-callbypushvalue",{"id":"levy-2003-callbypushvalue","title":"Call-By-Push-Value: A Functional/Imperative Synthesis","kind":"reference","tags":[],"authors":["Paul Blain Levy"],"venue":[],"date":null,"url":"levy-2003-callbypushvalue.html","headings":[],"body":""});

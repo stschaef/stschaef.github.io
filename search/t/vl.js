@@ -1,1 +1,1 @@
-heliaSearchData("t/vl",{"vl":[175,32,324,32,310,32,5,32,1739,32,1470,128,210,32],"vlad":[510,32,3512,128],"vladimir":[4019,128,1,128,1,128],"vladimirdonchenko":[4019,32],"vladimirkolmogorov":[4020,32],"vladimirvapnik":[4021,32],"vladtsyrklevich":[4022,32],"vlhcc":[4023,32]});
+heliaSearchData("t/vl",{"vl":[175,32,324,32,310,32,5,32,1740,32,1471,128,210,32],"vlad":[510,32,3514,128],"vladimir":[4021,128,1,128,1,128],"vladimirdonchenko":[4021,32],"vladimirkolmogorov":[4022,32],"vladimirvapnik":[4023,32],"vladtsyrklevich":[4024,32],"vlhcc":[4025,32]});

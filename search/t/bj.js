@@ -1,1 +1,1 @@
-heliaSearchData("t/bj",{"bjørn":[1436,32,1250,128]});
+heliaSearchData("t/bj",{"bjørn":[1436,32,1251,128]});
