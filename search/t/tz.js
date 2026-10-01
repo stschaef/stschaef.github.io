@@ -1,1 +1,1 @@
-heliaSearchData("t/tz",{"tzu":[657,32,23,32,3069,128,1,128],"tzuchuntsai":[3749,32],"tzumaoli":[3750,32]});
+heliaSearchData("t/tz",{"tzu":[657,32,23,32,3065,128,1,128],"tzuchuntsai":[3745,32],"tzumaoli":[3746,32]});

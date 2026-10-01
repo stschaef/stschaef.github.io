@@ -1,1 +1,1 @@
-heliaSearchData("t/sz",{"szamozvancev":[999,128,226,32,227,32]});
+heliaSearchData("t/sz",{"szamozvancev":[999,128,226,32,225,32]});

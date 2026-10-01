@@ -1,1 +1,1 @@
-heliaSearchData("t/bø",{"bøving":[2234,32,518,128,672,32]});
+heliaSearchData("t/bø",{"bøving":[2232,32,518,128,670,32]});

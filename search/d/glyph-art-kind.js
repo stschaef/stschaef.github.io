@@ -1,1 +1,0 @@
-heliaSearchData("d/glyph-art-kind",{"id":"glyph-art-kind","title":"Glyph art kind","kind":"note","tags":[],"authors":["Steven Schaefer"],"venue":[],"date":null,"url":"glyph-art-kind.html","headings":[],"body":""});

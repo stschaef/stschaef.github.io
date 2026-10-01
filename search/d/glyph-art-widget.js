@@ -1,1 +1,0 @@
-heliaSearchData("d/glyph-art-widget",{"id":"glyph-art-widget","title":"Glyph art widget","kind":"widget","tags":[],"authors":["Steven Schaefer"],"venue":[],"date":null,"url":"glyph-art-widget.html","headings":[],"body":""});

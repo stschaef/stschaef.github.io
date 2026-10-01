@@ -1,1 +1,1 @@
-heliaSearchData("t/uz",{"uzi":[3967,128],"uziornan":[3967,32]});
+heliaSearchData("t/uz",{"uzi":[3963,128],"uziornan":[3963,32]});
