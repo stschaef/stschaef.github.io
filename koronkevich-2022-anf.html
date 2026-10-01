@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>ANF preserves dependent types up to extensional equality</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Ctext y=%22.9em%22 font-size=%2290%22%3E%F0%9F%8C%BB%3C/text%3E%3C/svg%3E">
+<meta name="generator" content="helia">
+<link rel="alternate" type="application/atom+xml" title="Steven Schaefer" href="feed.xml">
+<link rel="alternate" type="application/feed+json" title="Steven Schaefer" href="feed.json">
+<script src="helia/theme-version.js"></script>
+<script src="theme/folio-early.js"></script>
+<link rel="stylesheet" href="helia/theme.css">
+<link rel="stylesheet" href="helia/highlight.css">
+<link rel="stylesheet" href="helia/search.css">
+<link rel="stylesheet" href="theme/katex.css">
+<link rel="stylesheet" href="theme/recipe.css">
+<link rel="stylesheet" href="theme/site.css">
+<link rel="stylesheet" href="theme/folio.css">
+<script defer src="helia/runtime.js"></script>
+<script defer src="helia/search.js"></script>
+<script defer src="theme/glyphcraft.js"></script>
+<script defer src="theme/glyphart.js"></script>
+<script defer src="theme/glyphgen.js"></script>
+<script defer src="theme/ornament.js"></script>
+<script defer src="theme/folio.js"></script>
+<script defer src="theme/portrait.js"></script>
+<script type="application/json" id="helia-widgets">{"helia-cite-formats":"widgets/helia-cite-formats-a3294ac7.js"}</script>
+<link rel="modulepreload" href="widgets/helia-cite-formats-a3294ac7.js">
+<script type="module" src="widgets/runtime.js"></script>
+</head>
+<body>
+<nav class="helia-topbar"><a class="helia-home" href="home.html">Steven Schaefer</a><ul class="helia-nav-links"><li><a href="stevenschaefer.html">About Me</a></li><li><a href="research.html">Research</a></li><li><a href="new.html">New</a></li></ul><button type="button" class="helia-search-button" aria-label="Search (/ or Ctrl+K)" aria-haspopup="dialog"><span class="helia-search-icon">⌕</span><span class="helia-search-label">Search</span><kbd class="helia-search-key">/</kbd></button></nav>
+<div class="helia-page" data-kind="reference">
+<article class="helia-article">
+<header class="helia-header" data-entry="koronkevich-2022-anf" data-kind="reference">
+<h2 class="helia-heading"><span class="helia-taxon">Reference.</span> ANF preserves dependent types up to extensional equality</h2>
+<div class="helia-meta"><span class="helia-author"><a class="helia-entry-link" href="paulettekoronkevich.html" data-entry="paulettekoronkevich">Paulette Koronkevich</a>, <a class="helia-entry-link" href="ramonrakow.html" data-entry="ramonrakow">Ramon Rakow</a>, <a class="helia-entry-link" href="amalahmed.html" data-entry="amalahmed">Amal Ahmed</a>, <a class="helia-entry-link" href="williambowman.html" data-entry="williambowman">William J. Bowman</a></span> · <span class="helia-byline"><a class="helia-entry-link" href="jfp.html" data-entry="jfp">JFP</a> · 2022</span> · <span class="helia-tags"><span class="helia-tag" data-tag="compilation"><a class="helia-entry-link" href="tag-compilation.html" data-entry="tag-compilation">compilation</a></span></span> · <span class="helia-entry-links"><span class="helia-entry-link" data-field="pdf-url"><a class="helia-link helia-external" href="https://www.cambridge.org/core/services/aop-cambridge-core/content/view/73FC888A23E5E87BAE16B158ABE349C8/S0956796822000090a.pdf/div-class-title-anf-preserves-dependent-types-up-to-extensional-equality-div.pdf">PDF</a></span> · <span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1017/s0956796822000090">DOI</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/journals/jfp/KoronkevichRAB22">pldb</a></span></span></div>
+</header>
+<div class="helia-body">
+<div class="helia-abstract">Many programmers use dependently typed languages such as Coq to machine-verify high-assurance software. However, existing compilers for these languages provide no guarantees after compiling, nor when linking after compilation. Type-preserving compilers preserve guarantees encoded in types and then use type checking to verify compiled code and ensure safe linking with external code. Unfortunately, standard compiler passes do not preserve the dependent typing of commonly used (intensional) type theories. This is because assumptions valid in simpler type systems no longer hold, and intensional dependent type systems are highly sensitive to syntactic changes, including compilation. We develop an A-normal form (ANF) translation with join-point optimization—a standard translation for making control flow explicit in functional languages—from the Extended Calculus of Constructions (ECC) with dependent elimination of booleans and natural numbers (a representative subset of Coq). Our dependently typed target language has equality reflection, allowing the type system to encode semantic equality of terms. This is key to proving type preservation and correctness of separate compilation for this translation. This is the first ANF translation for dependent types. Unlike related translations, it supports the universe hierarchy, and does not rely on parametricity or impredicativity.</div>
+</div>
+<div class="helia-cite helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><h3 class="helia-heading">Cite</h3>
+</summary>
+<div class="helia-group-body">
+<div class="helia-widget" data-widget="helia-cite-formats" data-props="{&quot;key&quot;:&quot;koronkevich-2022-anf&quot;,&quot;bibtex&quot;:&quot;@article{koronkevich-2022-anf, title={ANF preserves dependent types up to extensional equality}, volume={32}, ISSN={1469-7653}, url={http://dx.doi.org/10.1017/s0956796822000090}, DOI={10.1017/s0956796822000090}, journal={Journal of Functional Programming}, publisher={Cambridge University Press (CUP)}, author={KORONKEVICH, PAULETTE and RAKOW, RAMON and AHMED, AMAL and BOWMAN, WILLIAM J.}, year={2022} }&quot;,&quot;bib-file&quot;:&quot;koronkevich-2022-anf.bib&quot;,&quot;hayagriva&quot;:&quot;koronkevich-2022-anf:\n  type: article\n  title: ANF preserves dependent types up to extensional equality\n  author:\n  - KORONKEVICH, PAULETTE\n  - RAKOW, RAMON\n  - AHMED, AMAL\n  - BOWMAN, WILLIAM J.\n  date: 2022\n  url: http://dx.doi.org/10.1017/s0956796822000090\n  serial-number:\n    doi: 10.1017/s0956796822000090\n    issn: 1469-7653\n  parent:\n    type: periodical\n    title: Journal of Functional Programming\n    publisher: Cambridge University Press (CUP)\n    volume: 32\n&quot;,&quot;yml-file&quot;:&quot;koronkevich-2022-anf.yml&quot;}"><div class="helia-cite-key" data-copy="@koronkevich-2022-anf" data-copy-label="citation key"><span class="helia-bib-key">Cite as</span> <code class="helia-raw-inline">@koronkevich-2022-anf</code> (helia, typst) · <code class="helia-raw-inline">\cite{koronkevich-2022-anf}</code> (LaTeX)</div>
+<div class="helia-cite-format helia-collapsible" data-format="bibtex" data-copy="true" data-copy-label="BibTeX">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">BibTeX</span></summary>
+<div class="helia-group-body">
+<details class="helia-code" open><summary class="helia-code-summary"><span class="helia-code-lang">bibtex</span> · <span class="helia-code-lines">1 line</span></summary><pre class="helia-raw"><code class="language-bibtex"><span class="hl-text hl-bibtex"><span class="hl-meta hl-entry hl-braces hl-bibtex"><span class="hl-keyword hl-other hl-entry-type hl-bibtex"><span class="hl-punctuation hl-definition hl-keyword hl-bibtex">@</span>article</span><span class="hl-punctuation hl-section hl-entry hl-begin hl-bibtex">{</span><span class="hl-entity hl-name hl-type hl-entry-key hl-bibtex">koronkevich-2022-anf</span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">title</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>ANF preserves dependent types up to extensional equality<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">volume</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>32<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">ISSN</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>1469-7653<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">url</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>http://dx.doi.org/10.1017/s0956796822000090<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">DOI</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>10.1017/s0956796822000090<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">journal</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>Journal of Functional Programming<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">publisher</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>Cambridge University Press (CUP)<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">author</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>KORONKEVICH, PAULETTE and RAKOW, RAMON and AHMED, AMAL and BOWMAN, WILLIAM J.<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">year</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>2022<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span> </span><span class="hl-punctuation hl-section hl-entry hl-end hl-bibtex">}</span></span></span></code></pre></details>
+</div>
+</details>
+</div>
+<div class="helia-cite-format helia-collapsible" data-format="hayagriva" data-copy="true" data-copy-label="hayagriva YAML">
+<details>
+<summary class="helia-group-summary"><span class="helia-group-title">hayagriva YAML (typst)</span></summary>
+<div class="helia-group-body">
+<details class="helia-code" open><summary class="helia-code-summary"><span class="helia-code-lang">yaml</span> · <span class="helia-code-lines">18 lines</span></summary><pre class="helia-raw"><code class="language-yaml"><span class="hl-source hl-yaml"><span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">koronkevich-2022-anf</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">type</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">article</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">title</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">ANF preserves dependent types up to extensional equality</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">author</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">KORONKEVICH, PAULETTE</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">RAKOW, RAMON</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">AHMED, AMAL</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">BOWMAN, WILLIAM J.</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">date</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-constant hl-numeric hl-integer hl-decimal hl-yaml">2022</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">url</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">http://dx.doi.org/10.1017/s0956796822000090</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">serial-number</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">doi</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">10.1017/s0956796822000090</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">issn</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">1469-7653</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">parent</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">type</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">periodical</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">title</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Journal of Functional Programming</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">publisher</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Cambridge University Press (CUP)</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">volume</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-constant hl-numeric hl-integer hl-decimal hl-yaml">32</span>
+</span></code></pre></details>
+</div>
+</details>
+</div>
+<div class="helia-cite-files">Download: <a class="helia-link" href="koronkevich-2022-anf.bib">koronkevich-2022-anf.bib</a> · <a class="helia-link" href="koronkevich-2022-anf.yml">koronkevich-2022-anf.yml</a></div>
+</div>
+</div>
+</details>
+</div>
+<div class="helia-reference-cited-by helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">Cited by (1)</span></summary>
+<div class="helia-group-body">
+<section class="helia-transclusion" data-entry="seo-2024-correctly" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="seo-2024-correctly"><span class="helia-title">Correctly Compiling Proofs About Programs Without Proving Compilers Correct</span>&nbsp;<a class="helia-slug" href="seo-2024-correctly.html">seo-2024-correctly</a><span class="helia-byline"><span class="helia-entry-link" data-entry="itp">ITP</span> · 2024</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="seo-2024-correctly" data-kind="reference">
+<div class="helia-abstract">Guaranteeing correct compilation is nearly synonymous with compiler verification. However, the correctness guarantees for certified compilers and translation validation can be stronger than we need. While many compilers do have incorrect behavior, even when a compiler bug occurs it may not change the program’s behavior meaningfully with respect to its specification. Many real-world specifications are necessarily partial in that they do not completely specify all of a program’s behavior. While compiler verification and formal methods have had great success for safety-critical systems, there are magnitudes more code, such as math libraries, compiled with incorrect compilers, that would benefit from a guarantee of its partial specification. This paper explores a technique to get guarantees about compiled programs even in the presence of an unverified, or even incorrect, compiler. Our workflow compiles programs, specifications, and proof objects, from an embedded source language and logic to an embedded target language and logic. We implement two simple imperative languages, each with its own Hoare-style program logic, and a system for instantiating proof compilers out of compilers between these two languages that fulfill certain equational conditions in Coq. We instantiate our system on four compilers: one that is incomplete, two that are incorrect, and one that is correct but unverified. We use these instances to compile Hoare proofs for several programs, and we are able to leverage compiled proofs to assist in proofs of larger programs. Our proof compiler system is formally proven sound in Coq. We demonstrate how our approach enables strong target program guarantees even in the presence of incorrect compilation, opening up new options for which proof burdens one might shoulder instead of, or in addition to, compiler correctness.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.4230/lipics.itp.2024.33">DOI</a></span></div>
+</div>
+</div>
+</details>
+</section>
+</div>
+</details>
+</div>
+<div class="helia-reference-cites helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">Cites 68 works (0 here)</span></summary>
+<div class="helia-group-body">
+<div class="helia-reference-cites-away helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">External (68)</span></summary>
+<div class="helia-group-body">
+<ul>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3495528">Gradualizing the calculus of inductive constructions</a> (2022)</li>
+<li>An Analysis of An Analysis of Girard’s Paradox (2021)</li>
+<li>Practical sized typing for coq (2020)</li>
+<li><a class="helia-link helia-external" href="https://arxiv.org/abs/2010.08261">Relating functional and imperative session types</a> (2020)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3371126">The fire triangle: how to mix substitution, dependent elimination, and effects</a> (2019)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3341643">Compiling with continuations, or without? whatever</a> (2019)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3236764">Handling delimited continuations with dependent types</a> (2018)</li>
+<li>Parametric Closure Conversion for CIC (2018)</li>
+<li>Shifting and resetting in the calculus of constructions (2018)</li>
+<li>Syntax and Semantics of Cedille (2018)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-662-54434-1_29">A Classical Sequent Calculus with Dependent Types</a> (2017)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3062341.3062347">FunTAL: reasonably mixing a functional language with assembly</a> (2017)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3062341.3062380">Compiling without continuations</a> (2017)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3018610.3018620">The next 700 syntactical models of type theory</a> (2017)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3158110">Type-preserving CPS translation of Σ and Π types is not not possible</a> (2017)</li>
+<li><a class="helia-link helia-external" href="https://arxiv.org/abs/1710.02594">Fibred Computational Effects</a> (2017)</li>
+<li>CertiCoq: A verified compiler for Coq (2017)</li>
+<li>A parametric CPS to sprinkle CIC with classical reasoning (2017)</li>
+<li><a class="helia-link helia-external" href="https://arxiv.org/abs/1710.03912">Consistency of the predicative calculus of cumulative inductive constructions (pCuIC)</a> (2017)</li>
+<li><a class="helia-link helia-external" href="https://arxiv.org/abs/1706.07997">In Search of Effectful Dependent Types</a> (2017)</li>
+<li>CertiKOS: An extensible architecture for building certified concurrent OS kernels (2016)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/2676726.2676975">Deep Specifications and Certified Abstraction Layers</a> (2015)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.4230/lipics.snapl.2015.15">Verified Compilers for a Multi-language World</a> (2015)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/2676726.2676985">Compositional CompCert</a> (2015)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/2701415">Verification of a cryptographic primitive: SHA</a> (2015)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-642-54833-8_8">Verifying an Open Compiler Using Multi-language Semantics</a> (2014)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.7551/mitpress/9153.001.0001">Certified Programming with Dependent Types - A Pragmatic Introduction to the Coq Proof Assistant</a> (2013)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1109/lics.2012.47">A Constructive Proof of Dependent Choice, Compatible with Classical Logic</a> (2012)</li>
+<li>A relaxation of Coq’s guard condition (2012)</li>
+<li>Call-By-Push-Value (2012)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/2034773.2034830">An equivalence-preserving CPS translation via multi-language semantics</a> (2011)</li>
+<li>An Equivalence-Preserving CPS Translation via Multi-Language Semantics (Technical Appendix) (2011)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/1480881.1480894">Formal certification of code-based cryptographic proofs</a> (2009)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/s10817-009-9155-4">A formally verified compiler back-end</a> (2009)</li>
+<li>On a few open problems of the calculus of inductive constructions and on their practical consequences (2009)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/1375581.1375604">Type-preserving compilation for large-scale optimizing object-oriented compilers</a> (2008)</li>
+<li>Minimizing Code Defects to Improve Software Quality and Lower Development Costs (2008)</li>
+<li>Un environnement pour la programmation avec types dépendants (PhD thesis) (2008)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/1250734.1250742">A certified type-preserving compiler from lambda calculus to assembly language</a> (2007)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/1291151.1291179">Compiling with continuations, continued</a> (2007)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/1053468.1053469">A type system for certified binaries</a> (2005)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/11541868_18">Extensionality in the Calculus of Constructions</a> (2005)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/11562931_29">Small Proof Witnesses for LF</a> (2005)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/11417170_16">On the Degeneracy of Sigma-Types in Presence of Computational Classical Logic</a> (2005)</li>
+<li>Error Cost Escalation through the Project Life Cycle (2004)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/604131.604144">From control effects to typed continuation passing</a> (2003)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-540-24849-1_23">A concurrent logical framework: The propositional fragment</a> (2003)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/503032.503043">CPS translating inductive and coinductive types</a> (2002)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/507635.507657">A dependently typed assembly language</a> (2001)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/360204.360216">Oracle-based checking of untrusted software</a> (2001)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/319301.319345">From system F to typed assembly language</a> (1999)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1016/s1571-0661(05)80280-4">Monads, effects and transformations</a> (1999)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1016/s1571-0661(04)80013-6">Bisimilarity as a theory of functional programming</a> (1999)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1023/a:1010000206149">CPS translations and applications: The cube and beyond</a> (1999)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/289423.289435">Compiling standard ML to Java bytecodes</a> (1998)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/289423.289460">Implementing typed intermediate languages</a> (1998)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1017/cbo9780511526619.007">Operationally-Based Theories of Program Equivalence</a> (1997)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/263699.263712">Proof-carrying code</a> (1997)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/267959.269968">A reflection on call-by-value</a> (1997)</li>
+<li>An Overview of the FLINT/ML Compiler (1997)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/3-540-61055-3_27">Compiling Haskell by Program Transformation: A Report from the Trenches</a> (1996)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/231379.231414">TIL: a type-directed optimizing compiler for ML</a> (1996)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/3-540-58140-5_30">Pure Type Systems with Definitions</a> (1994)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/155090.155113">The essence of compiling with continuations</a> (1993)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/141471.141563">Reasoning about programs in continuation-Passing style</a> (1992)</li>
+<li>An Extended Calculus of Constructions (1990)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1016/0890-5401(88)90005-3">The calculus of constructions</a> (1988)</li>
+<li>Formal Structures for Computation and Deduction (1986)</li>
+</ul>
+</div>
+</details>
+</div>
+</div>
+</details>
+</div>
+</article>
+<div class="helia-identity"><span class="helia-id">koronkevich-2022-anf</span> <span class="helia-kind">reference</span> <span class="helia-path">entries/refs/koronkevich-2022-anf/koronkevich-2022-anf.hel</span></div>
+</div>
+</body>
+</html>

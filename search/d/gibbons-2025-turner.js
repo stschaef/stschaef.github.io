@@ -1,0 +1,1 @@
+heliaSearchData("d/gibbons-2025-turner",{"id":"gibbons-2025-turner","title":"Turner, Bird, Eratosthenes: An eternal burning thread","kind":"reference","tags":["program-calculation"],"authors":["Jeremy Gibbons"],"venue":["JFP","Journal of Functional Programming"],"date":null,"url":"gibbons-2025-turner.html","headings":[],"body":""});

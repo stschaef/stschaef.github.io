@@ -1,0 +1,1 @@
+heliaSearchData("d/lutfikeremsenel",{"id":"lutfikeremsenel","title":"Lütfi Kerem Şenel","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"lutfikeremsenel.html","headings":[],"body":""});

@@ -1,1 +1,1 @@
-heliaSearchData("t/vl",{"vl":[973,128],"vlhcc":[973,32]});
+heliaSearchData("t/vl",{"vl":[175,32,353,32,310,32,5,32,1762,32,1518,128,210,32],"vlad":[539,32,3583,128],"vladimir":[4119,128,1,128,1,128],"vladimirdonchenko":[4119,32],"vladimirkolmogorov":[4120,32],"vladimirvapnik":[4121,32],"vladtsyrklevich":[4122,32],"vlhcc":[4123,32]});

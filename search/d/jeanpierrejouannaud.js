@@ -1,0 +1,1 @@
+heliaSearchData("d/jeanpierrejouannaud",{"id":"jeanpierrejouannaud","title":"Jean-Pierre Jouannaud","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"jeanpierrejouannaud.html","headings":[],"body":""});

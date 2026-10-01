@@ -1,0 +1,1 @@
+heliaSearchData("d/gibbons-2006-unbounded",{"id":"gibbons-2006-unbounded","title":"Unbounded Spigot Algorithms for the Digits of Pi","kind":"reference","tags":["program-calculation"],"authors":["Jeremy Gibbons"],"venue":["Amer. Math. Monthly","The American Mathematical Monthly"],"date":null,"url":"gibbons-2006-unbounded.html","headings":[],"body":""});

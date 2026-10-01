@@ -1,0 +1,1 @@
+heliaSearchData("d/comfort-2020-sheet",{"id":"comfort-2020-sheet","title":"Sheet diagrams for bimonoidal categories","kind":"reference","tags":["string-diagrams"],"authors":["Antonin Delpeuch","Cole Comfort","Jules Hedges"],"venue":["arXiv"],"date":null,"url":"comfort-2020-sheet.html","headings":[],"body":""});

@@ -1,0 +1,1 @@
+heliaSearchData("d/california-polytechnic-state-university",{"id":"california-polytechnic-state-university","title":"California Polytechnic State University","kind":"institution","tags":[],"authors":[],"venue":[],"date":null,"url":"california-polytechnic-state-university.html","headings":[],"body":""});

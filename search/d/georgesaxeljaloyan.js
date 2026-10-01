@@ -1,0 +1,1 @@
+heliaSearchData("d/georgesaxeljaloyan",{"id":"georgesaxeljaloyan","title":"Georges-Axel Jaloyan","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"georgesaxeljaloyan.html","headings":[],"body":""});

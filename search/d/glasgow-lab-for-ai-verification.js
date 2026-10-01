@@ -1,0 +1,1 @@
+heliaSearchData("d/glasgow-lab-for-ai-verification",{"id":"glasgow-lab-for-ai-verification","title":"Glasgow Lab for AI Verification","kind":"institution","tags":[],"authors":[],"venue":[],"date":null,"url":"glasgow-lab-for-ai-verification.html","headings":[],"body":""});

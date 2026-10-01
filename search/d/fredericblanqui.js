@@ -1,0 +1,1 @@
+heliaSearchData("d/fredericblanqui",{"id":"fredericblanqui","title":"Frédéric Blanqui","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"fredericblanqui.html","headings":[],"body":""});

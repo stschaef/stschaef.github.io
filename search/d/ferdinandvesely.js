@@ -1,0 +1,1 @@
+heliaSearchData("d/ferdinandvesely",{"id":"ferdinandvesely","title":"Ferdinand Vesely","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"ferdinandvesely.html","headings":[],"body":""});

@@ -1,0 +1,1 @@
+heliaSearchData("d/choudhury-2020-recovering",{"id":"choudhury-2020-recovering","title":"Recovering purity with comonads and capabilities","kind":"reference","tags":["effects"],"authors":["Neel Krishnaswami","Vikraman Choudhury"],"venue":["ICFP","International Conference on Functional Programming"],"date":null,"url":"choudhury-2020-recovering.html","headings":[],"body":""});

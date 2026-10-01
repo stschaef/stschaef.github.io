@@ -1,0 +1,1 @@
+heliaSearchData("d/angiuli-2018-meaning",{"id":"angiuli-2018-meaning","title":"Meaning explanations at higher dimension","kind":"reference","tags":["cubical"],"authors":["Carlo Angiuli","Robert Harper"],"venue":["Indagationes Mathematicae"],"date":null,"url":"angiuli-2018-meaning.html","headings":[],"body":""});

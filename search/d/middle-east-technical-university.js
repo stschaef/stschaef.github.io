@@ -1,0 +1,1 @@
+heliaSearchData("d/middle-east-technical-university",{"id":"middle-east-technical-university","title":"Middle East Technical University","kind":"institution","tags":[],"authors":[],"venue":[],"date":null,"url":"middle-east-technical-university.html","headings":[],"body":""});

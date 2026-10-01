@@ -1,0 +1,1 @@
+heliaSearchData("d/imt-atlantique",{"id":"imt-atlantique","title":"IMT Atlantique","kind":"institution","tags":[],"authors":[],"venue":[],"date":null,"url":"imt-atlantique.html","headings":[],"body":""});

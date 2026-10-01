@@ -1,0 +1,1 @@
+heliaSearchData("d/jordanpettyjohn",{"id":"jordanpettyjohn","title":"Jordan Pettyjohn","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"jordanpettyjohn.html","headings":[],"body":""});

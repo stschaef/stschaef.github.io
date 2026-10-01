@@ -1,0 +1,1 @@
+heliaSearchData("d/jadelkhaleqghalayini",{"id":"jadelkhaleqghalayini","title":"Jad Elkhaleq Ghalayini","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"jadelkhaleqghalayini.html","headings":[],"body":""});

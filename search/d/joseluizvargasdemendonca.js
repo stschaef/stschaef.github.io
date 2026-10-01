@@ -1,0 +1,1 @@
+heliaSearchData("d/joseluizvargasdemendonca",{"id":"joseluizvargasdemendonca","title":"José Luiz Vargas de Mendonça","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"joseluizvargasdemendonca.html","headings":[],"body":""});

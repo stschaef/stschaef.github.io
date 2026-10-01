@@ -1,0 +1,1 @@
+heliaSearchData("d/institut-de-mecanique-et-d-ingenierie-de-bordeaux",{"id":"institut-de-mecanique-et-d-ingenierie-de-bordeaux","title":"Institut de Mécanique et d’Ingénierie de Bordeaux","kind":"institution","tags":[],"authors":[],"venue":[],"date":null,"url":"institut-de-mecanique-et-d-ingenierie-de-bordeaux.html","headings":[],"body":""});

@@ -1,0 +1,1 @@
+heliaSearchData("d/bond-2023-curbing",{"id":"bond-2023-curbing","title":"Curbing the Vulnerable Parser: Graded Modal Guardrails for Secure Input Handling","kind":"reference","tags":["parsing","security"],"authors":["Eric Bond","Matthew Heimerdinger"],"venue":["IEEE SecDev","IEEE Secure Development Conference"],"date":null,"url":"bond-2023-curbing.html","headings":[],"body":""});

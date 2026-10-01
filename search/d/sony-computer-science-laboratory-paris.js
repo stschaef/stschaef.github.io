@@ -1,0 +1,1 @@
+heliaSearchData("d/sony-computer-science-laboratory-paris",{"id":"sony-computer-science-laboratory-paris","title":"Sony Computer Science Laboratory – Paris","kind":"institution","tags":[],"authors":[],"venue":[],"date":null,"url":"sony-computer-science-laboratory-paris.html","headings":[],"body":""});

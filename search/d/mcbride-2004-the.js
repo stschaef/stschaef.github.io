@@ -1,0 +1,1 @@
+heliaSearchData("d/mcbride-2004-the",{"id":"mcbride-2004-the","title":"The view from the left","kind":"reference","tags":["type-theory"],"authors":["Conor McBride","James McKinna"],"venue":["JFP","Journal of Functional Programming"],"date":null,"url":"mcbride-2004-the.html","headings":[],"body":""});

@@ -1,0 +1,1 @@
+heliaSearchData("d/tag-eilenberg-moore",{"id":"tag-eilenberg-moore","title":"eilenberg-moore","kind":"tag","tags":[],"authors":[],"venue":[],"date":null,"url":"tag-eilenberg-moore.html","headings":[],"body":""});

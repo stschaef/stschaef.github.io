@@ -1,0 +1,1 @@
+heliaSearchData("d/aleksandrafoksinska",{"id":"aleksandrafoksinska","title":"Aleksandra Foksinska","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"aleksandrafoksinska.html","headings":[],"body":""});

@@ -1,0 +1,1 @@
+heliaSearchData("d/filipsieczkowski",{"id":"filipsieczkowski","title":"Filip Sieczkowski","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"filipsieczkowski.html","headings":[],"body":""});

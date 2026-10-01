@@ -1,0 +1,1 @@
+heliaSearchData("d/reynaldaffeldt",{"id":"reynaldaffeldt","title":"Reynald Affeldt","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"reynaldaffeldt.html","headings":[],"body":""});

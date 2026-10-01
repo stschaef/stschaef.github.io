@@ -1,0 +1,1 @@
+heliaSearchData("d/frontier-ai-taskforce-uk-government",{"id":"frontier-ai-taskforce-uk-government","title":"Frontier AI Taskforce (UK Government)","kind":"institution","tags":[],"authors":[],"venue":[],"date":null,"url":"frontier-ai-taskforce-uk-government.html","headings":[],"body":""});

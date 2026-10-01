@@ -1,0 +1,1 @@
+heliaSearchData("d/pfenning-1988-higher",{"id":"pfenning-1988-higher","title":"Higher-order abstract syntax","kind":"reference","tags":["abstract-syntax"],"authors":["Conal Elliott","Frank Pfenning"],"venue":["PLDI","Conference on Programming Language Design and Implementation"],"date":null,"url":"pfenning-1988-higher.html","headings":[],"body":""});

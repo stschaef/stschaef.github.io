@@ -1,0 +1,1 @@
+heliaSearchData("d/gratzer-2022-a",{"id":"gratzer-2022-a","title":"A Stratified Approach to Löb Induction","kind":"reference","tags":["guarded-domain-theory","guarded-recursion","modal-type-theory"],"authors":["Daniel Gratzer","Lars Birkedal"],"venue":["FSCD","Formal Structures for Computation and Deduction"],"date":null,"url":"gratzer-2022-a.html","headings":[],"body":""});

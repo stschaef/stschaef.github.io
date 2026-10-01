@@ -1,0 +1,1 @@
+heliaSearchData("d/michaelarntzenius",{"id":"michaelarntzenius","title":"Michael Arntzenius","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"michaelarntzenius.html","headings":[],"body":""});

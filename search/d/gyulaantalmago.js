@@ -1,0 +1,1 @@
+heliaSearchData("d/gyulaantalmago",{"id":"gyulaantalmago","title":"Gyula Antal Mago","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"gyulaantalmago.html","headings":[],"body":""});

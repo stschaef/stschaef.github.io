@@ -1,0 +1,1 @@
+heliaSearchData("d/bodini-2025-asymptotic",{"id":"bodini-2025-asymptotic","title":"Asymptotic distribution of parameters in trivalent maps and linear lambda terms","kind":"reference","tags":["linear-logic"],"authors":["Alexandros Singh","Noam Zeilberger","Olivier Bodini"],"venue":["Combinatorial Theory"],"date":null,"url":"bodini-2025-asymptotic.html","headings":[],"body":""});

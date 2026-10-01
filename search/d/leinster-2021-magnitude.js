@@ -1,0 +1,1 @@
+heliaSearchData("d/leinster-2021-magnitude",{"id":"leinster-2021-magnitude","title":"Magnitude homology of enriched categories and metric spaces","kind":"reference","tags":["category-theory"],"authors":["Michael Shulman","Tom Leinster"],"venue":["Algebraic & Geometric Topology"],"date":null,"url":"leinster-2021-magnitude.html","headings":[],"body":""});

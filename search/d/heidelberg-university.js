@@ -1,0 +1,1 @@
+heliaSearchData("d/heidelberg-university",{"id":"heidelberg-university","title":"Heidelberg University","kind":"institution","tags":[],"authors":[],"venue":[],"date":null,"url":"heidelberg-university.html","headings":[],"body":""});

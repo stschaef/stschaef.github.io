@@ -1,0 +1,1 @@
+heliaSearchData("d/andersalnormathiasen",{"id":"andersalnormathiasen","title":"Anders Alnor Mathiasen","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"andersalnormathiasen.html","headings":[],"body":""});

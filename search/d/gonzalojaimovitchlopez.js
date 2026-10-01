@@ -1,0 +1,1 @@
+heliaSearchData("d/gonzalojaimovitchlopez",{"id":"gonzalojaimovitchlopez","title":"Gonzalo Jaimovitch-López","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"gonzalojaimovitchlopez.html","headings":[],"body":""});

@@ -1,0 +1,1 @@
+heliaSearchData("d/tag-human-computer-interaction",{"id":"tag-human-computer-interaction","title":"human-computer-interaction","kind":"tag","tags":[],"authors":[],"venue":[],"date":null,"url":"tag-human-computer-interaction.html","headings":[],"body":""});

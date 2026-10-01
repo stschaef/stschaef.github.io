@@ -1,0 +1,1 @@
+heliaSearchData("d/smith-2022-what",{"id":"smith-2022-what","title":"What Lies Beneath—A Survey of Affective Theory Use in Computational Models of Emotion","kind":"reference","tags":[],"authors":["Geneva M. Smith","Jacques Carette"],"venue":["IEEE Transactions on Affective Computing"],"date":null,"url":"smith-2022-what.html","headings":[],"body":""});

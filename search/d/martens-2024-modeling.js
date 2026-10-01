@@ -1,0 +1,1 @@
+heliaSearchData("d/martens-2024-modeling",{"id":"martens-2024-modeling","title":"Modeling Game Mechanics With Ceptre","kind":"reference","tags":["game-design","logic-programming"],"authors":["Alexander Card","Asha Khatri","Chris Martens","Henry Crain"],"venue":["IEEE Transactions on Games"],"date":null,"url":"martens-2024-modeling.html","headings":[],"body":""});

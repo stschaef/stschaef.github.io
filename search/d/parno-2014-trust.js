@@ -1,0 +1,1 @@
+heliaSearchData("d/parno-2014-trust",{"id":"parno-2014-trust","title":"Trust Extension as a Mechanism for Secure Code Execution on Commodity Computers","kind":"reference","tags":["security"],"authors":["Bryan Parno"],"venue":["ACM Books"],"date":null,"url":"parno-2014-trust.html","headings":[],"body":""});

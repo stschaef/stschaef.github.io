@@ -1,0 +1,1 @@
+heliaSearchData("d/dabral-2022-exploring",{"id":"dabral-2022-exploring","title":"Exploring Consequences of Privacy Policies with Narrative Generation via Answer Set Programming","kind":"reference","tags":["logic-programming"],"authors":["Chinmaya Dabral","Chris Martens","Emma Tosch"],"venue":["arXiv"],"date":null,"url":"dabral-2022-exploring.html","headings":[],"body":""});

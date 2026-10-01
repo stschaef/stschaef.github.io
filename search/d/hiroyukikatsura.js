@@ -1,0 +1,1 @@
+heliaSearchData("d/hiroyukikatsura",{"id":"hiroyukikatsura","title":"Hiroyuki Katsura","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"hiroyukikatsura.html","headings":[],"body":""});

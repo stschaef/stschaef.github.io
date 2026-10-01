@@ -1,0 +1,1 @@
+heliaSearchData("d/petermichalski",{"id":"petermichalski","title":"Peter Michalski","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"petermichalski.html","headings":[],"body":""});

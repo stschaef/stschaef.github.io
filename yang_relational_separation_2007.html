@@ -7,6 +7,8 @@
 <title>Relational separation logic</title>
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Ctext y=%22.9em%22 font-size=%2290%22%3E%F0%9F%8C%BB%3C/text%3E%3C/svg%3E">
 <meta name="generator" content="helia">
+<link rel="alternate" type="application/atom+xml" title="Steven Schaefer" href="feed.xml">
+<link rel="alternate" type="application/feed+json" title="Steven Schaefer" href="feed.json">
 <script src="helia/theme-version.js"></script>
 <script src="theme/folio-early.js"></script>
 <link rel="stylesheet" href="helia/theme.css">
@@ -34,7 +36,7 @@
 <article class="helia-article">
 <header class="helia-header" data-entry="yang_relational_separation_2007" data-kind="reference">
 <h2 class="helia-heading"><span class="helia-taxon">Reference.</span> Relational separation logic</h2>
-<div class="helia-meta"><span class="helia-author"><a class="helia-entry-link" href="hongseokyang.html" data-entry="hongseokyang">Hongseok Yang</a></span> · <span class="helia-byline"><a class="helia-entry-link" href="tcs.html" data-entry="tcs">TCS</a> · 2007</span> · <span class="helia-tags"><span class="helia-tag" data-tag="separation-logic"><span class="helia-entry-link helia-unavailable">separation-logic</span></span></span></div>
+<div class="helia-meta"><span class="helia-author"><a class="helia-entry-link" href="hongseokyang.html" data-entry="hongseokyang">Hongseok Yang</a></span> · <span class="helia-byline"><a class="helia-entry-link" href="tcs.html" data-entry="tcs">TCS</a> · 2007</span> · <span class="helia-tags"><span class="helia-tag" data-tag="separation-logic"><a class="helia-entry-link" href="tag-separation-logic.html" data-entry="tag-separation-logic">separation-logic</a></span></span></div>
 </header>
 <div class="helia-body">
 </div>
@@ -88,7 +90,7 @@
 </div>
 <div class="helia-reference-cited-by helia-collapsible">
 <details open>
-<summary class="helia-group-summary"><span class="helia-group-title">Cited by (5)</span></summary>
+<summary class="helia-group-summary"><span class="helia-group-title">Cited by (6)</span></summary>
 <div class="helia-group-body">
 <section class="helia-transclusion" data-entry="leroy_pottier_relsep_2026" data-depth="1">
 <details>
@@ -110,7 +112,18 @@
 <p>This work describes our implementation of the tail modulo constructor (TMC) transformation in the OCaml compiler, an optimization that provides stack-efficiency for a larger class of functions — tail-recursive modulo constructors — which includes in particular the natural definition of List.map and many similar recursive data-constructing functions.</p>
 <p>We prove the correctness of this program transformation in a simplified setting — a small untyped calculus — that captures the salient aspects of the OCaml implementation. Our proof is mechanized in the Coq proof assistant, using the Iris base logic. An independent contribution of our work is an extension of the Simuliris approach to define simulation relations that support different calling conventions. To our knowledge, this is the first use of Simuliris to prove the correctness of a compiler transformation.</p>
 </div>
-<div class="helia-entry-links"><span class="helia-entry-link" data-field="url"><a class="helia-link helia-external" href="http://cambium.inria.fr/~fpottier/publis/tmc-popl2025.pdf">Web</a></span></div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="pdf-url"><a class="helia-link helia-external" href="https://arxiv.org/pdf/2411.19397">PDF</a></span> · <span class="helia-entry-link" data-field="url"><a class="helia-link helia-external" href="http://cambium.inria.fr/~fpottier/publis/tmc-popl2025.pdf">Web</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/journals/pacmpl/AllainBCPS25">pldb</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="timany-2024-a" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="timany-2024-a"><span class="helia-title">A Logical Approach to Type Soundness</span>&nbsp;<a class="helia-slug" href="timany-2024-a.html">timany-2024-a</a><span class="helia-byline"><span class="helia-entry-link" data-entry="jacm">JACM</span> · 2024</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="timany-2024-a" data-kind="reference">
+<div class="helia-abstract">Type soundness, which asserts that “well-typed programs cannot go wrong,” is widely viewed as the canonical theorem one must prove to establish that a type system is doing its job. It is commonly proved using the so-called syntactic approach (also known as progress and preservation ), which has had a huge impact on the study and teaching of programming language foundations. Unfortunately, syntactic type soundness is a rather weak theorem. It only applies to programs that are well typed in their entirety and thus tells us nothing about the many programs written in “safe” languages that make use of “unsafe” language features. Even worse, it tells us nothing about whether type systems achieve one of their main goals: enforcement of data abstraction. One can easily define a language that enjoys syntactic type soundness and yet fails to support even the most basic modular reasoning principles for abstraction mechanisms like closures, objects, and abstract data types. Given these concerns, we argue that programming languages researchers should no longer be satisfied with proving syntactic type soundness and should instead start proving semantic type soundness , a more useful theorem that captures more accurately what type systems are actually good for. Semantic type soundness is an old idea—Milner’s original account of type soundness from 1978 was semantic—but it fell out of favor in the 1990s due to limitations and complexities of denotational models. In the succeeding decades, thanks to a series of technical advances—notably, step-indexed Kripke logical relations constructed over operational semantics and higher-order concurrent separation logic as consolidated in the Iris framework in Coq—we can now build (machine-checked) semantic soundness proofs at a much higher level of abstraction than was previously possible. The resulting “logical” approach to semantic type soundness has already been employed to great effect in a number of recent papers, but those papers typically (a) concern advanced problem scenarios that complicate the presentation, (b) assume significant prior knowledge of the reader, and (c) suppress many details of the proofs. Here, we aim to provide a gentler, more pedagogically motivated introduction to logical type soundness, targeted at a broader audience that may or may not be familiar with logical relations and Iris. As a bonus, we also show how logical type soundness proofs can easily be generalized to establish an even stronger relational property— representation independence —for realistic type systems.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/3676954">DOI</a></span></div>
 </div>
 </div>
 </details>
@@ -124,7 +137,7 @@
 <p>Today’s compilers employ a variety of non-trivial optimizations to achieve good performance. One key trick compilers use to justify transformations of concurrent programs is to assume that the source program has no data races: if it does, they cause the program to have undefined behavior (UB) and give the compiler free rein. However, verifying correctness of optimizations that exploit this assumption is a non-trivial problem. In particular, prior work either has not proven that such optimizations preserve program termination (particularly non-obvious when considering optimizations that move instructions out of loop bodies), or has treated all synchronization operations as external functions (losing the ability to reorder instructions around them).</p>
 <p>In this work we present Simuliris, the first simulation technique to establish termination preservation (under a fair scheduler) for a range of concurrent program transformations that exploit UB in the source language. Simuliris is based on the idea of using ownership to reason modularly about the assumptions the compiler makes about programs with well-defined behavior. This brings the benefits of concurrent separation logics to the space of verifying program transformations: we can combine powerful reasoning techniques such as framing and coinduction to perform thread-local proofs of non-trivial concurrent program optimizations. Simuliris is built on a (non-step-indexed) variant of the Coq-based Iris framework, and is thus not tied to a particular language. In addition to demonstrating the effectiveness of Simuliris on standard compiler optimizations involving data race UB, we also instantiate it with Jung et al.’s Stacked Borrows semantics for Rust and generalize their proofs of interesting type-based aliasing optimizations to account for concurrency.</p>
 </div>
-<div class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/3498689">DOI</a></span></div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="pdf-url"><a class="helia-link helia-external" href="https://dl.acm.org/doi/pdf/10.1145/3498689">PDF</a></span> · <span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/3498689">DOI</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/journals/pacmpl/GaherSSJDKKD22">pldb</a></span></div>
 </div>
 </div>
 </details>
@@ -146,7 +159,7 @@
 <div class="helia-transclusion-body">
 <div class="helia-reference" data-entry="tassarotti_jung_harper_2017" data-kind="reference">
 <div class="helia-abstract">Compiler correctness proofs for higher-order concurrent languages are difficult: they involve establishing a termination-preserving refinement between a concurrent high-level source language and an implementation that uses low-level shared memory primitives. However, existing logics for proving concurrent refinement either neglect properties such as termination, or only handle first-order state. In this paper, we address these limitations by extending Iris, a recent higher-order concurrent separation logic, with support for reasoning about termination-preserving refinements. To demonstrate the power of these extensions, we prove the correctness of an efficient implementation of a higher-order, session-typed language. To our knowledge, this is the first program logic capable of giving a compiler correctness proof for such a language. The soundness of our extensions and our compiler correctness proof have been mechanized in Coq.</div>
-<div class="helia-entry-links"><span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/1701.05888">arXiv</a></span></div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/1701.05888">arXiv</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/conf/esop/TassarottiJ017">pldb</a></span></div>
 </div>
 </div>
 </details>
@@ -168,6 +181,7 @@
 <div class="helia-transclusion-body">
 <div class="helia-reference" data-entry="benton_relational_2004" data-kind="reference">
 <div class="helia-abstract">We show how some classical static analyses for imperative programs, and the optimizing transformations which they enable, may be expressed and proved correct using elementary logical and denotational techniques. The key ingredients are an interpretation of program properties as relations, rather than predicates, and a realization that although many program analyses are traditionally formulated in very intensional terms, the associated transformations are actually enabled by more liberal extensional properties. We illustrate our approach with formal systems for analysing and transforming while-programs. The first is a simple type system which tracks constancy and dependency information and can be used to perform dead-code elimination, constant propagation and program slicing as well as capturing a form of secure information flow. The second is a relational version of Hoare logic, which significantly generalizes our first type system and can also justify optimizations including hoisting loop invariants. Finally we show how a simple available expression analysis and redundancy elimination transformation may be justified by translation into relational Hoare logic.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="pdf-url"><a class="helia-link helia-external" href="https://dl.acm.org/doi/pdf/10.1145/964001.964003">PDF</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/conf/popl/Benton04">pldb</a></span></div>
 </div>
 </div>
 </details>
@@ -189,7 +203,7 @@
 <div class="helia-transclusion-body">
 <div class="helia-reference" data-entry="ishtiaq_ohearn_bi_2001" data-kind="reference">
 <div class="helia-abstract">Reynolds has developed a logic for reasoning about mutable data structures in which the pre- and postconditions are written in an intuitionistic logic enriched with a spatial form of conjunction. We investigate the approach from the point of view of the logic BI of bunched implications of O’Hearn and Pym. We begin by giving a model in which the law of the excluded middle holds, thus showing that the approach is compatible with classical logic. The relationship between the intuitionistic and classical versions of the system is established by a translation, analogous to a translation from intuitionistic logic into the modal logic S4. We also consider the question of completeness of the axioms. BI’s spatial implication is used to express weakest preconditions for object-component assignments, and an axiom for allocating a cons cell is shown to be complete under an interpretation of triples that allows a command to be applied to states with dangling pointers. We make this latter a feature, by incorporating an operation, and axiom, for disposing of memory. Finally, we describe a local character enjoyed by specifications in the logic, and show how this enables a class of frame axioms, which say what parts of the heap don’t change, to be inferred automatically.</div>
-<div class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/360204.375719">DOI</a></span></div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="pdf-url"><a class="helia-link helia-external" href="https://dl.acm.org/doi/pdf/10.1145/360204.375719">PDF</a></span> · <span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/360204.375719">DOI</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/conf/popl/IshtiaqO01">pldb</a></span></div>
 </div>
 </div>
 </details>

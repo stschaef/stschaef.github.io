@@ -1,0 +1,1 @@
+heliaSearchData("d/yitzhakmandelbaum",{"id":"yitzhakmandelbaum","title":"Yitzhak Mandelbaum","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"yitzhakmandelbaum.html","headings":[],"body":""});

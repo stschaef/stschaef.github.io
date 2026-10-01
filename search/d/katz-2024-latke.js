@@ -1,0 +1,1 @@
+heliaSearchData("d/katz-2024-latke",{"id":"katz-2024-latke","title":"LATKE: A Framework for Constructing Identity-Binding PAKEs","kind":"reference","tags":["security"],"authors":["Jonathan Katz","Michael Rosenberg"],"venue":["CRYPTO","International Cryptology Conference"],"date":null,"url":"katz-2024-latke.html","headings":[],"body":""});

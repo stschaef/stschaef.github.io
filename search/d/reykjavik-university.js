@@ -1,0 +1,1 @@
+heliaSearchData("d/reykjavik-university",{"id":"reykjavik-university","title":"Reykjavík University","kind":"institution","tags":[],"authors":[],"venue":[],"date":null,"url":"reykjavik-university.html","headings":[],"body":""});

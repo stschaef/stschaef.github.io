@@ -1,0 +1,1 @@
+heliaSearchData("d/university-college-dublin",{"id":"university-college-dublin","title":"University College Dublin","kind":"institution","tags":[],"authors":[],"venue":[],"date":null,"url":"university-college-dublin.html","headings":[],"body":""});

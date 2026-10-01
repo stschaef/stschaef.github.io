@@ -1,0 +1,1 @@
+heliaSearchData("d/germankruszewski",{"id":"germankruszewski","title":"Germán Kruszewski","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"germankruszewski.html","headings":[],"body":""});

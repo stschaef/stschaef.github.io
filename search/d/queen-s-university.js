@@ -1,0 +1,1 @@
+heliaSearchData("d/queen-s-university",{"id":"queen-s-university","title":"Queen’s University","kind":"institution","tags":[],"authors":[],"venue":[],"date":null,"url":"queen-s-university.html","headings":[],"body":""});

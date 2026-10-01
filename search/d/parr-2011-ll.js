@@ -1,0 +1,1 @@
+heliaSearchData("d/parr-2011-ll",{"id":"parr-2011-ll","title":"LL(*): the foundation of the ANTLR parser generator","kind":"reference","tags":["parsing"],"authors":["Kathleen Fisher","Terence Parr"],"venue":["PLDI","Conference on Programming Language Design and Implementation"],"date":null,"url":"parr-2011-ll.html","headings":[],"body":""});

@@ -1,0 +1,1 @@
+heliaSearchData("d/danielmckenzie",{"id":"danielmckenzie","title":"Daniel McKenzie","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"danielmckenzie.html","headings":[],"body":""});

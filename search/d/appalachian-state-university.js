@@ -1,0 +1,1 @@
+heliaSearchData("d/appalachian-state-university",{"id":"appalachian-state-university","title":"Appalachian State University","kind":"institution","tags":[],"authors":[],"venue":[],"date":null,"url":"appalachian-state-university.html","headings":[],"body":""});

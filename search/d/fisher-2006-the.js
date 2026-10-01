@@ -1,0 +1,1 @@
+heliaSearchData("d/fisher-2006-the",{"id":"fisher-2006-the","title":"The next 700 data description languages","kind":"reference","tags":["parsing"],"authors":["David Walker","Kathleen Fisher","Yitzhak Mandelbaum"],"venue":["POPL","Symposium on Principles of Programming Languages"],"date":null,"url":"fisher-2006-the.html","headings":[],"body":""});

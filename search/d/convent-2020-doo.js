@@ -1,0 +1,1 @@
+heliaSearchData("d/convent-2020-doo",{"id":"convent-2020-doo","title":"Doo bee doo bee doo","kind":"reference","tags":["effects"],"authors":["Conor McBride","Craig McLaughlin","Lukas Convent","Sam Lindley"],"venue":["JFP","Journal of Functional Programming"],"date":null,"url":"convent-2020-doo.html","headings":[],"body":""});

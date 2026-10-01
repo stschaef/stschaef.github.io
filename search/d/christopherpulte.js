@@ -1,0 +1,1 @@
+heliaSearchData("d/christopherpulte",{"id":"christopherpulte","title":"Christopher Pulte","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"christopherpulte.html","headings":[],"body":""});

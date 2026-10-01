@@ -1,0 +1,1 @@
+heliaSearchData("d/gibbons-2022-breadth",{"id":"gibbons-2022-breadth","title":"Breadth-First Traversal via Staging","kind":"reference","tags":["program-calculation"],"authors":["Donnacha Oisín Kidney","Jeremy Gibbons","Nicolas Wu","Tom Schrijvers"],"venue":["MPC","Mathematics of Program Construction"],"date":null,"url":"gibbons-2022-breadth.html","headings":[],"body":""});

@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>Incremental Bidirectional Typing via Order Maintenance</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Ctext y=%22.9em%22 font-size=%2290%22%3E%F0%9F%8C%BB%3C/text%3E%3C/svg%3E">
+<meta name="generator" content="helia">
+<link rel="alternate" type="application/atom+xml" title="Steven Schaefer" href="feed.xml">
+<link rel="alternate" type="application/feed+json" title="Steven Schaefer" href="feed.json">
+<script src="helia/theme-version.js"></script>
+<script src="theme/folio-early.js"></script>
+<link rel="stylesheet" href="helia/theme.css">
+<link rel="stylesheet" href="helia/highlight.css">
+<link rel="stylesheet" href="helia/search.css">
+<link rel="stylesheet" href="theme/katex.css">
+<link rel="stylesheet" href="theme/recipe.css">
+<link rel="stylesheet" href="theme/site.css">
+<link rel="stylesheet" href="theme/folio.css">
+<script defer src="helia/runtime.js"></script>
+<script defer src="helia/search.js"></script>
+<script defer src="theme/glyphcraft.js"></script>
+<script defer src="theme/glyphart.js"></script>
+<script defer src="theme/glyphgen.js"></script>
+<script defer src="theme/ornament.js"></script>
+<script defer src="theme/folio.js"></script>
+<script defer src="theme/portrait.js"></script>
+<script type="application/json" id="helia-widgets">{"helia-cite-formats":"widgets/helia-cite-formats-a3294ac7.js"}</script>
+<link rel="modulepreload" href="widgets/helia-cite-formats-a3294ac7.js">
+<script type="module" src="widgets/runtime.js"></script>
+</head>
+<body>
+<nav class="helia-topbar"><a class="helia-home" href="home.html">Steven Schaefer</a><ul class="helia-nav-links"><li><a href="stevenschaefer.html">About Me</a></li><li><a href="research.html">Research</a></li><li><a href="new.html">New</a></li></ul><button type="button" class="helia-search-button" aria-label="Search (/ or Ctrl+K)" aria-haspopup="dialog"><span class="helia-search-icon">⌕</span><span class="helia-search-label">Search</span><kbd class="helia-search-key">/</kbd></button></nav>
+<div class="helia-page" data-kind="reference">
+<article class="helia-article">
+<header class="helia-header" data-entry="porter-2025-incremental" data-kind="reference">
+<h2 class="helia-heading"><span class="helia-taxon">Reference.</span> Incremental Bidirectional Typing via Order Maintenance</h2>
+<div class="helia-meta"><span class="helia-author"><a class="helia-entry-link" href="thomasporter.html" data-entry="thomasporter">Thomas Porter</a>, <a class="helia-entry-link" href="marisakirisame.html" data-entry="marisakirisame">Marisa Kirisame</a>, <a class="helia-entry-link" href="ivanwei.html" data-entry="ivanwei">Ivan Wei</a>, <a class="helia-entry-link" href="pavelpanchekha.html" data-entry="pavelpanchekha">Pavel Panchekha</a>, <a class="helia-entry-link" href="cyrusomar.html" data-entry="cyrusomar">Cyrus Omar</a></span> · <span class="helia-byline"><a class="helia-entry-link" href="oopsla.html" data-entry="oopsla">OOPSLA</a> · 2025</span> · <span class="helia-tags"><span class="helia-tag" data-tag="bidirectional-typing"><a class="helia-entry-link" href="tag-bidirectional-typing.html" data-entry="tag-bidirectional-typing">bidirectional-typing</a></span> <span class="helia-tag" data-tag="live-programming"><a class="helia-entry-link" href="tag-live-programming.html" data-entry="tag-live-programming">live-programming</a></span></span> · <span class="helia-entry-links"><span class="helia-entry-link" data-field="pdf-url"><a class="helia-link helia-external" href="https://dl.acm.org/doi/pdf/10.1145/3763117">PDF</a></span> · <span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/3763117">DOI</a></span> · <span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/2504.08946">arXiv</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/journals/pacmpl/PorterKWPO25">pldb</a></span></span></div>
+</header>
+<div class="helia-body">
+<div class="helia-abstract">Live programming environments provide various semantic services, including type checking and evaluation, continuously as the user is editing the program. The live paradigm promises to improve the developer experience, but liveness is an implementation challenge, particularly when working with large programs. This paper specifies and efficiently implements a system that is able to incrementally update type information for a live program in response to fine-grained program edits. This information includes type error marks and information about the expected and actual type of every expression. The system is specified type-theoretically as a small-step dynamics that propagates updates through the marked and annotated program. Most updates flow according to a base bidirectional type system. Additional pointers are maintained to connect bound variables to their binding locations, with type updates traversing these pointers directly. Order maintenance data structures are employed to efficiently maintain these pointers and to prioritize the order of update propagation. We prove this system is equivalent to naive reanalysis in the Agda theorem prover, along with other important metatheoretic properties. We then provide an efficient OCaml implementation, detailing a number of impactful optimizations. We evaluate this implementation’s performance with a large stress-test and find that it is able to achieve multiple orders of magnitude speed-up compared to from-scratch reanalysis.</div>
+</div>
+<div class="helia-cite helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><h3 class="helia-heading">Cite</h3>
+</summary>
+<div class="helia-group-body">
+<div class="helia-widget" data-widget="helia-cite-formats" data-props="{&quot;key&quot;:&quot;porter-2025-incremental&quot;,&quot;bibtex&quot;:&quot;@article{porter-2025-incremental, title={Incremental Bidirectional Typing via Order Maintenance}, volume={9}, ISSN={2475-1421}, url={http://dx.doi.org/10.1145/3763117}, DOI={10.1145/3763117}, number={OOPSLA2}, journal={Proceedings of the ACM on Programming Languages}, publisher={Association for Computing Machinery (ACM)}, author={Porter, Thomas J. and Kirisame, Marisa and Wei, Ivan and Panchekha, Pavel and Omar, Cyrus}, year={2025}, month=Oct, pages={1865–1892} }&quot;,&quot;bib-file&quot;:&quot;porter-2025-incremental.bib&quot;,&quot;hayagriva&quot;:&quot;porter-2025-incremental:\n  type: article\n  title: Incremental Bidirectional Typing via Order Maintenance\n  author:\n  - Porter, Thomas J.\n  - Kirisame, Marisa\n  - Wei, Ivan\n  - Panchekha, Pavel\n  - Omar, Cyrus\n  date: 2025-10\n  page-range: 1865-1892\n  url: http://dx.doi.org/10.1145/3763117\n  serial-number:\n    doi: 10.1145/3763117\n    issn: 2475-1421\n  parent:\n    type: periodical\n    title: Proceedings of the ACM on Programming Languages\n    publisher: Association for Computing Machinery (ACM)\n    issue: OOPSLA2\n    volume: 9\n&quot;,&quot;yml-file&quot;:&quot;porter-2025-incremental.yml&quot;}"><div class="helia-cite-key" data-copy="@porter-2025-incremental" data-copy-label="citation key"><span class="helia-bib-key">Cite as</span> <code class="helia-raw-inline">@porter-2025-incremental</code> (helia, typst) · <code class="helia-raw-inline">\cite{porter-2025-incremental}</code> (LaTeX)</div>
+<div class="helia-cite-format helia-collapsible" data-format="bibtex" data-copy="true" data-copy-label="BibTeX">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">BibTeX</span></summary>
+<div class="helia-group-body">
+<details class="helia-code" open><summary class="helia-code-summary"><span class="helia-code-lang">bibtex</span> · <span class="helia-code-lines">1 line</span></summary><pre class="helia-raw"><code class="language-bibtex"><span class="hl-text hl-bibtex"><span class="hl-meta hl-entry hl-braces hl-bibtex"><span class="hl-keyword hl-other hl-entry-type hl-bibtex"><span class="hl-punctuation hl-definition hl-keyword hl-bibtex">@</span>article</span><span class="hl-punctuation hl-section hl-entry hl-begin hl-bibtex">{</span><span class="hl-entity hl-name hl-type hl-entry-key hl-bibtex">porter-2025-incremental</span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">title</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>Incremental Bidirectional Typing via Order Maintenance<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">volume</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>9<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">ISSN</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>2475-1421<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">url</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>http://dx.doi.org/10.1145/3763117<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">DOI</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>10.1145/3763117<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">number</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>OOPSLA2<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">journal</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>Proceedings of the ACM on Programming Languages<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">publisher</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>Association for Computing Machinery (ACM)<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">author</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>Porter, Thomas J. and Kirisame, Marisa and Wei, Ivan and Panchekha, Pavel and Omar, Cyrus<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">year</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>2025<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">month</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span>Oct</span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">pages</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>1865–1892<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span> </span><span class="hl-punctuation hl-section hl-entry hl-end hl-bibtex">}</span></span></span></code></pre></details>
+</div>
+</details>
+</div>
+<div class="helia-cite-format helia-collapsible" data-format="hayagriva" data-copy="true" data-copy-label="hayagriva YAML">
+<details>
+<summary class="helia-group-summary"><span class="helia-group-title">hayagriva YAML (typst)</span></summary>
+<div class="helia-group-body">
+<details class="helia-code" open><summary class="helia-code-summary"><span class="helia-code-lang">yaml</span> · <span class="helia-code-lines">21 lines</span></summary><pre class="helia-raw"><code class="language-yaml"><span class="hl-source hl-yaml"><span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">porter-2025-incremental</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">type</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">article</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">title</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Incremental Bidirectional Typing via Order Maintenance</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">author</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Porter, Thomas J.</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Kirisame, Marisa</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Wei, Ivan</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Panchekha, Pavel</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Omar, Cyrus</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">date</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">2025-10</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">page-range</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">1865-1892</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">url</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">http://dx.doi.org/10.1145/3763117</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">serial-number</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">doi</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">10.1145/3763117</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">issn</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">2475-1421</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">parent</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">type</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">periodical</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">title</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Proceedings of the ACM on Programming Languages</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">publisher</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Association for Computing Machinery (ACM)</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">issue</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">OOPSLA2</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">volume</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-constant hl-numeric hl-integer hl-decimal hl-yaml">9</span>
+</span></code></pre></details>
+</div>
+</details>
+</div>
+<div class="helia-cite-files">Download: <a class="helia-link" href="porter-2025-incremental.bib">porter-2025-incremental.bib</a> · <a class="helia-link" href="porter-2025-incremental.yml">porter-2025-incremental.yml</a></div>
+</div>
+</div>
+</details>
+</div>
+<div class="helia-reference-cites helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">Cites 48 works (3 here)</span></summary>
+<div class="helia-group-body">
+<div class="helia-reference-cites-here helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">With notes (3)</span></summary>
+<div class="helia-group-body">
+<section class="helia-transclusion" data-entry="zhao-2024-total" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="zhao-2024-total"><span class="helia-title">Total Type Error Localization and Recovery with Holes</span>&nbsp;<a class="helia-slug" href="zhao-2024-total.html">zhao-2024-total</a><span class="helia-byline"><span class="helia-entry-link" data-entry="popl">POPL</span> · 2024</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="zhao-2024-total" data-kind="reference">
+<div class="helia-abstract">Type systems typically only define the conditions under which an expression is well-typed, leaving ill-typed expressions formally meaningless. This approach is insufficient as the basis for language servers driving modern programming environments, which are expected to recover from simultaneously localized errors and continue to provide a variety of downstream semantic services. This paper addresses this problem, contributing the first comprehensive formal account of total type error localization and recovery: the marked lambda calculus. In particular, we define a gradual type system for expressions with marked errors, which operate as non-empty holes, together with a total procedure for marking arbitrary unmarked expressions. We mechanize the metatheory of the marked lambda calculus in Agda and implement it, scaled up, as the new basis for Hazel, a full-scale live functional programming environment with, uniquely, no meaningless editor states. The marked lambda calculus is bidirectionally typed, so localization decisions are systematically predictable based on a local flow of typing information. Constraint-based type inference can bring more distant information to bear in discovering inconsistencies but this notoriously complicates error localization. We approach this problem by deploying constraint solving as a type-hole-filling layer atop this gradual bidirectionally typed core. Errors arising from inconsistent unification constraints are localized exclusively to type and expression holes, i.e., the system identifies unfillable holes using a system of traced provenances, rather than localized in an ad hoc manner to particular expressions. The user can then interactively shift these errors to particular downstream expressions by selecting from suggested partially consistent type hole fillings, which returns control back to the bidirectional system. We implement this type hole inference system in Hazel.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="pdf-url"><a class="helia-link helia-external" href="https://dl.acm.org/doi/pdf/10.1145/3632910">PDF</a></span> · <span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/3632910">DOI</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/journals/pacmpl/ZhaoMDBPO24">pldb</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="dunfield-2021-bidirectional" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="dunfield-2021-bidirectional"><span class="helia-title">Bidirectional Typing</span>&nbsp;<a class="helia-slug" href="dunfield-2021-bidirectional.html">dunfield-2021-bidirectional</a><span class="helia-byline"><span class="helia-entry-link" data-entry="acm-computing-surveys">ACM Computing Surveys</span> · 2021</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="dunfield-2021-bidirectional" data-kind="reference">
+<div class="helia-abstract">Bidirectional typing combines two modes of typing: type checking, which checks that a program satisfies a known type, and type synthesis, which determines a type from the program. Using checking enables bidirectional typing to support features for which inference is undecidable; using synthesis enables bidirectional typing to avoid the large annotation burden of explicitly typed languages. In addition, bidirectional typing improves error locality. We highlight the design principles that underlie bidirectional type systems, survey the development of bidirectional typing from the prehistoric period before Pierce and Turner’s local type inference to the present day, and provide guidance for future investigations.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/3450952">DOI</a></span> · <span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/1908.05839">arXiv</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="omar-2017-hazelnut" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="omar-2017-hazelnut"><span class="helia-title">Hazelnut: a bidirectionally typed structure editor calculus</span>&nbsp;<a class="helia-slug" href="omar-2017-hazelnut.html">omar-2017-hazelnut</a><span class="helia-byline"><span class="helia-entry-link" data-entry="popl">POPL</span> · 2017</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="omar-2017-hazelnut" data-kind="reference">
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="pdf-url"><a class="helia-link helia-external" href="http://dl.acm.org/ft_gateway.cfm?id=3009900&amp;type=pdf">PDF</a></span> · <span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/3009837.3009900">DOI</a></span> · <span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/1607.04180">arXiv</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/conf/popl/OmarVHAH17">pldb</a></span></div>
+</div>
+</div>
+</details>
+</section>
+</div>
+</details>
+</div>
+<div class="helia-reference-cites-away helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">External (45)</span></summary>
+<div class="helia-group-body">
+<ul>
+<li><a class="helia-link helia-external" href="https://doi.org/10.5281/zenodo.16922160">Artifact for Incremental Bidirectional Typing via Order Maintenance</a> (2025)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.4230/lipics.ecoop.2025.28">Reusing Caches and Invariants for Efficient and Sound Incremental Static Analysis</a> (2025)</li>
+<li><a class="helia-link helia-external" href="https://arxiv.org/abs/2411.10659">Spineless Traversal for Layout Invalidation</a> (2025)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3635800.3637447">Incremental Computation: What Is the Essence? (Invited Contribution)</a> (2024)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3704864">Pantograph: A Fluid and Typed Structure Editor</a> (2024)</li>
+<li>Toward a Live, Rich, Composable, and Collaborative Planetary Compute Engine (2024)</li>
+<li><a class="helia-link helia-external" href="https://arxiv.org/abs/2303.04501">A Case for Planetary Computing</a> (2023)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3511430.3511451">IR Mapping: Intermediate Representation (IR) based Mapping to facilitate Incremental Static Analysis</a> (2022)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3479394.3479415">Towards Elastic Incrementalization for Datalog</a> (2021)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3428195">A systematic approach to deriving incremental type checkers</a> (2020)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-030-41103-9_5">Incremental Abstract Interpretation</a> (2020)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-030-20652-9_7">Using Standard Typing Algorithms Incrementally</a> (2019)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3236774">Build systems à la carte</a> (2018)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.4230/lipics.snapl.2017.11">Toward Semantic Foundations for Program Editors</a> (2017)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-319-66706-5_22">Incremental Analysis for Probabilistic Programs</a> (2017)</li>
+<li>Incrementalizing Abstract Interpretation (2017)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/2970276.2970298">IncA: a DSL for the definition of incremental program analyses</a> (2016)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/2814270.2814277">A co-contextual formulation of type rules and its application to incremental type checking</a> (2015)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/2814270.2814305">Incremental computation with names</a> (2015)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1109/icse.2015.79">Compositional Symbolic Execution with Memoized Replay</a> (2015)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.4230/lipics.snapl.2015.274">Refined Criteria for Gradual Typing</a> (2015)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/2594291.2594324">Adapton: composable, demand-driven incremental computation</a> (2014)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-642-54804-8_9">Efficient Incremental Static Analysis Using Path Abstraction</a> (2014)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/2629536">Directed Incremental Symbolic Execution</a> (2014)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/2491411.2501854">Scalable and incremental software bug detection</a> (2013)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-319-02654-1_15">A Language Independent Task Engine for Incremental Name and Type Analysis</a> (2013)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1109/icse.2013.6606713">Memoise: A tool for memoized symbolic execution</a> (2013)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/2338965.2336771">Memoized symbolic execution</a> (2012)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.4230/lipics.rta.2011.345">Type Preservation as a Confluence Problem</a> (2011)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/1868358.1868363">The Scratch Programming Language and Environment</a> (2010)</li>
+<li>How browsers work (2010)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-540-71316-6_29">A Rewriting Semantics for Type Inference</a> (2007)</li>
+<li>Gradual Typing for Functional Languages (2006)</li>
+<li>Self-adjusting computation (PhD thesis, Carnegie Mellon University) (2005)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/503272.503296">Adaptive functional programming</a> (2002)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/3-540-45749-6_17">Two Simplified Algorithms for Maintaining Order in a List</a> (2002)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/345099.345100">Local type inference</a> (2000)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/253262.253266">Meaningful change detection in structured data</a> (1997)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/158511.158710">A categorized bibliography on incremental computation</a> (1993)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/3540543961_19">Incremental polymorphism</a> (1991)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/75277.75305">Incremental computation via function caching</a> (1989)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/567067.567092">Incremental polymorphic type checking in B</a> (1983)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/800070.802184">Maintaining order in a linked list</a> (1982)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/567532.567544">Incremental evaluation for attribute grammars with application to syntax-directed editors</a> (1981)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/358746.358755">The Cornell program synthesizer: a syntax-directed programming environment</a> (1981)</li>
+</ul>
+</div>
+</details>
+</div>
+</div>
+</details>
+</div>
+<footer class="helia-footer">
+<div class="helia-related helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><h3 class="helia-heading">Related</h3>
+</summary>
+<div class="helia-group-body">
+<ul>
+<li><a class="helia-entry-link" href="adams-2025-grove.html" data-entry="adams-2025-grove">Grove: A Bidirectionally Typed Collaborative Structure Editor Calculus</a> <span class="helia-related-tags"><a class="helia-entry-link" href="tag-bidirectional-typing.html" data-entry="tag-bidirectional-typing">#bidirectional-typing</a> <a class="helia-entry-link" href="tag-live-programming.html" data-entry="tag-live-programming">#live-programming</a></span></li>
+</ul>
+</div>
+</details>
+</div>
+</footer>
+</article>
+<div class="helia-identity"><span class="helia-id">porter-2025-incremental</span> <span class="helia-kind">reference</span> <span class="helia-path">entries/refs/porter-2025-incremental/porter-2025-incremental.hel</span></div>
+</div>
+</body>
+</html>

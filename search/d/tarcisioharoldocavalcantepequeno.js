@@ -1,0 +1,1 @@
+heliaSearchData("d/tarcisioharoldocavalcantepequeno",{"id":"tarcisioharoldocavalcantepequeno","title":"Tarcísio Haroldo Cavalcante Pequeno","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"tarcisioharoldocavalcantepequeno.html","headings":[],"body":""});

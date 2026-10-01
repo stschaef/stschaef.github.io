@@ -1,0 +1,1 @@
+heliaSearchData("d/tag-synthetic-tait-computability",{"id":"tag-synthetic-tait-computability","title":"synthetic-tait-computability","kind":"tag","tags":[],"authors":[],"venue":[],"date":null,"url":"tag-synthetic-tait-computability.html","headings":[],"body":""});

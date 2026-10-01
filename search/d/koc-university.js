@@ -1,0 +1,1 @@
+heliaSearchData("d/koc-university",{"id":"koc-university","title":"Koç University","kind":"institution","tags":[],"authors":[],"venue":[],"date":null,"url":"koc-university.html","headings":[],"body":""});

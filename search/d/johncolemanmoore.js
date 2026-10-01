@@ -1,0 +1,1 @@
+heliaSearchData("d/johncolemanmoore",{"id":"johncolemanmoore","title":"John Coleman Moore","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"johncolemanmoore.html","headings":[],"body":""});

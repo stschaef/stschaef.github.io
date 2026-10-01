@@ -1,0 +1,1 @@
+heliaSearchData("d/hiroshiisozaki",{"id":"hiroshiisozaki","title":"Hiroshi Isozaki","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"hiroshiisozaki.html","headings":[],"body":""});

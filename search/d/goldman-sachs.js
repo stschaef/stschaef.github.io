@@ -1,0 +1,1 @@
+heliaSearchData("d/goldman-sachs",{"id":"goldman-sachs","title":"Goldman Sachs","kind":"institution","tags":[],"authors":[],"venue":[],"date":null,"url":"goldman-sachs.html","headings":[],"body":""});

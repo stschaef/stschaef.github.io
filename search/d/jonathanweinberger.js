@@ -1,0 +1,1 @@
+heliaSearchData("d/jonathanweinberger",{"id":"jonathanweinberger","title":"Jonathan Weinberger","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"jonathanweinberger.html","headings":[],"body":""});

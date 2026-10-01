@@ -1,0 +1,1 @@
+heliaSearchData("d/universidad-de-valladolid",{"id":"universidad-de-valladolid","title":"Universidad de Valladolid","kind":"institution","tags":[],"authors":[],"venue":[],"date":null,"url":"universidad-de-valladolid.html","headings":[],"body":""});

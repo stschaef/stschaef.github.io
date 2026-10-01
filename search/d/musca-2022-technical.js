@@ -1,0 +1,1 @@
+heliaSearchData("d/musca-2022-technical",{"id":"musca-2022-technical","title":"Technical Report: Match-reference regular expressions and lenses","kind":"reference","tags":["lenses","parsing"],"authors":["Anders Miltner","David Walker","Jeanne-Marie Musca","Kathleen Fisher"],"venue":["arXiv"],"date":null,"url":"musca-2022-technical.html","headings":[],"body":""});

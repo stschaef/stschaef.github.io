@@ -1,0 +1,1 @@
+heliaSearchData("d/nuriaqueraltrosinach",{"id":"nuriaqueraltrosinach","title":"Núria Queralt-Rosinach","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"nuriaqueraltrosinach.html","headings":[],"body":""});

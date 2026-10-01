@@ -1,0 +1,1 @@
+heliaSearchData("d/institut-polytechnique-de-paris",{"id":"institut-polytechnique-de-paris","title":"Institut Polytechnique de Paris","kind":"institution","tags":[],"authors":[],"venue":[],"date":null,"url":"institut-polytechnique-de-paris.html","headings":[],"body":""});

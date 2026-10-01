@@ -1,0 +1,1 @@
+heliaSearchData("d/ekindoguscubuk",{"id":"ekindoguscubuk","title":"Ekin Dogus Cubuk","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"ekindoguscubuk.html","headings":[],"body":""});

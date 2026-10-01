@@ -1,0 +1,1 @@
+heliaSearchData("d/ulrichkohlenbach",{"id":"ulrichkohlenbach","title":"Ulrich Kohlenbach","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"ulrichkohlenbach.html","headings":[],"body":""});

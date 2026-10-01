@@ -1,0 +1,1 @@
+heliaSearchData("d/dimitriosskarlatos",{"id":"dimitriosskarlatos","title":"Dimitrios Skarlatos","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"dimitriosskarlatos.html","headings":[],"body":""});

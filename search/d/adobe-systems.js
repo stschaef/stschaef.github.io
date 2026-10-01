@@ -1,0 +1,1 @@
+heliaSearchData("d/adobe-systems",{"id":"adobe-systems","title":"Adobe Systems","kind":"institution","tags":[],"authors":[],"venue":[],"date":null,"url":"adobe-systems.html","headings":[],"body":""});

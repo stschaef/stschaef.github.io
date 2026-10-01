@@ -1,0 +1,1 @@
+heliaSearchData("d/university-of-colorado-boulder",{"id":"university-of-colorado-boulder","title":"University of Colorado Boulder","kind":"institution","tags":[],"authors":[],"venue":[],"date":null,"url":"university-of-colorado-boulder.html","headings":[],"body":""});

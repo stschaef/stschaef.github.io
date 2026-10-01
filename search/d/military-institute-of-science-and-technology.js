@@ -1,0 +1,1 @@
+heliaSearchData("d/military-institute-of-science-and-technology",{"id":"military-institute-of-science-and-technology","title":"Military Institute of Science and Technology","kind":"institution","tags":[],"authors":[],"venue":[],"date":null,"url":"military-institute-of-science-and-technology.html","headings":[],"body":""});

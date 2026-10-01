@@ -1,0 +1,1 @@
+heliaSearchData("d/dvir-2024-a",{"id":"dvir-2024-a","title":"A Denotational Approach to Release/Acquire Concurrency","kind":"reference","tags":["concurrency","denotational-semantics"],"authors":["Ohad Kammar","Ori Lahav","Yotam Dvir"],"venue":["ESOP","European Symposium on Programming"],"date":null,"url":"dvir-2024-a.html","headings":[],"body":""});

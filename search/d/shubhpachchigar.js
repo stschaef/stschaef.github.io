@@ -1,0 +1,1 @@
+heliaSearchData("d/shubhpachchigar",{"id":"shubhpachchigar","title":"Shubh Pachchigar","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"shubhpachchigar.html","headings":[],"body":""});

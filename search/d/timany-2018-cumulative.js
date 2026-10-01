@@ -1,0 +1,1 @@
+heliaSearchData("d/timany-2018-cumulative",{"id":"timany-2018-cumulative","title":"Cumulative Inductive Types In Coq","kind":"reference","tags":["universes"],"authors":["Amin Timany","Matthieu Sozeau"],"venue":["FSCD","Formal Structures for Computation and Deduction"],"date":null,"url":"timany-2018-cumulative.html","headings":[],"body":""});

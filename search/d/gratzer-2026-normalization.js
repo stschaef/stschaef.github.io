@@ -1,0 +1,1 @@
+heliaSearchData("d/gratzer-2026-normalization",{"id":"gratzer-2026-normalization","title":"Normalization for multimodal type theory","kind":"reference","tags":["metatheory","modal-type-theory"],"authors":["Daniel Gratzer"],"venue":["LMCS","Logical Methods in Computer Science"],"date":null,"url":"gratzer-2026-normalization.html","headings":[],"body":""});

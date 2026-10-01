@@ -1,0 +1,1 @@
+heliaSearchData("d/kestrel-institute",{"id":"kestrel-institute","title":"Kestrel Institute","kind":"institution","tags":[],"authors":[],"venue":[],"date":null,"url":"kestrel-institute.html","headings":[],"body":""});

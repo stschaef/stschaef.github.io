@@ -1,0 +1,1 @@
+heliaSearchData("d/rubenmaldonado",{"id":"rubenmaldonado","title":"Rubén Maldonado","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"rubenmaldonado.html","headings":[],"body":""});

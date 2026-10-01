@@ -7,6 +7,8 @@
 <title>Separation logic: A logic for shared mutable data structures</title>
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Ctext y=%22.9em%22 font-size=%2290%22%3E%F0%9F%8C%BB%3C/text%3E%3C/svg%3E">
 <meta name="generator" content="helia">
+<link rel="alternate" type="application/atom+xml" title="Steven Schaefer" href="feed.xml">
+<link rel="alternate" type="application/feed+json" title="Steven Schaefer" href="feed.json">
 <script src="helia/theme-version.js"></script>
 <script src="theme/folio-early.js"></script>
 <link rel="stylesheet" href="helia/theme.css">
@@ -34,7 +36,7 @@
 <article class="helia-article">
 <header class="helia-header" data-entry="reynolds_separation_2002" data-kind="reference">
 <h2 class="helia-heading"><span class="helia-taxon">Reference.</span> Separation logic: A logic for shared mutable data structures</h2>
-<div class="helia-meta"><span class="helia-author"><a class="helia-entry-link" href="johnreynolds.html" data-entry="johnreynolds">John C. Reynolds</a></span> · <span class="helia-byline"><a class="helia-entry-link" href="lics.html" data-entry="lics">LICS</a> · 2002</span> · <span class="helia-tags"><span class="helia-tag" data-tag="separation-logic"><span class="helia-entry-link helia-unavailable">separation-logic</span></span></span> · <span class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1109/lics.2002.1029817">DOI</a></span></span></div>
+<div class="helia-meta"><span class="helia-author"><a class="helia-entry-link" href="johnreynolds.html" data-entry="johnreynolds">John C. Reynolds</a></span> · <span class="helia-byline"><a class="helia-entry-link" href="lics.html" data-entry="lics">LICS</a> · 2002</span> · <span class="helia-tags"><span class="helia-tag" data-tag="separation-logic"><a class="helia-entry-link" href="tag-separation-logic.html" data-entry="tag-separation-logic">separation-logic</a></span></span> · <span class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1109/lics.2002.1029817">DOI</a></span></span></div>
 </header>
 <div class="helia-body">
 <div class="helia-abstract">In joint work with Peter O’Hearn and others, based on early ideas of Burstall, we have developed an extension of Hoare logic that permits reasoning about low-level imperative programs that use shared mutable data structure. The simple imperative programming language is extended with commands (not expressions) for accessing and modifying shared structures, and for explicit allocation and deallocation of storage. Assertions are extended by introducing a “separating conjunction” that asserts that its subformulas hold for disjoint parts of the heap, and a closely related “separating implication”. Coupled with the inductive definition of predicates on abstract data structures, this extension permits the concise and flexible description of structures with controlled sharing. In this paper, we survey the current development of this program logic, including extensions that permit unrestricted address arithmetic, dynamically allocated arrays, and recursive procedures. We also discuss promising future directions.</div>
@@ -100,8 +102,52 @@
 </div>
 <div class="helia-reference-cited-by helia-collapsible">
 <details open>
-<summary class="helia-group-summary"><span class="helia-group-title">Cited by (11)</span></summary>
+<summary class="helia-group-summary"><span class="helia-group-title">Cited by (31)</span></summary>
 <div class="helia-group-body">
+<section class="helia-transclusion" data-entry="chen-2026-oblivious" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="chen-2026-oblivious"><span class="helia-title">Oblivious Probabilistic Outcome Logic: Verifying Probabilistic Programs with an Oblivious Adversary</span>&nbsp;<a class="helia-slug" href="chen-2026-oblivious.html">chen-2026-oblivious</a><span class="helia-byline"><span class="helia-entry-link" data-entry="arxiv">arXiv</span> · 2026</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="chen-2026-oblivious" data-kind="reference">
+<div class="helia-abstract">In the context of probabilistic programs, an oblivious adversary resolves nondeterminism without seeing the outcomes of random draws. Obliviousness is a common assumption in online algorithms and distributed protocols, but the complex interaction between random draws and adversarial choices makes it challenging to reason about correctness. While there has been significant progress toward reasoning about programs that combine randomization with nondeterminism, most of the work has focused on the adaptive model, whose omniscient view of program state is too powerful to establish correctness for certain classes of programs. We introduce Oblivious Probabilistic Outcome Logic (opOL), a new logic for reasoning about probabilistic programs with nondeterminism controlled by an oblivious adversary. Building on Outcome Logic and Probabilistic Separation Logic, opOL models adversarial choice as a resource and uses probabilistic independence to ensure that random outcomes are hidden from the adversary. The opOL proof system provides expressive and compositional rules for case analysis on both random and nondeterministic outcomes, and for proving almost-sure termination. Expressivity is tested through several case studies, including a paging algorithm and a leader election protocol. The opOL metatheory and case studies are mechanized in Lean 4.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/2607.16533">arXiv</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="mathiasen-2026-verifying" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="mathiasen-2026-verifying"><span class="helia-title">Verifying Isolation Levels of Database Implementations for Free Using Separation Logic</span>&nbsp;<a class="helia-slug" href="mathiasen-2026-verifying.html">mathiasen-2026-verifying</a><span class="helia-byline"><span class="helia-entry-link" data-entry="arxiv">arXiv</span> · 2026</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="mathiasen-2026-verifying" data-kind="reference">
+<div class="helia-abstract">Modern databases are highly concurrent and provide transactions as a mean of grouping several database operations into atomically applied units. Database vendors and software engineers use isolation levels to describe the consistency guarantees of transactions. The popular isolation levels give weak guarantees, with intricate semantics, to optimize performance of applications. The problem of assuring that database implementations actually implement the isolation level guarantees that application developers build their systems upon has received a great deal of attention from the testing community. But until now, there exists no method for formally verifying that a database implementation actually implements the isolation level that database vendors says it provides. In this paper, we present a method for verifying that a database implements an isolation level: we derive isolation levels directly, as formalized in transactional consistency models by the database community, from the structure of separation logic specifications. By doing so, we consider all program executions that a database and arbitrary clients of the database could produce. The result is a so-called free theorem meaning that any database implementation, whose operations are verified against a specific set of separation logic specifications, actually implements its isolation level. As all proofs in this paper are mechanized in the Rocq proof assistant and build upon a detailed semantic model of program execution, we believe this contribution raises the bar for the achievable robustness of databases.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/2607.15877">arXiv</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="liu-2026-an" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="liu-2026-an"><span class="helia-title">An Axiomatic Basis for Computer Programming on Relaxed Hardware Architectures: The AxSL Logics</span>&nbsp;<a class="helia-slug" href="liu-2026-an.html">liu-2026-an</a><span class="helia-byline"><span class="helia-entry-link" data-entry="toplas">TOPLAS</span> · 2026</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="liu-2026-an" data-kind="reference">
+<div class="helia-abstract">Very relaxed concurrency memory models, like those of the Arm-A, RISC-V and IBM Power hardware architectures, underpin much of computing but break a fundamental intuition about programs, namely that syntactic program order and the reads-from relation always both induce order in the execution. Instead, out-of-order execution is allowed except where prevented by certain pairwise dependencies, barriers, or other synchronisation. This means that there is no notion of the ‘current’ state of the program, making it challenging to design (and prove sound) syntax-directed, modular reasoning methods like Hoare logics, as usable resources cannot implicitly flow from one program point to the next. We present AxSL, a family of separation logics for relaxed hardware memory models, and instantiate it on sequential consistency and on the Arm-A memory model. The Arm-A instance captures the fine-grained reasoning underpinning the low-overhead synchronisation idioms used by high-performance systems code. We mechanise AxSL in the Iris separation logic framework, illustrate it on key examples, and prove it sound with respect to the axiomatic memory model of Arm-A. By instantiating AxSL on different memory models, we demonstrate the generality of our approach, and show that it is largely generic in the axiomatic model and in the instruction-set semantics, offering a potential way forward for compositional reasoning for other models, and for the combination of production concurrency models and full-scale ISAs.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/3786762">DOI</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/journals/toplas/LiuHPSBP26">pldb</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="zilberstein-2026-probabilistic" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="zilberstein-2026-probabilistic"><span class="helia-title">Probabilistic Concurrent Reasoning in Outcome Logic: Independence, Conditioning, and Invariants</span>&nbsp;<a class="helia-slug" href="zilberstein-2026-probabilistic.html">zilberstein-2026-probabilistic</a><span class="helia-byline"><span class="helia-entry-link" data-entry="popl">POPL</span> · 2026</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="zilberstein-2026-probabilistic" data-kind="reference">
+<div class="helia-abstract">Although randomization has long been used in distributed computing, formal methods for reasoning aboutprobabilistic concurrent programs have lagged behind. No existing program logics can express specificationsabout the full distributions of outcomes resulting from programs that are both probabilistic and concurrent. To address this, we introduce Probabilistic Concurrent Outcome Logic ( pcOL ), which incorporates ideas fromconcurrent and probabilistic separation logics into Outcome Logic to introduce new compositional reasoningprinciples. At its core, pcOL reinterprets the rules of Concurrent Separation Logic in a setting where separationmodels probabilistic independence, so as to compositionally describe joint distributions over variables inconcurrent threads. Reasoning about outcomes also proves crucial, as case analysis is often necessary to deriveprecise information about threads that rely on randomized shared state. We demonstrate pcOL on a variety ofexamples, including to prove almost sure termination of unbounded loops.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="pdf-url"><a class="helia-link helia-external" href="https://arxiv.org/pdf/2411.11662">PDF</a></span> · <span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/3776651">DOI</a></span> · <span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/2411.11662">arXiv</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/journals/pacmpl/ZilbersteinST26">pldb</a></span></div>
+</div>
+</div>
+</details>
+</section>
 <section class="helia-transclusion" data-entry="robinson_wrigley_2026" data-depth="1">
 <details>
 <summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="robinson_wrigley_2026"><span class="helia-title">Day algebras</span>&nbsp;<a class="helia-slug" href="robinson_wrigley_2026.html">robinson_wrigley_2026</a><span class="helia-byline"><span class="helia-entry-link" data-entry="mscs">MSCS</span> · 2026</span></h2></summary>
@@ -122,7 +168,116 @@
 <p>We present Dependent Lambek Calculus (Lambek<span class="helia-math helia-math-inline helia-mathml"><math><msup><mtable class="multiline-equation"></mtable><mi>𝙳</mi></msup></math></span>), a domain-specific dependent type theory for verified parsing and formal grammar theory. In Lambek<span class="helia-math helia-math-inline helia-mathml"><math><msup><mtable class="multiline-equation"></mtable><mi>𝙳</mi></msup></math></span>, linear types are used as a syntax for formal grammars, and parsers can be written as linear terms. The linear typing restriction provides a form of intrinsic verification that a parser yields only valid parse trees for the input string. We demonstrate the expressivity of this system by showing that the combination of inductive linear types and dependency on non-linear data can be used to encode commonly used grammar formalisms such as regular and context-free grammars as well as traces of various types of automata. Using these encodings, we define parsers for regular expressions using deterministic automata, as well as examples of verified parsers of context-free grammars.</p>
 <p>We present a denotational semantics of our type theory that interprets the linear types as functions from strings to sets of abstract parse trees and terms as parse transformers. Based on this denotational semantics, we have made a prototype implementation of Lambek<span class="helia-math helia-math-inline helia-mathml"><math><msup><mtable class="multiline-equation"></mtable><mi>𝙳</mi></msup></math></span> using a shallow embedding in the Agda proof assistant. All of our examples parsers have been implemented in this prototype implementation.</p>
 </div>
-<div class="helia-entry-links"><span class="helia-entry-link" data-field="pdf"><a class="helia-link" href="assets/4818ca36e1d8417310dcca2d3a4c8e1e89b7bbf6f69fd90ec697fc2de48a6d26.pdf">PDF</a></span> · <span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/3729281">DOI</a></span> · <span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/2504.03995">arXiv (extended version)</a></span> · <span class="helia-entry-link" data-field="code"><a class="helia-link helia-external" href="https://github.com/maxsnew/grammars-and-semantic-actions">Source code</a></span></div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="pdf"><a class="helia-link" href="assets/4818ca36e1d8417310dcca2d3a4c8e1e89b7bbf6f69fd90ec697fc2de48a6d26.pdf">PDF</a></span> · <span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/3729281">DOI</a></span> · <span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/2504.03995">arXiv (extended version)</a></span> · <span class="helia-entry-link" data-field="code"><a class="helia-link helia-external" href="https://github.com/maxsnew/grammars-and-semantic-actions">Source code</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/journals/pacmpl/SchaeferVAN25">pldb</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="banerjee-2025-fulminate" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="banerjee-2025-fulminate"><span class="helia-title">Fulminate: Testing CN Separation-Logic Specifications in C</span>&nbsp;<a class="helia-slug" href="banerjee-2025-fulminate.html">banerjee-2025-fulminate</a><span class="helia-byline"><span class="helia-entry-link" data-entry="popl">POPL</span> · 2025</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="banerjee-2025-fulminate" data-kind="reference">
+<div class="helia-abstract">Separation logic has become an important tool for formally capturing and reasoning about the ownership patterns of imperative programs, originally for paper proof, and now the foundation for industrial static analyses and multiple proof tools. However, there has been very little work on program testing of separationlogic specifications in concrete execution. At first sight, separation-logic formulas are hard to evaluate in reasonable time, with their implicit quantification over heap splittings, and other explicit existentials. In this paper we observe that a restricted fragment of separation logic, adopted in the CN proof tool to enable predictable proof automation, also has a natural and readable computational interpretation, that makes it practically usable in runtime testing. We discuss various design issues and develop this as a C + CN source to C source translation, Fulminate. This adds checks – including ownership checks and ownership transfer – for C code annotated with CN pre- and post-conditions; we demonstrate this on nontrivial examples, including the allocator from a production hypervisor. We formalise our runtime ownership testing scheme, showing (and proving) how its reified ghost state correctly captures ownership passing, in a semantics for a small C-like language.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="pdf-url"><a class="helia-link helia-external" href="https://www.repository.cam.ac.uk/bitstreams/a210b3f3-a209-4f54-a69d-ef24d9344806/download">PDF</a></span> · <span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/3704879">DOI</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/journals/pacmpl/BanerjeeMMPKS25">pldb</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="gratzer-2025-idempotent" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="gratzer-2025-idempotent"><span class="helia-title">Idempotent Resources in Separation Logic: The Heart of core in Iris</span>&nbsp;<a class="helia-slug" href="gratzer-2025-idempotent.html">gratzer-2025-idempotent</a><span class="helia-byline"><span class="helia-entry-link" data-entry="fossacs">FoSSaCS</span> · 2025</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="gratzer-2025-idempotent" data-kind="reference">
+<div class="helia-abstract">We revisit the foundational notion of “resources” used by separation logics from a categorical and algebraic viewpoint. In particular, we show that the cameras used by concurrent, higher-order, impredicative separation logics like Iris as a generalization of partial commutative monoids can be simplified and clarified and we introduce a category of cameras in which many vital cameras exhibit simple universal properties. We do this by observing that an important structure on cameras (the core operator) can be uniquely constrained and replaced by the property governing the idempotent elements of the camera. We verify that all cameras used in practice in Iris satisfy this property and use this insight to simplify the existing Iris formalization.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-031-90897-2_3">DOI</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="timany-2024-a" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="timany-2024-a"><span class="helia-title">A Logical Approach to Type Soundness</span>&nbsp;<a class="helia-slug" href="timany-2024-a.html">timany-2024-a</a><span class="helia-byline"><span class="helia-entry-link" data-entry="jacm">JACM</span> · 2024</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="timany-2024-a" data-kind="reference">
+<div class="helia-abstract">Type soundness, which asserts that “well-typed programs cannot go wrong,” is widely viewed as the canonical theorem one must prove to establish that a type system is doing its job. It is commonly proved using the so-called syntactic approach (also known as progress and preservation ), which has had a huge impact on the study and teaching of programming language foundations. Unfortunately, syntactic type soundness is a rather weak theorem. It only applies to programs that are well typed in their entirety and thus tells us nothing about the many programs written in “safe” languages that make use of “unsafe” language features. Even worse, it tells us nothing about whether type systems achieve one of their main goals: enforcement of data abstraction. One can easily define a language that enjoys syntactic type soundness and yet fails to support even the most basic modular reasoning principles for abstraction mechanisms like closures, objects, and abstract data types. Given these concerns, we argue that programming languages researchers should no longer be satisfied with proving syntactic type soundness and should instead start proving semantic type soundness , a more useful theorem that captures more accurately what type systems are actually good for. Semantic type soundness is an old idea—Milner’s original account of type soundness from 1978 was semantic—but it fell out of favor in the 1990s due to limitations and complexities of denotational models. In the succeeding decades, thanks to a series of technical advances—notably, step-indexed Kripke logical relations constructed over operational semantics and higher-order concurrent separation logic as consolidated in the Iris framework in Coq—we can now build (machine-checked) semantic soundness proofs at a much higher level of abstraction than was previously possible. The resulting “logical” approach to semantic type soundness has already been employed to great effect in a number of recent papers, but those papers typically (a) concern advanced problem scenarios that complicate the presentation, (b) assume significant prior knowledge of the reader, and (c) suppress many details of the proofs. Here, we aim to provide a gentler, more pedagogically motivated introduction to logical type soundness, targeted at a broader audience that may or may not be familiar with logical relations and Iris. As a bonus, we also show how logical type soundness proofs can easily be generalized to establish an even stronger relational property— representation independence —for realistic type systems.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/3676954">DOI</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="li-2024-a" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="li-2024-a"><span class="helia-title">A Nominal Approach to Probabilistic Separation Logic</span>&nbsp;<a class="helia-slug" href="li-2024-a.html">li-2024-a</a><span class="helia-byline"><span class="helia-entry-link" data-entry="lics">LICS</span> · 2024</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="li-2024-a" data-kind="reference">
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/3661814.3662135">DOI</a></span> · <span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/2405.06826">arXiv</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="kidney-2024-algebraic" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="kidney-2024-algebraic"><span class="helia-title">Algebraic Effects Meet Hoare Logic in Cubical Agda</span>&nbsp;<a class="helia-slug" href="kidney-2024-algebraic.html">kidney-2024-algebraic</a><span class="helia-byline"><span class="helia-entry-link" data-entry="popl">POPL</span> · 2024</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="kidney-2024-algebraic" data-kind="reference">
+<div class="helia-abstract">This paper presents a novel formalisation of algebraic effects with equations in Cubical Agda. Unlike previous work in the literature that employed setoids to deal with equations, the library presented here uses quotient types to faithfully encode the type of terms quotiented by laws. Apart from tools for equational reasoning, the library also provides an effect-generic Hoare logic for algebraic effects, which enables reasoning about effectful programs in terms of their pre- and post-conditions. A particularly novel aspect is that equational reasoning and Hoare-style reasoning are related by an elimination principle of Hoare logic.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="pdf-url"><a class="helia-link helia-external" href="https://dl.acm.org/doi/pdf/10.1145/3632898">PDF</a></span> · <span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/3632898">DOI</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/journals/pacmpl/KidneyYW24">pldb</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="hance-2023-leaf" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="hance-2023-leaf"><span class="helia-title">Leaf: Modularity for Temporary Sharing in Separation Logic</span>&nbsp;<a class="helia-slug" href="hance-2023-leaf.html">hance-2023-leaf</a><span class="helia-byline"><span class="helia-entry-link" data-entry="oopsla">OOPSLA</span> · 2023</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="hance-2023-leaf" data-kind="reference">
+<div class="helia-abstract">In concurrent verification, separation logic provides a strong story for handling both resources that are owned exclusively and resources that are shared persistently (i.e., forever). However, the situation is more complicated for temporarily shared state, where state might be shared and then later reclaimed as exclusive. We believe that a framework for temporarily-shared state should meet two key goals not adequately met by existing techniques. One, it should allow and encourage users to verify new sharing strategies. Two, it should provide an abstraction where users manipulate shared state in a way agnostic to the means with which it is shared. We present Leaf, a library in the Iris separation logic which accomplishes both of these goals by introducing a novel operator, which we call guarding, that allows one proposition to represent a shared version of another. We demonstrate that Leaf meets these two goals through a modular case study: we verify a reader-writer lock that supports shared state, and a hash table built on top of it that uses shared state.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="pdf-url"><a class="helia-link helia-external" href="https://dl.acm.org/doi/pdf/10.1145/3622798">PDF</a></span> · <span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/3622798">DOI</a></span> · <span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/2309.04851">arXiv</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/journals/pacmpl/HanceHPP23">pldb</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="li-2023-lilac" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="li-2023-lilac"><span class="helia-title">Lilac: A Modal Separation Logic for Conditional Probability</span>&nbsp;<a class="helia-slug" href="li-2023-lilac.html">li-2023-lilac</a><span class="helia-byline"><span class="helia-entry-link" data-entry="pldi">PLDI</span> · 2023</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="li-2023-lilac" data-kind="reference">
+<div class="helia-abstract">We present Lilac, a separation logic for reasoning about probabilistic programs where separating conjunction captures probabilistic independence. Inspired by an analogy with mutable state where sampling corresponds to dynamic allocation, we show how probability spaces over a fixed, ambient sample space appear to be the natural analogue of heap fragments, and present a new combining operation on them such that probability spaces behave like heaps and measurability of random variables behaves like ownership. This combining operation forms the basis for our model of separation, and produces a logic with many pleasant properties. In particular, Lilac has a frame rule identical to the ordinary one, and naturally accommodates advanced features like continuous random variables and reasoning about quantitative properties of programs. Then we propose a new modality based on disintegration theory for reasoning about conditional probability. We show how the resulting modal logic validates examples from prior work, and give a formal verification of an intricate weighted sampling algorithm whose correctness depends crucially on conditional independence structure.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="pdf-url"><a class="helia-link helia-external" href="https://dl.acm.org/doi/pdf/10.1145/3591226">PDF</a></span> · <span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/3591226">DOI</a></span> · <span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/2304.01339">arXiv</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/journals/pacmpl/Li0H23">pldb</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="lattuada-2023-verus" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="lattuada-2023-verus"><span class="helia-title">Verus: Verifying Rust Programs using Linear Ghost Types</span>&nbsp;<a class="helia-slug" href="lattuada-2023-verus.html">lattuada-2023-verus</a><span class="helia-byline"><span class="helia-entry-link" data-entry="oopsla">OOPSLA</span> · 2023</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="lattuada-2023-verus" data-kind="reference">
+<div class="helia-abstract">The Rust programming language provides a powerful type system that checks linearity and borrowing, allowing code to safely manipulate memory without garbage collection and making Rust ideal for developing low-level, high-assurance systems. For such systems, formal verification can be useful to prove functional correctness properties beyond type safety. This paper presents Verus, an SMT-based tool for formally verifying Rust programs. With Verus, programmers express proofs and specifications using the Rust language, allowing proofs to take advantage of Rust’s linear types and borrow checking. We show how this allows proofs to manipulate linearly typed permissions that let Rust code safely manipulate memory, pointers, and concurrent resources. Verus organizes proofs and specifications using a novel mode system that distinguishes specifications, which are not checked for linearity and borrowing, from executable code and proofs, which are checked for linearity and borrowing. We formalize Verus’ linearity, borrowing, and modes in a small lambda calculus, for which we prove type safety and termination of specifications and proofs. We demonstrate Verus on a series of examples, including pointer-manipulating code (an xor-based doubly linked list), code with interior mutability, and concurrent code.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="pdf-url"><a class="helia-link helia-external" href="https://dl.acm.org/doi/pdf/10.1145/3586037">PDF</a></span> · <span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/3586037">DOI</a></span> · <span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/2303.05491">arXiv</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/journals/pacmpl/LattuadaHCBSZHPH23">pldb</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="zilberstein-2023-outcome" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="zilberstein-2023-outcome"><span class="helia-title">Outcome Logic: A Unifying Foundation for Correctness and Incorrectness Reasoning</span>&nbsp;<a class="helia-slug" href="zilberstein-2023-outcome.html">zilberstein-2023-outcome</a><span class="helia-byline"><span class="helia-entry-link" data-entry="oopsla">OOPSLA</span> · 2023</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="zilberstein-2023-outcome" data-kind="reference">
+<div class="helia-abstract">Program logics for bug-finding (such as the recently introduced Incorrectness Logic) have framed correctness and incorrectness as dual concepts requiring different logical foundations. In this paper, we argue that a single unified theory can be used for both correctness and incorrectness reasoning. We present Outcome Logic (OL), a novel generalization of Hoare Logic that is both monadic (to capture computational effects) and monoidal (to reason about outcomes and reachability). OL expresses true positive bugs, while retaining correctness reasoning abilities as well. To formalize the applicability of OL to both correctness and incorrectness, we prove that any false OL specification can be disproven in OL itself. We also use our framework to reason about new types of incorrectness in nondeterministic and probabilistic programs. Given these advances, we advocate for OL as a new foundational theory of correctness and incorrectness.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="pdf-url"><a class="helia-link helia-external" href="https://dl.acm.org/doi/pdf/10.1145/3586045">PDF</a></span> · <span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/3586045">DOI</a></span> · <span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/2303.03111">arXiv</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/journals/pacmpl/ZilbersteinDS23">pldb</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="pulte-2023-cn" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="pulte-2023-cn"><span class="helia-title">CN: Verifying Systems C Code with Separation-Logic Refinement Types</span>&nbsp;<a class="helia-slug" href="pulte-2023-cn.html">pulte-2023-cn</a><span class="helia-byline"><span class="helia-entry-link" data-entry="popl">POPL</span> · 2023</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="pulte-2023-cn" data-kind="reference">
+<div class="helia-abstract">Despite significant progress in the verification of hypervisors, operating systems, and compilers, and in verification tooling, there exists a wide gap between the approaches used in verification projects and conventional development of systems software. We see two main challenges in bringing these closer together: verification handling the complexity of code and semantics of conventional systems software, and verification usability. We describe an experiment in verification tool design aimed at addressing some aspects of both: we design and implement CN, a separation-logic refinement type system for C systems software, aimed at predictable proof automation, based on a realistic semantics of ISO C. CN reduces refinement typing to decidable propositional logic reasoning, uses first-class resources to support pointer aliasing and pointer arithmetic, features resource inference for iterated separating conjunction, and uses a novel syntactic restriction of ghost variables in specifications to guarantee their successful inference. We implement CN and formalise key aspects of the type system, including a soundness proof of type checking. To demonstrate the usability of CN we use it to verify a substantial component of Google’s pKVM hypervisor for Android.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="pdf-url"><a class="helia-link helia-external" href="https://dl.acm.org/doi/pdf/10.1145/3571194">PDF</a></span> · <span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/3571194">DOI</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/journals/pacmpl/PulteMSMSK23">pldb</a></span></div>
 </div>
 </div>
 </details>
@@ -133,7 +288,29 @@
 <div class="helia-transclusion-body">
 <div class="helia-reference" data-entry="nigam_amorim_sampson_2023" data-kind="reference">
 <div class="helia-abstract">Modular design is a key challenge for enabling large-scale reuse of hardware modules. Unlike software, however, hardware designs correspond to physical circuits and inherit constraints from them. Timing constraints—which cycle a signal arrives, when an input is read—and structural constraints—how often a multiplier accepts new inputs—are fundamental to hardware interfaces. Existing hardware design languages do not provide a way to encode these constraints; a user must read documentation, build scripts, or in the worst case, a module’s implementation to understand how to use it. We present Filament, a language for modular hardware design that supports the specification and enforcement of timing and structural constraints for statically scheduled pipelines. Filament uses timeline types, which describe the intervals of clock-cycle time when a given signal is available or required. Filament enables safe composition of hardware modules, ensures that the resulting designs are correctly pipelined, and predictably lowers them to efficient hardware.</div>
-<div class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/3591234">DOI</a></span></div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="pdf-url"><a class="helia-link helia-external" href="https://dl.acm.org/doi/pdf/10.1145/3591234">PDF</a></span> · <span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/3591234">DOI</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/journals/pacmpl/NigamAS23">pldb</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="choudhury-2020-recovering" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="choudhury-2020-recovering"><span class="helia-title">Recovering purity with comonads and capabilities</span>&nbsp;<a class="helia-slug" href="choudhury-2020-recovering.html">choudhury-2020-recovering</a><span class="helia-byline"><span class="helia-entry-link" data-entry="icfp">ICFP</span> · 2020</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="choudhury-2020-recovering" data-kind="reference">
+<div class="helia-abstract">In this paper, we take a pervasively effectful (in the style of ML) typed lambda calculus, and show how to extend it to permit capturing pure expressions with types. Our key observation is that, just as the pure simply-typed lambda calculus can be extended to support effects with a monadic type discipline, an impure typed lambda calculus can be extended to support purity with a comonadic type discipline. We establish the correctness of our type system via a simple denotational model, which we call the capability space model. Our model formalises the intuition common to systems programmers that the ability to perform effects should be controlled via access to a permission or capability, and that a program is capability-safe if it performs no effects that it does not have a runtime capability for. We then identify the axiomatic categorical structure that the capability space model validates, and use these axioms to give a categorical semantics for our comonadic type system. We then give an equational theory (substitution and the call-by-value β and η laws) for the imperative lambda calculus, and show its soundness relative to this semantics. Finally, we give a translation of the pure simply-typed lambda calculus into our comonadic imperative calculus, and show that any two terms which are βη-equal in the STLC are equal in the equational theory of the comonadic calculus, establishing that pure programs can be mapped in an equation-preserving way into our imperative calculus.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="pdf-url"><a class="helia-link helia-external" href="https://dl.acm.org/doi/pdf/10.1145/3408993">PDF</a></span> · <span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/3408993">DOI</a></span> · <span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/1907.07283">arXiv</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/journals/pacmpl/ChoudhuryK20">pldb</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="ringer-2019-qed" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="ringer-2019-qed"><span class="helia-title">QED at Large: A Survey of Engineering of Formally Verified Software</span>&nbsp;<a class="helia-slug" href="ringer-2019-qed.html">ringer-2019-qed</a><span class="helia-byline"><span class="helia-entry-link" data-entry="foundations-and-trends-in-programming-languages">Foundations and Trends® in Programming Languages</span> · 2019</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="ringer-2019-qed" data-kind="reference">
+<div class="helia-abstract">Development of formal proofs of correctness of programs can increase actual and perceived reliability and facilitate better understanding of program specifications and their underlying assumptions. Tools supporting such development have been available for over 40 years, but have only recently seen wide practical use. Projects based on construction of machine-checked formal proofs are now reaching an unprecedented scale, comparable to large software projects, which leads to new challenges in proof development and maintenance. Despite its increasing importance, the field of proof engineering is seldom considered in its own right; related theories, techniques, and tools span many fields and venues. This survey of the literature presents a holistic understanding of proof engineering for program correctness, covering impact in practice, foundations, proof automation, proof organization, and practical proof development.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1561/2500000045">DOI</a></span></div>
 </div>
 </div>
 </details>
@@ -144,7 +321,28 @@
 <div class="helia-transclusion-body">
 <div class="helia-reference" data-entry="jung_etal_iris_ground_up_2018" data-kind="reference">
 <div class="helia-abstract">Iris is a framework for higher-order concurrent separation logic, which has been implemented in the Coq proof assistant and deployed very effectively in a wide variety of verification projects. Iris was designed with the express goal of simplifying and consolidating the foundations of modern separation logics, but it has evolved over time, and the design and semantic foundations of Iris itself have yet to be fully written down and explained together properly in one place. Here, we attempt to fill this gap, presenting a reasonably complete picture of the latest version of Iris (version 3.1), from first principles and in one coherent narrative.</div>
-<div class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1017/s0956796818000151">DOI</a></span></div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="pdf-url"><a class="helia-link helia-external" href="https://www.cambridge.org/core/services/aop-cambridge-core/content/view/26301B518CE2C52796BFA12B8BAB5B5F/S0956796818000151a.pdf/div-class-title-iris-from-the-ground-up-a-modular-foundation-for-higher-order-concurrent-separation-logic-div.pdf">PDF</a></span> · <span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1017/s0956796818000151">DOI</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/journals/jfp/JungKJBBD18">pldb</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="angiuli-2016-homotopical" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="angiuli-2016-homotopical"><span class="helia-title">Homotopical patch theory</span>&nbsp;<a class="helia-slug" href="angiuli-2016-homotopical.html">angiuli-2016-homotopical</a><span class="helia-byline"><span class="helia-entry-link" data-entry="jfp">JFP</span> · 2016</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="angiuli-2016-homotopical" data-kind="reference">
+<div class="helia-abstract">Homotopy type theory is an extension of Martin-Löf type theory, based on a correspondence with homotopy theory and higher category theory. In homotopy type theory, the propositional equality type is proof-relevant, and corresponds to paths in a space. This allows for a new class of datatypes, called higher inductive types, which are specified by constructors not only for points but also for paths. In this paper, we consider a programming application of higher inductive types. Version control systems such as Darcs are based on the notion of patches—syntactic representations of edits to a repository. We show how patch theory can be developed in homotopy type theory. Our formulation separates formal theories of patches from their interpretation as edits to repositories. A patch theory is presented as a higher inductive type. Models of a patch theory are given by maps out of that type, which, being functors, automatically preserve the structure of patches. Several standard tools of homotopy theory come into play, demonstrating the use of these methods in a practical programming context.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="pdf-url"><a class="helia-link helia-external" href="https://www.cambridge.org/core/services/aop-cambridge-core/content/view/42AD8BB8A91688BCAC16FD4D6A2C3FE7/S0956796816000198a.pdf/div-class-title-homotopical-patch-theory-a-href-afn1-ref-type-fn-a-div.pdf">PDF</a></span> · <span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1017/s0956796816000198">DOI</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/journals/jfp/AngiuliMLH16">pldb</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="jung-2015-iris" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="jung-2015-iris"><span class="helia-title">Iris: Monoids and Invariants as an Orthogonal Basis for Concurrent Reasoning</span>&nbsp;<a class="helia-slug" href="jung-2015-iris.html">jung-2015-iris</a><span class="helia-byline"><span class="helia-entry-link" data-entry="popl">POPL</span> · 2015</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="jung-2015-iris" data-kind="reference">
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="pdf-url"><a class="helia-link helia-external" href="https://dl.acm.org/doi/pdf/10.1145/2676726.2676980">PDF</a></span> · <span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/2676726.2676980">DOI</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/conf/popl/JungSSSTBD15">pldb</a></span></div>
 </div>
 </div>
 </details>
@@ -155,7 +353,7 @@
 <div class="helia-transclusion-body">
 <div class="helia-reference" data-entry="krishnaswami_integrating_2015" data-kind="reference">
 <div class="helia-abstract">In this paper, we show how to integrate linear types with type dependency, by extending the linear/non-linear calculus of Benton to support type dependency.</div>
-<div class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/2676726.2676969">DOI</a></span></div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="pdf-url"><a class="helia-link helia-external" href="https://dl.acm.org/doi/pdf/10.1145/2676726.2676969">PDF</a></span> · <span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/2676726.2676969">DOI</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/conf/popl/KrishnaswamiPB15">pldb</a></span></div>
 </div>
 </div>
 </details>
@@ -169,7 +367,7 @@
 <p>The standard reading of type theory through the lens of category theory is based on the idea of viewing a type system as a category of well-typed terms. We propose a basic revision of this reading: rather than interpreting type systems as categories, we describe them as functors from a category of typing derivations to a category of underlying terms. Then, turning this around, we explain how in fact any functor gives rise to a generalized type system, with an abstract notion of typing judgment, typing derivations and typing rules. This leads to a purely categorical reformulation of various natural classes of type systems as natural classes of functors.</p>
 <p>The main purpose of this paper is to describe the general framework (which can also be seen as providing a categorical analysis of refinement types), and to present a few applications. As a larger case study, we revisit Reynolds’ paper on “The Meaning of Types” (2000), showing how the paper’s main results may be reconstructed along these lines.</p>
 </div>
-<div class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/2676726.2676970">DOI</a></span></div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="pdf-url"><a class="helia-link helia-external" href="https://inria.hal.science/hal-01096910/document">PDF</a></span> · <span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/2676726.2676970">DOI</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/conf/popl/MelliesZ15">pldb</a></span></div>
 </div>
 </div>
 </details>
@@ -196,6 +394,27 @@
 </div>
 </details>
 </section>
+<section class="helia-transclusion" data-entry="hawkins-2011-data" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="hawkins-2011-data"><span class="helia-title">Data representation synthesis</span>&nbsp;<a class="helia-slug" href="hawkins-2011-data.html">hawkins-2011-data</a><span class="helia-byline"><span class="helia-entry-link" data-entry="pldi">PLDI</span> · 2011</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="hawkins-2011-data" data-kind="reference">
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="pdf-url"><a class="helia-link helia-external" href="https://dl.acm.org/doi/pdf/10.1145/1993498.1993504">PDF</a></span> · <span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/1993498.1993504">DOI</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/conf/pldi/HawkinsAFRS11">pldb</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="biering-2007-bi" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="biering-2007-bi"><span class="helia-title">BI-hyperdoctrines, higher-order separation logic, and abstraction</span>&nbsp;<a class="helia-slug" href="biering-2007-bi.html">biering-2007-bi</a><span class="helia-byline"><span class="helia-entry-link" data-entry="toplas">TOPLAS</span> · 2007</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="biering-2007-bi" data-kind="reference">
+<div class="helia-abstract">We present a precise correspondence between separation logic and a simple notion of predicate BI, extending the earlier correspondence given between part of separation logic and propositional BI. Moreover, we introduce the notion of a BI hyperdoctrine, show that it soundly models classical and intuitionistic first- and higher-order predicate BI, and use it to show that we may easily extend separation logic to higher-order . We also demonstrate that this extension is important for program proving, since it provides sound reasoning principles for data abstraction in the presence of aliasing.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="pdf-url"><a class="helia-link helia-external" href="https://dl.acm.org/doi/pdf/10.1145/1275497.1275499">PDF</a></span> · <span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/1275497.1275499">DOI</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/journals/toplas/BieringBT07">pldb</a></span></div>
+</div>
+</div>
+</details>
+</section>
 <section class="helia-transclusion" data-entry="yang_relational_separation_2007" data-depth="1">
 <details>
 <summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="yang_relational_separation_2007"><span class="helia-title">Relational separation logic</span>&nbsp;<a class="helia-slug" href="yang_relational_separation_2007.html">yang_relational_separation_2007</a><span class="helia-byline"><span class="helia-entry-link" data-entry="tcs">TCS</span> · 2007</span></h2></summary>
@@ -210,7 +429,7 @@
 <summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="biering_birkedal_torpsmith_2005"><span class="helia-title">BI Hyperdoctrines and Higher-Order Separation Logic</span>&nbsp;<a class="helia-slug" href="biering_birkedal_torpsmith_2005.html">biering_birkedal_torpsmith_2005</a><span class="helia-byline"><span class="helia-entry-link" data-entry="esop">ESOP</span> · 2005</span></h2></summary>
 <div class="helia-transclusion-body">
 <div class="helia-reference" data-entry="biering_birkedal_torpsmith_2005" data-kind="reference">
-<div class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-540-31987-0_17">DOI</a></span></div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="pdf-url"><a class="helia-link helia-external" href="https://link.springer.com/content/pdf/10.1007%2F978-3-540-31987-0_17.pdf">PDF</a></span> · <span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-540-31987-0_17">DOI</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/conf/esop/BieringBT05">pldb</a></span></div>
 </div>
 </div>
 </details>
@@ -242,7 +461,7 @@
 <div class="helia-transclusion-body">
 <div class="helia-reference" data-entry="ishtiaq_ohearn_bi_2001" data-kind="reference">
 <div class="helia-abstract">Reynolds has developed a logic for reasoning about mutable data structures in which the pre- and postconditions are written in an intuitionistic logic enriched with a spatial form of conjunction. We investigate the approach from the point of view of the logic BI of bunched implications of O’Hearn and Pym. We begin by giving a model in which the law of the excluded middle holds, thus showing that the approach is compatible with classical logic. The relationship between the intuitionistic and classical versions of the system is established by a translation, analogous to a translation from intuitionistic logic into the modal logic S4. We also consider the question of completeness of the axioms. BI’s spatial implication is used to express weakest preconditions for object-component assignments, and an axiom for allocating a cons cell is shown to be complete under an interpretation of triples that allows a command to be applied to states with dangling pointers. We make this latter a feature, by incorporating an operation, and axiom, for disposing of memory. Finally, we describe a local character enjoyed by specifications in the logic, and show how this enables a class of frame axioms, which say what parts of the heap don’t change, to be inferred automatically.</div>
-<div class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/360204.375719">DOI</a></span></div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="pdf-url"><a class="helia-link helia-external" href="https://dl.acm.org/doi/pdf/10.1145/360204.375719">PDF</a></span> · <span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/360204.375719">DOI</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/conf/popl/IshtiaqO01">pldb</a></span></div>
 </div>
 </div>
 </details>

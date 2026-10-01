@@ -1,0 +1,1 @@
+heliaSearchData("d/huang-2026-fat",{"id":"huang-2026-fat","title":"Fat Cell Structures and Generalized Algebraic Theories","kind":"reference","tags":["type-theory"],"authors":["Carlo Angiuli","Xu Huang"],"venue":["LICS","Symposium on Logic in Computer Science"],"date":null,"url":"huang-2026-fat.html","headings":[],"body":""});

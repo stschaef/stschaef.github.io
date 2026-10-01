@@ -1,0 +1,1 @@
+heliaSearchData("d/d-e-shaw-research",{"id":"d-e-shaw-research","title":"D. E. Shaw Research","kind":"institution","tags":[],"authors":[],"venue":[],"date":null,"url":"d-e-shaw-research.html","headings":[],"body":""});

@@ -1,0 +1,1 @@
+heliaSearchData("d/yallop-2023-flap",{"id":"yallop-2023-flap","title":"flap: A Deterministic Parser with Fused Lexing","kind":"reference","tags":["parsing"],"authors":["Jeremy Yallop","Neel Krishnaswami","Ningning Xie"],"venue":["PLDI","Conference on Programming Language Design and Implementation"],"date":null,"url":"yallop-2023-flap.html","headings":[],"body":""});

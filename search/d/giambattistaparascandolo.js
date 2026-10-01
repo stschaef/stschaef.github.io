@@ -1,0 +1,1 @@
+heliaSearchData("d/giambattistaparascandolo",{"id":"giambattistaparascandolo","title":"Giambattista Parascandolo","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"giambattistaparascandolo.html","headings":[],"body":""});

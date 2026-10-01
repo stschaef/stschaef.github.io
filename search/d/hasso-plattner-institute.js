@@ -1,0 +1,1 @@
+heliaSearchData("d/hasso-plattner-institute",{"id":"hasso-plattner-institute","title":"Hasso Plattner Institute","kind":"institution","tags":[],"authors":[],"venue":[],"date":null,"url":"hasso-plattner-institute.html","headings":[],"body":""});

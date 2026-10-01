@@ -1,0 +1,1 @@
+heliaSearchData("d/stanislawlesniewski",{"id":"stanislawlesniewski","title":"Stanislaw Lesniewski","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"stanislawlesniewski.html","headings":[],"body":""});

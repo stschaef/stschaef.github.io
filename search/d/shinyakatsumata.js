@@ -1,0 +1,1 @@
+heliaSearchData("d/shinyakatsumata",{"id":"shinyakatsumata","title":"Shin-ya Katsumata","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"shinyakatsumata.html","headings":[],"body":""});

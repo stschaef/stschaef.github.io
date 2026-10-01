@@ -1,0 +1,1 @@
+heliaSearchData("d/jonathanbatchelder",{"id":"jonathanbatchelder","title":"Jonathan Batchelder","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"jonathanbatchelder.html","headings":[],"body":""});

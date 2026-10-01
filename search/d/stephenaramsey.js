@@ -1,0 +1,1 @@
+heliaSearchData("d/stephenaramsey",{"id":"stephenaramsey","title":"Stephen A. Ramsey","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"stephenaramsey.html","headings":[],"body":""});

@@ -1,0 +1,1 @@
+heliaSearchData("d/aberle-2025-double",{"id":"aberle-2025-double","title":"Double Orthogonal Factorization Systems","kind":"reference","tags":["category-theory"],"authors":["CB Aberle","Dorette Pronk","Elena Caviglia","Luca Mesiti","Matthew Kukla","Rubén Maldonado","Tanjona Ralaivaosaona"],"venue":["arXiv"],"date":null,"url":"aberle-2025-double.html","headings":[],"body":""});

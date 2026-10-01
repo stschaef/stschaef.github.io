@@ -1,0 +1,1 @@
+heliaSearchData("d/wheaton-college-massachusetts",{"id":"wheaton-college-massachusetts","title":"Wheaton College (Massachusetts)","kind":"institution","tags":[],"authors":[],"venue":[],"date":null,"url":"wheaton-college-massachusetts.html","headings":[],"body":""});

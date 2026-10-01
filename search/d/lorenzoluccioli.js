@@ -1,0 +1,1 @@
+heliaSearchData("d/lorenzoluccioli",{"id":"lorenzoluccioli","title":"Lorenzo Luccioli","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"lorenzoluccioli.html","headings":[],"body":""});

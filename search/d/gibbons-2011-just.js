@@ -1,0 +1,1 @@
+heliaSearchData("d/gibbons-2011-just",{"id":"gibbons-2011-just","title":"Just do it: simple monadic equational reasoning","kind":"reference","tags":["effects"],"authors":["Jeremy Gibbons","Ralf Hinze"],"venue":["ICFP","International Conference on Functional Programming"],"date":null,"url":"gibbons-2011-just.html","headings":[],"body":""});

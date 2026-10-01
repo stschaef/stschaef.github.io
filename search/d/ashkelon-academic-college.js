@@ -1,0 +1,1 @@
+heliaSearchData("d/ashkelon-academic-college",{"id":"ashkelon-academic-college","title":"Ashkelon Academic College","kind":"institution","tags":[],"authors":[],"venue":[],"date":null,"url":"ashkelon-academic-college.html","headings":[],"body":""});

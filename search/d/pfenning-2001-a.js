@@ -1,0 +1,1 @@
+heliaSearchData("d/pfenning-2001-a",{"id":"pfenning-2001-a","title":"A judgmental reconstruction of modal logic","kind":"reference","tags":["modal-type-theory"],"authors":["Frank Pfenning","Rowan Davies"],"venue":["MSCS","Mathematical Structures in Computer Science"],"date":null,"url":"pfenning-2001-a.html","headings":[],"body":""});

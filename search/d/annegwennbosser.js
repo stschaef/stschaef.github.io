@@ -1,0 +1,1 @@
+heliaSearchData("d/annegwennbosser",{"id":"annegwennbosser","title":"Anne-Gwenn Bosser","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"annegwennbosser.html","headings":[],"body":""});

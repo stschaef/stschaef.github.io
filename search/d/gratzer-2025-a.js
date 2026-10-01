@@ -1,0 +1,1 @@
+heliaSearchData("d/gratzer-2025-a",{"id":"gratzer-2025-a","title":"A Modal Deconstruction of Löb Induction","kind":"reference","tags":["guarded-domain-theory","guarded-recursion","modal-type-theory"],"authors":["Daniel Gratzer"],"venue":["POPL","Symposium on Principles of Programming Languages"],"date":null,"url":"gratzer-2025-a.html","headings":[],"body":""});

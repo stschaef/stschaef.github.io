@@ -1,0 +1,1 @@
+heliaSearchData("d/katherineheller",{"id":"katherineheller","title":"Katherine Heller","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"katherineheller.html","headings":[],"body":""});

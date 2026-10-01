@@ -1,0 +1,1 @@
+heliaSearchData("d/baez-2021-categories",{"id":"baez-2021-categories","title":"Categories of Nets","kind":"reference","tags":["petri-nets"],"authors":["Fabrizio Genovese","Jade Master","John C. Baez","Michael Shulman"],"venue":["LICS","Symposium on Logic in Computer Science"],"date":null,"url":"baez-2021-categories.html","headings":[],"body":""});

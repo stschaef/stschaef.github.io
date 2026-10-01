@@ -1,0 +1,1 @@
+heliaSearchData("d/katerinaignatyeva",{"id":"katerinaignatyeva","title":"Katerina Ignatyeva","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"katerinaignatyeva.html","headings":[],"body":""});

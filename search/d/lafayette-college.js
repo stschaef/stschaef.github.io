@@ -1,0 +1,1 @@
+heliaSearchData("d/lafayette-college",{"id":"lafayette-college","title":"Lafayette College","kind":"institution","tags":[],"authors":[],"venue":[],"date":null,"url":"lafayette-college.html","headings":[],"body":""});

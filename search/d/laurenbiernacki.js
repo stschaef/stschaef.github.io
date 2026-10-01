@@ -1,0 +1,1 @@
+heliaSearchData("d/laurenbiernacki",{"id":"laurenbiernacki","title":"Lauren Biernacki","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"laurenbiernacki.html","headings":[],"body":""});

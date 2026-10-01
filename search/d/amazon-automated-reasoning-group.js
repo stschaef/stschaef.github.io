@@ -1,0 +1,1 @@
+heliaSearchData("d/amazon-automated-reasoning-group",{"id":"amazon-automated-reasoning-group","title":"Amazon Automated Reasoning Group","kind":"institution","tags":[],"authors":[],"venue":[],"date":null,"url":"amazon-automated-reasoning-group.html","headings":[],"body":""});

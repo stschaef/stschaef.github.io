@@ -1,0 +1,1 @@
+heliaSearchData("d/emmanouilgiortamis",{"id":"emmanouilgiortamis","title":"Emmanouil Giortamis","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"emmanouilgiortamis.html","headings":[],"body":""});

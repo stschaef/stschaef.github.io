@@ -1,0 +1,1 @@
+heliaSearchData("d/tag-right-adjoint",{"id":"tag-right-adjoint","title":"right-adjoint","kind":"tag","tags":[],"authors":[],"venue":[],"date":null,"url":"tag-right-adjoint.html","headings":[],"body":""});

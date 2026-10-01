@@ -1,0 +1,1 @@
+heliaSearchData("d/tag-generic-programming",{"id":"tag-generic-programming","title":"generic-programming","kind":"tag","tags":[],"authors":[],"venue":[],"date":null,"url":"tag-generic-programming.html","headings":[],"body":""});

@@ -1,0 +1,1 @@
+heliaSearchData("d/demeo-2022-a",{"id":"demeo-2022-a","title":"A Machine-Checked Proof of Birkhoff’s Variety Theorem in Martin-Löf Type Theory","kind":"reference","tags":["type-theory"],"authors":["Jacques Carette","William DeMeo"],"venue":["TYPES","Types for Proofs and Programs"],"date":null,"url":"demeo-2022-a.html","headings":[],"body":""});

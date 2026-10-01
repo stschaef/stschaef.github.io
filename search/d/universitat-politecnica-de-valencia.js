@@ -1,0 +1,1 @@
+heliaSearchData("d/universitat-politecnica-de-valencia",{"id":"universitat-politecnica-de-valencia","title":"Universitat Politècnica de València","kind":"institution","tags":[],"authors":[],"venue":[],"date":null,"url":"universitat-politecnica-de-valencia.html","headings":[],"body":""});

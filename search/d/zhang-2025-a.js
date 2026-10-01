@@ -1,0 +1,1 @@
+heliaSearchData("d/zhang-2025-a",{"id":"zhang-2025-a","title":"A Language-Agnostic Logical Relation for Message-Passing Protocols","kind":"reference","tags":["logical-relations","session-types"],"authors":["Rui Li","Sonya Simkin","Stephanie Balzer","Tesla Zhang","Yue Yao"],"venue":["arXiv"],"date":null,"url":"zhang-2025-a.html","headings":[],"body":""});

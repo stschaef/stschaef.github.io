@@ -1,0 +1,1 @@
+heliaSearchData("d/vanderweide-2024-the",{"id":"vanderweide-2024-the","title":"The Interval Domain in Homotopy Type Theory","kind":"reference","tags":["homotopy-type-theory"],"authors":["Dan Frumin","Niels van der Weide"],"venue":[],"date":null,"url":"vanderweide-2024-the.html","headings":[],"body":""});

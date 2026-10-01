@@ -1,0 +1,1 @@
+heliaSearchData("d/national-academy-of-sciences-of-ukraine",{"id":"national-academy-of-sciences-of-ukraine","title":"National Academy of Sciences of Ukraine","kind":"institution","tags":[],"authors":[],"venue":[],"date":null,"url":"national-academy-of-sciences-of-ukraine.html","headings":[],"body":""});

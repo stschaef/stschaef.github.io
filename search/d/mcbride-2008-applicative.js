@@ -1,0 +1,1 @@
+heliaSearchData("d/mcbride-2008-applicative",{"id":"mcbride-2008-applicative","title":"Applicative programming with effects","kind":"reference","tags":["effects"],"authors":["Conor McBride","Ross Paterson"],"venue":["JFP","Journal of Functional Programming"],"date":null,"url":"mcbride-2008-applicative.html","headings":[],"body":""});

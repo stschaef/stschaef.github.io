@@ -1,0 +1,1 @@
+heliaSearchData("d/university-of-georgia",{"id":"university-of-georgia","title":"University of Georgia","kind":"institution","tags":[],"authors":[],"venue":[],"date":null,"url":"university-of-georgia.html","headings":[],"body":""});

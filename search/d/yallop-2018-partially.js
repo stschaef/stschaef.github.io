@@ -1,0 +1,1 @@
+heliaSearchData("d/yallop-2018-partially",{"id":"yallop-2018-partially","title":"Partially-static data as free extension of algebras","kind":"reference","tags":[],"authors":["Jeremy Yallop","Ohad Kammar","Tamara von Glehn"],"venue":["ICFP","International Conference on Functional Programming"],"date":null,"url":"yallop-2018-partially.html","headings":[],"body":""});

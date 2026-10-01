@@ -1,0 +1,1 @@
+heliaSearchData("d/allais-2017-type",{"id":"allais-2017-type","title":"Type-and-scope safe programs and their proofs","kind":"reference","tags":["abstract-syntax"],"authors":["Conor McBride","Guillaume Allais","James Chapman","James McKinna"],"venue":["CPP","Certified Programs and Proofs"],"date":null,"url":"allais-2017-type.html","headings":[],"body":""});

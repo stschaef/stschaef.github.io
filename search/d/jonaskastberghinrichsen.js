@@ -1,0 +1,1 @@
+heliaSearchData("d/jonaskastberghinrichsen",{"id":"jonaskastberghinrichsen","title":"Jonas Kastberg Hinrichsen","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"jonaskastberghinrichsen.html","headings":[],"body":""});

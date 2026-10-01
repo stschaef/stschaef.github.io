@@ -1,0 +1,1 @@
+heliaSearchData("d/hansbuggegrathwohl",{"id":"hansbuggegrathwohl","title":"Hans Bugge Grathwohl","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"hansbuggegrathwohl.html","headings":[],"body":""});

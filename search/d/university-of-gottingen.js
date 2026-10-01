@@ -1,0 +1,1 @@
+heliaSearchData("d/university-of-gottingen",{"id":"university-of-gottingen","title":"University of Göttingen","kind":"institution","tags":[],"authors":[],"venue":[],"date":null,"url":"university-of-gottingen.html","headings":[],"body":""});

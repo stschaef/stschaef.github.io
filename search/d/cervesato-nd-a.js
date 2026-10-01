@@ -1,0 +1,1 @@
+heliaSearchData("d/cervesato-nd-a",{"id":"cervesato-nd-a","title":"A linear logical framework","kind":"reference","tags":["linear-logic","logical-frameworks"],"authors":["Frank Pfenning","I. Cervesato"],"venue":["LICS","Symposium on Logic in Computer Science"],"date":null,"url":"cervesato-nd-a.html","headings":[],"body":""});

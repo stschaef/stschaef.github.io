@@ -1,0 +1,1 @@
+heliaSearchData("d/reginabarzilay",{"id":"reginabarzilay","title":"Regina Barzilay","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"reginabarzilay.html","headings":[],"body":""});

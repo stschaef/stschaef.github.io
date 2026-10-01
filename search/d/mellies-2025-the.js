@@ -1,0 +1,1 @@
+heliaSearchData("d/mellies-2025-the",{"id":"mellies-2025-the","title":"The categorical contours of the Chomsky-Schützenberger representation theorem","kind":"reference","tags":["category-theory","parsing"],"authors":["Noam Zeilberger","Paul-André Melliès"],"venue":["LMCS","Logical Methods in Computer Science"],"date":null,"url":"mellies-2025-the.html","headings":[],"body":""});

@@ -1,0 +1,1 @@
+heliaSearchData("d/geoffreyhinton",{"id":"geoffreyhinton","title":"Geoffrey Hinton","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"geoffreyhinton.html","headings":[],"body":""});

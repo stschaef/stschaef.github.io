@@ -1,0 +1,1 @@
+heliaSearchData("d/stanislasdehaene",{"id":"stanislasdehaene","title":"Stanislas Dehaene","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"stanislasdehaene.html","headings":[],"body":""});

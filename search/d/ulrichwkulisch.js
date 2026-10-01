@@ -1,0 +1,1 @@
+heliaSearchData("d/ulrichwkulisch",{"id":"ulrichwkulisch","title":"Ulrich W. Kulisch","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"ulrichwkulisch.html","headings":[],"body":""});

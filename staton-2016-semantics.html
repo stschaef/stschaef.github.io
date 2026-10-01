@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>Semantics for probabilistic programming: higher-order functions, continuous distributions, and soft constraints</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Ctext y=%22.9em%22 font-size=%2290%22%3E%F0%9F%8C%BB%3C/text%3E%3C/svg%3E">
+<meta name="generator" content="helia">
+<link rel="alternate" type="application/atom+xml" title="Steven Schaefer" href="feed.xml">
+<link rel="alternate" type="application/feed+json" title="Steven Schaefer" href="feed.json">
+<script src="helia/theme-version.js"></script>
+<script src="theme/folio-early.js"></script>
+<link rel="stylesheet" href="helia/theme.css">
+<link rel="stylesheet" href="helia/highlight.css">
+<link rel="stylesheet" href="helia/search.css">
+<link rel="stylesheet" href="theme/katex.css">
+<link rel="stylesheet" href="theme/recipe.css">
+<link rel="stylesheet" href="theme/site.css">
+<link rel="stylesheet" href="theme/folio.css">
+<script defer src="helia/runtime.js"></script>
+<script defer src="helia/search.js"></script>
+<script defer src="theme/glyphcraft.js"></script>
+<script defer src="theme/glyphart.js"></script>
+<script defer src="theme/glyphgen.js"></script>
+<script defer src="theme/ornament.js"></script>
+<script defer src="theme/folio.js"></script>
+<script defer src="theme/portrait.js"></script>
+<script type="application/json" id="helia-widgets">{"helia-cite-formats":"widgets/helia-cite-formats-a3294ac7.js"}</script>
+<link rel="modulepreload" href="widgets/helia-cite-formats-a3294ac7.js">
+<script type="module" src="widgets/runtime.js"></script>
+</head>
+<body>
+<nav class="helia-topbar"><a class="helia-home" href="home.html">Steven Schaefer</a><ul class="helia-nav-links"><li><a href="stevenschaefer.html">About Me</a></li><li><a href="research.html">Research</a></li><li><a href="new.html">New</a></li></ul><button type="button" class="helia-search-button" aria-label="Search (/ or Ctrl+K)" aria-haspopup="dialog"><span class="helia-search-icon">⌕</span><span class="helia-search-label">Search</span><kbd class="helia-search-key">/</kbd></button></nav>
+<div class="helia-page" data-kind="reference">
+<article class="helia-article">
+<header class="helia-header" data-entry="staton-2016-semantics" data-kind="reference">
+<h2 class="helia-heading"><span class="helia-taxon">Reference.</span> Semantics for probabilistic programming: higher-order functions, continuous distributions, and soft constraints</h2>
+<div class="helia-meta"><span class="helia-author"><a class="helia-entry-link" href="samstaton.html" data-entry="samstaton">Sam Staton</a>, <a class="helia-entry-link" href="hongseokyang.html" data-entry="hongseokyang">Hongseok Yang</a>, <a class="helia-entry-link" href="frankwood.html" data-entry="frankwood">Frank Wood</a>, <a class="helia-entry-link" href="chrisheunen.html" data-entry="chrisheunen">Chris Heunen</a>, <a class="helia-entry-link" href="ohadkammar.html" data-entry="ohadkammar">Ohad Kammar</a></span> · <span class="helia-byline"><a class="helia-entry-link" href="lics.html" data-entry="lics">LICS</a> · 2016</span> · <span class="helia-tags"><span class="helia-tag" data-tag="probabilistic"><a class="helia-entry-link" href="tag-probabilistic.html" data-entry="tag-probabilistic">probabilistic</a></span> <span class="helia-tag" data-tag="denotational-semantics"><a class="helia-entry-link" href="tag-denotational-semantics.html" data-entry="tag-denotational-semantics">denotational-semantics</a></span></span> · <span class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/2933575.2935313">DOI</a></span> · <span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/1601.04943">arXiv</a></span></span></div>
+</header>
+<div class="helia-body">
+</div>
+<div class="helia-cite helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><h3 class="helia-heading">Cite</h3>
+</summary>
+<div class="helia-group-body">
+<div class="helia-widget" data-widget="helia-cite-formats" data-props="{&quot;key&quot;:&quot;staton-2016-semantics&quot;,&quot;bibtex&quot;:&quot;@inproceedings{staton-2016-semantics, series={LICS ’16}, title={Semantics for probabilistic programming: higher-order functions, continuous distributions, and soft constraints}, url={http://dx.doi.org/10.1145/2933575.2935313}, DOI={10.1145/2933575.2935313}, booktitle={Proceedings of the 31st Annual ACM/IEEE Symposium on Logic in Computer Science}, publisher={ACM}, author={Staton, Sam and Yang, Hongseok and Wood, Frank and Heunen, Chris and Kammar, Ohad}, year={2016}, month=July, pages={525–534}, collection={LICS ’16} }&quot;,&quot;bib-file&quot;:&quot;staton-2016-semantics.bib&quot;,&quot;hayagriva&quot;:&quot;staton-2016-semantics:\n  type: article\n  title: &#39;Semantics for probabilistic programming: higher-order functions, continuous distributions, and soft constraints&#39;\n  author:\n  - Staton, Sam\n  - Yang, Hongseok\n  - Wood, Frank\n  - Heunen, Chris\n  - Kammar, Ohad\n  date: 2016-07\n  page-range: 525-534\n  serial-number:\n    doi: 10.1145/2933575.2935313\n  parent:\n    type: proceedings\n    title: Proceedings of the 31st Annual ACM/IEEE Symposium on Logic in Computer Science\n    publisher: ACM\n&quot;,&quot;yml-file&quot;:&quot;staton-2016-semantics.yml&quot;}"><div class="helia-cite-key" data-copy="@staton-2016-semantics" data-copy-label="citation key"><span class="helia-bib-key">Cite as</span> <code class="helia-raw-inline">@staton-2016-semantics</code> (helia, typst) · <code class="helia-raw-inline">\cite{staton-2016-semantics}</code> (LaTeX)</div>
+<div class="helia-cite-format helia-collapsible" data-format="bibtex" data-copy="true" data-copy-label="BibTeX">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">BibTeX</span></summary>
+<div class="helia-group-body">
+<details class="helia-code" open><summary class="helia-code-summary"><span class="helia-code-lang">bibtex</span> · <span class="helia-code-lines">1 line</span></summary><pre class="helia-raw"><code class="language-bibtex"><span class="hl-text hl-bibtex"><span class="hl-meta hl-entry hl-braces hl-bibtex"><span class="hl-keyword hl-other hl-entry-type hl-bibtex"><span class="hl-punctuation hl-definition hl-keyword hl-bibtex">@</span>inproceedings</span><span class="hl-punctuation hl-section hl-entry hl-begin hl-bibtex">{</span><span class="hl-entity hl-name hl-type hl-entry-key hl-bibtex">staton-2016-semantics</span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">series</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>LICS ’16<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">title</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>Semantics for probabilistic programming: higher-order functions, continuous distributions, and soft constraints<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">url</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>http://dx.doi.org/10.1145/2933575.2935313<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">DOI</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>10.1145/2933575.2935313<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">booktitle</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>Proceedings of the 31st Annual ACM/IEEE Symposium on Logic in Computer Science<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">publisher</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>ACM<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">author</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>Staton, Sam and Yang, Hongseok and Wood, Frank and Heunen, Chris and Kammar, Ohad<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">year</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>2016<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">month</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span>July</span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">pages</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>525–534<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">collection</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>LICS ’16<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span> </span><span class="hl-punctuation hl-section hl-entry hl-end hl-bibtex">}</span></span></span></code></pre></details>
+</div>
+</details>
+</div>
+<div class="helia-cite-format helia-collapsible" data-format="hayagriva" data-copy="true" data-copy-label="hayagriva YAML">
+<details>
+<summary class="helia-group-summary"><span class="helia-group-title">hayagriva YAML (typst)</span></summary>
+<div class="helia-group-body">
+<details class="helia-code" open><summary class="helia-code-summary"><span class="helia-code-lang">yaml</span> · <span class="helia-code-lines">17 lines</span></summary><pre class="helia-raw"><code class="language-yaml"><span class="hl-source hl-yaml"><span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">staton-2016-semantics</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">type</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">article</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">title</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-quoted hl-single hl-yaml"><span class="hl-punctuation hl-definition hl-string hl-begin hl-yaml">&#39;</span>Semantics for probabilistic programming: higher-order functions, continuous distributions, and soft constraints<span class="hl-punctuation hl-definition hl-string hl-end hl-yaml">&#39;</span></span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">author</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Staton, Sam</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Yang, Hongseok</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Wood, Frank</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Heunen, Chris</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Kammar, Ohad</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">date</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">2016-07</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">page-range</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">525-534</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">serial-number</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">doi</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">10.1145/2933575.2935313</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">parent</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">type</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">proceedings</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">title</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Proceedings of the 31st Annual ACM/IEEE Symposium on Logic in Computer Science</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">publisher</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">ACM</span>
+</span></code></pre></details>
+</div>
+</details>
+</div>
+<div class="helia-cite-files">Download: <a class="helia-link" href="staton-2016-semantics.bib">staton-2016-semantics.bib</a> · <a class="helia-link" href="staton-2016-semantics.yml">staton-2016-semantics.yml</a></div>
+</div>
+</div>
+</details>
+</div>
+<div class="helia-reference-cited-by helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">Cited by (8)</span></summary>
+<div class="helia-group-body">
+<section class="helia-transclusion" data-entry="stites-2025-multi" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="stites-2025-multi"><span class="helia-title">Multi-Language Probabilistic Programming</span>&nbsp;<a class="helia-slug" href="stites-2025-multi.html">stites-2025-multi</a><span class="helia-byline"><span class="helia-entry-link" data-entry="oopsla">OOPSLA</span> · 2025</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="stites-2025-multi" data-kind="reference">
+<div class="helia-abstract">There are many different probabilistic programming languages that are specialized to specific kinds of probabilistic programs. From a usability and scalability perspective, this is undesirable: today, probabilistic programmers are forced up-front to decide which language they want to use and cannot mix-and-match different languages for handling heterogeneous programs. To rectify this, we seek a foundation for sound interoperability for probabilistic programming languages: just as today’s Python programmers can resort to low-level C programming for performance, we argue that probabilistic programmers should be able to freely mix different languages for meeting the demands of heterogeneous probabilistic programming environments. As a first step towards this goal, we introduce Multi PPL, a probabilistic multi-language that enables programmers to interoperate between two different probabilistic programming languages: one that leverages a high-performance exact discrete inference strategy, and one that uses approximate importance sampling. We give a syntax and semantics for Multi PPL, prove soundness of its inference algorithm, and provide empirical evidence that it enables programmers to perform inference on complex heterogeneous probabilistic programs and flexibly exploits the strengths and weaknesses of two languages simultaneously.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="pdf-url"><a class="helia-link helia-external" href="https://dl.acm.org/doi/pdf/10.1145/3720482">PDF</a></span> · <span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/3720482">DOI</a></span> · <span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/2502.19538">arXiv</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/journals/pacmpl/StitesLH25">pldb</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="li-2024-a" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="li-2024-a"><span class="helia-title">A Nominal Approach to Probabilistic Separation Logic</span>&nbsp;<a class="helia-slug" href="li-2024-a.html">li-2024-a</a><span class="helia-byline"><span class="helia-entry-link" data-entry="lics">LICS</span> · 2024</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="li-2024-a" data-kind="reference">
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/3661814.3662135">DOI</a></span> · <span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/2405.06826">arXiv</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="li-2023-lilac" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="li-2023-lilac"><span class="helia-title">Lilac: A Modal Separation Logic for Conditional Probability</span>&nbsp;<a class="helia-slug" href="li-2023-lilac.html">li-2023-lilac</a><span class="helia-byline"><span class="helia-entry-link" data-entry="pldi">PLDI</span> · 2023</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="li-2023-lilac" data-kind="reference">
+<div class="helia-abstract">We present Lilac, a separation logic for reasoning about probabilistic programs where separating conjunction captures probabilistic independence. Inspired by an analogy with mutable state where sampling corresponds to dynamic allocation, we show how probability spaces over a fixed, ambient sample space appear to be the natural analogue of heap fragments, and present a new combining operation on them such that probability spaces behave like heaps and measurability of random variables behaves like ownership. This combining operation forms the basis for our model of separation, and produces a logic with many pleasant properties. In particular, Lilac has a frame rule identical to the ordinary one, and naturally accommodates advanced features like continuous random variables and reasoning about quantitative properties of programs. Then we propose a new modality based on disintegration theory for reasoning about conditional probability. We show how the resulting modal logic validates examples from prior work, and give a formal verification of an intricate weighted sampling algorithm whose correctness depends crucially on conditional independence structure.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="pdf-url"><a class="helia-link helia-external" href="https://dl.acm.org/doi/pdf/10.1145/3591226">PDF</a></span> · <span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/3591226">DOI</a></span> · <span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/2304.01339">arXiv</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/journals/pacmpl/Li0H23">pldb</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="kammar-2022-fully" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="kammar-2022-fully"><span class="helia-title">Fully abstract models for effectful λ-calculi via category-theoretic logical relations</span>&nbsp;<a class="helia-slug" href="kammar-2022-fully.html">kammar-2022-fully</a><span class="helia-byline"><span class="helia-entry-link" data-entry="popl">POPL</span> · 2022</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="kammar-2022-fully" data-kind="reference">
+<div class="helia-abstract">We present a construction which, under suitable assumptions, takes a model of Moggi’s computational λ-calculus with sum types, effect operations and primitives, and yields a model that is adequate and fully abstract. The construction, which uses the theory of fibrations, categorical glueing, ⊤⊤-lifting, and ⊤⊤-closure, takes inspiration from O’Hearn &amp; Riecke’s fully abstract model for PCF. Our construction can be applied in the category of sets and functions, as well as the category of diffeological spaces and smooth maps and the category of quasi-Borel spaces, which have been studied as semantics for differentiable and probabilistic programming.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="pdf-url"><a class="helia-link helia-external" href="https://dl.acm.org/doi/pdf/10.1145/3498705">PDF</a></span> · <span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/3498705">DOI</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/journals/pacmpl/KammarKS22">pldb</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="amorim_lam_2022" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="amorim_lam_2022"><span class="helia-title">Distribution Theoretic Semantics for Non-Smooth Differentiable Programming</span>&nbsp;<a class="helia-slug" href="amorim_lam_2022.html">amorim_lam_2022</a><span class="helia-byline"><span class="helia-entry-link" data-entry="arxiv">arXiv</span> · 2022</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="amorim_lam_2022" data-kind="reference">
+<div class="helia-abstract">
+<p>With the wide spread of deep learning and gradient descent inspired optimization algorithms, differentiable programming has gained traction. Nowadays it has found applications in many different areas as well, such as scientific computing, robotics, computer graphics and others. One of its notoriously difficult problems consists in interpreting programs that are not differentiable everywhere.</p>
+<p>In this work we define <span class="helia-math helia-math-inline helia-mathml"><math><msub><mi>𝜆</mi><mi>𝛿</mi></msub></math></span>, a core calculus for non-smooth differentiable programs and define its semantics using concepts from distribution theory, a well-established area of functional analysis. We also show how <span class="helia-math helia-math-inline helia-mathml"><math><msub><mi>𝜆</mi><mi>𝛿</mi></msub></math></span> presents better equational properties than other existing semantics and use our semantics to reason about a simplified ray tracing algorithm. Further, we relate our semantics to existing differentiable languages by providing translations to and from other existing differentiable semantic models. Finally, we provide a proof-of-concept implementation in PyTorch of the novel constructions in this paper.</p>
+</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="url"><a class="helia-link helia-external" href="https://arxiv.org/abs/2207.05946">Web</a></span> · <span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/2207.05946">arXiv</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="amorim_etal_2021_lics" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="amorim_etal_2021_lics"><span class="helia-title">Universal Semantics for the Stochastic Lambda-Calculus</span>&nbsp;<a class="helia-slug" href="amorim_etal_2021_lics.html">amorim_etal_2021_lics</a><span class="helia-byline"><span class="helia-entry-link" data-entry="lics">LICS</span> · 2021</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="amorim_etal_2021_lics" data-kind="reference">
+<div class="helia-abstract">We define sound and adequate denotational and operational semantics for the stochastic lambda calculus. These two semantic approaches build on previous work that used similar techniques to reason about higher-order probabilistic programs, but for the first time admit an adequacy theorem relating the operational and denotational views. This resolves the main issue left open in (Bacci et al. 2018).</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1109/lics52264.2021.9470747">DOI</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="vakar-2019-a" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="vakar-2019-a"><span class="helia-title">A domain theory for statistical probabilistic programming</span>&nbsp;<a class="helia-slug" href="vakar-2019-a.html">vakar-2019-a</a><span class="helia-byline"><span class="helia-entry-link" data-entry="popl">POPL</span> · 2019</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="vakar-2019-a" data-kind="reference">
+<div class="helia-abstract">We give an adequate denotational semantics for languages with recursive higher-order types, continuous probability distributions, and soft constraints. These are expressive languages for building Bayesian models of the kinds used in computational statistics and machine learning. Among them are untyped languages, similar to Church and WebPPL, because our semantics allows recursive mixed-variance datatypes. Our semantics justifies important program equivalences including commutativity. Our new semantic model is based on ‘quasi-Borel predomains’. These are a mixture of chain-complete partial orders (cpos) and quasi-Borel spaces. Quasi-Borel spaces are a recent model of probability theory that focuses on sets of admissible random elements. Probability is traditionally treated in cpo models using probabilistic powerdomains, but these are not known to be commutative on any class of cpos with higher order functions. By contrast, quasi-Borel predomains do support both a commutative probabilistic powerdomain and higher-order functions. As we show, quasi-Borel predomains form both a model of Fiore’s axiomatic domain theory and a model of Kock’s synthetic measure theory.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="pdf-url"><a class="helia-link helia-external" href="https://dl.acm.org/doi/pdf/10.1145/3290349">PDF</a></span> · <span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/3290349">DOI</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/journals/pacmpl/VakarKS19">pldb</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="heunen-2017-a" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="heunen-2017-a"><span class="helia-title">A convenient category for higher-order probability theory</span>&nbsp;<a class="helia-slug" href="heunen-2017-a.html">heunen-2017-a</a><span class="helia-byline"><span class="helia-entry-link" data-entry="lics">LICS</span> · 2017</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="heunen-2017-a" data-kind="reference">
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1109/lics.2017.8005137">DOI</a></span> · <span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/1701.02547">arXiv</a></span></div>
+</div>
+</div>
+</details>
+</section>
+</div>
+</details>
+</div>
+<div class="helia-reference-cites helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">Cites 36 works (0 here)</span></summary>
+<div class="helia-group-body">
+<div class="helia-reference-cites-away helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">External (36)</span></summary>
+<div class="helia-group-body">
+<ul>
+<li>Symbolic Bayesian inference by lazy partial evaluation (2016)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3022670.2951942">A lambda-calculus foundation for universal probabilistic programming</a> (2016)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1017/s0960129516000098">On computability and disintegration</a> (2015)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/2804302.2804317">Practical probabilistic programming with monads</a> (2015)</li>
+<li>Program transformation for probabilistic programs (2015)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.4230/lipics.fsttcs.2015.475">A Provably Correct Sampler for Probabilistic Programs</a> (2015)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/2535838.2535865">Probabilistic coherence spaces are fully abstract for probabilistic PCF</a> (2014)</li>
+<li><a class="helia-link helia-external" href="https://arxiv.org/abs/1404.0099">Venture: a higher-order probabilistic programming platform with programmable inference</a> (2014)</li>
+<li>A C++ library for probability and sampling, version (2014)</li>
+<li><a class="helia-link helia-external" href="https://arxiv.org/abs/1507.00996">A new approach to probabilistic programming inference</a> (2014)</li>
+<li><a class="helia-link helia-external" href="https://arxiv.org/abs/1403.0504">A Compilation Target for Probabilistic Programming Languages</a> (2014)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1109/lics.2011.49">Noncomputable Conditional Distributions</a> (2011)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-642-19718-5_5">Measure transformer semantics for Bayesian machine learning</a> (2011)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1016/j.apal.2011.06.011">Computable de Finetti measures</a> (2011)</li>
+<li>Infer.NET 2.4 (2010)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.18637/jss.v035.i04">PyMC: Bayesian Stochastic Modelling in Python</a> (2010)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/1452044.1452048">A probabilistic language based on sampling functions</a> (2008)</li>
+<li>A stochastic programming perspective on nonparametric Bayes (2008)</li>
+<li><a class="helia-link helia-external" href="https://arxiv.org/abs/1206.3255">Church: a language for generative models</a> (2008)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1201/9781584889427">Stochastic Relations: Foundations for Markov Transition Systems</a> (2007)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1016/j.tcs.2006.08.006">Generic models for computational effects</a> (2006)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1016/s0890-5401(03)00088-9">Modelling environments in call-by-value programming languages</a> (2003)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/503272.503288">Stochastic lambda calculus and monads of probability distributions</a> (2002)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-1-4757-3437-9">Sequential Monte Carlo Methods in Practice</a> (2001)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/3-540-45315-6_1">Adequacy for Algebraic Effects</a> (2001)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1006/inco.1999.2844">Integration in Real PCF</a> (2000)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/3-540-48959-2_17">Call-by-Push-Value: A Subsuming Paradigm</a> (1999)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-642-85473-6">A Course on Borel Sets</a> (1998)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1016/0890-5401(91)90052-4">Notions of computation and monads</a> (1991)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1109/lics.1989.39173">A probabilistic powerdomain of evaluations</a> (1989)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.7146/dpb.v12i156.7430">Type Algebras, Functor Categories, and Block Structure</a> (1983)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/bfb0092872">A categorical approach to probability theory</a> (1982)</li>
+<li>Basic concepts of enriched category theory (1982)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1016/0022-0000(81)90036-2">Semantics of probabilistic programs</a> (1981)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/bf01220868">Monads on symmetric monoidal closed categories</a> (1970)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1215/ijm/1255631584">Borel structures for function spaces</a> (1961)</li>
+</ul>
+</div>
+</details>
+</div>
+</div>
+</details>
+</div>
+<footer class="helia-footer">
+<div class="helia-related helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><h3 class="helia-heading">Related</h3>
+</summary>
+<div class="helia-group-body">
+<ul>
+<li><a class="helia-entry-link" href="amorim_2023_fossacs.html" data-entry="amorim_2023_fossacs">A Higher-Order Language for Markov Kernels and Linear Operators</a> <span class="helia-related-tags"><a class="helia-entry-link" href="tag-denotational-semantics.html" data-entry="tag-denotational-semantics">#denotational-semantics</a> <a class="helia-entry-link" href="tag-probabilistic.html" data-entry="tag-probabilistic">#probabilistic</a></span></li>
+<li><a class="helia-entry-link" href="amorim_2025_oopsla.html" data-entry="amorim_2025_oopsla">Denotational Foundations for Expected Cost Analysis</a> <span class="helia-related-tags"><a class="helia-entry-link" href="tag-denotational-semantics.html" data-entry="tag-denotational-semantics">#denotational-semantics</a> <a class="helia-entry-link" href="tag-probabilistic.html" data-entry="tag-probabilistic">#probabilistic</a></span></li>
+<li><a class="helia-entry-link" href="scibior-2017-denotational.html" data-entry="scibior-2017-denotational">Denotational validation of higher-order Bayesian inference</a> <span class="helia-related-tags"><a class="helia-entry-link" href="tag-denotational-semantics.html" data-entry="tag-denotational-semantics">#denotational-semantics</a> <a class="helia-entry-link" href="tag-probabilistic.html" data-entry="tag-probabilistic">#probabilistic</a></span></li>
+<li><a class="helia-entry-link" href="zilberstein-2025-denotational.html" data-entry="zilberstein-2025-denotational">Denotational Semantics for Probabilistic and Concurrent Programs</a> <span class="helia-related-tags"><a class="helia-entry-link" href="tag-denotational-semantics.html" data-entry="tag-denotational-semantics">#denotational-semantics</a> <a class="helia-entry-link" href="tag-probabilistic.html" data-entry="tag-probabilistic">#probabilistic</a></span></li>
+</ul>
+</div>
+</details>
+</div>
+</footer>
+</article>
+<div class="helia-identity"><span class="helia-id">staton-2016-semantics</span> <span class="helia-kind">reference</span> <span class="helia-path">entries/refs/staton-2016-semantics/staton-2016-semantics.hel</span></div>
+</div>
+</body>
+</html>

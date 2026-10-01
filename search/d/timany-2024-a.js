@@ -1,0 +1,1 @@
+heliaSearchData("d/timany-2024-a",{"id":"timany-2024-a","title":"A Logical Approach to Type Soundness","kind":"reference","tags":["logical-relations"],"authors":["Amin Timany","Derek Dreyer","Lars Birkedal","Robbert Krebbers"],"venue":["JACM","Journal of the ACM"],"date":null,"url":"timany-2024-a.html","headings":[],"body":""});

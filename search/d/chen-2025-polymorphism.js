@@ -1,0 +1,1 @@
+heliaSearchData("d/chen-2025-polymorphism",{"id":"chen-2025-polymorphism","title":"Polymorphism with Typed Holes","kind":"reference","tags":["live-programming"],"authors":["Adam Chen","Cyrus Omar","Thomas Porter"],"venue":[],"date":null,"url":"chen-2025-polymorphism.html","headings":[],"body":""});

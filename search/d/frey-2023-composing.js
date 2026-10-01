@@ -1,0 +1,1 @@
+heliaSearchData("d/frey-2023-composing",{"id":"frey-2023-composing","title":"Composing games into complex institutions","kind":"reference","tags":["open-games"],"authors":["Joshua Tan","Jules Hedges","Philipp Zahn","Seth Frey"],"venue":["PLOS ONE"],"date":null,"url":"frey-2023-composing.html","headings":[],"body":""});

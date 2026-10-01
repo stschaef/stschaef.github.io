@@ -1,0 +1,1 @@
+heliaSearchData("d/rastgoftar-2023-a",{"id":"rastgoftar-2023-a","title":"A Concurrent Switching Model for Traffic Congestion Control","kind":"reference","tags":["dynamical-systems"],"authors":["Hossein Rastgoftar","Jean-Baptiste Jeannin","Xun Liu"],"venue":["IFAC-PapersOnLine"],"date":null,"url":"rastgoftar-2023-a.html","headings":[],"body":""});

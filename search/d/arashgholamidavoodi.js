@@ -1,0 +1,1 @@
+heliaSearchData("d/arashgholamidavoodi",{"id":"arashgholamidavoodi","title":"Arash Gholamidavoodi","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"arashgholamidavoodi.html","headings":[],"body":""});

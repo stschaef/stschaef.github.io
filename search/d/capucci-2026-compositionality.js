@@ -1,0 +1,1 @@
+heliaSearchData("d/capucci-2026-compositionality",{"id":"capucci-2026-compositionality","title":"Compositionality of Lyapunov functions via assume-guarantee reasoning","kind":"reference","tags":["dynamical-systems"],"authors":["David Jaz Myers","Matteo Capucci"],"venue":["arXiv"],"date":null,"url":"capucci-2026-compositionality.html","headings":[],"body":""});

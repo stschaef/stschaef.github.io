@@ -1,0 +1,1 @@
+heliaSearchData("d/tag-guarded-recursion",{"id":"tag-guarded-recursion","title":"guarded-recursion","kind":"tag","tags":[],"authors":[],"venue":[],"date":null,"url":"tag-guarded-recursion.html","headings":[],"body":""});

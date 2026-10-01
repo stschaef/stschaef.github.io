@@ -1,0 +1,1 @@
+heliaSearchData("d/vinmec-central-park-international-hospital",{"id":"vinmec-central-park-international-hospital","title":"Vinmec Central Park International Hospital","kind":"institution","tags":[],"authors":[],"venue":[],"date":null,"url":"vinmec-central-park-international-hospital.html","headings":[],"body":""});

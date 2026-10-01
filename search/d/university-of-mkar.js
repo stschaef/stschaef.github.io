@@ -1,0 +1,1 @@
+heliaSearchData("d/university-of-mkar",{"id":"university-of-mkar","title":"University of Mkar","kind":"institution","tags":[],"authors":[],"venue":[],"date":null,"url":"university-of-mkar.html","headings":[],"body":""});

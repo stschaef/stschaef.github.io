@@ -1,0 +1,1 @@
+heliaSearchData("d/mateotorresruiz",{"id":"mateotorresruiz","title":"Mateo Torres-Ruiz","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"mateotorresruiz.html","headings":[],"body":""});

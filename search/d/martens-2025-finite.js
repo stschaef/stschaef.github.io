@@ -1,0 +1,1 @@
+heliaSearchData("d/martens-2025-finite",{"id":"martens-2025-finite","title":"Finite-Choice Logic Programming","kind":"reference","tags":["logic-programming"],"authors":["Chris Martens","Michael Arntzenius","Robert J. Simmons"],"venue":["POPL","Symposium on Principles of Programming Languages"],"date":null,"url":"martens-2025-finite.html","headings":[],"body":""});

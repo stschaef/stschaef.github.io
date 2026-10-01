@@ -1,0 +1,1 @@
+heliaSearchData("d/rijke-2020-modalities",{"id":"rijke-2020-modalities","title":"Modalities in homotopy type theory","kind":"reference","tags":["homotopy-type-theory","modal-type-theory"],"authors":["Bas Spitters","Egbert Rijke","Michael Shulman"],"venue":["LMCS","Logical Methods in Computer Science"],"date":null,"url":"rijke-2020-modalities.html","headings":[],"body":""});

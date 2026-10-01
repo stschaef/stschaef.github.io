@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>Productive coprogramming with guarded recursion</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Ctext y=%22.9em%22 font-size=%2290%22%3E%F0%9F%8C%BB%3C/text%3E%3C/svg%3E">
+<meta name="generator" content="helia">
+<link rel="alternate" type="application/atom+xml" title="Steven Schaefer" href="feed.xml">
+<link rel="alternate" type="application/feed+json" title="Steven Schaefer" href="feed.json">
+<script src="helia/theme-version.js"></script>
+<script src="theme/folio-early.js"></script>
+<link rel="stylesheet" href="helia/theme.css">
+<link rel="stylesheet" href="helia/highlight.css">
+<link rel="stylesheet" href="helia/search.css">
+<link rel="stylesheet" href="theme/katex.css">
+<link rel="stylesheet" href="theme/recipe.css">
+<link rel="stylesheet" href="theme/site.css">
+<link rel="stylesheet" href="theme/folio.css">
+<script defer src="helia/runtime.js"></script>
+<script defer src="helia/search.js"></script>
+<script defer src="theme/glyphcraft.js"></script>
+<script defer src="theme/glyphart.js"></script>
+<script defer src="theme/glyphgen.js"></script>
+<script defer src="theme/ornament.js"></script>
+<script defer src="theme/folio.js"></script>
+<script defer src="theme/portrait.js"></script>
+<script type="application/json" id="helia-widgets">{"helia-cite-formats":"widgets/helia-cite-formats-a3294ac7.js"}</script>
+<link rel="modulepreload" href="widgets/helia-cite-formats-a3294ac7.js">
+<script type="module" src="widgets/runtime.js"></script>
+</head>
+<body>
+<nav class="helia-topbar"><a class="helia-home" href="home.html">Steven Schaefer</a><ul class="helia-nav-links"><li><a href="stevenschaefer.html">About Me</a></li><li><a href="research.html">Research</a></li><li><a href="new.html">New</a></li></ul><button type="button" class="helia-search-button" aria-label="Search (/ or Ctrl+K)" aria-haspopup="dialog"><span class="helia-search-icon">⌕</span><span class="helia-search-label">Search</span><kbd class="helia-search-key">/</kbd></button></nav>
+<div class="helia-page" data-kind="reference">
+<article class="helia-article">
+<header class="helia-header" data-entry="atkey-2013-productive" data-kind="reference">
+<h2 class="helia-heading"><span class="helia-taxon">Reference.</span> Productive coprogramming with guarded recursion</h2>
+<div class="helia-meta"><span class="helia-author"><a class="helia-entry-link" href="robertatkey.html" data-entry="robertatkey">Robert Atkey</a>, <a class="helia-entry-link" href="conormcbride.html" data-entry="conormcbride">Conor McBride</a></span> · <span class="helia-byline"><a class="helia-entry-link" href="icfp.html" data-entry="icfp">ICFP</a> · 2013</span> · <span class="helia-tags"><span class="helia-tag" data-tag="guarded-domain-theory"><a class="helia-entry-link" href="tag-guarded-domain-theory.html" data-entry="tag-guarded-domain-theory">guarded-domain-theory</a></span> <span class="helia-tag" data-tag="guarded-recursion"><a class="helia-entry-link" href="tag-guarded-recursion.html" data-entry="tag-guarded-recursion">guarded-recursion</a></span></span> · <span class="helia-entry-links"><span class="helia-entry-link" data-field="pdf-url"><a class="helia-link helia-external" href="https://dl.acm.org/doi/pdf/10.1145/2500365.2500597">PDF</a></span> · <span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/2500365.2500597">DOI</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/conf/icfp/AtkeyM13">pldb</a></span></span></div>
+</header>
+<div class="helia-body">
+</div>
+<div class="helia-cite helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><h3 class="helia-heading">Cite</h3>
+</summary>
+<div class="helia-group-body">
+<div class="helia-widget" data-widget="helia-cite-formats" data-props="{&quot;key&quot;:&quot;atkey-2013-productive&quot;,&quot;bibtex&quot;:&quot;@inproceedings{atkey-2013-productive, series={ICFP′13}, title={Productive coprogramming with guarded recursion}, url={http://dx.doi.org/10.1145/2500365.2500597}, DOI={10.1145/2500365.2500597}, booktitle={Proceedings of the 18th ACM SIGPLAN international conference on Functional programming}, publisher={ACM}, author={Atkey, Robert and McBride, Conor}, year={2013}, month=Sept, pages={197–208}, collection={ICFP′13} }&quot;,&quot;bib-file&quot;:&quot;atkey-2013-productive.bib&quot;,&quot;hayagriva&quot;:&quot;atkey-2013-productive:\n  type: article\n  title: Productive coprogramming with guarded recursion\n  author:\n  - Atkey, Robert\n  - McBride, Conor\n  date: 2013-09\n  page-range: 197-208\n  serial-number:\n    doi: 10.1145/2500365.2500597\n  parent:\n    type: proceedings\n    title: Proceedings of the 18th ACM SIGPLAN international conference on Functional programming\n    publisher: ACM\n&quot;,&quot;yml-file&quot;:&quot;atkey-2013-productive.yml&quot;}"><div class="helia-cite-key" data-copy="@atkey-2013-productive" data-copy-label="citation key"><span class="helia-bib-key">Cite as</span> <code class="helia-raw-inline">@atkey-2013-productive</code> (helia, typst) · <code class="helia-raw-inline">\cite{atkey-2013-productive}</code> (LaTeX)</div>
+<div class="helia-cite-format helia-collapsible" data-format="bibtex" data-copy="true" data-copy-label="BibTeX">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">BibTeX</span></summary>
+<div class="helia-group-body">
+<details class="helia-code" open><summary class="helia-code-summary"><span class="helia-code-lang">bibtex</span> · <span class="helia-code-lines">1 line</span></summary><pre class="helia-raw"><code class="language-bibtex"><span class="hl-text hl-bibtex"><span class="hl-meta hl-entry hl-braces hl-bibtex"><span class="hl-keyword hl-other hl-entry-type hl-bibtex"><span class="hl-punctuation hl-definition hl-keyword hl-bibtex">@</span>inproceedings</span><span class="hl-punctuation hl-section hl-entry hl-begin hl-bibtex">{</span><span class="hl-entity hl-name hl-type hl-entry-key hl-bibtex">atkey-2013-productive</span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">series</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>ICFP′13<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">title</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>Productive coprogramming with guarded recursion<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">url</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>http://dx.doi.org/10.1145/2500365.2500597<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">DOI</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>10.1145/2500365.2500597<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">booktitle</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>Proceedings of the 18th ACM SIGPLAN international conference on Functional programming<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">publisher</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>ACM<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">author</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>Atkey, Robert and McBride, Conor<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">year</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>2013<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">month</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span>Sept</span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">pages</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>197–208<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">collection</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>ICFP′13<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span> </span><span class="hl-punctuation hl-section hl-entry hl-end hl-bibtex">}</span></span></span></code></pre></details>
+</div>
+</details>
+</div>
+<div class="helia-cite-format helia-collapsible" data-format="hayagriva" data-copy="true" data-copy-label="hayagriva YAML">
+<details>
+<summary class="helia-group-summary"><span class="helia-group-title">hayagriva YAML (typst)</span></summary>
+<div class="helia-group-body">
+<details class="helia-code" open><summary class="helia-code-summary"><span class="helia-code-lang">yaml</span> · <span class="helia-code-lines">14 lines</span></summary><pre class="helia-raw"><code class="language-yaml"><span class="hl-source hl-yaml"><span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">atkey-2013-productive</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">type</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">article</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">title</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Productive coprogramming with guarded recursion</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">author</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Atkey, Robert</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">McBride, Conor</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">date</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">2013-09</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">page-range</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">197-208</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">serial-number</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">doi</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">10.1145/2500365.2500597</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">parent</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">type</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">proceedings</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">title</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Proceedings of the 18th ACM SIGPLAN international conference on Functional programming</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">publisher</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">ACM</span>
+</span></code></pre></details>
+</div>
+</details>
+</div>
+<div class="helia-cite-files">Download: <a class="helia-link" href="atkey-2013-productive.bib">atkey-2013-productive.bib</a> · <a class="helia-link" href="atkey-2013-productive.yml">atkey-2013-productive.yml</a></div>
+</div>
+</div>
+</details>
+</div>
+<div class="helia-reference-cited-by helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">Cited by (12)</span></summary>
+<div class="helia-group-body">
+<section class="helia-transclusion" data-entry="gratzer-2025-a" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="gratzer-2025-a"><span class="helia-title">A Modal Deconstruction of Löb Induction</span>&nbsp;<a class="helia-slug" href="gratzer-2025-a.html">gratzer-2025-a</a><span class="helia-byline"><span class="helia-entry-link" data-entry="popl">POPL</span> · 2025</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="gratzer-2025-a" data-kind="reference">
+<div class="helia-abstract">We present a novel analysis of the fundamental Löb induction principle from guarded recursion. Taking advantage of recent work in modal type theory and univalent foundations, we derive Löb induction from a simpler and more conceptual set of primitives. We then capitalize on these insights to present Gatsby, the first guarded type theory capturing the rich modal structure of the topos of trees alongside Löb induction without immediately precluding canonicity or normalization. We show that Gatsby can recover many prior approaches to guarded recursion and use its additional power to improve on prior examples. We crucially rely on homotopical insights and Gatsby constitutes a new application of univalent foundations to the theory of programming languages.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="pdf-url"><a class="helia-link helia-external" href="https://pure.au.dk/ws/files/470326223/A_Modal_Deconstruction_of_L_b_Induction.pdf">PDF</a></span> · <span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/3704866">DOI</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/journals/pacmpl/Gratzer25">pldb</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="stassen-2025-modelling" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="stassen-2025-modelling"><span class="helia-title">Modelling Recursion and Probabilistic Choice in Guarded Type Theory</span>&nbsp;<a class="helia-slug" href="stassen-2025-modelling.html">stassen-2025-modelling</a><span class="helia-byline"><span class="helia-entry-link" data-entry="popl">POPL</span> · 2025</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="stassen-2025-modelling" data-kind="reference">
+<div class="helia-abstract">Constructive type theory combines logic and programming in one language. This is useful both for reasoning about programs written in type theory, as well as for reasoning about other programming languages inside type theory. It is well-known that it is challenging to extend these applications to languages with recursion and computational effects such as probabilistic choice, because these features are not easily represented in constructive type theory. We show how to define and reason about FPC ⊕ , a programming language with probabilistic choice and recursive types, in guarded type theory. We use higher inductive types to represent finite distributions and guarded recursion to model recursion. We define both operational and denotational semantics of FPC ⊕ , as well as a relation between the two. The relation can be used to prove adequacy, but we also show how to use it to reason about programs up to contextual equivalence.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/3704884">DOI</a></span> · <span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/2408.04455">arXiv</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/journals/pacmpl/StassenMZAB25">pldb</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="giovannini_ding_new_2025" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="giovannini_ding_new_2025"><span class="helia-title">Denotational Semantics of Gradual Typing using Synthetic Guarded Domain Theory</span>&nbsp;<a class="helia-slug" href="giovannini_ding_new_2025.html">giovannini_ding_new_2025</a><span class="helia-byline"><span class="helia-entry-link" data-entry="popl">POPL</span> · 2025</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="giovannini_ding_new_2025" data-kind="reference">
+<div class="helia-abstract">
+<p>Gradually typed programming languages, which allow for soundly mixing static and dynamically typed programming styles, present a strong challenge for metatheorists. Even the simplest sound gradually typed languages feature at least recursion and errors, with realistic languages featuring furthermore runtime allocation of memory locations and dynamic type tags. Further, the desired metatheoretic properties of gradually typed languages have become increasingly sophisticated: validity of type-based equational reasoning as well as the relational property known as graduality. Many recent works have tackled verifying these properties, but the resulting mathematical developments are highly repetitive and tedious, with few reusable theorems persisting across different developments.</p>
+<p>In this work, we present a new denotational semantics for gradual typing developed using guarded domain theory. Guarded domain theory combines the generality of step-indexed logical relations for modeling advanced programming features with the modularity and reusability of denotational semantics. We demonstrate the feasibility of this approach with a model of a simple gradually typed lambda calculus and prove the validity of beta-eta equality and the graduality theorem for the denotational model. This model should provide the basis for a reusable mathematical theory of gradually typed program semantics. Finally, we have mechanized most of the core theorems of our development in Guarded Cubical Agda, a recent extension of Agda with support for the guarded recursive constructions we use.</p>
+</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="pdf-url"><a class="helia-link helia-external" href="https://dl.acm.org/doi/pdf/10.1145/3704863">PDF</a></span> · <span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/3704863">DOI</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/journals/pacmpl/GiovanniniDN25">pldb</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="palombi_sterling_2023" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="palombi_sterling_2023"><span class="helia-title">Classifying topoi in synthetic guarded domain theory: the universal property of multi-clock guarded recursion</span>&nbsp;<a class="helia-slug" href="palombi_sterling_2023.html">palombi_sterling_2023</a><span class="helia-byline"><span class="helia-entry-link" data-entry="entcs">ENTCS</span> · 2023</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="palombi_sterling_2023" data-kind="reference">
+<div class="helia-abstract">Several different topoi have played an important role in the development and applications of synthetic guarded domain theory (SGDT), a new kind of synthetic domain theory that abstracts the concept of guarded recursion frequently employed in the semantics of programming languages. In order to unify the accounts of guarded recursion and coinduction, several authors have enriched SGDT with multiple “clocks” parameterizing different time-streams, leading to more complex and difficult to understand topos models. Until now these topoi have been understood very concretely qua categories of presheaves, and the logico-geometrical question of what theories these topoi classify has remained open. We show that several important topos models of SGDT classify very simple geometric theories, and that the passage to various forms of multi-clock guarded recursion can be rephrased more compositionally in terms of the lower bagtopos construction of Vickers and variations thereon due to Johnstone. We contribute to the consolidation of SGDT by isolating the universal property of multi-clock guarded recursion as a modular construction that applies to any topos model of single-clock guarded recursion.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="url"><a class="helia-link helia-external" href="https://arxiv.org/abs/2210.04636">Web</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="gratzer-2022-a" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="gratzer-2022-a"><span class="helia-title">A Stratified Approach to Löb Induction</span>&nbsp;<a class="helia-slug" href="gratzer-2022-a.html">gratzer-2022-a</a><span class="helia-byline"><span class="helia-entry-link" data-entry="fscd">FSCD</span> · 2022</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="gratzer-2022-a" data-kind="reference">
+<div class="helia-abstract">Guarded type theory extends type theory with a handful of modalities and constants to encode productive recursion. While these theories have seen widespread use, the metatheory of guarded type theories, particularly guarded dependent type theories remains underdeveloped. We show that integrating Löb induction is the key obstruction to unifying guarded recursion and dependence in a well-behaved type theory and prove a no-go theorem sharply bounding such type theories. Based on these results, we introduce GuTT: a stratified guarded type theory. GuTT is properly two type theories, sGuTT and dGuTT. The former contains only propositional rules governing Löb induction but enjoys decidable type-checking while the latter extends the former with definitional equalities. Accordingly, dGuTT does not have decidable type-checking. We prove, however, a novel guarded canonicity theorem for dGuTT, showing that programs in dGuTT can be run. These two type theories work in concert, with users writing programs in sGuTT and running them in dGuTT.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.4230/lipics.fscd.2022.23">DOI</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="gratzerNutyzBirkedal2021" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="gratzerNutyzBirkedal2021"><span class="helia-title">Multimodal Dependent Type Theory</span>&nbsp;<a class="helia-slug" href="gratzerNutyzBirkedal2021.html">gratzerNutyzBirkedal2021</a><span class="helia-byline"><span class="helia-entry-link" data-entry="lmcs">LMCS</span> · 2021</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="gratzerNutyzBirkedal2021" data-kind="reference">
+<div class="helia-abstract">We introduce MTT, a dependent type theory which supports multiple modalities. MTT is parametrized by a mode theory which specifies a collection of modes, modalities, and transformations between them. We show that different choices of mode theory allow us to use the same type theory to compute and reason in many modal situations, including guarded recursion, axiomatic cohesion, and parametric quantification. We reproduce examples from prior work in guarded recursion and axiomatic cohesion, thereby demonstrating that MTT constitutes a simple and usable syntax whose instantiations intuitively correspond to previous handcrafted modal type theories. In some cases, instantiating MTT to a particular situation unearths a previously unknown type theory that improves upon prior systems. Finally, we investigate the metatheory of MTT. We prove the consistency of MTT and establish canonicity through an extension of recent type-theoretic gluing techniques. These results hold irrespective of the choice of mode theory, and thus apply to a wide variety of modal situations.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.46298/lmcs-17(3:11)2021">DOI</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="sterling_2021" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="sterling_2021"><span class="helia-title">First Steps in Synthetic Tait Computability: The Objective Metatheory of Cubical Type Theory</span>&nbsp;<a class="helia-slug" href="sterling_2021.html">sterling_2021</a><span class="helia-byline">2021</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="sterling_2021" data-kind="reference">
+<div class="helia-abstract">The implementation and semantics of dependent type theories can be studied in a syntax-independent way: the objective metatheory of dependent type theories exploits the universal properties of their syntactic categories to endow them with computational content, mathematical meaning, and practical implementation (normalization, type checking, elaboration). The semantic methods of the objective metatheory inform the design and implementation of correct-by-construction elaboration algorithms, promising a principled interface between real proof assistants and ideal mathematics. In this dissertation, I add synthetic Tait computability to the arsenal of the objective metatheorist. Synthetic Tait computability is a mathematical machine to reduce difficult problems of type theory and programming languages to trivial theorems of topos theory. First employed by Sterling and Harper to reconstruct the theory of program modules and their phase separated parametricity, synthetic Tait computability is deployed here to resolve the last major open question in the syntactic metatheory of cubical type theory: normalization of open terms.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.5281/zenodo.5709838">DOI</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="convent-2020-doo" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="convent-2020-doo"><span class="helia-title">Doo bee doo bee doo</span>&nbsp;<a class="helia-slug" href="convent-2020-doo.html">convent-2020-doo</a><span class="helia-byline"><span class="helia-entry-link" data-entry="jfp">JFP</span> · 2020</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="convent-2020-doo" data-kind="reference">
+<div class="helia-abstract">We explore the design and implementation of Frank, a strict functional programming language with a bidirectional effect type system designed from the ground up around a novel variant of Plotkin and Pretnar’s effect handler abstraction. Effect handlers provide an abstraction for modular effectful programming: a handler acts as an interpreter for a collection of commands whose interfaces are statically tracked by the type system. However, Frank eliminates the need for an additional effect handling construct by generalising the basic mechanism of functional abstraction itself. A function is but the special case of a Frank operator that interprets no commands. Moreover, Frank’s operators can be multihandlers which simultaneously interpret commands from several sources at once, without disturbing the direct style of functional programming with values. Effect typing in Frank employs a novel form of effect polymorphism which avoids mentioning effect variables in source code. This is achieved by propagating an ambient ability inwards, rather than accumulating unions of potential effects outwards. With the ambient ability describing the effects that are available at a certain point in the code, it can become necessary to reconfigure access to the ambient ability. A primary goal is to be able to encapsulate internal effects, eliminating a phenomenon we call effect pollution . Moreover, it is sometimes desirable to rewire the effect flow between effectful library components. We propose adaptors as a means for supporting both effect encapsulation and more general rewiring. Programming with effects and handlers is in its infancy. We contribute an exploration of future possibilities, particularly in combination with other forms of rich type systems.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="pdf-url"><a class="helia-link helia-external" href="https://www.cambridge.org/core/services/aop-cambridge-core/content/view/DEC5F8FDABF7DE3088270E07392320DD/S0956796820000039a.pdf/div-class-title-doo-bee-doo-bee-doo-div.pdf">PDF</a></span> · <span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1017/s0956796820000039">DOI</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/journals/jfp/ConventLMM20">pldb</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="krishnaswami_typed_2019" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="krishnaswami_typed_2019"><span class="helia-title">A typed, algebraic approach to parsing</span>&nbsp;<a class="helia-slug" href="krishnaswami_typed_2019.html">krishnaswami_typed_2019</a><span class="helia-byline"><span class="helia-entry-link" data-entry="pldi">PLDI</span> · 2019</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="krishnaswami_typed_2019" data-kind="reference">
+<div class="helia-abstract">In this paper, we recall the definition of the context-free expressions (or µ-regular expressions), an algebraic presentation of the context-free languages. Then, we define a core type system for the context-free expressions which gives a compositional criterion for identifying those context-free expressions which can be parsed unambiguously by predictive algorithms in the style of recursive descent or LL(1). Next, we show how these typed grammar expressions can be used to derive a parser combinator library which both guarantees linear-time parsing with no backtracking and single-token lookahead, and which respects the natural denotational semantics of context-free expressions. Finally, we show how to exploit the type information to write a staged version of this library, which produces dramatic increases in performance, even outperforming code generated by the standard parser generator tool ocamlyacc.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/3314221.3314625">DOI</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/conf/pldi/KrishnaswamiY19">pldb</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="basold_2019" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="basold_2019"><span class="helia-title">Coinduction in flow: the later modality in fibrations</span>&nbsp;<a class="helia-slug" href="basold_2019.html">basold_2019</a><span class="helia-byline"><span class="helia-entry-link" data-entry="calco">CALCO</span> · 2019</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="basold_2019" data-kind="reference">
+<div class="helia-abstract">
+<p>This paper provides a construction on fibrations that gives access to the so-called later modality, which allows for a controlled form of recursion in coinductive proofs and programs. The construction is essentially a generalisation of the topos of trees from the codomain fibration over sets to arbitrary fibrations. As a result, we obtain a framework that allows the addition of a recursion principle for coinduction to rather arbitrary logics and programming languages. The main interest of using recursion is that it allows one to write proofs and programs in a goal-oriented fashion. This enables easily understandable coinductive proofs and programs, and fosters automatic proof search.</p>
+<p>Part of the framework are also various results that enable a wide range of applications: transportation of (co)limits, exponentials, fibred adjunctions and first-order connectives from the initial fibration to the one constructed through the framework. This means that the framework extends any first-order logic with the later modality. Moreover, we obtain soundness and completeness results, and can use up-to techniques as proof rules. Since the construction works for a wide variety of fibrations, we will be able to use the recursion offered by the later modality in various context. For instance, we will show how recursive proofs can be obtained for arbitrary (syntactic) first-order logics, for coinductive set-predicates, and for the probabilistic modal mu-calculus. Finally, we use the same construction to obtain a novel language for probabilistic productive coinductive programming. These examples demonstrate the flexibility of the framework and its accompanying results.</p>
+</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.4230/lipics.calco.2019.8">DOI</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="birkedal-2018-guarded" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="birkedal-2018-guarded"><span class="helia-title">Guarded Cubical Type Theory</span>&nbsp;<a class="helia-slug" href="birkedal-2018-guarded.html">birkedal-2018-guarded</a><span class="helia-byline"><span class="helia-entry-link" data-entry="jar">JAR</span> · 2018</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="birkedal-2018-guarded" data-kind="reference">
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1007/s10817-018-9471-7">DOI</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="lindley-2017-do" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="lindley-2017-do"><span class="helia-title">Do be do be do</span>&nbsp;<a class="helia-slug" href="lindley-2017-do.html">lindley-2017-do</a><span class="helia-byline"><span class="helia-entry-link" data-entry="popl">POPL</span> · 2017</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="lindley-2017-do" data-kind="reference">
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="pdf-url"><a class="helia-link helia-external" href="https://strathprints.strath.ac.uk/59470/1/Lindley_etal_POPL_2017_do_be_do_be_do.pdf">PDF</a></span> · <span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/3009837.3009897">DOI</a></span> · <span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/1611.09259">arXiv</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/conf/popl/LindleyMM17">pldb</a></span></div>
+</div>
+</div>
+</details>
+</section>
+</div>
+</details>
+</div>
+<div class="helia-reference-cites helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">Cites 24 works (2 here)</span></summary>
+<div class="helia-group-body">
+<div class="helia-reference-cites-here helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">With notes (2)</span></summary>
+<div class="helia-group-body">
+<section class="helia-transclusion" data-entry="birkedalFirstStepsSGDT2012" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="birkedalFirstStepsSGDT2012"><span class="helia-title">First steps in synthetic guarded domain theory: step-indexing in the topos of trees</span>&nbsp;<a class="helia-slug" href="birkedalFirstStepsSGDT2012.html">birkedalFirstStepsSGDT2012</a><span class="helia-byline"><span class="helia-entry-link" data-entry="lmcs">LMCS</span> · 2012</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="birkedalFirstStepsSGDT2012" data-kind="reference">
+<div class="helia-abstract">We present the topos S of trees as a model of guarded recursion. We study the internal dependently-typed higher-order logic of S and show that S models two modal operators, on predicates and types, which serve as guards in recursive definitions of terms, predicates, and types. In particular, we show how to solve recursive type equations involving dependent types. We propose that the internal logic of S provides the right setting for the synthetic construction of abstract versions of step-indexed models of programming languages and program logics. As an example, we show how to construct a model of a programming language with higher-order store and recursive types entirely inside the internal logic of S. Moreover, we give an axiomatic categorical treatment of models of synthetic guarded domain theory and prove that, for any complete Heyting algebra A with a well-founded basis, the topos of sheaves over A forms a model of synthetic guarded domain theory, generalizing the results for S.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.2168/lmcs-8(4:1)2012">DOI</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="mcbride-2008-applicative" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="mcbride-2008-applicative"><span class="helia-title">Applicative programming with effects</span>&nbsp;<a class="helia-slug" href="mcbride-2008-applicative.html">mcbride-2008-applicative</a><span class="helia-byline"><span class="helia-entry-link" data-entry="jfp">JFP</span> · 2008</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="mcbride-2008-applicative" data-kind="reference">
+<div class="helia-abstract">In this article, we introduce Applicative functors – an abstract characterisation of an applicative style of effectful programming, weaker than Monads and hence more widespread. Indeed, it is the ubiquity of this programming pattern that drew us to the abstraction. We retrace our steps in this article, introducing the applicative pattern by diverse examples, then abstracting it to define the Applicative type class and introducing a bracket notation that interprets the normal application syntax in the idiom of an Applicative functor. Furthermore, we develop the properties of applicative functors and the generic operations they support. We close by identifying the categorical structure of applicative functors and examining their relationship both with Monads and with Arrow.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="pdf-url"><a class="helia-link helia-external" href="https://www.cambridge.org/core/services/aop-cambridge-core/content/view/C80616ACD5687ABDC86D2B341E83D298/S0956796807006326a.pdf/div-class-title-applicative-programming-with-effects-div.pdf">PDF</a></span> · <span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1017/s0956796807006326">DOI</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/journals/jfp/McbrideP08">pldb</a></span></div>
+</div>
+</div>
+</details>
+</section>
+</div>
+</details>
+</div>
+<div class="helia-reference-cites-away helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">External (22)</span></summary>
+<div class="helia-group-body">
+<ul>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1109/lics.2013.27">Intensional Type Theory with Guarded Recursive Types qua Fixed Points on Universes</a> (2013)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/2364527.2364550">Pure type systems with corecursion on streams: from finite to infinitary normalisation</a> (2012)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.2168/lmcs-7(2:16)2011">Logical step-indexed logical relations</a> (2011)</li>
+<li>Representing Contractive Functions on Streams (2011)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/2034773.2034782">A semantic model for graphical user interfaces</a> (2011)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1109/lics.2011.38">Ultrametric Semantics of Reactive Programs</a> (2011)</li>
+<li>A metric model of guarded recursion (2010)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.4204/eptcs.43.3">Beating the Productivity Checker Using Embedded Languages</a> (2010)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.2168/lmcs-5(3:9)2009">Representations of stream processors using nested fixed points</a> (2009)</li>
+<li>Mixing induction and coinduction (draft) (2009)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.2168/lmcs-1(2:1)2005">General recursion via coinductive types</a> (2005)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1051/ita:2004015">Termination checking with types</a> (2004)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/504709.504712">An indexed model of recursive types for foundational proof-carrying code</a> (2001)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1017/s0956796801004154">Monadic encapsulation of effects: a revised approach (extended version)</a> (2001)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1109/lics.2000.855774">A modality for recursion</a> (2000)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1016/s0168-0072(96)00021-8">Equational theories for inductive types</a> (1997)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/3-540-60579-7_3">Codifying guarded definitions with recursive schemes</a> (1995)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/178243.178246">Lazy functional state threads</a> (1994)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/3-540-58027-1_3">Computational adequacy via 'mixed' inductive definitions</a> (1994)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/bf00264249">Using circular programs to eliminate multiple traversals of data</a> (1984)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1137/0211062">The Category-Theoretic Solution of Recursive Domain Equations</a> (1982)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.2140/pjm.1955.5.285">A lattice-theoretical fixpoint theorem and its applications</a> (1955)</li>
+</ul>
+</div>
+</details>
+</div>
+</div>
+</details>
+</div>
+<footer class="helia-footer">
+<div class="helia-related helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><h3 class="helia-heading">Related</h3>
+</summary>
+<div class="helia-group-body">
+<ul>
+<li><a class="helia-entry-link" href="aagaard-2023-a.html" data-entry="aagaard-2023-a">A denotationally-based program logic for higher-order store</a> <span class="helia-related-tags"><a class="helia-entry-link" href="tag-guarded-domain-theory.html" data-entry="tag-guarded-domain-theory">#guarded-domain-theory</a> <a class="helia-entry-link" href="tag-guarded-recursion.html" data-entry="tag-guarded-recursion">#guarded-recursion</a></span></li>
+<li><a class="helia-entry-link" href="frumin-2024-modular.html" data-entry="frumin-2024-modular">Modular Denotational Semantics for Effects with Guarded Interaction Trees</a> <span class="helia-related-tags"><a class="helia-entry-link" href="tag-guarded-domain-theory.html" data-entry="tag-guarded-domain-theory">#guarded-domain-theory</a> <a class="helia-entry-link" href="tag-guarded-recursion.html" data-entry="tag-guarded-recursion">#guarded-recursion</a></span></li>
+<li><a class="helia-entry-link" href="stepanenko-2025-context.html" data-entry="stepanenko-2025-context">Context-Dependent Effects and Concurrency in Guarded Interaction Trees</a> <span class="helia-related-tags"><a class="helia-entry-link" href="tag-guarded-domain-theory.html" data-entry="tag-guarded-domain-theory">#guarded-domain-theory</a> <a class="helia-entry-link" href="tag-guarded-recursion.html" data-entry="tag-guarded-recursion">#guarded-recursion</a></span></li>
+<li><a class="helia-entry-link" href="stepanenko-2025-contextx.html" data-entry="stepanenko-2025-contextx">Context-Dependent Effects in Guarded Interaction Trees</a> <span class="helia-related-tags"><a class="helia-entry-link" href="tag-guarded-domain-theory.html" data-entry="tag-guarded-domain-theory">#guarded-domain-theory</a> <a class="helia-entry-link" href="tag-guarded-recursion.html" data-entry="tag-guarded-recursion">#guarded-recursion</a></span></li>
+<li><a class="helia-entry-link" href="stepanenko-2025-solving.html" data-entry="stepanenko-2025-solving">Solving Guarded Domain Equations in Presheaves over Ordinals and Mechanizing It</a> <span class="helia-related-tags"><a class="helia-entry-link" href="tag-guarded-domain-theory.html" data-entry="tag-guarded-domain-theory">#guarded-domain-theory</a> <a class="helia-entry-link" href="tag-guarded-recursion.html" data-entry="tag-guarded-recursion">#guarded-recursion</a></span></li>
+<li><a class="helia-entry-link" href="sterling-2024-towards.html" data-entry="sterling-2024-towards">Towards Univalent Reference Types: The Impact of Univalence on Denotational Semantics</a> <span class="helia-related-tags"><a class="helia-entry-link" href="tag-guarded-domain-theory.html" data-entry="tag-guarded-domain-theory">#guarded-domain-theory</a> <a class="helia-entry-link" href="tag-guarded-recursion.html" data-entry="tag-guarded-recursion">#guarded-recursion</a></span></li>
+</ul>
+</div>
+</details>
+</div>
+</footer>
+</article>
+<div class="helia-identity"><span class="helia-id">atkey-2013-productive</span> <span class="helia-kind">reference</span> <span class="helia-path">entries/refs/atkey-2013-productive/atkey-2013-productive.hel</span></div>
+</div>
+</body>
+</html>

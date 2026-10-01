@@ -1,0 +1,1 @@
+heliaSearchData("d/southern-methodist-university",{"id":"southern-methodist-university","title":"Southern Methodist University","kind":"institution","tags":[],"authors":[],"venue":[],"date":null,"url":"southern-methodist-university.html","headings":[],"body":""});

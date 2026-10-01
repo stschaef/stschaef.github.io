@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>Resolving and exploiting the k-CFA paradox: illuminating functional vs. object-oriented program analysis</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Ctext y=%22.9em%22 font-size=%2290%22%3E%F0%9F%8C%BB%3C/text%3E%3C/svg%3E">
+<meta name="generator" content="helia">
+<link rel="alternate" type="application/atom+xml" title="Steven Schaefer" href="feed.xml">
+<link rel="alternate" type="application/feed+json" title="Steven Schaefer" href="feed.json">
+<script src="helia/theme-version.js"></script>
+<script src="theme/folio-early.js"></script>
+<link rel="stylesheet" href="helia/theme.css">
+<link rel="stylesheet" href="helia/highlight.css">
+<link rel="stylesheet" href="helia/search.css">
+<link rel="stylesheet" href="theme/katex.css">
+<link rel="stylesheet" href="theme/recipe.css">
+<link rel="stylesheet" href="theme/site.css">
+<link rel="stylesheet" href="theme/folio.css">
+<script defer src="helia/runtime.js"></script>
+<script defer src="helia/search.js"></script>
+<script defer src="theme/glyphcraft.js"></script>
+<script defer src="theme/glyphart.js"></script>
+<script defer src="theme/glyphgen.js"></script>
+<script defer src="theme/ornament.js"></script>
+<script defer src="theme/folio.js"></script>
+<script defer src="theme/portrait.js"></script>
+<script type="application/json" id="helia-widgets">{"helia-cite-formats":"widgets/helia-cite-formats-a3294ac7.js"}</script>
+<link rel="modulepreload" href="widgets/helia-cite-formats-a3294ac7.js">
+<script type="module" src="widgets/runtime.js"></script>
+</head>
+<body>
+<nav class="helia-topbar"><a class="helia-home" href="home.html">Steven Schaefer</a><ul class="helia-nav-links"><li><a href="stevenschaefer.html">About Me</a></li><li><a href="research.html">Research</a></li><li><a href="new.html">New</a></li></ul><button type="button" class="helia-search-button" aria-label="Search (/ or Ctrl+K)" aria-haspopup="dialog"><span class="helia-search-icon">⌕</span><span class="helia-search-label">Search</span><kbd class="helia-search-key">/</kbd></button></nav>
+<div class="helia-page" data-kind="reference">
+<article class="helia-article">
+<header class="helia-header" data-entry="might-2010-resolving" data-kind="reference">
+<h2 class="helia-heading"><span class="helia-taxon">Reference.</span> Resolving and exploiting the <span class="helia-math helia-math-inline helia-mathml"><math><mi>𝑘</mi></math></span>-CFA paradox: illuminating functional vs. object-oriented program analysis</h2>
+<div class="helia-meta"><span class="helia-author"><a class="helia-entry-link" href="matthewmight.html" data-entry="matthewmight">Matthew Might</a>, <a class="helia-entry-link" href="yannissmaragdakis.html" data-entry="yannissmaragdakis">Yannis Smaragdakis</a>, <a class="helia-entry-link" href="davidvanhorn.html" data-entry="davidvanhorn">David Van Horn</a></span> · <span class="helia-byline"><a class="helia-entry-link" href="pldi.html" data-entry="pldi">PLDI</a> · 2010</span> · <span class="helia-tags"><span class="helia-tag" data-tag="control-flow-analysis"><a class="helia-entry-link" href="tag-control-flow-analysis.html" data-entry="tag-control-flow-analysis">control-flow-analysis</a></span></span> · <span class="helia-entry-links"><span class="helia-entry-link" data-field="pdf-url"><a class="helia-link helia-external" href="https://dl.acm.org/doi/pdf/10.1145/1806596.1806631">PDF</a></span> · <span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/1806596.1806631">DOI</a></span> · <span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/1311.4231">arXiv</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/conf/pldi/MightSH10">pldb</a></span></span></div>
+</header>
+<div class="helia-body">
+</div>
+<div class="helia-cite helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><h3 class="helia-heading">Cite</h3>
+</summary>
+<div class="helia-group-body">
+<div class="helia-widget" data-widget="helia-cite-formats" data-props="{&quot;key&quot;:&quot;might-2010-resolving&quot;,&quot;bibtex&quot;:&quot;@inproceedings{might-2010-resolving, series={PLDI ’10}, title={Resolving and exploiting the $k$-CFA paradox: illuminating functional vs. object-oriented program analysis}, url={http://dx.doi.org/10.1145/1806596.1806631}, DOI={10.1145/1806596.1806631}, booktitle={Proceedings of the 31st ACM SIGPLAN Conference on Programming Language Design and Implementation}, publisher={ACM}, author={Might, Matthew and Smaragdakis, Yannis and Van Horn, David}, year={2010}, month=June, pages={305–315}, collection={PLDI ’10} }&quot;,&quot;bib-file&quot;:&quot;might-2010-resolving.bib&quot;,&quot;hayagriva&quot;:&quot;might-2010-resolving:\n  type: article\n  title: &#39;Resolving and exploiting the k-CFA paradox: illuminating functional vs. object-oriented program analysis&#39;\n  author:\n  - Might, Matthew\n  - Smaragdakis, Yannis\n  - Horn, David Van\n  date: 2010-06\n  page-range: 305-315\n  serial-number:\n    doi: 10.1145/1806596.1806631\n  parent:\n    type: proceedings\n    title: Proceedings of the 31st ACM SIGPLAN Conference on Programming Language Design and Implementation\n    publisher: ACM\n&quot;,&quot;yml-file&quot;:&quot;might-2010-resolving.yml&quot;}"><div class="helia-cite-key" data-copy="@might-2010-resolving" data-copy-label="citation key"><span class="helia-bib-key">Cite as</span> <code class="helia-raw-inline">@might-2010-resolving</code> (helia, typst) · <code class="helia-raw-inline">\cite{might-2010-resolving}</code> (LaTeX)</div>
+<div class="helia-cite-format helia-collapsible" data-format="bibtex" data-copy="true" data-copy-label="BibTeX">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">BibTeX</span></summary>
+<div class="helia-group-body">
+<details class="helia-code" open><summary class="helia-code-summary"><span class="helia-code-lang">bibtex</span> · <span class="helia-code-lines">1 line</span></summary><pre class="helia-raw"><code class="language-bibtex"><span class="hl-text hl-bibtex"><span class="hl-meta hl-entry hl-braces hl-bibtex"><span class="hl-keyword hl-other hl-entry-type hl-bibtex"><span class="hl-punctuation hl-definition hl-keyword hl-bibtex">@</span>inproceedings</span><span class="hl-punctuation hl-section hl-entry hl-begin hl-bibtex">{</span><span class="hl-entity hl-name hl-type hl-entry-key hl-bibtex">might-2010-resolving</span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">series</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>PLDI ’10<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">title</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>Resolving and exploiting the $k$-CFA paradox: illuminating functional vs. object-oriented program analysis<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">url</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>http://dx.doi.org/10.1145/1806596.1806631<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">DOI</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>10.1145/1806596.1806631<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">booktitle</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>Proceedings of the 31st ACM SIGPLAN Conference on Programming Language Design and Implementation<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">publisher</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>ACM<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">author</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>Might, Matthew and Smaragdakis, Yannis and Van Horn, David<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">year</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>2010<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">month</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span>June</span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">pages</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>305–315<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">collection</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>PLDI ’10<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span> </span><span class="hl-punctuation hl-section hl-entry hl-end hl-bibtex">}</span></span></span></code></pre></details>
+</div>
+</details>
+</div>
+<div class="helia-cite-format helia-collapsible" data-format="hayagriva" data-copy="true" data-copy-label="hayagriva YAML">
+<details>
+<summary class="helia-group-summary"><span class="helia-group-title">hayagriva YAML (typst)</span></summary>
+<div class="helia-group-body">
+<details class="helia-code" open><summary class="helia-code-summary"><span class="helia-code-lang">yaml</span> · <span class="helia-code-lines">15 lines</span></summary><pre class="helia-raw"><code class="language-yaml"><span class="hl-source hl-yaml"><span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">might-2010-resolving</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">type</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">article</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">title</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-quoted hl-single hl-yaml"><span class="hl-punctuation hl-definition hl-string hl-begin hl-yaml">&#39;</span>Resolving and exploiting the k-CFA paradox: illuminating functional vs. object-oriented program analysis<span class="hl-punctuation hl-definition hl-string hl-end hl-yaml">&#39;</span></span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">author</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Might, Matthew</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Smaragdakis, Yannis</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Horn, David Van</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">date</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">2010-06</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">page-range</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">305-315</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">serial-number</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">doi</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">10.1145/1806596.1806631</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">parent</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">type</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">proceedings</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">title</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Proceedings of the 31st ACM SIGPLAN Conference on Programming Language Design and Implementation</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">publisher</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">ACM</span>
+</span></code></pre></details>
+</div>
+</details>
+</div>
+<div class="helia-cite-files">Download: <a class="helia-link" href="might-2010-resolving.bib">might-2010-resolving.bib</a> · <a class="helia-link" href="might-2010-resolving.yml">might-2010-resolving.yml</a></div>
+</div>
+</div>
+</details>
+</div>
+<div class="helia-reference-cited-by helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">Cited by (3)</span></summary>
+<div class="helia-group-body">
+<section class="helia-transclusion" data-entry="germane-2019-demand" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="germane-2019-demand"><span class="helia-title">Demand Control-Flow Analysis</span>&nbsp;<a class="helia-slug" href="germane-2019-demand.html">germane-2019-demand</a><span class="helia-byline"><span class="helia-entry-link" data-entry="vmcai">VMCAI</span> · 2019</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="germane-2019-demand" data-kind="reference">
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-030-11245-5_11">DOI</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/conf/vmcai/GermaneM0M19">pldb</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="gilray-2018-abstract" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="gilray-2018-abstract"><span class="helia-title">Abstract allocation as a unified approach to polyvariance in control-flow analyses</span>&nbsp;<a class="helia-slug" href="gilray-2018-abstract.html">gilray-2018-abstract</a><span class="helia-byline"><span class="helia-entry-link" data-entry="jfp">JFP</span> · 2018</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="gilray-2018-abstract" data-kind="reference">
+<div class="helia-abstract">In higher order settings, control-flow analysis aims to model the propagation of both data and control by finitely approximating program behaviors across all possible executions. The polyvariance of an analysis describes the number of distinct abstract representations, or variants, for each syntactic entity (e.g., functions, variables, or intermediate expressions). Monovariance, one of the most basic forms of polyvariance, maintains only a single abstract representation for each variable or expression. Other polyvariant strategies allow a greater number of distinct abstractions and increase analysis complexity with the aim of increasing analysis precision. For example, k -call sensitivity distinguishes flows by the most recent k call sites, k -object sensitivity by a history of allocation points, and argument sensitivity by a tuple of dynamic argument types. From this perspective, even a concrete operational semantics may be thought of as an unboundedly polyvariant analysis. In this paper, we develop a unified methodology that fully captures this design space. It is easily tunable and guarantees soundness regardless of how tuned. We accomplish this by extending the method of abstracting abstract machines, a systematic approach to abstract interpretation of operational abstract-machine semantics. Our approach permits arbitrary instrumentation of the underlying analysis and arbitrary tuning of an abstract-allocation function. We show that the design space of abstract allocators both unifies and generalizes existing notions of polyvariance. Simple changes to the behavior of this function recapitulate classic styles of analysis and yield novel combinations and variants.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="pdf-url"><a class="helia-link helia-external" href="https://www.cambridge.org/core/services/aop-cambridge-core/content/view/1555B0130B5B00DFFCEDA327DF0EB232/S0956796818000138a.pdf/div-class-title-abstract-allocation-as-a-unified-approach-to-polyvariance-in-control-flow-analyses-div.pdf">PDF</a></span> · <span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1017/s0956796818000138">DOI</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/journals/jfp/GilrayAM18">pldb</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="gilray-2016-pushdown" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="gilray-2016-pushdown"><span class="helia-title">Pushdown control-flow analysis for free</span>&nbsp;<a class="helia-slug" href="gilray-2016-pushdown.html">gilray-2016-pushdown</a><span class="helia-byline"><span class="helia-entry-link" data-entry="popl">POPL</span> · 2016</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="gilray-2016-pushdown" data-kind="reference">
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="pdf-url"><a class="helia-link helia-external" href="https://dl.acm.org/doi/pdf/10.1145/2837614.2837631">PDF</a></span> · <span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/2837614.2837631">DOI</a></span> · <span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/1507.03137">arXiv</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/conf/popl/GilrayL0MH16">pldb</a></span></div>
+</div>
+</div>
+</details>
+</section>
+</div>
+</details>
+</div>
+<div class="helia-reference-cites helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">Cites 19 works (1 here)</span></summary>
+<div class="helia-group-body">
+<div class="helia-reference-cites-here helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">With notes (1)</span></summary>
+<div class="helia-group-body">
+<section class="helia-transclusion" data-entry="might-2006-improving" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="might-2006-improving"><span class="helia-title">Improving flow analyses via ΓCFA: abstract garbage collection and counting</span>&nbsp;<a class="helia-slug" href="might-2006-improving.html">might-2006-improving</a><span class="helia-byline"><span class="helia-entry-link" data-entry="icfp">ICFP</span> · 2006</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="might-2006-improving" data-kind="reference">
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="pdf-url"><a class="helia-link helia-external" href="https://dl.acm.org/doi/pdf/10.1145/1159803.1159807">PDF</a></span> · <span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/1159803.1159807">DOI</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/conf/icfp/MightS06">pldb</a></span></div>
+</div>
+</div>
+</details>
+</section>
+</div>
+</details>
+</div>
+<div class="helia-reference-cites-away helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">External (18)</span></summary>
+<div class="helia-group-body">
+<ul>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/2187671.2187672">Control-flow analysis of functional programs</a> (2012)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/1640089.1640108">Strictly declarative specification of sophisticated points-to analyses</a> (2009)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/1391984.1391987">Evaluating the benefits of context-sensitive points-to analysis using a BDD-based implementation</a> (2008)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/1411204.1411243">Deciding kCFA is complete for EXPTIME</a> (2008)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/1291151.1291166">Relating complexity and precision in control flow analysis</a> (2007)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/1111037.1111049">Environment analysis via ΔCFA</a> (2006)</li>
+<li>Program analysis using binary decision diagrams (2006)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/989393.989421">Higher-order control-flow analysis in retrospect: lessons learned, lessons abandoned</a> (2004)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/3-540-44978-7_5">Constraint abstractions</a> (2001)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/503502.503505">Featherweight Java: a minimal core calculus for Java and GJ</a> (2001)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/360204.360208">Type-base flow analysis: from polymorphic subtyping to CFL-reachability</a> (2001)</li>
+<li>Flow analysis of typed higher-order programs (1997)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/199448.199536">A unified treatment of flow analysis in higher-order languages</a> (1995)</li>
+<li>Compiling with continuations (1991)</li>
+<li>Control-flow analysis of higher-order languages (1991)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/800055.802037">Compiling a functional language</a> (1984)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/567752.567778">Systematic design of program analysis frameworks</a> (1979)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/512950.512973">Abstract interpretation: a unified lattice model for static analysis of programs by construction or approximation of fixpoints</a> (1977)</li>
+</ul>
+</div>
+</details>
+</div>
+</div>
+</details>
+</div>
+</article>
+<div class="helia-identity"><span class="helia-id">might-2010-resolving</span> <span class="helia-kind">reference</span> <span class="helia-path">entries/refs/might-2010-resolving/might-2010-resolving.hel</span></div>
+</div>
+</body>
+</html>

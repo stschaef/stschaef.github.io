@@ -1,0 +1,1 @@
+heliaSearchData("d/guillaumemunchmaccagnoni",{"id":"guillaumemunchmaccagnoni","title":"Guillaume Munch-Maccagnoni","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"guillaumemunchmaccagnoni.html","headings":[],"body":""});

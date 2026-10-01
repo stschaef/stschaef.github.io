@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>Stepwise Debugging for Hardware Accelerators</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Ctext y=%22.9em%22 font-size=%2290%22%3E%F0%9F%8C%BB%3C/text%3E%3C/svg%3E">
+<meta name="generator" content="helia">
+<link rel="alternate" type="application/atom+xml" title="Steven Schaefer" href="feed.xml">
+<link rel="alternate" type="application/feed+json" title="Steven Schaefer" href="feed.json">
+<script src="helia/theme-version.js"></script>
+<script src="theme/folio-early.js"></script>
+<link rel="stylesheet" href="helia/theme.css">
+<link rel="stylesheet" href="helia/highlight.css">
+<link rel="stylesheet" href="helia/search.css">
+<link rel="stylesheet" href="theme/katex.css">
+<link rel="stylesheet" href="theme/recipe.css">
+<link rel="stylesheet" href="theme/site.css">
+<link rel="stylesheet" href="theme/folio.css">
+<script defer src="helia/runtime.js"></script>
+<script defer src="helia/search.js"></script>
+<script defer src="theme/glyphcraft.js"></script>
+<script defer src="theme/glyphart.js"></script>
+<script defer src="theme/glyphgen.js"></script>
+<script defer src="theme/ornament.js"></script>
+<script defer src="theme/folio.js"></script>
+<script defer src="theme/portrait.js"></script>
+<script type="application/json" id="helia-widgets">{"helia-cite-formats":"widgets/helia-cite-formats-a3294ac7.js"}</script>
+<link rel="modulepreload" href="widgets/helia-cite-formats-a3294ac7.js">
+<script type="module" src="widgets/runtime.js"></script>
+</head>
+<body>
+<nav class="helia-topbar"><a class="helia-home" href="home.html">Steven Schaefer</a><ul class="helia-nav-links"><li><a href="stevenschaefer.html">About Me</a></li><li><a href="research.html">Research</a></li><li><a href="new.html">New</a></li></ul><button type="button" class="helia-search-button" aria-label="Search (/ or Ctrl+K)" aria-haspopup="dialog"><span class="helia-search-icon">⌕</span><span class="helia-search-label">Search</span><kbd class="helia-search-key">/</kbd></button></nav>
+<div class="helia-page" data-kind="reference">
+<article class="helia-article">
+<header class="helia-header" data-entry="berlstein-2023-stepwise" data-kind="reference">
+<h2 class="helia-heading"><span class="helia-taxon">Reference.</span> Stepwise Debugging for Hardware Accelerators</h2>
+<div class="helia-meta"><span class="helia-author"><a class="helia-entry-link" href="griffinberlstein.html" data-entry="griffinberlstein">Griffin Berlstein</a>, <a class="helia-entry-link" href="rachitnigam.html" data-entry="rachitnigam">Rachit Nigam</a>, <a class="helia-entry-link" href="christophegyurgyik.html" data-entry="christophegyurgyik">Christophe Gyurgyik</a>, <a class="helia-entry-link" href="adriansampson.html" data-entry="adriansampson">Adrian Sampson</a></span> · <span class="helia-byline"><a class="helia-entry-link" href="asplos.html" data-entry="asplos">ASPLOS</a> · 2023</span> · <span class="helia-tags"><span class="helia-tag" data-tag="hardware"><a class="helia-entry-link" href="tag-hardware.html" data-entry="tag-hardware">hardware</a></span></span> · <span class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/3575693.3575717">DOI</a></span></span></div>
+</header>
+<div class="helia-body">
+</div>
+<div class="helia-cite helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><h3 class="helia-heading">Cite</h3>
+</summary>
+<div class="helia-group-body">
+<div class="helia-widget" data-widget="helia-cite-formats" data-props="{&quot;key&quot;:&quot;berlstein-2023-stepwise&quot;,&quot;bibtex&quot;:&quot;@inproceedings{berlstein-2023-stepwise, series={ASPLOS ’23}, title={Stepwise Debugging for Hardware Accelerators}, url={http://dx.doi.org/10.1145/3575693.3575717}, DOI={10.1145/3575693.3575717}, booktitle={Proceedings of the 28th ACM International Conference on Architectural Support for Programming Languages and Operating Systems, Volume 2}, publisher={ACM}, author={Berlstein, Griffin and Nigam, Rachit and Gyurgyik, Christophe and Sampson, Adrian}, year={2023}, month=Jan, pages={778–790}, collection={ASPLOS ’23} }&quot;,&quot;bib-file&quot;:&quot;berlstein-2023-stepwise.bib&quot;,&quot;hayagriva&quot;:&quot;berlstein-2023-stepwise:\n  type: article\n  title: Stepwise Debugging for Hardware Accelerators\n  author:\n  - Berlstein, Griffin\n  - Nigam, Rachit\n  - Gyurgyik, Christophe\n  - Sampson, Adrian\n  date: 2023-01\n  page-range: 778-790\n  url: http://dx.doi.org/10.1145/3575693.3575717\n  serial-number:\n    doi: 10.1145/3575693.3575717\n  parent:\n    type: proceedings\n    title: Proceedings of the 28th ACM International Conference on Architectural Support for Programming Languages and Operating Systems, Volume 2\n    publisher: ACM\n    parent:\n      type: proceedings\n      title: ASPLOS ’23\n&quot;,&quot;yml-file&quot;:&quot;berlstein-2023-stepwise.yml&quot;}"><div class="helia-cite-key" data-copy="@berlstein-2023-stepwise" data-copy-label="citation key"><span class="helia-bib-key">Cite as</span> <code class="helia-raw-inline">@berlstein-2023-stepwise</code> (helia, typst) · <code class="helia-raw-inline">\cite{berlstein-2023-stepwise}</code> (LaTeX)</div>
+<div class="helia-cite-format helia-collapsible" data-format="bibtex" data-copy="true" data-copy-label="BibTeX">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">BibTeX</span></summary>
+<div class="helia-group-body">
+<details class="helia-code" open><summary class="helia-code-summary"><span class="helia-code-lang">bibtex</span> · <span class="helia-code-lines">1 line</span></summary><pre class="helia-raw"><code class="language-bibtex"><span class="hl-text hl-bibtex"><span class="hl-meta hl-entry hl-braces hl-bibtex"><span class="hl-keyword hl-other hl-entry-type hl-bibtex"><span class="hl-punctuation hl-definition hl-keyword hl-bibtex">@</span>inproceedings</span><span class="hl-punctuation hl-section hl-entry hl-begin hl-bibtex">{</span><span class="hl-entity hl-name hl-type hl-entry-key hl-bibtex">berlstein-2023-stepwise</span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">series</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>ASPLOS ’23<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">title</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>Stepwise Debugging for Hardware Accelerators<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">url</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>http://dx.doi.org/10.1145/3575693.3575717<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">DOI</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>10.1145/3575693.3575717<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">booktitle</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>Proceedings of the 28th ACM International Conference on Architectural Support for Programming Languages and Operating Systems, Volume 2<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">publisher</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>ACM<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">author</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>Berlstein, Griffin and Nigam, Rachit and Gyurgyik, Christophe and Sampson, Adrian<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">year</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>2023<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">month</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span>Jan</span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">pages</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>778–790<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">collection</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>ASPLOS ’23<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span> </span><span class="hl-punctuation hl-section hl-entry hl-end hl-bibtex">}</span></span></span></code></pre></details>
+</div>
+</details>
+</div>
+<div class="helia-cite-format helia-collapsible" data-format="hayagriva" data-copy="true" data-copy-label="hayagriva YAML">
+<details>
+<summary class="helia-group-summary"><span class="helia-group-title">hayagriva YAML (typst)</span></summary>
+<div class="helia-group-body">
+<details class="helia-code" open><summary class="helia-code-summary"><span class="helia-code-lang">yaml</span> · <span class="helia-code-lines">20 lines</span></summary><pre class="helia-raw"><code class="language-yaml"><span class="hl-source hl-yaml"><span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">berlstein-2023-stepwise</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">type</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">article</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">title</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Stepwise Debugging for Hardware Accelerators</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">author</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Berlstein, Griffin</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Nigam, Rachit</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Gyurgyik, Christophe</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Sampson, Adrian</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">date</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">2023-01</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">page-range</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">778-790</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">url</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">http://dx.doi.org/10.1145/3575693.3575717</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">serial-number</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">doi</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">10.1145/3575693.3575717</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">parent</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">type</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">proceedings</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">title</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Proceedings of the 28th ACM International Conference on Architectural Support for Programming Languages and Operating Systems, Volume 2</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">publisher</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">ACM</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">parent</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span>
+      <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">type</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">proceedings</span>
+      <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">title</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">ASPLOS ’23</span>
+</span></code></pre></details>
+</div>
+</details>
+</div>
+<div class="helia-cite-files">Download: <a class="helia-link" href="berlstein-2023-stepwise.bib">berlstein-2023-stepwise.bib</a> · <a class="helia-link" href="berlstein-2023-stepwise.yml">berlstein-2023-stepwise.yml</a></div>
+</div>
+</div>
+</details>
+</div>
+<div class="helia-reference-cited-by helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">Cited by (1)</span></summary>
+<div class="helia-group-body">
+<section class="helia-transclusion" data-entry="kim-2024-unifying" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="kim-2024-unifying"><span class="helia-title">Unifying Static and Dynamic Intermediate Languages for Accelerator Generators</span>&nbsp;<a class="helia-slug" href="kim-2024-unifying.html">kim-2024-unifying</a><span class="helia-byline"><span class="helia-entry-link" data-entry="oopsla">OOPSLA</span> · 2024</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="kim-2024-unifying" data-kind="reference">
+<div class="helia-abstract">Compilers for accelerator design languages (ADLs) translate high-level languages into application-specific hardware. ADL compilers rely on a hardware control interface to compose hardware units. There are two choices: static control, which relies on cycle-level timing; or dynamic control, which uses explicit signalling to avoid depending on timing details. Static control is efficient but brittle; dynamic control incurs hardware costs to support compositional reasoning. Piezo is an ADL compiler that unifies static and dynamic control in a single intermediate language (IL). Its key insight is that the IL’s static fragment is a refinement of its dynamic fragment: static code admits a subset of the run-time behaviors of the dynamic equivalent. Piezo can optimize code by combining facts from static and dynamic submodules, and it opportunistically converts code from dynamic to static control styles. We implement Piezo as an extension to an existing dynamic ADL compiler, Calyx. We use Piezo to implement a frontend for an existing ADL, a systolic array generator, and a packet-scheduling hardware generator to demonstrate its optimizations and the static–dynamic interactions it enables.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="pdf-url"><a class="helia-link helia-external" href="https://dl.acm.org/doi/pdf/10.1145/3689790">PDF</a></span> · <span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/3689790">DOI</a></span> · <span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/2312.16300">arXiv</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/journals/pacmpl/KimLMBSN24">pldb</a></span></div>
+</div>
+</div>
+</details>
+</section>
+</div>
+</details>
+</div>
+<div class="helia-reference-cites helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">Cites 43 works (2 here)</span></summary>
+<div class="helia-group-body">
+<div class="helia-reference-cites-here helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">With notes (2)</span></summary>
+<div class="helia-group-body">
+<section class="helia-transclusion" data-entry="nigam-2021-a" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="nigam-2021-a"><span class="helia-title">A compiler infrastructure for accelerator generators</span>&nbsp;<a class="helia-slug" href="nigam-2021-a.html">nigam-2021-a</a><span class="helia-byline"><span class="helia-entry-link" data-entry="asplos">ASPLOS</span> · 2021</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="nigam-2021-a" data-kind="reference">
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/3445814.3446712">DOI</a></span> · <span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/2102.09713">arXiv</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="nigam-2020-predictable" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="nigam-2020-predictable"><span class="helia-title">Predictable accelerator design with time-sensitive affine types</span>&nbsp;<a class="helia-slug" href="nigam-2020-predictable.html">nigam-2020-predictable</a><span class="helia-byline"><span class="helia-entry-link" data-entry="pldi">PLDI</span> · 2020</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="nigam-2020-predictable" data-kind="reference">
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="pdf-url"><a class="helia-link helia-external" href="https://arxiv.org/pdf/2004.04852">PDF</a></span> · <span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/3385412.3385974">DOI</a></span> · <span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/2004.04852">arXiv</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/conf/pldi/NigamATLBYKSZ20">pldb</a></span></div>
+</div>
+</div>
+</details>
+</section>
+</div>
+</details>
+</div>
+<div class="helia-reference-cites-away helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">External (41)</span></summary>
+<div class="helia-group-body">
+<ul>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3503222.3507701">Debugging in the Brave New World of Reconfigurable Hardware</a> (2022)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3489517.3530603">Bringing source-level debugging frameworks to hardware generators</a> (2022)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1109/fccm51124.2021.00034">An Empirical Study of the Reliability of High-Level Synthesis Tools</a> (2021)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3445814.3446720">Effective simulation and debugging for a high-level hardware language using software compilers</a> (2021)</li>
+<li>GDB: The GNU Project Debugger (2021)</li>
+<li>Intel High Level Synthesis Compiler (2021)</li>
+<li>Intel Signal Tap II (2021)</li>
+<li>PolyBench/C: The Polyhedral Benchmark Suite (2021)</li>
+<li>Verilator array out of bounds behavior (2021)</li>
+<li>ChipScope Integrated Logic Analyzer (2021)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3373087.3375307">StateMover: Combining Simulation and Hardware Execution for Efficient FPGA Debugging</a> (2020)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1109/dac18072.2020.9218632">Efficiently Exploiting Low Activity Factors to Accelerate RTL Simulation</a> (2020)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3385412.3385965">The Essence of Bluespec: A Core Language for Rule-Based Hardware Design</a> (2020)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1109/tcad.2020.2970597">Flash: Fast, parallel, and accurate simulator for HLS</a> (2020)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3385412.3385983">Type-Directed Scheduling of Streaming Accelerators</a> (2020)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3289602.3293910">HeteroCL: A Multi-Paradigm Programming Infrastructure for Software-Defined Reconfigurable Computing</a> (2019)</li>
+<li>Relay: A high-level compiler for deep learning (2019)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3297858.3304010">Just-In-Time Compilation for Verilog</a> (2019)</li>
+<li>Invoking and Linking Generators from Multiple Hardware Languages using CoreIR (2018)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3192366.3192379">Spatial: a language and compiler for application accelerators</a> (2018)</li>
+<li>TVM: An automated end-to-end optimizing compiler for deep learning (2018)</li>
+<li>PolySA: Polyhedral-Based Systolic Array Auto-Compilation (2018)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1109/iccad.2017.8203780">Reusability is FIRRTL ground: Hardware construction languages, compiler frameworks, and transformations</a> (2017)</li>
+<li>Vivado Design Suite User Guide: High-Level Synthesis (2017)</li>
+<li>Vivado Design Suite User Guide: Synthesis (2017)</li>
+<li>LegUp High-Level Synthesis: Debugging (2015)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1109/fpl.2014.6927498">Effective FPGA debug for high-level synthesis generated circuits</a> (2014)</li>
+<li>Source-level debugging for FPGA high-level synthesis (2014)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/2228360.2228584">Chisel: constructing hardware in a Scala embedded language</a> (2012)</li>
+<li>IEEE Standard for Verilog Hardware Description Language (2005)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1109/cgo.2004.1281665">LLVM: A Compilation Framework for Lifelong Program Analysis &amp; Transformation</a> (2004)</li>
+<li>Bluespec System Verilog: Efficient, correct RTL from high level specifications (2004)</li>
+<li>SystemVerilog 3.1a Language Reference Manual (2004)</li>
+<li>The Dangers of Living with an X (bugs hidden in your Verilog) (2003)</li>
+<li>Source level debugger for the Sea Cucumber synthesizing compiler (2003)</li>
+<li>Scan-chain based watch-points for efficient run-time debugging and verification of FPGA designs (2003)</li>
+<li>Weak Ordering - a New Definition (1990)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1162/neco.1989.1.4.541">Backpropagation Applied to Handwritten Zip Code Recognition</a> (1989)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1109/dac.1988.14848">Hardware logic simulation by compilation</a> (1988)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1109/tcad.1987.1270308">HSS–a high-speed simulator</a> (1987)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/37888.37889">SSIM: a software levelized compiled-code simulator</a> (1987)</li>
+</ul>
+</div>
+</details>
+</div>
+</div>
+</details>
+</div>
+</article>
+<div class="helia-identity"><span class="helia-id">berlstein-2023-stepwise</span> <span class="helia-kind">reference</span> <span class="helia-path">entries/refs/berlstein-2023-stepwise/berlstein-2023-stepwise.hel</span></div>
+</div>
+</body>
+</html>

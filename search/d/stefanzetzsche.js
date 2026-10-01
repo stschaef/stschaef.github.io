@@ -1,0 +1,1 @@
+heliaSearchData("d/stefanzetzsche",{"id":"stefanzetzsche","title":"Stefan Zetzsche","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"stefanzetzsche.html","headings":[],"body":""});

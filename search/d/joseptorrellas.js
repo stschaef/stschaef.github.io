@@ -1,0 +1,1 @@
+heliaSearchData("d/joseptorrellas",{"id":"joseptorrellas","title":"Josep Torrellas","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"joseptorrellas.html","headings":[],"body":""});

@@ -1,0 +1,1 @@
+heliaSearchData("d/university-of-regensburg",{"id":"university-of-regensburg","title":"University of Regensburg","kind":"institution","tags":[],"authors":[],"venue":[],"date":null,"url":"university-of-regensburg.html","headings":[],"body":""});

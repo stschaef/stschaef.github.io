@@ -1,0 +1,1 @@
+heliaSearchData("d/douglasstebila",{"id":"douglasstebila","title":"Douglas Stebila","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"douglasstebila.html","headings":[],"body":""});

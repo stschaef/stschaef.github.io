@@ -1,0 +1,1 @@
+heliaSearchData("d/liinapylkkanen",{"id":"liinapylkkanen","title":"Liina Pylkkänen","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"liinapylkkanen.html","headings":[],"body":""});

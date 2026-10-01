@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>Probabilistic Floating-Point Round-Off Analysis via Concentration Inequalities</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Ctext y=%22.9em%22 font-size=%2290%22%3E%F0%9F%8C%BB%3C/text%3E%3C/svg%3E">
+<meta name="generator" content="helia">
+<link rel="alternate" type="application/atom+xml" title="Steven Schaefer" href="feed.xml">
+<link rel="alternate" type="application/feed+json" title="Steven Schaefer" href="feed.json">
+<script src="helia/theme-version.js"></script>
+<script src="theme/folio-early.js"></script>
+<link rel="stylesheet" href="helia/theme.css">
+<link rel="stylesheet" href="helia/highlight.css">
+<link rel="stylesheet" href="helia/search.css">
+<link rel="stylesheet" href="theme/katex.css">
+<link rel="stylesheet" href="theme/recipe.css">
+<link rel="stylesheet" href="theme/site.css">
+<link rel="stylesheet" href="theme/folio.css">
+<script defer src="helia/runtime.js"></script>
+<script defer src="helia/search.js"></script>
+<script defer src="theme/glyphcraft.js"></script>
+<script defer src="theme/glyphart.js"></script>
+<script defer src="theme/glyphgen.js"></script>
+<script defer src="theme/ornament.js"></script>
+<script defer src="theme/folio.js"></script>
+<script defer src="theme/portrait.js"></script>
+<script type="application/json" id="helia-widgets">{"helia-cite-formats":"widgets/helia-cite-formats-a3294ac7.js"}</script>
+<link rel="modulepreload" href="widgets/helia-cite-formats-a3294ac7.js">
+<script type="module" src="widgets/runtime.js"></script>
+</head>
+<body>
+<nav class="helia-topbar"><a class="helia-home" href="home.html">Steven Schaefer</a><ul class="helia-nav-links"><li><a href="stevenschaefer.html">About Me</a></li><li><a href="research.html">Research</a></li><li><a href="new.html">New</a></li></ul><button type="button" class="helia-search-button" aria-label="Search (/ or Ctrl+K)" aria-haspopup="dialog"><span class="helia-search-icon">⌕</span><span class="helia-search-label">Search</span><kbd class="helia-search-key">/</kbd></button></nav>
+<div class="helia-page" data-kind="reference">
+<article class="helia-article">
+<header class="helia-header" data-entry="tao-2026-probabilistic" data-kind="reference">
+<h2 class="helia-heading"><span class="helia-taxon">Reference.</span> Probabilistic Floating-Point Round-Off Analysis via Concentration Inequalities</h2>
+<div class="helia-meta"><span class="helia-author"><a class="helia-entry-link" href="yichentao.html" data-entry="yichentao">Yichen Tao</a>, <a class="helia-entry-link" href="hongfeifu.html" data-entry="hongfeifu">Hongfei Fu</a>, <a class="helia-entry-link" href="jiaweichen.html" data-entry="jiaweichen">Jiawei Chen</a>, <a class="helia-entry-link" href="jeanbaptistejeannin.html" data-entry="jeanbaptistejeannin">Jean-Baptiste Jeannin</a></span> · <span class="helia-byline"><a class="helia-entry-link" href="oopsla.html" data-entry="oopsla">OOPSLA</a> · 2026</span> · <span class="helia-tags"><span class="helia-tag" data-tag="numerical-verification"><a class="helia-entry-link" href="tag-numerical-verification.html" data-entry="tag-numerical-verification">numerical-verification</a></span> <span class="helia-tag" data-tag="probabilistic"><a class="helia-entry-link" href="tag-probabilistic.html" data-entry="tag-probabilistic">probabilistic</a></span></span> · <span class="helia-entry-links"><span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/2605.04232">arXiv</a></span></span></div>
+</header>
+<div class="helia-body">
+<div class="helia-abstract">Floating-point round-off errors are ubiquitous in numerically intensive programs arising in fields such as scientific computing and optimization. As floating-point errors potentially lead to unexpected and catastrophic program failures, one must derive guaranteed round-off thresholds to ensure the correctness of these programs. However, deterministic round-off thresholds tend to be too conservative to be usable in practice, since they often involve large round-off errors that occur with small probability. Probabilistic thresholds relax deterministic ones by specifying that the probability of the round-off error exceeding a threshold is below a given confidence. In this work, we propose a novel approach to probabilistic round-off analysis, by applying concentration inequalities over the Taylor expansion from FPTaylor (TOPLAS 2018). A major obstacle in applying concentration inequalities is that the Taylor expansion involves absolute value operators that make the calculation of the expected values of the first order partial differential terms difficult. Our first step to overcome this obstacle is a sound over-approximation that removes the absolute value operators in polynomial expressions. Then, we show how to handle fractional expressions by a transformation into polynomial case. Finally, we show how to improve our approach with range partitioning. Our approach is scalable since the key computational part is the calculation of expected values of polynomial expressions with independent variables, for which the linear and independence properties of expectation boost the computation. Experimental results show that our approach is orders of magnitude more time efficient, while producing thresholds with comparable precision against the state of the art.</div>
+</div>
+<div class="helia-cite helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><h3 class="helia-heading">Cite</h3>
+</summary>
+<div class="helia-group-body">
+<div class="helia-widget" data-widget="helia-cite-formats" data-props="{&quot;key&quot;:&quot;tao-2026-probabilistic&quot;,&quot;bibtex&quot;:&quot;@misc{tao-2026-probabilistic,\n  author = {Yichen Tao and Hongfei Fu and Jiawei Chen and Jean-Baptiste Jeannin},\n  title = {Probabilistic Floating-Point Round-Off Analysis via Concentration Inequalities},\n  year = {2026},\n  month = {5},\n  eprint = {2605.04232},\n  archiveprefix = {arXiv}\n}&quot;,&quot;bib-file&quot;:&quot;tao-2026-probabilistic.bib&quot;,&quot;hayagriva&quot;:&quot;tao-2026-probabilistic:\n  type: misc\n  title: Probabilistic Floating-Point Round-Off Analysis via Concentration Inequalities\n  author:\n  - Tao, Yichen\n  - Fu, Hongfei\n  - Chen, Jiawei\n  - Jeannin, Jean-Baptiste\n  date: 2026-05\n  serial-number:\n    arxiv: &#39;2605.04232&#39;\n&quot;,&quot;yml-file&quot;:&quot;tao-2026-probabilistic.yml&quot;}"><div class="helia-cite-key" data-copy="@tao-2026-probabilistic" data-copy-label="citation key"><span class="helia-bib-key">Cite as</span> <code class="helia-raw-inline">@tao-2026-probabilistic</code> (helia, typst) · <code class="helia-raw-inline">\cite{tao-2026-probabilistic}</code> (LaTeX)</div>
+<div class="helia-cite-format helia-collapsible" data-format="bibtex" data-copy="true" data-copy-label="BibTeX">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">BibTeX</span></summary>
+<div class="helia-group-body">
+<details class="helia-code" open><summary class="helia-code-summary"><span class="helia-code-lang">bibtex</span> · <span class="helia-code-lines">8 lines</span></summary><pre class="helia-raw"><code class="language-bibtex"><span class="hl-text hl-bibtex"><span class="hl-meta hl-entry hl-braces hl-bibtex"><span class="hl-keyword hl-other hl-entry-type hl-bibtex"><span class="hl-punctuation hl-definition hl-keyword hl-bibtex">@</span>misc</span><span class="hl-punctuation hl-section hl-entry hl-begin hl-bibtex">{</span><span class="hl-entity hl-name hl-type hl-entry-key hl-bibtex">tao-2026-probabilistic</span>,
+  <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">author</span> <span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span> <span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>Yichen Tao and Hongfei Fu and Jiawei Chen and Jean-Baptiste Jeannin<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>,
+  <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">title</span> <span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span> <span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>Probabilistic Floating-Point Round-Off Analysis via Concentration Inequalities<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>,
+  <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">year</span> <span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span> <span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>2026<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>,
+  <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">month</span> <span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span> <span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>5<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>,
+  <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">eprint</span> <span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span> <span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>2605.04232<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>,
+  <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">archiveprefix</span> <span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span> <span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>arXiv<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span>
+</span><span class="hl-punctuation hl-section hl-entry hl-end hl-bibtex">}</span></span></span></code></pre></details>
+</div>
+</details>
+</div>
+<div class="helia-cite-format helia-collapsible" data-format="hayagriva" data-copy="true" data-copy-label="hayagriva YAML">
+<details>
+<summary class="helia-group-summary"><span class="helia-group-title">hayagriva YAML (typst)</span></summary>
+<div class="helia-group-body">
+<details class="helia-code" open><summary class="helia-code-summary"><span class="helia-code-lang">yaml</span> · <span class="helia-code-lines">11 lines</span></summary><pre class="helia-raw"><code class="language-yaml"><span class="hl-source hl-yaml"><span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">tao-2026-probabilistic</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">type</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">misc</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">title</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Probabilistic Floating-Point Round-Off Analysis via Concentration Inequalities</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">author</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Tao, Yichen</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Fu, Hongfei</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Chen, Jiawei</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Jeannin, Jean-Baptiste</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">date</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">2026-05</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">serial-number</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">arxiv</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-quoted hl-single hl-yaml"><span class="hl-punctuation hl-definition hl-string hl-begin hl-yaml">&#39;</span>2605.04232<span class="hl-punctuation hl-definition hl-string hl-end hl-yaml">&#39;</span></span>
+</span></code></pre></details>
+</div>
+</details>
+</div>
+<div class="helia-cite-files">Download: <a class="helia-link" href="tao-2026-probabilistic.bib">tao-2026-probabilistic.bib</a> · <a class="helia-link" href="tao-2026-probabilistic.yml">tao-2026-probabilistic.yml</a></div>
+</div>
+</div>
+</details>
+</div>
+<div class="helia-reference-cites helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">Cites 35 works (0 here)</span></summary>
+<div class="helia-group-body">
+<div class="helia-reference-cites-away helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">External (35)</span></summary>
+<div class="helia-group-body">
+<ul>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3649824">Quantitative Bounds on Resource Usage of Probabilistic Programs</a> (2024)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.48550/arxiv.2305.15104">Automated Tail Bound Analysis for Probabilistic Recurrence Relations</a> (2023)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3453483.3454062">Central moment analysis for cost accumulators in probabilistic programs</a> (2021)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-030-81688-9_29">Rigorous Roundoff Error Analysis of Probabilistic Floating-Point Computations</a> (2021)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3453483.3454102">Quantitative analysis of assertion violations in probabilistic programs</a> (2020)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-030-34968-4_18">Sound Probabilistic Numerical Error Analysis</a> (2019)</li>
+<li>Introduction to Probability (2019)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-030-17465-1_8">Tail Probabilities for Randomized Program Runtimes via Martingales for Higher Moments</a> (2018)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-319-89960-2_15">Daisy - Framework for Analysis and Optimization of Numerical Programs (Tool Paper)</a> (2018)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-319-73721-8_24">An Abstract Interpretation Framework for the Round-Off Error Analysis of Floating-Point Programs</a> (2018)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3230733">Rigorous Estimation of Floating-Point Round-Off Errors with Symbolic Taylor Expansions</a> (2018)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3015465">Certified Roundoff Error Bounds Using Semidefinite Programming</a> (2017)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3009837.3009873">Stochastic invariants for probabilistic termination</a> (2016)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-319-54292-8_6">Toward a Standard Benchmark Format and Suite for Floating-Point Analysis</a> (2016)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/2908080.2908107">Verifying bit-manipulations of floating-point</a> (2016)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-662-49674-9_13">Uncertainty Propagation Using Probabilistic Affine Forms and Concentration of Measure Inequalities</a> (2016)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/2837614.2837639">Algorithmic analysis of qualitative and quantitative termination problems for affine probabilistic programs</a> (2015)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/2535838.2535874">Sound compilation of reals</a> (2013)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-642-39799-8_34">Probabilistic Program Analysis with Martingales</a> (2013)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/s00607-011-0182-8">A generalization of p-boxes to affine arithmetic</a> (2012)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1109/synasc.2011.52">RangeLab: A Static-Analyzer to Bound the Accuracy of Finite-Precision Computations</a> (2011)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-0-387-87859-1">Probability and Stochastics</a> (2011)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/1772954.1772987">Towards Program Optimization through Automated Analysis of Numerical Precision</a> (2010)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/1644001.1644003">Certification of bounds on expressions involving rounded operators</a> (2010)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-642-04570-7_6">Towards an Industrial Use of FLUCTUAT on Safety-Critical Avionics Software</a> (2009)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-540-89330-1_2">A Sound Floating-Point Polyhedra Abstract Domain</a> (2008)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.2172/809606">Constructing Probability Boxes and Dempster-Shafer Structures</a> (2003)</li>
+<li>IEEE standard 754 for binary floating-point arithmetic (1996)</li>
+<li>Affine Arithmetic and Its Applications to Computer Graphics (1993)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/103162.103163">What every computer scientist should know about floating-point arithmetic</a> (1991)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1017/cbo9780511813658">Probability with Martingales</a> (1991)</li>
+<li>Abstract interpretation: a unified lattice model for static analysis of programs by construction or approximation of fixpoints (1977)</li>
+<li>Principles of mathematical analysis . Vol. 3 (1964)</li>
+<li>GELPIA: Global Extrema Locator Parallelization for Interval Arithmetic</li>
+<li>A Mechanized Error Analysis Framework for End-to-End Verification of Numerical Programs</li>
+</ul>
+</div>
+</details>
+</div>
+</div>
+</details>
+</div>
+</article>
+<div class="helia-identity"><span class="helia-id">tao-2026-probabilistic</span> <span class="helia-kind">reference</span> <span class="helia-path">entries/refs/tao-2026-probabilistic/tao-2026-probabilistic.hel</span></div>
+</div>
+</body>
+</html>

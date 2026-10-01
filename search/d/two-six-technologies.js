@@ -1,0 +1,1 @@
+heliaSearchData("d/two-six-technologies",{"id":"two-six-technologies","title":"Two Six Technologies","kind":"institution","tags":[],"authors":[],"venue":[],"date":null,"url":"two-six-technologies.html","headings":[],"body":""});

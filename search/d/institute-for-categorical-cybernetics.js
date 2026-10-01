@@ -1,0 +1,1 @@
+heliaSearchData("d/institute-for-categorical-cybernetics",{"id":"institute-for-categorical-cybernetics","title":"Institute for Categorical Cybernetics","kind":"institution","tags":[],"authors":[],"venue":[],"date":null,"url":"institute-for-categorical-cybernetics.html","headings":[],"body":""});

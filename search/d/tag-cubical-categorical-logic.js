@@ -1,0 +1,1 @@
+heliaSearchData("d/tag-cubical-categorical-logic",{"id":"tag-cubical-categorical-logic","title":"cubical-categorical-logic","kind":"tag","tags":[],"authors":[],"venue":[],"date":null,"url":"tag-cubical-categorical-logic.html","headings":[],"body":""});

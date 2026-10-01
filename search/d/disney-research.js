@@ -1,0 +1,1 @@
+heliaSearchData("d/disney-research",{"id":"disney-research","title":"Disney Research","kind":"institution","tags":[],"authors":[],"venue":[],"date":null,"url":"disney-research.html","headings":[],"body":""});

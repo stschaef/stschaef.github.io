@@ -1,0 +1,1 @@
+heliaSearchData("d/leonidaslampropoulos",{"id":"leonidaslampropoulos","title":"Leonidas Lampropoulos","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"leonidaslampropoulos.html","headings":[],"body":""});

@@ -1,0 +1,1 @@
+heliaSearchData("d/moeller-2022-extensions",{"id":"moeller-2022-extensions","title":"Extensions of representation stable categories","kind":"reference","tags":[],"authors":["Joe Moeller"],"venue":["arXiv"],"date":null,"url":"moeller-2022-extensions.html","headings":[],"body":""});

@@ -1,0 +1,1 @@
+heliaSearchData("d/well-typed-llp",{"id":"well-typed-llp","title":"Well-Typed LLP","kind":"institution","tags":[],"authors":[],"venue":[],"date":null,"url":"well-typed-llp.html","headings":[],"body":""});

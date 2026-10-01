@@ -1,0 +1,1 @@
+heliaSearchData("d/petersamueldayan",{"id":"petersamueldayan","title":"Peter Samuel Dayan","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"petersamueldayan.html","headings":[],"body":""});

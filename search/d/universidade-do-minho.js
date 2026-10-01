@@ -1,0 +1,1 @@
+heliaSearchData("d/universidade-do-minho",{"id":"universidade-do-minho","title":"Universidade do Minho","kind":"institution","tags":[],"authors":[],"venue":[],"date":null,"url":"universidade-do-minho.html","headings":[],"body":""});

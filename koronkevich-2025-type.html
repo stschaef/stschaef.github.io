@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>Type Universes as Kripke Worlds</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Ctext y=%22.9em%22 font-size=%2290%22%3E%F0%9F%8C%BB%3C/text%3E%3C/svg%3E">
+<meta name="generator" content="helia">
+<link rel="alternate" type="application/atom+xml" title="Steven Schaefer" href="feed.xml">
+<link rel="alternate" type="application/feed+json" title="Steven Schaefer" href="feed.json">
+<script src="helia/theme-version.js"></script>
+<script src="theme/folio-early.js"></script>
+<link rel="stylesheet" href="helia/theme.css">
+<link rel="stylesheet" href="helia/highlight.css">
+<link rel="stylesheet" href="helia/search.css">
+<link rel="stylesheet" href="theme/katex.css">
+<link rel="stylesheet" href="theme/recipe.css">
+<link rel="stylesheet" href="theme/site.css">
+<link rel="stylesheet" href="theme/folio.css">
+<script defer src="helia/runtime.js"></script>
+<script defer src="helia/search.js"></script>
+<script defer src="theme/glyphcraft.js"></script>
+<script defer src="theme/glyphart.js"></script>
+<script defer src="theme/glyphgen.js"></script>
+<script defer src="theme/ornament.js"></script>
+<script defer src="theme/folio.js"></script>
+<script defer src="theme/portrait.js"></script>
+<script type="application/json" id="helia-widgets">{"helia-cite-formats":"widgets/helia-cite-formats-a3294ac7.js"}</script>
+<link rel="modulepreload" href="widgets/helia-cite-formats-a3294ac7.js">
+<script type="module" src="widgets/runtime.js"></script>
+</head>
+<body>
+<nav class="helia-topbar"><a class="helia-home" href="home.html">Steven Schaefer</a><ul class="helia-nav-links"><li><a href="stevenschaefer.html">About Me</a></li><li><a href="research.html">Research</a></li><li><a href="new.html">New</a></li></ul><button type="button" class="helia-search-button" aria-label="Search (/ or Ctrl+K)" aria-haspopup="dialog"><span class="helia-search-icon">⌕</span><span class="helia-search-label">Search</span><kbd class="helia-search-key">/</kbd></button></nav>
+<div class="helia-page" data-kind="reference">
+<article class="helia-article">
+<header class="helia-header" data-entry="koronkevich-2025-type" data-kind="reference">
+<h2 class="helia-heading"><span class="helia-taxon">Reference.</span> Type Universes as Kripke Worlds</h2>
+<div class="helia-meta"><span class="helia-author"><a class="helia-entry-link" href="paulettekoronkevich.html" data-entry="paulettekoronkevich">Paulette Koronkevich</a>, <a class="helia-entry-link" href="williambowman.html" data-entry="williambowman">William J. Bowman</a></span> · <span class="helia-byline"><a class="helia-entry-link" href="icfp.html" data-entry="icfp">ICFP</a> · 2025</span> · <span class="helia-tags"><span class="helia-tag" data-tag="universes"><a class="helia-entry-link" href="tag-universes.html" data-entry="tag-universes">universes</a></span> <span class="helia-tag" data-tag="logical-relations"><a class="helia-entry-link" href="tag-logical-relations.html" data-entry="tag-logical-relations">logical-relations</a></span></span> · <span class="helia-entry-links"><span class="helia-entry-link" data-field="pdf-url"><a class="helia-link helia-external" href="https://dl.acm.org/doi/pdf/10.1145/3747532">PDF</a></span> · <span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/3747532">DOI</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/journals/pacmpl/KoronkevichB25">pldb</a></span></span></div>
+</header>
+<div class="helia-body">
+<div class="helia-abstract">What are mutable references; what do they mean? The answers to these questions have spawned lots of important theoretical work and form the foundation of many impactful tools. However, existing semantics collapse a key distinction: which allocations does a reference depend on? In this paper, we deconstruct the space of mutable higher-order references. We formalize a novel distinction–splitting the design space of references not only into higher-order vs (full-)ground references, but also dependency of an allocation on past vs future allocations. This distinction is fundamental to a thorny issue that arises in constructing semantic models of mutable references–the type-world circularity. The issue disappears for what we call predicative references, those that only quantify over past, not future, allocations, and for non-higher-order impredicative references. We design a syntax and semantics for each point in our newly described space. The syntax relies on a type universe hierarchy, à la dependent type theory, to kind the types of allocated terms, and stratify allocations. Each type universe corresponds to a semantic Kripke world, giving a lightweight syntactic mechanism to design and restrict heap shapes. The semantics bear a resemblance to work on regions, and suggest some connection between universe systems and regions, which we describe in some detail.</div>
+</div>
+<div class="helia-cite helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><h3 class="helia-heading">Cite</h3>
+</summary>
+<div class="helia-group-body">
+<div class="helia-widget" data-widget="helia-cite-formats" data-props="{&quot;key&quot;:&quot;koronkevich-2025-type&quot;,&quot;bibtex&quot;:&quot;@article{koronkevich-2025-type, title={Type Universes as Kripke Worlds}, volume={9}, ISSN={2475-1421}, url={http://dx.doi.org/10.1145/3747532}, DOI={10.1145/3747532}, number={ICFP}, journal={Proceedings of the ACM on Programming Languages}, publisher={Association for Computing Machinery (ACM)}, author={Koronkevich, Paulette and Bowman, William J.}, year={2025}, month=Aug, pages={784–813} }&quot;,&quot;bib-file&quot;:&quot;koronkevich-2025-type.bib&quot;,&quot;hayagriva&quot;:&quot;koronkevich-2025-type:\n  type: article\n  title: Type Universes as Kripke Worlds\n  author:\n  - Koronkevich, Paulette\n  - Bowman, William J.\n  date: 2025-08\n  page-range: 784-813\n  url: http://dx.doi.org/10.1145/3747532\n  serial-number:\n    doi: 10.1145/3747532\n    issn: 2475-1421\n  parent:\n    type: periodical\n    title: Proceedings of the ACM on Programming Languages\n    publisher: Association for Computing Machinery (ACM)\n    issue: ICFP\n    volume: 9\n&quot;,&quot;yml-file&quot;:&quot;koronkevich-2025-type.yml&quot;}"><div class="helia-cite-key" data-copy="@koronkevich-2025-type" data-copy-label="citation key"><span class="helia-bib-key">Cite as</span> <code class="helia-raw-inline">@koronkevich-2025-type</code> (helia, typst) · <code class="helia-raw-inline">\cite{koronkevich-2025-type}</code> (LaTeX)</div>
+<div class="helia-cite-format helia-collapsible" data-format="bibtex" data-copy="true" data-copy-label="BibTeX">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">BibTeX</span></summary>
+<div class="helia-group-body">
+<details class="helia-code" open><summary class="helia-code-summary"><span class="helia-code-lang">bibtex</span> · <span class="helia-code-lines">1 line</span></summary><pre class="helia-raw"><code class="language-bibtex"><span class="hl-text hl-bibtex"><span class="hl-meta hl-entry hl-braces hl-bibtex"><span class="hl-keyword hl-other hl-entry-type hl-bibtex"><span class="hl-punctuation hl-definition hl-keyword hl-bibtex">@</span>article</span><span class="hl-punctuation hl-section hl-entry hl-begin hl-bibtex">{</span><span class="hl-entity hl-name hl-type hl-entry-key hl-bibtex">koronkevich-2025-type</span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">title</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>Type Universes as Kripke Worlds<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">volume</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>9<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">ISSN</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>2475-1421<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">url</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>http://dx.doi.org/10.1145/3747532<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">DOI</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>10.1145/3747532<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">number</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>ICFP<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">journal</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>Proceedings of the ACM on Programming Languages<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">publisher</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>Association for Computing Machinery (ACM)<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">author</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>Koronkevich, Paulette and Bowman, William J.<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">year</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>2025<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">month</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span>Aug</span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">pages</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>784–813<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span> </span><span class="hl-punctuation hl-section hl-entry hl-end hl-bibtex">}</span></span></span></code></pre></details>
+</div>
+</details>
+</div>
+<div class="helia-cite-format helia-collapsible" data-format="hayagriva" data-copy="true" data-copy-label="hayagriva YAML">
+<details>
+<summary class="helia-group-summary"><span class="helia-group-title">hayagriva YAML (typst)</span></summary>
+<div class="helia-group-body">
+<details class="helia-code" open><summary class="helia-code-summary"><span class="helia-code-lang">yaml</span> · <span class="helia-code-lines">18 lines</span></summary><pre class="helia-raw"><code class="language-yaml"><span class="hl-source hl-yaml"><span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">koronkevich-2025-type</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">type</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">article</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">title</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Type Universes as Kripke Worlds</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">author</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Koronkevich, Paulette</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Bowman, William J.</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">date</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">2025-08</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">page-range</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">784-813</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">url</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">http://dx.doi.org/10.1145/3747532</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">serial-number</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">doi</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">10.1145/3747532</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">issn</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">2475-1421</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">parent</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">type</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">periodical</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">title</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Proceedings of the ACM on Programming Languages</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">publisher</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Association for Computing Machinery (ACM)</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">issue</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">ICFP</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">volume</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-constant hl-numeric hl-integer hl-decimal hl-yaml">9</span>
+</span></code></pre></details>
+</div>
+</details>
+</div>
+<div class="helia-cite-files">Download: <a class="helia-link" href="koronkevich-2025-type.bib">koronkevich-2025-type.bib</a> · <a class="helia-link" href="koronkevich-2025-type.yml">koronkevich-2025-type.yml</a></div>
+</div>
+</div>
+</details>
+</div>
+<div class="helia-reference-cites helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">Cites 42 works (2 here)</span></summary>
+<div class="helia-group-body">
+<div class="helia-reference-cites-here helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">With notes (2)</span></summary>
+<div class="helia-group-body">
+<section class="helia-transclusion" data-entry="chan-2025-stratified" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="chan-2025-stratified"><span class="helia-title">Stratified Type Theory</span>&nbsp;<a class="helia-slug" href="chan-2025-stratified.html">chan-2025-stratified</a><span class="helia-byline"><span class="helia-entry-link" data-entry="esop">ESOP</span> · 2025</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="chan-2025-stratified" data-kind="reference">
+<div class="helia-abstract">A hierarchy of type universes is a rudimentary ingredient in the type theories of many proof assistants to prevent the logical inconsistency resulting from combining dependent functions and the type-in-type axiom. In this work, we argue that a universe hierarchy is not the only option for universes in type theory. Taking inspiration from Leivant’s Stratified System F, we introduce Stratified Type Theory (), where rather than stratifying universes by levels, we stratify typing judgements and restrict the domain of dependent functions to strictly lower levels. Even with type-in-type, this restriction suffices to enforce consistency. In , we consider a number of extensions beyond just stratified dependent functions. First, the subsystem employs McBride’s crude-but-effective stratification (also known as displacement) as a simple form of level polymorphism where global definitions with concrete levels can be displaced uniformly to any higher level. Second, to recover some expressivity lost due to the restriction on dependent function domains, the full includes a separate nondependent function type with a floating domain whose level matches that of the overall function type. Finally, we have implemented a prototype type checker for extended with datatypes and inference for level and displacement annotations, along with a small core library. We have proven to be consistent and to be type safe, but consistency of the full remains an open problem, largely due to the interaction between floating functions and cumulativity of judgements. Nevertheless, we believe to be consistent, and as evidence have verified the ill-typedness of some well-known type-theoretic paradoxes using our implementation.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="pdf-url"><a class="helia-link helia-external" href="https://link.springer.com/content/pdf/10.1007/978-3-031-91118-7_10.pdf">PDF</a></span> · <span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-031-91118-7_10">DOI</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/conf/esop/ChanW25">pldb</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="houfavonia-2023-an" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="houfavonia-2023-an"><span class="helia-title">An Order-Theoretic Analysis of Universe Polymorphism</span>&nbsp;<a class="helia-slug" href="houfavonia-2023-an.html">houfavonia-2023-an</a><span class="helia-byline"><span class="helia-entry-link" data-entry="popl">POPL</span> · 2023</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="houfavonia-2023-an" data-kind="reference">
+<div class="helia-abstract">We present a novel formulation of universe polymorphism in dependent type theory in terms of monads on the category of strict partial orders, and a novel algebraic structure, displacement algebras, on top of which one can implement a generalized form of McBride’s “crude but effective stratification” scheme for lightweight universe polymorphism. We give some examples of exotic but consistent universe hierarchies, and prove that every universe hierarchy in our sense can be embedded in a displacement algebra and hence implemented via our generalization of McBride’s scheme. Many of our technical results are mechanized in Agda, and we have an OCaml library for universe levels based on displacement algebras, for use in proof assistant implementations.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="pdf-url"><a class="helia-link helia-external" href="https://dl.acm.org/doi/pdf/10.1145/3571250">PDF</a></span> · <span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/3571250">DOI</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/journals/pacmpl/FavoniaAM23">pldb</a></span></div>
+</div>
+</div>
+</details>
+</section>
+</div>
+</details>
+</div>
+<div class="helia-reference-cites-away helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">External (40)</span></summary>
+<div class="helia-group-body">
+<ul>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3674642">Oxidizing OCaml with Modal Memory Management</a> (2024)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3622846">Reference Capabilities for Flexible Memory Management</a> (2023)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3618003">Capturing Types</a> (2023)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3632856">Polymorphic Reachability Types: Tracking Freshness, Aliasing, and Separation in Higher-Order Generic Programs</a> (2023)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3519939.3523443">A flexible type system for fearless concurrency</a> (2022)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3485516">Reachability types: tracking aliasing and separation in higher-order functional programs</a> (2021)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3371126">The fire triangle: how to mix substitution, dependent elimination, and effects</a> (2019)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1109/lics.2017.8005109">A monad for full ground reference cells</a> (2017)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3009837.3009878">Dijkstra monads for free</a> (2016)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-642-29320-7_9">Strong Normalisation in λ-Calculi with References</a> (2012)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-642-31585-5_30">Algorithmic Games for Full Ground References</a> (2012)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/2034773.2034811">Secure distributed programming with value-dependent types</a> (2011)</li>
+<li>Termination of Threads with Shared Memory via Infinitary Choice (2011)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-642-15375-4_23">Termination in Impure Concurrent Languages</a> (2010)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/1480881.1480925">State-dependent representation independence</a> (2009)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-642-10672-9_16">On Stratified Regions</a> (2009)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-540-92188-2_4">Universe Types for Topology and Encapsulation</a> (2008)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1016/j.entcs.2008.10.015">Global State Considered Helpful</a> (2008)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/1190216.1190235">A very modal model of a modern, major, general type system</a> (2007)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-540-74407-8_19">Fair Cooperative Multithreading</a> (2007)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1016/j.ic.2009.06.007">Typing termination in a higher-order concurrent imperative language</a> (2007)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/11417170_22">L3: A Linear Language with Locations</a> (2005)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/11417170_8">Relational Reasoning in a Nominal Semantics for Storage</a> (2005)</li>
+<li>Advanced Topics in Types and Programming Languages (2005)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.5381/jot.2005.4.8.a1">Universes: Lightweight Ownership for JML</a> (2005)</li>
+<li>Semantics of Types for Mutable State (PhD dissertation) (2004)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/3-540-45793-3_16">Possible World Semantics for General Storage in Call-By-Value</a> (2002)</li>
+<li>Types and Programming Languages (2002)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/504709.504712">An indexed model of recursive types for foundational proof-carrying code</a> (2001)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3537668.3537670">Call-by-push-value</a> (2001)</li>
+<li>Operational reasoning for functions with local state (1999)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1109/lics.1998.705669">A fully abstract game semantics for general references</a> (1998)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1006/inco.1996.2613">Region-based Memory Management</a> (1997)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1016/s0049-237x(08)71945-1">An Intuitionistic Theory of Types: Predicative Part</a> (1975)</li>
+<li>Interprétation fonctionelle et élimination des coupures de l’arithmétique d’ordre supérieur (1972)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1093/comjnl/6.4.308">The Mechanical Evaluation of Expressions</a> (1964)</li>
+<li>The Sun Also Rises (1926)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.48550/arxiv.2309.05885">10.48550/arxiv.2309.05885</a></li>
+<li>Crude but Effective Stratification (Epilogue blog)</li>
+<li>Swift Language Documentation: Strong Reference Cycles for Closures</li>
+</ul>
+</div>
+</details>
+</div>
+</div>
+</details>
+</div>
+</article>
+<div class="helia-identity"><span class="helia-id">koronkevich-2025-type</span> <span class="helia-kind">reference</span> <span class="helia-path">entries/refs/koronkevich-2025-type/koronkevich-2025-type.hel</span></div>
+</div>
+</body>
+</html>

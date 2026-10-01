@@ -1,0 +1,1 @@
+heliaSearchData("d/u-s-national-science-foundation",{"id":"u-s-national-science-foundation","title":"U.S. National Science Foundation","kind":"institution","tags":[],"authors":[],"venue":[],"date":null,"url":"u-s-national-science-foundation.html","headings":[],"body":""});

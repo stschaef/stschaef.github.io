@@ -1,0 +1,1 @@
+heliaSearchData("d/christinepaulinmohring",{"id":"christinepaulinmohring","title":"Christine Paulin-Mohring","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"christinepaulinmohring.html","headings":[],"body":""});

@@ -1,0 +1,1 @@
+heliaSearchData("d/university-of-minnesota",{"id":"university-of-minnesota","title":"University of Minnesota","kind":"institution","tags":[],"authors":[],"venue":[],"date":null,"url":"university-of-minnesota.html","headings":[],"body":""});

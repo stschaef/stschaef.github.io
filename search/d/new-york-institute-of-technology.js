@@ -1,0 +1,1 @@
+heliaSearchData("d/new-york-institute-of-technology",{"id":"new-york-institute-of-technology","title":"New York Institute of Technology","kind":"institution","tags":[],"authors":[],"venue":[],"date":null,"url":"new-york-institute-of-technology.html","headings":[],"body":""});

@@ -1,0 +1,1 @@
+heliaSearchData("d/ruppel-2023-long",{"id":"ruppel-2023-long","title":"Long-Term Mentoring for Computer Science Researchers","kind":"reference","tags":[],"authors":["Alexandra Silva","Elba Garza","Emily Ruppel","Sihang Liu","Sukyoung Ryu","Talia Ringer"],"venue":["CACM","Communications of the ACM"],"date":null,"url":"ruppel-2023-long.html","headings":[],"body":""});

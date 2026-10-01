@@ -1,0 +1,1 @@
+heliaSearchData("d/tosch-2024-privacy",{"id":"tosch-2024-privacy","title":"Privacy Policies on the Fediverse: A Case Study of Mastodon Instances","kind":"reference","tags":[],"authors":["Chris Martens","Cynthia Li","Emma Tosch","Luis Garcia"],"venue":["PoPETs","Proceedings on Privacy Enhancing Technologies"],"date":null,"url":"tosch-2024-privacy.html","headings":[],"body":""});

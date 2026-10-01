@@ -1,0 +1,1 @@
+heliaSearchData("d/ollscoil-na-gaillimhe-university-of-galway",{"id":"ollscoil-na-gaillimhe-university-of-galway","title":"Ollscoil na Gaillimhe – University of Galway","kind":"institution","tags":[],"authors":[],"venue":[],"date":null,"url":"ollscoil-na-gaillimhe-university-of-galway.html","headings":[],"body":""});

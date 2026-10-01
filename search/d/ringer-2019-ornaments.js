@@ -1,0 +1,1 @@
+heliaSearchData("d/ringer-2019-ornaments",{"id":"ringer-2019-ornaments","title":"Ornaments for Proof Reuse in Coq","kind":"reference","tags":["proof-engineering"],"authors":["Dan Grossman","John Leo","Nathaniel Yazdani","Talia Ringer"],"venue":["ITP","Interactive Theorem Proving"],"date":null,"url":"ringer-2019-ornaments.html","headings":[],"body":""});

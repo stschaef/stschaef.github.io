@@ -1,0 +1,1 @@
+heliaSearchData("d/hinrichschutze",{"id":"hinrichschutze","title":"Hinrich Schütze","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"hinrichschutze.html","headings":[],"body":""});

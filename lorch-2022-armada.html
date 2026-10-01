@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>Armada: Automated Verification of Concurrent Code with Sound Semantic Extensibility</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Ctext y=%22.9em%22 font-size=%2290%22%3E%F0%9F%8C%BB%3C/text%3E%3C/svg%3E">
+<meta name="generator" content="helia">
+<link rel="alternate" type="application/atom+xml" title="Steven Schaefer" href="feed.xml">
+<link rel="alternate" type="application/feed+json" title="Steven Schaefer" href="feed.json">
+<script src="helia/theme-version.js"></script>
+<script src="theme/folio-early.js"></script>
+<link rel="stylesheet" href="helia/theme.css">
+<link rel="stylesheet" href="helia/highlight.css">
+<link rel="stylesheet" href="helia/search.css">
+<link rel="stylesheet" href="theme/katex.css">
+<link rel="stylesheet" href="theme/recipe.css">
+<link rel="stylesheet" href="theme/site.css">
+<link rel="stylesheet" href="theme/folio.css">
+<script defer src="helia/runtime.js"></script>
+<script defer src="helia/search.js"></script>
+<script defer src="theme/glyphcraft.js"></script>
+<script defer src="theme/glyphart.js"></script>
+<script defer src="theme/glyphgen.js"></script>
+<script defer src="theme/ornament.js"></script>
+<script defer src="theme/folio.js"></script>
+<script defer src="theme/portrait.js"></script>
+<script type="application/json" id="helia-widgets">{"helia-cite-formats":"widgets/helia-cite-formats-a3294ac7.js"}</script>
+<link rel="modulepreload" href="widgets/helia-cite-formats-a3294ac7.js">
+<script type="module" src="widgets/runtime.js"></script>
+</head>
+<body>
+<nav class="helia-topbar"><a class="helia-home" href="home.html">Steven Schaefer</a><ul class="helia-nav-links"><li><a href="stevenschaefer.html">About Me</a></li><li><a href="research.html">Research</a></li><li><a href="new.html">New</a></li></ul><button type="button" class="helia-search-button" aria-label="Search (/ or Ctrl+K)" aria-haspopup="dialog"><span class="helia-search-icon">⌕</span><span class="helia-search-label">Search</span><kbd class="helia-search-key">/</kbd></button></nav>
+<div class="helia-page" data-kind="reference">
+<article class="helia-article">
+<header class="helia-header" data-entry="lorch-2022-armada" data-kind="reference">
+<h2 class="helia-heading"><span class="helia-taxon">Reference.</span> Armada: Automated Verification of Concurrent Code with Sound Semantic Extensibility</h2>
+<div class="helia-meta"><span class="helia-author"><a class="helia-entry-link" href="jacobrlorch.html" data-entry="jacobrlorch">Jacob R. Lorch</a>, <a class="helia-entry-link" href="yixuanchen.html" data-entry="yixuanchen">Yixuan Chen</a>, <a class="helia-entry-link" href="manoskapritsos.html" data-entry="manoskapritsos">Manos Kapritsos</a>, <a class="helia-entry-link" href="haojunma.html" data-entry="haojunma">Haojun Ma</a>, <a class="helia-entry-link" href="bryanparno.html" data-entry="bryanparno">Bryan Parno</a>, <a class="helia-entry-link" href="shazqadeer.html" data-entry="shazqadeer">Shaz Qadeer</a>, <a class="helia-entry-link" href="upamanyusharma.html" data-entry="upamanyusharma">Upamanyu Sharma</a>, <a class="helia-entry-link" href="jamesrwilcox.html" data-entry="jamesrwilcox">James R. Wilcox</a>, <a class="helia-entry-link" href="xueyuanzhao.html" data-entry="xueyuanzhao">Xueyuan Zhao</a></span> · <span class="helia-byline"><a class="helia-entry-link" href="toplas.html" data-entry="toplas">TOPLAS</a> · 2022</span> · <span class="helia-tags"><span class="helia-tag" data-tag="concurrency"><a class="helia-entry-link" href="tag-concurrency.html" data-entry="tag-concurrency">concurrency</a></span></span> · <span class="helia-entry-links"><span class="helia-entry-link" data-field="pdf-url"><a class="helia-link helia-external" href="https://dl.acm.org/doi/pdf/10.1145/3502491">PDF</a></span> · <span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/3502491">DOI</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/journals/toplas/LorchCKMPQSWZ22">pldb</a></span></span></div>
+</header>
+<div class="helia-body">
+<div class="helia-abstract">Safely writing high-performance concurrent programs is notoriously difficult. To aid developers, we introduce Armada, a language and tool designed to formally verify such programs with relatively little effort. Via a C-like language and a small-step, state-machine-based semantics, Armadagives developers the flexibility to choose arbitrary memory layout and synchronization primitives so that they are never constrained in their pursuit of performance. To reduce developer effort, Armadaleverages SMT-powered automation and a library of powerful reasoning techniques, including rely-guarantee, TSO elimination, reduction, and pointer analysis. All of these techniques are proven sound, and Armadacan be soundly extended with additional strategies over time. Using Armada, we verify five concurrent case studies and show that we can achieve performance equivalent to that of unverified code.</div>
+</div>
+<div class="helia-cite helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><h3 class="helia-heading">Cite</h3>
+</summary>
+<div class="helia-group-body">
+<div class="helia-widget" data-widget="helia-cite-formats" data-props="{&quot;key&quot;:&quot;lorch-2022-armada&quot;,&quot;bibtex&quot;:&quot;@article{lorch-2022-armada, title={Armada: Automated Verification of Concurrent Code with Sound Semantic Extensibility}, volume={44}, ISSN={1558-4593}, url={http://dx.doi.org/10.1145/3502491}, DOI={10.1145/3502491}, number={2}, journal={ACM Transactions on Programming Languages and Systems}, publisher={Association for Computing Machinery (ACM)}, author={Lorch, Jacob R. and Chen, Yixuan and Kapritsos, Manos and Ma, Haojun and Parno, Bryan and Qadeer, Shaz and Sharma, Upamanyu and Wilcox, James R. and Zhao, Xueyuan}, year={2022}, month=May, pages={1–39} }&quot;,&quot;bib-file&quot;:&quot;lorch-2022-armada.bib&quot;,&quot;hayagriva&quot;:&quot;lorch-2022-armada:\n  type: article\n  title: &#39;Armada: Automated Verification of Concurrent Code with Sound Semantic Extensibility&#39;\n  author:\n  - Lorch, Jacob R.\n  - Chen, Yixuan\n  - Kapritsos, Manos\n  - Ma, Haojun\n  - Parno, Bryan\n  - Qadeer, Shaz\n  - Sharma, Upamanyu\n  - Wilcox, James R.\n  - Zhao, Xueyuan\n  date: 2022-05\n  page-range: 1-39\n  url: http://dx.doi.org/10.1145/3502491\n  serial-number:\n    doi: 10.1145/3502491\n    issn: 1558-4593\n  parent:\n    type: periodical\n    title: ACM Transactions on Programming Languages and Systems\n    publisher: Association for Computing Machinery (ACM)\n    issue: 2\n    volume: 44\n&quot;,&quot;yml-file&quot;:&quot;lorch-2022-armada.yml&quot;}"><div class="helia-cite-key" data-copy="@lorch-2022-armada" data-copy-label="citation key"><span class="helia-bib-key">Cite as</span> <code class="helia-raw-inline">@lorch-2022-armada</code> (helia, typst) · <code class="helia-raw-inline">\cite{lorch-2022-armada}</code> (LaTeX)</div>
+<div class="helia-cite-format helia-collapsible" data-format="bibtex" data-copy="true" data-copy-label="BibTeX">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">BibTeX</span></summary>
+<div class="helia-group-body">
+<details class="helia-code" open><summary class="helia-code-summary"><span class="helia-code-lang">bibtex</span> · <span class="helia-code-lines">1 line</span></summary><pre class="helia-raw"><code class="language-bibtex"><span class="hl-text hl-bibtex"><span class="hl-meta hl-entry hl-braces hl-bibtex"><span class="hl-keyword hl-other hl-entry-type hl-bibtex"><span class="hl-punctuation hl-definition hl-keyword hl-bibtex">@</span>article</span><span class="hl-punctuation hl-section hl-entry hl-begin hl-bibtex">{</span><span class="hl-entity hl-name hl-type hl-entry-key hl-bibtex">lorch-2022-armada</span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">title</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>Armada: Automated Verification of Concurrent Code with Sound Semantic Extensibility<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">volume</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>44<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">ISSN</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>1558-4593<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">url</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>http://dx.doi.org/10.1145/3502491<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">DOI</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>10.1145/3502491<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">number</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>2<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">journal</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>ACM Transactions on Programming Languages and Systems<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">publisher</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>Association for Computing Machinery (ACM)<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">author</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>Lorch, Jacob R. and Chen, Yixuan and Kapritsos, Manos and Ma, Haojun and Parno, Bryan and Qadeer, Shaz and Sharma, Upamanyu and Wilcox, James R. and Zhao, Xueyuan<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">year</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>2022<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">month</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span>May</span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">pages</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>1–39<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span> </span><span class="hl-punctuation hl-section hl-entry hl-end hl-bibtex">}</span></span></span></code></pre></details>
+</div>
+</details>
+</div>
+<div class="helia-cite-format helia-collapsible" data-format="hayagriva" data-copy="true" data-copy-label="hayagriva YAML">
+<details>
+<summary class="helia-group-summary"><span class="helia-group-title">hayagriva YAML (typst)</span></summary>
+<div class="helia-group-body">
+<details class="helia-code" open><summary class="helia-code-summary"><span class="helia-code-lang">yaml</span> · <span class="helia-code-lines">25 lines</span></summary><pre class="helia-raw"><code class="language-yaml"><span class="hl-source hl-yaml"><span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">lorch-2022-armada</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">type</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">article</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">title</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-quoted hl-single hl-yaml"><span class="hl-punctuation hl-definition hl-string hl-begin hl-yaml">&#39;</span>Armada: Automated Verification of Concurrent Code with Sound Semantic Extensibility<span class="hl-punctuation hl-definition hl-string hl-end hl-yaml">&#39;</span></span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">author</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Lorch, Jacob R.</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Chen, Yixuan</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Kapritsos, Manos</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Ma, Haojun</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Parno, Bryan</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Qadeer, Shaz</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Sharma, Upamanyu</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Wilcox, James R.</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Zhao, Xueyuan</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">date</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">2022-05</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">page-range</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">1-39</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">url</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">http://dx.doi.org/10.1145/3502491</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">serial-number</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">doi</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">10.1145/3502491</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">issn</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">1558-4593</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">parent</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">type</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">periodical</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">title</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">ACM Transactions on Programming Languages and Systems</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">publisher</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Association for Computing Machinery (ACM)</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">issue</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-constant hl-numeric hl-integer hl-decimal hl-yaml">2</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">volume</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-constant hl-numeric hl-integer hl-decimal hl-yaml">44</span>
+</span></code></pre></details>
+</div>
+</details>
+</div>
+<div class="helia-cite-files">Download: <a class="helia-link" href="lorch-2022-armada.bib">lorch-2022-armada.bib</a> · <a class="helia-link" href="lorch-2022-armada.yml">lorch-2022-armada.yml</a></div>
+</div>
+</div>
+</details>
+</div>
+<div class="helia-reference-cited-by helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">Cited by (2)</span></summary>
+<div class="helia-group-body">
+<section class="helia-transclusion" data-entry="lattuada-2024-verus" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="lattuada-2024-verus"><span class="helia-title">Verus: A Practical Foundation for Systems Verification</span>&nbsp;<a class="helia-slug" href="lattuada-2024-verus.html">lattuada-2024-verus</a><span class="helia-byline"><span class="helia-entry-link" data-entry="sosp">SOSP</span> · 2024</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="lattuada-2024-verus" data-kind="reference">
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/3694715.3695952">DOI</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="zhou-2023-galapagos" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="zhou-2023-galapagos"><span class="helia-title">Galápagos: Developing Verified Low Level Cryptography on Heterogeneous Hardwares</span>&nbsp;<a class="helia-slug" href="zhou-2023-galapagos.html">zhou-2023-galapagos</a><span class="helia-byline"><span class="helia-entry-link" data-entry="ccs">CCS</span> · 2023</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="zhou-2023-galapagos" data-kind="reference">
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/3576915.3616603">DOI</a></span></div>
+</div>
+</div>
+</details>
+</section>
+</div>
+</details>
+</div>
+<div class="helia-reference-cites helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">Cites 46 works (2 here)</span></summary>
+<div class="helia-group-body">
+<div class="helia-reference-cites-here helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">With notes (2)</span></summary>
+<div class="helia-group-body">
+<section class="helia-transclusion" data-entry="lorch-2020-armada" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="lorch-2020-armada"><span class="helia-title">Armada: low-effort verification of high-performance concurrent programs</span>&nbsp;<a class="helia-slug" href="lorch-2020-armada.html">lorch-2020-armada</a><span class="helia-byline"><span class="helia-entry-link" data-entry="pldi">PLDI</span> · 2020</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="lorch-2020-armada" data-kind="reference">
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="pdf-url"><a class="helia-link helia-external" href="https://dl.acm.org/doi/pdf/10.1145/3385412.3385971">PDF</a></span> · <span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/3385412.3385971">DOI</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/conf/pldi/LorchCKPQSWZ20">pldb</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="jung_etal_iris_ground_up_2018" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="jung_etal_iris_ground_up_2018"><span class="helia-title">Iris from the ground up: A modular foundation for higher-order concurrent separation logic</span>&nbsp;<a class="helia-slug" href="jung_etal_iris_ground_up_2018.html">jung_etal_iris_ground_up_2018</a><span class="helia-byline"><span class="helia-entry-link" data-entry="jfp">JFP</span> · 2018</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="jung_etal_iris_ground_up_2018" data-kind="reference">
+<div class="helia-abstract">Iris is a framework for higher-order concurrent separation logic, which has been implemented in the Coq proof assistant and deployed very effectively in a wide variety of verification projects. Iris was designed with the express goal of simplifying and consolidating the foundations of modern separation logics, but it has evolved over time, and the design and semantic foundations of Iris itself have yet to be fully written down and explained together properly in one place. Here, we attempt to fill this gap, presenting a reasonably complete picture of the latest version of Iris (version 3.1), from first principles and in one coherent narrative.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="pdf-url"><a class="helia-link helia-external" href="https://www.cambridge.org/core/services/aop-cambridge-core/content/view/26301B518CE2C52796BFA12B8BAB5B5F/S0956796818000151a.pdf/div-class-title-iris-from-the-ground-up-a-modular-foundation-for-higher-order-concurrent-separation-logic-div.pdf">PDF</a></span> · <span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1017/s0956796818000151">DOI</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/journals/jfp/JungKJBBD18">pldb</a></span></div>
+</div>
+</div>
+</details>
+</section>
+</div>
+</details>
+</div>
+<div class="helia-reference-cites-away helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">External (44)</span></summary>
+<div class="helia-group-body">
+<ul>
+<li>Market share of the x86 architecture (2021)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3436808">CSim2: compositional top-down verification of concurrent systems using rely-guarantee</a> (2021)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3341301.3359632">Verifying concurrent, crash-safe systems with Perennial</a> (2019)</li>
+<li>LFDS 7.11 queue implementation (2019)</li>
+<li>Private communication (Shaz Qadeer) (2019)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3192366.3192381">Certified concurrent abstraction layers</a> (2018)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-319-96145-3_5">Layered Concurrent Programs</a> (2018)</li>
+<li>Go with the flow: Compositional abstractions for concurrent data structures (2018)</li>
+<li>Verifying concurrent software using movers in CSPEC (2018)</li>
+<li>Nickel: a framework for design and verification of information flow control systems (2018)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3009837.3009850">A promising semantics for relaxed-memory concurrency</a> (2017)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-319-71237-6_14">Safety and Liveness of MCS Lock—Layer by Layer</a> (2017)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-662-54434-1_26">The Essence of Higher-Order Concurrent Separation Logic</a> (2017)</li>
+<li>CertiKOS: an extensible architecture for building certified concurrent OS kernels (2016)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/2676726.2676975">Deep Specifications and Certified Abstraction Layers</a> (2015)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-319-21668-3_26">Automated and Modular Refinement Reasoning for Concurrent Programs</a> (2015)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-662-44202-9_9">TaDA: a logic for time and data abstraction</a> (2014)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/2429069.2429104">Views: compositional reasoning for concurrent programs</a> (2013)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/2103656.2103711">A rely-guarantee-based simulation for verifying concurrent program transformations</a> (2012)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/1926385.1926393">Relaxed-memory concurrency and verified compilation</a> (2011)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.3233/jcs-2009-0393">Hyperproperties</a> (2010)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-642-17511-4_20">Dafny: An Automatic Program Verifier for Functional Correctness</a> (2010)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-642-14107-2_23">Reasoning about the Implementation of Concurrency Abstractions on x86-TSO</a> (2010)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-642-14052-5_28">From total store order to sequential consistency: a practical reduction theorem</a> (2010)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/1594834.1480930">Relaxed memory models: an operational approach</a> (2009)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-642-03359-9_2">VCC: A Practical System for Verifying Concurrent C</a> (2009)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-642-00590-9_26">Deny-Guarantee Reasoning</a> (2009)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/1594834.1480885">A calculus of atomic actions</a> (2009)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-642-03359-9_27">A Better x86 Memory Model: x86-TSO</a> (2009)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-540-78800-3_24">Z3: An Efficient SMT Solver</a> (2008)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1016/j.tcs.2006.12.035">Resources, concurrency, and local reasoning</a> (2007)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/11813040_31">Formal Verification of a C Compiler Front-End</a> (2006)</li>
+<li>Boogie: A modular reusable verifier for object-oriented programs (2005)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/1007512.1007543">Exploiting purity for atomicity</a> (2004)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/bfb0055631">Reduction in TLA</a> (1998)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/237721.237727">Points-to analysis in almost linear time</a> (1996)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/248052.248106">Simple, fast, and practical non-blocking and blocking concurrent queue algorithms</a> (1996)</li>
+<li>Noninterference, Transitivity, and Channel-control Security Policies (1992)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1016/0304-3975(91)90224-p">The existence of refinement mappings</a> (1991)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/103727.103729">Algorithms for scalable synchronization on shared-memory multiprocessors</a> (1991)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/325164.325100">Weak ordering—a new definition</a> (1990)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/69575.69577">Tentative steps toward a development method for interfering programs</a> (1983)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/360051.360224">Verifying properties of parallel programs: an axiomatic approach</a> (1976)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/361227.361234">Reduction: a method of proving properties of parallel programs</a> (1975)</li>
+</ul>
+</div>
+</details>
+</div>
+</div>
+</details>
+</div>
+</article>
+<div class="helia-identity"><span class="helia-id">lorch-2022-armada</span> <span class="helia-kind">reference</span> <span class="helia-path">entries/refs/lorch-2022-armada/lorch-2022-armada.hel</span></div>
+</div>
+</body>
+</html>

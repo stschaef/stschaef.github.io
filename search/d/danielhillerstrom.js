@@ -1,0 +1,1 @@
+heliaSearchData("d/danielhillerstrom",{"id":"danielhillerstrom","title":"Daniel Hillerström","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"danielhillerstrom.html","headings":[],"body":""});

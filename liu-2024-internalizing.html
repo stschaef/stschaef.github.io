@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>Internalizing Indistinguishability with Dependent Types</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Ctext y=%22.9em%22 font-size=%2290%22%3E%F0%9F%8C%BB%3C/text%3E%3C/svg%3E">
+<meta name="generator" content="helia">
+<link rel="alternate" type="application/atom+xml" title="Steven Schaefer" href="feed.xml">
+<link rel="alternate" type="application/feed+json" title="Steven Schaefer" href="feed.json">
+<script src="helia/theme-version.js"></script>
+<script src="theme/folio-early.js"></script>
+<link rel="stylesheet" href="helia/theme.css">
+<link rel="stylesheet" href="helia/highlight.css">
+<link rel="stylesheet" href="helia/search.css">
+<link rel="stylesheet" href="theme/katex.css">
+<link rel="stylesheet" href="theme/recipe.css">
+<link rel="stylesheet" href="theme/site.css">
+<link rel="stylesheet" href="theme/folio.css">
+<script defer src="helia/runtime.js"></script>
+<script defer src="helia/search.js"></script>
+<script defer src="theme/glyphcraft.js"></script>
+<script defer src="theme/glyphart.js"></script>
+<script defer src="theme/glyphgen.js"></script>
+<script defer src="theme/ornament.js"></script>
+<script defer src="theme/folio.js"></script>
+<script defer src="theme/portrait.js"></script>
+<script type="application/json" id="helia-widgets">{"helia-cite-formats":"widgets/helia-cite-formats-a3294ac7.js"}</script>
+<link rel="modulepreload" href="widgets/helia-cite-formats-a3294ac7.js">
+<script type="module" src="widgets/runtime.js"></script>
+</head>
+<body>
+<nav class="helia-topbar"><a class="helia-home" href="home.html">Steven Schaefer</a><ul class="helia-nav-links"><li><a href="stevenschaefer.html">About Me</a></li><li><a href="research.html">Research</a></li><li><a href="new.html">New</a></li></ul><button type="button" class="helia-search-button" aria-label="Search (/ or Ctrl+K)" aria-haspopup="dialog"><span class="helia-search-icon">⌕</span><span class="helia-search-label">Search</span><kbd class="helia-search-key">/</kbd></button></nav>
+<div class="helia-page" data-kind="reference">
+<article class="helia-article">
+<header class="helia-header" data-entry="liu-2024-internalizing" data-kind="reference">
+<h2 class="helia-heading"><span class="helia-taxon">Reference.</span> Internalizing Indistinguishability with Dependent Types</h2>
+<div class="helia-meta"><span class="helia-author"><a class="helia-entry-link" href="yiyunliu.html" data-entry="yiyunliu">Yiyun Liu</a>, <a class="helia-entry-link" href="jonathanchan.html" data-entry="jonathanchan">Jonathan Chan</a>, <a class="helia-entry-link" href="jessicashi.html" data-entry="jessicashi">Jessica Shi</a>, <a class="helia-entry-link" href="stephanieweirich.html" data-entry="stephanieweirich">Stephanie Weirich</a></span> · <span class="helia-byline"><a class="helia-entry-link" href="popl.html" data-entry="popl">POPL</a> · 2024</span> · <span class="helia-tags"><span class="helia-tag" data-tag="information-flow"><a class="helia-entry-link" href="tag-information-flow.html" data-entry="tag-information-flow">information-flow</a></span> <span class="helia-tag" data-tag="type-theory"><a class="helia-entry-link" href="tag-type-theory.html" data-entry="tag-type-theory">type-theory</a></span></span> · <span class="helia-entry-links"><span class="helia-entry-link" data-field="pdf-url"><a class="helia-link helia-external" href="https://dl.acm.org/doi/pdf/10.1145/3632886">PDF</a></span> · <span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/3632886">DOI</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/journals/pacmpl/LiuCSW24">pldb</a></span></span></div>
+</header>
+<div class="helia-body">
+<div class="helia-abstract">In type systems with dependency tracking, programmers can assign an ordered set of levels to computations and prevent information flow from high-level computations to the low-level ones. The key notion in such systems is indistinguishability : a definition of program equivalence that takes into account the parts of the program that an observer may depend on. In this paper, we investigate the use of dependency tracking in the context of dependently-typed languages. We present the Dependent Calculus of Indistinguishability (DCOI), a system that adopts indistinguishability as the definition of equality used by the type checker. DCOI also internalizes that relation as an observer-indexed propositional equality type, so that programmers may reason about indistinguishability within the language. Our design generalizes and extends prior systems that combine dependency tracking with dependent types and is the first to support conversion and propositional equality at arbitrary observer levels. We have proven type soundness and noninterference theorems for DCOI and have developed a prototype implementation of its type checker.</div>
+</div>
+<div class="helia-cite helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><h3 class="helia-heading">Cite</h3>
+</summary>
+<div class="helia-group-body">
+<div class="helia-widget" data-widget="helia-cite-formats" data-props="{&quot;key&quot;:&quot;liu-2024-internalizing&quot;,&quot;bibtex&quot;:&quot;@article{liu-2024-internalizing, title={Internalizing Indistinguishability with Dependent Types}, volume={8}, ISSN={2475-1421}, url={http://dx.doi.org/10.1145/3632886}, DOI={10.1145/3632886}, number={POPL}, journal={Proceedings of the ACM on Programming Languages}, publisher={Association for Computing Machinery (ACM)}, author={Liu, Yiyun and Chan, Jonathan and Shi, Jessica and Weirich, Stephanie}, year={2024}, month=Jan, pages={1298–1325} }&quot;,&quot;bib-file&quot;:&quot;liu-2024-internalizing.bib&quot;,&quot;hayagriva&quot;:&quot;liu-2024-internalizing:\n  type: article\n  title: Internalizing Indistinguishability with Dependent Types\n  author:\n  - Liu, Yiyun\n  - Chan, Jonathan\n  - Shi, Jessica\n  - Weirich, Stephanie\n  date: 2024-01\n  page-range: 1298-1325\n  url: http://dx.doi.org/10.1145/3632886\n  serial-number:\n    doi: 10.1145/3632886\n    issn: 2475-1421\n  parent:\n    type: periodical\n    title: Proceedings of the ACM on Programming Languages\n    publisher: Association for Computing Machinery (ACM)\n    issue: POPL\n    volume: 8\n&quot;,&quot;yml-file&quot;:&quot;liu-2024-internalizing.yml&quot;}"><div class="helia-cite-key" data-copy="@liu-2024-internalizing" data-copy-label="citation key"><span class="helia-bib-key">Cite as</span> <code class="helia-raw-inline">@liu-2024-internalizing</code> (helia, typst) · <code class="helia-raw-inline">\cite{liu-2024-internalizing}</code> (LaTeX)</div>
+<div class="helia-cite-format helia-collapsible" data-format="bibtex" data-copy="true" data-copy-label="BibTeX">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">BibTeX</span></summary>
+<div class="helia-group-body">
+<details class="helia-code" open><summary class="helia-code-summary"><span class="helia-code-lang">bibtex</span> · <span class="helia-code-lines">1 line</span></summary><pre class="helia-raw"><code class="language-bibtex"><span class="hl-text hl-bibtex"><span class="hl-meta hl-entry hl-braces hl-bibtex"><span class="hl-keyword hl-other hl-entry-type hl-bibtex"><span class="hl-punctuation hl-definition hl-keyword hl-bibtex">@</span>article</span><span class="hl-punctuation hl-section hl-entry hl-begin hl-bibtex">{</span><span class="hl-entity hl-name hl-type hl-entry-key hl-bibtex">liu-2024-internalizing</span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">title</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>Internalizing Indistinguishability with Dependent Types<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">volume</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>8<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">ISSN</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>2475-1421<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">url</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>http://dx.doi.org/10.1145/3632886<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">DOI</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>10.1145/3632886<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">number</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>POPL<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">journal</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>Proceedings of the ACM on Programming Languages<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">publisher</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>Association for Computing Machinery (ACM)<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">author</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>Liu, Yiyun and Chan, Jonathan and Shi, Jessica and Weirich, Stephanie<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">year</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>2024<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">month</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span>Jan</span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">pages</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>1298–1325<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span> </span><span class="hl-punctuation hl-section hl-entry hl-end hl-bibtex">}</span></span></span></code></pre></details>
+</div>
+</details>
+</div>
+<div class="helia-cite-format helia-collapsible" data-format="hayagriva" data-copy="true" data-copy-label="hayagriva YAML">
+<details>
+<summary class="helia-group-summary"><span class="helia-group-title">hayagriva YAML (typst)</span></summary>
+<div class="helia-group-body">
+<details class="helia-code" open><summary class="helia-code-summary"><span class="helia-code-lang">yaml</span> · <span class="helia-code-lines">20 lines</span></summary><pre class="helia-raw"><code class="language-yaml"><span class="hl-source hl-yaml"><span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">liu-2024-internalizing</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">type</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">article</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">title</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Internalizing Indistinguishability with Dependent Types</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">author</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Liu, Yiyun</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Chan, Jonathan</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Shi, Jessica</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Weirich, Stephanie</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">date</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">2024-01</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">page-range</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">1298-1325</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">url</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">http://dx.doi.org/10.1145/3632886</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">serial-number</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">doi</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">10.1145/3632886</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">issn</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">2475-1421</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">parent</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">type</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">periodical</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">title</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Proceedings of the ACM on Programming Languages</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">publisher</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Association for Computing Machinery (ACM)</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">issue</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">POPL</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">volume</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-constant hl-numeric hl-integer hl-decimal hl-yaml">8</span>
+</span></code></pre></details>
+</div>
+</details>
+</div>
+<div class="helia-cite-files">Download: <a class="helia-link" href="liu-2024-internalizing.bib">liu-2024-internalizing.bib</a> · <a class="helia-link" href="liu-2024-internalizing.yml">liu-2024-internalizing.yml</a></div>
+</div>
+</div>
+</details>
+</div>
+<div class="helia-reference-cited-by helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">Cited by (3)</span></summary>
+<div class="helia-group-body">
+<section class="helia-transclusion" data-entry="chan-2025-internalizing" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="chan-2025-internalizing"><span class="helia-title">Internalizing Extensions in Lattices of Type Theories</span>&nbsp;<a class="helia-slug" href="chan-2025-internalizing.html">chan-2025-internalizing</a><span class="helia-byline"><span class="helia-entry-link" data-entry="arxiv">arXiv</span> · 2025</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="chan-2025-internalizing" data-kind="reference">
+<div class="helia-abstract">Many proof assistants allow the use of features and axioms that increase their expressive power. However, these extensions must be used with care, as some combinations are known to lead to logical inconsistencies. Therefore, proof assistants include mechanisms that track which extensions are used in a proof development or module, ensuring that incompatible extensions are not used simultaneously. Unfortunately, existing extension tracking mechanisms are external to the type system. This means that we cannot specify precisely which extensions a definition depends on. Having the ability to write more precise specifications means we are not picking an overapproximation of the extensions needed, which prevents reusing definitions in the presence of incompatible extensions. Furthermore, we cannot refer to definitions that use incompatible extensions even if they are never used in inconsistent ways. The reasoning principles of one extension therefore cannot be used as a metatheory to reason about the properties of an incompatible extension. In this report, I explore the use of the Dependent Calculus of Indistinguishability (DCOI) by Liu et al. for extension tracking. DCOI is a dependent type system with dependency tracking, where terms and variables are assigned dependency levels alongside their types. These dependency levels form a lattice that describes which levels are permitted to access what. To instead track extensions, each set of extensions would correspond to a dependency level, and the lattice would describe how extensions are permitted to interact.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/2510.26839">arXiv</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="gouni-2025-structural" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="gouni-2025-structural"><span class="helia-title">Structural Information Flow: A Fresh Look at Types for Non-interference</span>&nbsp;<a class="helia-slug" href="gouni-2025-structural.html">gouni-2025-structural</a><span class="helia-byline"><span class="helia-entry-link" data-entry="oopsla">OOPSLA</span> · 2025</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="gouni-2025-structural" data-kind="reference">
+<div class="helia-abstract">Information flow control is a long-studied approach for establishing non-interference properties of programs. For instance, it can be used to prove that a secret does not interfere with some computation, thereby establishing that the former does not leak through the latter. Despite their potential as a holy grail for security reasoning and their maturity within the literature, information flow type systems have seen limited adoption. In practice, information flow specifications tend to be excessively complex and can easily spiral out of control even for simple programs. Additionally, while non-interference is well-behaved in an idealized setting where information leakage never occurs, most practical programs must violate non-interference in order to fulfill their purpose. Useful information flow type systems in prior work must therefore contend with a definition of non-interference extended with declassification, which often offers weaker modular reasoning properties. We introduce structural information flow, which both illuminates and addresses these issues from a logical viewpoint. In particular, we draw on established insights from the modal logic literature to argue that information flow reasoning arises from hybrid logic, rather than conventional modal logic as previously imagined. We show with a range of examples that structural information flow specifications are straightforward to write and easy to visually parse. Uniquely in the structural setting, we demonstrate that declassification emerges not as an aberration to non-interference, but as a natural and unavoidable consequence of sufficiently general machinery for information flow. This flavor of declassification features excellent local reasoning and enables our approach to account for real-world information flow needs without compromising its theoretical elegance. Finally, we establish non-interference via a logical relations approach, showing off its simplicity in the face of the expressive power captured.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="pdf-url"><a class="helia-link helia-external" href="https://dl.acm.org/doi/pdf/10.1145/3764116">PDF</a></span> · <span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/3764116">DOI</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/journals/pacmpl/GouniPA25">pldb</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="liu-2025-consistency" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="liu-2025-consistency"><span class="helia-title">Consistency of a Dependent Calculus of Indistinguishability</span>&nbsp;<a class="helia-slug" href="liu-2025-consistency.html">liu-2025-consistency</a><span class="helia-byline"><span class="helia-entry-link" data-entry="popl">POPL</span> · 2025</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="liu-2025-consistency" data-kind="reference">
+<div class="helia-abstract">The Dependent Calculus of Indistinguishability (DCOI) uses dependency tracking to identify irrelevant arguments and uses indistinguishability during type conversion to enable proof irrelevance, supporting run-time and compile-time irrelevance with the same uniform mechanism. DCOI also internalizes reasoning about indistinguishability through the use of a propositional equality type indexed by an observer level. As DCOI is a pure type system, prior work establishes only its syntactic type safety, justifying its use as the basis for a programming language with dependent types. However, it was not clear whether any instance of this system would be suitable for use as a type theory for theorem proving. Here, we identify a suitable instance DCOI ω , which has an infinite predicative universe hierarchy. We show that DCOI ω is logically consistent, normalizing, and that type conversion is decidable. We have mechanized all results using the Coq proof assistant.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="pdf-url"><a class="helia-link helia-external" href="https://dl.acm.org/doi/pdf/10.1145/3704843">PDF</a></span> · <span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/3704843">DOI</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/journals/pacmpl/LiuCW25">pldb</a></span></div>
+</div>
+</div>
+</details>
+</section>
+</div>
+</details>
+</div>
+<div class="helia-reference-cites helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">Cites 33 works (3 here)</span></summary>
+<div class="helia-group-body">
+<div class="helia-reference-cites-here helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">With notes (3)</span></summary>
+<div class="helia-group-body">
+<section class="helia-transclusion" data-entry="sterling_harper_2021" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="sterling_harper_2021"><span class="helia-title">Logical Relations as Types: Proof-Relevant Parametricity for Program Modules</span>&nbsp;<a class="helia-slug" href="sterling_harper_2021.html">sterling_harper_2021</a><span class="helia-byline"><span class="helia-entry-link" data-entry="jacm">JACM</span> · 2021</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="sterling_harper_2021" data-kind="reference">
+<div class="helia-abstract">
+<p>The theory of program modules is of interest to language designers not only for its practical importance to programming, but also because it lies at the nexus of three fundamental concerns in language design: the phase distinction, computational effects, and type abstraction. We contribute a fresh “synthetic” take on program modules that treats modules as the fundamental constructs, in which the usual suspects of prior module calculi (kinds, constructors, dynamic programs) are rendered as derived notions in terms of a modal type-theoretic account of the phase distinction. We simplify the account of type abstraction (embodied in the generativity of module functors) through a lax modality that encapsulates computational effects, placing projectibility of module expressions on a type-theoretic basis.</p>
+<p>Our main result is a (significant) proof-relevant and phase-sensitive generalization of the Reynolds abstraction theorem for a calculus of program modules, based on a new kind of logical relation called a parametricity structure. Parametricity structures generalize the proof-irrelevant relations of classical parametricity to proof-relevant families, where there may be non-trivial evidence witnessing the relatedness of two programs—simplifying the metatheory of strong sums over the collection of types, for although there can be no “relation classifying relations,” one easily accommodates a “family classifying small families.”</p>
+<p>Using the insight that logical relations/parametricity is itself a form of phase distinction between the syntactic and the semantic, we contribute a new synthetic approach to phase separated parametricity based on the slogan logical relations as types, by iterating our modal account of the phase distinction. We axiomatize a dependent type theory of parametricity structures using two pairs of complementary modalities (syntactic, semantic) and (static, dynamic), substantiated using the topos theoretic Artin gluing construction. Then, to construct a simulation between two implementations of an abstract type, one simply programs a third implementation whose type component carries the representation invariant.</p>
+</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/3474834">DOI</a></span> · <span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/2010.08599">arXiv</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="atkey-2018-syntax" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="atkey-2018-syntax"><span class="helia-title">Syntax and Semantics of Quantitative Type Theory</span>&nbsp;<a class="helia-slug" href="atkey-2018-syntax.html">atkey-2018-syntax</a><span class="helia-byline"><span class="helia-entry-link" data-entry="lics">LICS</span> · 2018</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="atkey-2018-syntax" data-kind="reference">
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/3209108.3209189">DOI</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="mcbride-2016-i" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="mcbride-2016-i"><span class="helia-title">I Got Plenty o’ Nuttin’</span>&nbsp;<a class="helia-slug" href="mcbride-2016-i.html">mcbride-2016-i</a><span class="helia-byline">A List of Successes That Can Change the World · 2016</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="mcbride-2016-i" data-kind="reference">
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-319-30936-1_12">DOI</a></span></div>
+</div>
+</div>
+</details>
+</section>
+</div>
+</details>
+</div>
+<div class="helia-reference-cites-away helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">External (30)</span></summary>
+<div class="helia-group-body">
+<ul>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3580424">Artifact associated with Internalizing Indistinguishability with Dependent Types</a> (2024)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1017/s0960129523000130">Two-level type theory and applications</a> (2023)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-030-99336-8_15">A dependent dependency calculus</a> (2022)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3547641">Staged compilation with two-level type theory</a> (2022)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.4230/lipics.ecoop.2021.9">Idris 2: Quantitative Type Theory in Practice</a> (2021)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3473569">An existential crisis resolved: type inference for first-class existential types</a> (2021)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3408972">A unified view of modalities in type systems</a> (2020)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3434331">A graded dependent type system with a usage-aware semantics</a> (2020)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-030-72019-3_17">Graded Modal Dependent Type Theory</a> (2020)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3290316">Definitional proof-irrelevance without K</a> (2019)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.2168/lmcs-8(1:29)2012">On Irrelevance and Algorithmic Equality in Predicative Type Theory</a> (2012)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-540-78499-9_25">Erasure and Polymorphism in Pure Type Systems</a> (2008)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-540-77505-8_24">Proving noninterference by a fully complete translation to the simply typed λ-calculus</a> (2007)</li>
+<li>Practical implementation of a dependently typed functional programming language (2005)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/1016848.1016868">Translating dependency into parametricity</a> (2004)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1109/jsac.2002.806121">Language-based information-flow security</a> (2003)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/3-540-45413-6_27">The implicit calculus of constructions: extending pure type systems with an intersection type binder and subtyping</a> (2001)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1109/lics.2001.932499">Intensionality, extensionality, and proof irrelevance in modal type theory</a> (2001)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/292540.292555">A core calculus of dependency</a> (1999)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/258993.259019">Multi-stage programming with explicit annotations</a> (1997)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1017/s0960129597002405">A computational formalization for partial evaluation</a> (1996)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1016/s0049-237x(08)70209-x">Some extensions of Automath : the AUT-4 family</a> (1994)</li>
+<li>Lambda Calculi with Types (1993)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1017/s0956796800020025">Introduction to generalized type systems</a> (1991)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/3-540-52335-9_47">Inductively defined types</a> (1990)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/75277.75285">Extracting ω's programs from proofs in the calculus of constructions</a> (1989)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/359636.359712">Certification of programs for secure information flow</a> (1977)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1016/s0049-237x(08)71945-1">An Intuitionistic Theory of Types: Predicative Part</a> (1975)</li>
+<li>Interprétation fonctionnelle et élimination des coupures de l’arithmétique d’ordre supérieur (1972)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.6083/w95050724">Type safe abstractions using program generators</a></li>
+</ul>
+</div>
+</details>
+</div>
+</div>
+</details>
+</div>
+</article>
+<div class="helia-identity"><span class="helia-id">liu-2024-internalizing</span> <span class="helia-kind">reference</span> <span class="helia-path">entries/refs/liu-2024-internalizing/liu-2024-internalizing.hel</span></div>
+</div>
+</body>
+</html>

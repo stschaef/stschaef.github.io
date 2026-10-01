@@ -1,0 +1,1 @@
+heliaSearchData("d/it-university-of-copenhagen",{"id":"it-university-of-copenhagen","title":"IT University of Copenhagen","kind":"institution","tags":[],"authors":[],"venue":[],"date":null,"url":"it-university-of-copenhagen.html","headings":[],"body":""});

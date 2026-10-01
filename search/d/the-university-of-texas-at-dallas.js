@@ -1,0 +1,1 @@
+heliaSearchData("d/the-university-of-texas-at-dallas",{"id":"the-university-of-texas-at-dallas","title":"The University of Texas at Dallas","kind":"institution","tags":[],"authors":[],"venue":[],"date":null,"url":"the-university-of-texas-at-dallas.html","headings":[],"body":""});

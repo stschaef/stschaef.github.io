@@ -1,0 +1,1 @@
+heliaSearchData("d/gratzer-2025-the",{"id":"gratzer-2025-the","title":"The Yoneda embedding in simplicial type theory","kind":"reference","tags":["homotopy-type-theory"],"authors":["Daniel Gratzer","Jonathan Weinberger","Ulrik Buchholtz"],"venue":["LICS","Symposium on Logic in Computer Science"],"date":null,"url":"gratzer-2025-the.html","headings":[],"body":""});

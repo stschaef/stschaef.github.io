@@ -1,0 +1,1 @@
+heliaSearchData("d/open-university-of-the-netherlands",{"id":"open-university-of-the-netherlands","title":"Open University of the Netherlands","kind":"institution","tags":[],"authors":[],"venue":[],"date":null,"url":"open-university-of-the-netherlands.html","headings":[],"body":""});

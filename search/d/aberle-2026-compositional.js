@@ -1,0 +1,1 @@
+heliaSearchData("d/aberle-2026-compositional",{"id":"aberle-2026-compositional","title":"Compositional Program Verification with Polynomial Functors in Dependent Type Theory","kind":"reference","tags":["polynomial-functors","type-theory"],"authors":["CB Aberle"],"venue":["arXiv"],"date":null,"url":"aberle-2026-compositional.html","headings":[],"body":""});

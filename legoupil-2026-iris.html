@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>Iris-WasmFX: Modular Reasoning for Wasm Stack Switching</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Ctext y=%22.9em%22 font-size=%2290%22%3E%F0%9F%8C%BB%3C/text%3E%3C/svg%3E">
+<meta name="generator" content="helia">
+<link rel="alternate" type="application/atom+xml" title="Steven Schaefer" href="feed.xml">
+<link rel="alternate" type="application/feed+json" title="Steven Schaefer" href="feed.json">
+<script src="helia/theme-version.js"></script>
+<script src="theme/folio-early.js"></script>
+<link rel="stylesheet" href="helia/theme.css">
+<link rel="stylesheet" href="helia/highlight.css">
+<link rel="stylesheet" href="helia/search.css">
+<link rel="stylesheet" href="theme/katex.css">
+<link rel="stylesheet" href="theme/recipe.css">
+<link rel="stylesheet" href="theme/site.css">
+<link rel="stylesheet" href="theme/folio.css">
+<script defer src="helia/runtime.js"></script>
+<script defer src="helia/search.js"></script>
+<script defer src="theme/glyphcraft.js"></script>
+<script defer src="theme/glyphart.js"></script>
+<script defer src="theme/glyphgen.js"></script>
+<script defer src="theme/ornament.js"></script>
+<script defer src="theme/folio.js"></script>
+<script defer src="theme/portrait.js"></script>
+<script type="application/json" id="helia-widgets">{"helia-cite-formats":"widgets/helia-cite-formats-a3294ac7.js"}</script>
+<link rel="modulepreload" href="widgets/helia-cite-formats-a3294ac7.js">
+<script type="module" src="widgets/runtime.js"></script>
+</head>
+<body>
+<nav class="helia-topbar"><a class="helia-home" href="home.html">Steven Schaefer</a><ul class="helia-nav-links"><li><a href="stevenschaefer.html">About Me</a></li><li><a href="research.html">Research</a></li><li><a href="new.html">New</a></li></ul><button type="button" class="helia-search-button" aria-label="Search (/ or Ctrl+K)" aria-haspopup="dialog"><span class="helia-search-icon">⌕</span><span class="helia-search-label">Search</span><kbd class="helia-search-key">/</kbd></button></nav>
+<div class="helia-page" data-kind="reference">
+<article class="helia-article">
+<header class="helia-header" data-entry="legoupil-2026-iris" data-kind="reference">
+<h2 class="helia-heading"><span class="helia-taxon">Reference.</span> Iris-WasmFX: Modular Reasoning for Wasm Stack Switching</h2>
+<div class="helia-meta"><span class="helia-author"><a class="helia-entry-link" href="maximelegoupil.html" data-entry="maximelegoupil">Maxime Legoupil</a>, <a class="helia-entry-link" href="mathiaspedersen.html" data-entry="mathiaspedersen">Mathias Pedersen</a>, <a class="helia-entry-link" href="larsbirkedal.html" data-entry="larsbirkedal">Lars Birkedal</a>, <a class="helia-entry-link" href="samlindley.html" data-entry="samlindley">Sam Lindley</a>, <a class="helia-entry-link" href="jeanpichonpharabod.html" data-entry="jeanpichonpharabod">Jean Pichon-Pharabod</a></span> · <span class="helia-byline"><a class="helia-entry-link" href="pldi.html" data-entry="pldi">PLDI</a> · 2026</span> · <span class="helia-tags"><span class="helia-tag" data-tag="separation-logic"><a class="helia-entry-link" href="tag-separation-logic.html" data-entry="tag-separation-logic">separation-logic</a></span> <span class="helia-tag" data-tag="effects"><a class="helia-entry-link" href="tag-effects.html" data-entry="tag-effects">effects</a></span></span> · <span class="helia-entry-links"><span class="helia-entry-link" data-field="pdf-url"><a class="helia-link helia-external" href="https://www.research.ed.ac.uk/files/681211499/LegoupilEtalPACMPL2026Iris-WasmFX.pdf">PDF</a></span> · <span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/3808271">DOI</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/journals/pacmpl/LegoupilPBLP26">pldb</a></span></span></div>
+</header>
+<div class="helia-body">
+<div class="helia-abstract">WasmFX is a proposed extension of Wasm, a low-level portable bytecode, with primitives for explicitly manipulating execution stacks as continuations. By exposing an interface of effect handlers, WasmFX enables non-local control flow features to be compiled in a modular way: one handcrafts a library that directly implements such features in WasmFX, and compilation then merely calls into the library. Alas, code involving non-local control flow is notoriously challenging, and so this proposal raises the questions of the soundness of the language extension, and of the correctness of such handcrafted libraries. In this paper, we first describe WasmFXCert, a mechanisation of WasmFX in Rocq, and prove the expected type soundness result. We then develop Iris-WasmFX, a program logic to reason about Wasm programs that use effect handlers, and illustrate its application to two key use cases of effect handlers: a coroutine library, and a generator. Together, these validate the design of WasmFX, and provide a modular framework for verifying future effect-based libraries.</div>
+</div>
+<div class="helia-cite helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><h3 class="helia-heading">Cite</h3>
+</summary>
+<div class="helia-group-body">
+<div class="helia-widget" data-widget="helia-cite-formats" data-props="{&quot;key&quot;:&quot;legoupil-2026-iris&quot;,&quot;bibtex&quot;:&quot;@article{legoupil-2026-iris, title={Iris-WasmFX: Modular Reasoning for Wasm Stack Switching}, volume={10}, ISSN={2475-1421}, url={http://dx.doi.org/10.1145/3808271}, DOI={10.1145/3808271}, number={PLDI}, journal={Proceedings of the ACM on Programming Languages}, publisher={Association for Computing Machinery (ACM)}, author={Legoupil, Maxime and Pedersen, Mathias and Birkedal, Lars and Lindley, Sam and Pichon-Pharabod, Jean}, year={2026}, month=June, pages={604–628} }&quot;,&quot;bib-file&quot;:&quot;legoupil-2026-iris.bib&quot;,&quot;hayagriva&quot;:&quot;legoupil-2026-iris:\n  type: article\n  title: &#39;Iris-WasmFX: Modular Reasoning for Wasm Stack Switching&#39;\n  author:\n  - Legoupil, Maxime\n  - Pedersen, Mathias\n  - Birkedal, Lars\n  - Lindley, Sam\n  - Pichon-Pharabod, Jean\n  date: 2026-06\n  page-range: 604-628\n  serial-number:\n    doi: 10.1145/3808271\n  parent:\n    type: periodical\n    title: Proceedings of the ACM on Programming Languages\n    publisher: Association for Computing Machinery (ACM)\n    issue: PLDI\n    volume: 10\n&quot;,&quot;yml-file&quot;:&quot;legoupil-2026-iris.yml&quot;}"><div class="helia-cite-key" data-copy="@legoupil-2026-iris" data-copy-label="citation key"><span class="helia-bib-key">Cite as</span> <code class="helia-raw-inline">@legoupil-2026-iris</code> (helia, typst) · <code class="helia-raw-inline">\cite{legoupil-2026-iris}</code> (LaTeX)</div>
+<div class="helia-cite-format helia-collapsible" data-format="bibtex" data-copy="true" data-copy-label="BibTeX">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">BibTeX</span></summary>
+<div class="helia-group-body">
+<details class="helia-code" open><summary class="helia-code-summary"><span class="helia-code-lang">bibtex</span> · <span class="helia-code-lines">1 line</span></summary><pre class="helia-raw"><code class="language-bibtex"><span class="hl-text hl-bibtex"><span class="hl-meta hl-entry hl-braces hl-bibtex"><span class="hl-keyword hl-other hl-entry-type hl-bibtex"><span class="hl-punctuation hl-definition hl-keyword hl-bibtex">@</span>article</span><span class="hl-punctuation hl-section hl-entry hl-begin hl-bibtex">{</span><span class="hl-entity hl-name hl-type hl-entry-key hl-bibtex">legoupil-2026-iris</span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">title</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>Iris-WasmFX: Modular Reasoning for Wasm Stack Switching<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">volume</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>10<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">ISSN</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>2475-1421<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">url</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>http://dx.doi.org/10.1145/3808271<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">DOI</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>10.1145/3808271<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">number</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>PLDI<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">journal</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>Proceedings of the ACM on Programming Languages<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">publisher</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>Association for Computing Machinery (ACM)<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">author</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>Legoupil, Maxime and Pedersen, Mathias and Birkedal, Lars and Lindley, Sam and Pichon-Pharabod, Jean<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">year</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>2026<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">month</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span>June</span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">pages</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>604–628<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span> </span><span class="hl-punctuation hl-section hl-entry hl-end hl-bibtex">}</span></span></span></code></pre></details>
+</div>
+</details>
+</div>
+<div class="helia-cite-format helia-collapsible" data-format="hayagriva" data-copy="true" data-copy-label="hayagriva YAML">
+<details>
+<summary class="helia-group-summary"><span class="helia-group-title">hayagriva YAML (typst)</span></summary>
+<div class="helia-group-body">
+<details class="helia-code" open><summary class="helia-code-summary"><span class="helia-code-lang">yaml</span> · <span class="helia-code-lines">19 lines</span></summary><pre class="helia-raw"><code class="language-yaml"><span class="hl-source hl-yaml"><span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">legoupil-2026-iris</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">type</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">article</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">title</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-quoted hl-single hl-yaml"><span class="hl-punctuation hl-definition hl-string hl-begin hl-yaml">&#39;</span>Iris-WasmFX: Modular Reasoning for Wasm Stack Switching<span class="hl-punctuation hl-definition hl-string hl-end hl-yaml">&#39;</span></span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">author</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Legoupil, Maxime</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Pedersen, Mathias</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Birkedal, Lars</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Lindley, Sam</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Pichon-Pharabod, Jean</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">date</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">2026-06</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">page-range</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">604-628</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">serial-number</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">doi</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">10.1145/3808271</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">parent</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">type</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">periodical</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">title</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Proceedings of the ACM on Programming Languages</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">publisher</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Association for Computing Machinery (ACM)</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">issue</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">PLDI</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">volume</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-constant hl-numeric hl-integer hl-decimal hl-yaml">10</span>
+</span></code></pre></details>
+</div>
+</details>
+</div>
+<div class="helia-cite-files">Download: <a class="helia-link" href="legoupil-2026-iris.bib">legoupil-2026-iris.bib</a> · <a class="helia-link" href="legoupil-2026-iris.yml">legoupil-2026-iris.yml</a></div>
+</div>
+</div>
+</details>
+</div>
+<div class="helia-reference-cites helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">Cites 42 works (1 here)</span></summary>
+<div class="helia-group-body">
+<div class="helia-reference-cites-here helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">With notes (1)</span></summary>
+<div class="helia-group-body">
+<section class="helia-transclusion" data-entry="jung_etal_iris_ground_up_2018" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="jung_etal_iris_ground_up_2018"><span class="helia-title">Iris from the ground up: A modular foundation for higher-order concurrent separation logic</span>&nbsp;<a class="helia-slug" href="jung_etal_iris_ground_up_2018.html">jung_etal_iris_ground_up_2018</a><span class="helia-byline"><span class="helia-entry-link" data-entry="jfp">JFP</span> · 2018</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="jung_etal_iris_ground_up_2018" data-kind="reference">
+<div class="helia-abstract">Iris is a framework for higher-order concurrent separation logic, which has been implemented in the Coq proof assistant and deployed very effectively in a wide variety of verification projects. Iris was designed with the express goal of simplifying and consolidating the foundations of modern separation logics, but it has evolved over time, and the design and semantic foundations of Iris itself have yet to be fully written down and explained together properly in one place. Here, we attempt to fill this gap, presenting a reasonably complete picture of the latest version of Iris (version 3.1), from first principles and in one coherent narrative.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="pdf-url"><a class="helia-link helia-external" href="https://www.cambridge.org/core/services/aop-cambridge-core/content/view/26301B518CE2C52796BFA12B8BAB5B5F/S0956796818000151a.pdf/div-class-title-iris-from-the-ground-up-a-modular-foundation-for-higher-order-concurrent-separation-logic-div.pdf">PDF</a></span> · <span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1017/s0956796818000151">DOI</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/journals/jfp/JungKJBBD18">pldb</a></span></div>
+</div>
+</div>
+</details>
+</section>
+</div>
+</details>
+</div>
+<div class="helia-reference-cites-away helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">External (41)</span></summary>
+<div class="helia-group-body">
+<ul>
+<li><a class="helia-link helia-external" href="https://doi.org/10.5281/zenodo.19095849">Artefact for Iris-WasmFX: Modular Reasoning for Wasm Stack Switching</a> (2026)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3747509">Formal Semantics and Program Logics for a Fragment of OCaml</a> (2025)</li>
+<li>Github discussion on WasmFX bug (2025)</li>
+<li>Experience Report: Stack Switching in Wasm SpecTec. presented at WAW: the WebAssembly Workshop (2025)</li>
+<li>Stack Switching WebAssembly proposal (2025)</li>
+<li>SpecTec has been adopted (2025)</li>
+<li>Osiris: Towards Formal Semantics and Reasoning for OCaml (2025)</li>
+<li>An Adjoint Separation Logic for the Wasm Call Stack. presentation at Discussions at Dagstuhl Seminar 25241: Utilising and Scaling the WebAssembly Semantics (2025)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3656444">RichWasm: Bringing Safe, Fine-Grained, Shared-Memory Interoperability Down to WebAssembly</a> (2024)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3689722">Iris-MSWasm: Elucidating and Mechanising the Security Invariants of Memory-Safe WebAssembly</a> (2024)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3656440">Bringing the WebAssembly Standard up to Speed with SpecTec</a> (2024)</li>
+<li>Introducing the WebAssembly JavaScript Promise Integration API (2024)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3591279">VMSL: A Separation Logic for Mechanised Robust Safety of Virtual Machines Communicating above FF-A</a> (2023)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3571208">MSWasm: Soundly Enforcing Memory-Safe Execution of Unsafe Code</a> (2023)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3622814">Continuing WebAssembly with Effect Handlers</a> (2023)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3591265">Iris-Wasm: Robust and Modular Verification of WebAssembly Programs</a> (2023)</li>
+<li>Osiris: an Iris-based program logic for OCaml (2023)</li>
+<li>WebAssembly (Release 2.0) (2023)</li>
+<li>Proof of Programs with Effect Handlers (2022)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3551357.3551381">A Faithful Description of ECMAScript Algorithms</a> (2022)</li>
+<li>Exception Handling Proposal for WebAssembly (2022)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3434314">A separation logic for effect handlers</a> (2021)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.46298/lmcs-19(4:5)2023">Verifying an Effect-Handler-Based Define-By-Run Reverse-Mode AD Library</a> (2021)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-030-90870-6_4">Two Mechanisations of WebAssembly</a> (2021)</li>
+<li>Typed Continuations: A Basis for Stack-switching in Wasm (2021)</li>
+<li>Issue #1359: Typed continuations to model stacks (2020)</li>
+<li>Stacks and Continuations for Wasm — Idea Sketch (2020)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3341709">Mechanized relational verification of concurrent programs with continuations</a> (2019)</li>
+<li>WebAssembly (Release 1.0) (2019)</li>
+<li>Pause and Resume WebAssembly with Binaryen’s Asyncify (2019)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3062341.3062363">Bringing the web up to speed with WebAssembly</a> (2017)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/2984450.2984457">Concurrent separation logic</a> (2016)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.2168/lmcs-9(4:23)2013">Handling Algebraic Effects</a> (2013)</li>
+<li>A Tutorial Introduction to the ARM and POWER Relaxed Memory Models (2012)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/1785414.1785443">x86-TSO: a rigorous and usable programmer's model for x86 multiprocessors</a> (2010)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-642-00590-9_7">Handlers of Algebraic Effects</a> (2009)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-642-04027-6_32">Nested Hoare Triples and Frame Rules for Higher-Order Store</a> (2009)</li>
+<li>The Unlambda Programming Language (2001)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/bfb0053567">Language primitives and type discipline for structured communication-based programming</a> (1998)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/73560.73576">The theory and practice of first-class prompts</a> (1988)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/362929.362947">Letters to the editor: go to statement considered harmful</a> (1968)</li>
+</ul>
+</div>
+</details>
+</div>
+</div>
+</details>
+</div>
+<footer class="helia-footer">
+<div class="helia-related helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><h3 class="helia-heading">Related</h3>
+</summary>
+<div class="helia-group-body">
+<ul>
+<li><a class="helia-entry-link" href="amorim_hsu_independent.html" data-entry="amorim_hsu_independent">Separated and Shared Effects in Higher-Order Languages</a> <span class="helia-related-tags"><a class="helia-entry-link" href="tag-effects.html" data-entry="tag-effects">#effects</a> <a class="helia-entry-link" href="tag-separation-logic.html" data-entry="tag-separation-logic">#separation-logic</a></span></li>
+</ul>
+</div>
+</details>
+</div>
+</footer>
+</article>
+<div class="helia-identity"><span class="helia-id">legoupil-2026-iris</span> <span class="helia-kind">reference</span> <span class="helia-path">entries/refs/legoupil-2026-iris/legoupil-2026-iris.hel</span></div>
+</div>
+</body>
+</html>

@@ -1,0 +1,1 @@
+heliaSearchData("d/soraine-2025-the",{"id":"soraine-2025-the","title":"The Many Views of Game-Related Experiences with the Experiential Tetrad","kind":"reference","tags":["game-design"],"authors":["Jacques Carette","Sasha Soraine"],"venue":["FDG","International Conference on the Foundations of Digital Games"],"date":null,"url":"soraine-2025-the.html","headings":[],"body":""});

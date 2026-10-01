@@ -1,0 +1,1 @@
+heliaSearchData("d/zakipoint-health",{"id":"zakipoint-health","title":"Zakipoint Health","kind":"institution","tags":[],"authors":[],"venue":[],"date":null,"url":"zakipoint-health.html","headings":[],"body":""});

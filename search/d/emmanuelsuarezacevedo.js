@@ -1,0 +1,1 @@
+heliaSearchData("d/emmanuelsuarezacevedo",{"id":"emmanuelsuarezacevedo","title":"Emmanuel Suárez Acevedo","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"emmanuelsuarezacevedo.html","headings":[],"body":""});

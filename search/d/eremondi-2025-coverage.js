@@ -1,0 +1,1 @@
+heliaSearchData("d/eremondi-2025-coverage",{"id":"eremondi-2025-coverage","title":"Coverage Semantics for Dependent Pattern Matching","kind":"reference","tags":["type-theory"],"authors":["Joseph Eremondi","Ohad Kammar"],"venue":["ESOP","European Symposium on Programming"],"date":null,"url":"eremondi-2025-coverage.html","headings":[],"body":""});

@@ -1,0 +1,1 @@
+heliaSearchData("d/ambroiselafont",{"id":"ambroiselafont","title":"Ambroise Lafont","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"ambroiselafont.html","headings":[],"body":""});

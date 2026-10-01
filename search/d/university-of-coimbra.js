@@ -1,0 +1,1 @@
+heliaSearchData("d/university-of-coimbra",{"id":"university-of-coimbra","title":"University of Coimbra","kind":"institution","tags":[],"authors":[],"venue":[],"date":null,"url":"university-of-coimbra.html","headings":[],"body":""});

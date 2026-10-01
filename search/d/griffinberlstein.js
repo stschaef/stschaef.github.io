@@ -1,0 +1,1 @@
+heliaSearchData("d/griffinberlstein",{"id":"griffinberlstein","title":"Griffin Berlstein","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"griffinberlstein.html","headings":[],"body":""});

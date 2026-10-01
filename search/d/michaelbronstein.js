@@ -1,0 +1,1 @@
+heliaSearchData("d/michaelbronstein",{"id":"michaelbronstein","title":"Michael Bronstein","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"michaelbronstein.html","headings":[],"body":""});

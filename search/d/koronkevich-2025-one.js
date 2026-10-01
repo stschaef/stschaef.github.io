@@ -1,0 +1,1 @@
+heliaSearchData("d/koronkevich-2025-one",{"id":"koronkevich-2025-one","title":"One Weird Trick to Untie Landin’s Knot","kind":"reference","tags":[],"authors":["Paulette Koronkevich","William J. Bowman"],"venue":["arXiv"],"date":null,"url":"koronkevich-2025-one.html","headings":[],"body":""});

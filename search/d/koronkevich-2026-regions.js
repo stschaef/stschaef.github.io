@@ -1,0 +1,1 @@
+heliaSearchData("d/koronkevich-2026-regions",{"id":"koronkevich-2026-regions","title":"Regions as Continuation Marks","kind":"reference","tags":[],"authors":["Paulette Koronkevich","William J. Bowman"],"venue":["Scheme","Workshop on Scheme and Functional Programming"],"date":null,"url":"koronkevich-2026-regions.html","headings":[],"body":""});

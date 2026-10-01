@@ -1,0 +1,1 @@
+heliaSearchData("d/gibbons-2007-datatype",{"id":"gibbons-2007-datatype","title":"Datatype-Generic Programming","kind":"reference","tags":["generic-programming"],"authors":["Jeremy Gibbons"],"venue":[],"date":null,"url":"gibbons-2007-datatype.html","headings":[],"body":""});

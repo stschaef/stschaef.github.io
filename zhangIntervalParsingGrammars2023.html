@@ -7,6 +7,8 @@
 <title>Interval Parsing Grammars for File Format Parsing</title>
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Ctext y=%22.9em%22 font-size=%2290%22%3E%F0%9F%8C%BB%3C/text%3E%3C/svg%3E">
 <meta name="generator" content="helia">
+<link rel="alternate" type="application/atom+xml" title="Steven Schaefer" href="feed.xml">
+<link rel="alternate" type="application/feed+json" title="Steven Schaefer" href="feed.json">
 <script src="helia/theme-version.js"></script>
 <script src="theme/folio-early.js"></script>
 <link rel="stylesheet" href="helia/theme.css">
@@ -34,7 +36,7 @@
 <article class="helia-article">
 <header class="helia-header" data-entry="zhangIntervalParsingGrammars2023" data-kind="reference">
 <h2 class="helia-heading"><span class="helia-taxon">Reference.</span> Interval Parsing Grammars for File Format Parsing</h2>
-<div class="helia-meta"><span class="helia-author"><a class="helia-entry-link" href="jialunzhang.html" data-entry="jialunzhang">Jialun Zhang</a>, <a class="helia-entry-link" href="gregmorrisett.html" data-entry="gregmorrisett">Greg Morrisett</a>, <a class="helia-entry-link" href="gangtan.html" data-entry="gangtan">Gang Tan</a></span> · <span class="helia-byline"><a class="helia-entry-link" href="pldi.html" data-entry="pldi">PLDI</a> · 2023</span> · <span class="helia-tags"><span class="helia-tag" data-tag="parsing"><span class="helia-entry-link helia-unavailable">parsing</span></span></span> · <span class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/3591264">DOI</a></span></span></div>
+<div class="helia-meta"><span class="helia-author"><a class="helia-entry-link" href="jialunzhang.html" data-entry="jialunzhang">Jialun Zhang</a>, <a class="helia-entry-link" href="gregmorrisett.html" data-entry="gregmorrisett">Greg Morrisett</a>, <a class="helia-entry-link" href="gangtan.html" data-entry="gangtan">Gang Tan</a></span> · <span class="helia-byline"><a class="helia-entry-link" href="pldi.html" data-entry="pldi">PLDI</a> · 2023</span> · <span class="helia-tags"><span class="helia-tag" data-tag="parsing"><a class="helia-entry-link" href="tag-parsing.html" data-entry="tag-parsing">parsing</a></span></span> · <span class="helia-entry-links"><span class="helia-entry-link" data-field="pdf-url"><a class="helia-link helia-external" href="https://dl.acm.org/doi/pdf/10.1145/3591264">PDF</a></span> · <span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/3591264">DOI</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/journals/pacmpl/ZhangMT23">pldb</a></span></span></div>
 </header>
 <div class="helia-body">
 <div class="helia-abstract">File formats specify how data is encoded for persistent storage. They cannot be formalized as context-free grammars since their specifications include context-sensitive patterns such as the random access pattern and the type-length-value pattern. We propose a new grammar mechanism called Interval Parsing Grammars IPGs) for file format specifications. An IPG attaches to every nonterminal/terminal an interval, which specifies the range of input the nonterminal/terminal consumes. By connecting intervals and attributes, the context-sensitive patterns in file formats can be well handled. In this paper, we formalize IPGs’ syntax as well as its semantics, and its semantics naturally leads to a parser generator that generates a recursive-descent parser from an IPG. In general, IPGs are declarative, modular, and enable termination checking. We have used IPGs to specify a number of file formats including ZIP, ELF, GIF, PE, and part of PDF; we have also evaluated the performance of the generated parsers.</div>
@@ -104,11 +106,48 @@
 </div>
 <div class="helia-reference-cites helia-collapsible">
 <details open>
-<summary class="helia-group-summary"><span class="helia-group-title">Cites 24 works (0 here)</span></summary>
+<summary class="helia-group-summary"><span class="helia-group-title">Cites 24 works (3 here)</span></summary>
 <div class="helia-group-body">
+<div class="helia-reference-cites-here helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">With notes (3)</span></summary>
+<div class="helia-group-body">
+<section class="helia-transclusion" data-entry="parr-2014-adaptive" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="parr-2014-adaptive"><span class="helia-title">Adaptive LL(*) parsing: the power of dynamic analysis</span>&nbsp;<a class="helia-slug" href="parr-2014-adaptive.html">parr-2014-adaptive</a><span class="helia-byline"><span class="helia-entry-link" data-entry="oopsla">OOPSLA</span> · 2014</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="parr-2014-adaptive" data-kind="reference">
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="pdf-url"><a class="helia-link helia-external" href="https://dl.acm.org/doi/pdf/10.1145/2660193.2660202">PDF</a></span> · <span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/2660193.2660202">DOI</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/conf/oopsla/ParrHF14">pldb</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="fisher-2006-the" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="fisher-2006-the"><span class="helia-title">The next 700 data description languages</span>&nbsp;<a class="helia-slug" href="fisher-2006-the.html">fisher-2006-the</a><span class="helia-byline"><span class="helia-entry-link" data-entry="popl">POPL</span> · 2006</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="fisher-2006-the" data-kind="reference">
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="pdf-url"><a class="helia-link helia-external" href="https://dl.acm.org/doi/pdf/10.1145/1111037.1111039">PDF</a></span> · <span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/1111037.1111039">DOI</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/conf/popl/FisherMW06">pldb</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="fisher-2005-pads" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="fisher-2005-pads"><span class="helia-title">PADS: a domain-specific language for processing ad hoc data</span>&nbsp;<a class="helia-slug" href="fisher-2005-pads.html">fisher-2005-pads</a><span class="helia-byline"><span class="helia-entry-link" data-entry="pldi">PLDI</span> · 2005</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="fisher-2005-pads" data-kind="reference">
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="pdf-url"><a class="helia-link helia-external" href="https://dl.acm.org/doi/pdf/10.1145/1065010.1065046">PDF</a></span> · <span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/1065010.1065046">DOI</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/conf/pldi/FisherG05">pldb</a></span></div>
+</div>
+</div>
+</details>
+</section>
+</div>
+</details>
+</div>
 <div class="helia-reference-cites-away helia-collapsible">
 <details open>
-<summary class="helia-group-summary"><span class="helia-group-title">External (24)</span></summary>
+<summary class="helia-group-summary"><span class="helia-group-title">External (21)</span></summary>
 <div class="helia-group-body">
 <ul>
 <li><a class="helia-link helia-external" href="https://doi.org/10.1109/spw59333.2023.00020">DISV: Domain Independent Semantic Validation of Data Files</a> (2023)</li>
@@ -120,14 +159,11 @@
 <li>Scalable Vector Graphics (SVG) 2 (W3C) (2018)</li>
 <li>Kaitai Struct User Guide (2015)</li>
 <li>Nail: a practical tool for parsing and generating data formats (2014)</li>
-<li><a class="helia-link helia-external" href="https://doi.org/10.1145/2660193.2660202">Adaptive LL(*) parsing: the power of dynamic analysis</a> (2014)</li>
 <li><a class="helia-link helia-external" href="https://doi.org/10.1109/sp.2012.15">Abusing File Processing in Malware Detectors for Fun and Profit</a> (2012)</li>
 <li><a class="helia-link helia-external" href="https://doi.org/10.2218/ijdc.v7i1.217">Grammar-Based Specification and Parsing of Binary File Formats</a> (2012)</li>
 <li><a class="helia-link helia-external" href="https://doi.org/10.1145/1707801.1706347">Semantics and algorithms for data-dependent grammars</a> (2010)</li>
 <li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-540-78800-3_24">Z3: An Efficient SMT Solver</a> (2008)</li>
 <li>Document management — Portable Document Format — Part 1: PDF 1.7 (Adobe) (2008)</li>
-<li><a class="helia-link helia-external" href="https://doi.org/10.1145/1111037.1111039">The next 700 data description languages</a> (2006)</li>
-<li><a class="helia-link helia-external" href="https://doi.org/10.1145/1065010.1065046">PADS: a domain-specific language for processing ad hoc data</a> (2005)</li>
 <li><a class="helia-link helia-external" href="https://doi.org/10.1145/964001.964011">Parsing Expression Grammars: A Recognition-based Syntactic Foundation</a> (2004)</li>
 <li><a class="helia-link helia-external" href="https://doi.org/10.1007/3-540-45821-2_4">DataScript- A Specification and Scripting Language for Binary Data</a> (2002)</li>
 <li><a class="helia-link helia-external" href="https://doi.org/10.1017/s0956796898003050">Monadic Parsing in Haskell</a> (1998)</li>

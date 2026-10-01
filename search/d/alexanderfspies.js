@@ -1,0 +1,1 @@
+heliaSearchData("d/alexanderfspies",{"id":"alexanderfspies","title":"Alexander F. Spies","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"alexanderfspies.html","headings":[],"body":""});

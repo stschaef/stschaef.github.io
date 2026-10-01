@@ -1,0 +1,1 @@
+heliaSearchData("d/kyoto-university",{"id":"kyoto-university","title":"Kyoto University","kind":"institution","tags":[],"authors":[],"venue":[],"date":null,"url":"kyoto-university.html","headings":[],"body":""});

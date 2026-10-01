@@ -1,0 +1,1 @@
+heliaSearchData("d/sergeistepanenko",{"id":"sergeistepanenko","title":"Sergei Stepanenko","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"sergeistepanenko.html","headings":[],"body":""});

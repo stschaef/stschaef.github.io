@@ -1,0 +1,1 @@
+heliaSearchData("d/agnieszkakluska",{"id":"agnieszkakluska","title":"Agnieszka Kluska","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"agnieszkakluska.html","headings":[],"body":""});

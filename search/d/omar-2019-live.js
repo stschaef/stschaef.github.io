@@ -1,0 +1,1 @@
+heliaSearchData("d/omar-2019-live",{"id":"omar-2019-live","title":"Live functional programming with typed holes","kind":"reference","tags":["live-programming"],"authors":["Cyrus Omar","Ian Voysey","Matthew A. Hammer","Ravi Chugh"],"venue":["POPL","Symposium on Principles of Programming Languages"],"date":null,"url":"omar-2019-live.html","headings":[],"body":""});

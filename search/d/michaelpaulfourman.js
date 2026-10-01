@@ -1,0 +1,1 @@
+heliaSearchData("d/michaelpaulfourman",{"id":"michaelpaulfourman","title":"Michael Paul Fourman","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"michaelpaulfourman.html","headings":[],"body":""});

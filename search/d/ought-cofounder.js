@@ -1,0 +1,1 @@
+heliaSearchData("d/ought-cofounder",{"id":"ought-cofounder","title":"Ought (cofounder)","kind":"institution","tags":[],"authors":[],"venue":[],"date":null,"url":"ought-cofounder.html","headings":[],"body":""});

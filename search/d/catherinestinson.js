@@ -1,0 +1,1 @@
+heliaSearchData("d/catherinestinson",{"id":"catherinestinson","title":"Catherine Stinson","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"catherinestinson.html","headings":[],"body":""});

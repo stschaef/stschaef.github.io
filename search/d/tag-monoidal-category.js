@@ -1,0 +1,1 @@
+heliaSearchData("d/tag-monoidal-category",{"id":"tag-monoidal-category","title":"monoidal-category","kind":"tag","tags":[],"authors":[],"venue":[],"date":null,"url":"tag-monoidal-category.html","headings":[],"body":""});

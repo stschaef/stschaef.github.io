@@ -1,0 +1,1 @@
+heliaSearchData("d/alexandergrisak",{"id":"alexandergrisak","title":"Alexander Grisak","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"alexandergrisak.html","headings":[],"body":""});

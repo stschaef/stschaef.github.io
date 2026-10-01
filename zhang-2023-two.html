@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>Two tricks to trivialize higher-indexed families</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Ctext y=%22.9em%22 font-size=%2290%22%3E%F0%9F%8C%BB%3C/text%3E%3C/svg%3E">
+<meta name="generator" content="helia">
+<link rel="alternate" type="application/atom+xml" title="Steven Schaefer" href="feed.xml">
+<link rel="alternate" type="application/feed+json" title="Steven Schaefer" href="feed.json">
+<script src="helia/theme-version.js"></script>
+<script src="theme/folio-early.js"></script>
+<link rel="stylesheet" href="helia/theme.css">
+<link rel="stylesheet" href="helia/highlight.css">
+<link rel="stylesheet" href="helia/search.css">
+<link rel="stylesheet" href="theme/katex.css">
+<link rel="stylesheet" href="theme/recipe.css">
+<link rel="stylesheet" href="theme/site.css">
+<link rel="stylesheet" href="theme/folio.css">
+<script defer src="helia/runtime.js"></script>
+<script defer src="helia/search.js"></script>
+<script defer src="theme/glyphcraft.js"></script>
+<script defer src="theme/glyphart.js"></script>
+<script defer src="theme/glyphgen.js"></script>
+<script defer src="theme/ornament.js"></script>
+<script defer src="theme/folio.js"></script>
+<script defer src="theme/portrait.js"></script>
+<script type="application/json" id="helia-widgets">{"helia-cite-formats":"widgets/helia-cite-formats-a3294ac7.js"}</script>
+<link rel="modulepreload" href="widgets/helia-cite-formats-a3294ac7.js">
+<script type="module" src="widgets/runtime.js"></script>
+</head>
+<body>
+<nav class="helia-topbar"><a class="helia-home" href="home.html">Steven Schaefer</a><ul class="helia-nav-links"><li><a href="stevenschaefer.html">About Me</a></li><li><a href="research.html">Research</a></li><li><a href="new.html">New</a></li></ul><button type="button" class="helia-search-button" aria-label="Search (/ or Ctrl+K)" aria-haspopup="dialog"><span class="helia-search-icon">⌕</span><span class="helia-search-label">Search</span><kbd class="helia-search-key">/</kbd></button></nav>
+<div class="helia-page" data-kind="reference">
+<article class="helia-article">
+<header class="helia-header" data-entry="zhang-2023-two" data-kind="reference">
+<h2 class="helia-heading"><span class="helia-taxon">Reference.</span> Two tricks to trivialize higher-indexed families</h2>
+<div class="helia-meta"><span class="helia-author"><a class="helia-entry-link" href="teslazhang.html" data-entry="teslazhang">Tesla Zhang</a></span> · <span class="helia-byline"><a class="helia-entry-link" href="arxiv.html" data-entry="arxiv">arXiv</a> · 2023</span> · <span class="helia-tags"><span class="helia-tag" data-tag="type-theory"><a class="helia-entry-link" href="tag-type-theory.html" data-entry="tag-type-theory">type-theory</a></span></span> · <span class="helia-entry-links"><span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/2309.14187">arXiv</a></span></span></div>
+</header>
+<div class="helia-body">
+<div class="helia-abstract">The conventional general syntax of indexed families in dependent type theories follow the style of “constructors returning a special case”, as in Agda, Lean, Idris, Coq, and probably many other systems. Fording is a method to encode indexed families of this style with index-free inductive types and an identity type. There is another trick that merges interleaved higher inductive-inductive types into a single big family of types. It makes use of a small universe as the index to distinguish the original types. In this paper, we show that these two methods can trivialize some very fancy-looking indexed families with higher inductive indices (which we refer to as higher indexed families).</div>
+</div>
+<div class="helia-cite helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><h3 class="helia-heading">Cite</h3>
+</summary>
+<div class="helia-group-body">
+<div class="helia-widget" data-widget="helia-cite-formats" data-props="{&quot;key&quot;:&quot;zhang-2023-two&quot;,&quot;bibtex&quot;:&quot;@misc{zhang-2023-two,\n  author = {Tesla Zhang},\n  title = {Two tricks to trivialize higher-indexed families},\n  year = {2023},\n  month = {9},\n  eprint = {2309.14187},\n  archiveprefix = {arXiv}\n}&quot;,&quot;bib-file&quot;:&quot;zhang-2023-two.bib&quot;,&quot;hayagriva&quot;:&quot;zhang-2023-two:\n  type: misc\n  title: Two tricks to trivialize higher-indexed families\n  author: Zhang, Tesla\n  date: 2023-09\n  serial-number:\n    arxiv: &#39;2309.14187&#39;\n&quot;,&quot;yml-file&quot;:&quot;zhang-2023-two.yml&quot;}"><div class="helia-cite-key" data-copy="@zhang-2023-two" data-copy-label="citation key"><span class="helia-bib-key">Cite as</span> <code class="helia-raw-inline">@zhang-2023-two</code> (helia, typst) · <code class="helia-raw-inline">\cite{zhang-2023-two}</code> (LaTeX)</div>
+<div class="helia-cite-format helia-collapsible" data-format="bibtex" data-copy="true" data-copy-label="BibTeX">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">BibTeX</span></summary>
+<div class="helia-group-body">
+<details class="helia-code" open><summary class="helia-code-summary"><span class="helia-code-lang">bibtex</span> · <span class="helia-code-lines">8 lines</span></summary><pre class="helia-raw"><code class="language-bibtex"><span class="hl-text hl-bibtex"><span class="hl-meta hl-entry hl-braces hl-bibtex"><span class="hl-keyword hl-other hl-entry-type hl-bibtex"><span class="hl-punctuation hl-definition hl-keyword hl-bibtex">@</span>misc</span><span class="hl-punctuation hl-section hl-entry hl-begin hl-bibtex">{</span><span class="hl-entity hl-name hl-type hl-entry-key hl-bibtex">zhang-2023-two</span>,
+  <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">author</span> <span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span> <span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>Tesla Zhang<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>,
+  <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">title</span> <span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span> <span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>Two tricks to trivialize higher-indexed families<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>,
+  <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">year</span> <span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span> <span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>2023<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>,
+  <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">month</span> <span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span> <span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>9<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>,
+  <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">eprint</span> <span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span> <span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>2309.14187<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>,
+  <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">archiveprefix</span> <span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span> <span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>arXiv<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span>
+</span><span class="hl-punctuation hl-section hl-entry hl-end hl-bibtex">}</span></span></span></code></pre></details>
+</div>
+</details>
+</div>
+<div class="helia-cite-format helia-collapsible" data-format="hayagriva" data-copy="true" data-copy-label="hayagriva YAML">
+<details>
+<summary class="helia-group-summary"><span class="helia-group-title">hayagriva YAML (typst)</span></summary>
+<div class="helia-group-body">
+<details class="helia-code" open><summary class="helia-code-summary"><span class="helia-code-lang">yaml</span> · <span class="helia-code-lines">7 lines</span></summary><pre class="helia-raw"><code class="language-yaml"><span class="hl-source hl-yaml"><span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">zhang-2023-two</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">type</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">misc</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">title</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Two tricks to trivialize higher-indexed families</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">author</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Zhang, Tesla</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">date</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">2023-09</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">serial-number</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">arxiv</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-quoted hl-single hl-yaml"><span class="hl-punctuation hl-definition hl-string hl-begin hl-yaml">&#39;</span>2309.14187<span class="hl-punctuation hl-definition hl-string hl-end hl-yaml">&#39;</span></span>
+</span></code></pre></details>
+</div>
+</details>
+</div>
+<div class="helia-cite-files">Download: <a class="helia-link" href="zhang-2023-two.bib">zhang-2023-two.bib</a> · <a class="helia-link" href="zhang-2023-two.yml">zhang-2023-two.yml</a></div>
+</div>
+</div>
+</details>
+</div>
+<div class="helia-reference-cites helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">Cites 14 works (6 here)</span></summary>
+<div class="helia-group-body">
+<div class="helia-reference-cites-here helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">With notes (6)</span></summary>
+<div class="helia-group-body">
+<section class="helia-transclusion" data-entry="houfavonia-2023-an" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="houfavonia-2023-an"><span class="helia-title">An Order-Theoretic Analysis of Universe Polymorphism</span>&nbsp;<a class="helia-slug" href="houfavonia-2023-an.html">houfavonia-2023-an</a><span class="helia-byline"><span class="helia-entry-link" data-entry="popl">POPL</span> · 2023</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="houfavonia-2023-an" data-kind="reference">
+<div class="helia-abstract">We present a novel formulation of universe polymorphism in dependent type theory in terms of monads on the category of strict partial orders, and a novel algebraic structure, displacement algebras, on top of which one can implement a generalized form of McBride’s “crude but effective stratification” scheme for lightweight universe polymorphism. We give some examples of exotic but consistent universe hierarchies, and prove that every universe hierarchy in our sense can be embedded in a displacement algebra and hence implemented via our generalization of McBride’s scheme. Many of our technical results are mechanized in Agda, and we have an OCaml library for universe levels based on displacement algebras, for use in proof assistant implementations.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="pdf-url"><a class="helia-link helia-external" href="https://dl.acm.org/doi/pdf/10.1145/3571250">PDF</a></span> · <span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/3571250">DOI</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/journals/pacmpl/FavoniaAM23">pldb</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="zhang-2021-a" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="zhang-2021-a"><span class="helia-title">A simpler encoding of indexed types</span>&nbsp;<a class="helia-slug" href="zhang-2021-a.html">zhang-2021-a</a><span class="helia-byline"><span class="helia-entry-link" data-entry="tyde">TyDe</span> · 2021</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="zhang-2021-a" data-kind="reference">
+<div class="helia-abstract">In functional programming languages, generalized algebraic data types (GADTs) are very useful as the unnecessary pattern matching over them can be ruled out by the failure of unification of type arguments. In dependent type systems, this is usually called indexed types and it’s particularly useful as the identity type is a special case of it. However, pattern matching over indexed types is very complicated as it requires term unification in general. We study a simplified version of indexed types (called simpler indexed types) where we explicitly specify the selection process of constructors, and we discuss its expressiveness, limitations, and properties.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/3471875.3472991">DOI</a></span> · <span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/2103.15408">arXiv</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="VezzosiMortbergAbel2019" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="VezzosiMortbergAbel2019"><span class="helia-title">Cubical Agda: A Dependently Typed Programming Language with Univalence and Higher Inductive Types</span>&nbsp;<a class="helia-slug" href="VezzosiMortbergAbel2019.html">VezzosiMortbergAbel2019</a><span class="helia-byline"><span class="helia-entry-link" data-entry="icfp">ICFP</span> · 2019</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="VezzosiMortbergAbel2019" data-kind="reference">
+<div class="helia-abstract">Proof assistants based on dependent type theory provide expressive languages for both programming and proving within the same system. However, all of the major implementations lack powerful extensionality principles for reasoning about equality, such as function and propositional extensionality. These principles are typically added axiomatically which disrupts the constructive properties of these systems. Cubical type theory provides a solution by giving computational meaning to Homotopy Type Theory and Univalent Foundations, in particular to the univalence axiom and higher inductive types. This paper describes an extension of the dependently typed functional programming language Agda with cubical primitives, making it into a full-blown proof assistant with native support for univalence and a general schema of higher inductive types. These new primitives make function and propositional extensionality as well as quotient types directly definable with computational content. Additionally, thanks also to copatterns, bisimilarity is equivalent to equality for coinductive types. This extends Agda with support for a wide range of extensionality principles, without sacrificing type checking and constructivity.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="pdf-url"><a class="helia-link helia-external" href="https://dl.acm.org/doi/pdf/10.1145/3341691">PDF</a></span> · <span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/3341691">DOI</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/journals/pacmpl/VezzosiM019">pldb</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="altenkirch_etal_2018" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="altenkirch_etal_2018"><span class="helia-title">Quotient Inductive-Inductive Types</span>&nbsp;<a class="helia-slug" href="altenkirch_etal_2018.html">altenkirch_etal_2018</a><span class="helia-byline"><span class="helia-entry-link" data-entry="fossacs">FoSSaCS</span> · 2018</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="altenkirch_etal_2018" data-kind="reference">
+<div class="helia-abstract">Higher inductive types (HITs) in Homotopy Type Theory allow the definition of datatypes which have constructors for equalities over the defined type. HITs generalise quotient types, and allow to define types with non-trivial higher equality types, such as spheres, suspensions and the torus. However, there are also interesting uses of HITs to define types satisfying uniqueness of equality proofs, such as the Cauchy reals, the partiality monad, and the well-typed syntax of type theory. In each of these examples we define several types that depend on each other mutually, i.e. they are inductive-inductive definitions. We call those HITs quotient inductive-inductive types (QIITs). Although there has been recent progress on a general theory of HITs, there is not yet a theoretical foundation for the combination of equality constructors and induction-induction, despite many interesting applications. In the present paper we present a first step towards a semantic definition of QIITs. In particular, we give an initial-algebra semantics. We further derive a section induction principle, stating that every algebra morphism into the algebra in question has a section, which is close to the intuitively expected elimination rules.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-319-89366-2_16">DOI</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="licata-2013-calculating" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="licata-2013-calculating"><span class="helia-title">Calculating the Fundamental Group of the Circle in Homotopy Type Theory</span>&nbsp;<a class="helia-slug" href="licata-2013-calculating.html">licata-2013-calculating</a><span class="helia-byline"><span class="helia-entry-link" data-entry="lics">LICS</span> · 2013</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="licata-2013-calculating" data-kind="reference">
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1109/lics.2013.28">DOI</a></span> · <span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/1301.3443">arXiv</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="hottbook" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="hottbook"><span class="helia-title">Homotopy Type Theory: Univalent Foundations of Mathematics</span>&nbsp;<a class="helia-slug" href="hottbook.html">hottbook</a><span class="helia-byline"><span class="helia-entry-link" data-entry="arxiv">arXiv</span> · 2013</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="hottbook" data-kind="reference">
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="url"><a class="helia-link helia-external" href="https://homotopytypetheory.org/book">Web</a></span> · <span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/1308.0729">arXiv</a></span></div>
+</div>
+</div>
+</details>
+</section>
+</div>
+</details>
+</div>
+<div class="helia-reference-cites-away helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">External (8)</span></summary>
+<div class="helia-group-body">
+<ul>
+<li><a class="helia-link helia-external" href="https://arxiv.org/abs/2402.12339">Path spaces of pushouts</a> (2024)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3373718.3394760">The Integers as a Higher Inductive Type</a> (2020)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1109/lics.2019.8785661">Path Spaces of Higher Inductive Types in Homotopy Type Theory</a> (2019)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3209108.3209197">On Higher Inductive Types in Cubical Type Theory</a> (2018)</li>
+<li>Dependent Pattern Matching and Proof-Relevant Unification (2017)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/1863543.1863547">The gentle art of levitation</a> (2010)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/1481861.1481862">Dependently Typed Programming in Agda</a> (2009)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/1159803.1159811">Simple unification-based type inference for GADTs</a> (2006)</li>
+</ul>
+</div>
+</details>
+</div>
+</div>
+</details>
+</div>
+</article>
+<div class="helia-identity"><span class="helia-id">zhang-2023-two</span> <span class="helia-kind">reference</span> <span class="helia-path">entries/refs/zhang-2023-two/zhang-2023-two.hel</span></div>
+</div>
+</body>
+</html>

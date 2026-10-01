@@ -1,0 +1,1 @@
+heliaSearchData("d/uustalu-2020-eilenberg",{"id":"uustalu-2020-eilenberg","title":"Eilenberg-Kelly Reloaded","kind":"reference","tags":["category-theory"],"authors":["Niccolò Veltri","Noam Zeilberger","Tarmo Uustalu"],"venue":["MFPS","Mathematical Foundations of Programming Semantics"],"date":null,"url":"uustalu-2020-eilenberg.html","headings":[],"body":""});

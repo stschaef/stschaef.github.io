@@ -1,0 +1,1 @@
+heliaSearchData("d/moeller-2019-noncommutative",{"id":"moeller-2019-noncommutative","title":"Noncommutative network models","kind":"reference","tags":["category-theory"],"authors":["Joe Moeller"],"venue":["MSCS","Mathematical Structures in Computer Science"],"date":null,"url":"moeller-2019-noncommutative.html","headings":[],"body":""});

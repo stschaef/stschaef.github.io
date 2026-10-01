@@ -1,0 +1,1 @@
+heliaSearchData("d/joachimbreitner",{"id":"joachimbreitner","title":"Joachim Breitner","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"joachimbreitner.html","headings":[],"body":""});

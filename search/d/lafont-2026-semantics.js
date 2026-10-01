@@ -1,0 +1,1 @@
+heliaSearchData("d/lafont-2026-semantics",{"id":"lafont-2026-semantics","title":"Semantics of pattern unification","kind":"reference","tags":["unification"],"authors":["Ambroise Lafont","Neel Krishnaswami"],"venue":["JFP","Journal of Functional Programming"],"date":null,"url":"lafont-2026-semantics.html","headings":[],"body":""});

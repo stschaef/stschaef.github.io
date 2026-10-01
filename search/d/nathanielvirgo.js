@@ -1,0 +1,1 @@
+heliaSearchData("d/nathanielvirgo",{"id":"nathanielvirgo","title":"Nathaniel Virgo","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"nathanielvirgo.html","headings":[],"body":""});

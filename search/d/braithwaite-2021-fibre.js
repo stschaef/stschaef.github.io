@@ -1,0 +1,1 @@
+heliaSearchData("d/braithwaite-2021-fibre",{"id":"braithwaite-2021-fibre","title":"Fibre optics","kind":"reference","tags":["lenses","polynomial-functors"],"authors":["Bruno Gavranović","Dylan Braithwaite","Eigil Fjeldgren Rischel","Jules Hedges","Matteo Capucci"],"venue":["arXiv"],"date":null,"url":"braithwaite-2021-fibre.html","headings":[],"body":""});

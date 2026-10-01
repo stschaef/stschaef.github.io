@@ -1,0 +1,1 @@
+heliaSearchData("d/los-alamos-national-laboratory",{"id":"los-alamos-national-laboratory","title":"Los Alamos National Laboratory","kind":"institution","tags":[],"authors":[],"venue":[],"date":null,"url":"los-alamos-national-laboratory.html","headings":[],"body":""});

@@ -1,0 +1,1 @@
+heliaSearchData("d/zhang-2023-three",{"id":"zhang-2023-three","title":"Three non-cubical applications of extension types","kind":"reference","tags":["type-theory"],"authors":["Tesla Zhang"],"venue":["arXiv"],"date":null,"url":"zhang-2023-three.html","headings":[],"body":""});

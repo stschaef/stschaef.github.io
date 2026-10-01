@@ -1,0 +1,1 @@
+heliaSearchData("d/tancredelepoint",{"id":"tancredelepoint","title":"Tancrède Lepoint","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"tancredelepoint.html","headings":[],"body":""});

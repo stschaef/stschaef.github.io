@@ -1,0 +1,1 @@
+heliaSearchData("d/hedges-2018-morphisms",{"id":"hedges-2018-morphisms","title":"Morphisms of Open Games","kind":"reference","tags":["open-games"],"authors":["Jules Hedges"],"venue":["ENTCS","Electronic Notes in Theoretical Computer Science (now ENTICS)"],"date":null,"url":"hedges-2018-morphisms.html","headings":[],"body":""});

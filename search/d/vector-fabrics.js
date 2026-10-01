@@ -1,0 +1,1 @@
+heliaSearchData("d/vector-fabrics",{"id":"vector-fabrics","title":"Vector Fabrics","kind":"institution","tags":[],"authors":[],"venue":[],"date":null,"url":"vector-fabrics.html","headings":[],"body":""});

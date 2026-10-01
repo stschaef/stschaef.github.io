@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>Effect handlers via generalised continuations</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Ctext y=%22.9em%22 font-size=%2290%22%3E%F0%9F%8C%BB%3C/text%3E%3C/svg%3E">
+<meta name="generator" content="helia">
+<link rel="alternate" type="application/atom+xml" title="Steven Schaefer" href="feed.xml">
+<link rel="alternate" type="application/feed+json" title="Steven Schaefer" href="feed.json">
+<script src="helia/theme-version.js"></script>
+<script src="theme/folio-early.js"></script>
+<link rel="stylesheet" href="helia/theme.css">
+<link rel="stylesheet" href="helia/highlight.css">
+<link rel="stylesheet" href="helia/search.css">
+<link rel="stylesheet" href="theme/katex.css">
+<link rel="stylesheet" href="theme/recipe.css">
+<link rel="stylesheet" href="theme/site.css">
+<link rel="stylesheet" href="theme/folio.css">
+<script defer src="helia/runtime.js"></script>
+<script defer src="helia/search.js"></script>
+<script defer src="theme/glyphcraft.js"></script>
+<script defer src="theme/glyphart.js"></script>
+<script defer src="theme/glyphgen.js"></script>
+<script defer src="theme/ornament.js"></script>
+<script defer src="theme/folio.js"></script>
+<script defer src="theme/portrait.js"></script>
+<script type="application/json" id="helia-widgets">{"helia-cite-formats":"widgets/helia-cite-formats-a3294ac7.js"}</script>
+<link rel="modulepreload" href="widgets/helia-cite-formats-a3294ac7.js">
+<script type="module" src="widgets/runtime.js"></script>
+</head>
+<body>
+<nav class="helia-topbar"><a class="helia-home" href="home.html">Steven Schaefer</a><ul class="helia-nav-links"><li><a href="stevenschaefer.html">About Me</a></li><li><a href="research.html">Research</a></li><li><a href="new.html">New</a></li></ul><button type="button" class="helia-search-button" aria-label="Search (/ or Ctrl+K)" aria-haspopup="dialog"><span class="helia-search-icon">⌕</span><span class="helia-search-label">Search</span><kbd class="helia-search-key">/</kbd></button></nav>
+<div class="helia-page" data-kind="reference">
+<article class="helia-article">
+<header class="helia-header" data-entry="hillerstrom-2020-effect" data-kind="reference">
+<h2 class="helia-heading"><span class="helia-taxon">Reference.</span> Effect handlers via generalised continuations</h2>
+<div class="helia-meta"><span class="helia-author"><a class="helia-entry-link" href="danielhillerstrom.html" data-entry="danielhillerstrom">Daniel Hillerström</a>, <a class="helia-entry-link" href="samlindley.html" data-entry="samlindley">Sam Lindley</a>, <a class="helia-entry-link" href="robertatkey.html" data-entry="robertatkey">Robert Atkey</a></span> · <span class="helia-byline"><a class="helia-entry-link" href="jfp.html" data-entry="jfp">JFP</a> · 2020</span> · <span class="helia-tags"><span class="helia-tag" data-tag="effects"><a class="helia-entry-link" href="tag-effects.html" data-entry="tag-effects">effects</a></span></span> · <span class="helia-entry-links"><span class="helia-entry-link" data-field="pdf-url"><a class="helia-link helia-external" href="https://www.cambridge.org/core/services/aop-cambridge-core/content/view/DF590482FEE2F6888CD68B4B446E31D5/S0956796820000040a.pdf/div-class-title-effect-handlers-via-generalised-continuations-div.pdf">PDF</a></span> · <span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1017/s0956796820000040">DOI</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/journals/jfp/HillerstromLA20">pldb</a></span></span></div>
+</header>
+<div class="helia-body">
+<div class="helia-abstract">Plotkin and Pretnar’s effect handlers offer a versatile abstraction for modular programming with user-defined effects. This paper focuses on foundations for implementing effect handlers, for the three different kinds of effect handlers that have been proposed in the literature: deep, shallow, and parameterised. Traditional deep handlers are defined by folds over computation trees and are the original construct proposed by Plotkin and Pretnar. Shallow handlers are defined by case splits (rather than folds) over computation trees. Parameterised handlers are deep handlers extended with a state value that is threaded through the folds over computation trees. We formulate the extensions both directly and via encodings in terms of deep handlers and illustrate how the direct implementations avoid the generation of unnecessary closures. We give two distinct foundational implementations of all the kinds of handlers we consider: a continuation-passing style (CPS) transformation and a CEK-style abstract machine. In both cases, the key ingredient is a generalisation of the notion of continuation to accommodate stacks of effect handlers. We obtain our CPS translation through a series of refinements as follows. We begin with a first-order CPS translation into untyped lambda calculus which manages a stack of continuations and handlers as a curried sequence of arguments. We then refine the initial CPS translation by uncurrying it to yield a properly tail-recursive translation and then moving towards more and more intensional representations of continuations in order to support different kinds of effect handlers. Finally, we make the translation higher order in order to contract administrative redexes at translation time. Our abstract machine design then uses the same generalised continuation representation as the CPS translation. We have implemented both the abstract machine and the CPS transformation (plus extensions) as backends for the Links web programming language.</div>
+</div>
+<div class="helia-cite helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><h3 class="helia-heading">Cite</h3>
+</summary>
+<div class="helia-group-body">
+<div class="helia-widget" data-widget="helia-cite-formats" data-props="{&quot;key&quot;:&quot;hillerstrom-2020-effect&quot;,&quot;bibtex&quot;:&quot;@article{hillerstrom-2020-effect, title={Effect handlers via generalised continuations}, volume={30}, ISSN={1469-7653}, url={http://dx.doi.org/10.1017/s0956796820000040}, DOI={10.1017/s0956796820000040}, journal={Journal of Functional Programming}, publisher={Cambridge University Press (CUP)}, author={HILLERSTRÖM, DANIEL and LINDLEY, SAM and ATKEY, ROBERT}, year={2020} }&quot;,&quot;bib-file&quot;:&quot;hillerstrom-2020-effect.bib&quot;,&quot;hayagriva&quot;:&quot;hillerstrom-2020-effect:\n  type: article\n  title: Effect handlers via generalised continuations\n  author:\n  - HILLERSTRÖM, DANIEL\n  - LINDLEY, SAM\n  - ATKEY, ROBERT\n  date: 2020\n  url: http://dx.doi.org/10.1017/s0956796820000040\n  serial-number:\n    doi: 10.1017/s0956796820000040\n    issn: 1469-7653\n  parent:\n    type: periodical\n    title: Journal of Functional Programming\n    publisher: Cambridge University Press (CUP)\n    volume: 30\n&quot;,&quot;yml-file&quot;:&quot;hillerstrom-2020-effect.yml&quot;}"><div class="helia-cite-key" data-copy="@hillerstrom-2020-effect" data-copy-label="citation key"><span class="helia-bib-key">Cite as</span> <code class="helia-raw-inline">@hillerstrom-2020-effect</code> (helia, typst) · <code class="helia-raw-inline">\cite{hillerstrom-2020-effect}</code> (LaTeX)</div>
+<div class="helia-cite-format helia-collapsible" data-format="bibtex" data-copy="true" data-copy-label="BibTeX">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">BibTeX</span></summary>
+<div class="helia-group-body">
+<details class="helia-code" open><summary class="helia-code-summary"><span class="helia-code-lang">bibtex</span> · <span class="helia-code-lines">1 line</span></summary><pre class="helia-raw"><code class="language-bibtex"><span class="hl-text hl-bibtex"><span class="hl-meta hl-entry hl-braces hl-bibtex"><span class="hl-keyword hl-other hl-entry-type hl-bibtex"><span class="hl-punctuation hl-definition hl-keyword hl-bibtex">@</span>article</span><span class="hl-punctuation hl-section hl-entry hl-begin hl-bibtex">{</span><span class="hl-entity hl-name hl-type hl-entry-key hl-bibtex">hillerstrom-2020-effect</span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">title</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>Effect handlers via generalised continuations<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">volume</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>30<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">ISSN</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>1469-7653<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">url</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>http://dx.doi.org/10.1017/s0956796820000040<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">DOI</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>10.1017/s0956796820000040<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">journal</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>Journal of Functional Programming<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">publisher</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>Cambridge University Press (CUP)<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">author</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>HILLERSTRÖM, DANIEL and LINDLEY, SAM and ATKEY, ROBERT<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">year</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>2020<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span> </span><span class="hl-punctuation hl-section hl-entry hl-end hl-bibtex">}</span></span></span></code></pre></details>
+</div>
+</details>
+</div>
+<div class="helia-cite-format helia-collapsible" data-format="hayagriva" data-copy="true" data-copy-label="hayagriva YAML">
+<details>
+<summary class="helia-group-summary"><span class="helia-group-title">hayagriva YAML (typst)</span></summary>
+<div class="helia-group-body">
+<details class="helia-code" open><summary class="helia-code-summary"><span class="helia-code-lang">yaml</span> · <span class="helia-code-lines">17 lines</span></summary><pre class="helia-raw"><code class="language-yaml"><span class="hl-source hl-yaml"><span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">hillerstrom-2020-effect</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">type</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">article</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">title</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Effect handlers via generalised continuations</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">author</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">HILLERSTRÖM, DANIEL</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">LINDLEY, SAM</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">ATKEY, ROBERT</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">date</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-constant hl-numeric hl-integer hl-decimal hl-yaml">2020</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">url</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">http://dx.doi.org/10.1017/s0956796820000040</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">serial-number</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">doi</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">10.1017/s0956796820000040</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">issn</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">1469-7653</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">parent</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">type</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">periodical</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">title</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Journal of Functional Programming</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">publisher</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Cambridge University Press (CUP)</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">volume</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-constant hl-numeric hl-integer hl-decimal hl-yaml">30</span>
+</span></code></pre></details>
+</div>
+</details>
+</div>
+<div class="helia-cite-files">Download: <a class="helia-link" href="hillerstrom-2020-effect.bib">hillerstrom-2020-effect.bib</a> · <a class="helia-link" href="hillerstrom-2020-effect.yml">hillerstrom-2020-effect.yml</a></div>
+</div>
+</div>
+</details>
+</div>
+<div class="helia-reference-cited-by helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">Cited by (2)</span></summary>
+<div class="helia-group-body">
+<section class="helia-transclusion" data-entry="mathiasen-2026-yarrow" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="mathiasen-2026-yarrow"><span class="helia-title">Yarrow: Reconciling Effect Handlers and Region-Based Memory Management</span>&nbsp;<a class="helia-slug" href="mathiasen-2026-yarrow.html">mathiasen-2026-yarrow</a><span class="helia-byline"><span class="helia-entry-link" data-entry="arxiv">arXiv</span> · 2026</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="mathiasen-2026-yarrow" data-kind="reference">
+<div class="helia-abstract">We present a new ML-like programming language Yarrow with algebraic effects and region-based memory management. Reconciling these programming language features into one language is challenging: the non-local control flow of algebraic effects break the stack discipline of function calls and returns that region-based memory management relies on, and multi-shot effect handlers break the invariant that regions can be exited at most once. We present a program logic, called Yarrow Logic (YL), that supports safe and modular reasoning about regions in the presence of one-shot and multi-shot effect handlers. We prove the logic sound w.r.t. the operational semantics of Yarrow which is inspired by the runtime of OCaml but refined for regions. We use YL to prove correctness of a number of case studies with algebraic effects, including checkpointing, asynchronous computation and a LIFO data structure implementation. Since all memory locations used in these case studies are allocated in regions, these case studies avoid using the less efficient garbage collected heap memory. We have formalized Yarrow’s operational semantics, the Yarrow program logic, and all our case studies using the Iris separation logic framework on top of the Rocq Prover.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/2607.15876">arXiv</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="convent-2020-doo" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="convent-2020-doo"><span class="helia-title">Doo bee doo bee doo</span>&nbsp;<a class="helia-slug" href="convent-2020-doo.html">convent-2020-doo</a><span class="helia-byline"><span class="helia-entry-link" data-entry="jfp">JFP</span> · 2020</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="convent-2020-doo" data-kind="reference">
+<div class="helia-abstract">We explore the design and implementation of Frank, a strict functional programming language with a bidirectional effect type system designed from the ground up around a novel variant of Plotkin and Pretnar’s effect handler abstraction. Effect handlers provide an abstraction for modular effectful programming: a handler acts as an interpreter for a collection of commands whose interfaces are statically tracked by the type system. However, Frank eliminates the need for an additional effect handling construct by generalising the basic mechanism of functional abstraction itself. A function is but the special case of a Frank operator that interprets no commands. Moreover, Frank’s operators can be multihandlers which simultaneously interpret commands from several sources at once, without disturbing the direct style of functional programming with values. Effect typing in Frank employs a novel form of effect polymorphism which avoids mentioning effect variables in source code. This is achieved by propagating an ambient ability inwards, rather than accumulating unions of potential effects outwards. With the ambient ability describing the effects that are available at a certain point in the code, it can become necessary to reconfigure access to the ambient ability. A primary goal is to be able to encapsulate internal effects, eliminating a phenomenon we call effect pollution . Moreover, it is sometimes desirable to rewire the effect flow between effectful library components. We propose adaptors as a means for supporting both effect encapsulation and more general rewiring. Programming with effects and handlers is in its infancy. We contribute an exploration of future possibilities, particularly in combination with other forms of rich type systems.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="pdf-url"><a class="helia-link helia-external" href="https://www.cambridge.org/core/services/aop-cambridge-core/content/view/DEC5F8FDABF7DE3088270E07392320DD/S0956796820000039a.pdf/div-class-title-doo-bee-doo-bee-doo-div.pdf">PDF</a></span> · <span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1017/s0956796820000039">DOI</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/journals/jfp/ConventLMM20">pldb</a></span></div>
+</div>
+</div>
+</details>
+</section>
+</div>
+</details>
+</div>
+<div class="helia-reference-cites helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">Cites 57 works (5 here)</span></summary>
+<div class="helia-group-body">
+<div class="helia-reference-cites-here helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">With notes (5)</span></summary>
+<div class="helia-group-body">
+<section class="helia-transclusion" data-entry="convent-2020-doo" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title"><span class="helia-title">Doo bee doo bee doo</span>&nbsp;<a class="helia-slug" href="convent-2020-doo.html">convent-2020-doo</a><span class="helia-byline"><span class="helia-entry-link" data-entry="jfp">JFP</span> · 2020</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="convent-2020-doo" data-kind="reference">
+<div class="helia-abstract">We explore the design and implementation of Frank, a strict functional programming language with a bidirectional effect type system designed from the ground up around a novel variant of Plotkin and Pretnar’s effect handler abstraction. Effect handlers provide an abstraction for modular effectful programming: a handler acts as an interpreter for a collection of commands whose interfaces are statically tracked by the type system. However, Frank eliminates the need for an additional effect handling construct by generalising the basic mechanism of functional abstraction itself. A function is but the special case of a Frank operator that interprets no commands. Moreover, Frank’s operators can be multihandlers which simultaneously interpret commands from several sources at once, without disturbing the direct style of functional programming with values. Effect typing in Frank employs a novel form of effect polymorphism which avoids mentioning effect variables in source code. This is achieved by propagating an ambient ability inwards, rather than accumulating unions of potential effects outwards. With the ambient ability describing the effects that are available at a certain point in the code, it can become necessary to reconfigure access to the ambient ability. A primary goal is to be able to encapsulate internal effects, eliminating a phenomenon we call effect pollution . Moreover, it is sometimes desirable to rewire the effect flow between effectful library components. We propose adaptors as a means for supporting both effect encapsulation and more general rewiring. Programming with effects and handlers is in its infancy. We contribute an exploration of future possibilities, particularly in combination with other forms of rich type systems.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="pdf-url"><a class="helia-link helia-external" href="https://www.cambridge.org/core/services/aop-cambridge-core/content/view/DEC5F8FDABF7DE3088270E07392320DD/S0956796820000039a.pdf/div-class-title-doo-bee-doo-bee-doo-div.pdf">PDF</a></span> · <span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1017/s0956796820000039">DOI</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/journals/jfp/ConventLMM20">pldb</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="forster-2019-on" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="forster-2019-on"><span class="helia-title">On the expressive power of user-defined effects: Effect handlers, monadic reflection, delimited control</span>&nbsp;<a class="helia-slug" href="forster-2019-on.html">forster-2019-on</a><span class="helia-byline"><span class="helia-entry-link" data-entry="jfp">JFP</span> · 2019</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="forster-2019-on" data-kind="reference">
+<div class="helia-abstract">We compare the expressive power of three programming abstractions for user-defined computational effects: Plotkin and Pretnar’s effect handlers, Filinski’s monadic reflection, and delimited control. This comparison allows a precise discussion about the relative expressiveness of each programming abstraction. It also demonstrates the sensitivity of the relative expressiveness of user-defined effects to seemingly orthogonal language features. We present three calculi, one per abstraction, extending Levy’s call-by-push-value. For each calculus, we present syntax, operational semantics, a natural type-and-effect system, and, for effect handlers and monadic reflection, a set-theoretic denotational semantics. We establish their basic metatheoretic properties: safety, termination, and, where applicable, soundness and adequacy. Using Felleisen’s notion of a macro translation, we show that these abstractions can macro express each other, and show which translations preserve typeability. We use the adequate finitary set-theoretic denotational semantics for the monadic calculus to show that effect handlers cannot be macro expressed while preserving typeability either by monadic reflection or by delimited control. Our argument fails with simple changes to the type system such as polymorphism and inductive types. We supplement our development with a mechanised Abella formalisation.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="pdf-url"><a class="helia-link helia-external" href="https://www.cambridge.org/core/services/aop-cambridge-core/content/view/3FFAA9AD05B58A1467E411F80EE4E076/S0956796819000121a.pdf/div-class-title-on-the-expressive-power-of-user-defined-effects-effect-handlers-monadic-reflection-delimited-control-div.pdf">PDF</a></span> · <span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1017/s0956796819000121">DOI</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/journals/jfp/0002KLP19">pldb</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="lindley-2017-do" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="lindley-2017-do"><span class="helia-title">Do be do be do</span>&nbsp;<a class="helia-slug" href="lindley-2017-do.html">lindley-2017-do</a><span class="helia-byline"><span class="helia-entry-link" data-entry="popl">POPL</span> · 2017</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="lindley-2017-do" data-kind="reference">
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="pdf-url"><a class="helia-link helia-external" href="https://strathprints.strath.ac.uk/59470/1/Lindley_etal_POPL_2017_do_be_do_be_do.pdf">PDF</a></span> · <span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/3009837.3009897">DOI</a></span> · <span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/1611.09259">arXiv</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/conf/popl/LindleyMM17">pldb</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="hillerstrom-2017-continuation" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="hillerstrom-2017-continuation"><span class="helia-title">Continuation Passing Style for Effect Handlers</span>&nbsp;<a class="helia-slug" href="hillerstrom-2017-continuation.html">hillerstrom-2017-continuation</a><span class="helia-byline"><span class="helia-entry-link" data-entry="fscd">FSCD</span> · 2017</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="hillerstrom-2017-continuation" data-kind="reference">
+<div class="helia-abstract">
+<p>We present Continuation Passing Style (CPS) translations for Plotkin and Pretnar’s effect handlers with Hillerström and Lindley’s row-typed fine-grain call-by-value calculus of effect handlers as the source language. CPS translations of handlers are interesting theoretically, to explain the semantics of handlers, and also offer a practical implementation technique that does not require special support in the target language’s runtime.</p>
+<p>We begin with a first-order CPS translation into untyped lambda calculus which manages a stack of continuations and handlers as a curried sequence of arguments. We then refine the initial CPS translation first by uncurrying it to yield a properly tail-recursive translation and second by making it higher-order in order to contract administrative redexes at translation time. We prove that the higher-order CPS translation simulates effect handler reduction. We have implemented the higher-order CPS translation as a JavaScript backend for the Links programming language.</p>
+</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.4230/lipics.fscd.2017.18">DOI</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="kammar-2013-handlers" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="kammar-2013-handlers"><span class="helia-title">Handlers in action</span>&nbsp;<a class="helia-slug" href="kammar-2013-handlers.html">kammar-2013-handlers</a><span class="helia-byline"><span class="helia-entry-link" data-entry="icfp">ICFP</span> · 2013</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="kammar-2013-handlers" data-kind="reference">
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="pdf-url"><a class="helia-link helia-external" href="https://dl.acm.org/doi/pdf/10.1145/2500365.2500590">PDF</a></span> · <span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/2500365.2500590">DOI</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/conf/icfp/KammarLO13">pldb</a></span></div>
+</div>
+</div>
+</details>
+</section>
+</div>
+</details>
+</div>
+<div class="helia-reference-cites-away helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">External (52)</span></summary>
+<div class="helia-group-body">
+<ul>
+<li>Abstracting algebraic effects (2019)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.4230/lipics.fscd.2019.30">Typed equivalence of effect handlers and delimited control</a> (2019)</li>
+<li>Handle with care: Relational interpretation of algebraic effects and handlers (2018)</li>
+<li>Effect handlers for the masses (2018)</li>
+<li>Pyro: Deep Universal Probabilistic Programming (2018)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-030-02768-1_22">Shallow effect handlers</a> (2018)</li>
+<li>Staged generic programming (2017)</li>
+<li>Concurrent system programming with effect handlers (2017)</li>
+<li>Implementing algebraic effects in C - “monads for free in C” (2017)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3110257">On the expressive power of user-defined effects: Effect handlers, monadic reflection, delimited control</a> (2017)</li>
+<li>MSc(R) thesis (2016)</li>
+<li>Compiling Links effect handlers to the OCaml backend (2016)</li>
+<li>Eff directly in OCaml (2016)</li>
+<li>Fusion for free - efficient algebraic effect handlers (2015)</li>
+<li>Programming with algebraic effects and handlers (2015)</li>
+<li>Effective concurrency through algebraic effects (2015)</li>
+<li>Handlers for algebraic effects in Links (2015)</li>
+<li>In APLAS. LNCS (2012)</li>
+<li>Yield: Mainstream delimited continuations (2011)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1017/s0956796807006259">A monadic framework for delimited continuations</a> (2007)</li>
+<li>In FMCO. LNCS (2006)</li>
+<li>In FoSSaCS. LNCS (2001)</li>
+<li>Monads for functional programming (1995)</li>
+<li>Syntactic theories and the algebra of record terms (1993)</li>
+<li>Compiling with Continuations (1992)</li>
+<li>Functional programming with bananas, lenses, envelopes and barbed wire (1991)</li>
+<li>Tupling and mutumorphisms (1990)</li>
+<li>Control operators, the SECD-machine, and the λ-calculus (1986)</li>
+<li>RABBIT: A compiler for SCHEME (1978)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/2633357.2633358">10.1145/2633357.2633358</a></li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1016/j.entcs.2015.12.003">10.1016/j.entcs.2015.12.003</a></li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.2168/lmcs-9(4:23)2013">10.2168/lmcs-9(4:23)2013</a></li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/155090.155113">10.1145/155090.155113</a></li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.2307/1967631">10.2307/1967631</a></li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1016/s0304-3975(02)00733-8">10.1016/s0304-3975(02)00733-8</a></li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/91556.91622">10.1145/91556.91622</a></li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/s10990-007-9010-4">10.1007/s10990-007-9010-4</a></li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/13310.13333">10.1145/13310.13333</a></li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3122975.3122977">10.1145/3122975.3122977</a></li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1023/a:1020891112409">10.1023/a:1020891112409</a></li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.4204/eptcs.153.8">10.4204/eptcs.153.8</a></li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1016/0304-3975(75)90017-1">10.1016/0304-3975(75)90017-1</a></li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1017/s0956796820000027">10.1017/s0956796820000027</a></li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/231379.231395">10.1145/231379.231395</a></li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/2976022.2976033">10.1145/2976022.2976033</a></li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/1291151.1291179">10.1145/1291151.1291179</a></li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1017/s0960129500001535">10.1017/s0960129500001535</a></li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1016/j.tcs.2012.02.025">10.1016/j.tcs.2012.02.025</a></li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3136000.3136007">10.1145/3136000.3136007</a></li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1016/s0890-5401(03)00088-9">10.1016/s0890-5401(03)00088-9</a></li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3093333.3009872">10.1145/3093333.3009872</a></li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1017/s0956796897002864">10.1017/s0956796897002864</a></li>
+</ul>
+</div>
+</details>
+</div>
+</div>
+</details>
+</div>
+</article>
+<div class="helia-identity"><span class="helia-id">hillerstrom-2020-effect</span> <span class="helia-kind">reference</span> <span class="helia-path">entries/refs/hillerstrom-2020-effect/hillerstrom-2020-effect.hel</span></div>
+</div>
+</body>
+</html>

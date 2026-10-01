@@ -1,0 +1,1 @@
+heliaSearchData("d/boston-college",{"id":"boston-college","title":"Boston College","kind":"institution","tags":[],"authors":[],"venue":[],"date":null,"url":"boston-college.html","headings":[],"body":""});

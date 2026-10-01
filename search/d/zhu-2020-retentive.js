@@ -1,0 +1,1 @@
+heliaSearchData("d/zhu-2020-retentive",{"id":"zhu-2020-retentive","title":"Retentive Lenses","kind":"reference","tags":["lenses"],"authors":["Hsiang-Shang Ko","Zhenjiang Hu","Zhixuan Yang","Zirun Zhu"],"venue":["arXiv"],"date":null,"url":"zhu-2020-retentive.html","headings":[],"body":""});

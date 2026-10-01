@@ -1,0 +1,1 @@
+heliaSearchData("d/helmholtz-center-for-information-security",{"id":"helmholtz-center-for-information-security","title":"Helmholtz Center for Information Security","kind":"institution","tags":[],"authors":[],"venue":[],"date":null,"url":"helmholtz-center-for-information-security.html","headings":[],"body":""});

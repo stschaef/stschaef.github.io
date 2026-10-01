@@ -1,0 +1,1 @@
+heliaSearchData("d/perimeter-institute",{"id":"perimeter-institute","title":"Perimeter Institute","kind":"institution","tags":[],"authors":[],"venue":[],"date":null,"url":"perimeter-institute.html","headings":[],"body":""});

@@ -1,0 +1,1 @@
+heliaSearchData("d/giuseppescollo",{"id":"giuseppescollo","title":"Giuseppe Scollo","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"giuseppescollo.html","headings":[],"body":""});

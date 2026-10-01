@@ -1,0 +1,1 @@
+heliaSearchData("d/mauricebailleu",{"id":"mauricebailleu","title":"Maurice Bailleu","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"mauricebailleu.html","headings":[],"body":""});

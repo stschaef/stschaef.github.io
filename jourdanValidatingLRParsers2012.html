@@ -7,6 +7,8 @@
 <title>Validating LR(1) Parsers</title>
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Ctext y=%22.9em%22 font-size=%2290%22%3E%F0%9F%8C%BB%3C/text%3E%3C/svg%3E">
 <meta name="generator" content="helia">
+<link rel="alternate" type="application/atom+xml" title="Steven Schaefer" href="feed.xml">
+<link rel="alternate" type="application/feed+json" title="Steven Schaefer" href="feed.json">
 <script src="helia/theme-version.js"></script>
 <script src="theme/folio-early.js"></script>
 <link rel="stylesheet" href="helia/theme.css">
@@ -34,7 +36,7 @@
 <article class="helia-article">
 <header class="helia-header" data-entry="jourdanValidatingLRParsers2012" data-kind="reference">
 <h2 class="helia-heading"><span class="helia-taxon">Reference.</span> Validating LR(1) Parsers</h2>
-<div class="helia-meta"><span class="helia-author"><a class="helia-entry-link" href="jacqueshenrijourdan.html" data-entry="jacqueshenrijourdan">Jacques-Henri Jourdan</a>, <a class="helia-entry-link" href="francoispottier.html" data-entry="francoispottier">François Pottier</a>, <a class="helia-entry-link" href="xavierleroy.html" data-entry="xavierleroy">Xavier Leroy</a></span> · <span class="helia-byline">Programming Languages and Systems · 2012</span> · <span class="helia-tags"><span class="helia-tag" data-tag="parsing"><span class="helia-entry-link helia-unavailable">parsing</span></span></span> · <span class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-642-28869-2_20">DOI</a></span></span></div>
+<div class="helia-meta"><span class="helia-author"><a class="helia-entry-link" href="jacqueshenrijourdan.html" data-entry="jacqueshenrijourdan">Jacques-Henri Jourdan</a>, <a class="helia-entry-link" href="francoispottier.html" data-entry="francoispottier">François Pottier</a>, <a class="helia-entry-link" href="xavierleroy.html" data-entry="xavierleroy">Xavier Leroy</a></span> · <span class="helia-byline">Programming Languages and Systems · 2012</span> · <span class="helia-tags"><span class="helia-tag" data-tag="parsing"><a class="helia-entry-link" href="tag-parsing.html" data-entry="tag-parsing">parsing</a></span></span> · <span class="helia-entry-links"><span class="helia-entry-link" data-field="pdf-url"><a class="helia-link helia-external" href="https://link.springer.com/content/pdf/10.1007%2F978-3-642-28869-2_20.pdf">PDF</a></span> · <span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-642-28869-2_20">DOI</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/conf/esop/JourdanPL12">pldb</a></span></span></div>
 </header>
 <div class="helia-body">
 <div class="helia-abstract">An LR(1) parser is a finite-state automaton, equipped with a stack, which uses a combination of its current state and one lookahead symbol in order to determine which action to perform next. We present a validator which, when applied to a context-free grammar G and an automaton A, checks that A and G agree. Validating the parser provides the correctness guarantees required by verified compilers and other high-assurance software that involves parsing. The validation process is independent of which technique was used to construct A. The validator is implemented and proved correct using the Coq proof assistant. As an application, we build a formally-verified parser for the C99 language.</div>
@@ -126,7 +128,7 @@
 </div>
 <div class="helia-reference-cited-by helia-collapsible">
 <details open>
-<summary class="helia-group-summary"><span class="helia-group-title">Cited by (9)</span></summary>
+<summary class="helia-group-summary"><span class="helia-group-title">Cited by (12)</span></summary>
 <div class="helia-group-body">
 <section class="helia-transclusion" data-entry="intrinsic-verification-of-parsers" data-depth="1">
 <details>
@@ -137,7 +139,7 @@
 <p>We present Dependent Lambek Calculus (Lambek<span class="helia-math helia-math-inline helia-mathml"><math><msup><mtable class="multiline-equation"></mtable><mi>𝙳</mi></msup></math></span>), a domain-specific dependent type theory for verified parsing and formal grammar theory. In Lambek<span class="helia-math helia-math-inline helia-mathml"><math><msup><mtable class="multiline-equation"></mtable><mi>𝙳</mi></msup></math></span>, linear types are used as a syntax for formal grammars, and parsers can be written as linear terms. The linear typing restriction provides a form of intrinsic verification that a parser yields only valid parse trees for the input string. We demonstrate the expressivity of this system by showing that the combination of inductive linear types and dependency on non-linear data can be used to encode commonly used grammar formalisms such as regular and context-free grammars as well as traces of various types of automata. Using these encodings, we define parsers for regular expressions using deterministic automata, as well as examples of verified parsers of context-free grammars.</p>
 <p>We present a denotational semantics of our type theory that interprets the linear types as functions from strings to sets of abstract parse trees and terms as parse transformers. Based on this denotational semantics, we have made a prototype implementation of Lambek<span class="helia-math helia-math-inline helia-mathml"><math><msup><mtable class="multiline-equation"></mtable><mi>𝙳</mi></msup></math></span> using a shallow embedding in the Agda proof assistant. All of our examples parsers have been implemented in this prototype implementation.</p>
 </div>
-<div class="helia-entry-links"><span class="helia-entry-link" data-field="pdf"><a class="helia-link" href="assets/4818ca36e1d8417310dcca2d3a4c8e1e89b7bbf6f69fd90ec697fc2de48a6d26.pdf">PDF</a></span> · <span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/3729281">DOI</a></span> · <span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/2504.03995">arXiv (extended version)</a></span> · <span class="helia-entry-link" data-field="code"><a class="helia-link helia-external" href="https://github.com/maxsnew/grammars-and-semantic-actions">Source code</a></span></div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="pdf"><a class="helia-link" href="assets/4818ca36e1d8417310dcca2d3a4c8e1e89b7bbf6f69fd90ec697fc2de48a6d26.pdf">PDF</a></span> · <span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/3729281">DOI</a></span> · <span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/2504.03995">arXiv (extended version)</a></span> · <span class="helia-entry-link" data-field="code"><a class="helia-link helia-external" href="https://github.com/maxsnew/grammars-and-semantic-actions">Source code</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/journals/pacmpl/SchaeferVAN25">pldb</a></span></div>
 </div>
 </div>
 </details>
@@ -171,13 +173,23 @@
 </div>
 </details>
 </section>
+<section class="helia-transclusion" data-entry="egolf-2022-verbatim" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="egolf-2022-verbatim"><span class="helia-title">Verbatim++: verified, optimized, and semantically rich lexing with derivatives</span>&nbsp;<a class="helia-slug" href="egolf-2022-verbatim.html">egolf-2022-verbatim</a><span class="helia-byline"><span class="helia-entry-link" data-entry="cpp">CPP</span> · 2022</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="egolf-2022-verbatim" data-kind="reference">
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="pdf-url"><a class="helia-link helia-external" href="https://dl.acm.org/doi/pdf/10.1145/3497775.3503694">PDF</a></span> · <span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/3497775.3503694">DOI</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/conf/cpp/EgolfLF22">pldb</a></span></div>
+</div>
+</div>
+</details>
+</section>
 <section class="helia-transclusion" data-entry="lasserCoStarVerifiedALL2021" data-depth="1">
 <details>
 <summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="lasserCoStarVerifiedALL2021"><span class="helia-title">CoStar: A verified ALL(*) parser</span>&nbsp;<a class="helia-slug" href="lasserCoStarVerifiedALL2021.html">lasserCoStarVerifiedALL2021</a><span class="helia-byline"><span class="helia-entry-link" data-entry="pldi">PLDI</span> · 2021</span></h2></summary>
 <div class="helia-transclusion-body">
 <div class="helia-reference" data-entry="lasserCoStarVerifiedALL2021" data-kind="reference">
 <div class="helia-abstract">Parsers are security-critical components of many software systems, and verified parsing therefore has a key role to play in secure software design. However, existing verified parsers for context-free grammars are limited in their expressiveness, termination properties, or performance characteristics. They are only compatible with a restricted class of grammars, they are not guaranteed to terminate on all inputs, or they are not designed to be performant on grammars for real-world programming languages and data formats. In this work, we present CoStar, a verified parser that addresses these limitations. The parser is implemented with the Coq Proof Assistant and is based on the ALL(*) parsing algorithm. CoStar is sound and complete for all non-left-recursive grammars; it produces a correct parse tree for its input whenever such a tree exists, and it correctly detects ambiguous inputs. CoStar also provides strong termination guarantees; it terminates without error on all inputs when applied to a non-left-recursive grammar. Finally, CoStar achieves linear-time performance on a range of unambiguous grammars for commonly used languages and data formats.</div>
-<div class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/3453483.3454053">DOI</a></span></div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="pdf-url"><a class="helia-link helia-external" href="https://dl.acm.org/doi/pdf/10.1145/3453483.3454053">PDF</a></span> · <span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/3453483.3454053">DOI</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/conf/pldi/LasserCFR21">pldb</a></span></div>
 </div>
 </div>
 </details>
@@ -188,7 +200,18 @@
 <div class="helia-transclusion-body">
 <div class="helia-reference" data-entry="EdelmannZippy2020" data-kind="reference">
 <div class="helia-abstract">In this paper, we present an efficient, functional, and formally verified parsing algorithm for LL(1) context-free expressions based on the concept of derivatives of formal languages. Parsing with derivatives is an elegant parsing technique, which, in the general case, suffers from cubic worst-case time complexity and slow performance in practice. We specialise the parsing with derivatives algorithm to LL(1) context-free expressions, where alternatives can be chosen given a single token of lookahead. We formalise the notion of LL(1) expressions and show how to efficiently check the LL(1) property. Next, we present a novel linear-time parsing with derivatives algorithm for LL(1) expressions operating on a zipper-inspired data structure. We prove the algorithm correct in Coq and present an implementation as a part of Scallion, a parser combinators framework in Scala with enumeration and pretty printing capabilities.</div>
-<div class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/3385412.3385992">DOI</a></span></div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/3385412.3385992">DOI</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/conf/pldi/EdelmannHK20">pldb</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="ringer-2019-qed" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="ringer-2019-qed"><span class="helia-title">QED at Large: A Survey of Engineering of Formally Verified Software</span>&nbsp;<a class="helia-slug" href="ringer-2019-qed.html">ringer-2019-qed</a><span class="helia-byline"><span class="helia-entry-link" data-entry="foundations-and-trends-in-programming-languages">Foundations and Trends® in Programming Languages</span> · 2019</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="ringer-2019-qed" data-kind="reference">
+<div class="helia-abstract">Development of formal proofs of correctness of programs can increase actual and perceived reliability and facilitate better understanding of program specifications and their underlying assumptions. Tools supporting such development have been available for over 40 years, but have only recently seen wide practical use. Projects based on construction of machine-checked formal proofs are now reaching an unprecedented scale, comparable to large software projects, which leads to new challenges in proof development and maintenance. Despite its increasing importance, the field of proof engineering is seldom considered in its own right; related theories, techniques, and tools span many fields and venues. This survey of the literature presents a holistic understanding of proof engineering for program correctness, covering impact in practice, foundations, proof automation, proof organization, and practical proof development.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1561/2500000045">DOI</a></span></div>
 </div>
 </div>
 </details>
@@ -201,6 +224,17 @@
 <div class="helia-abstract">An LL(1) parser is a recursive descent algorithm that uses a single token of lookahead to build a grammatical derivation for an input sequence. We present an LL(1) parser generator that, when applied to grammar G, produces an LL(1) parser for G if such a parser exists. We use the Coq Proof Assistant to verify that the generator and the parsers that it produces are sound and complete, and that they terminate on all inputs without using fuel parameters. As a case study, we extract the tool’s source code and use it to generate a JSON parser. The generated parser runs in linear time; it is two to four times slower than an unverified parser for the same grammar.</div>
 <p>Predecessor to <a class="helia-entry-link" href="lasserCoStarVerifiedALL2021.html" data-entry="lasserCoStarVerifiedALL2021">CoStar</a> and <a class="helia-entry-link" href="lasserCoStar2023.html" data-entry="lasserCoStar2023">CoStar++</a>.</p>
 <div class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.4230/lipics.itp.2019.24">DOI</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="omar-2018-reasonably" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="omar-2018-reasonably"><span class="helia-title">Reasonably programmable literal notation</span>&nbsp;<a class="helia-slug" href="omar-2018-reasonably.html">omar-2018-reasonably</a><span class="helia-byline"><span class="helia-entry-link" data-entry="icfp">ICFP</span> · 2018</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="omar-2018-reasonably" data-kind="reference">
+<div class="helia-abstract">General-purpose programming languages typically define literal notation for only a small number of common data structures, like lists. This is unsatisfying because there are many other data structures for which literal notation might be useful, e.g. finite maps, regular expressions, HTML elements, SQL queries, syntax trees for various languages and chemical structures. There may also be different implementations of each of these data structures behind a common interface that could all benefit from common literal notation. This paper introduces typed literal macros (TLMs) , which allow library providers to define new literal notation of nearly arbitrary design at any specified type or parameterized family of types. Compared to existing approaches, TLMs are uniquely reasonable . TLM clients can reason abstractly, i.e. without examining grammars or generated expansions, about types and binding. The system only needs to convey to clients, via secondary notation, the inferred segmentation of each literal body, which gives the locations and types of spliced subterms. TLM providers can reason modularly about syntactic ambiguity and expansion correctness according to clear criteria. This paper incorporates TLMs into Reason, an emerging alternative front-end for OCaml, and demonstrates, through several non-trivial case studies, how TLMs integrate with the advanced features of OCaml, including pattern matching and the module system. We also discuss optional integration with MetaOCaml, which allows TLM providers to be more confident about type correctness. Finally, we establish these abstract reasoning principles formally with a detailed type-theoretic account of expression and pattern TLMs for “core ML”.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="pdf-url"><a class="helia-link helia-external" href="https://dl.acm.org/doi/pdf/10.1145/3236801">PDF</a></span> · <span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/3236801">DOI</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/journals/pacmpl/OmarA18">pldb</a></span></div>
 </div>
 </div>
 </details>
@@ -221,7 +255,7 @@
 <div class="helia-transclusion-body">
 <div class="helia-reference" data-entry="firsovCertifiedNormalizationContextFree2015" data-kind="reference">
 <div class="helia-abstract">Every context-free grammar can be transformed into an equivalent one in the Chomsky normal form by a sequence of four transformations. In this work on formalization of language theory, we prove formally in the Agda dependently typed programming language that each of these transformations is correct in the sense of making progress toward normality and preserving the language of the given grammar. Also, we show that the right sequence of these transformations leads to a grammar in the Chomsky normal form (since each next transformation preserves the normality properties established by the previous ones) that accepts the same language as the given grammar. As we work in a constructive setting, soundness and completeness proofs are functions converting between parse trees in the normalized and original grammars.</div>
-<div class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/2676724.2693177">DOI</a></span></div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="pdf-url"><a class="helia-link helia-external" href="https://dl.acm.org/doi/pdf/10.1145/2676724.2693177">PDF</a></span> · <span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/2676724.2693177">DOI</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/conf/cpp/FirsovU15">pldb</a></span></div>
 </div>
 </div>
 </details>
@@ -232,7 +266,7 @@
 <div class="helia-transclusion-body">
 <div class="helia-reference" data-entry="kumar_cakeml_2014" data-kind="reference">
 <div class="helia-abstract">We have developed and mechanically verified an ML system called CakeML, which supports a substantial subset of Standard ML. CakeML is implemented as an interactive read-eval-print loop (REPL) in x86-64 machine code. Our correctness theorem ensures that this REPL implementation prints only those results permitted by the semantics of CakeML. Our verification effort touches on a breadth of topics including lexing, parsing, type checking, incremental and dynamic compilation, garbage collection, arbitraryprecision arithmetic, and compiler bootstrapping.</div>
-<div class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/2535838.2535841">DOI</a></span></div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="pdf-url"><a class="helia-link helia-external" href="https://dl.acm.org/doi/pdf/10.1145/2535838.2535841">PDF</a></span> · <span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/2535838.2535841">DOI</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/conf/popl/KumarMNO14">pldb</a></span></div>
 </div>
 </div>
 </details>

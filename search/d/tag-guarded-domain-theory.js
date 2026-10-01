@@ -1,0 +1,1 @@
+heliaSearchData("d/tag-guarded-domain-theory",{"id":"tag-guarded-domain-theory","title":"guarded-domain-theory","kind":"tag","tags":[],"authors":[],"venue":[],"date":null,"url":"tag-guarded-domain-theory.html","headings":[],"body":""});

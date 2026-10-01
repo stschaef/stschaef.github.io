@@ -1,0 +1,1 @@
+heliaSearchData("d/sandeepsthapit",{"id":"sandeepsthapit","title":"Sandeep Sthapit","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"sandeepsthapit.html","headings":[],"body":""});

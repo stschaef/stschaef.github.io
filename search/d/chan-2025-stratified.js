@@ -1,0 +1,1 @@
+heliaSearchData("d/chan-2025-stratified",{"id":"chan-2025-stratified","title":"Stratified Type Theory","kind":"reference","tags":["universes"],"authors":["Jonathan Chan","Stephanie Weirich"],"venue":["ESOP","European Symposium on Programming"],"date":null,"url":"chan-2025-stratified.html","headings":[],"body":""});

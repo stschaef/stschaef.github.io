@@ -1,0 +1,1 @@
+heliaSearchData("d/ferreira-2026-smt",{"id":"ferreira-2026-smt","title":"SMT-Based Active Learning of Weighted Automata","kind":"reference","tags":[],"authors":["Alexandra Silva","Kevin Batz","Tiago Ferreira"],"venue":["CAV","Computer Aided Verification"],"date":null,"url":"ferreira-2026-smt.html","headings":[],"body":""});

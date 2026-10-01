@@ -1,0 +1,1 @@
+heliaSearchData("d/copenhagen-business-school",{"id":"copenhagen-business-school","title":"Copenhagen Business School","kind":"institution","tags":[],"authors":[],"venue":[],"date":null,"url":"copenhagen-business-school.html","headings":[],"body":""});

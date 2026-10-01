@@ -1,0 +1,1 @@
+heliaSearchData("d/tag-full-abstraction",{"id":"tag-full-abstraction","title":"full-abstraction","kind":"tag","tags":[],"authors":[],"venue":[],"date":null,"url":"tag-full-abstraction.html","headings":[],"body":""});

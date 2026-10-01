@@ -1,0 +1,1 @@
+heliaSearchData("d/jairomiguelmarulandagiraldo",{"id":"jairomiguelmarulandagiraldo","title":"Jairo Miguel Marulanda-Giraldo","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"jairomiguelmarulandagiraldo.html","headings":[],"body":""});

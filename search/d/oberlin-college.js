@@ -1,0 +1,1 @@
+heliaSearchData("d/oberlin-college",{"id":"oberlin-college","title":"Oberlin College","kind":"institution","tags":[],"authors":[],"venue":[],"date":null,"url":"oberlin-college.html","headings":[],"body":""});

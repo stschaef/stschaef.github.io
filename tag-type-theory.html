@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>type-theory</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Ctext y=%22.9em%22 font-size=%2290%22%3E%F0%9F%8C%BB%3C/text%3E%3C/svg%3E">
+<meta name="generator" content="helia">
+<link rel="alternate" type="application/atom+xml" title="Steven Schaefer" href="feed.xml">
+<link rel="alternate" type="application/feed+json" title="Steven Schaefer" href="feed.json">
+<script src="helia/theme-version.js"></script>
+<script src="theme/folio-early.js"></script>
+<link rel="stylesheet" href="helia/theme.css">
+<link rel="stylesheet" href="helia/highlight.css">
+<link rel="stylesheet" href="helia/search.css">
+<link rel="stylesheet" href="theme/katex.css">
+<link rel="stylesheet" href="theme/recipe.css">
+<link rel="stylesheet" href="theme/site.css">
+<link rel="stylesheet" href="theme/folio.css">
+<script defer src="helia/runtime.js"></script>
+<script defer src="helia/search.js"></script>
+<script defer src="theme/glyphcraft.js"></script>
+<script defer src="theme/glyphart.js"></script>
+<script defer src="theme/glyphgen.js"></script>
+<script defer src="theme/ornament.js"></script>
+<script defer src="theme/folio.js"></script>
+<script defer src="theme/portrait.js"></script>
+</head>
+<body>
+<nav class="helia-topbar"><a class="helia-home" href="home.html">Steven Schaefer</a><ul class="helia-nav-links"><li><a href="stevenschaefer.html">About Me</a></li><li><a href="research.html">Research</a></li><li><a href="new.html">New</a></li></ul><button type="button" class="helia-search-button" aria-label="Search (/ or Ctrl+K)" aria-haspopup="dialog"><span class="helia-search-icon">⌕</span><span class="helia-search-label">Search</span><kbd class="helia-search-key">/</kbd></button></nav>
+<div class="helia-page" data-kind="tag">
+<article class="helia-article">
+<header class="helia-header" data-entry="tag-type-theory" data-kind="tag">
+<h2 class="helia-heading"><span class="helia-taxon">Tag.</span> type-theory</h2>
+<div class="helia-meta"><span class="helia-byline"><span class="helia-tag-name">type-theory</span></span></div>
+</header>
+<div class="helia-body">
+</div>
+<div class="helia-tag-group">
+<section class="helia-heading-section" data-level="1">
+<details open>
+<summary class="helia-heading-summary"><h2 class="helia-heading">Notes (3)</h2>
+</summary>
+<div class="helia-heading-body">
+<section class="helia-transclusion" data-entry="freely-transported-terms" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="freely-transported-terms"><span class="helia-title">Freely transported terms in dependent type theory</span>&nbsp;<a class="helia-slug" href="freely-transported-terms.html">freely-transported-terms</a></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-entry" data-entry="freely-transported-terms" data-kind="note">
+<p>Given <span class="helia-math helia-math-inline helia-mathml"><math><mi>𝐴</mi></math></span> and <span class="helia-math helia-math-inline helia-mathml"><math><mi>𝐵</mi><mo lspace="0.2777777777777778em" rspace="0.2777777777777778em">:</mo><mi>𝐴</mi><mo stretchy="false">→</mo><mtext>𝐓𝐲𝐩𝐞</mtext></math></span> we can make sense of <em>transported</em> terms along equalities between indices in <span class="helia-math helia-math-inline helia-mathml"><math><mi>𝐴</mi></math></span>. Say, with</p>
+<div class="helia-math helia-math-display helia-mathml"><math display="block"><mtext>𝗌𝗎𝖻𝗌𝗍</mtext><mo lspace="0.2777777777777778em" rspace="0.2777777777777778em">:</mo><mrow><mo stretchy="false">(</mo><mrow><mi>𝑝</mi><mo lspace="0.2777777777777778em" rspace="0.2777777777777778em">:</mo><mi>𝑎</mi><mo>=</mo><mrow><mi>𝑎</mi><mo lspace="0em" rspace="0em">′</mo></mrow></mrow><mo stretchy="false">)</mo></mrow><mo stretchy="false">→</mo><mi>𝐵</mi><mspace width="0.2222em"/><mi>𝑎</mi><mo stretchy="false">→</mo><mi>𝐵</mi><mspace width="0.2222em"/><mrow><mi>𝑎</mi><mo lspace="0em" rspace="0em">′</mo></mrow></math></div>
+<p>for <span class="helia-math helia-math-inline helia-mathml"><math><mi>𝑎</mi><mo>,</mo><mrow><mi>𝑎</mi><mo lspace="0em" rspace="0em">′</mo></mrow><mo lspace="0.2777777777777778em" rspace="0.2777777777777778em">:</mo><mi>𝐴</mi></math></span>.</p>
+<p>For instance, if <span class="helia-math helia-math-inline helia-mathml"><math><mi>𝑝</mi><mo lspace="0.2777777777777778em" rspace="0.2777777777777778em">:</mo><mi>𝑎</mi><mo>=</mo><mrow><mi>𝑎</mi><mo lspace="0em" rspace="0em">′</mo></mrow></math></span> and <span class="helia-math helia-math-inline helia-mathml"><math><mi>𝑏</mi><mo lspace="0.2777777777777778em" rspace="0.2777777777777778em">:</mo><mi>𝐵</mi><mspace width="0.2222em"/><mi>𝑎</mi></math></span> then <span class="helia-math helia-math-inline helia-mathml"><math><mtext>𝗌𝗎𝖻𝗌𝗍</mtext><mspace width="0.2222em"/><mi>𝑝</mi><mspace width="0.2222em"/><mi>𝑏</mi><mo lspace="0.2777777777777778em" rspace="0.2777777777777778em">:</mo><mi>𝐵</mi><mspace width="0.2222em"/><mrow><mi>𝑎</mi><mo lspace="0em" rspace="0em">′</mo></mrow></math></span></p>
+<p>To avoid landing in <strong>transport hell</strong>, I suspect that it may be preferable to work inside of a description of <em>freely transported terms</em> instead of taking semantic transports. The hypothesis is that by using descriptions of formal transport rather than actually computing a transport, we may defer the computation of an actual transport until the end of a construction. So instead of working with <span class="helia-math helia-math-inline helia-mathml"><math><mi>𝐵</mi><mspace width="0.2222em"/><mi>𝑎</mi></math></span> directly, perhaps we may work with</p>
+<div class="helia-math helia-math-display helia-mathml"><math display="block"><mtext>𝖥𝗋𝖾𝖾𝖲𝗎𝖻𝗌𝗍</mtext><mspace width="0.2222em"/><mi>𝐵</mi><mspace width="0.2222em"/><mi>𝑎</mi><mo>≔</mo><munder><mo form="prefix" lspace="0em">∑</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mi>𝑎</mi><mo lspace="0em" rspace="0em">′</mo></mrow><mo rspace="0em">:</mo><mi>𝐴</mi></mrow><mo stretchy="false">)</mo></mrow></munder><munder><mo form="prefix" lspace="0em">∑</mo><mrow><mo stretchy="false">(</mo><mrow><mi>𝑝</mi><mo rspace="0em">:</mo><mi>𝑎</mi><mo lspace="0em" rspace="0em">=</mo><mrow><mi>𝑎</mi><mo lspace="0em" rspace="0em">′</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></munder><mi>𝐵</mi><mspace width="0.2222em"/><mrow><mi>𝑎</mi><mo lspace="0em" rspace="0em">′</mo></mrow></math></div>
+<p>I think that this is very closely related to the <em>Fording</em> trick, as a map out of <span class="helia-math helia-math-inline helia-mathml"><math><mtext>𝖥𝗋𝖾𝖾𝖲𝗎𝖻𝗌𝗍</mtext><mspace width="0.2222em"/><mi>𝐵</mi><mspace width="0.2222em"/><mi>𝑎</mi></math></span>,</p>
+<div class="helia-math helia-math-display helia-mathml"><math display="block"><mi>𝑓</mi><mo lspace="0.2777777777777778em" rspace="0.2777777777777778em">:</mo><munder><mo form="prefix" lspace="0em">∑</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mi>𝑎</mi><mo lspace="0em" rspace="0em">′</mo></mrow><mo rspace="0em">:</mo><mi>𝐴</mi></mrow><mo stretchy="false">)</mo></mrow></munder><munder><mo form="prefix" lspace="0em">∑</mo><mrow><mo stretchy="false">(</mo><mrow><mi>𝑝</mi><mo rspace="0em">:</mo><mi>𝑎</mi><mo lspace="0em" rspace="0em">=</mo><mrow><mi>𝑎</mi><mo lspace="0em" rspace="0em">′</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></munder><mi>𝐵</mi><mspace width="0.2222em"/><mrow><mi>𝑎</mi><mo lspace="0em" rspace="0em">′</mo></mrow><mo stretchy="false">→</mo><mi>𝐶</mi></math></div>
+<p>can instead be described as a map,</p>
+<div class="helia-math helia-math-display helia-mathml"><math display="block"><mi>𝑔</mi><mo lspace="0.2777777777777778em" rspace="0.2777777777777778em">:</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mi>𝑎</mi><mo lspace="0em" rspace="0em">′</mo></mrow><mo lspace="0.2777777777777778em" rspace="0.2777777777777778em">:</mo><mi>𝐴</mi></mrow><mo stretchy="false">)</mo></mrow><mo stretchy="false">→</mo><mrow><mo stretchy="false">(</mo><mrow><mi>𝑝</mi><mo lspace="0.2777777777777778em" rspace="0.2777777777777778em">:</mo><mi>𝑎</mi><mo>=</mo><mrow><mi>𝑎</mi><mo lspace="0em" rspace="0em">′</mo></mrow></mrow><mo stretchy="false">)</mo></mrow><mo stretchy="false">→</mo><mi>𝐵</mi><mspace width="0.2222em"/><mrow><mi>𝑎</mi><mo lspace="0em" rspace="0em">′</mo></mrow><mo stretchy="false">→</mo><mi>𝐶</mi></math></div>
+<p>Both this and the fording trick use the Coyoneda lemma to represent an dependent type family.</p>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="equalizers-in-type-theory" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="equalizers-in-type-theory"><span class="helia-title">Constructing Equalizers in Type Theory</span>&nbsp;<a class="helia-slug" href="equalizers-in-type-theory.html">equalizers-in-type-theory</a></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-entry" data-entry="equalizers-in-type-theory" data-kind="note">
+<p>In the presence of <span class="helia-math helia-math-inline helia-mathml"><math><mi mathvariant="normal">Σ</mi></math></span>-types, one may construct all <a class="helia-entry-link" href="equalizer.html" data-entry="equalizer">equalizers</a>. Given types <span class="helia-math helia-math-inline helia-mathml"><math><mi>𝐴</mi></math></span> and <span class="helia-math helia-math-inline helia-mathml"><math><mi>𝐵</mi></math></span> with functions <span class="helia-math helia-math-inline helia-mathml"><math><mi>𝑓</mi><mo>,</mo><mi>𝑔</mi><mo lspace="0.2777777777777778em" rspace="0.2777777777777778em">:</mo><mi>𝐴</mi><mo stretchy="false">→</mo><mi>𝐵</mi></math></span>, the equalizer may be constructed as</p>
+<div class="helia-math helia-math-display helia-mathml"><math display="block"><msub><mtext>𝖾𝗊</mtext><mrow><mi>𝑓</mi><mo rspace="0em">,</mo><mi>𝑔</mi></mrow></msub><mo>≔</mo><munder><mo form="prefix" lspace="0em" rspace="0em">∑</mo><mrow><mi>𝑎</mi><mo rspace="0em">:</mo><mi>𝐴</mi></mrow></munder><mrow><mo stretchy="false">(</mo><mrow><mi>𝑓</mi><mrow><mo stretchy="false">(</mo><mi>𝑎</mi><mo stretchy="false">)</mo></mrow><mo>=</mo><mi>𝑔</mi><mrow><mo stretchy="false">(</mo><mi>𝑎</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></math></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="displayed-categories-as-dependent-types" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="displayed-categories-as-dependent-types"><span class="helia-title">Displayed Categories as Dependent Types</span>&nbsp;<a class="helia-slug" href="displayed-categories-as-dependent-types.html">displayed-categories-as-dependent-types</a></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-entry" data-entry="displayed-categories-as-dependent-types" data-kind="note">
+<p>Displayed category theory is the category-theoretic analogue of dependent type theory. A category plays the role of a context, and a <a class="helia-entry-link" href="displayed-category.html" data-entry="displayed-category">displayed category</a> over it the role of a dependent type in that context. The analogy extends to each construction:</p>
+<div class="helia-table"><table>
+<tbody>
+<tr><td><strong>Dependent type theory</strong></td><td><strong>Displayed category theory</strong></td></tr>
+<tr><td>context <span class="helia-math helia-math-inline helia-mathml"><math><mi mathvariant="normal">Γ</mi></math></span></td><td><a class="helia-entry-link" href="category.html" data-entry="category">category</a> <span class="helia-math helia-math-inline helia-mathml"><math><mi>𝒞︀</mi></math></span></td></tr>
+<tr><td>dependent type <span class="helia-math helia-math-inline helia-mathml"><math><mi mathvariant="normal">Γ</mi><mo>⊢</mo><mi>𝐵</mi></math></span></td><td><a class="helia-entry-link" href="displayed-category.html" data-entry="displayed-category">displayed category</a> <span class="helia-math helia-math-inline" role="math" aria-label="overline(cal(D))"><svg class="helia-math-svg helia-math-inline" viewBox="0 0 7.98 9" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:h5="http://www.w3.org/1999/xhtml" width="0.798em" height="0.9em" style="vertical-align: -0em" role="img"><g transform="matrix(1 0 0 -1 0 9)"><use xlink:href="#heliacf1063a4-g289F46B00FC5AB16B346DE352F4C06E" x="0" y="0" fill="currentColor" fill-rule="nonzero"/></g><path fill="none" stroke="currentColor" stroke-width="0.48" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4" transform="translate(0 0.72)" d="M 0 0h 7.98"/><defs><symbol id="heliacf1063a4-g289F46B00FC5AB16B346DE352F4C06E" overflow="visible"><path d="M 0 0m 2.51 0.02c 2.34 0.22 5.15 1.96 5.15 4.49c 0 1.4 -1.03 1.9 -1.59 2.09c -0.68 0.24 -1.28 0.23 -1.99 0.23c -0.2 0 -0.38 0.01 -0.52 0.01c -1.53 0 -2.89 -0.76 -3.27 -1.62c -0.05 -0.12 -0.09 -0.26 -0.09 -0.3c 0 -0.04 0.05 -0.09 0.14 -0.09c 0.14 0 0.39 0.12 0.58 0.25c 0.18 0.16 0.22 0.25 0.24 0.34c 0.04 0.13 0.06 0.19 0.16 0.31c 0.25 0.38 1.06 0.46 1.41 0.48c -0.08 -1.77 -0.67 -3.99 -1.34 -5.61c -0.15 -0.04 -0.33 -0.15 -0.45 -0.26c -0.16 -0.13 -0.21 -0.28 -0.11 -0.33c 0.02 -0.01 0.03 -0.01 0.74 -0.01c 0.71 0 0.73 0 0.94 0.02Z m 1.65 6.18c 1.48 -0.12 2.57 -0.71 2.57 -2.12c 0 -1.43 -1.01 -3.45 -3.78 -3.45h -0.77c 0.71 1.77 1.21 3.39 1.44 5.49v 0.09h 0.2c 0.13 0 0.29 -0.01 0.34 -0.01Z "/></symbol></defs></svg></span> over <span class="helia-math helia-math-inline helia-mathml"><math><mi>𝒞︀</mi></math></span></td></tr>
+<tr><td>dependent function <span class="helia-math helia-math-inline helia-mathml"><math><mrow><mo stretchy="false">(</mo><mrow><mi>𝑎</mi><mo lspace="0.2777777777777778em" rspace="0.2777777777777778em">:</mo><mi>𝐴</mi></mrow><mo stretchy="false">)</mo></mrow><mo stretchy="false">→</mo><mi>𝐵</mi><mrow><mo stretchy="false">(</mo><mi>𝑎</mi><mo stretchy="false">)</mo></mrow></math></span></td><td><a class="helia-entry-link" href="section-of-displayed-category.html" data-entry="section-of-displayed-category">section</a> of <span class="helia-math helia-math-inline" role="math" aria-label="overline(cal(D))"><svg class="helia-math-svg helia-math-inline" viewBox="0 0 7.98 9" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:h5="http://www.w3.org/1999/xhtml" width="0.798em" height="0.9em" style="vertical-align: -0em" role="img"><g transform="matrix(1 0 0 -1 0 9)"><use xlink:href="#heliacf1063a4-g289F46B00FC5AB16B346DE352F4C06E" x="0" y="0" fill="currentColor" fill-rule="nonzero"/></g><path fill="none" stroke="currentColor" stroke-width="0.48" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4" transform="translate(0 0.72)" d="M 0 0h 7.98"/><defs><symbol id="heliacf1063a4-g289F46B00FC5AB16B346DE352F4C06E" overflow="visible"><path d="M 0 0m 2.51 0.02c 2.34 0.22 5.15 1.96 5.15 4.49c 0 1.4 -1.03 1.9 -1.59 2.09c -0.68 0.24 -1.28 0.23 -1.99 0.23c -0.2 0 -0.38 0.01 -0.52 0.01c -1.53 0 -2.89 -0.76 -3.27 -1.62c -0.05 -0.12 -0.09 -0.26 -0.09 -0.3c 0 -0.04 0.05 -0.09 0.14 -0.09c 0.14 0 0.39 0.12 0.58 0.25c 0.18 0.16 0.22 0.25 0.24 0.34c 0.04 0.13 0.06 0.19 0.16 0.31c 0.25 0.38 1.06 0.46 1.41 0.48c -0.08 -1.77 -0.67 -3.99 -1.34 -5.61c -0.15 -0.04 -0.33 -0.15 -0.45 -0.26c -0.16 -0.13 -0.21 -0.28 -0.11 -0.33c 0.02 -0.01 0.03 -0.01 0.74 -0.01c 0.71 0 0.73 0 0.94 0.02Z m 1.65 6.18c 1.48 -0.12 2.57 -0.71 2.57 -2.12c 0 -1.43 -1.01 -3.45 -3.78 -3.45h -0.77c 0.71 1.77 1.21 3.39 1.44 5.49v 0.09h 0.2c 0.13 0 0.29 -0.01 0.34 -0.01Z "/></symbol></defs></svg></span></td></tr>
+<tr><td>context extension <span class="helia-math helia-math-inline helia-mathml"><math><mi mathvariant="normal">Γ</mi><mo>,</mo><mi>𝑥</mi><mo lspace="0.2777777777777778em" rspace="0.2777777777777778em">:</mo><mi>𝐵</mi></math></span></td><td><a class="helia-entry-link" href="total-category.html" data-entry="total-category">total category</a> <span class="helia-math helia-math-inline" role="math" aria-label="∫ overline(cal(D))"><svg class="helia-math-svg helia-math-inline" viewBox="0 0 16.296666667 12.055" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:h5="http://www.w3.org/1999/xhtml" width="1.63em" height="1.206em" style="vertical-align: -0.306em" role="img"><g transform="matrix(1 0 0 -1 0 8.995)"><use xlink:href="#helia0142e94c-gF49FABB0D86E1AD6E3F46F653EF25F68" x="0" y="0" fill="currentColor" fill-rule="nonzero"/></g><g transform="matrix(1 0 0 -1 8.316666667 9)"><use xlink:href="#helia0142e94c-g289F46B00FC5AB16B346DE352F4C06E" x="0" y="0" fill="currentColor" fill-rule="nonzero"/></g><path fill="none" stroke="currentColor" stroke-width="0.48" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4" transform="translate(8.316666667 0.72)" d="M 0 0h 7.98"/><defs><symbol id="helia0142e94c-gF49FABB0D86E1AD6E3F46F653EF25F68" overflow="visible"><path d="M 0 0m 4.97 8.05c -0.76 0 -1.27 -0.58 -1.53 -1.75c -0.04 -0.17 -0.09 -0.52 -0.16 -1.04l -0.13 -1.01c -0.14 -1.12 -0.23 -1.95 -0.27 -2.5l -0.19 -2.47c -0.07 -0.97 -0.23 -2.04 -1.01 -2.04c -0.21 0 -0.39 0.05 -0.54 0.15c 0.21 0.06 0.32 0.2 0.32 0.42c 0 0.27 -0.18 0.46 -0.45 0.46c -0.3 0 -0.45 -0.16 -0.45 -0.47c 0 -0.53 0.55 -0.86 1.12 -0.86c 0.81 0 1.37 0.6 1.67 1.79c 0.21 0.84 0.4 2.34 0.56 4.51l 0.19 2.47c 0.04 0.57 0.11 1.02 0.2 1.34c 0.13 0.42 0.22 0.7 0.68 0.7c 0.21 0 0.39 -0.05 0.53 -0.15c -0.21 -0.06 -0.32 -0.2 -0.32 -0.42c 0 -0.27 0.18 -0.46 0.45 -0.46c 0.3 0 0.45 0.16 0.45 0.47c 0 0.53 -0.55 0.86 -1.12 0.86Z "/></symbol><symbol id="helia0142e94c-g289F46B00FC5AB16B346DE352F4C06E" overflow="visible"><path d="M 0 0m 2.51 0.02c 2.34 0.22 5.15 1.96 5.15 4.49c 0 1.4 -1.03 1.9 -1.59 2.09c -0.68 0.24 -1.28 0.23 -1.99 0.23c -0.2 0 -0.38 0.01 -0.52 0.01c -1.53 0 -2.89 -0.76 -3.27 -1.62c -0.05 -0.12 -0.09 -0.26 -0.09 -0.3c 0 -0.04 0.05 -0.09 0.14 -0.09c 0.14 0 0.39 0.12 0.58 0.25c 0.18 0.16 0.22 0.25 0.24 0.34c 0.04 0.13 0.06 0.19 0.16 0.31c 0.25 0.38 1.06 0.46 1.41 0.48c -0.08 -1.77 -0.67 -3.99 -1.34 -5.61c -0.15 -0.04 -0.33 -0.15 -0.45 -0.26c -0.16 -0.13 -0.21 -0.28 -0.11 -0.33c 0.02 -0.01 0.03 -0.01 0.74 -0.01c 0.71 0 0.73 0 0.94 0.02Z m 1.65 6.18c 1.48 -0.12 2.57 -0.71 2.57 -2.12c 0 -1.43 -1.01 -3.45 -3.78 -3.45h -0.77c 0.71 1.77 1.21 3.39 1.44 5.49v 0.09h 0.2c 0.13 0 0.29 -0.01 0.34 -0.01Z "/></symbol></defs></svg></span> and its projection</td></tr>
+<tr><td>substitution <span class="helia-math helia-math-inline helia-mathml"><math><mi>𝐵</mi><mrow><mo stretchy="false">[</mo><mi>𝑓</mi><mo stretchy="false">]</mo></mrow></math></span></td><td><a class="helia-entry-link" href="reindexing.html" data-entry="reindexing">reindexing</a> <span class="helia-math helia-math-inline" role="math" aria-label="sans(&quot;reindex&quot;)_F (overline(cal(D)))"><svg class="helia-math-svg helia-math-inline" viewBox="0 0 54.611 14.44" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:h5="http://www.w3.org/1999/xhtml" width="5.461em" height="1.444em" style="vertical-align: -0.472em" role="img"><g transform="matrix(1 0 0 -1 0 9.72)"><use xlink:href="#heliaf6a7cfd9-g2AB3C09AD9C0BCFB6412D5202EDD9E56" x="0" y="0" fill="currentColor" fill-rule="nonzero"/><use xlink:href="#heliaf6a7cfd9-gCF34F7F930F8DEF0989F24F3B788A1B3" x="3.42" y="0" fill="currentColor" fill-rule="nonzero"/><use xlink:href="#heliaf6a7cfd9-g69E9DA23B35D241A1AD86D1F321745EC" x="7.86" y="0" fill="currentColor" fill-rule="nonzero"/><use xlink:href="#heliaf6a7cfd9-gCA3F302F05D0CD03DFE12C833246D638" x="10.25" y="0" fill="currentColor" fill-rule="nonzero"/><use xlink:href="#heliaf6a7cfd9-g4C0F28531595399D0F3B117A5362167A" x="15.42" y="0" fill="currentColor" fill-rule="nonzero"/><use xlink:href="#heliaf6a7cfd9-gCF34F7F930F8DEF0989F24F3B788A1B3" x="20.59" y="0" fill="currentColor" fill-rule="nonzero"/><use xlink:href="#heliaf6a7cfd9-g608241B1AB5A9C2FF3E5D302C6E6FB8D" x="25.03" y="0" fill="currentColor" fill-rule="nonzero"/></g><g transform="matrix(1 0 0 -1 29.64 12.19)"><use xlink:href="#heliaf6a7cfd9-g81948523278D9399D3E662AF8C75E434" x="0" y="0" fill="currentColor" fill-rule="nonzero"/></g><g transform="matrix(1 0 0 -1 36.171 9.72)"><use xlink:href="#heliaf6a7cfd9-gA9FA8C2F14C67767A3B2C96AC01F6145" x="0" y="0" fill="currentColor" fill-rule="nonzero"/></g><g transform="matrix(1 0 0 -1 41.401 9.72)"><use xlink:href="#heliaf6a7cfd9-g289F46B00FC5AB16B346DE352F4C06E" x="0" y="0" fill="currentColor" fill-rule="nonzero"/></g><path fill="none" stroke="currentColor" stroke-width="0.48" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4" transform="translate(41.401 1.44)" d="M 0 0h 7.98"/><g transform="matrix(1 0 0 -1 49.381 9.72)"><use xlink:href="#heliaf6a7cfd9-gDB61CF36309C493571F9F3FD45D85165" x="0" y="0" fill="currentColor" fill-rule="nonzero"/></g><defs><symbol id="heliaf6a7cfd9-g2AB3C09AD9C0BCFB6412D5202EDD9E56" overflow="visible"><path d="M 0 0m 3.27 3.81v 0.74c -0.71 -0.01 -1.28 -0.29 -1.69 -0.86v 0.81h -0.76v -4.5h 0.8v 2.14c 0 0.98 0.69 1.64 1.65 1.67Z "/></symbol><symbol id="heliaf6a7cfd9-gCF34F7F930F8DEF0989F24F3B788A1B3" overflow="visible"><path d="M 0 0m 1.12 2.15h 3.02c 0 1.38 -0.51 2.46 -1.78 2.46c -0.59 0 -1.08 -0.25 -1.47 -0.75c -0.36 -0.46 -0.54 -0.99 -0.54 -1.6c 0 -0.64 0.2 -1.19 0.59 -1.65c 0.41 -0.48 0.93 -0.72 1.56 -0.72c 0.58 0 1.11 0.18 1.6 0.53l -0.06 0.74c -0.48 -0.39 -0.99 -0.59 -1.53 -0.59c -0.81 0 -1.36 0.76 -1.39 1.58Z m 2.38 0.62h -2.33c 0.13 0.56 0.57 1.16 1.19 1.16c 0.67 0 1.04 -0.54 1.14 -1.16Z "/></symbol><symbol id="heliaf6a7cfd9-g69E9DA23B35D241A1AD86D1F321745EC" overflow="visible"><path d="M 0 0m 0.73 5.59h 0.93v 0.96h -0.93Z m 0.06 -5.59h 0.8v 4.47h -0.8Z "/></symbol><symbol id="heliaf6a7cfd9-gCA3F302F05D0CD03DFE12C833246D638" overflow="visible"><path d="M 0 0m 2.6 3.87c 0.65 0 0.91 -0.32 0.91 -0.97v -2.9h 0.84v 2.97c 0 1.05 -0.46 1.58 -1.38 1.58c -0.55 0 -1.01 -0.22 -1.38 -0.67v 0.62h -0.78v -4.5h 0.84v 2.45c 0 0.72 0.29 1.42 0.95 1.42Z "/></symbol><symbol id="heliaf6a7cfd9-g4C0F28531595399D0F3B117A5362167A" overflow="visible"><path d="M 0 0m 3.5 0h 0.84v 6.94h -0.81v -2.86c -0.43 0.33 -0.89 0.5 -1.4 0.5c -0.55 0 -0.99 -0.26 -1.33 -0.79c -0.29 -0.45 -0.44 -0.97 -0.44 -1.56c 0 -0.57 0.14 -1.09 0.42 -1.54c 0.33 -0.53 0.76 -0.8 1.31 -0.8c 0.52 0 0.99 0.19 1.41 0.57Z m -1.01 0.57c -0.84 0 -1.29 0.76 -1.29 1.65c 0 0.93 0.49 1.67 1.39 1.67c 0.37 0 0.67 -0.17 0.91 -0.51v -1.97c 0 -0.45 -0.56 -0.84 -1.01 -0.84Z "/></symbol><symbol id="heliaf6a7cfd9-g608241B1AB5A9C2FF3E5D302C6E6FB8D" overflow="visible"><path d="M 0 0m 3.73 0h 0.92l -2 2.29l 1.83 2.15h -0.91l -1.3 -1.6l -1.34 1.6h -0.92l 1.88 -2.15l -1.94 -2.29h 0.91l 1.41 1.82Z "/></symbol><symbol id="heliaf6a7cfd9-g81948523278D9399D3E662AF8C75E434" overflow="visible"><path d="M 0 0m 5.544 4.753h -3.696c -0.161 0 -0.252 -0.021 -0.252 -0.182c 0 -0.077 0.049 -0.112 0.147 -0.119l 0.364 -0.014c 0.091 -0.007 0.133 0 0.133 -0.07c 0 -0.035 -0.007 -0.084 -0.028 -0.147l -0.903 -3.619c -0.035 -0.133 -0.077 -0.217 -0.133 -0.252c -0.056 -0.035 -0.203 -0.049 -0.455 -0.049h -0.119c -0.077 -0.007 -0.119 -0.063 -0.119 -0.168c 0 -0.091 0.049 -0.133 0.14 -0.133c 0.161 0 0.735 0.028 0.91 0.028l 0.539 -0.007c 0.098 0 0.441 -0.021 0.546 -0.021c 0.119 0 0.175 0.063 0.175 0.182c 0 0.063 -0.021 0.098 -0.07 0.105c -0.084 0.014 -0.147 0.021 -0.196 0.014c -0.287 0.014 -0.441 0.028 -0.483 0.035c -0.042 0.007 -0.063 0.028 -0.063 0.07c 0 0.028 0.007 0.07 0.021 0.119l 0.42 1.701h 0.721c 0.357 0 0.588 -0.007 0.588 -0.28c 0 -0.091 -0.014 -0.196 -0.049 -0.308c -0.007 -0.028 -0.021 -0.056 -0.021 -0.091c 0 -0.084 0.049 -0.126 0.147 -0.126c 0.077 0 0.126 0.056 0.161 0.175c 0.259 1.008 0.392 1.547 0.399 1.61c 0 0.091 -0.049 0.133 -0.147 0.133c -0.077 0 -0.126 -0.063 -0.161 -0.182c -0.133 -0.504 -0.294 -0.623 -0.903 -0.623h -0.658l 0.427 1.701c 0.056 0.217 0.049 0.217 0.329 0.217h 1.057c 0.378 0 0.637 -0.035 0.77 -0.112c 0.203 -0.105 0.301 -0.329 0.301 -0.658c 0 -0.084 -0.028 -0.343 -0.028 -0.427c 0 -0.098 0.049 -0.147 0.14 -0.147c 0.042 0 0.077 0.007 0.098 0.028c 0.035 0.077 0.056 0.133 0.056 0.175l 0.126 1.204v 0.112c 0 0.119 -0.084 0.126 -0.231 0.126Z "/></symbol><symbol id="heliaf6a7cfd9-gA9FA8C2F14C67767A3B2C96AC01F6145" overflow="visible"><path d="M 0 0m 4.44 -4.72c 0.11 0 0.17 0.06 0.17 0.17c 0 0.06 -0.02 0.1 -0.07 0.13c -0.72 0.55 -1.29 1.48 -1.72 2.78c -0.37 1.11 -0.56 2.21 -0.56 3.28v 1.72c 0 1.07 0.19 2.16 0.56 3.28c 0.43 1.29 1 2.22 1.72 2.78c 0.05 0.03 0.07 0.07 0.07 0.13c 0 0.11 -0.06 0.17 -0.17 0.17c -0.04 0 -0.07 -0.01 -0.1 -0.04c -0.81 -0.63 -1.49 -1.59 -2.02 -2.87c -0.51 -1.21 -0.76 -2.36 -0.76 -3.45v -1.72c 0 -1.09 0.25 -2.24 0.76 -3.45c 0.53 -1.29 1.21 -2.24 2.02 -2.87c 0.03 -0.03 0.06 -0.04 0.1 -0.04Z "/></symbol><symbol id="heliaf6a7cfd9-g289F46B00FC5AB16B346DE352F4C06E" overflow="visible"><path d="M 0 0m 2.51 0.02c 2.34 0.22 5.15 1.96 5.15 4.49c 0 1.4 -1.03 1.9 -1.59 2.09c -0.68 0.24 -1.28 0.23 -1.99 0.23c -0.2 0 -0.38 0.01 -0.52 0.01c -1.53 0 -2.89 -0.76 -3.27 -1.62c -0.05 -0.12 -0.09 -0.26 -0.09 -0.3c 0 -0.04 0.05 -0.09 0.14 -0.09c 0.14 0 0.39 0.12 0.58 0.25c 0.18 0.16 0.22 0.25 0.24 0.34c 0.04 0.13 0.06 0.19 0.16 0.31c 0.25 0.38 1.06 0.46 1.41 0.48c -0.08 -1.77 -0.67 -3.99 -1.34 -5.61c -0.15 -0.04 -0.33 -0.15 -0.45 -0.26c -0.16 -0.13 -0.21 -0.28 -0.11 -0.33c 0.02 -0.01 0.03 -0.01 0.74 -0.01c 0.71 0 0.73 0 0.94 0.02Z m 1.65 6.18c 1.48 -0.12 2.57 -0.71 2.57 -2.12c 0 -1.43 -1.01 -3.45 -3.78 -3.45h -0.77c 0.71 1.77 1.21 3.39 1.44 5.49v 0.09h 0.2c 0.13 0 0.29 -0.01 0.34 -0.01Z "/></symbol><symbol id="heliaf6a7cfd9-gDB61CF36309C493571F9F3FD45D85165" overflow="visible"><path d="M 0 0m 0.89 -4.68c 0.81 0.63 1.49 1.58 2.02 2.87c 0.51 1.21 0.76 2.36 0.76 3.45v 1.72c 0 1.09 -0.25 2.24 -0.76 3.45c -0.53 1.29 -1.21 2.24 -2.02 2.87c -0.04 0.03 -0.07 0.04 -0.1 0.04c -0.11 0 -0.17 -0.06 -0.17 -0.17c 0 -0.05 0.02 -0.1 0.06 -0.13c 0.72 -0.55 1.3 -1.47 1.73 -2.78c 0.37 -1.12 0.56 -2.21 0.56 -3.28v -1.72c 0 -1.07 -0.19 -2.16 -0.56 -3.28c -0.43 -1.31 -1.01 -2.23 -1.73 -2.78c -0.04 -0.03 -0.06 -0.08 -0.06 -0.13c 0 -0.11 0.06 -0.17 0.17 -0.17c 0.03 0 0.07 0.01 0.1 0.04Z "/></symbol></defs></svg></span></td></tr>
+<tr><td><span class="helia-math helia-math-inline helia-mathml"><math><mi mathvariant="normal">Σ</mi></math></span>-type</td><td><a class="helia-entry-link" href="displayed-total-category.html" data-entry="displayed-total-category">displayed total category</a></td></tr>
+<tr><td>a type not depending on its context</td><td><a class="helia-entry-link" href="weakening-category.html" data-entry="weakening-category">weakening</a></td></tr>
+</tbody></table></div>
+</div>
+</div>
+</details>
+</section>
+</div>
+</details>
+</section>
+</div>
+<div class="helia-tag-group">
+<section class="helia-heading-section" data-level="1">
+<details open>
+<summary class="helia-heading-summary"><h2 class="helia-heading">References (52)</h2>
+</summary>
+<div class="helia-heading-body">
+<section class="helia-transclusion" data-entry="aberle-2026-compositional" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="aberle-2026-compositional"><span class="helia-title">Compositional Program Verification with Polynomial Functors in Dependent Type Theory</span>&nbsp;<a class="helia-slug" href="aberle-2026-compositional.html">aberle-2026-compositional</a><span class="helia-byline"><span class="helia-entry-link" data-entry="arxiv">arXiv</span> · 2026</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="aberle-2026-compositional" data-kind="reference">
+<div class="helia-abstract">We present a framework for compositional program verification based on polynomial functors in dependent type theory. In this framework, polynomial functors serve as program interfaces, Kleisli morphisms for the free monad monad serve as implementations, and dependent polynomials encode pre/postcondition specifications. We show that implementations and their verifications compose via wiring diagrams, and that Mealy machines provide a compositional coalgebraic operational semantics. We identify the abstract categorical structure underlying this compositionality as a monoidal functor from specifications to interfaces with a compatible monoidal natural transformation of lax monoidal presheaves; this opens the door to generalizations to other categories, monoidal products, etc., including settings for concurrency and relational verification, which we sketch. As a proof-of-concept, the entire framework has been formalized in Agda.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/2604.01303">arXiv</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="speight-2026-impredicativity" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="speight-2026-impredicativity"><span class="helia-title">Impredicativity in Linear Dependent Type Theory</span>&nbsp;<a class="helia-slug" href="speight-2026-impredicativity.html">speight-2026-impredicativity</a><span class="helia-byline"><span class="helia-entry-link" data-entry="arxiv">arXiv</span> · 2026</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="speight-2026-impredicativity" data-kind="reference">
+<div class="helia-abstract">We construct a realizability model of linear dependent type theory from a linear combinatory algebra. Our model motivates a number of additions to the type theory. In particular, we add a universe with two decoding operations: one takes codes to cartesian types and the other takes codes to linear types. The universe is impredicative in the sense that it is closed under both large cartesian dependent products and large linear dependent products. We also add a rule for injectivity of the modality turning linear terms into cartesian terms. With all of the additions, we are able to encode (linear) inductive types. As a case study, we consider the type of lists over a linear type, and demonstrate that our encoding has the relevant uniqueness principle. The construction of the realizability model is fully formalized in the proof assistant Rocq.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/2602.08846">arXiv</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="najmaei-2026-from" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="najmaei-2026-from"><span class="helia-title">From Semantics to Syntax: A Type Theory for Comprehension Categories</span>&nbsp;<a class="helia-slug" href="najmaei-2026-from.html">najmaei-2026-from</a><span class="helia-byline"><span class="helia-entry-link" data-entry="popl">POPL</span> · 2026</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="najmaei-2026-from" data-kind="reference">
+<div class="helia-abstract">Recent models of intensional type theory have been constructed in algebraic weak factorization systems (AWFSs). AWFSs give rise to comprehension categories that feature non-trivial morphisms between types; these morphisms are not used in the standard interpretation of Martin-Löf type theory in comprehension categories. We develop a type theory that internalizes morphisms between types, reflecting this semantic feature back into syntax. Our type theory comes with Π-, Σ-, and identity types. We discuss how it can be viewed as an extension of Martin-Löf type theory with coercive subtyping, as sketched by Coraglia and Emmenegger. We furthermore define semantic structure that interprets our type theory and prove a soundness result. Finally, we exhibit many examples of the semantic structure, yielding a plethora of interpretations.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="pdf-url"><a class="helia-link helia-external" href="https://dl.acm.org/doi/pdf/10.1145/3776725">PDF</a></span> · <span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/3776725">DOI</a></span> · <span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/2503.10868">arXiv</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/journals/pacmpl/NajmaeiWAN26">pldb</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="huang-2026-fat" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="huang-2026-fat"><span class="helia-title">Fat Cell Structures and Generalized Algebraic Theories</span>&nbsp;<a class="helia-slug" href="huang-2026-fat.html">huang-2026-fat</a><span class="helia-byline"><span class="helia-entry-link" data-entry="lics">LICS</span> · 2026</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="huang-2026-fat" data-kind="reference">
+<div class="helia-abstract">We give a new syntax-independent account of finitely-presented generalized algebraic theories (GATs) as finite cell complexes in the category of categories with families (CwFs), in which GATs are constructed by successive pushouts along the CwF morphisms generically postulating a sort, an operation, or an equation. Inspired by the fat small object argument of Makkai, Rosický, and Vokřínek, we introduce fat GAT presentations, thereby allowing infinite presentations with non-linear dependency structure. Then, motivated by wanting our GATs to self-describe, we extend presentations to admit infinitary arities, including infinitely deep dependency chains. Finally, we verify that these generalized GATs satisfy expected semantic properties including Frey’s Gabriel–Ulmer duality.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.4230/lipics.lics.2026.58">DOI</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="chan-2025-internalizing" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="chan-2025-internalizing"><span class="helia-title">Internalizing Extensions in Lattices of Type Theories</span>&nbsp;<a class="helia-slug" href="chan-2025-internalizing.html">chan-2025-internalizing</a><span class="helia-byline"><span class="helia-entry-link" data-entry="arxiv">arXiv</span> · 2025</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="chan-2025-internalizing" data-kind="reference">
+<div class="helia-abstract">Many proof assistants allow the use of features and axioms that increase their expressive power. However, these extensions must be used with care, as some combinations are known to lead to logical inconsistencies. Therefore, proof assistants include mechanisms that track which extensions are used in a proof development or module, ensuring that incompatible extensions are not used simultaneously. Unfortunately, existing extension tracking mechanisms are external to the type system. This means that we cannot specify precisely which extensions a definition depends on. Having the ability to write more precise specifications means we are not picking an overapproximation of the extensions needed, which prevents reusing definitions in the presence of incompatible extensions. Furthermore, we cannot refer to definitions that use incompatible extensions even if they are never used in inconsistent ways. The reasoning principles of one extension therefore cannot be used as a metatheory to reason about the properties of an incompatible extension. In this report, I explore the use of the Dependent Calculus of Indistinguishability (DCOI) by Liu et al. for extension tracking. DCOI is a dependent type system with dependency tracking, where terms and variables are assigned dependency levels alongside their types. These dependency levels form a lattice that describes which levels are permitted to access what. To instead track extensions, each set of extensions would correspond to a dependency level, and the lattice would describe how extensions are permitted to interact.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/2510.26839">arXiv</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="liu-2025-consistency" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="liu-2025-consistency"><span class="helia-title">Consistency of a Dependent Calculus of Indistinguishability</span>&nbsp;<a class="helia-slug" href="liu-2025-consistency.html">liu-2025-consistency</a><span class="helia-byline"><span class="helia-entry-link" data-entry="popl">POPL</span> · 2025</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="liu-2025-consistency" data-kind="reference">
+<div class="helia-abstract">The Dependent Calculus of Indistinguishability (DCOI) uses dependency tracking to identify irrelevant arguments and uses indistinguishability during type conversion to enable proof irrelevance, supporting run-time and compile-time irrelevance with the same uniform mechanism. DCOI also internalizes reasoning about indistinguishability through the use of a propositional equality type indexed by an observer level. As DCOI is a pure type system, prior work establishes only its syntactic type safety, justifying its use as the basis for a programming language with dependent types. However, it was not clear whether any instance of this system would be suitable for use as a type theory for theorem proving. Here, we identify a suitable instance DCOI ω , which has an infinite predicative universe hierarchy. We show that DCOI ω is logically consistent, normalizing, and that type conversion is decidable. We have mechanized all results using the Coq proof assistant.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="pdf-url"><a class="helia-link helia-external" href="https://dl.acm.org/doi/pdf/10.1145/3704843">PDF</a></span> · <span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/3704843">DOI</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/journals/pacmpl/LiuCW25">pldb</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="bronsveld-2025-impredicative" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="bronsveld-2025-impredicative"><span class="helia-title">Impredicative Encodings of Inductive and Coinductive Types</span>&nbsp;<a class="helia-slug" href="bronsveld-2025-impredicative.html">bronsveld-2025-impredicative</a><span class="helia-byline"><span class="helia-entry-link" data-entry="fscd">FSCD</span> · 2025</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="bronsveld-2025-impredicative" data-kind="reference">
+<div class="helia-abstract">In impredicative type theory (System F, also known as λ2), it is possible to define inductive data types, such as natural numbers and lists. It is also possible to define coinductive data types such as streams. They work well in the sense that their (co)recursion principles obey the expected computation rules (the β-rules). Unfortunately, they do not yield a (co)induction principle [Herman Geuvers, 2001; Ivar Rummelhoff, 2004], because the necessary uniqueness principles are missing (the η-rules). Awodey, Frey, and Speight [Steve Awodey et al., 2018] used an extension of the Calculus of Constructions [Thierry Coquand and Gérard P. Huet, 1988] (λ C) with Σ-types, identity-types, and functional extensionality to define System F style inductive types with an induction principle, by encoding them as a well-chosen subtype, making them initial algebras. In this paper, we extend their results to coinductive data types, and we detail the example of the stream data type with the desired coinduction principle (also called bisimulation). To do that, we first define quotient types (with the desired η-rules) and we also need a stronger form of the definable existential types. We also show that we can use the original method by Awodey, Frey and Speight for general inductive types by defining W-types with an induction principle. The dual approach for streams can be extended to M-types, the generic notion of coinductive types, and the dual of W-types.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.4230/lipics.fscd.2025.11">DOI</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="eremondi-2025-coverage" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="eremondi-2025-coverage"><span class="helia-title">Coverage Semantics for Dependent Pattern Matching</span>&nbsp;<a class="helia-slug" href="eremondi-2025-coverage.html">eremondi-2025-coverage</a><span class="helia-byline"><span class="helia-entry-link" data-entry="esop">ESOP</span> · 2025</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="eremondi-2025-coverage" data-kind="reference">
+<div class="helia-abstract">Dependent pattern matching is a key feature in dependently typed programming. However, there is a theory-practice disconnect: while many proof assistants implement pattern matching as primitive, theoretical presentations give semantics to pattern matching by elaborating to eliminators. Though theoretically convenient, eliminators can be awkward and verbose, particularly for complex combinations of patterns. This work aims to bridge the theory-practice gap by presenting a direct categorical semantics for pattern matching, which does not elaborate to eliminators. This is achieved using sheaf theory to describe when sets of arrows (terms) can be amalgamated into a single arrow. We present a language with top-level dependent pattern matching, without specifying which sets of patterns are considered covering for a match. Then, we give a sufficient criterion for which pattern-sets admit a sound model: patterns should be in the canonical coverage for the category of contexts. Finally, we use sheaf-theoretic saturation conditions to devise some allowable sets of patterns. We are able to express and exceed the status quo, giving semantics for datatype constructors, nested patterns, absurd patterns, propositional equality, and dot patterns.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="pdf-url"><a class="helia-link helia-external" href="https://link.springer.com/content/pdf/10.1007/978-3-031-91118-7_11.pdf">PDF</a></span> · <span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-031-91118-7_11">DOI</a></span> · <span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/2501.18087">arXiv</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/conf/esop/EremondiK25">pldb</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="gratzer-2025-controlling" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="gratzer-2025-controlling"><span class="helia-title">Controlling unfolding in type theory</span>&nbsp;<a class="helia-slug" href="gratzer-2025-controlling.html">gratzer-2025-controlling</a><span class="helia-byline"><span class="helia-entry-link" data-entry="mscs">MSCS</span> · 2025</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="gratzer-2025-controlling" data-kind="reference">
+<div class="helia-abstract">We present a new way to control the unfolding of definitions in dependent type theory. Traditionally, proof assistants require users to fix whether each definition will or will not be unfolded in the remainder of a development; unfolding definitions is often necessary in order to reason about them, but an excess of unfolding can result in brittle proofs and intractably large proof goals. In our system, definitions are by default not unfolded, but users can selectively unfold them in a local manner. We justify our mechanism by means of elaboration to a core theory with extension types – a connective first introduced in the context of homotopy type theory – and by establishing a normalization theorem for our core calculus. We have implemented controlled unfolding in the proof assistant, inspiring an independent implementation in Agda.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1017/s0960129525100327">DOI</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="jiang_xue_new_2025" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="jiang_xue_new_2025"><span class="helia-title">Notions of Stack-manipulating Computation and Relative Monads</span>&nbsp;<a class="helia-slug" href="jiang_xue_new_2025.html">jiang_xue_new_2025</a><span class="helia-byline"><span class="helia-entry-link" data-entry="oopsla">OOPSLA</span> · 2025</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="jiang_xue_new_2025" data-kind="reference">
+<div class="helia-abstract">
+<p>Monads provide a simple and concise interface to user-defined computational effects in functional programming languages. This enables equational reasoning about effects, abstraction over monadic interfaces and the development of monad transformer stacks to allow for multiple effects. Compiler implementors and assembly code programmers similarly virtualize effects, and would benefit from similar abstractions if possible. However, the implementation details of effects seem disconnected from the high-level monad interface: at this lower level much of the design is in the layout of the runtime stack, which is not accessible in a high-level programming language.</p>
+<p>We demonstrate that the monadic interface can be faithfully adapted from high-level functional programming to a lower level setting with explicit stack manipulation. We use a polymorphic call-by-push-value (CBPV) calculus as a setting that captures the essence of stack-manipulation, with a type system that allows programs to define domain-specific stack structures. Within this setting, we show that the existing category-theoretic notion of a relative monad can be used to model the stack-based implementation of computational effects. To demonstrate generality, we adapt a variety of standard monads to relative monads. Additionally, we show that stack-manipulating programs can benefit from a generalization of do-notation we call “monadic blocks” that allow all CBPV code to be reinterpreted to work with an arbitrary relative monad. As an application, we show that all relative monads extend automatically to relative monad transformers, a process which is not automatic for monads in pure languages.</p>
+</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="pdf-url"><a class="helia-link helia-external" href="https://dl.acm.org/doi/pdf/10.1145/3720434">PDF</a></span> · <span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/3720434">DOI</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/journals/pacmpl/JiangXN25">pldb</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="aberle-2024-foundations" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="aberle-2024-foundations"><span class="helia-title">Foundations of Substructural Dependent Type Theory</span>&nbsp;<a class="helia-slug" href="aberle-2024-foundations.html">aberle-2024-foundations</a><span class="helia-byline"><span class="helia-entry-link" data-entry="arxiv">arXiv</span> · 2024</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="aberle-2024-foundations" data-kind="reference">
+<div class="helia-abstract">This paper presents preliminary work on a general system for integrating dependent types into substructural type systems such as linear logic and linear type theory. Prior work on this front has generally managed to deliver type systems possessing either syntax or semantics inclusive of certain practical applications, but has struggled to combine these all in one and the same system. Toward resolving this difficulty, I propose a novel categorical interpretation of substructural dependent types, analogous to the use of monoidal categories as models of linear and ordered logic, that encompasses a wide class of mathematical and computational examples. On this basis, I develop a general framework for substructural dependent type theories, and proceed to prove some essential metatheoretic properties thereof. As an application of this framework, I show how it can be used to construct a type theory that satisfactorily addresses the problem of effectively representing cut admissibility for linear sequent calculus in a logical framework.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/2401.15258">arXiv</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="altenkirch-2024-internal" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="altenkirch-2024-internal"><span class="helia-title">Internal Parametricity, without an Interval</span>&nbsp;<a class="helia-slug" href="altenkirch-2024-internal.html">altenkirch-2024-internal</a><span class="helia-byline"><span class="helia-entry-link" data-entry="popl">POPL</span> · 2024</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="altenkirch-2024-internal" data-kind="reference">
+<div class="helia-abstract">Parametricity is a property of the syntax of type theory implying, e.g., that there is only one function having the type of the polymorphic identity function. Parametricity is usually proven externally, and does not hold internally. Internalising it is difficult because once there is a term witnessing parametricity, it also has to be parametric itself and this results in the appearance of higher dimensional cubes. In previous theories with internal parametricity, either an explicit syntax for higher cubes is present or the theory is extended with a new sort for the interval. In this paper we present a type theory with internal parametricity which is a simple extension of Martin-Löf type theory: there are a few new type formers, term formers and equations. Geometry is not explicit in this syntax, but emergent: the new operations and equations only refer to objects up to dimension 3. We show that this theory is modelled by presheaves over the BCH cube category. Fibrancy conditions are not needed because we use span-based rather than relational parametricity. We define a gluing model for this theory implying that external parametricity and canonicity hold. The theory can be seen as a special case of a new kind of modal type theory, and it is the simplest setting in which the computational properties of higher observational type theory can be demonstrated.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="pdf-url"><a class="helia-link helia-external" href="https://dl.acm.org/doi/pdf/10.1145/3632920">PDF</a></span> · <span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/3632920">DOI</a></span> · <span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/2307.06448">arXiv</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/journals/pacmpl/AltenkirchCKS24">pldb</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="atkey-2024-polynomial" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="atkey-2024-polynomial"><span class="helia-title">Polynomial Time and Dependent Types</span>&nbsp;<a class="helia-slug" href="atkey-2024-polynomial.html">atkey-2024-polynomial</a><span class="helia-byline"><span class="helia-entry-link" data-entry="popl">POPL</span> · 2024</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="atkey-2024-polynomial" data-kind="reference">
+<div class="helia-abstract">We combine dependent types with linear type systems that soundly and completely capture polynomial time computation. We explore two systems for capturing polynomial time: one system that disallows construction of iterable data, and one, based on the LFPL system of Martin Hofmann, that controls construction via a payment method. Both of these are extended to full dependent types via Quantitative Type Theory, allowing for arbitrary computation in types alongside guaranteed polynomial time computation in terms. We prove the soundness of the systems using a realisability technique due to Dal Lago and Hofmann. Our long-term goal is to combine the extensional reasoning of type theory with intensional reasoning about the resources intrinsically consumed by programs. This paper is a step along this path, which we hope will lead both to practical systems for reasoning about programs’ resource usage, and to theoretical use as a form of synthetic computational complexity theory .</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="pdf-url"><a class="helia-link helia-external" href="https://dl.acm.org/doi/pdf/10.1145/3632918">PDF</a></span> · <span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/3632918">DOI</a></span> · <span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/2307.09145">arXiv</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/journals/pacmpl/Atkey24">pldb</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="liu-2024-internalizing" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="liu-2024-internalizing"><span class="helia-title">Internalizing Indistinguishability with Dependent Types</span>&nbsp;<a class="helia-slug" href="liu-2024-internalizing.html">liu-2024-internalizing</a><span class="helia-byline"><span class="helia-entry-link" data-entry="popl">POPL</span> · 2024</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="liu-2024-internalizing" data-kind="reference">
+<div class="helia-abstract">In type systems with dependency tracking, programmers can assign an ordered set of levels to computations and prevent information flow from high-level computations to the low-level ones. The key notion in such systems is indistinguishability : a definition of program equivalence that takes into account the parts of the program that an observer may depend on. In this paper, we investigate the use of dependency tracking in the context of dependently-typed languages. We present the Dependent Calculus of Indistinguishability (DCOI), a system that adopts indistinguishability as the definition of equality used by the type checker. DCOI also internalizes that relation as an observer-indexed propositional equality type, so that programmers may reason about indistinguishability within the language. Our design generalizes and extends prior systems that combine dependency tracking with dependent types and is the first to support conversion and propositional equality at arbitrary observer levels. We have proven type soundness and noninterference theorems for DCOI and have developed a prototype implementation of its type checker.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="pdf-url"><a class="helia-link helia-external" href="https://dl.acm.org/doi/pdf/10.1145/3632886">PDF</a></span> · <span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/3632886">DOI</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/journals/pacmpl/LiuCSW24">pldb</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="zhang-2023-three" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="zhang-2023-three"><span class="helia-title">Three non-cubical applications of extension types</span>&nbsp;<a class="helia-slug" href="zhang-2023-three.html">zhang-2023-three</a><span class="helia-byline"><span class="helia-entry-link" data-entry="arxiv">arXiv</span> · 2023</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="zhang-2023-three" data-kind="reference">
+<div class="helia-abstract">The development of cubical type theory inspired the idea of “extension types” which has been found to have applications in other type theories that are unrelated to homotopy type theory or cubical type theory. This article describes these applications, including on records, metaprogramming, controlling unfolding, and some more exotic ones.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/2311.05658">arXiv</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="ahrens-2023-bicategorical" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="ahrens-2023-bicategorical"><span class="helia-title">Bicategorical type theory: semantics and syntax</span>&nbsp;<a class="helia-slug" href="ahrens-2023-bicategorical.html">ahrens-2023-bicategorical</a><span class="helia-byline"><span class="helia-entry-link" data-entry="mscs">MSCS</span> · 2023</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="ahrens-2023-bicategorical" data-kind="reference">
+<div class="helia-abstract">We develop semantics and syntax for bicategorical type theory. Bicategorical type theory features contexts, types, terms, and directed reductions between terms. This type theory is naturally interpreted in a class of structured bicategories. We start by developing the semantics, in the form of comprehension bicategories . Examples of comprehension bicategories are plentiful; we study both specific examples as well as classes of examples constructed from other data. From the notion of comprehension bicategory, we extract the syntax of bicategorical type theory, that is, judgment forms and structural inference rules. We prove soundness of the rules by giving an interpretation in any comprehension bicategory. The semantic aspects of our work are fully checked in the Coq proof assistant, based on the UniMath library.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1017/s0960129523000312">DOI</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="zhang-2023-two" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="zhang-2023-two"><span class="helia-title">Two tricks to trivialize higher-indexed families</span>&nbsp;<a class="helia-slug" href="zhang-2023-two.html">zhang-2023-two</a><span class="helia-byline"><span class="helia-entry-link" data-entry="arxiv">arXiv</span> · 2023</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="zhang-2023-two" data-kind="reference">
+<div class="helia-abstract">The conventional general syntax of indexed families in dependent type theories follow the style of “constructors returning a special case”, as in Agda, Lean, Idris, Coq, and probably many other systems. Fording is a method to encode indexed families of this style with index-free inductive types and an identity type. There is another trick that merges interleaved higher inductive-inductive types into a single big family of types. It makes use of a small universe as the index to distinguish the original types. In this paper, we show that these two methods can trivialize some very fancy-looking indexed families with higher inductive indices (which we refer to as higher indexed families).</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/2309.14187">arXiv</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="lemay-2023-a" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="lemay-2023-a"><span class="helia-title">A Dependently Typed Language with Dynamic Equality</span>&nbsp;<a class="helia-slug" href="lemay-2023-a.html">lemay-2023-a</a><span class="helia-byline"><span class="helia-entry-link" data-entry="tyde">TyDe</span> · 2023</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="lemay-2023-a" data-kind="reference">
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/3609027.3609407">DOI</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="chan-2023-is" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="chan-2023-is"><span class="helia-title">Is sized typing for Coq practical?</span>&nbsp;<a class="helia-slug" href="chan-2023-is.html">chan-2023-is</a><span class="helia-byline"><span class="helia-entry-link" data-entry="jfp">JFP</span> · 2023</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="chan-2023-is" data-kind="reference">
+<div class="helia-abstract">Contemporary proof assistants such as Coq require that recursive functions be terminating and corecursive functions be productive to maintain logical consistency of their type theories, and some ensure these properties using syntactic checks. However, being syntactic, they are inherently delicate and restrictive, preventing users from easily writing obviously terminating or productive functions at their whim. Meanwhile, there exist many sized type theories that perform type-based termination and productivity checking, including theories based on the Calculus of (Co)Inductive Constructions (CIC), the core calculus underlying Coq. These theories are more robust and compositional in comparison. So why haven’t they been adapted to Coq? In this paper, we venture to answer this question with CIC <span class="helia-math helia-math-inline helia-mathml"><math><mover accent="true"><mo lspace="0em" rspace="0em">∗</mo><mo>ˆ</mo></mover></math></span> , a sized type theory based on CIC. It extends past work on sized types in CIC with additional Coq features such as global and local definitions. We also present a corresponding size inference algorithm and implement it within Coq’s kernel; for maximal backward compatibility with existing Coq developments, it requires no additional annotations from the user. In our evaluation of the implementation, we find a severe performance degradation when compiling parts of the Coq standard library, inherent to the algorithm itself. We conclude that if we wish to maintain backward compatibility, using size inference as a replacement for syntactic checking is impractical in terms of performance.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="pdf-url"><a class="helia-link helia-external" href="https://www.cambridge.org/core/services/aop-cambridge-core/content/view/9B55C4ABE4CB011CBD6405CA291FD920/S0956796822000120a.pdf/div-class-title-is-sized-typing-for-coq-practical-div.pdf">PDF</a></span> · <span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1017/s0956796822000120">DOI</a></span> · <span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/1912.05601">arXiv</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/journals/jfp/ChanLB23">pldb</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="fu2023twolevellineardependenttype" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="fu2023twolevellineardependenttype"><span class="helia-title">A two-level linear dependent type theory</span>&nbsp;<a class="helia-slug" href="fu2023twolevellineardependenttype.html">fu2023twolevellineardependenttype</a><span class="helia-byline"><span class="helia-entry-link" data-entry="arxiv">arXiv</span> · 2023</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="fu2023twolevellineardependenttype" data-kind="reference">
+<div class="helia-abstract">We present a type theory combining both linearity and dependency by stratifying typing rules into a level for logics and a level for programs. The distinction between logics and programs decouples their semantics, allowing the type system to assume tight resource bounds. A natural notion of irrelevancy is established where all proofs and types occurring inside programs are fully erasable without compromising their operational behavior. Through a heap-based operational semantics, we show that extracted programs always make computational progress and run memory clean. Additionally, programs can be freely reflected into the logical level for conducting deep proofs in the style of standard dependent type theories. This enables one to write resource safe programs and verify their correctness using a unified language.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="url"><a class="helia-link helia-external" href="https://arxiv.org/abs/2309.08673">Web</a></span> · <span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/2309.08673">arXiv</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="new_licata_2023" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="new_licata_2023"><span class="helia-title">A Formal Logic for Formal Category Theory</span>&nbsp;<a class="helia-slug" href="new_licata_2023.html">new_licata_2023</a><span class="helia-byline"><span class="helia-entry-link" data-entry="fossacs">FoSSaCS</span> · 2023</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="new_licata_2023" data-kind="reference">
+<div class="helia-abstract">We present a domain-specific type theory for constructions and proofs in category theory. The type theory axiomatizes notions of category, functor, profunctor and a generalized form of natural transformations. The type theory imposes an ordered linear restriction on standard predicate logic, which guarantees that all functions between categories are functorial, all relations are profunctorial, and all transformations are natural by construction, with no separate proofs necessary. Important category-theoretic proofs such as the Yoneda lemma and Co-yoneda lemma become simple type-theoretic proofs about the relationship between unit, tensor and (ordered) function types, and can be seen to be ordered refinements of theorems in predicate logic. The type theory is sound and complete for a categorical model in virtual equipments, which model both internal and enriched category theory. While the proofs in our type theory look like standard set-based arguments, the syntactic discipline ensure that all proofs and constructions carry over to enriched and internal settings as well.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-031-30829-1_6">DOI</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="gratzer-2022-the" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="gratzer-2022-the"><span class="helia-title">The directed plump ordering</span>&nbsp;<a class="helia-slug" href="gratzer-2022-the.html">gratzer-2022-the</a><span class="helia-byline"><span class="helia-entry-link" data-entry="arxiv">arXiv</span> · 2022</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="gratzer-2022-the" data-kind="reference">
+<div class="helia-abstract">Based on Taylor’s hereditarily directed plump ordinals, we define the directed plump ordering on W-types in Martin-Löf type theory. This ordering is similar to the plump ordering but comes equipped with non-empty finite joins in addition to the usual properties of the plump ordering.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/2202.07329">arXiv</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="demeo-2022-a" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="demeo-2022-a"><span class="helia-title">A Machine-Checked Proof of Birkhoff’s Variety Theorem in Martin-Löf Type Theory</span>&nbsp;<a class="helia-slug" href="demeo-2022-a.html">demeo-2022-a</a><span class="helia-byline"><span class="helia-entry-link" data-entry="types">TYPES</span> · 2022</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="demeo-2022-a" data-kind="reference">
+<div class="helia-abstract">The Agda Universal Algebra Library is a project aimed at formalizing the foundations of universal algebra, equational logic and model theory in dependent type theory using Agda. In this paper we draw from many components of the library to present a self-contained, formal, constructive proof of Birkhoff’s HSP theorem in Martin-Löf dependent type theory. This achieves one of the project’s initial goals: to demonstrate the expressive power of inductive and dependent types for representing and reasoning about general algebraic and relational structures by using them to formalize a significant theorem in the field.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.4230/lipics.types.2021.4">DOI</a></span> · <span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/2101.10166">arXiv</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="nakov_quantitative_2022" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="nakov_quantitative_2022"><span class="helia-title">Quantitative Polynomial Functors</span>&nbsp;<a class="helia-slug" href="nakov_quantitative_2022.html">nakov_quantitative_2022</a><span class="helia-byline"><span class="helia-entry-link" data-entry="types">TYPES</span> · 2022</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="nakov_quantitative_2022" data-kind="reference">
+<div class="helia-abstract">We investigate containers and polynomial functors in Quantitative Type Theory, and give initial algebra semantics of inductive data types in the presence of linearity. We show that reasoning by induction is supported, and equivalent to initiality, also in the linear setting.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.4230/lipics.types.2021.10">DOI</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="zhang-2021-a" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="zhang-2021-a"><span class="helia-title">A simpler encoding of indexed types</span>&nbsp;<a class="helia-slug" href="zhang-2021-a.html">zhang-2021-a</a><span class="helia-byline"><span class="helia-entry-link" data-entry="tyde">TyDe</span> · 2021</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="zhang-2021-a" data-kind="reference">
+<div class="helia-abstract">In functional programming languages, generalized algebraic data types (GADTs) are very useful as the unnecessary pattern matching over them can be ruled out by the failure of unification of type arguments. In dependent type systems, this is usually called indexed types and it’s particularly useful as the identity type is a special case of it. However, pattern matching over indexed types is very complicated as it requires term unification in general. We study a simplified version of indexed types (called simpler indexed types) where we explicitly specify the selection process of constructors, and we discuss its expressiveness, limitations, and properties.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/3471875.3472991">DOI</a></span> · <span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/2103.15408">arXiv</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="gratzerNutyzBirkedal2021" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="gratzerNutyzBirkedal2021"><span class="helia-title">Multimodal Dependent Type Theory</span>&nbsp;<a class="helia-slug" href="gratzerNutyzBirkedal2021.html">gratzerNutyzBirkedal2021</a><span class="helia-byline"><span class="helia-entry-link" data-entry="lmcs">LMCS</span> · 2021</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="gratzerNutyzBirkedal2021" data-kind="reference">
+<div class="helia-abstract">We introduce MTT, a dependent type theory which supports multiple modalities. MTT is parametrized by a mode theory which specifies a collection of modes, modalities, and transformations between them. We show that different choices of mode theory allow us to use the same type theory to compute and reason in many modal situations, including guarded recursion, axiomatic cohesion, and parametric quantification. We reproduce examples from prior work in guarded recursion and axiomatic cohesion, thereby demonstrating that MTT constitutes a simple and usable syntax whose instantiations intuitively correspond to previous handcrafted modal type theories. In some cases, instantiating MTT to a particular situation unearths a previously unknown type theory that improves upon prior systems. Finally, we investigate the metatheory of MTT. We prove the consistency of MTT and establish canonicity through an extension of recent type-theoretic gluing techniques. These results hold irrespective of the choice of mode theory, and thus apply to a wide variety of modal situations.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.46298/lmcs-17(3:11)2021">DOI</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="zhang-2021-elegant" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="zhang-2021-elegant"><span class="helia-title">Elegant elaboration with function invocation</span>&nbsp;<a class="helia-slug" href="zhang-2021-elegant.html">zhang-2021-elegant</a><span class="helia-byline"><span class="helia-entry-link" data-entry="arxiv">arXiv</span> · 2021</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="zhang-2021-elegant" data-kind="reference">
+<div class="helia-abstract">We present an elegant design of the core language in a dependently-typed lambda calculus with <span class="helia-math helia-math-inline helia-mathml"><math><mi>𝛿</mi></math></span>-reduction and an elaboration algorithm.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/2105.14840">arXiv</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="jesper1001" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="jesper1001"><span class="helia-title">1001 Representations of Syntax with Binding</span>&nbsp;<a class="helia-slug" href="jesper1001.html">jesper1001</a><span class="helia-byline">2021</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="jesper1001" data-kind="reference">
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="url"><a class="helia-link helia-external" href="https://jesper.cx/posts/1001-syntax-representations.html">Web</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="new_licata_ahmed_2021" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="new_licata_ahmed_2021"><span class="helia-title">Gradual Type Theory</span>&nbsp;<a class="helia-slug" href="new_licata_ahmed_2021.html">new_licata_ahmed_2021</a><span class="helia-byline"><span class="helia-entry-link" data-entry="jfp">JFP</span> · 2021</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="new_licata_ahmed_2021" data-kind="reference">
+<div class="helia-abstract">Gradually typed languages are designed to support both dynamically typed and statically typed programming styles while preserving the benefits of each. Sound gradually typed languages dynamically check types at runtime at the boundary between statically typed and dynamically typed modules. However, there is much disagreement in the gradual typing literature over how to enforce complex types such as tuples, lists, functions and objects. In this paper, we propose a new perspective on the design of runtime gradual type enforcement: runtime type casts exist precisely to ensure the correctness of certain type-based refactorings and optimizations. For instance, for simple types, a language designer might desire that beta-eta equality is valid. We show that this perspective is useful by demonstrating that a cast semantics can be derived from beta-eta equality. We do this by providing an axiomatic account program equivalence in a gradual cast calculus in a logic we call gradual type theory (GTT). Based on Levy’s call-by-push-value, GTT allows us to axiomatize both call-by-value and call-by-name gradual languages. We then show that we can derive the behavior of casts for simple types from the corresponding eta equality principle and the assumption that the language satisfies a property called graduality, also known as the dynamic gradual guarantee. Since we can derive the semantics from the assumption of eta equality, we also receive a useful contrapositive: any observably different cast semantics that satisfies graduality must violate the eta equality. We show the consistency and applicability of our axiomatic theory by proving that a contract-based implementation using the lazy cast semantics gives a logical relations model of our type theory, where equivalence in GTT implies contextual equivalence of the programs. Since GTT also axiomatizes the dynamic gradual guarantee, our model also establishes this central theorem of gradual typing. The model is parameterized by the implementation of the dynamic types, and so gives a family of implementations that validate type-based optimization and the gradual guarantee.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="pdf-url"><a class="helia-link helia-external" href="https://www.cambridge.org/core/services/aop-cambridge-core/content/view/2D5DC0E87301B1724C42B7E31F90DD6B/S0956796821000125a.pdf/div-class-title-gradual-type-theory-div.pdf">PDF</a></span> · <span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1017/s0956796821000125">DOI</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/journals/jfp/NewLA21">pldb</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="new_dissertation_2020" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="new_dissertation_2020"><span class="helia-title">A Semantic Foundation for Sound Gradual Typing</span>&nbsp;<a class="helia-slug" href="new_dissertation_2020.html">new_dissertation_2020</a><span class="helia-byline">2020</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="new_dissertation_2020" data-kind="reference">
+<div class="helia-abstract">Gradually typed programming languages provide a way forward in the debate between static and dynamic typing. In a gradual language, statically typed and dynamically typed programs can intermingle, and dynamically typed scripts can be gradually migrated to a statically typed style. In a sound gradually typed language, static type information is just as reliable as in a static language, establishing correctness of type-based refactoring and optimization. To ensure this in the presence of dynamic typing, runtime type casts are inserted automatically at the boundary between static and dynamic code. However the design of these languages is somewhat ad hoc, with little guidance on how to ensure that static reasoning principles are valid. In my dissertation, I present a semantic framework for design and metatheoretic analysis of gradually typed languages based on the theory of embedding-projection pairs. I show that this semantics enables proofs of the fundamental soundness theorems of gradual typing, and that it is robust, applying it to different evaluation orders and programming features.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="url"><a class="helia-link helia-external" href="https://maxsnew.com/docs/dissertation.pdf">Web</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="new_licata_2020_lmcs" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="new_licata_2020_lmcs"><span class="helia-title">Call-by-name Gradual Type Theory</span>&nbsp;<a class="helia-slug" href="new_licata_2020_lmcs.html">new_licata_2020_lmcs</a><span class="helia-byline"><span class="helia-entry-link" data-entry="lmcs">LMCS</span> · 2020</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="new_licata_2020_lmcs" data-kind="reference">
+<div class="helia-abstract">We present gradual type theory, a logic and type theory for call-by-name gradual typing. We define the central constructions of gradual typing (the dynamic type, type casts and type error) in a novel way, by universal properties relative to new judgments for gradual type and term dynamism, which were developed in blame calculi and to state the “gradual guarantee” theorem of gradual typing. Combined with the ordinary extensionality (<span class="helia-math helia-math-inline helia-mathml"><math><mi>𝜂</mi></math></span>) principles that type theory provides, we show that most of the standard operational behavior of casts is uniquely determined by the gradual guarantee. This provides a semantic justification for the definitions of casts, and shows that non-standard definitions of casts must violate these principles. Our type theory is the internal language of a certain class of preorder categories called equipments. We give a general construction of an equipment interpreting gradual type theory from a 2-category representing non-gradual types and programs, which is a semantic analogue of Findler and Felleisen’s definitions of contracts, and use it to build some concrete domain-theoretic models of gradual typing.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.23638/lmcs-16(1:7)2020">DOI</a></span> · <span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/1802.00061">arXiv</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="VezzosiMortbergAbel2019" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="VezzosiMortbergAbel2019"><span class="helia-title">Cubical Agda: A Dependently Typed Programming Language with Univalence and Higher Inductive Types</span>&nbsp;<a class="helia-slug" href="VezzosiMortbergAbel2019.html">VezzosiMortbergAbel2019</a><span class="helia-byline"><span class="helia-entry-link" data-entry="icfp">ICFP</span> · 2019</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="VezzosiMortbergAbel2019" data-kind="reference">
+<div class="helia-abstract">Proof assistants based on dependent type theory provide expressive languages for both programming and proving within the same system. However, all of the major implementations lack powerful extensionality principles for reasoning about equality, such as function and propositional extensionality. These principles are typically added axiomatically which disrupts the constructive properties of these systems. Cubical type theory provides a solution by giving computational meaning to Homotopy Type Theory and Univalent Foundations, in particular to the univalence axiom and higher inductive types. This paper describes an extension of the dependently typed functional programming language Agda with cubical primitives, making it into a full-blown proof assistant with native support for univalence and a general schema of higher inductive types. These new primitives make function and propositional extensionality as well as quotient types directly definable with computational content. Additionally, thanks also to copatterns, bisimilarity is equivalent to equality for coinductive types. This extends Agda with support for a wide range of extensionality principles, without sacrificing type checking and constructivity.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="pdf-url"><a class="helia-link helia-external" href="https://dl.acm.org/doi/pdf/10.1145/3341691">PDF</a></span> · <span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/3341691">DOI</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/journals/pacmpl/VezzosiM019">pldb</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="new_licata_ahmed_2019" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="new_licata_ahmed_2019"><span class="helia-title">Gradual Type Theory</span>&nbsp;<a class="helia-slug" href="new_licata_ahmed_2019.html">new_licata_ahmed_2019</a><span class="helia-byline"><span class="helia-entry-link" data-entry="popl">POPL</span> · 2019</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="new_licata_ahmed_2019" data-kind="reference">
+<div class="helia-abstract">
+<p>Gradually typed languages are designed to support both dynamically typed and statically typed programming styles while preserving the benefits of each. While existing gradual type soundness theorems for these languages aim to show that type-based reasoning is preserved when moving from the fully static setting to a gradual one, these theorems do not imply that correctness of type-based refactorings and optimizations is preserved. Establishing correctness of program transformations is technically difficult, because it requires reasoning about program equivalence, and is often neglected in the metatheory of gradual languages.</p>
+<p>In this paper, we propose an axiomatic account of program equivalence in a gradual cast calculus, which we formalize in a logic we call gradual type theory (GTT). Based on Levy’s call-by-push-value, GTT gives an axiomatic account of both call-by-value and call-by-name gradual languages. Based on our axiomatic account we prove many theorems that justify optimizations and refactorings in gradually typed languages. For example, uniqueness principles for gradual type connectives show that if the βη laws hold for a connective, then casts between that connective must be equivalent to the so-called “lazy” cast semantics. Contrapositively, this shows that “eager” cast semantics violates the extensionality of function types. As another example, we show that gradual upcasts are pure functions and, dually, gradual downcasts are strict functions. We show the consistency and applicability of our axiomatic theory by proving that a contract-based implementation using the lazy cast semantics gives a logical relations model of our type theory, where equivalence in GTT implies contextual equivalence of the programs. Since GTT also axiomatizes the dynamic gradual guarantee, our model also establishes this central theorem of gradual typing. The model is parametrized by the implementation of the dynamic types, and so gives a family of implementations that validate type-based optimization and the gradual guarantee.</p>
+</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="pdf-url"><a class="helia-link helia-external" href="https://dl.acm.org/doi/pdf/10.1145/3290328">PDF</a></span> · <span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/3290328">DOI</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/journals/pacmpl/NewLA19">pldb</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="atkey-2018-syntax" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="atkey-2018-syntax"><span class="helia-title">Syntax and Semantics of Quantitative Type Theory</span>&nbsp;<a class="helia-slug" href="atkey-2018-syntax.html">atkey-2018-syntax</a><span class="helia-byline"><span class="helia-entry-link" data-entry="lics">LICS</span> · 2018</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="atkey-2018-syntax" data-kind="reference">
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/3209108.3209189">DOI</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="luo" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="luo"><span class="helia-title">Substructural calculi with dependent types</span>&nbsp;<a class="helia-slug" href="luo.html">luo</a><span class="helia-byline">2018</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="luo" data-kind="reference">
+<div class="helia-abstract">
+<p>In this paper, we investigate how to introduce dependent types into the substructural calculi such as the Lambek calculus and linear logic. The motivations of such a move include facilitating a closer correspondence between syntax and semantics in natural language analysis and developing promising applications such as that to concurrency through dependent session types.</p>
+<p>We shall present two substructural calculi with dependent types: the first containing dependent Lambek types and the second dependent linear types. Technically, the former adheres to the usual assumption that types do not depend on substructural variables (in this case, the Lambek variables), which makes the technical development easier, while the latter allows type dependency on linear variables, which makes the development more challenging as well as more interesting in applications.</p>
+</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.29007/qrqp">DOI</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="new_licata_2018_fscd" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="new_licata_2018_fscd"><span class="helia-title">Call-by-name Gradual Type Theory</span>&nbsp;<a class="helia-slug" href="new_licata_2018_fscd.html">new_licata_2018_fscd</a><span class="helia-byline"><span class="helia-entry-link" data-entry="fscd">FSCD</span> · 2018</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="new_licata_2018_fscd" data-kind="reference">
+<div class="helia-abstract">We present gradual type theory, a logic and type theory for call-by-name gradual typing. We define the central constructions of gradual typing (the dynamic type, type casts and type error) in a novel way, by universal properties relative to new judgments for gradual type and term dynamism. These dynamism judgements build on prior work in blame calculi and on the “gradual guarantee” theorem of gradual typing. Combined with the ordinary extensionality (eta) principles that type theory provides, we show that most of the standard operational behavior of casts is uniquely determined by the gradual guarantee. This provides a semantic justification for the definitions of casts, and shows that non-standard definitions of casts must violate these principles. Our type theory is the internal language of a certain class of preorder categories called equipments. We give a general construction of an equipment interpreting gradual type theory from a 2-category representing non-gradual types and programs, which is a semantic analogue of the interpretation of gradual typing using contracts, and use it to build some concrete domain-theoretic models of gradual typing.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.4230/lipics.fscd.2018.24">DOI</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="weirich_etal_2017" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="weirich_etal_2017"><span class="helia-title">A Specification for Dependent Types in Haskell</span>&nbsp;<a class="helia-slug" href="weirich_etal_2017.html">weirich_etal_2017</a><span class="helia-byline"><span class="helia-entry-link" data-entry="icfp">ICFP</span> · 2017</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="weirich_etal_2017" data-kind="reference">
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="pdf-url"><a class="helia-link helia-external" href="http://dl.acm.org/ft_gateway.cfm?id=3110275&amp;type=pdf">PDF</a></span> · <span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/3110275">DOI</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/journals/pacmpl/WeirichVAE17">pldb</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="mcbride-2016-i" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="mcbride-2016-i"><span class="helia-title">I Got Plenty o’ Nuttin’</span>&nbsp;<a class="helia-slug" href="mcbride-2016-i.html">mcbride-2016-i</a><span class="helia-byline">A List of Successes That Can Change the World · 2016</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="mcbride-2016-i" data-kind="reference">
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-319-30936-1_12">DOI</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="moura-2015-elaboration" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="moura-2015-elaboration"><span class="helia-title">Elaboration in Dependent Type Theory</span>&nbsp;<a class="helia-slug" href="moura-2015-elaboration.html">moura-2015-elaboration</a><span class="helia-byline"><span class="helia-entry-link" data-entry="arxiv">arXiv</span> · 2015</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="moura-2015-elaboration" data-kind="reference">
+<div class="helia-abstract">To be usable in practice, interactive theorem provers need to provide convenient and efficient means of writing expressions, definitions, and proofs. This involves inferring information that is often left implicit in an ordinary mathematical text, and resolving ambiguities in mathematical expressions. We refer to the process of passing from a quasi-formal and partially-specified expression to a completely precise formal one as elaboration. We describe an elaboration algorithm for dependent type theory that has been implemented in the Lean theorem prover. Lean’s elaborator supports higher-order unification, type class inference, ad hoc overloading, insertion of coercions, the use of tactics, and the computational reduction of terms. The interactions between these components are subtle and complex, and the elaboration algorithm has been carefully designed to balance efficiency and usability. We describe the central design goals, and the means by which they are achieved.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/1505.04324">arXiv</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="altenkirch_indexed_2015" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="altenkirch_indexed_2015"><span class="helia-title">Indexed containers</span>&nbsp;<a class="helia-slug" href="altenkirch_indexed_2015.html">altenkirch_indexed_2015</a><span class="helia-byline"><span class="helia-entry-link" data-entry="jfp">JFP</span> · 2015</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="altenkirch_indexed_2015" data-kind="reference">
+<div class="helia-abstract">We show that the syntactically rich notion of strictly positive families can be reduced to a core type theory with a fixed number of type constructors exploiting the novel notion of indexed containers. As a result, we show indexed containers provide normal forms for strictly positive families in much the same way that containers provide normal forms for strictly positive types. Interestingly, this step from containers to indexed containers is achieved without having to extend the core type theory. Most of the construction presented here has been formalized using the Agda system.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="pdf-url"><a class="helia-link helia-external" href="https://www.cambridge.org/core/services/aop-cambridge-core/content/view/FB9C7DC88A65E7529D39554379D9765F/S095679681500009Xa.pdf/div-class-title-indexed-containers-div.pdf">PDF</a></span> · <span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1017/s095679681500009x">DOI</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/journals/jfp/AltenkirchGHMM15">pldb</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="krishnaswami_integrating_2015" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="krishnaswami_integrating_2015"><span class="helia-title">Integrating Linear and Dependent Types</span>&nbsp;<a class="helia-slug" href="krishnaswami_integrating_2015.html">krishnaswami_integrating_2015</a><span class="helia-byline"><span class="helia-entry-link" data-entry="popl">POPL</span> · 2015</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="krishnaswami_integrating_2015" data-kind="reference">
+<div class="helia-abstract">In this paper, we show how to integrate linear types with type dependency, by extending the linear/non-linear calculus of Benton to support type dependency.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="pdf-url"><a class="helia-link helia-external" href="https://dl.acm.org/doi/pdf/10.1145/2676726.2676969">PDF</a></span> · <span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/2676726.2676969">DOI</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/conf/popl/KrishnaswamiPB15">pldb</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="vakarSyntaxSemanticsLinear2015" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="vakarSyntaxSemanticsLinear2015"><span class="helia-title">Syntax and Semantics of Linear Dependent Types</span>&nbsp;<a class="helia-slug" href="vakarSyntaxSemanticsLinear2015.html">vakarSyntaxSemanticsLinear2015</a><span class="helia-byline">2015</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="vakarSyntaxSemanticsLinear2015" data-kind="reference">
+<div class="helia-abstract">A type theory is presented that combines (intuitionistic) linear types with type dependency, thus properly generalising both intuitionistic dependent type theory and full linear logic. A syntax and complete categorical semantics are developed, the latter in terms of (strict) indexed symmetric monoidal categories with comprehension. Various optional type formers are treated in a modular way. In particular, we will see that the historically much-debated multiplicative quantifiers and identity types arise naturally from categorical considerations. These new multiplicative connectives are further characterised by several identities relating them to the usual connectives from dependent type theory and linear logic. Finally, one important class of models, given by families with values in some symmetric monoidal category, is investigated in detail.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="url"><a class="helia-link helia-external" href="http://arxiv.org/abs/1405.0033">Web</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="atkey-2014-a" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="atkey-2014-a"><span class="helia-title">A relationally parametric model of dependent type theory</span>&nbsp;<a class="helia-slug" href="atkey-2014-a.html">atkey-2014-a</a><span class="helia-byline"><span class="helia-entry-link" data-entry="popl">POPL</span> · 2014</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="atkey-2014-a" data-kind="reference">
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="pdf-url"><a class="helia-link helia-external" href="http://libres.uncg.edu/ir/asu/f/Johann_Patricia_2014_A_Relationally_Parametric_Model_Of_Dependent_Type_Theory..pdf">PDF</a></span> · <span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/2535838.2535852">DOI</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/conf/popl/AtkeyGJ14">pldb</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="roux-2014-the" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="roux-2014-the"><span class="helia-title">The Structural Theory of Pure Type Systems</span>&nbsp;<a class="helia-slug" href="roux-2014-the.html">roux-2014-the</a><span class="helia-byline"><span class="helia-entry-link" data-entry="tlca">TLCA</span> · 2014</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="roux-2014-the" data-kind="reference">
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-319-08918-8_25">DOI</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="hottbook" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="hottbook"><span class="helia-title">Homotopy Type Theory: Univalent Foundations of Mathematics</span>&nbsp;<a class="helia-slug" href="hottbook.html">hottbook</a><span class="helia-byline"><span class="helia-entry-link" data-entry="arxiv">arXiv</span> · 2013</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="hottbook" data-kind="reference">
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="url"><a class="helia-link helia-external" href="https://homotopytypetheory.org/book">Web</a></span> · <span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/1308.0729">arXiv</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="altenkirch-2007-observational" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="altenkirch-2007-observational"><span class="helia-title">Observational equality, now!</span>&nbsp;<a class="helia-slug" href="altenkirch-2007-observational.html">altenkirch-2007-observational</a><span class="helia-byline"><span class="helia-entry-link" data-entry="plpv">PLPV</span> · 2007</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="altenkirch-2007-observational" data-kind="reference">
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/1292597.1292608">DOI</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="mcbride-2004-the" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="mcbride-2004-the"><span class="helia-title">The view from the left</span>&nbsp;<a class="helia-slug" href="mcbride-2004-the.html">mcbride-2004-the</a><span class="helia-byline"><span class="helia-entry-link" data-entry="jfp">JFP</span> · 2004</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="mcbride-2004-the" data-kind="reference">
+<div class="helia-abstract">Pattern matching has proved an extremely powerful and durable notion in functional programming. This paper contributes a new programming notation for type theory which elaborates the notion in various ways. First, as is by now quite well-known in the type theory community, definition by pattern matching becomes a more discriminating tool in the presence of dependent types, since it refines the explanation of types as well as values. This becomes all the more true in the presence of the rich class of datatypes known as inductive families (Dybjer, 1991). Secondly, as proposed by Peyton Jones (1997) for Haskell, and independently rediscovered by us, subsidiary case analyses on the results of intermediate computations, which commonly take place on the right-hand side of definitions by pattern matching, should rather be handled on the left. In simply-typed languages, this subsumes the trivial case of Boolean guards; in our setting it becomes yet more powerful. Thirdly, elementary pattern matching decompositions have a well-defined interface given by a dependent type; they correspond to the statement of an induction principle for the datatype. More general, user-definable decompositions may be defined which also have types of the same general form. Elementary pattern matching may therefore be recast in abstract form, with a semantics given by translation. Such abstract decompositions of data generalize Wadler’s (1987) notion of ‘view’. The programmer wishing to introduce a new view of a type <span class="helia-math helia-math-inline helia-mathml"><math><mtext>𝑇</mtext></math></span> , and exploit it directly in pattern matching, may do so via a standard programming idiom. The type theorist, looking through the Curry–Howard lens, may see this as proving a theorem , one which establishes the validity of a new induction principle for <span class="helia-math helia-math-inline helia-mathml"><math><mtext>𝑇</mtext></math></span> . We develop enough syntax and semantics to account for this high-level style of programming in dependent type theory. We close with the development of a typechecker for the simply-typed lambda calculus, which furnishes a view of raw terms as either being well-typed, or containing an error. The implementation of this view is ipso facto a proof that typechecking is decidable.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="pdf-url"><a class="helia-link helia-external" href="https://www.cambridge.org/core/services/aop-cambridge-core/content/view/F8A44CAC27CCA178AF69DD84BC585A2D/S0956796803004829a.pdf/div-class-title-the-view-from-the-left-div.pdf">PDF</a></span> · <span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1017/s0956796803004829">DOI</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/journals/jfp/McBrideM04">pldb</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="gambino_wellfounded_2004" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="gambino_wellfounded_2004"><span class="helia-title">Wellfounded Trees and Dependent Polynomial Functors</span>&nbsp;<a class="helia-slug" href="gambino_wellfounded_2004.html">gambino_wellfounded_2004</a><span class="helia-byline"><span class="helia-entry-link" data-entry="types">TYPES</span> · 2004</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="gambino_wellfounded_2004" data-kind="reference">
+<div class="helia-abstract">We set out to study the consequences of the assumption of types of wellfounded trees in dependent type theories. We do so by investigating the categorical notion of wellfounded tree introduced in [16]. Our main result shows that wellfounded trees allow us to define initial algebras for a wide class of endofunctors on locally cartesian closed categories.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-540-24849-1_14">DOI</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="mcbride-2002-elimination" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="mcbride-2002-elimination"><span class="helia-title">Elimination with a Motive</span>&nbsp;<a class="helia-slug" href="mcbride-2002-elimination.html">mcbride-2002-elimination</a><span class="helia-byline"><span class="helia-entry-link" data-entry="types">TYPES</span> · 2002</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="mcbride-2002-elimination" data-kind="reference">
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1007/3-540-45842-5_13">DOI</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="jacobs-1999" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="jacobs-1999"><span class="helia-title">Categorical Logic and Type Theory</span>&nbsp;<a class="helia-slug" href="jacobs-1999.html">jacobs-1999</a><span class="helia-byline">1999</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="jacobs-1999" data-kind="reference">
+<p>This book is an attempt to give a systematic presentation of both logic and type theory from a categorical perspective, using the unifying concept of fibred category. Its intended audience consists of logicians, type theorists, category theorists and (theoretical) computer scientists.</p>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="Hofmann_1997" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="Hofmann_1997"><span class="helia-title">Syntax and semantics of dependent types</span>&nbsp;<a class="helia-slug" href="Hofmann_1997.html">Hofmann_1997</a><span class="helia-byline">Semantics and Logics of Computation · 1997</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="Hofmann_1997" data-kind="reference">
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1017/cbo9780511526619.004">DOI</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="lambek_scott_1986" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="lambek_scott_1986"><span class="helia-title">Introduction to Higher-Order Categorical Logic</span>&nbsp;<a class="helia-slug" href="lambek_scott_1986.html">lambek_scott_1986</a><span class="helia-byline">1986</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="lambek_scott_1986" data-kind="reference">
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="url"><a class="helia-link helia-external" href="https://www.cambridge.org/core/books/introduction-to-higherorder-categorical-logic/5E1DFEF0403A598DE54CF072BB85A24E">Web</a></span></div>
+</div>
+</div>
+</details>
+</section>
+</div>
+</details>
+</section>
+</div>
+</article>
+<div class="helia-identity"><span class="helia-id">tag-type-theory</span> <span class="helia-kind">tag</span></div>
+</div>
+</body>
+</html>

@@ -1,0 +1,1 @@
+heliaSearchData("d/pugh-2025-when",{"id":"pugh-2025-when","title":"When is the partial map classifier a Sierpiński cone?","kind":"reference","tags":["denotational-semantics"],"authors":["Jon Sterling","Leoni Pugh"],"venue":["LICS","Symposium on Logic in Computer Science"],"date":null,"url":"pugh-2025-when.html","headings":[],"body":""});

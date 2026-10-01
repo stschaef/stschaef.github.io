@@ -1,0 +1,1 @@
+heliaSearchData("d/capucci-2024-a",{"id":"capucci-2024-a","title":"A Fibrational Theory of First Order Differential Structures","kind":"reference","tags":["category-theory","differentiable-programming"],"authors":["Fabio Zanasi","Geoffrey S. H. Cruttwell","Matteo Capucci","Neil Ghani"],"venue":["arXiv"],"date":null,"url":"capucci-2024-a.html","headings":[],"body":""});

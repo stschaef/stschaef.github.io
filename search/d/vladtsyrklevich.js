@@ -1,0 +1,1 @@
+heliaSearchData("d/vladtsyrklevich",{"id":"vladtsyrklevich","title":"Vlad Tsyrklevich","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"vladtsyrklevich.html","headings":[],"body":""});

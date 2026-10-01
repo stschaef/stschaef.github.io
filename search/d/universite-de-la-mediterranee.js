@@ -1,0 +1,1 @@
+heliaSearchData("d/universite-de-la-mediterranee",{"id":"universite-de-la-mediterranee","title":"Universite de la Méditerranée","kind":"institution","tags":[],"authors":[],"venue":[],"date":null,"url":"universite-de-la-mediterranee.html","headings":[],"body":""});

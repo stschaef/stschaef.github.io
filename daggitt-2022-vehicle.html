@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>Vehicle: Interfacing Neural Network Verifiers with Interactive Theorem Provers</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Ctext y=%22.9em%22 font-size=%2290%22%3E%F0%9F%8C%BB%3C/text%3E%3C/svg%3E">
+<meta name="generator" content="helia">
+<link rel="alternate" type="application/atom+xml" title="Steven Schaefer" href="feed.xml">
+<link rel="alternate" type="application/feed+json" title="Steven Schaefer" href="feed.json">
+<script src="helia/theme-version.js"></script>
+<script src="theme/folio-early.js"></script>
+<link rel="stylesheet" href="helia/theme.css">
+<link rel="stylesheet" href="helia/highlight.css">
+<link rel="stylesheet" href="helia/search.css">
+<link rel="stylesheet" href="theme/katex.css">
+<link rel="stylesheet" href="theme/recipe.css">
+<link rel="stylesheet" href="theme/site.css">
+<link rel="stylesheet" href="theme/folio.css">
+<script defer src="helia/runtime.js"></script>
+<script defer src="helia/search.js"></script>
+<script defer src="theme/glyphcraft.js"></script>
+<script defer src="theme/glyphart.js"></script>
+<script defer src="theme/glyphgen.js"></script>
+<script defer src="theme/ornament.js"></script>
+<script defer src="theme/folio.js"></script>
+<script defer src="theme/portrait.js"></script>
+<script type="application/json" id="helia-widgets">{"helia-cite-formats":"widgets/helia-cite-formats-a3294ac7.js"}</script>
+<link rel="modulepreload" href="widgets/helia-cite-formats-a3294ac7.js">
+<script type="module" src="widgets/runtime.js"></script>
+</head>
+<body>
+<nav class="helia-topbar"><a class="helia-home" href="home.html">Steven Schaefer</a><ul class="helia-nav-links"><li><a href="stevenschaefer.html">About Me</a></li><li><a href="research.html">Research</a></li><li><a href="new.html">New</a></li></ul><button type="button" class="helia-search-button" aria-label="Search (/ or Ctrl+K)" aria-haspopup="dialog"><span class="helia-search-icon">⌕</span><span class="helia-search-label">Search</span><kbd class="helia-search-key">/</kbd></button></nav>
+<div class="helia-page" data-kind="reference">
+<article class="helia-article">
+<header class="helia-header" data-entry="daggitt-2022-vehicle" data-kind="reference">
+<h2 class="helia-heading"><span class="helia-taxon">Reference.</span> Vehicle: Interfacing Neural Network Verifiers with Interactive Theorem Provers</h2>
+<div class="helia-meta"><span class="helia-author"><a class="helia-entry-link" href="matthewdaggitt.html" data-entry="matthewdaggitt">Matthew Daggitt</a>, <a class="helia-entry-link" href="wenkokke.html" data-entry="wenkokke">Wen Kokke</a>, <a class="helia-entry-link" href="robertatkey.html" data-entry="robertatkey">Robert Atkey</a>, <a class="helia-entry-link" href="lucaarnaboldi.html" data-entry="lucaarnaboldi">Luca Arnaboldi</a>, <a class="helia-entry-link" href="ekaterinakomendantskya.html" data-entry="ekaterinakomendantskya">Ekaterina Komendantskya</a></span> · <span class="helia-byline"><a class="helia-entry-link" href="arxiv.html" data-entry="arxiv">arXiv</a> · 2022</span> · <span class="helia-tags"><span class="helia-tag" data-tag="machine-learning-verification"><a class="helia-entry-link" href="tag-machine-learning-verification.html" data-entry="tag-machine-learning-verification">machine-learning-verification</a></span></span> · <span class="helia-entry-links"><span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/2202.05207">arXiv</a></span></span></div>
+</header>
+<div class="helia-body">
+<div class="helia-abstract">Verification of neural networks is currently a hot topic in automated theorem proving. Progress has been rapid and there are now a wide range of tools available that can verify properties of networks with hundreds of thousands of nodes. In theory this opens the door to the verification of larger control systems that make use of neural network components. However, although work has managed to incorporate the results of these verifiers to prove larger properties of individual systems, there is currently no general methodology for bridging the gap between verifiers and interactive theorem provers (ITPs). In this paper we present Vehicle, our solution to this problem. Vehicle is equipped with an expressive domain specific language for stating neural network specifications which can be compiled to both verifiers and ITPs. It overcomes previous issues with maintainability and scalability in similar ITP formalisations by using a standard ONNX file as the single canonical representation of the network. We demonstrate its utility by using it to connect the neural network verifier Marabou to Agda and then formally verifying that a car steered by a neural network never leaves the road, even in the face of an unpredictable cross wind and imperfect sensors. The network has over 20,000 nodes, and therefore this proof represents an improvement of 3 orders of magnitude over prior proofs about neural network enhanced systems in ITPs.</div>
+</div>
+<div class="helia-cite helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><h3 class="helia-heading">Cite</h3>
+</summary>
+<div class="helia-group-body">
+<div class="helia-widget" data-widget="helia-cite-formats" data-props="{&quot;key&quot;:&quot;daggitt-2022-vehicle&quot;,&quot;bibtex&quot;:&quot;@misc{daggitt-2022-vehicle,\n  author = {Matthew Daggitt and Wen Kokke and Robert Atkey and Luca Arnaboldi and Ekaterina Komendantskya},\n  title = {Vehicle: Interfacing Neural Network Verifiers with Interactive Theorem Provers},\n  year = {2022},\n  month = {2},\n  eprint = {2202.05207},\n  archiveprefix = {arXiv}\n}&quot;,&quot;bib-file&quot;:&quot;daggitt-2022-vehicle.bib&quot;,&quot;hayagriva&quot;:&quot;daggitt-2022-vehicle:\n  type: misc\n  title: &#39;Vehicle: Interfacing Neural Network Verifiers with Interactive Theorem Provers&#39;\n  author:\n  - Daggitt, Matthew\n  - Kokke, Wen\n  - Atkey, Robert\n  - Arnaboldi, Luca\n  - Komendantskya, Ekaterina\n  date: 2022-02\n  serial-number:\n    arxiv: &#39;2202.05207&#39;\n&quot;,&quot;yml-file&quot;:&quot;daggitt-2022-vehicle.yml&quot;}"><div class="helia-cite-key" data-copy="@daggitt-2022-vehicle" data-copy-label="citation key"><span class="helia-bib-key">Cite as</span> <code class="helia-raw-inline">@daggitt-2022-vehicle</code> (helia, typst) · <code class="helia-raw-inline">\cite{daggitt-2022-vehicle}</code> (LaTeX)</div>
+<div class="helia-cite-format helia-collapsible" data-format="bibtex" data-copy="true" data-copy-label="BibTeX">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">BibTeX</span></summary>
+<div class="helia-group-body">
+<details class="helia-code" open><summary class="helia-code-summary"><span class="helia-code-lang">bibtex</span> · <span class="helia-code-lines">8 lines</span></summary><pre class="helia-raw"><code class="language-bibtex"><span class="hl-text hl-bibtex"><span class="hl-meta hl-entry hl-braces hl-bibtex"><span class="hl-keyword hl-other hl-entry-type hl-bibtex"><span class="hl-punctuation hl-definition hl-keyword hl-bibtex">@</span>misc</span><span class="hl-punctuation hl-section hl-entry hl-begin hl-bibtex">{</span><span class="hl-entity hl-name hl-type hl-entry-key hl-bibtex">daggitt-2022-vehicle</span>,
+  <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">author</span> <span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span> <span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>Matthew Daggitt and Wen Kokke and Robert Atkey and Luca Arnaboldi and Ekaterina Komendantskya<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>,
+  <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">title</span> <span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span> <span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>Vehicle: Interfacing Neural Network Verifiers with Interactive Theorem Provers<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>,
+  <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">year</span> <span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span> <span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>2022<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>,
+  <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">month</span> <span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span> <span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>2<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>,
+  <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">eprint</span> <span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span> <span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>2202.05207<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>,
+  <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">archiveprefix</span> <span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span> <span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>arXiv<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span>
+</span><span class="hl-punctuation hl-section hl-entry hl-end hl-bibtex">}</span></span></span></code></pre></details>
+</div>
+</details>
+</div>
+<div class="helia-cite-format helia-collapsible" data-format="hayagriva" data-copy="true" data-copy-label="hayagriva YAML">
+<details>
+<summary class="helia-group-summary"><span class="helia-group-title">hayagriva YAML (typst)</span></summary>
+<div class="helia-group-body">
+<details class="helia-code" open><summary class="helia-code-summary"><span class="helia-code-lang">yaml</span> · <span class="helia-code-lines">12 lines</span></summary><pre class="helia-raw"><code class="language-yaml"><span class="hl-source hl-yaml"><span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">daggitt-2022-vehicle</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">type</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">misc</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">title</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-quoted hl-single hl-yaml"><span class="hl-punctuation hl-definition hl-string hl-begin hl-yaml">&#39;</span>Vehicle: Interfacing Neural Network Verifiers with Interactive Theorem Provers<span class="hl-punctuation hl-definition hl-string hl-end hl-yaml">&#39;</span></span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">author</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Daggitt, Matthew</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Kokke, Wen</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Atkey, Robert</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Arnaboldi, Luca</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Komendantskya, Ekaterina</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">date</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">2022-02</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">serial-number</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">arxiv</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-quoted hl-single hl-yaml"><span class="hl-punctuation hl-definition hl-string hl-begin hl-yaml">&#39;</span>2202.05207<span class="hl-punctuation hl-definition hl-string hl-end hl-yaml">&#39;</span></span>
+</span></code></pre></details>
+</div>
+</details>
+</div>
+<div class="helia-cite-files">Download: <a class="helia-link" href="daggitt-2022-vehicle.bib">daggitt-2022-vehicle.bib</a> · <a class="helia-link" href="daggitt-2022-vehicle.yml">daggitt-2022-vehicle.yml</a></div>
+</div>
+</div>
+</details>
+</div>
+<div class="helia-reference-cites helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">Cites 28 works (1 here)</span></summary>
+<div class="helia-group-body">
+<div class="helia-reference-cites-here helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">With notes (1)</span></summary>
+<div class="helia-group-body">
+<section class="helia-transclusion" data-entry="mcbrideEverybodysGotToBeSomewhere2018" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="mcbrideEverybodysGotToBeSomewhere2018"><span class="helia-title">Everybody’s Got To Be Somewhere</span>&nbsp;<a class="helia-slug" href="mcbrideEverybodysGotToBeSomewhere2018.html">mcbrideEverybodysGotToBeSomewhere2018</a><span class="helia-byline"><span class="helia-entry-link" data-entry="msfp">MSFP</span> · 2018</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="mcbrideEverybodysGotToBeSomewhere2018" data-kind="reference">
+<div class="helia-abstract">The key to any nameless representation of syntax is how it indicates the variables we choose to use and thus, implicitly, those we discard. Standard de Bruijn representations delay discarding maximally till the leaves of terms where one is chosen from the variables in scope at the expense of the rest. Consequently, introducing new but unused variables requires term traversal. This paper introduces a nameless ‘co-de-Bruijn’ representation which makes the opposite canonical choice, delaying discarding minimally, as near as possible to the root. It is literate Agda: dependent types make it a practical joy to express and be driven by strong intrinsic invariants which ensure that scope is aggressively whittled down to just the support of each subterm, in which every remaining variable occurs somewhere. The construction is generic, delivering a universe of syntaxes with higher-order metavariables, for which the appropriate notion of substitution is hereditary. The implementation of simultaneous substitution exploits tight scope control to avoid busywork and shift terms without traversal. Surprisingly, it is also intrinsically terminating, by structural recursion alone.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.4204/eptcs.275.6">DOI</a></span></div>
+</div>
+</div>
+</details>
+</section>
+</div>
+</details>
+</div>
+<div class="helia-reference-cites-away helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">External (27)</span></summary>
+<div class="helia-group-body">
+<ul>
+<li>Vehicle (software repository) (2022)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-030-81685-8_6">DNNV: A Framework for Deep Neural Network Verification</a> (2021)</li>
+<li>Property-driven Training: All You (N)Ever Wanted to Know About (2021)</li>
+<li>VNNLib format (website) (2021)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/s11704-020-0029-6">On the use of formal methods to model and verify neuronal archetypes</a> (2020)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/s11263-021-01453-z">Knowledge Distillation: A Survey</a> (2020)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-030-88806-0_9">Exploiting Verified Neural Networks via Floating Point Numerical Error</a> (2020)</li>
+<li>Socrates: Towards a uniﬁed platform for neural network analysis (2020)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3365365.3382216">Case study: verifying the safety of an autonomous racing car with a neural network controller</a> (2019)</li>
+<li><a class="helia-link helia-external" href="https://arxiv.org/abs/1908.05164">Unconstrained Monotonic Neural Networks</a> (2019)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1609/aaai.v33i01.33012662">Certifying the True Error: Machine Learning in Coq with Verified Generalization Guarantees</a> (2019)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-030-25540-4_26">The Marabou Framework for Verification and Analysis of Deep Neural Networks</a> (2019)</li>
+<li>DL2: Training and Querying Neural Networks with Logic (2019)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3290354">An abstract domain for certifying neural networks</a> (2019)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3302504.3311806">Verisig: verifying safety properties of hybrid systems with neural network controllers</a> (2018)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1109/tnnls.2018.2808470">Output Reachable Set Estimation and Verification for Multilayer Neural Networks</a> (2017)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-319-63390-9_7">SMTCoq: A Plug-In for Integrating SMT Solvers into Coq</a> (2017)</li>
+<li><a class="helia-link helia-external" href="https://arxiv.org/abs/1706.06083">Towards Deep Learning Models Resistant to Adversarial Attacks</a> (2017)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-319-68167-2_19">Formal Verification of Piece-Wise Linear Feed-Forward Neural Networks</a> (2017)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-319-63387-9_5">Reluplex: An Efficient SMT Solver for Verifying Deep Neural Networks</a> (2017)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-319-21401-6_36">KeYmaera X: An Axiomatic Tactical Theorem Prover for Hybrid Systems</a> (2015)</li>
+<li><a class="helia-link helia-external" href="https://arxiv.org/abs/1312.6199">Intriguing properties of neural networks</a> (2013)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/s10817-013-9278-5">Extending Sledgehammer with SMT solvers (JAR journal version)</a> (2013)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.3233/fi-2010-304">A Tutorial Implementation of a Dependently Typed Lambda Calculus</a> (2010)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/1481861.1481862">Dependently typed programming in Agda</a> (2009)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-1-4612-4476-9_7">The use of a formal simulator to verify a simple real time control program</a> (1990)</li>
+<li>Open Neural Network Exchange format. Accessed on 30</li>
+</ul>
+</div>
+</details>
+</div>
+</div>
+</details>
+</div>
+</article>
+<div class="helia-identity"><span class="helia-id">daggitt-2022-vehicle</span> <span class="helia-kind">reference</span> <span class="helia-path">entries/refs/daggitt-2022-vehicle/daggitt-2022-vehicle.hel</span></div>
+</div>
+</body>
+</html>

@@ -1,0 +1,1 @@
+heliaSearchData("d/university-of-southern-mississippi",{"id":"university-of-southern-mississippi","title":"University of Southern Mississippi","kind":"institution","tags":[],"authors":[],"venue":[],"date":null,"url":"university-of-southern-mississippi.html","headings":[],"body":""});

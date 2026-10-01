@@ -1,0 +1,1 @@
+heliaSearchData("d/tag-outcome-logic",{"id":"tag-outcome-logic","title":"outcome-logic","kind":"tag","tags":[],"authors":[],"venue":[],"date":null,"url":"tag-outcome-logic.html","headings":[],"body":""});

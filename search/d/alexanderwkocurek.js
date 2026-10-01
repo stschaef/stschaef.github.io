@@ -1,0 +1,1 @@
+heliaSearchData("d/alexanderwkocurek",{"id":"alexanderwkocurek","title":"Alexander W. Kocurek","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"alexanderwkocurek.html","headings":[],"body":""});

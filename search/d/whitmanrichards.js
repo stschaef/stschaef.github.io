@@ -1,0 +1,1 @@
+heliaSearchData("d/whitmanrichards",{"id":"whitmanrichards","title":"Whitman Richards","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"whitmanrichards.html","headings":[],"body":""});

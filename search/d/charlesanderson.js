@@ -1,0 +1,1 @@
+heliaSearchData("d/charlesanderson",{"id":"charlesanderson","title":"Charles Anderson","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"charlesanderson.html","headings":[],"body":""});

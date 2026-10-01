@@ -1,0 +1,1 @@
+heliaSearchData("d/technion-rappaport-faculty-of-medicine",{"id":"technion-rappaport-faculty-of-medicine","title":"Technion, Rappaport Faculty of Medicine","kind":"institution","tags":[],"authors":[],"venue":[],"date":null,"url":"technion-rappaport-faculty-of-medicine.html","headings":[],"body":""});

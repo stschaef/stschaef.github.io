@@ -1,0 +1,1 @@
+heliaSearchData("d/zhang-2021-a",{"id":"zhang-2021-a","title":"A simpler encoding of indexed types","kind":"reference","tags":["type-theory"],"authors":["Tesla Zhang"],"venue":["TyDe","ACM SIGPLAN International Workshop on Type-Driven Development"],"date":null,"url":"zhang-2021-a.html","headings":[],"body":""});

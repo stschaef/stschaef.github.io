@@ -1,0 +1,1 @@
+heliaSearchData("d/kammar-2013-handlers",{"id":"kammar-2013-handlers","title":"Handlers in action","kind":"reference","tags":["effects"],"authors":["Nicolas Oury","Ohad Kammar","Sam Lindley"],"venue":["ICFP","International Conference on Functional Programming"],"date":null,"url":"kammar-2013-handlers.html","headings":[],"body":""});

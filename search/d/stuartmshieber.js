@@ -1,0 +1,1 @@
+heliaSearchData("d/stuartmshieber",{"id":"stuartmshieber","title":"Stuart M. Shieber","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"stuartmshieber.html","headings":[],"body":""});

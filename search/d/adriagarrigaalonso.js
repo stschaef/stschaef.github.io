@@ -1,0 +1,1 @@
+heliaSearchData("d/adriagarrigaalonso",{"id":"adriagarrigaalonso","title":"Adrià Garriga-Alonso","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"adriagarrigaalonso.html","headings":[],"body":""});

@@ -1,0 +1,1 @@
+heliaSearchData("d/yoramjoramhirschfeld",{"id":"yoramjoramhirschfeld","title":"Yoram (Joram) Hirschfeld","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"yoramjoramhirschfeld.html","headings":[],"body":""});

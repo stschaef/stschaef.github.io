@@ -1,0 +1,1 @@
+heliaSearchData("d/swarthmore-college",{"id":"swarthmore-college","title":"Swarthmore College","kind":"institution","tags":[],"authors":[],"venue":[],"date":null,"url":"swarthmore-college.html","headings":[],"body":""});

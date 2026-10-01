@@ -1,0 +1,1 @@
+heliaSearchData("d/goethe-university-frankfurt",{"id":"goethe-university-frankfurt","title":"Goethe University Frankfurt","kind":"institution","tags":[],"authors":[],"venue":[],"date":null,"url":"goethe-university-frankfurt.html","headings":[],"body":""});

@@ -1,0 +1,1 @@
+heliaSearchData("d/joegibbspolitz",{"id":"joegibbspolitz","title":"Joe Gibbs Politz","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"joegibbspolitz.html","headings":[],"body":""});

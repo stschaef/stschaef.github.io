@@ -1,0 +1,1 @@
+heliaSearchData("d/aberle-2024-parametricity",{"id":"aberle-2024-parametricity","title":"Parametricity via Cohesion","kind":"reference","tags":["modal-type-theory","parametricity"],"authors":["CB Aberle"],"venue":["ENTCS","Electronic Notes in Theoretical Computer Science (now ENTICS)"],"date":null,"url":"aberle-2024-parametricity.html","headings":[],"body":""});

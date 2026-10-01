@@ -1,0 +1,1 @@
+heliaSearchData("d/katherinemcollins",{"id":"katherinemcollins","title":"Katherine M. Collins","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"katherinemcollins.html","headings":[],"body":""});

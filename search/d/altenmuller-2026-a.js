@@ -1,0 +1,1 @@
+heliaSearchData("d/altenmuller-2026-a",{"id":"altenmuller-2026-a","title":"A Data Type of Intrinsically Plane Graphs in Agda","kind":"reference","tags":["string-diagrams"],"authors":["Conor McBride","Malin Altenmüller"],"venue":["TYPES","Types for Proofs and Programs"],"date":null,"url":"altenmuller-2026-a.html","headings":[],"body":""});

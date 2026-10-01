@@ -1,0 +1,1 @@
+heliaSearchData("d/yang-2022-structured",{"id":"yang-2022-structured","title":"Structured Handling of Scoped Effects","kind":"reference","tags":["effects"],"authors":["Birthe van den Berg","Marco Paviotti","Nicolas Wu","Tom Schrijvers","Zhixuan Yang"],"venue":["ESOP","European Symposium on Programming"],"date":null,"url":"yang-2022-structured.html","headings":[],"body":""});

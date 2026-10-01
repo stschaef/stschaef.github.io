@@ -1,0 +1,1 @@
+heliaSearchData("d/hakonrobbestadgylterud",{"id":"hakonrobbestadgylterud","title":"Håkon Robbestad Gylterud","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"hakonrobbestadgylterud.html","headings":[],"body":""});

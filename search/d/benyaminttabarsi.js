@@ -1,0 +1,1 @@
+heliaSearchData("d/benyaminttabarsi",{"id":"benyaminttabarsi","title":"Benyamin T. Tabarsi","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"benyaminttabarsi.html","headings":[],"body":""});

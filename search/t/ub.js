@@ -1,1 +1,1 @@
-heliaSearchData("t/ub",{"uberoi":[607,128],"ubiquituous":[210,1]});
+heliaSearchData("t/ub",{"uber":[3849,160,1,160,1,160,1,160],"uberoi":[2487,128],"ubiquituous":[827,1]});

@@ -1,0 +1,1 @@
+heliaSearchData("d/chen-2023-a",{"id":"chen-2023-a","title":"A Logical Framework with Higher-Order Rational (Circular) Terms","kind":"reference","tags":["logical-frameworks"],"authors":["Frank Pfenning","Zhibo Chen"],"venue":["FoSSaCS","Foundations of Software Science and Computation Structures"],"date":null,"url":"chen-2023-a.html","headings":[],"body":""});

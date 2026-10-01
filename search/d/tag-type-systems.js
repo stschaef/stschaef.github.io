@@ -1,0 +1,1 @@
+heliaSearchData("d/tag-type-systems",{"id":"tag-type-systems","title":"type-systems","kind":"tag","tags":[],"authors":[],"venue":[],"date":null,"url":"tag-type-systems.html","headings":[],"body":""});

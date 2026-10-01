@@ -1,0 +1,1 @@
+heliaSearchData("d/interdisciplinary-transformation-university-austria",{"id":"interdisciplinary-transformation-university-austria","title":"Interdisciplinary Transformation University Austria","kind":"institution","tags":[],"authors":[],"venue":[],"date":null,"url":"interdisciplinary-transformation-university-austria.html","headings":[],"body":""});

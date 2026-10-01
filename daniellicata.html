@@ -7,6 +7,8 @@
 <title>Daniel R. Licata</title>
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Ctext y=%22.9em%22 font-size=%2290%22%3E%F0%9F%8C%BB%3C/text%3E%3C/svg%3E">
 <meta name="generator" content="helia">
+<link rel="alternate" type="application/atom+xml" title="Steven Schaefer" href="feed.xml">
+<link rel="alternate" type="application/feed+json" title="Steven Schaefer" href="feed.json">
 <script src="helia/theme-version.js"></script>
 <script src="theme/folio-early.js"></script>
 <link rel="stylesheet" href="helia/theme.css">
@@ -55,7 +57,7 @@
 <p>We present a gradually typed language, GrEff, with effects and handlers that supports migration from unchecked to checked effect typing. This serves as a simple model of the integration of an effect typing discipline with an existing effectful typed language that does not track fine-grained effect information. Our language supports a simple module system to model the programming model of gradual migration from unchecked to checked effect typing in the style of Typed Racket.</p>
 <p>The surface language GrEff is given semantics by elaboration to a core language Core GrEff. We equip Core GrEff with an inequational theory for reasoning about the semantic error ordering and desired program equivalences for programming with effects and handlers. We derive an operational semantics for the language from the equations provable in the theory. We then show that the theory is sound by constructing an operational logical relations model to prove the graduality theorem. This extends prior work on embedding-projection pair models of gradual typing to handle effect typing and subtyping.</p>
 </div>
-<div class="helia-entry-links"><span class="helia-entry-link" data-field="url"><a class="helia-link helia-external" href="https://maxsnew.com/docs/greff-extended.pdf">Web</a></span></div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="pdf-url"><a class="helia-link helia-external" href="https://dl.acm.org/doi/pdf/10.1145/3622860">PDF</a></span> · <span class="helia-entry-link" data-field="url"><a class="helia-link helia-external" href="https://maxsnew.com/docs/greff-extended.pdf">Web</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/journals/pacmpl/NewGL23">pldb</a></span></div>
 </div>
 </div>
 </details>
@@ -71,13 +73,24 @@
 </div>
 </details>
 </section>
+<section class="helia-transclusion" data-entry="angiuli-2021-syntax" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="angiuli-2021-syntax"><span class="helia-title">Syntax and models of Cartesian cubical type theory</span>&nbsp;<a class="helia-slug" href="angiuli-2021-syntax.html">angiuli-2021-syntax</a><span class="helia-byline"><span class="helia-entry-link" data-entry="mscs">MSCS</span> · 2021</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="angiuli-2021-syntax" data-kind="reference">
+<div class="helia-abstract">We present a cubical type theory based on the Cartesian cube category (faces, degeneracies, symmetries, diagonals, but no connections or reversal) with univalent universes, each containing Π, Σ, path, identity, natural number, boolean, suspension, and glue (equivalence extension) types. The type theory includes a syntactic description of a uniform Kan operation, along with judgmental equality rules defining the Kan operation on each type. The Kan operation uses both a different set of generating trivial cofibrations and a different set of generating cofibrations than the Cohen, Coquand, Huber, and Mörtberg (CCHM) model. Next, we describe a constructive model of this type theory in Cartesian cubical sets. We give a mechanized proof, using Agda as the internal language of cubical sets in the style introduced by Orton and Pitts, that glue, Π, Σ, path, identity, boolean, natural number, suspension types, and the universe itself are Kan in this model, and that the universe is univalent. An advantage of this formal approach is that our construction can also be interpreted in a range of other models, including cubical sets on the connections cube category and the De Morgan cube category, as used in the CCHM model, and bicubical sets, as used in directed type theory.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1017/s0960129521000347">DOI</a></span></div>
+</div>
+</div>
+</details>
+</section>
 <section class="helia-transclusion" data-entry="new_licata_ahmed_2021" data-depth="1">
 <details>
 <summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="new_licata_ahmed_2021"><span class="helia-title">Gradual Type Theory</span>&nbsp;<a class="helia-slug" href="new_licata_ahmed_2021.html">new_licata_ahmed_2021</a><span class="helia-byline"><span class="helia-entry-link" data-entry="jfp">JFP</span> · 2021</span></h2></summary>
 <div class="helia-transclusion-body">
 <div class="helia-reference" data-entry="new_licata_ahmed_2021" data-kind="reference">
 <div class="helia-abstract">Gradually typed languages are designed to support both dynamically typed and statically typed programming styles while preserving the benefits of each. Sound gradually typed languages dynamically check types at runtime at the boundary between statically typed and dynamically typed modules. However, there is much disagreement in the gradual typing literature over how to enforce complex types such as tuples, lists, functions and objects. In this paper, we propose a new perspective on the design of runtime gradual type enforcement: runtime type casts exist precisely to ensure the correctness of certain type-based refactorings and optimizations. For instance, for simple types, a language designer might desire that beta-eta equality is valid. We show that this perspective is useful by demonstrating that a cast semantics can be derived from beta-eta equality. We do this by providing an axiomatic account program equivalence in a gradual cast calculus in a logic we call gradual type theory (GTT). Based on Levy’s call-by-push-value, GTT allows us to axiomatize both call-by-value and call-by-name gradual languages. We then show that we can derive the behavior of casts for simple types from the corresponding eta equality principle and the assumption that the language satisfies a property called graduality, also known as the dynamic gradual guarantee. Since we can derive the semantics from the assumption of eta equality, we also receive a useful contrapositive: any observably different cast semantics that satisfies graduality must violate the eta equality. We show the consistency and applicability of our axiomatic theory by proving that a contract-based implementation using the lazy cast semantics gives a logical relations model of our type theory, where equivalence in GTT implies contextual equivalence of the programs. Since GTT also axiomatizes the dynamic gradual guarantee, our model also establishes this central theorem of gradual typing. The model is parameterized by the implementation of the dynamic types, and so gives a family of implementations that validate type-based optimization and the gradual guarantee.</div>
-<div class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1017/s0956796821000125">DOI</a></span></div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="pdf-url"><a class="helia-link helia-external" href="https://www.cambridge.org/core/services/aop-cambridge-core/content/view/2D5DC0E87301B1724C42B7E31F90DD6B/S0956796821000125a.pdf/div-class-title-gradual-type-theory-div.pdf">PDF</a></span> · <span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1017/s0956796821000125">DOI</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/journals/jfp/NewLA21">pldb</a></span></div>
 </div>
 </div>
 </details>
@@ -102,7 +115,7 @@
 <p>Gradually typed languages are designed to support both dynamically typed and statically typed programming styles while preserving the benefits of each. While existing gradual type soundness theorems for these languages aim to show that type-based reasoning is preserved when moving from the fully static setting to a gradual one, these theorems do not imply that correctness of type-based refactorings and optimizations is preserved. Establishing correctness of program transformations is technically difficult, because it requires reasoning about program equivalence, and is often neglected in the metatheory of gradual languages.</p>
 <p>In this paper, we propose an axiomatic account of program equivalence in a gradual cast calculus, which we formalize in a logic we call gradual type theory (GTT). Based on Levy’s call-by-push-value, GTT gives an axiomatic account of both call-by-value and call-by-name gradual languages. Based on our axiomatic account we prove many theorems that justify optimizations and refactorings in gradually typed languages. For example, uniqueness principles for gradual type connectives show that if the βη laws hold for a connective, then casts between that connective must be equivalent to the so-called “lazy” cast semantics. Contrapositively, this shows that “eager” cast semantics violates the extensionality of function types. As another example, we show that gradual upcasts are pure functions and, dually, gradual downcasts are strict functions. We show the consistency and applicability of our axiomatic theory by proving that a contract-based implementation using the lazy cast semantics gives a logical relations model of our type theory, where equivalence in GTT implies contextual equivalence of the programs. Since GTT also axiomatizes the dynamic gradual guarantee, our model also establishes this central theorem of gradual typing. The model is parametrized by the implementation of the dynamic types, and so gives a family of implementations that validate type-based optimization and the gradual guarantee.</p>
 </div>
-<div class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/3290328">DOI</a></span></div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="pdf-url"><a class="helia-link helia-external" href="https://dl.acm.org/doi/pdf/10.1145/3290328">PDF</a></span> · <span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/3290328">DOI</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/journals/pacmpl/NewLA19">pldb</a></span></div>
 </div>
 </div>
 </details>
@@ -114,6 +127,37 @@
 <div class="helia-reference" data-entry="new_licata_2018_fscd" data-kind="reference">
 <div class="helia-abstract">We present gradual type theory, a logic and type theory for call-by-name gradual typing. We define the central constructions of gradual typing (the dynamic type, type casts and type error) in a novel way, by universal properties relative to new judgments for gradual type and term dynamism. These dynamism judgements build on prior work in blame calculi and on the “gradual guarantee” theorem of gradual typing. Combined with the ordinary extensionality (eta) principles that type theory provides, we show that most of the standard operational behavior of casts is uniquely determined by the gradual guarantee. This provides a semantic justification for the definitions of casts, and shows that non-standard definitions of casts must violate these principles. Our type theory is the internal language of a certain class of preorder categories called equipments. We give a general construction of an equipment interpreting gradual type theory from a 2-category representing non-gradual types and programs, which is a semantic analogue of the interpretation of gradual typing using contracts, and use it to build some concrete domain-theoretic models of gradual typing.</div>
 <div class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.4230/lipics.fscd.2018.24">DOI</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="angiuli-2016-homotopical" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="angiuli-2016-homotopical"><span class="helia-title">Homotopical patch theory</span>&nbsp;<a class="helia-slug" href="angiuli-2016-homotopical.html">angiuli-2016-homotopical</a><span class="helia-byline"><span class="helia-entry-link" data-entry="jfp">JFP</span> · 2016</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="angiuli-2016-homotopical" data-kind="reference">
+<div class="helia-abstract">Homotopy type theory is an extension of Martin-Löf type theory, based on a correspondence with homotopy theory and higher category theory. In homotopy type theory, the propositional equality type is proof-relevant, and corresponds to paths in a space. This allows for a new class of datatypes, called higher inductive types, which are specified by constructors not only for points but also for paths. In this paper, we consider a programming application of higher inductive types. Version control systems such as Darcs are based on the notion of patches—syntactic representations of edits to a repository. We show how patch theory can be developed in homotopy type theory. Our formulation separates formal theories of patches from their interpretation as edits to repositories. A patch theory is presented as a higher inductive type. Models of a patch theory are given by maps out of that type, which, being functors, automatically preserve the structure of patches. Several standard tools of homotopy theory come into play, demonstrating the use of these methods in a practical programming context.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="pdf-url"><a class="helia-link helia-external" href="https://www.cambridge.org/core/services/aop-cambridge-core/content/view/42AD8BB8A91688BCAC16FD4D6A2C3FE7/S0956796816000198a.pdf/div-class-title-homotopical-patch-theory-a-href-afn1-ref-type-fn-a-div.pdf">PDF</a></span> · <span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1017/s0956796816000198">DOI</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/journals/jfp/AngiuliMLH16">pldb</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="licata-2013-calculating" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="licata-2013-calculating"><span class="helia-title">Calculating the Fundamental Group of the Circle in Homotopy Type Theory</span>&nbsp;<a class="helia-slug" href="licata-2013-calculating.html">licata-2013-calculating</a><span class="helia-byline"><span class="helia-entry-link" data-entry="lics">LICS</span> · 2013</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="licata-2013-calculating" data-kind="reference">
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1109/lics.2013.28">DOI</a></span> · <span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/1301.3443">arXiv</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="licata-2008-focusing" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="licata-2008-focusing"><span class="helia-title">Focusing on Binding and Computation</span>&nbsp;<a class="helia-slug" href="licata-2008-focusing.html">licata-2008-focusing</a><span class="helia-byline"><span class="helia-entry-link" data-entry="lics">LICS</span> · 2008</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="licata-2008-focusing" data-kind="reference">
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1109/lics.2008.48">DOI</a></span></div>
 </div>
 </div>
 </details>

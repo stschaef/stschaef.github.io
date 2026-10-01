@@ -1,0 +1,1 @@
+heliaSearchData("d/hinze-2022-super",{"id":"hinze-2022-super","title":"Super-naturals","kind":"reference","tags":[],"authors":["Colin Runciman","Ralf Hinze"],"venue":["JFP","Journal of Functional Programming"],"date":null,"url":"hinze-2022-super.html","headings":[],"body":""});

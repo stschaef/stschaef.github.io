@@ -1,0 +1,1 @@
+heliaSearchData("d/tag-program-calculation",{"id":"tag-program-calculation","title":"program-calculation","kind":"tag","tags":[],"authors":[],"venue":[],"date":null,"url":"tag-program-calculation.html","headings":[],"body":""});

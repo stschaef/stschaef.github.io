@@ -1,0 +1,1 @@
+heliaSearchData("d/riccardopatana",{"id":"riccardopatana","title":"Riccardo Patana","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"riccardopatana.html","headings":[],"body":""});

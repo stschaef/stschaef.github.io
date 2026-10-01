@@ -1,0 +1,1 @@
+heliaSearchData("d/hospital-clinico-universitario-de-valladolid",{"id":"hospital-clinico-universitario-de-valladolid","title":"Hospital Clínico Universitario de Valladolid","kind":"institution","tags":[],"authors":[],"venue":[],"date":null,"url":"hospital-clinico-universitario-de-valladolid.html","headings":[],"body":""});

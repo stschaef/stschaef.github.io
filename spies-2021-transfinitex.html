@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>Transfinite Iris: resolving an existential dilemma of step-indexed separation logic</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Ctext y=%22.9em%22 font-size=%2290%22%3E%F0%9F%8C%BB%3C/text%3E%3C/svg%3E">
+<meta name="generator" content="helia">
+<link rel="alternate" type="application/atom+xml" title="Steven Schaefer" href="feed.xml">
+<link rel="alternate" type="application/feed+json" title="Steven Schaefer" href="feed.json">
+<script src="helia/theme-version.js"></script>
+<script src="theme/folio-early.js"></script>
+<link rel="stylesheet" href="helia/theme.css">
+<link rel="stylesheet" href="helia/highlight.css">
+<link rel="stylesheet" href="helia/search.css">
+<link rel="stylesheet" href="theme/katex.css">
+<link rel="stylesheet" href="theme/recipe.css">
+<link rel="stylesheet" href="theme/site.css">
+<link rel="stylesheet" href="theme/folio.css">
+<script defer src="helia/runtime.js"></script>
+<script defer src="helia/search.js"></script>
+<script defer src="theme/glyphcraft.js"></script>
+<script defer src="theme/glyphart.js"></script>
+<script defer src="theme/glyphgen.js"></script>
+<script defer src="theme/ornament.js"></script>
+<script defer src="theme/folio.js"></script>
+<script defer src="theme/portrait.js"></script>
+<script type="application/json" id="helia-widgets">{"helia-cite-formats":"widgets/helia-cite-formats-a3294ac7.js"}</script>
+<link rel="modulepreload" href="widgets/helia-cite-formats-a3294ac7.js">
+<script type="module" src="widgets/runtime.js"></script>
+</head>
+<body>
+<nav class="helia-topbar"><a class="helia-home" href="home.html">Steven Schaefer</a><ul class="helia-nav-links"><li><a href="stevenschaefer.html">About Me</a></li><li><a href="research.html">Research</a></li><li><a href="new.html">New</a></li></ul><button type="button" class="helia-search-button" aria-label="Search (/ or Ctrl+K)" aria-haspopup="dialog"><span class="helia-search-icon">⌕</span><span class="helia-search-label">Search</span><kbd class="helia-search-key">/</kbd></button></nav>
+<div class="helia-page" data-kind="reference">
+<article class="helia-article">
+<header class="helia-header" data-entry="spies-2021-transfinitex" data-kind="reference">
+<h2 class="helia-heading"><span class="helia-taxon">Reference.</span> Transfinite Iris: resolving an existential dilemma of step-indexed separation logic</h2>
+<div class="helia-meta"><span class="helia-author"><a class="helia-entry-link" href="simonspies.html" data-entry="simonspies">Simon Spies</a>, <a class="helia-entry-link" href="lennardgaher.html" data-entry="lennardgaher">Lennard Gäher</a>, <a class="helia-entry-link" href="danielgratzer.html" data-entry="danielgratzer">Daniel Gratzer</a>, <a class="helia-entry-link" href="josephtassarotti.html" data-entry="josephtassarotti">Joseph Tassarotti</a>, <a class="helia-entry-link" href="robbertkrebbers.html" data-entry="robbertkrebbers">Robbert Krebbers</a>, <a class="helia-entry-link" href="derekdreyer.html" data-entry="derekdreyer">Derek Dreyer</a>, <a class="helia-entry-link" href="larsbirkedal.html" data-entry="larsbirkedal">Lars Birkedal</a></span> · <span class="helia-byline"><a class="helia-entry-link" href="pldi.html" data-entry="pldi">PLDI</a> · 2021</span> · <span class="helia-tags"><span class="helia-tag" data-tag="separation-logic"><a class="helia-entry-link" href="tag-separation-logic.html" data-entry="tag-separation-logic">separation-logic</a></span></span> · <span class="helia-entry-links"><span class="helia-entry-link" data-field="pdf-url"><a class="helia-link helia-external" href="https://dl.acm.org/doi/pdf/10.1145/3453483.3454031">PDF</a></span> · <span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/3453483.3454031">DOI</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/conf/pldi/SpiesGGTKDB21">pldb</a></span></span></div>
+</header>
+<div class="helia-body">
+</div>
+<div class="helia-cite helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><h3 class="helia-heading">Cite</h3>
+</summary>
+<div class="helia-group-body">
+<div class="helia-widget" data-widget="helia-cite-formats" data-props="{&quot;key&quot;:&quot;spies-2021-transfinitex&quot;,&quot;bibtex&quot;:&quot;@inproceedings{spies-2021-transfinitex, series={PLDI ’21}, title={Transfinite Iris: resolving an existential dilemma of step-indexed separation logic}, url={http://dx.doi.org/10.1145/3453483.3454031}, DOI={10.1145/3453483.3454031}, booktitle={Proceedings of the 42nd ACM SIGPLAN International Conference on Programming Language Design and Implementation}, publisher={ACM}, author={Spies, Simon and Gäher, Lennard and Gratzer, Daniel and Tassarotti, Joseph and Krebbers, Robbert and Dreyer, Derek and Birkedal, Lars}, year={2021}, month=June, pages={80–95}, collection={PLDI ’21} }&quot;,&quot;bib-file&quot;:&quot;spies-2021-transfinitex.bib&quot;,&quot;hayagriva&quot;:&quot;spies-2021-transfinitex:\n  type: article\n  title: &#39;Transfinite Iris: resolving an existential dilemma of step-indexed separation logic&#39;\n  author:\n  - Spies, Simon\n  - Gäher, Lennard\n  - Gratzer, Daniel\n  - Tassarotti, Joseph\n  - Krebbers, Robbert\n  - Dreyer, Derek\n  - Birkedal, Lars\n  date: 2021-06\n  page-range: 80-95\n  serial-number:\n    doi: 10.1145/3453483.3454031\n  parent:\n    type: proceedings\n    title: Proceedings of the 42nd ACM SIGPLAN International Conference on Programming Language Design and Implementation\n    publisher: ACM\n&quot;,&quot;yml-file&quot;:&quot;spies-2021-transfinitex.yml&quot;}"><div class="helia-cite-key" data-copy="@spies-2021-transfinitex" data-copy-label="citation key"><span class="helia-bib-key">Cite as</span> <code class="helia-raw-inline">@spies-2021-transfinitex</code> (helia, typst) · <code class="helia-raw-inline">\cite{spies-2021-transfinitex}</code> (LaTeX)</div>
+<div class="helia-cite-format helia-collapsible" data-format="bibtex" data-copy="true" data-copy-label="BibTeX">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">BibTeX</span></summary>
+<div class="helia-group-body">
+<details class="helia-code" open><summary class="helia-code-summary"><span class="helia-code-lang">bibtex</span> · <span class="helia-code-lines">1 line</span></summary><pre class="helia-raw"><code class="language-bibtex"><span class="hl-text hl-bibtex"><span class="hl-meta hl-entry hl-braces hl-bibtex"><span class="hl-keyword hl-other hl-entry-type hl-bibtex"><span class="hl-punctuation hl-definition hl-keyword hl-bibtex">@</span>inproceedings</span><span class="hl-punctuation hl-section hl-entry hl-begin hl-bibtex">{</span><span class="hl-entity hl-name hl-type hl-entry-key hl-bibtex">spies-2021-transfinitex</span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">series</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>PLDI ’21<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">title</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>Transfinite Iris: resolving an existential dilemma of step-indexed separation logic<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">url</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>http://dx.doi.org/10.1145/3453483.3454031<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">DOI</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>10.1145/3453483.3454031<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">booktitle</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>Proceedings of the 42nd ACM SIGPLAN International Conference on Programming Language Design and Implementation<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">publisher</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>ACM<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">author</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>Spies, Simon and Gäher, Lennard and Gratzer, Daniel and Tassarotti, Joseph and Krebbers, Robbert and Dreyer, Derek and Birkedal, Lars<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">year</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>2021<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">month</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span>June</span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">pages</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>80–95<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">collection</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>PLDI ’21<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span> </span><span class="hl-punctuation hl-section hl-entry hl-end hl-bibtex">}</span></span></span></code></pre></details>
+</div>
+</details>
+</div>
+<div class="helia-cite-format helia-collapsible" data-format="hayagriva" data-copy="true" data-copy-label="hayagriva YAML">
+<details>
+<summary class="helia-group-summary"><span class="helia-group-title">hayagriva YAML (typst)</span></summary>
+<div class="helia-group-body">
+<details class="helia-code" open><summary class="helia-code-summary"><span class="helia-code-lang">yaml</span> · <span class="helia-code-lines">19 lines</span></summary><pre class="helia-raw"><code class="language-yaml"><span class="hl-source hl-yaml"><span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">spies-2021-transfinitex</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">type</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">article</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">title</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-quoted hl-single hl-yaml"><span class="hl-punctuation hl-definition hl-string hl-begin hl-yaml">&#39;</span>Transfinite Iris: resolving an existential dilemma of step-indexed separation logic<span class="hl-punctuation hl-definition hl-string hl-end hl-yaml">&#39;</span></span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">author</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Spies, Simon</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Gäher, Lennard</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Gratzer, Daniel</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Tassarotti, Joseph</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Krebbers, Robbert</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Dreyer, Derek</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Birkedal, Lars</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">date</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">2021-06</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">page-range</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">80-95</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">serial-number</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">doi</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">10.1145/3453483.3454031</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">parent</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">type</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">proceedings</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">title</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Proceedings of the 42nd ACM SIGPLAN International Conference on Programming Language Design and Implementation</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">publisher</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">ACM</span>
+</span></code></pre></details>
+</div>
+</details>
+</div>
+<div class="helia-cite-files">Download: <a class="helia-link" href="spies-2021-transfinitex.bib">spies-2021-transfinitex.bib</a> · <a class="helia-link" href="spies-2021-transfinitex.yml">spies-2021-transfinitex.yml</a></div>
+</div>
+</div>
+</details>
+</div>
+<div class="helia-reference-cited-by helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">Cited by (14)</span></summary>
+<div class="helia-group-body">
+<section class="helia-transclusion" data-entry="li-2026-contextual" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="li-2026-contextual"><span class="helia-title">Contextual Refinement of Higher-Order Concurrent Probabilistic Programs</span>&nbsp;<a class="helia-slug" href="li-2026-contextual.html">li-2026-contextual</a><span class="helia-byline"><span class="helia-entry-link" data-entry="pldi">PLDI</span> · 2026</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="li-2026-contextual" data-kind="reference">
+<div class="helia-abstract">We present Foxtrot, the first higher-order separation logic for proving contextual refinement of higherorder concurrent probabilistic programs with higher-order local state. From a high level, Foxtrot inherits various concurrency reasoning principles from standard concurrent separation logic, e.g. invariants and ghost resources, and supports advanced probabilistic reasoning principles for reasoning about complex probability distributions induced by concurrent threads, e.g. tape presampling and induction by error amplification. The integration of these strong reasoning principles is highly non-trivial due to the combination of probability and concurrency in the language and the complexity of the Foxtrot model; the soundness of the logic relies on a version of the axiom of choice within the Iris logic, which is not used in earlier work on Iris-based logics. We demonstrate the expressiveness of Foxtrot on a wide range of examples, including the adversarial von Neumann coin and the randombytes_uniform function of the Sodium cryptography software library. All results have been mechanized in the Rocq proof assistant and the Iris separation logic framework.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/3808265">DOI</a></span> · <span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/2511.10135">arXiv</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/journals/pacmpl/LiATB26">pldb</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="namakonov-2026-lawyer" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="namakonov-2026-lawyer"><span class="helia-title">Lawyer: Modular Obligations-Based Liveness Reasoning in Higher-Order Impredicative Concurrent Separation Logic</span>&nbsp;<a class="helia-slug" href="namakonov-2026-lawyer.html">namakonov-2026-lawyer</a><span class="helia-byline"><span class="helia-entry-link" data-entry="oopsla">OOPSLA</span> · 2026</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="namakonov-2026-lawyer" data-kind="reference">
+<div class="helia-abstract">Higher-order concurrent separation logics, such as Iris, have been tremendously successful in verifying safety properties of concurrent programs. However, state-of-the-art attempts to verify liveness properties in such logics have so far either lacked modularity (the ability to compose specifications of independent modules), or they have been far too complex to mechanize in a proof assistant. In this work, we introduce Lawyer — a mechanized program logic for modular verification of (fair) termination of concurrent programs. Lawyer draws inspiration from state-of-the-art approaches that use obligations for specifying and proving termination. However, unlike these approaches, which incorporate obligations by instrumenting the source code with erasable auxiliary code and state, Lawyer avoids such instrumentations. Instead, Lawyer incorporates obligations into the logic by embedding them into a purely logical labeled transition system that the program is shown to refine — this makes Lawyer far more amenable to mechanization. We demonstrate the expressivity of Lawyer by verifying termination of a range of examples, including modular verification of a client program whose termination relies on correctness of a fair lock library, and (separately) proving that a ticket lock implementation implements that library’s interface. To the best of our knowledge, Lawyer is the first mechanized program logic that supports modular higher-order impredicative liveness specifications of program modules. All the results that appear in the paper have been mechanized in the Rocq proof assistant on top of the Iris separation logic framework.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/3798240">DOI</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/journals/pacmpl/NamakonovFJBT26">pldb</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="liu-2026-an" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="liu-2026-an"><span class="helia-title">An Axiomatic Basis for Computer Programming on Relaxed Hardware Architectures: The AxSL Logics</span>&nbsp;<a class="helia-slug" href="liu-2026-an.html">liu-2026-an</a><span class="helia-byline"><span class="helia-entry-link" data-entry="toplas">TOPLAS</span> · 2026</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="liu-2026-an" data-kind="reference">
+<div class="helia-abstract">Very relaxed concurrency memory models, like those of the Arm-A, RISC-V and IBM Power hardware architectures, underpin much of computing but break a fundamental intuition about programs, namely that syntactic program order and the reads-from relation always both induce order in the execution. Instead, out-of-order execution is allowed except where prevented by certain pairwise dependencies, barriers, or other synchronisation. This means that there is no notion of the ‘current’ state of the program, making it challenging to design (and prove sound) syntax-directed, modular reasoning methods like Hoare logics, as usable resources cannot implicitly flow from one program point to the next. We present AxSL, a family of separation logics for relaxed hardware memory models, and instantiate it on sequential consistency and on the Arm-A memory model. The Arm-A instance captures the fine-grained reasoning underpinning the low-overhead synchronisation idioms used by high-performance systems code. We mechanise AxSL in the Iris separation logic framework, illustrate it on key examples, and prove it sound with respect to the axiomatic memory model of Arm-A. By instantiating AxSL on different memory models, we demonstrate the generality of our approach, and show that it is largely generic in the axiomatic model and in the instruction-set semantics, offering a potential way forward for compositional reasoning for other models, and for the combination of production concurrency models and full-scale ISAs.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/3786762">DOI</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/journals/toplas/LiuHPSBP26">pldb</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="leroy_pottier_relsep_2026" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="leroy_pottier_relsep_2026"><span class="helia-title">Relational Separation Logic for Compiler Verification</span>&nbsp;<a class="helia-slug" href="leroy_pottier_relsep_2026.html">leroy_pottier_relsep_2026</a><span class="helia-byline">2026</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="leroy_pottier_relsep_2026" data-kind="reference">
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="url"><a class="helia-link helia-external" href="https://cambium.inria.fr/~fpottier/stages/sujet2026-m2.pdf">Web</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="namakonov-2026-verifying" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="namakonov-2026-verifying"><span class="helia-title">Verifying Wait-Freedom for Concurrent Higher-Order Programs</span>&nbsp;<a class="helia-slug" href="namakonov-2026-verifying.html">namakonov-2026-verifying</a><span class="helia-byline"><span class="helia-entry-link" data-entry="ecoop">ECOOP</span> · 2026</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="namakonov-2026-verifying" data-kind="reference">
+<div class="helia-abstract">Wait-freedom is the strongest non-blocking progress guarantee for concurrent data structures, ensuring that every operation completes in a finite number of steps regardless of interference from other threads. While verification of wait-freedom has been studied for first-order languages, verifying it for higher-order programming languages with general references remains an open challenge. In such languages, operations may be used by arbitrary, unverified higher-order clients, making it unclear how to even define wait-freedom formally in terms of programs’ semantics, let alone prove it. In this paper, we present the first framework for verifying wait-freedom of concurrent programs written in a higher-order language with general references. Our approach is based on the Lawyer concurrent separation logic which has been recently introduced for termination verification. We identify a specification pattern in the Lawyer logic that captures wait-freedom. To establish this connection formally, we prove a novel adequacy theorem for Lawyer which states that programs which are proven correct in the Lawyer logic against a specification in the aforementioned specification pattern are wait-free. Proving wait-freedom requires to show that all calls made to operations by any arbitrary client terminate. Thus, as a part of proving the adequacy theorem above, we need to prove that the behavior of the client of the data structure is safe in the sense that it does not break the internal invariants of the data structure, e.g., by directly manipulating the data structure’s internal state. To this end, we develop a logical relations model that establishes safety for all clients once and for all. We demonstrate the effectiveness of our approach by proving wait-freedom for several representative examples, including a higher-order list map function, and a memory-efficient single-producer, single-consumer queue. For the latter, wait-freedom is conditional in that, as the name suggests, there can be at most one enqueuer thread and one dequeuer thread. To capture this formally, we introduce the notion of restricted wait-freedom as a variant of wait-freedom that restricts the number of concurrent threads, and show how our approach can support reasoning about restricted wait-freedom. All our results have been mechanized on top of the Rocq Prover and using the Iris separation logic framework that Lawyer is also based on.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="pdf-url"><a class="helia-link helia-external" href="https://drops.dagstuhl.de/storage/00lipics/lipics-vol372-ecoop2026/LIPIcs.ECOOP.2026.20/LIPIcs.ECOOP.2026.20.pdf">PDF</a></span> · <span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.4230/lipics.ecoop.2026.20">DOI</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/conf/ecoop/NamakonovBT26">pldb</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="allain_etal_tmc_2025" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="allain_etal_tmc_2025"><span class="helia-title">Tail Modulo Cons, OCaml, and Relational Separation Logic</span>&nbsp;<a class="helia-slug" href="allain_etal_tmc_2025.html">allain_etal_tmc_2025</a><span class="helia-byline"><span class="helia-entry-link" data-entry="popl">POPL</span> · 2025</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="allain_etal_tmc_2025" data-kind="reference">
+<div class="helia-abstract">
+<p>Common functional languages incentivize tail-recursive functions, as opposed to general recursive functions that consume stack space and may not scale to large inputs. This distinction occasionally requires writing functions in a tail-recursive style that may be more complex and slower than the natural, non-tail-recursive definition.</p>
+<p>This work describes our implementation of the tail modulo constructor (TMC) transformation in the OCaml compiler, an optimization that provides stack-efficiency for a larger class of functions — tail-recursive modulo constructors — which includes in particular the natural definition of List.map and many similar recursive data-constructing functions.</p>
+<p>We prove the correctness of this program transformation in a simplified setting — a small untyped calculus — that captures the salient aspects of the OCaml implementation. Our proof is mechanized in the Coq proof assistant, using the Iris base logic. An independent contribution of our work is an extension of the Simuliris approach to define simulation relations that support different calling conventions. To our knowledge, this is the first use of Simuliris to prove the correctness of a compiler transformation.</p>
+</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="pdf-url"><a class="helia-link helia-external" href="https://arxiv.org/pdf/2411.19397">PDF</a></span> · <span class="helia-entry-link" data-field="url"><a class="helia-link helia-external" href="http://cambium.inria.fr/~fpottier/publis/tmc-popl2025.pdf">Web</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/journals/pacmpl/AllainBCPS25">pldb</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="gratzer-2025-a" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="gratzer-2025-a"><span class="helia-title">A Modal Deconstruction of Löb Induction</span>&nbsp;<a class="helia-slug" href="gratzer-2025-a.html">gratzer-2025-a</a><span class="helia-byline"><span class="helia-entry-link" data-entry="popl">POPL</span> · 2025</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="gratzer-2025-a" data-kind="reference">
+<div class="helia-abstract">We present a novel analysis of the fundamental Löb induction principle from guarded recursion. Taking advantage of recent work in modal type theory and univalent foundations, we derive Löb induction from a simpler and more conceptual set of primitives. We then capitalize on these insights to present Gatsby, the first guarded type theory capturing the rich modal structure of the topos of trees alongside Löb induction without immediately precluding canonicity or normalization. We show that Gatsby can recover many prior approaches to guarded recursion and use its additional power to improve on prior examples. We crucially rely on homotopical insights and Gatsby constitutes a new application of univalent foundations to the theory of programming languages.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="pdf-url"><a class="helia-link helia-external" href="https://pure.au.dk/ws/files/470326223/A_Modal_Deconstruction_of_L_b_Induction.pdf">PDF</a></span> · <span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/3704866">DOI</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/journals/pacmpl/Gratzer25">pldb</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="vindum-2025-the" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="vindum-2025-the"><span class="helia-title">The Nextgen Modality: A Modality for Non-Frame-Preserving Updates in Separation Logic</span>&nbsp;<a class="helia-slug" href="vindum-2025-the.html">vindum-2025-the</a><span class="helia-byline"><span class="helia-entry-link" data-entry="cpp">CPP</span> · 2025</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="vindum-2025-the" data-kind="reference">
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="pdf-url"><a class="helia-link helia-external" href="https://dl.acm.org/doi/pdf/10.1145/3703595.3705876">PDF</a></span> · <span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/3703595.3705876">DOI</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/conf/cpp/VindumGB25">pldb</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="gratzer-2025-idempotent" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="gratzer-2025-idempotent"><span class="helia-title">Idempotent Resources in Separation Logic: The Heart of core in Iris</span>&nbsp;<a class="helia-slug" href="gratzer-2025-idempotent.html">gratzer-2025-idempotent</a><span class="helia-byline"><span class="helia-entry-link" data-entry="fossacs">FoSSaCS</span> · 2025</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="gratzer-2025-idempotent" data-kind="reference">
+<div class="helia-abstract">We revisit the foundational notion of “resources” used by separation logics from a categorical and algebraic viewpoint. In particular, we show that the cameras used by concurrent, higher-order, impredicative separation logics like Iris as a generalization of partial commutative monoids can be simplified and clarified and we introduce a category of cameras in which many vital cameras exhibit simple universal properties. We do this by observing that an important structure on cameras (the core operator) can be uniquely constrained and replaced by the property governing the idempotent elements of the camera. We verify that all cameras used in practice in Iris satisfy this property and use this insight to simplify the existing Iris formalization.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-031-90897-2_3">DOI</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="stepanenko-2025-solving" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="stepanenko-2025-solving"><span class="helia-title">Solving Guarded Domain Equations in Presheaves over Ordinals and Mechanizing It</span>&nbsp;<a class="helia-slug" href="stepanenko-2025-solving.html">stepanenko-2025-solving</a><span class="helia-byline"><span class="helia-entry-link" data-entry="fscd">FSCD</span> · 2025</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="stepanenko-2025-solving" data-kind="reference">
+<div class="helia-abstract">Constructing solutions to recursive domain equations is a well-known, important problem in the study of programs and programming languages. Mathematically speaking, the problem is finding a fixed point (up to isomorphism) of a suitable functor over a suitable category. A particularly useful instance, inspired by the step-indexing technique, is where the functor is over (a subcategory of) the category of presheaves over the ordinal ω and the functors are locally-contractive, also known as guarded functors. This corresponds to step-indexing over natural numbers. However, for certain problems, e.g., when dealing with infinite non-determinism, one needs to employ trans-finite step-indexing, i.e., consider presheaf categories over higher ordinals. Prior work on trans-finite step-indexing either only considers a very narrow class of functors over a particularly restricted subcategory of presheaves over higher ordinals, or treats the problem very generally working with sheaves over an arbitrary complete Heyting algebra with a well-founded basis. In this paper we present a solution to the guarded domain equations problem over all guarded functors over the category of presheaves over ordinal numbers, as well as its mechanization in the Rocq Prover. As the categories of sheaves and presheaves over ordinals are equivalent, our main contribution is simplifying prior work from the setting of the category of sheaves to the setting of the category of presheaves and mechanizing it - presheaves are more amenable to mechanization in a proof assistant.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.4230/lipics.fscd.2025.33">DOI</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="timany-2024-a" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="timany-2024-a"><span class="helia-title">A Logical Approach to Type Soundness</span>&nbsp;<a class="helia-slug" href="timany-2024-a.html">timany-2024-a</a><span class="helia-byline"><span class="helia-entry-link" data-entry="jacm">JACM</span> · 2024</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="timany-2024-a" data-kind="reference">
+<div class="helia-abstract">Type soundness, which asserts that “well-typed programs cannot go wrong,” is widely viewed as the canonical theorem one must prove to establish that a type system is doing its job. It is commonly proved using the so-called syntactic approach (also known as progress and preservation ), which has had a huge impact on the study and teaching of programming language foundations. Unfortunately, syntactic type soundness is a rather weak theorem. It only applies to programs that are well typed in their entirety and thus tells us nothing about the many programs written in “safe” languages that make use of “unsafe” language features. Even worse, it tells us nothing about whether type systems achieve one of their main goals: enforcement of data abstraction. One can easily define a language that enjoys syntactic type soundness and yet fails to support even the most basic modular reasoning principles for abstraction mechanisms like closures, objects, and abstract data types. Given these concerns, we argue that programming languages researchers should no longer be satisfied with proving syntactic type soundness and should instead start proving semantic type soundness , a more useful theorem that captures more accurately what type systems are actually good for. Semantic type soundness is an old idea—Milner’s original account of type soundness from 1978 was semantic—but it fell out of favor in the 1990s due to limitations and complexities of denotational models. In the succeeding decades, thanks to a series of technical advances—notably, step-indexed Kripke logical relations constructed over operational semantics and higher-order concurrent separation logic as consolidated in the Iris framework in Coq—we can now build (machine-checked) semantic soundness proofs at a much higher level of abstraction than was previously possible. The resulting “logical” approach to semantic type soundness has already been employed to great effect in a number of recent papers, but those papers typically (a) concern advanced problem scenarios that complicate the presentation, (b) assume significant prior knowledge of the reader, and (c) suppress many details of the proofs. Here, we aim to provide a gentler, more pedagogically motivated introduction to logical type soundness, targeted at a broader audience that may or may not be familiar with logical relations and Iris. As a bonus, we also show how logical type soundness proofs can easily be generalized to establish an even stronger relational property— representation independence —for realistic type systems.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/3676954">DOI</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="timany-2024-trillium" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="timany-2024-trillium"><span class="helia-title">Trillium: Higher-Order Concurrent and Distributed Separation Logic for Intensional Refinement</span>&nbsp;<a class="helia-slug" href="timany-2024-trillium.html">timany-2024-trillium</a><span class="helia-byline"><span class="helia-entry-link" data-entry="popl">POPL</span> · 2024</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="timany-2024-trillium" data-kind="reference">
+<div class="helia-abstract">Expressive state-of-the-art separation logics rely on step-indexing to model semantically complex features and to support modular reasoning about imperative higher-order concurrent and distributed programs. Stepindexing comes, however, with an inherent cost: it restricts the adequacy theorem of program logics to a fairly simple class of safety properties. In this paper, we explore if and how intensional refinement is a viable methodology for strengthening higher-order concurrent (and distributed) separation logic to prove non-trivial safety and liveness properties. Specifically, we introduce Trillium, a language-agnostic separation logic framework for showing intensional refinement relations between traces of a program and a model. We instantiate Trillium with a concurrent language and develop Fairis, a concurrent separation logic, that we use to show liveness properties of concurrent programs under fair scheduling assumptions through a fair liveness-preserving refinement of a model. We also instantiate Trillium with a distributed language and obtain an extension of Aneris, a distributed separation logic, which we use to show refinement relations between distributed systems and TLA + models.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="pdf-url"><a class="helia-link helia-external" href="https://dl.acm.org/doi/pdf/10.1145/3632851">PDF</a></span> · <span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/3632851">DOI</a></span> · <span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/2109.07863">arXiv</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/journals/pacmpl/TimanyGSHGNB24">pldb</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="gaher_etal_simuliris_2022" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="gaher_etal_simuliris_2022"><span class="helia-title">Simuliris: A Separation Logic Framework for Verifying Concurrent Program Optimizations</span>&nbsp;<a class="helia-slug" href="gaher_etal_simuliris_2022.html">gaher_etal_simuliris_2022</a><span class="helia-byline"><span class="helia-entry-link" data-entry="popl">POPL</span> · 2022</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="gaher_etal_simuliris_2022" data-kind="reference">
+<div class="helia-abstract">
+<p>Today’s compilers employ a variety of non-trivial optimizations to achieve good performance. One key trick compilers use to justify transformations of concurrent programs is to assume that the source program has no data races: if it does, they cause the program to have undefined behavior (UB) and give the compiler free rein. However, verifying correctness of optimizations that exploit this assumption is a non-trivial problem. In particular, prior work either has not proven that such optimizations preserve program termination (particularly non-obvious when considering optimizations that move instructions out of loop bodies), or has treated all synchronization operations as external functions (losing the ability to reorder instructions around them).</p>
+<p>In this work we present Simuliris, the first simulation technique to establish termination preservation (under a fair scheduler) for a range of concurrent program transformations that exploit UB in the source language. Simuliris is based on the idea of using ownership to reason modularly about the assumptions the compiler makes about programs with well-defined behavior. This brings the benefits of concurrent separation logics to the space of verifying program transformations: we can combine powerful reasoning techniques such as framing and coinduction to perform thread-local proofs of non-trivial concurrent program optimizations. Simuliris is built on a (non-step-indexed) variant of the Coq-based Iris framework, and is thus not tied to a particular language. In addition to demonstrating the effectiveness of Simuliris on standard compiler optimizations involving data race UB, we also instantiate it with Jung et al.’s Stacked Borrows semantics for Rust and generalize their proofs of interesting type-based aliasing optimizations to account for concurrency.</p>
+</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="pdf-url"><a class="helia-link helia-external" href="https://dl.acm.org/doi/pdf/10.1145/3498689">PDF</a></span> · <span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/3498689">DOI</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/journals/pacmpl/GaherSSJDKKD22">pldb</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="sterling_2021" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="sterling_2021"><span class="helia-title">First Steps in Synthetic Tait Computability: The Objective Metatheory of Cubical Type Theory</span>&nbsp;<a class="helia-slug" href="sterling_2021.html">sterling_2021</a><span class="helia-byline">2021</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="sterling_2021" data-kind="reference">
+<div class="helia-abstract">The implementation and semantics of dependent type theories can be studied in a syntax-independent way: the objective metatheory of dependent type theories exploits the universal properties of their syntactic categories to endow them with computational content, mathematical meaning, and practical implementation (normalization, type checking, elaboration). The semantic methods of the objective metatheory inform the design and implementation of correct-by-construction elaboration algorithms, promising a principled interface between real proof assistants and ideal mathematics. In this dissertation, I add synthetic Tait computability to the arsenal of the objective metatheorist. Synthetic Tait computability is a mathematical machine to reduce difficult problems of type theory and programming languages to trivial theorems of topos theory. First employed by Sterling and Harper to reconstruct the theory of program modules and their phase separated parametricity, synthetic Tait computability is deployed here to resolve the last major open question in the syntactic metatheory of cubical type theory: normalization of open terms.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.5281/zenodo.5709838">DOI</a></span></div>
+</div>
+</div>
+</details>
+</section>
+</div>
+</details>
+</div>
+<div class="helia-reference-cites helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">Cites 64 works (7 here)</span></summary>
+<div class="helia-group-body">
+<div class="helia-reference-cites-here helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">With notes (7)</span></summary>
+<div class="helia-group-body">
+<section class="helia-transclusion" data-entry="spies-2021-transfinite" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="spies-2021-transfinite"><span class="helia-title">Transfinite step-indexing for termination</span>&nbsp;<a class="helia-slug" href="spies-2021-transfinite.html">spies-2021-transfinite</a><span class="helia-byline"><span class="helia-entry-link" data-entry="popl">POPL</span> · 2021</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="spies-2021-transfinite" data-kind="reference">
+<div class="helia-abstract">Step-indexed logical relations are an extremely useful technique for building operational-semantics-based models and program logics for realistic, richly-typed programming languages. They have proven to be indispensable for modeling features like higher-order state , which many languages support but which were difficult to accommodate using traditional denotational models. However, the conventional wisdom is that, because they only support reasoning about finite traces of computation, (unary) step-indexed models are only good for proving safety properties like “well-typed programs don’t go wrong”. There has consequently been very little work on using step-indexing to establish liveness properties, in particular termination. In this paper, we show that step-indexing can in fact be used to prove termination of well-typed programs—even in the presence of dynamically-allocated, shared, mutable, higher-order state—so long as one’s type system enforces disciplined use of such state. Specifically, we consider a language with asynchronous channels, inspired by promises in JavaScript, in which higher-order state is used to implement communication, and linearity is used to ensure termination. The key to our approach is to generalize from natural number step-indexing to transfinite step-indexing , which enables us to compute termination bounds for program expressions in a compositional way. Although transfinite step-indexing has been proposed previously, we are the first to apply this technique to reasoning about termination in the presence of higher-order state.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="pdf-url"><a class="helia-link helia-external" href="https://dl.acm.org/doi/pdf/10.1145/3434294">PDF</a></span> · <span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/3434294">DOI</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/journals/pacmpl/SpiesKD21">pldb</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="jung_etal_iris_ground_up_2018" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="jung_etal_iris_ground_up_2018"><span class="helia-title">Iris from the ground up: A modular foundation for higher-order concurrent separation logic</span>&nbsp;<a class="helia-slug" href="jung_etal_iris_ground_up_2018.html">jung_etal_iris_ground_up_2018</a><span class="helia-byline"><span class="helia-entry-link" data-entry="jfp">JFP</span> · 2018</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="jung_etal_iris_ground_up_2018" data-kind="reference">
+<div class="helia-abstract">Iris is a framework for higher-order concurrent separation logic, which has been implemented in the Coq proof assistant and deployed very effectively in a wide variety of verification projects. Iris was designed with the express goal of simplifying and consolidating the foundations of modern separation logics, but it has evolved over time, and the design and semantic foundations of Iris itself have yet to be fully written down and explained together properly in one place. Here, we attempt to fill this gap, presenting a reasonably complete picture of the latest version of Iris (version 3.1), from first principles and in one coherent narrative.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="pdf-url"><a class="helia-link helia-external" href="https://www.cambridge.org/core/services/aop-cambridge-core/content/view/26301B518CE2C52796BFA12B8BAB5B5F/S0956796818000151a.pdf/div-class-title-iris-from-the-ground-up-a-modular-foundation-for-higher-order-concurrent-separation-logic-div.pdf">PDF</a></span> · <span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1017/s0956796818000151">DOI</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/journals/jfp/JungKJBBD18">pldb</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="timany-2017-a" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="timany-2017-a"><span class="helia-title">A logical relation for monadic encapsulation of state: proving contextual equivalences in the presence of runST</span>&nbsp;<a class="helia-slug" href="timany-2017-a.html">timany-2017-a</a><span class="helia-byline"><span class="helia-entry-link" data-entry="popl">POPL</span> · 2018</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="timany-2017-a" data-kind="reference">
+<div class="helia-abstract">We present a logical relations model of a higher-order functional programming language with impredicative polymorphism, recursive types, and a Haskell-style ST monad type with runST. We use our logical relations model to show that runST provides proper encapsulation of state, by showing that effectful computations encapsulated by runST are heap independent. Furthermore, we show that contextual refinements and equivalences that are expected to hold for pure computations do indeed hold in the presence of runST. This is the first time such relational results have been proven for a language with monadic encapsulation of state. We have formalized all the technical development and results in Coq.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="pdf-url"><a class="helia-link helia-external" href="https://dl.acm.org/doi/pdf/10.1145/3158152?download=true">PDF</a></span> · <span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/3158152">DOI</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/journals/pacmpl/TimanySKB18">pldb</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="tassarotti_jung_harper_2017" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="tassarotti_jung_harper_2017"><span class="helia-title">A Higher-Order Logic for Concurrent Termination-Preserving Refinement</span>&nbsp;<a class="helia-slug" href="tassarotti_jung_harper_2017.html">tassarotti_jung_harper_2017</a><span class="helia-byline"><span class="helia-entry-link" data-entry="esop">ESOP</span> · 2017</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="tassarotti_jung_harper_2017" data-kind="reference">
+<div class="helia-abstract">Compiler correctness proofs for higher-order concurrent languages are difficult: they involve establishing a termination-preserving refinement between a concurrent high-level source language and an implementation that uses low-level shared memory primitives. However, existing logics for proving concurrent refinement either neglect properties such as termination, or only handle first-order state. In this paper, we address these limitations by extending Iris, a recent higher-order concurrent separation logic, with support for reasoning about termination-preserving refinements. To demonstrate the power of these extensions, we prove the correctness of an efficient implementation of a higher-order, session-typed language. To our knowledge, this is the first program logic capable of giving a compiler correctness proof for such a language. The soundness of our extensions and our compiler correctness proof have been mechanized in Coq.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/1701.05888">arXiv</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/conf/esop/TassarottiJ017">pldb</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="jung_higher-order_2016" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="jung_higher-order_2016"><span class="helia-title">Higher-order ghost state</span>&nbsp;<a class="helia-slug" href="jung_higher-order_2016.html">jung_higher-order_2016</a><span class="helia-byline"><span class="helia-entry-link" data-entry="icfp">ICFP</span> · 2016</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="jung_higher-order_2016" data-kind="reference">
+<div class="helia-abstract">The development of concurrent separation logic (CSL) has sparked a long line of work on modular verification of sophisticated concurrent programs. Two of the most important features supported by several existing extensions to CSL are higher-order quantification and custom ghost state. However, none of the logics that support both of these features reap the full potential of their combination. In particular, none of them provide general support for a feature we dub “higher-order ghost state”: the ability to store arbitrary higher-order separation-logic predicates in ghost variables. In this paper, we propose higher-order ghost state as a interesting and useful extension to CSL, which we formalize in the framework of Jung et al.‘s recently developed Iris logic. To justify its soundness, we develop a novel algebraic structure called CMRAs (“cameras”), which can be thought of as “step-indexed partial commutative monoids”. Finally, we show that Iris proofs utilizing higher-order ghost state can be effectively formalized in Coq, and discuss the challenges we faced in formalizing them.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="pdf-url"><a class="helia-link helia-external" href="https://hdl.handle.net/21.11116/0000-0008-EAF5-C">PDF</a></span> · <span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/2951913.2951943">DOI</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/conf/icfp/0002KBD16">pldb</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="jung-2015-iris" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="jung-2015-iris"><span class="helia-title">Iris: Monoids and Invariants as an Orthogonal Basis for Concurrent Reasoning</span>&nbsp;<a class="helia-slug" href="jung-2015-iris.html">jung-2015-iris</a><span class="helia-byline"><span class="helia-entry-link" data-entry="popl">POPL</span> · 2015</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="jung-2015-iris" data-kind="reference">
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="pdf-url"><a class="helia-link helia-external" href="https://dl.acm.org/doi/pdf/10.1145/2676726.2676980">PDF</a></span> · <span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/2676726.2676980">DOI</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/conf/popl/JungSSSTBD15">pldb</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="ohearn_pym_bi_1999" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="ohearn_pym_bi_1999"><span class="helia-title">The logic of bunched implications</span>&nbsp;<a class="helia-slug" href="ohearn_pym_bi_1999.html">ohearn_pym_bi_1999</a><span class="helia-byline"><span class="helia-entry-link" data-entry="bsl">BSL</span> · 1999</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="ohearn_pym_bi_1999" data-kind="reference">
+<div class="helia-abstract">We introduce a logic BI in which a multiplicative (or linear) and an additive (or intuitionistic) implication live side-by-side. The propositional version of BI arises from an analysis of the proof-theoretic relationship between conjunction and implication; it can be viewed as a merging of intuitionistic logic and multiplicative intuitionistic linear logic. The naturality of BI can be seen categorically: models of propositional BI’s proofs are given by bicartesian doubly closed categories, i.e., categories which freely combine the semantics of propositional intuitionistic logic and propositional multiplicative intuitionistic linear logic. The predicate version of BI includes, in addition to standard additive quantifiers, multiplicative (or intensional) quantifiers [inline image] and [inline image] which arise from observing restrictions on structural rules on the level of terms as well as propositions. We discuss computational interpretations, based on sharing, at both the propositional and predicate levels.</div>
+</div>
+</div>
+</details>
+</section>
+</div>
+</details>
+</div>
+<div class="helia-reference-cites-away helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">External (57)</span></summary>
+<div class="helia-group-body">
+<ul>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3434283">Diamonds are not forever: liveness in reactive programming with guarded recursion</a> (2021)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1109/sp40001.2021.00003">Compositional Non-Interference for Fine-Grained Concurrent Programs</a> (2021)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3418295">Safe systems programming in Rust</a> (2021)</li>
+<li>Iris: A higher-order concurrent separation logic framework implemented and verified in the proof assistant Coq (project website) (2021)</li>
+<li>Transfinite Iris appendix and Coq development (2021)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3408996">Scala step-by-step: soundness for DOT with step-indexed logical relations in Iris</a> (2020)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3408978">Cosmo: a concurrent separation logic for multicore OCaml</a> (2020)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3341301.3359632">Verifying concurrent, crash-safe systems with Perennial</a> (2019)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3371102">RustBelt meets relaxed memory</a> (2019)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-030-17184-1_1">Time Credits and Time Receipts in Iris</a> (2019)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3477082">TaDA Live: Compositional Reasoning for Termination of Fine-grained Concurrent Programs</a> (2019)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/s10817-018-9457-5">VST-Floyd: A Separation Logic Tool to Verify Correctness of C Programs</a> (2018)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3209108.3209174">ReLoC: A mechanised relational logic for fine-grained concurrency</a> (2018)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3167095">Large model constructions for second-order ZF in dependent type theory</a> (2018)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3236772">MoSeL: a general, extensible modal framework for interactive proofs in separation logic</a> (2018)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-319-89884-1_13">A Separation Logic for a Promising Semantics</a> (2018)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3158154">RustBelt: securing the foundations of the Rust programming language</a> (2017)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-662-54434-1_26">The Essence of Higher-Order Concurrent Separation Logic</a> (2017)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3158108">Progress of concurrent objects with partial methods</a> (2017)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-662-49498-1_8">Modular Termination Verification for Non-blocking Concurrency</a> (2016)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3009837.3009850">A promising semantics for relaxed-memory concurrency</a> (2016)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3093333.3009855">Interactive proofs in higher-order concurrent separation logic</a> (2016)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3093333.3009877">A relational model of types-and-effects in higher-order concurrent separation logic</a> (2016)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/2837614.2837635">A program logic for concurrent objects under fair scheduling</a> (2016)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-662-49498-1_28">Transfinite Step-Indexing: Decoupling Concrete and Logical Steps</a> (2016)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1017/cbo9781107256552">Program Logics for Certified Compilers</a> (2014)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-319-08918-8_8">A Model of Countable Nondeterminism in Guarded Type Theory</a> (2014)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-662-44202-9_9">TaDA: A Logic for Time and Data Abstraction</a> (2014)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-642-54833-8_9">Impredicative Concurrent Abstract Predicates</a> (2014)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.2168/lmcs-9(4:4)2013">Step-Indexed Relational Reasoning for Countable Nondeterminism</a> (2013)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-642-37036-6_11">Modular Reasoning about Separation of Concurrent Data Structures</a> (2013)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/2500365.2500600">Unifying refinement and hoare-style reasoning in a logic for higher-order concurrency</a> (2013)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/2429069.2429111">Logical relations for fine-grained concurrency</a> (2013)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1016/j.entcs.2012.08.010">Time Bounds for General Function Pointers</a> (2012)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1109/lics.2011.16">First Steps in Synthetic Guarded Domain Theory: Step-Indexing in the Topos of Trees</a> (2011)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/1926385.1926401">Step-indexed kripke models over recursive worlds</a> (2011)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/2034773.2034828">Characteristic formulae for the verification of imperative programs</a> (2011)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.2168/lmcs-7(2:16)2011">Logical Step-Indexed Logical Relations</a> (2011)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-642-11957-6_6">Amortised Resource Analysis with Separation Logic</a> (2010)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/1706299.1706323">A relational modal logic for higher-order stateful ADTs</a> (2010)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.4230/dagsemproc.10351.3">A Theory of Termination via Indirection</a> (2010)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/1480881.1480925">State-dependent representation independence</a> (2009)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-540-78739-6_27">Oracle Semantics for Concurrent Separation Logic</a> (2008)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/1190216.1190235">A very modal model of a modern, major, general type system</a> (2007)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-540-71389-0_26">Logical Reasoning for Higher-Order Functions with Local State</a> (2007)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-540-24727-2_11">Unifying Recursive and Co-recursive Definitions in Sheaf Categories</a> (2004)</li>
+<li>Semantics of types for mutable state (2004)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1109/lics.2002.1029818">A stratified semantics of general references embeddable in higher-order logic</a> (2003)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/504709.504712">An indexed model of recursive types for foundational proof-carrying code</a> (2001)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/3-540-44802-0_1">Local Reasoning about Programs that Alter Data Structures</a> (2001)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1109/lics.2000.855774">A modality for recursion</a> (2000)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/bfb0014566">Sets in types, types in sets</a> (1997)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1016/0022-0000(89)90027-5">Solving reflexive domain equations in a category of complete metric spaces</a> (1989)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1016/0304-3975(88)90098-9">Characterizing finite Kripke structures in propositional temporal logic</a> (1988)</li>
+<li>Binary codes capable of correcting deletions, insertions, and reversals (1965)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.2307/2269016">On the interpretation of intuitionistic number theory</a> (1945)</li>
+<li>Grundbegriffe der Mengenlehre (1906)</li>
+</ul>
+</div>
+</details>
+</div>
+</div>
+</details>
+</div>
+</article>
+<div class="helia-identity"><span class="helia-id">spies-2021-transfinitex</span> <span class="helia-kind">reference</span> <span class="helia-path">entries/refs/spies-2021-transfinitex/spies-2021-transfinitex.hel</span></div>
+</div>
+</body>
+</html>

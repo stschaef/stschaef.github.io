@@ -1,0 +1,1 @@
+heliaSearchData("d/university-of-north-carolina-at-charlotte",{"id":"university-of-north-carolina-at-charlotte","title":"University of North Carolina at Charlotte","kind":"institution","tags":[],"authors":[],"venue":[],"date":null,"url":"university-of-north-carolina-at-charlotte.html","headings":[],"body":""});

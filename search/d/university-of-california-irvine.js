@@ -1,0 +1,1 @@
+heliaSearchData("d/university-of-california-irvine",{"id":"university-of-california-irvine","title":"University of California, Irvine","kind":"institution","tags":[],"authors":[],"venue":[],"date":null,"url":"university-of-california-irvine.html","headings":[],"body":""});

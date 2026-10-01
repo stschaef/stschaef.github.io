@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>Verifying Exact Samplers for Continuous Distributions with a Discrete Program Logic</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Ctext y=%22.9em%22 font-size=%2290%22%3E%F0%9F%8C%BB%3C/text%3E%3C/svg%3E">
+<meta name="generator" content="helia">
+<link rel="alternate" type="application/atom+xml" title="Steven Schaefer" href="feed.xml">
+<link rel="alternate" type="application/feed+json" title="Steven Schaefer" href="feed.json">
+<script src="helia/theme-version.js"></script>
+<script src="theme/folio-early.js"></script>
+<link rel="stylesheet" href="helia/theme.css">
+<link rel="stylesheet" href="helia/highlight.css">
+<link rel="stylesheet" href="helia/search.css">
+<link rel="stylesheet" href="theme/katex.css">
+<link rel="stylesheet" href="theme/recipe.css">
+<link rel="stylesheet" href="theme/site.css">
+<link rel="stylesheet" href="theme/folio.css">
+<script defer src="helia/runtime.js"></script>
+<script defer src="helia/search.js"></script>
+<script defer src="theme/glyphcraft.js"></script>
+<script defer src="theme/glyphart.js"></script>
+<script defer src="theme/glyphgen.js"></script>
+<script defer src="theme/ornament.js"></script>
+<script defer src="theme/folio.js"></script>
+<script defer src="theme/portrait.js"></script>
+<script type="application/json" id="helia-widgets">{"helia-cite-formats":"widgets/helia-cite-formats-a3294ac7.js"}</script>
+<link rel="modulepreload" href="widgets/helia-cite-formats-a3294ac7.js">
+<script type="module" src="widgets/runtime.js"></script>
+</head>
+<body>
+<nav class="helia-topbar"><a class="helia-home" href="home.html">Steven Schaefer</a><ul class="helia-nav-links"><li><a href="stevenschaefer.html">About Me</a></li><li><a href="research.html">Research</a></li><li><a href="new.html">New</a></li></ul><button type="button" class="helia-search-button" aria-label="Search (/ or Ctrl+K)" aria-haspopup="dialog"><span class="helia-search-icon">⌕</span><span class="helia-search-label">Search</span><kbd class="helia-search-key">/</kbd></button></nav>
+<div class="helia-page" data-kind="reference">
+<article class="helia-article">
+<header class="helia-header" data-entry="demedeiros-2026-verifying" data-kind="reference">
+<h2 class="helia-heading"><span class="helia-taxon">Reference.</span> Verifying Exact Samplers for Continuous Distributions with a Discrete Program Logic</h2>
+<div class="helia-meta"><span class="helia-author"><a class="helia-entry-link" href="markusdemedeiros.html" data-entry="markusdemedeiros">Markus de Medeiros</a>, <a class="helia-entry-link" href="pumingliu.html" data-entry="pumingliu">Puming Liu</a>, <a class="helia-entry-link" href="kwingheili.html" data-entry="kwingheili">Kwing Hei Li</a>, <a class="helia-entry-link" href="alejandroaguirre.html" data-entry="alejandroaguirre">Alejandro Aguirre</a>, <a class="helia-entry-link" href="larsbirkedal.html" data-entry="larsbirkedal">Lars Birkedal</a>, <a class="helia-entry-link" href="josephtassarotti.html" data-entry="josephtassarotti">Joseph Tassarotti</a></span> · <span class="helia-byline"><a class="helia-entry-link" href="lics.html" data-entry="lics">LICS</a> · 2026</span> · <span class="helia-tags"><span class="helia-tag" data-tag="probabilistic"><a class="helia-entry-link" href="tag-probabilistic.html" data-entry="tag-probabilistic">probabilistic</a></span></span> · <span class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.4230/lipics.lics.2026.71">DOI</a></span> · <span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/2605.13526">arXiv</a></span></span></div>
+</header>
+<div class="helia-body">
+<div class="helia-abstract">Most implementations of sampling algorithms for continuous distributions use floating-point numbers, which introduce round-off errors and approximations. These errors can be difficult to analyze, and can cause security issues when used in algorithms for differential privacy. An alternative is to use exact sampling algorithms based on computable reals, which can lazily generate the digits of a continuous sample to arbitrary precision. However, these algorithms are intricate, and implementing and using them involves a combination of semantically challenging language features, such as probabilistic choice, higher-order functions, and dynamically-allocated mutable state. In this paper we present Continuous-Eris, a higher-order separation logic for verifying the correctness of exact sampling algorithms for computable distributions. To demonstrate Continuous-Eris, we verify the correctness of computable samplers for the uniform, Gaussian, and Laplace distributions, as well as a library for exact real arithmetic for working with generated samples. All of the results in this paper have been verified in the Rocq proof assistant.</div>
+</div>
+<div class="helia-cite helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><h3 class="helia-heading">Cite</h3>
+</summary>
+<div class="helia-group-body">
+<div class="helia-widget" data-widget="helia-cite-formats" data-props="{&quot;key&quot;:&quot;demedeiros-2026-verifying&quot;,&quot;bibtex&quot;:&quot;@inproceedings{demedeiros-2026-verifying,\n  doi = {10.4230/LIPICS.LICS.2026.71},\n  url = {https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.LICS.2026.71},\n  author = {de Medeiros, Markus and Liu, Puming and Li, Kwing Hei and Aguirre, Alejandro and Birkedal, Lars and Tassarotti, Joseph},\n  keywords = {Probabilistic Programming, Separation Logic, Formal Verification, Theory of computation → Logic and verification, Theory of computation → Program verification, Theory of computation → Probabilistic computation},\n  language = {en},\n  title = {Verifying Exact Samplers for Continuous Distributions with a Discrete Program Logic},\n  volume = {380},\n  pages = {71:1-71:28},\n  publisher = {Schloss Dagstuhl – Leibniz-Zentrum für Informatik},\n  year = {2026},\n  copyright = {Creative Commons Attribution 4.0 International license},\n  booktitle = {41st Annual Symposium on Logic in Computer Science (LICS 2026)}\n}&quot;,&quot;bib-file&quot;:&quot;demedeiros-2026-verifying.bib&quot;,&quot;hayagriva&quot;:&quot;demedeiros-2026-verifying:\n  type: article\n  title: Verifying Exact Samplers for Continuous Distributions with a Discrete Program Logic\n  author:\n  - name: Medeiros\n    given-name: Markus\n    prefix: de\n  - Liu, Puming\n  - Li, Kwing Hei\n  - Aguirre, Alejandro\n  - Birkedal, Lars\n  - Tassarotti, Joseph\n  date: 2026\n  page-range: 71:1-71:28\n  url: https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.LICS.2026.71\n  serial-number:\n    doi: 10.4230/LIPICS.LICS.2026.71\n  parent:\n    type: proceedings\n    title: 41st Annual Symposium on Logic in Computer Science (LICS 2026)\n    publisher: Schloss Dagstuhl – Leibniz-Zentrum für Informatik\n    volume: 380\n&quot;,&quot;yml-file&quot;:&quot;demedeiros-2026-verifying.yml&quot;}"><div class="helia-cite-key" data-copy="@demedeiros-2026-verifying" data-copy-label="citation key"><span class="helia-bib-key">Cite as</span> <code class="helia-raw-inline">@demedeiros-2026-verifying</code> (helia, typst) · <code class="helia-raw-inline">\cite{demedeiros-2026-verifying}</code> (LaTeX)</div>
+<div class="helia-cite-format helia-collapsible" data-format="bibtex" data-copy="true" data-copy-label="BibTeX">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">BibTeX</span></summary>
+<div class="helia-group-body">
+<details class="helia-code" open><summary class="helia-code-summary"><span class="helia-code-lang">bibtex</span> · <span class="helia-code-lines">14 lines</span></summary><pre class="helia-raw"><code class="language-bibtex"><span class="hl-text hl-bibtex"><span class="hl-meta hl-entry hl-braces hl-bibtex"><span class="hl-keyword hl-other hl-entry-type hl-bibtex"><span class="hl-punctuation hl-definition hl-keyword hl-bibtex">@</span>inproceedings</span><span class="hl-punctuation hl-section hl-entry hl-begin hl-bibtex">{</span><span class="hl-entity hl-name hl-type hl-entry-key hl-bibtex">demedeiros-2026-verifying</span>,
+  <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">doi</span> <span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span> <span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>10.4230/LIPICS.LICS.2026.71<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>,
+  <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">url</span> <span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span> <span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.LICS.2026.71<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>,
+  <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">author</span> <span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span> <span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>de Medeiros, Markus and Liu, Puming and Li, Kwing Hei and Aguirre, Alejandro and Birkedal, Lars and Tassarotti, Joseph<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>,
+  <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">keywords</span> <span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span> <span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>Probabilistic Programming, Separation Logic, Formal Verification, Theory of computation → Logic and verification, Theory of computation → Program verification, Theory of computation → Probabilistic computation<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>,
+  <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">language</span> <span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span> <span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>en<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>,
+  <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">title</span> <span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span> <span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>Verifying Exact Samplers for Continuous Distributions with a Discrete Program Logic<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>,
+  <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">volume</span> <span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span> <span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>380<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>,
+  <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">pages</span> <span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span> <span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>71:1-71:28<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>,
+  <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">publisher</span> <span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span> <span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>Schloss Dagstuhl – Leibniz-Zentrum für Informatik<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>,
+  <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">year</span> <span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span> <span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>2026<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>,
+  <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">copyright</span> <span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span> <span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>Creative Commons Attribution 4.0 International license<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>,
+  <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">booktitle</span> <span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span> <span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>41st Annual Symposium on Logic in Computer Science (LICS 2026)<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span>
+</span><span class="hl-punctuation hl-section hl-entry hl-end hl-bibtex">}</span></span></span></code></pre></details>
+</div>
+</details>
+</div>
+<div class="helia-cite-format helia-collapsible" data-format="hayagriva" data-copy="true" data-copy-label="hayagriva YAML">
+<details>
+<summary class="helia-group-summary"><span class="helia-group-title">hayagriva YAML (typst)</span></summary>
+<div class="helia-group-body">
+<details class="helia-code" open><summary class="helia-code-summary"><span class="helia-code-lang">yaml</span> · <span class="helia-code-lines">22 lines</span></summary><pre class="helia-raw"><code class="language-yaml"><span class="hl-source hl-yaml"><span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">demedeiros-2026-verifying</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">type</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">article</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">title</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Verifying Exact Samplers for Continuous Distributions with a Discrete Program Logic</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">author</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">name</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Medeiros</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">given-name</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Markus</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">prefix</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">de</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Liu, Puming</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Li, Kwing Hei</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Aguirre, Alejandro</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Birkedal, Lars</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Tassarotti, Joseph</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">date</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-constant hl-numeric hl-integer hl-decimal hl-yaml">2026</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">page-range</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">71:1-71:28</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">url</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.LICS.2026.71</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">serial-number</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">doi</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">10.4230/LIPICS.LICS.2026.71</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">parent</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">type</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">proceedings</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">title</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">41st Annual Symposium on Logic in Computer Science (LICS 2026)</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">publisher</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Schloss Dagstuhl – Leibniz-Zentrum für Informatik</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">volume</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-constant hl-numeric hl-integer hl-decimal hl-yaml">380</span>
+</span></code></pre></details>
+</div>
+</details>
+</div>
+<div class="helia-cite-files">Download: <a class="helia-link" href="demedeiros-2026-verifying.bib">demedeiros-2026-verifying.bib</a> · <a class="helia-link" href="demedeiros-2026-verifying.yml">demedeiros-2026-verifying.yml</a></div>
+</div>
+</div>
+</details>
+</div>
+<div class="helia-reference-cites helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">Cites 54 works (9 here)</span></summary>
+<div class="helia-group-body">
+<div class="helia-reference-cites-here helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">With notes (9)</span></summary>
+<div class="helia-group-body">
+<section class="helia-transclusion" data-entry="marionneau-2026-modular" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="marionneau-2026-modular"><span class="helia-title">Modular Specifications and Implementations of Random Samplers in Higher-Order Separation Logic</span>&nbsp;<a class="helia-slug" href="marionneau-2026-modular.html">marionneau-2026-modular</a><span class="helia-byline"><span class="helia-entry-link" data-entry="cpp">CPP</span> · 2026</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="marionneau-2026-modular" data-kind="reference">
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/3779031.3779109">DOI</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/conf/cpp/MarionneauB0B26">pldb</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="li-2025-modular" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="li-2025-modular"><span class="helia-title">Modular Reasoning about Error Bounds for Concurrent Probabilistic Programs</span>&nbsp;<a class="helia-slug" href="li-2025-modular.html">li-2025-modular</a><span class="helia-byline"><span class="helia-entry-link" data-entry="icfp">ICFP</span> · 2025</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="li-2025-modular" data-kind="reference">
+<div class="helia-abstract">We present Coneris, the first higher-order concurrent separation logic for reasoning about error probability bounds of higher-order concurrent probabilistic programs with higher-order state. To support modular reasoning about concurrent (non-probabilistic) program modules, state-of-the-art program logics internalize the classic notion of linearizability within the logic through the concept of logical atomicity . In Coneris, we extend this idea to probabilistic concurrent program modules by capturing a novel notion of randomized logical atomicity within the logic. To do so, Coneris utilizes presampling tapes and a novel probabilistic update modality to describe how state is changed probabilistically at linearization points. We demonstrate this approach by means of smaller synthetic examples and larger case studies. All of the presented results, including the meta-theory, have been mechanized in the Rocq prover and the Iris separation logic framework.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="pdf-url"><a class="helia-link helia-external" href="https://dl.acm.org/doi/pdf/10.1145/3747514">PDF</a></span> · <span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/3747514">DOI</a></span> · <span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/2503.04512">arXiv</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/journals/pacmpl/Li0GHTB25">pldb</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="demedeiros-2025-verified" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="demedeiros-2025-verified"><span class="helia-title">Verified Foundations for Differential Privacy</span>&nbsp;<a class="helia-slug" href="demedeiros-2025-verified.html">demedeiros-2025-verified</a><span class="helia-byline"><span class="helia-entry-link" data-entry="pldi">PLDI</span> · 2025</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="demedeiros-2025-verified" data-kind="reference">
+<div class="helia-abstract">Differential privacy (DP) has become the gold standard for privacy-preserving data analysis, but implementing it correctly has proven challenging. Prior work has focused on verifying DP at a high level, assuming either that the foundations are correct or that a perfect source of random noise is available. However, the underlying theory of differential privacy can be very complex and subtle. Flaws in basic mechanisms and random number generation have been a critical source of vulnerabilities in real-world DP systems. In this paper, we present SampCert, the first comprehensive, mechanized foundation for executable implementations of differential privacy. SampCert is written in Lean with over 12,000 lines of proof. It offers a generic and extensible notion of DP, a framework for constructing and composing DP mechanisms, and formally verified implementations of Laplace and Gaussian sampling algorithms. SampCert provides (1) a mechanized foundation for developing the next generation of differentially private algorithms, and (2) mechanically verified primitives that can be deployed in production systems. Indeed, SampCert’s verified algorithms power the DP offerings of Amazon Web Services, demonstrating its real-world impact. SampCert’s key innovations include: (1) A generic DP foundation that can be instantiated for various DP definitions (e.g., pure, concentrated, Rényi DP); (2) formally verified discrete Laplace and Gaussian sampling algorithms that avoid the pitfalls of floating-point implementations; and (3) a simple probability monad and novel proof techniques that streamline the formalization. To enable proving complex correctness properties of DP and random number generation, SampCert makes heavy use of Lean’s extensive Mathlib library, leveraging theorems in Fourier analysis, measure and probability theory, number theory, and topology.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="pdf-url"><a class="helia-link helia-external" href="https://dl.acm.org/doi/pdf/10.1145/3729294">PDF</a></span> · <span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/3729294">DOI</a></span> · <span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/2412.01671">arXiv</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/journals/pacmpl/MedeirosNLKRZJTAT25">pldb</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="haselwarter-2024-tachis" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="haselwarter-2024-tachis"><span class="helia-title">Tachis: Higher-Order Separation Logic with Credits for Expected Costs</span>&nbsp;<a class="helia-slug" href="haselwarter-2024-tachis.html">haselwarter-2024-tachis</a><span class="helia-byline"><span class="helia-entry-link" data-entry="oopsla">OOPSLA</span> · 2024</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="haselwarter-2024-tachis" data-kind="reference">
+<div class="helia-abstract">We present Tachis, a higher-order separation logic to reason about the expected cost of probabilistic programs. Inspired by the uses of time credits for reasoning about the running time of deterministic programs, we introduce a novel notion of probabilistic cost credit. Probabilistic cost credits are a separation logic resource that can be used to pay for the cost of operations in programs, and that can be distributed across all possible branches of sampling instructions according to their weight, thus enabling us to reason about expected cost. The representation of cost credits as separation logic resources gives Tachis a great deal of flexibility and expressivity. In particular, it permits reasoning about amortized expected cost by storing excess credits as potential into data structures to pay for future operations. Tachis further supports a range of cost models, including running time and entropy usage. We showcase the versatility of this approach by applying our techniques to prove upper bounds on the expected cost of a variety of probabilistic algorithms and data structures, including randomized quicksort, hash tables, and meldable heaps. All of our results have been mechanized using Coq, Iris, and the Coquelicot real analysis library.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/3689753">DOI</a></span> · <span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/2405.20083">arXiv</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/journals/pacmpl/HaselwarterLMG024">pldb</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="aguirre-2024-error" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="aguirre-2024-error"><span class="helia-title">Error Credits: Resourceful Reasoning about Error Bounds for Higher-Order Probabilistic Programs</span>&nbsp;<a class="helia-slug" href="aguirre-2024-error.html">aguirre-2024-error</a><span class="helia-byline"><span class="helia-entry-link" data-entry="icfp">ICFP</span> · 2024</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="aguirre-2024-error" data-kind="reference">
+<div class="helia-abstract">Probabilistic programs often trade accuracy for efficiency, and thus may, with a small probability, return an incorrect result. It is important to obtain precise bounds for the probability of these errors, but existing verification approaches have limitations that lead to error probability bounds that are excessively coarse, or only apply to first-order programs. In this paper we present Eris, a higher-order separation logic for proving error probability bounds for probabilistic programs written in an expressive higher-order language. Our key novelty is the introduction of error credits , a separation logic resource that tracks an upper bound on the probability that a program returns an erroneous result. By representing error bounds as a resource, we recover the benefits of separation logic, including compositionality, modularity, and dependency between errors and program terms, allowing for more precise specifications. Moreover, we enable novel reasoning principles such as expectation-preserving error composition, amortized error reasoning, and error induction. We illustrate the advantages of our approach by proving amortized error bounds on a range of examples, including collision probabilities in hash functions, which allow us to write more modular specifications for data structures that use them as clients. We also use our logic to prove correctness and almost-sure termination of rejection sampling algorithms. All of our results have been mechanized in the Coq proof assistant using the Iris separation logic framework and the Coquelicot real analysis library.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/3674635">DOI</a></span> · <span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/2404.14223">arXiv</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/journals/pacmpl/0001HMLGTB24">pldb</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="li-2023-lilac" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="li-2023-lilac"><span class="helia-title">Lilac: A Modal Separation Logic for Conditional Probability</span>&nbsp;<a class="helia-slug" href="li-2023-lilac.html">li-2023-lilac</a><span class="helia-byline"><span class="helia-entry-link" data-entry="pldi">PLDI</span> · 2023</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="li-2023-lilac" data-kind="reference">
+<div class="helia-abstract">We present Lilac, a separation logic for reasoning about probabilistic programs where separating conjunction captures probabilistic independence. Inspired by an analogy with mutable state where sampling corresponds to dynamic allocation, we show how probability spaces over a fixed, ambient sample space appear to be the natural analogue of heap fragments, and present a new combining operation on them such that probability spaces behave like heaps and measurability of random variables behaves like ownership. This combining operation forms the basis for our model of separation, and produces a logic with many pleasant properties. In particular, Lilac has a frame rule identical to the ordinary one, and naturally accommodates advanced features like continuous random variables and reasoning about quantitative properties of programs. Then we propose a new modality based on disintegration theory for reasoning about conditional probability. We show how the resulting modal logic validates examples from prior work, and give a formal verification of an intricate weighted sampling algorithm whose correctness depends crucially on conditional independence structure.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="pdf-url"><a class="helia-link helia-external" href="https://dl.acm.org/doi/pdf/10.1145/3591226">PDF</a></span> · <span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/3591226">DOI</a></span> · <span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/2304.01339">arXiv</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/journals/pacmpl/Li0H23">pldb</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="vakar-2019-a" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="vakar-2019-a"><span class="helia-title">A domain theory for statistical probabilistic programming</span>&nbsp;<a class="helia-slug" href="vakar-2019-a.html">vakar-2019-a</a><span class="helia-byline"><span class="helia-entry-link" data-entry="popl">POPL</span> · 2019</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="vakar-2019-a" data-kind="reference">
+<div class="helia-abstract">We give an adequate denotational semantics for languages with recursive higher-order types, continuous probability distributions, and soft constraints. These are expressive languages for building Bayesian models of the kinds used in computational statistics and machine learning. Among them are untyped languages, similar to Church and WebPPL, because our semantics allows recursive mixed-variance datatypes. Our semantics justifies important program equivalences including commutativity. Our new semantic model is based on ‘quasi-Borel predomains’. These are a mixture of chain-complete partial orders (cpos) and quasi-Borel spaces. Quasi-Borel spaces are a recent model of probability theory that focuses on sets of admissible random elements. Probability is traditionally treated in cpo models using probabilistic powerdomains, but these are not known to be commutative on any class of cpos with higher order functions. By contrast, quasi-Borel predomains do support both a commutative probabilistic powerdomain and higher-order functions. As we show, quasi-Borel predomains form both a model of Fiore’s axiomatic domain theory and a model of Kock’s synthetic measure theory.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="pdf-url"><a class="helia-link helia-external" href="https://dl.acm.org/doi/pdf/10.1145/3290349">PDF</a></span> · <span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/3290349">DOI</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/journals/pacmpl/VakarKS19">pldb</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="jung_etal_iris_ground_up_2018" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="jung_etal_iris_ground_up_2018"><span class="helia-title">Iris from the ground up: A modular foundation for higher-order concurrent separation logic</span>&nbsp;<a class="helia-slug" href="jung_etal_iris_ground_up_2018.html">jung_etal_iris_ground_up_2018</a><span class="helia-byline"><span class="helia-entry-link" data-entry="jfp">JFP</span> · 2018</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="jung_etal_iris_ground_up_2018" data-kind="reference">
+<div class="helia-abstract">Iris is a framework for higher-order concurrent separation logic, which has been implemented in the Coq proof assistant and deployed very effectively in a wide variety of verification projects. Iris was designed with the express goal of simplifying and consolidating the foundations of modern separation logics, but it has evolved over time, and the design and semantic foundations of Iris itself have yet to be fully written down and explained together properly in one place. Here, we attempt to fill this gap, presenting a reasonably complete picture of the latest version of Iris (version 3.1), from first principles and in one coherent narrative.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="pdf-url"><a class="helia-link helia-external" href="https://www.cambridge.org/core/services/aop-cambridge-core/content/view/26301B518CE2C52796BFA12B8BAB5B5F/S0956796818000151a.pdf/div-class-title-iris-from-the-ground-up-a-modular-foundation-for-higher-order-concurrent-separation-logic-div.pdf">PDF</a></span> · <span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1017/s0956796818000151">DOI</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/journals/jfp/JungKJBBD18">pldb</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="heunen-2017-a" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="heunen-2017-a"><span class="helia-title">A convenient category for higher-order probability theory</span>&nbsp;<a class="helia-slug" href="heunen-2017-a.html">heunen-2017-a</a><span class="helia-byline"><span class="helia-entry-link" data-entry="lics">LICS</span> · 2017</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="heunen-2017-a" data-kind="reference">
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1109/lics.2017.8005137">DOI</a></span> · <span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/1701.02547">arXiv</a></span></div>
+</div>
+</div>
+</details>
+</section>
+</div>
+</details>
+</div>
+<div class="helia-reference-cites-away helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">External (45)</span></summary>
+<div class="helia-group-body">
+<ul>
+<li><a class="helia-link helia-external" href="https://doi.org/10.5281/zenodo.20114732">Artifact for "Verifying exact samplers for continuous distributions with a discrete program logic"</a> (2026)</li>
+<li><a class="helia-link helia-external" href="https://arxiv.org/abs/2605.13526">Verifying exact samplers for continuous distributions with a discrete program logic</a> (2026)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3776696">Bayesian separation logic: A logical foundation and axiomatic semantics for probabilistic programming</a> (2026)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3720429">Foundations for deductive verification of continuous probabilistic programs: From lebesgue to riemann and back</a> (2025)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3704877">Approximate relational reasoning for higher-order probabilistic programs</a> (2025)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3656412">Bit blasting probabilistic programs</a> (2024)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3632868">Asynchronous probabilistic couplings in higher-order separation logic</a> (2024)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3591220">Formally verified samplers from probabilistic programs with loops and conditioning</a> (2023)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3571239">Affine monads and lazy structures for bayesian programming</a> (2023)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1109/lics56636.2023.10175739">ωpap spaces: Reasoning denotationally about higher-order, recursive probabilistic and differentiable programs</a> (2023)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3519939.3523721">Guaranteed bounds for posterior inference in universal probabilistic programming</a> (2022)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-030-99461-7_4">Program logic for higher-order probabilistic programs in isabelle/hol</a> (2022)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3385412.3386037">Towards an API for the real numbers</a> (2020)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3371125">Semantics of higher-order probabilistic programs with conditioning</a> (2020)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3321699">On the computability of conditional probability</a> (2019)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-030-17184-1_1">Time Credits and Time Receipts in Iris</a> (2019)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3290351">Formal verification of higher-order probabilistic programs: reasoning about approximation, convergence, bayesian inference, and optimization</a> (2019)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3158147">Measurable cones and stable, measurable functions: A model for probabilistic higher-order programming</a> (2018)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3236782">Contextual equivalence for a probabilistic language with continuous random variables and recursion</a> (2018)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.4230/lipics.icalp.2016.107">A Program Logic for Union Bounds</a> (2016)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/2951913.2951942">A lambda-calculus foundation for universal probabilistic programming</a> (2016)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-662-49498-1_14">An application of computable distributions to the semantics of probabilistic programming languages</a> (2016)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/2710016">Sampling exactly from the normal distribution</a> (2016)</li>
+<li>Approximate relational hoare logic for continuous random samplings (2016)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/s11786-014-0181-1">Coquelicot: A user-friendly library of real analysis for Coq</a> (2015)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/2603088.2603102">A domain-theoretic approach to brownian motion and general continuous stochastic processes</a> (2014)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1561/0400000042">The algorithmic foundations of differential privacy</a> (2014)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1016/j.apal.2011.06.011">Computable de finetti measures</a> (2012)</li>
+<li>On significance of the least significant bits for differential privacy (2012)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1016/j.ic.2008.05.003">A computable approach to measure and integration theory</a> (2009)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1016/j.ic.2008.12.009">Computability of probability measures and martin-löf randomness over metric spaces</a> (2009)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1016/j.entcs.2008.03.027">Implementing real numbers with RZ</a> (2007)</li>
+<li>Arbitrary precision real arithmetic: design and algorithms (2003)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/3-540-45335-0_14">The iRRAM: Exact arithmetic in C++</a> (2000)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/bfb0055795">Lazy functional algorithms for exact real functionals</a> (1998)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1109/lics.1997.614952">Semantics of exact real arithmetic</a> (1997)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1016/0304-3975(95)00250-2">PCF extended with real numbers</a> (1996)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1006/inco.1996.0046">Real number computability and domain theory</a> (1996)</li>
+<li>Probability and Measure (1995)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/93542.93558">Optimizing programs over the constructive reals</a> (1990)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1109/12.57047">Exact real computer arithmetic with continued fractions</a> (1990)</li>
+<li>A categorical approach to probability theory (1982)</li>
+<li>Computing with infinite objects (1980)</li>
+<li>Various techniques used in connection with random digits (1951)</li>
+<li>Partially-sampled random numbers for accurate sampling of continuous distributions</li>
+</ul>
+</div>
+</details>
+</div>
+</div>
+</details>
+</div>
+</article>
+<div class="helia-identity"><span class="helia-id">demedeiros-2026-verifying</span> <span class="helia-kind">reference</span> <span class="helia-path">entries/refs/demedeiros-2026-verifying/demedeiros-2026-verifying.hel</span></div>
+</div>
+</body>
+</html>

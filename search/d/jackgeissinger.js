@@ -1,0 +1,1 @@
+heliaSearchData("d/jackgeissinger",{"id":"jackgeissinger","title":"Jack Geissinger","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"jackgeissinger.html","headings":[],"body":""});

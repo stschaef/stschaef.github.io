@@ -1,0 +1,1 @@
+heliaSearchData("d/li-2021-deriving",{"id":"li-2021-deriving","title":"Deriving efficient program transformations from rewrite rules","kind":"reference","tags":["compilation"],"authors":["Andrew W. Appel","John Li"],"venue":["ICFP","International Conference on Functional Programming"],"date":null,"url":"li-2021-deriving.html","headings":[],"body":""});

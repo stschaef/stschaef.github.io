@@ -1,0 +1,1 @@
+heliaSearchData("d/university-of-california-santa-barbara",{"id":"university-of-california-santa-barbara","title":"University of California, Santa Barbara","kind":"institution","tags":[],"authors":[],"venue":[],"date":null,"url":"university-of-california-santa-barbara.html","headings":[],"body":""});

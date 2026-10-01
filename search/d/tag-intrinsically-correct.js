@@ -1,0 +1,1 @@
+heliaSearchData("d/tag-intrinsically-correct",{"id":"tag-intrinsically-correct","title":"intrinsically-correct","kind":"tag","tags":[],"authors":[],"venue":[],"date":null,"url":"tag-intrinsically-correct.html","headings":[],"body":""});

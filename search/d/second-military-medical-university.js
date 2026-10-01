@@ -1,0 +1,1 @@
+heliaSearchData("d/second-military-medical-university",{"id":"second-military-medical-university","title":"Second Military Medical University","kind":"institution","tags":[],"authors":[],"venue":[],"date":null,"url":"second-military-medical-university.html","headings":[],"body":""});

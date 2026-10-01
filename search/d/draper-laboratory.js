@@ -1,0 +1,1 @@
+heliaSearchData("d/draper-laboratory",{"id":"draper-laboratory","title":"Draper Laboratory","kind":"institution","tags":[],"authors":[],"venue":[],"date":null,"url":"draper-laboratory.html","headings":[],"body":""});

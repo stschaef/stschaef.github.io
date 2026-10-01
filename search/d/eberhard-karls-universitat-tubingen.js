@@ -1,0 +1,1 @@
+heliaSearchData("d/eberhard-karls-universitat-tubingen",{"id":"eberhard-karls-universitat-tubingen","title":"Eberhard-Karls-Universität Tübingen","kind":"institution","tags":[],"authors":[],"venue":[],"date":null,"url":"eberhard-karls-universitat-tubingen.html","headings":[],"body":""});

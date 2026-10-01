@@ -1,0 +1,1 @@
+heliaSearchData("d/viktorvafeiadis",{"id":"viktorvafeiadis","title":"Viktor Vafeiadis","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"viktorvafeiadis.html","headings":[],"body":""});

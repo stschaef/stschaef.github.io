@@ -1,0 +1,1 @@
+heliaSearchData("d/shulman-2023-lnl",{"id":"shulman-2023-lnl","title":"LNL polycategories and doctrines of linear logic","kind":"reference","tags":["linear-logic"],"authors":["Michael Shulman"],"venue":["LMCS","Logical Methods in Computer Science"],"date":null,"url":"shulman-2023-lnl.html","headings":[],"body":""});

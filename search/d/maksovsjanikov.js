@@ -1,0 +1,1 @@
+heliaSearchData("d/maksovsjanikov",{"id":"maksovsjanikov","title":"Maks Ovsjanikov","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"maksovsjanikov.html","headings":[],"body":""});

@@ -1,0 +1,1 @@
+heliaSearchData("d/arthurazevedodeamorim",{"id":"arthurazevedodeamorim","title":"Arthur Azevedo de Amorim","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"arthurazevedodeamorim.html","headings":[],"body":""});

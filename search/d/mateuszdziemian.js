@@ -1,0 +1,1 @@
+heliaSearchData("d/mateuszdziemian",{"id":"mateuszdziemian","title":"Mateusz Dziemian","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"mateuszdziemian.html","headings":[],"body":""});

@@ -1,1 +1,1 @@
-heliaSearchData("t/hy",{"hyland":[344,32,80,32,164,128],"hylomorphism":[208,2,217,161,1,162,353,2],"hyperdoctrine":[142,128],"hypotenuse":[624,1],"hypothesis":[326,1,59,2,180,1]});
+heliaSearchData("t/hy",{"hybrid":[870,128,658,160,342,128,1,128,721,160],"hybridprover":[1654,160],"hyland":[1353,32,313,32,731,128],"hylomorphism":[822,2,795,128,50,161,1,162,1391,2],"hyperdoctrine":[508,128,1,128],"hypotenuse":[2599,1],"hypothesis":[1323,1,156,2,790,1],"hyung":[529,32,1498,128]});

@@ -1,0 +1,1 @@
+heliaSearchData("d/carette-2026-free",{"id":"carette-2026-free","title":"Free quantum computing","kind":"reference","tags":["quantum"],"authors":["Amr Sabry","Chris Heunen","Jacques Carette","Neil J. Ross","Robin Kaarsgaard"],"venue":["PNAS","Proceedings of the National Academy of Sciences"],"date":null,"url":"carette-2026-free.html","headings":[],"body":""});

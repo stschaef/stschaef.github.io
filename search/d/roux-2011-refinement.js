@@ -1,0 +1,1 @@
+heliaSearchData("d/roux-2011-refinement",{"id":"roux-2011-refinement","title":"Refinement Types as Higher-Order Dependency Pairs","kind":"reference","tags":["refinement-types"],"authors":["Cody Roux"],"venue":["RTA","Rewriting Techniques and Applications"],"date":null,"url":"roux-2011-refinement.html","headings":[],"body":""});

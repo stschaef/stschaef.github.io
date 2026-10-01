@@ -1,0 +1,1 @@
+heliaSearchData("d/omar-2018-reasonably",{"id":"omar-2018-reasonably","title":"Reasonably programmable literal notation","kind":"reference","tags":["parsing"],"authors":["Cyrus Omar","Jonathan Aldrich"],"venue":["ICFP","International Conference on Functional Programming"],"date":null,"url":"omar-2018-reasonably.html","headings":[],"body":""});

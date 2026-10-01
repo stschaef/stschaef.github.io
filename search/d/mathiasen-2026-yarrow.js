@@ -1,0 +1,1 @@
+heliaSearchData("d/mathiasen-2026-yarrow",{"id":"mathiasen-2026-yarrow","title":"Yarrow: Reconciling Effect Handlers and Region-Based Memory Management","kind":"reference","tags":["effects"],"authors":["Amin Timany","Anders Alnor Mathiasen","Lars Birkedal"],"venue":["arXiv"],"date":null,"url":"mathiasen-2026-yarrow.html","headings":[],"body":""});

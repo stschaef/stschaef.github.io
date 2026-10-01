@@ -1,0 +1,1 @@
+heliaSearchData("d/kazimierzkuratowski",{"id":"kazimierzkuratowski","title":"Kazimierz Kuratowski","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"kazimierzkuratowski.html","headings":[],"body":""});

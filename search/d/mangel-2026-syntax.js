@@ -1,0 +1,1 @@
+heliaSearchData("d/mangel-2026-syntax",{"id":"mangel-2026-syntax","title":"Syntax and semantics of focalisation with relative monads and comonads","kind":"reference","tags":["effects","focusing"],"authors":["Éléonore Mangel","Guillaume Munch-Maccagnoni","Paul-André Melliès"],"venue":["arXiv"],"date":null,"url":"mangel-2026-syntax.html","headings":[],"body":""});

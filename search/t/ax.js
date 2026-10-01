@@ -1,1 +1,1 @@
-heliaSearchData("t/ax",{"axiom":[302,2,22,1],"axiomatic":[304,128],"axiomatization":[390,128,17,128],"axiomatize":[886,1]});
+heliaSearchData("t/ax",{"ax":[1279,32],"axel":[676,32,721,128],"axiom":[1248,2,73,1],"axiomatic":[808,128,441,160,11,128,4,128,36,128,1,128,962,128],"axiomatisation":[3166,128],"axiomatization":[1488,128,102,128,459,128],"axiomatize":[3510,1],"axsl":[2263,128]});

@@ -1,0 +1,1 @@
+heliaSearchData("d/indiana-university-indianapolis",{"id":"indiana-university-indianapolis","title":"Indiana University Indianapolis","kind":"institution","tags":[],"authors":[],"venue":[],"date":null,"url":"indiana-university-indianapolis.html","headings":[],"body":""});

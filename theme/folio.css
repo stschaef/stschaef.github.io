@@ -17,14 +17,20 @@
 .helia-home-links a[href*="mathstodon"], .helia-home-links a[href*="mastodon"] { --icon: url("icon-mastodon.svg"); }
 .helia-home-links a[href*="orcid.org"] { --icon: url("icon-orcid.svg"); }
 /* a kind's link fields (@base/template) that name an account: its logo before the handle */
-.helia-entry-link:is([data-field="github"], [data-field="mastodon"], [data-field="orcid"]) a.helia-link::after { content: none !important; }
-.helia-entry-link:is([data-field="github"], [data-field="mastodon"], [data-field="orcid"]) a.helia-link::before {
+.helia-entry-link:is([data-field="github"], [data-field="mastodon"], [data-field="orcid"], [data-field="scholar"], [data-field="dblp"]) a.helia-link::after,
+.helia-meta .helia-nlab a.helia-link::after { content: none !important; }
+.helia-entry-link:is([data-field="github"], [data-field="mastodon"], [data-field="orcid"], [data-field="scholar"], [data-field="dblp"]) a.helia-link::before,
+.helia-meta .helia-nlab a.helia-link::before {
   content: ""; display: inline-block; width: 1.05em; height: 1.05em; vertical-align: -0.16em; margin-right: 0.35em;
   background: currentColor; -webkit-mask: var(--icon) center / contain no-repeat; mask: var(--icon) center / contain no-repeat;
 }
 .helia-entry-link[data-field="github"] { --icon: url("icon-github.svg"); }
 .helia-entry-link[data-field="mastodon"] { --icon: url("icon-mastodon.svg"); }
 .helia-entry-link[data-field="orcid"] { --icon: url("icon-orcid.svg"); }
+.helia-entry-link[data-field="scholar"] { --icon: url("icon-scholar.svg"); }
+.helia-entry-link[data-field="dblp"] { --icon: url("icon-dblp.svg"); }
+/* the nLab (`nlab:`): its leaves, as a silhouette in the text colour like the other logos */
+.helia-meta .helia-nlab { --icon: url("icon-nlab.png"); }
 
 :root, :root:not([data-theme="__folio"]) {
   color-scheme: light;
@@ -71,8 +77,29 @@ a { text-decoration-color: var(--helia-link-decoration); text-underline-offset: 
 .helia-taxon { top: .45rem; font-family: var(--head-font); font-size: .8rem; font-variant: small-caps; letter-spacing: .12em; color: var(--accent); font-weight: 500; text-transform: none; }
 .helia-meta { top: 1.7rem; font-size: 0; }
 .helia-meta .helia-date { font-size: .95rem; font-style: italic; color: var(--muted); }
-.helia-meta > :not(.helia-date):not(.folio-id):not(.helia-byline):not(.helia-author):not(.helia-entry-links) {
+.helia-meta > :not(.helia-date):not(.folio-id):not(.helia-byline):not(.helia-author):not(.helia-entry-links):not(.helia-tags):not(.helia-nlab) {
   display: none !important; }
+/* the note's tags, after its id and in the id's monospace: quiet, each a link to its tag page */
+.helia-meta > .helia-tags { display: inline-block !important; margin-left: 0 !important; font-family: var(--helia-font-mono, monospace);
+  font-size: .78rem; color: var(--muted); }
+.helia-meta .helia-tag { display: inline; padding: 0; margin: 0 .9em 0 0; background: none; border: 0; border-radius: 0;
+  font-size: inherit; line-height: inherit; color: inherit; }
+.helia-meta .helia-tag:last-child { margin-right: 0; }
+/* an outside article on the same subject (`nlab:`), beside the id and the date */
+.helia-meta > .helia-nlab { display: inline !important; font-size: .95rem; font-style: italic; color: var(--muted); }
+.helia-meta > .helia-nlab::before { content: "·"; margin: 0 .45em; font-style: normal; }
+/* ids and tags never break inside; on a narrow screen the row wraps between them */
+/* the tags take a line of their own, under the id and the date */
+.helia-meta:has(.helia-tags) { flex-wrap: wrap; row-gap: .3rem; }
+.helia-meta > .helia-tags { flex-basis: 100%; order: 10; }
+.helia-meta .folio-id, .helia-meta .helia-tag { white-space: nowrap; hyphens: none; -webkit-hyphens: none; }
+.helia-meta .helia-tag a { color: inherit; text-decoration: none; }
+.helia-meta .helia-tag a:hover { color: var(--accent); }
+/* `#tag`, as search shows tags, so a tag never reads as an id (`[id]`) */
+.helia-meta .helia-tag::before, .helia-tag-name::before { content: "#"; opacity: .7; }
+/* a tag page's byline: the tag itself, as its chips show it */
+.helia-byline .helia-tag-name, .helia-tag-name { font-family: var(--helia-font-mono, monospace); font-style: normal;
+  font-size: .85em; color: var(--muted); }
 /* a kind's byline (@base/template), led by the authors, stands where the date would */
 .helia-meta:not(:has(.helia-byline)) > .helia-author { display: none !important; }
 .helia-meta .helia-byline, .helia-meta .helia-author { font-size: .95rem; font-style: italic; color: var(--muted); }
@@ -83,7 +110,7 @@ a { text-decoration-color: var(--helia-link-decoration); text-underline-offset: 
    whose byline came out empty (a person with no position) still keeps its links apart */
 .helia-header .helia-meta:is(:has(.helia-byline), :has(.helia-entry-links)) { display: flex !important; flex-direction: column;
   align-items: flex-start !important; }
-.helia-header .helia-meta:is(:has(.helia-byline), :has(.helia-entry-links)) > :is(.helia-author, .helia-byline, .folio-id, .helia-entry-links) {
+.helia-header .helia-meta:is(:has(.helia-byline), :has(.helia-entry-links)) > :is(.helia-author, .helia-byline, .folio-id, .helia-entry-links, .helia-tags) {
   display: block !important; margin-left: 0 !important; }
 .helia-header .helia-meta:is(:has(.helia-byline), :has(.helia-entry-links)) > :is(.helia-author, .helia-byline, .helia-entry-links) {
   margin-top: .3rem !important; }

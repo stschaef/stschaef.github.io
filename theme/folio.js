@@ -1768,7 +1768,7 @@
   "use strict";
   var OPTS = {
     alphabet: "→ ∀ ∃ Σ Π × ⊕ ⊗ ⟦-⟧ ⊸ ⟜ よ ⊤ ⊥ λ β η",
-    decor: 0.25, margins: "geometric", headpiece: "ornate", tailpiece: true,
+    decor: 0.25, margins: "flowers", headpiece: "ornate", tailpiece: true,
     palette: "folk", density: 0.8, size: 0.95, sea: false, live: true,
   };
   var KEY = "folio-ornament", MODES = [["full", "moving"], ["still", "still"], ["off", "off"]];
@@ -1935,7 +1935,7 @@
   var CKEY = "folio-config", config = JSON.parse(JSON.stringify(SITE));
   try { var cs = JSON.parse(localStorage.getItem(CKEY) || "null"); if (cs) for (var ck in cs) config[ck] = cs[ck]; } catch (e) {}
   function saveConfig() { try { localStorage.setItem(CKEY, JSON.stringify(config)); } catch (e) {} }
-  var SKEY = "folio-scheme", scheme = "matyo", PKEY = "folio-pattern", pattern = OPTS.margins;
+  var SKEY = "folio-scheme", scheme = "celadon", PKEY = "folio-pattern", pattern = OPTS.margins;
   try { var ss = localStorage.getItem(SKEY); if (ss && SCHEMES.some(function (x) { return x[0] === ss; })) scheme = ss; } catch (e) {}
   var storedPattern = null;   // may name a library pattern, known only once the library loads
   try { storedPattern = localStorage.getItem(PKEY); if (storedPattern && PATTERNS.some(function (x) { return x[0] === storedPattern; })) pattern = storedPattern; } catch (e) {}

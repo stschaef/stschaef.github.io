@@ -1,0 +1,1 @@
+heliaSearchData("d/st-petersburg-state-polytechnical-university",{"id":"st-petersburg-state-polytechnical-university","title":"St. Petersburg State Polytechnical University","kind":"institution","tags":[],"authors":[],"venue":[],"date":null,"url":"st-petersburg-state-polytechnical-university.html","headings":[],"body":""});

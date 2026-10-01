@@ -1,0 +1,1 @@
+heliaSearchData("d/jang-2024-adjoint",{"id":"jang-2024-adjoint","title":"Adjoint Natural Deduction","kind":"reference","tags":["substructural"],"authors":["Brigitte Pientka","Frank Pfenning","Junyoung Jang","Sophia Roshal"],"venue":["FSCD","Formal Structures for Computation and Deduction"],"date":null,"url":"jang-2024-adjoint.html","headings":[],"body":""});

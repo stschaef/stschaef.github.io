@@ -1,0 +1,1 @@
+heliaSearchData("d/bartomiejbojanowski",{"id":"bartomiejbojanowski","title":"Bartłomiej Bojanowski","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"bartomiejbojanowski.html","headings":[],"body":""});

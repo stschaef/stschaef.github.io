@@ -1,0 +1,1 @@
+heliaSearchData("d/das-2024-on",{"id":"das-2024-on","title":"On the complexity of normalization for the planar λ-calculus","kind":"reference","tags":["complexity"],"authors":["Anupam Das","Damiano Mazza","Lê Thành Dũng Nguyên","Noam Zeilberger"],"venue":["arXiv"],"date":null,"url":"das-2024-on.html","headings":[],"body":""});

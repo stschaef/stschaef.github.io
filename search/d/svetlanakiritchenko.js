@@ -1,0 +1,1 @@
+heliaSearchData("d/svetlanakiritchenko",{"id":"svetlanakiritchenko","title":"Svetlana Kiritchenko","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"svetlanakiritchenko.html","headings":[],"body":""});

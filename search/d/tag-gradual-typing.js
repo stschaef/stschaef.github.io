@@ -1,0 +1,1 @@
+heliaSearchData("d/tag-gradual-typing",{"id":"tag-gradual-typing","title":"gradual-typing","kind":"tag","tags":[],"authors":[],"venue":[],"date":null,"url":"tag-gradual-typing.html","headings":[],"body":""});

@@ -1,0 +1,1 @@
+heliaSearchData("d/indian-institute-of-technology-indore",{"id":"indian-institute-of-technology-indore","title":"Indian Institute of Technology Indore","kind":"institution","tags":[],"authors":[],"venue":[],"date":null,"url":"indian-institute-of-technology-indore.html","headings":[],"body":""});

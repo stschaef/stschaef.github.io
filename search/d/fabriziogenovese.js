@@ -1,0 +1,1 @@
+heliaSearchData("d/fabriziogenovese",{"id":"fabriziogenovese","title":"Fabrizio Genovese","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"fabriziogenovese.html","headings":[],"body":""});

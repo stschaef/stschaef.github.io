@@ -1,0 +1,1 @@
+heliaSearchData("d/stony-brook-university",{"id":"stony-brook-university","title":"Stony Brook University","kind":"institution","tags":[],"authors":[],"venue":[],"date":null,"url":"stony-brook-university.html","headings":[],"body":""});

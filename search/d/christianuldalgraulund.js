@@ -1,0 +1,1 @@
+heliaSearchData("d/christianuldalgraulund",{"id":"christianuldalgraulund","title":"Christian Uldal Graulund","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"christianuldalgraulund.html","headings":[],"body":""});

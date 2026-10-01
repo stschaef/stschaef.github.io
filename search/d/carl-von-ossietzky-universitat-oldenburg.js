@@ -1,0 +1,1 @@
+heliaSearchData("d/carl-von-ossietzky-universitat-oldenburg",{"id":"carl-von-ossietzky-universitat-oldenburg","title":"Carl von Ossietzky Universität Oldenburg","kind":"institution","tags":[],"authors":[],"venue":[],"date":null,"url":"carl-von-ossietzky-universitat-oldenburg.html","headings":[],"body":""});

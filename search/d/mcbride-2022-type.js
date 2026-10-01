@@ -1,0 +1,1 @@
+heliaSearchData("d/mcbride-2022-type",{"id":"mcbride-2022-type","title":"Type systems for programs respecting dimensions","kind":"reference","tags":["dimension-types"],"authors":["Conor McBride","Fredrik Nordvall Forsberg"],"venue":[],"date":null,"url":"mcbride-2022-type.html","headings":[],"body":""});

@@ -1,0 +1,1 @@
+heliaSearchData("d/university-of-delaware",{"id":"university-of-delaware","title":"University of Delaware","kind":"institution","tags":[],"authors":[],"venue":[],"date":null,"url":"university-of-delaware.html","headings":[],"body":""});

@@ -1,0 +1,1 @@
+heliaSearchData("d/university-of-trento",{"id":"university-of-trento","title":"University of Trento","kind":"institution","tags":[],"authors":[],"venue":[],"date":null,"url":"university-of-trento.html","headings":[],"body":""});

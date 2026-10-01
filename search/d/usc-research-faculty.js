@@ -1,0 +1,1 @@
+heliaSearchData("d/usc-research-faculty",{"id":"usc-research-faculty","title":"USC (Research Faculty)","kind":"institution","tags":[],"authors":[],"venue":[],"date":null,"url":"usc-research-faculty.html","headings":[],"body":""});

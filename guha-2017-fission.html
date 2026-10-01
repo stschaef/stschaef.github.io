@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>Fission: Secure Dynamic Code-Splitting for JavaScript</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Ctext y=%22.9em%22 font-size=%2290%22%3E%F0%9F%8C%BB%3C/text%3E%3C/svg%3E">
+<meta name="generator" content="helia">
+<link rel="alternate" type="application/atom+xml" title="Steven Schaefer" href="feed.xml">
+<link rel="alternate" type="application/feed+json" title="Steven Schaefer" href="feed.json">
+<script src="helia/theme-version.js"></script>
+<script src="theme/folio-early.js"></script>
+<link rel="stylesheet" href="helia/theme.css">
+<link rel="stylesheet" href="helia/highlight.css">
+<link rel="stylesheet" href="helia/search.css">
+<link rel="stylesheet" href="theme/katex.css">
+<link rel="stylesheet" href="theme/recipe.css">
+<link rel="stylesheet" href="theme/site.css">
+<link rel="stylesheet" href="theme/folio.css">
+<script defer src="helia/runtime.js"></script>
+<script defer src="helia/search.js"></script>
+<script defer src="theme/glyphcraft.js"></script>
+<script defer src="theme/glyphart.js"></script>
+<script defer src="theme/glyphgen.js"></script>
+<script defer src="theme/ornament.js"></script>
+<script defer src="theme/folio.js"></script>
+<script defer src="theme/portrait.js"></script>
+<script type="application/json" id="helia-widgets">{"helia-cite-formats":"widgets/helia-cite-formats-a3294ac7.js"}</script>
+<link rel="modulepreload" href="widgets/helia-cite-formats-a3294ac7.js">
+<script type="module" src="widgets/runtime.js"></script>
+</head>
+<body>
+<nav class="helia-topbar"><a class="helia-home" href="home.html">Steven Schaefer</a><ul class="helia-nav-links"><li><a href="stevenschaefer.html">About Me</a></li><li><a href="research.html">Research</a></li><li><a href="new.html">New</a></li></ul><button type="button" class="helia-search-button" aria-label="Search (/ or Ctrl+K)" aria-haspopup="dialog"><span class="helia-search-icon">⌕</span><span class="helia-search-label">Search</span><kbd class="helia-search-key">/</kbd></button></nav>
+<div class="helia-page" data-kind="reference">
+<article class="helia-article">
+<header class="helia-header" data-entry="guha-2017-fission" data-kind="reference">
+<h2 class="helia-heading"><span class="helia-taxon">Reference.</span> Fission: Secure Dynamic Code-Splitting for JavaScript</h2>
+<div class="helia-meta"><span class="helia-author"><a class="helia-entry-link" href="arjunguha.html" data-entry="arjunguha">Arjun Guha</a>, <a class="helia-entry-link" href="jeanbaptistejeannin.html" data-entry="jeanbaptistejeannin">Jean-Baptiste Jeannin</a>, <a class="helia-entry-link" href="rachitnigam.html" data-entry="rachitnigam">Rachit Nigam</a>, <a class="helia-entry-link" href="janetangen.html" data-entry="janetangen">Jane Tangen</a>, <a class="helia-entry-link" href="rianshambaugh.html" data-entry="rianshambaugh">Rian Shambaugh</a></span> · <span class="helia-byline"><a class="helia-entry-link" href="snapl.html" data-entry="snapl">SNAPL</a> · 2017</span> · <span class="helia-tags"><span class="helia-tag" data-tag="security"><a class="helia-entry-link" href="tag-security.html" data-entry="tag-security">security</a></span></span> · <span class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.4230/lipics.snapl.2017.5">DOI</a></span></span></div>
+</header>
+<div class="helia-body">
+<div class="helia-abstract">
+<p>Traditional web programming involves the creation of two distinct programs: a client-side front-end, a server-side back-end, and a lot of communications boilerplate. An alternative approach is to use a tierless programming model, where a single program describes the behavior of both the client and the server, and the runtime system takes care of communication. Unfortunately, this usually entails adopting a new language and thus abandoning well-worn libraries and web programming tools.</p>
+<p>In this paper, we present our ongoing work on Fission, a platform that uses dynamic tier-splitting and dynamic information flow control to transparently run a single JavaScript program across the client and server. Although static tier-splitting has been studied before, our focus on dynamic approaches presents several new challenges and opportunities. For example, Fission supports characteristic JavaScript features such as eval and sophisticated JavaScript libraries like React. Therefore, programmers can reason about the integrity and confidentiality of information while continuing to use common libraries and programming patterns. Moreover, by unifying the client and server into a single program, Fission allows language-based tools, like type systems and IDEs, to manipulate complete web applications. To illustrate, we use TypeScript to ensure that client-server communication does not go wrong.</p>
+</div>
+</div>
+<div class="helia-cite helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><h3 class="helia-heading">Cite</h3>
+</summary>
+<div class="helia-group-body">
+<div class="helia-widget" data-widget="helia-cite-formats" data-props="{&quot;key&quot;:&quot;guha-2017-fission&quot;,&quot;bibtex&quot;:&quot;@inproceedings{guha-2017-fission,\n  doi = {10.4230/LIPICS.SNAPL.2017.5},\n  url = {https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.SNAPL.2017.5},\n  author = {Guha, Arjun and Jeannin, Jean-Baptiste and Nigam, Rachit and Tangen, Jane and Shambaugh, Rian},\n  keywords = {JavaScript, information flow control},\n  language = {en},\n  title = {Fission: Secure Dynamic Code-Splitting for JavaScript},\n  volume = {71},\n  pages = {5:1-5:13},\n  publisher = {Schloss Dagstuhl – Leibniz-Zentrum für Informatik},\n  year = {2017},\n  copyright = {Creative Commons Attribution 3.0 Unported license},\n  booktitle = {2nd Summit on Advances in Programming Languages (SNAPL 2017)}\n}&quot;,&quot;bib-file&quot;:&quot;guha-2017-fission.bib&quot;,&quot;hayagriva&quot;:&quot;guha-2017-fission:\n  type: article\n  title: &#39;Fission: Secure Dynamic Code-Splitting for JavaScript&#39;\n  author:\n  - Guha, Arjun\n  - Jeannin, Jean-Baptiste\n  - Nigam, Rachit\n  - Tangen, Jane\n  - Shambaugh, Rian\n  date: 2017\n  page-range: 5:1-5:13\n  url: https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.SNAPL.2017.5\n  serial-number:\n    doi: 10.4230/LIPICS.SNAPL.2017.5\n  parent:\n    type: proceedings\n    title: 2nd Summit on Advances in Programming Languages (SNAPL 2017)\n    publisher: Schloss Dagstuhl – Leibniz-Zentrum für Informatik\n    volume: 71\n&quot;,&quot;yml-file&quot;:&quot;guha-2017-fission.yml&quot;}"><div class="helia-cite-key" data-copy="@guha-2017-fission" data-copy-label="citation key"><span class="helia-bib-key">Cite as</span> <code class="helia-raw-inline">@guha-2017-fission</code> (helia, typst) · <code class="helia-raw-inline">\cite{guha-2017-fission}</code> (LaTeX)</div>
+<div class="helia-cite-format helia-collapsible" data-format="bibtex" data-copy="true" data-copy-label="BibTeX">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">BibTeX</span></summary>
+<div class="helia-group-body">
+<details class="helia-code" open><summary class="helia-code-summary"><span class="helia-code-lang">bibtex</span> · <span class="helia-code-lines">14 lines</span></summary><pre class="helia-raw"><code class="language-bibtex"><span class="hl-text hl-bibtex"><span class="hl-meta hl-entry hl-braces hl-bibtex"><span class="hl-keyword hl-other hl-entry-type hl-bibtex"><span class="hl-punctuation hl-definition hl-keyword hl-bibtex">@</span>inproceedings</span><span class="hl-punctuation hl-section hl-entry hl-begin hl-bibtex">{</span><span class="hl-entity hl-name hl-type hl-entry-key hl-bibtex">guha-2017-fission</span>,
+  <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">doi</span> <span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span> <span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>10.4230/LIPICS.SNAPL.2017.5<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>,
+  <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">url</span> <span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span> <span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.SNAPL.2017.5<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>,
+  <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">author</span> <span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span> <span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>Guha, Arjun and Jeannin, Jean-Baptiste and Nigam, Rachit and Tangen, Jane and Shambaugh, Rian<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>,
+  <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">keywords</span> <span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span> <span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>JavaScript, information flow control<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>,
+  <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">language</span> <span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span> <span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>en<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>,
+  <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">title</span> <span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span> <span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>Fission: Secure Dynamic Code-Splitting for JavaScript<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>,
+  <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">volume</span> <span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span> <span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>71<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>,
+  <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">pages</span> <span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span> <span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>5:1-5:13<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>,
+  <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">publisher</span> <span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span> <span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>Schloss Dagstuhl – Leibniz-Zentrum für Informatik<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>,
+  <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">year</span> <span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span> <span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>2017<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>,
+  <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">copyright</span> <span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span> <span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>Creative Commons Attribution 3.0 Unported license<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>,
+  <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">booktitle</span> <span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span> <span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>2nd Summit on Advances in Programming Languages (SNAPL 2017)<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span>
+</span><span class="hl-punctuation hl-section hl-entry hl-end hl-bibtex">}</span></span></span></code></pre></details>
+</div>
+</details>
+</div>
+<div class="helia-cite-format helia-collapsible" data-format="hayagriva" data-copy="true" data-copy-label="hayagriva YAML">
+<details>
+<summary class="helia-group-summary"><span class="helia-group-title">hayagriva YAML (typst)</span></summary>
+<div class="helia-group-body">
+<details class="helia-code" open><summary class="helia-code-summary"><span class="helia-code-lang">yaml</span> · <span class="helia-code-lines">19 lines</span></summary><pre class="helia-raw"><code class="language-yaml"><span class="hl-source hl-yaml"><span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">guha-2017-fission</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">type</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">article</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">title</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-quoted hl-single hl-yaml"><span class="hl-punctuation hl-definition hl-string hl-begin hl-yaml">&#39;</span>Fission: Secure Dynamic Code-Splitting for JavaScript<span class="hl-punctuation hl-definition hl-string hl-end hl-yaml">&#39;</span></span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">author</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Guha, Arjun</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Jeannin, Jean-Baptiste</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Nigam, Rachit</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Tangen, Jane</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Shambaugh, Rian</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">date</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-constant hl-numeric hl-integer hl-decimal hl-yaml">2017</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">page-range</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">5:1-5:13</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">url</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.SNAPL.2017.5</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">serial-number</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">doi</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">10.4230/LIPICS.SNAPL.2017.5</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">parent</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">type</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">proceedings</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">title</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">2nd Summit on Advances in Programming Languages (SNAPL 2017)</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">publisher</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Schloss Dagstuhl – Leibniz-Zentrum für Informatik</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">volume</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-constant hl-numeric hl-integer hl-decimal hl-yaml">71</span>
+</span></code></pre></details>
+</div>
+</details>
+</div>
+<div class="helia-cite-files">Download: <a class="helia-link" href="guha-2017-fission.bib">guha-2017-fission.bib</a> · <a class="helia-link" href="guha-2017-fission.yml">guha-2017-fission.yml</a></div>
+</div>
+</div>
+</details>
+</div>
+<div class="helia-reference-cites helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">Cites 56 works (0 here)</span></summary>
+<div class="helia-group-body">
+<div class="helia-reference-cites-away helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">External (56)</span></summary>
+<div class="helia-group-body">
+<ul>
+<li>Bounty hunters: The honor roll (2017)</li>
+<li>XSS vulnerability in Action View in Ruby on Rails (2017)</li>
+<li>Facebook bug bounty: $5 million paid in 5 years (2017)</li>
+<li>Google security rewards–2015 year in review (2017)</li>
+<li>U.S. election agency breached by hackers after November vote (2017)</li>
+<li>WordPress 4.6.1 security and maintenance release (2017)</li>
+<li>Type inference for static compilation of JavaScript (2016)</li>
+<li>Java information flow (2016)</li>
+<li>Let’s face it: Faceted values for taint tracking (2016)</li>
+<li>A glimpse of Hopjs (2016)</li>
+<li>Verified compilers for a multi-language world (2015)</li>
+<li>Ur/Web: A simple model for programming the web (2015)</li>
+<li>Static analysis of event-driven Node.js JavaScript applications (2015)</li>
+<li>KJS: A complete formal semantics of JavaScript (2015)</li>
+<li>Concrete types for TypeScript (2015)</li>
+<li>Trust, but verify: Two-phase typing for dynamic languages (2015)</li>
+<li>Determinacy in static analysis for jQuery (2014)</li>
+<li>A trusted mechanised JavaScript specification (2014)</li>
+<li>JSAI: A static analysis platform for JavaScript (2014)</li>
+<li>Practical fine-grained information flow control using Laminar (2014)</li>
+<li>Asynchronous functional reactive programming for GUIs (2013)</li>
+<li>Fully abstract compilation to JavaScript (2013)</li>
+<li>Combining form and function: Static types for JQuery programs (2013)</li>
+<li>TeJaS: Retrofitting type systems for JavaScript (2013)</li>
+<li>Multiple facets for dynamic information flow control (2012)</li>
+<li>Dependent types for JavaScript (2012)</li>
+<li>Nested refinements for dynamic languages (2012)</li>
+<li>A tested semantics for getters, setters, and eval in JavaScript (2012)</li>
+<li>Semantics and types for objects with first-class member names (2012)</li>
+<li>Remote batch invocation for SQL databases (2011)</li>
+<li>Typing local control and state using flow analysis (2011)</li>
+<li>Adsafety: Type-based verification of javascript sandboxing (2011)</li>
+<li>Automated analysis of security-critical JavaScript APIs (2011)</li>
+<li>Towards a formal foundation of Web security (2010)</li>
+<li>The essence of JavaScript (2010)</li>
+<li>An analysis of the dynamic behavior of JavaScript programs (2010)</li>
+<li>Static typing for Ruby on Rails (2009)</li>
+<li>Staged information flow for JavaScript (2009)</li>
+<li>Cross-tier, label-based security enforcement for web applications (2009)</li>
+<li>Profile-guilding static typing for dynamic scripting languages (2009)</li>
+<li>GateKeeper: Mostly static enforcement of security and reliability policies for JavaScript code (2009)</li>
+<li>Using static analysis for Ajax intrusion detection (2009)</li>
+<li>Recency types for dynamically-typed, object-based languages: Strong updates for JavaScript (2009)</li>
+<li>Remote batch invocation for compositional object services (2009)</li>
+<li>Isolating JavaScript with filters, rewriting, and wrappers (2009)</li>
+<li>An operational semantics for JavaScript (2008)</li>
+<li>Secure web applications via automatic partitioning (2007)</li>
+<li>Operational semantics for multi-language programs (2007)</li>
+<li>Links: Web programming without tiers (2006)</li>
+<li>LINQ: Reconciling object, relations and XML in the .NET Framework (2006)</li>
+<li>Hop, a language for programming the Web 2.0 (2006)</li>
+<li>Towards type inference for JavaScript (2005)</li>
+<li>Towards a type system for analyzing JavaScript programs (2005)</li>
+<li>A type safe DOM API (2005)</li>
+<li>TreadMarks: Shared memory computing on networks of workstations (1996)</li>
+<li>Implementing remote procedure calls (1984)</li>
+</ul>
+</div>
+</details>
+</div>
+</div>
+</details>
+</div>
+</article>
+<div class="helia-identity"><span class="helia-id">guha-2017-fission</span> <span class="helia-kind">reference</span> <span class="helia-path">entries/refs/guha-2017-fission/guha-2017-fission.hel</span></div>
+</div>
+</body>
+</html>

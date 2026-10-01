@@ -1,0 +1,1 @@
+heliaSearchData("d/graulund-2021-adjoint",{"id":"graulund-2021-adjoint","title":"Adjoint Reactive GUI Programming","kind":"reference","tags":[],"authors":["Christian Uldal Graulund","Dmitrij Szamozvancev","Neel Krishnaswami"],"venue":["FoSSaCS","Foundations of Software Science and Computation Structures"],"date":null,"url":"graulund-2021-adjoint.html","headings":[],"body":""});

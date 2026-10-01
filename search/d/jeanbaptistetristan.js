@@ -1,0 +1,1 @@
+heliaSearchData("d/jeanbaptistetristan",{"id":"jeanbaptistetristan","title":"Jean-Baptiste Tristan","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"jeanbaptistetristan.html","headings":[],"body":""});

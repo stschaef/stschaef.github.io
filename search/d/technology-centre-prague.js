@@ -1,0 +1,1 @@
+heliaSearchData("d/technology-centre-prague",{"id":"technology-centre-prague","title":"Technology Centre Prague","kind":"institution","tags":[],"authors":[],"venue":[],"date":null,"url":"technology-centre-prague.html","headings":[],"body":""});

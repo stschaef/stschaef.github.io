@@ -1,0 +1,1 @@
+heliaSearchData("d/advanced-micro-devices",{"id":"advanced-micro-devices","title":"Advanced Micro Devices","kind":"institution","tags":[],"authors":[],"venue":[],"date":null,"url":"advanced-micro-devices.html","headings":[],"body":""});

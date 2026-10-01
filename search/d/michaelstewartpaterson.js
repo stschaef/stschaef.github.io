@@ -1,0 +1,1 @@
+heliaSearchData("d/michaelstewartpaterson",{"id":"michaelstewartpaterson","title":"Michael Stewart Paterson","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"michaelstewartpaterson.html","headings":[],"body":""});

@@ -1,0 +1,1 @@
+heliaSearchData("d/dartmouth-college",{"id":"dartmouth-college","title":"Dartmouth College","kind":"institution","tags":[],"authors":[],"venue":[],"date":null,"url":"dartmouth-college.html","headings":[],"body":""});

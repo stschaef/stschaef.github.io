@@ -1,0 +1,1 @@
+heliaSearchData("d/tag-universal-property",{"id":"tag-universal-property","title":"universal-property","kind":"tag","tags":[],"authors":[],"venue":[],"date":null,"url":"tag-universal-property.html","headings":[],"body":""});

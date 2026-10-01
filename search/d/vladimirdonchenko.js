@@ -1,0 +1,1 @@
+heliaSearchData("d/vladimirdonchenko",{"id":"vladimirdonchenko","title":"Vladimir Donchenko","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"vladimirdonchenko.html","headings":[],"body":""});

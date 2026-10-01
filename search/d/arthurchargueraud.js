@@ -1,0 +1,1 @@
+heliaSearchData("d/arthurchargueraud",{"id":"arthurchargueraud","title":"Arthur Charguéraud","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"arthurchargueraud.html","headings":[],"body":""});

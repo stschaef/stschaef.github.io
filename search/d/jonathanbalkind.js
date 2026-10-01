@@ -1,0 +1,1 @@
+heliaSearchData("d/jonathanbalkind",{"id":"jonathanbalkind","title":"Jonathan Balkind","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"jonathanbalkind.html","headings":[],"body":""});

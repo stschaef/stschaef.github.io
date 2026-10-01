@@ -1,0 +1,1 @@
+heliaSearchData("d/danielleperszyk",{"id":"danielleperszyk","title":"Danielle Perszyk","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"danielleperszyk.html","headings":[],"body":""});

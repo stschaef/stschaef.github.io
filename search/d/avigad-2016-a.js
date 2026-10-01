@@ -1,0 +1,1 @@
+heliaSearchData("d/avigad-2016-a",{"id":"avigad-2016-a","title":"A Heuristic Prover for Real Inequalities","kind":"reference","tags":[],"authors":["Cody Roux","Jeremy Avigad","Robert Y. Lewis"],"venue":["JAR","Journal of Automated Reasoning"],"date":null,"url":"avigad-2016-a.html","headings":[],"body":""});

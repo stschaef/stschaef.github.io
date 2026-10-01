@@ -1,0 +1,1 @@
+heliaSearchData("d/bernardepstein",{"id":"bernardepstein","title":"Bernard Epstein","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"bernardepstein.html","headings":[],"body":""});

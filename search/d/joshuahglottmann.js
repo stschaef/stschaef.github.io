@@ -1,0 +1,1 @@
+heliaSearchData("d/joshuahglottmann",{"id":"joshuahglottmann","title":"Joshua H. Glottmann","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"joshuahglottmann.html","headings":[],"body":""});

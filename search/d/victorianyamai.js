@@ -1,0 +1,1 @@
+heliaSearchData("d/victorianyamai",{"id":"victorianyamai","title":"Victoria Nyamai","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"victorianyamai.html","headings":[],"body":""});

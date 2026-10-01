@@ -1,0 +1,1 @@
+heliaSearchData("d/lawrence-livermore-national-laboratory",{"id":"lawrence-livermore-national-laboratory","title":"Lawrence Livermore National Laboratory","kind":"institution","tags":[],"authors":[],"venue":[],"date":null,"url":"lawrence-livermore-national-laboratory.html","headings":[],"body":""});

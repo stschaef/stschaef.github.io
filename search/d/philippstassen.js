@@ -1,0 +1,1 @@
+heliaSearchData("d/philippstassen",{"id":"philippstassen","title":"Philipp Stassen","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"philippstassen.html","headings":[],"body":""});

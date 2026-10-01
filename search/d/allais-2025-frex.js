@@ -1,0 +1,1 @@
+heliaSearchData("d/allais-2025-frex",{"id":"allais-2025-frex","title":"Frex: Dependently Typed Algebraic Simplification","kind":"reference","tags":[],"authors":["Edwin Brady","Guillaume Allais","Jeremy Yallop","Nathan Corbyn","Ohad Kammar"],"venue":["ICFP","International Conference on Functional Programming"],"date":null,"url":"allais-2025-frex.html","headings":[],"body":""});

@@ -1,0 +1,1 @@
+heliaSearchData("d/bereketngussiebekele",{"id":"bereketngussiebekele","title":"Bereket Ngussie Bekele","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"bereketngussiebekele.html","headings":[],"body":""});

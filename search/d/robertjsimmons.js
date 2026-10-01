@@ -1,0 +1,1 @@
+heliaSearchData("d/robertjsimmons",{"id":"robertjsimmons","title":"Robert J. Simmons","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"robertjsimmons.html","headings":[],"body":""});

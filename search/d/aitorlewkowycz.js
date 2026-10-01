@@ -1,0 +1,1 @@
+heliaSearchData("d/aitorlewkowycz",{"id":"aitorlewkowycz","title":"Aitor Lewkowycz","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"aitorlewkowycz.html","headings":[],"body":""});

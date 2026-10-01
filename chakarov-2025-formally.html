@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>Formally Verified Cloud-Scale Authorization</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Ctext y=%22.9em%22 font-size=%2290%22%3E%F0%9F%8C%BB%3C/text%3E%3C/svg%3E">
+<meta name="generator" content="helia">
+<link rel="alternate" type="application/atom+xml" title="Steven Schaefer" href="feed.xml">
+<link rel="alternate" type="application/feed+json" title="Steven Schaefer" href="feed.json">
+<script src="helia/theme-version.js"></script>
+<script src="theme/folio-early.js"></script>
+<link rel="stylesheet" href="helia/theme.css">
+<link rel="stylesheet" href="helia/highlight.css">
+<link rel="stylesheet" href="helia/search.css">
+<link rel="stylesheet" href="theme/katex.css">
+<link rel="stylesheet" href="theme/recipe.css">
+<link rel="stylesheet" href="theme/site.css">
+<link rel="stylesheet" href="theme/folio.css">
+<script defer src="helia/runtime.js"></script>
+<script defer src="helia/search.js"></script>
+<script defer src="theme/glyphcraft.js"></script>
+<script defer src="theme/glyphart.js"></script>
+<script defer src="theme/glyphgen.js"></script>
+<script defer src="theme/ornament.js"></script>
+<script defer src="theme/folio.js"></script>
+<script defer src="theme/portrait.js"></script>
+<script type="application/json" id="helia-widgets">{"helia-cite-formats":"widgets/helia-cite-formats-a3294ac7.js"}</script>
+<link rel="modulepreload" href="widgets/helia-cite-formats-a3294ac7.js">
+<script type="module" src="widgets/runtime.js"></script>
+</head>
+<body>
+<nav class="helia-topbar"><a class="helia-home" href="home.html">Steven Schaefer</a><ul class="helia-nav-links"><li><a href="stevenschaefer.html">About Me</a></li><li><a href="research.html">Research</a></li><li><a href="new.html">New</a></li></ul><button type="button" class="helia-search-button" aria-label="Search (/ or Ctrl+K)" aria-haspopup="dialog"><span class="helia-search-icon">⌕</span><span class="helia-search-label">Search</span><kbd class="helia-search-key">/</kbd></button></nav>
+<div class="helia-page" data-kind="reference">
+<article class="helia-article">
+<header class="helia-header" data-entry="chakarov-2025-formally" data-kind="reference">
+<h2 class="helia-heading"><span class="helia-taxon">Reference.</span> Formally Verified Cloud-Scale Authorization</h2>
+<div class="helia-meta"><span class="helia-author"><a class="helia-entry-link" href="alekschakarov.html" data-entry="alekschakarov">Aleks Chakarov</a>, <a class="helia-entry-link" href="jacogeldenhuys.html" data-entry="jacogeldenhuys">Jaco Geldenhuys</a>, <a class="helia-entry-link" href="matthewheck.html" data-entry="matthewheck">Matthew Heck</a>, <a class="helia-entry-link" href="michaelhicks.html" data-entry="michaelhicks">Michael Hicks</a>, <a class="helia-entry-link" href="samhuang.html" data-entry="samhuang">Sam Huang</a>, <a class="helia-entry-link" href="georgesaxeljaloyan.html" data-entry="georgesaxeljaloyan">Georges-Axel Jaloyan</a>, <a class="helia-entry-link" href="anjalijoshi.html" data-entry="anjalijoshi">Anjali Joshi</a>, <a class="helia-entry-link" href="krustanmleino.html" data-entry="krustanmleino">K. Rustan M. Leino</a>, <a class="helia-entry-link" href="mikaelmayer.html" data-entry="mikaelmayer">Mikael Mayer</a>, <a class="helia-entry-link" href="seanmclaughlin.html" data-entry="seanmclaughlin">Sean McLaughlin</a>, <a class="helia-entry-link" href="akhileshmritunjai.html" data-entry="akhileshmritunjai">Akhilesh Mritunjai</a>, <a class="helia-entry-link" href="clementpitclaudel.html" data-entry="clementpitclaudel">Clement Pit-Claudel</a>, <a class="helia-entry-link" href="soraweeporncharoenwase.html" data-entry="soraweeporncharoenwase">Sorawee Porncharoenwase</a>, <a class="helia-entry-link" href="florianrabe.html" data-entry="florianrabe">Florian Rabe</a>, <a class="helia-entry-link" href="mariannarapoport.html" data-entry="mariannarapoport">Marianna Rapoport</a>, <a class="helia-entry-link" href="gilesreger.html" data-entry="gilesreger">Giles Reger</a>, <a class="helia-entry-link" href="codyroux.html" data-entry="codyroux">Cody Roux</a>, <a class="helia-entry-link" href="neharungta.html" data-entry="neharungta">Neha Rungta</a>, <a class="helia-entry-link" href="robinsalkeld.html" data-entry="robinsalkeld">Robin Salkeld</a>, <a class="helia-entry-link" href="matthiasschlaipfer.html" data-entry="matthiasschlaipfer">Matthias Schlaipfer</a>, <a class="helia-entry-link" href="danielschoepe.html" data-entry="danielschoepe">Daniel Schoepe</a>, <a class="helia-entry-link" href="johannaschwartzentruber.html" data-entry="johannaschwartzentruber">Johanna Schwartzentruber</a>, <a class="helia-entry-link" href="serdartasiran.html" data-entry="serdartasiran">Serdar Tasiran</a>, <a class="helia-entry-link" href="aarontomb.html" data-entry="aarontomb">Aaron Tomb</a>, <a class="helia-entry-link" href="eminatorlak.html" data-entry="eminatorlak">Emina Torlak</a>, <a class="helia-entry-link" href="jeanbaptistetristan.html" data-entry="jeanbaptistetristan">Jean-Baptiste Tristan</a>, <a class="helia-entry-link" href="lucaswagner.html" data-entry="lucaswagner">Lucas Wagner</a>, <a class="helia-entry-link" href="michaelwwhalen.html" data-entry="michaelwwhalen">Michael W. Whalen</a>, <a class="helia-entry-link" href="remywillems.html" data-entry="remywillems">Remy Willems</a>, <a class="helia-entry-link" href="tongtongxiang.html" data-entry="tongtongxiang">Tongtong Xiang</a>, <a class="helia-entry-link" href="taejoonbyun.html" data-entry="taejoonbyun">Tae Joon Byun</a>, <a class="helia-entry-link" href="joshuacohen.html" data-entry="joshuacohen">Joshua Cohen</a>, <a class="helia-entry-link" href="ruijiefang.html" data-entry="ruijiefang">Ruijie Fang</a>, <a class="helia-entry-link" href="junyoungjang.html" data-entry="junyoungjang">Junyoung Jang</a>, <a class="helia-entry-link" href="jakobrath.html" data-entry="jakobrath">Jakob Rath</a>, <a class="helia-entry-link" href="hirataqdeessyeda.html" data-entry="hirataqdeessyeda">Hira Taqdees Syeda</a>, <a class="helia-entry-link" href="dominikwagner.html" data-entry="dominikwagner">Dominik Wagner</a>, <a class="helia-entry-link" href="yongweiyuan.html" data-entry="yongweiyuan">Yongwei Yuan</a></span> · <span class="helia-byline"><a class="helia-entry-link" href="icse.html" data-entry="icse">ICSE</a> · 2025</span> · <span class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1109/icse55347.2025.00166">DOI</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/conf/icse/ChakarovGHHHJJL25">pldb</a></span></span></div>
+</header>
+<div class="helia-body">
+</div>
+<div class="helia-cite helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><h3 class="helia-heading">Cite</h3>
+</summary>
+<div class="helia-group-body">
+<div class="helia-widget" data-widget="helia-cite-formats" data-props="{&quot;key&quot;:&quot;chakarov-2025-formally&quot;,&quot;bibtex&quot;:&quot;@inproceedings{chakarov-2025-formally, title={Formally Verified Cloud-Scale Authorization}, url={http://dx.doi.org/10.1109/icse55347.2025.00166}, DOI={10.1109/icse55347.2025.00166}, booktitle={2025 IEEE/ACM 47th International Conference on Software Engineering (ICSE)}, publisher={IEEE}, author={Chakarov, Aleks and Geldenhuys, Jaco and Heck, Matthew and Hicks, Michael and Huang, Sam and Jaloyan, Georges-Axel and Joshi, Anjali and Leino, K. Rustan M. and Mayer, Mikael and McLaughlin, Sean and Mritunjai, Akhilesh and Pit-Claudel, Clement and Porncharoenwase, Sorawee and Rabe, Florian and Rapoport, Marianna and Reger, Giles and Roux, Cody and Rungta, Neha and Salkeld, Robin and Schlaipfer, Matthias and Schoepe, Daniel and Schwartzentruber, Johanna and Tasiran, Serdar and Tomb, Aaron and Torlak, Emina and Tristan, Jean-Baptiste and Wagner, Lucas and Whalen, Michael W. and Willems, Remy and Xiang, Tongtong and Byun, Tae Joon and Cohen, Joshua and Fang, Ruijie and Jang, Junyoung and Rath, Jakob and Syeda, Hira Taqdees and Wagner, Dominik and Yuan, Yongwei}, year={2025}, month=Apr, pages={2508–2521} }&quot;,&quot;bib-file&quot;:&quot;chakarov-2025-formally.bib&quot;,&quot;hayagriva&quot;:&quot;chakarov-2025-formally:\n  type: article\n  title: Formally Verified Cloud-Scale Authorization\n  author:\n  - Chakarov, Aleks\n  - Geldenhuys, Jaco\n  - Heck, Matthew\n  - Hicks, Michael\n  - Huang, Sam\n  - Jaloyan, Georges-Axel\n  - Joshi, Anjali\n  - Leino, K. Rustan M.\n  - Mayer, Mikael\n  - McLaughlin, Sean\n  - Mritunjai, Akhilesh\n  - Pit-Claudel, Clement\n  - Porncharoenwase, Sorawee\n  - Rabe, Florian\n  - Rapoport, Marianna\n  - Reger, Giles\n  - Roux, Cody\n  - Rungta, Neha\n  - Salkeld, Robin\n  - Schlaipfer, Matthias\n  - Schoepe, Daniel\n  - Schwartzentruber, Johanna\n  - Tasiran, Serdar\n  - Tomb, Aaron\n  - Torlak, Emina\n  - Tristan, Jean-Baptiste\n  - Wagner, Lucas\n  - Whalen, Michael W.\n  - Willems, Remy\n  - Xiang, Tongtong\n  - Byun, Tae Joon\n  - Cohen, Joshua\n  - Fang, Ruijie\n  - Jang, Junyoung\n  - Rath, Jakob\n  - Syeda, Hira Taqdees\n  - Wagner, Dominik\n  - Yuan, Yongwei\n  date: 2025-04\n  page-range: 2508-2521\n  url: http://dx.doi.org/10.1109/icse55347.2025.00166\n  serial-number:\n    doi: 10.1109/icse55347.2025.00166\n  parent:\n    type: proceedings\n    title: 2025 IEEE/ACM 47th International Conference on Software Engineering (ICSE)\n    publisher: IEEE\n&quot;,&quot;yml-file&quot;:&quot;chakarov-2025-formally.yml&quot;}"><div class="helia-cite-key" data-copy="@chakarov-2025-formally" data-copy-label="citation key"><span class="helia-bib-key">Cite as</span> <code class="helia-raw-inline">@chakarov-2025-formally</code> (helia, typst) · <code class="helia-raw-inline">\cite{chakarov-2025-formally}</code> (LaTeX)</div>
+<div class="helia-cite-format helia-collapsible" data-format="bibtex" data-copy="true" data-copy-label="BibTeX">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">BibTeX</span></summary>
+<div class="helia-group-body">
+<details class="helia-code" open><summary class="helia-code-summary"><span class="helia-code-lang">bibtex</span> · <span class="helia-code-lines">1 line</span></summary><pre class="helia-raw"><code class="language-bibtex"><span class="hl-text hl-bibtex"><span class="hl-meta hl-entry hl-braces hl-bibtex"><span class="hl-keyword hl-other hl-entry-type hl-bibtex"><span class="hl-punctuation hl-definition hl-keyword hl-bibtex">@</span>inproceedings</span><span class="hl-punctuation hl-section hl-entry hl-begin hl-bibtex">{</span><span class="hl-entity hl-name hl-type hl-entry-key hl-bibtex">chakarov-2025-formally</span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">title</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>Formally Verified Cloud-Scale Authorization<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">url</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>http://dx.doi.org/10.1109/icse55347.2025.00166<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">DOI</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>10.1109/icse55347.2025.00166<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">booktitle</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>2025 IEEE/ACM 47th International Conference on Software Engineering (ICSE)<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">publisher</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>IEEE<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">author</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>Chakarov, Aleks and Geldenhuys, Jaco and Heck, Matthew and Hicks, Michael and Huang, Sam and Jaloyan, Georges-Axel and Joshi, Anjali and Leino, K. Rustan M. and Mayer, Mikael and McLaughlin, Sean and Mritunjai, Akhilesh and Pit-Claudel, Clement and Porncharoenwase, Sorawee and Rabe, Florian and Rapoport, Marianna and Reger, Giles and Roux, Cody and Rungta, Neha and Salkeld, Robin and Schlaipfer, Matthias and Schoepe, Daniel and Schwartzentruber, Johanna and Tasiran, Serdar and Tomb, Aaron and Torlak, Emina and Tristan, Jean-Baptiste and Wagner, Lucas and Whalen, Michael W. and Willems, Remy and Xiang, Tongtong and Byun, Tae Joon and Cohen, Joshua and Fang, Ruijie and Jang, Junyoung and Rath, Jakob and Syeda, Hira Taqdees and Wagner, Dominik and Yuan, Yongwei<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">year</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>2025<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">month</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span>Apr</span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">pages</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>2508–2521<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span> </span><span class="hl-punctuation hl-section hl-entry hl-end hl-bibtex">}</span></span></span></code></pre></details>
+</div>
+</details>
+</div>
+<div class="helia-cite-format helia-collapsible" data-format="hayagriva" data-copy="true" data-copy-label="hayagriva YAML">
+<details>
+<summary class="helia-group-summary"><span class="helia-group-title">hayagriva YAML (typst)</span></summary>
+<div class="helia-group-body">
+<details class="helia-code" open><summary class="helia-code-summary"><span class="helia-code-lang">yaml</span> · <span class="helia-code-lines">51 lines</span></summary><pre class="helia-raw"><code class="language-yaml"><span class="hl-source hl-yaml"><span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">chakarov-2025-formally</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">type</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">article</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">title</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Formally Verified Cloud-Scale Authorization</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">author</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Chakarov, Aleks</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Geldenhuys, Jaco</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Heck, Matthew</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Hicks, Michael</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Huang, Sam</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Jaloyan, Georges-Axel</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Joshi, Anjali</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Leino, K. Rustan M.</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Mayer, Mikael</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">McLaughlin, Sean</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Mritunjai, Akhilesh</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Pit-Claudel, Clement</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Porncharoenwase, Sorawee</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Rabe, Florian</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Rapoport, Marianna</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Reger, Giles</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Roux, Cody</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Rungta, Neha</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Salkeld, Robin</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Schlaipfer, Matthias</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Schoepe, Daniel</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Schwartzentruber, Johanna</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Tasiran, Serdar</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Tomb, Aaron</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Torlak, Emina</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Tristan, Jean-Baptiste</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Wagner, Lucas</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Whalen, Michael W.</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Willems, Remy</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Xiang, Tongtong</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Byun, Tae Joon</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Cohen, Joshua</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Fang, Ruijie</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Jang, Junyoung</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Rath, Jakob</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Syeda, Hira Taqdees</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Wagner, Dominik</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Yuan, Yongwei</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">date</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">2025-04</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">page-range</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">2508-2521</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">url</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">http://dx.doi.org/10.1109/icse55347.2025.00166</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">serial-number</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">doi</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">10.1109/icse55347.2025.00166</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">parent</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">type</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">proceedings</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">title</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">2025 IEEE/ACM 47th International Conference on Software Engineering (ICSE)</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">publisher</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">IEEE</span>
+</span></code></pre></details>
+</div>
+</details>
+</div>
+<div class="helia-cite-files">Download: <a class="helia-link" href="chakarov-2025-formally.bib">chakarov-2025-formally.bib</a> · <a class="helia-link" href="chakarov-2025-formally.yml">chakarov-2025-formally.yml</a></div>
+</div>
+</div>
+</details>
+</div>
+<div class="helia-reference-cited-by helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">Cited by (1)</span></summary>
+<div class="helia-group-body">
+<section class="helia-transclusion" data-entry="zhou-2025-cazamariposas" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="zhou-2025-cazamariposas"><span class="helia-title">Cazamariposas: Automated Instability Debugging in SMT-Based Program Verification</span>&nbsp;<a class="helia-slug" href="zhou-2025-cazamariposas.html">zhou-2025-cazamariposas</a><span class="helia-byline"><span class="helia-entry-link" data-entry="cade">CADE</span> · 2025</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="zhou-2025-cazamariposas" data-kind="reference">
+<div class="helia-abstract">Program verification languages such as Dafny and F<span class="helia-math helia-math-inline helia-mathml"><math><mo lspace="0em" rspace="0em">⋆</mo></math></span> often rely heavily on Satisfiability Modulo Theories (SMT) solvers for proof automation. However, SMT-based verification suffers from instability, where semantically irrelevant changes in the source program can cause spurious proof failures. While existing mitigation techniques emphasize preemptive measures, we propose a complementary approach that focuses on diagnosing and repairing specific instances of instability-induced failures. Our key technique is a novel differential analysis to pinpoint problematic quantified formulas in an unstable query. We implement this technique in Cazamariposas, a tool that automatically identifies such quantified formulas and suggests fixes. We evaluate Cazamariposas on multiple large-scale systems verification projects written in three different program verification languages. Our results demonstrate Cazamariposas’ effectiveness as an instability debugger. In the majority of cases, Cazamariposas successfully isolates the issue to a single problematic quantifier, while providing a stabilizing fix.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-031-99984-0_5">DOI</a></span></div>
+</div>
+</div>
+</details>
+</section>
+</div>
+</details>
+</div>
+<div class="helia-reference-cites helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">Cites 71 works (2 here)</span></summary>
+<div class="helia-group-body">
+<div class="helia-reference-cites-here helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">With notes (2)</span></summary>
+<div class="helia-group-body">
+<section class="helia-transclusion" data-entry="lattuada-2023-verus" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="lattuada-2023-verus"><span class="helia-title">Verus: Verifying Rust Programs using Linear Ghost Types</span>&nbsp;<a class="helia-slug" href="lattuada-2023-verus.html">lattuada-2023-verus</a><span class="helia-byline"><span class="helia-entry-link" data-entry="oopsla">OOPSLA</span> · 2023</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="lattuada-2023-verus" data-kind="reference">
+<div class="helia-abstract">The Rust programming language provides a powerful type system that checks linearity and borrowing, allowing code to safely manipulate memory without garbage collection and making Rust ideal for developing low-level, high-assurance systems. For such systems, formal verification can be useful to prove functional correctness properties beyond type safety. This paper presents Verus, an SMT-based tool for formally verifying Rust programs. With Verus, programmers express proofs and specifications using the Rust language, allowing proofs to take advantage of Rust’s linear types and borrow checking. We show how this allows proofs to manipulate linearly typed permissions that let Rust code safely manipulate memory, pointers, and concurrent resources. Verus organizes proofs and specifications using a novel mode system that distinguishes specifications, which are not checked for linearity and borrowing, from executable code and proofs, which are checked for linearity and borrowing. We formalize Verus’ linearity, borrowing, and modes in a small lambda calculus, for which we prove type safety and termination of specifications and proofs. We demonstrate Verus on a series of examples, including pointer-manipulating code (an xor-based doubly linked list), code with interior mutability, and concurrent code.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="pdf-url"><a class="helia-link helia-external" href="https://dl.acm.org/doi/pdf/10.1145/3586037">PDF</a></span> · <span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/3586037">DOI</a></span> · <span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/2303.05491">arXiv</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/journals/pacmpl/LattuadaHCBSZHPH23">pldb</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="kumar_cakeml_2014" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="kumar_cakeml_2014"><span class="helia-title">CakeML: A verified implementation of ML</span>&nbsp;<a class="helia-slug" href="kumar_cakeml_2014.html">kumar_cakeml_2014</a><span class="helia-byline"><span class="helia-entry-link" data-entry="popl">POPL</span> · 2014</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="kumar_cakeml_2014" data-kind="reference">
+<div class="helia-abstract">We have developed and mechanically verified an ML system called CakeML, which supports a substantial subset of Standard ML. CakeML is implemented as an interactive read-eval-print loop (REPL) in x86-64 machine code. Our correctness theorem ensures that this REPL implementation prints only those results permitted by the semantics of CakeML. Our verification effort touches on a breadth of topics including lexing, parsing, type checking, incremental and dynamic compilation, garbage collection, arbitraryprecision arithmetic, and compiler bootstrapping.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="pdf-url"><a class="helia-link helia-external" href="https://dl.acm.org/doi/pdf/10.1145/2535838.2535841">PDF</a></span> · <span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/2535838.2535841">DOI</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/conf/popl/KumarMNO14">pldb</a></span></div>
+</div>
+</div>
+</details>
+</section>
+</div>
+</details>
+</div>
+<div class="helia-reference-cites-away helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">External (69)</span></summary>
+<div class="helia-group-body">
+<ul>
+<li>AWS Encryption SDK for Dafny (2024)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3624728">Co-Developing Programs and Their Proof of Correctness</a> (2024)</li>
+<li>Java Modeling Language (JML) reference manual (2024)</li>
+<li>The Coq Development Team. The Coq proof assistant (2024)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3649835">Cedar: A New Language for Expressive, Fast, Safe, and Analyzable Authorization</a> (2024)</li>
+<li>The Dafny Community (2024)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3663529.3663854">How We Built Cedar: A Verification-Guided Approach</a> (2024)</li>
+<li>The F* Development Team. Fstarlang/karamel: KaRaMeL is a tool for extracting low-level F* programs to readable C code (2024)</li>
+<li>Enhancing proof stability (2024)</li>
+<li>Microsoft. Shadow testing (2024)</li>
+<li>Protocols to code: Formal verification of a next-generation Internet router (2024)</li>
+<li>Amazon Web Services (2024)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.34727/2024/isbn.978-3-85448-065-5_12">Context Pruning for More Robust SMT-based Program Verification</a> (2024)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.34727/2023/isbn.978-3-85448-060-0_26">Mariposa: Measuring SMT Instability in Automated Program Verification</a> (2023)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-031-06773-0_5">The Prusti Project: Formal Verification for Rust</a> (2022)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-031-17244-1_6">Creusot: A Foundry for the Deductive Verification of Rust Programs</a> (2022)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3533767.3534382">Testing Dafny (experience paper</a> (2022)</li>
+<li>Hardening attack surfaces with formally proven binary format parsers (2022)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3470569">The dogged pursuit of bug-free C programs</a> (2021)</li>
+<li>Formally verifying FreeRTOS’ interprocess communication mechanism (2021)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-030-79876-5_37">The Lean 4 theorem prover and programming language</a> (2021)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1109/sp40001.2021.00039">A security model and fully verified implementation for the IETF QUIC record layer</a> (2021)</li>
+<li>Is-abelle/HOL: A proof assistant for higher-order logic (2021)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-030-81685-8_17">Gobra: Modular Specification and Verification of Go Programs</a> (2021)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1109/sp40000.2020.00028">The Last Mile: High-Assurance and High-Speed Cryptographic Implementations</a> (2020)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3421473.3421477">Simple High-Level Code For Cryptographic Arithmetic</a> (2020)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3378426">seL4 in Australia: From research to real-world trustworthy systems</a> (2020)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1109/sp40000.2020.00114">EverCrypt: A fast, verified, cross-platform cryptographic provider</a> (2020)</li>
+<li>Towards making formal methods normal: Meeting developers where they are (2020)</li>
+<li>Ev-erParse: Verified secure zero-copy parsers for authenticated message formats (2019)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3230627">Formally verified software in the real world</a> (2018)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-030-02610-3_9">Shadow Testing for Business Process Improvement</a> (2018)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1109/ms.2018.111094748">Continuous Experimentation: Challenges, Implementation Techniques, and Current Research</a> (2018)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3068608">IronFleet: proving safety and liveness of practical distributed systems</a> (2017)</li>
+<li>Verified low-level programming embedded in F* (2017)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-319-51838-1_4">Case studies</a> (2017)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-319-49812-6">Deductive Software Verification – The KeY Book</a> (2016)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/s10703-016-0243-x">The spirit of ghost code</a> (2016)</li>
+<li>CompCert - a formally verified optimizing compiler (2016)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/2950290.2983978">Preventing signedness errors in numerical computations in Java</a> (2016)</li>
+<li>Verified correctness and security of OpenSSL HMAC (2015)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-319-08970-6_2">Are we there yet? 20 years of industrial theorem proving with SPARK</a> (2014)</li>
+<li>Ironclad apps: End-to-end security via automated full-system verification (2014)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-642-31374-5_3">Challenges and experiences in managing large-scale proofs</a> (2012)</li>
+<li>Industrial-strength formal methods in practice (2012)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/2398857.2384680">Reim &amp; ReImInfer</a> (2012)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/1985793.1985889">Building and using pluggable type-checkers</a> (2011)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/1743546.1743574">seL4: formal verification of an operating-system kernel</a> (2010)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-642-17511-4_20">Dafny: An automatic program verifier for functional correctness</a> (2010)</li>
+<li>junit-quickcheck: Property-based testing, junit-style (2010)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-642-03359-9_2">VCC: A Practical System for Verifying Concurrent C</a> (2009)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-642-04570-7_3">Applying a formal method in industry: A 15-year trajectory</a> (2009)</li>
+<li>The VeriFast program verifier (2008)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/s10009-004-0167-4">An overview of JML tools and applications</a> (2005)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/351240.351266">QuickCheck: A lightweight tool for random testing of Haskell programs</a> (2000)</li>
+<li>Differential testing for software (1998)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1109/52.391826">Seven more myths of formal methods</a> (1995)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-1-4612-2704-5">Larch: Languages and Tools for Formal Specification</a> (1993)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1109/52.57887">Seven myths of formal methods</a> (1990)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/48529.48530">Program verification: the very idea</a> (1988)</li>
+<li>Object-oriented Software Construction. Series in Computer Science (1988)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/3-540-16042-6_1">The mathematics of programming</a> (1985)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1109/mahc.1984.10017">An Early Program Proof by Alan Turing</a> (1984)</li>
+<li>A Computational Logic (1979)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/359104.359106">Social processes and proofs of theorems and programs</a> (1979)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.21236/ada071900">Stanford Pascal Verifier: User manual</a> (1979)</li>
+<li>Assigning meanings to programs (1967)</li>
+<li>Checker Framework. The checker framework</li>
+<li>The F* Development Team. F*: A proof-oriented programming language</li>
+</ul>
+</div>
+</details>
+</div>
+</div>
+</details>
+</div>
+</article>
+<div class="helia-identity"><span class="helia-id">chakarov-2025-formally</span> <span class="helia-kind">reference</span> <span class="helia-path">entries/refs/chakarov-2025-formally/chakarov-2025-formally.hel</span></div>
+</div>
+</body>
+</html>

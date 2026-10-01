@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>FlowCert: Translation Validation for Asynchronous Dataflow via Dynamic Fractional Permissions</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Ctext y=%22.9em%22 font-size=%2290%22%3E%F0%9F%8C%BB%3C/text%3E%3C/svg%3E">
+<meta name="generator" content="helia">
+<link rel="alternate" type="application/atom+xml" title="Steven Schaefer" href="feed.xml">
+<link rel="alternate" type="application/feed+json" title="Steven Schaefer" href="feed.json">
+<script src="helia/theme-version.js"></script>
+<script src="theme/folio-early.js"></script>
+<link rel="stylesheet" href="helia/theme.css">
+<link rel="stylesheet" href="helia/highlight.css">
+<link rel="stylesheet" href="helia/search.css">
+<link rel="stylesheet" href="theme/katex.css">
+<link rel="stylesheet" href="theme/recipe.css">
+<link rel="stylesheet" href="theme/site.css">
+<link rel="stylesheet" href="theme/folio.css">
+<script defer src="helia/runtime.js"></script>
+<script defer src="helia/search.js"></script>
+<script defer src="theme/glyphcraft.js"></script>
+<script defer src="theme/glyphart.js"></script>
+<script defer src="theme/glyphgen.js"></script>
+<script defer src="theme/ornament.js"></script>
+<script defer src="theme/folio.js"></script>
+<script defer src="theme/portrait.js"></script>
+<script type="application/json" id="helia-widgets">{"helia-cite-formats":"widgets/helia-cite-formats-a3294ac7.js"}</script>
+<link rel="modulepreload" href="widgets/helia-cite-formats-a3294ac7.js">
+<script type="module" src="widgets/runtime.js"></script>
+</head>
+<body>
+<nav class="helia-topbar"><a class="helia-home" href="home.html">Steven Schaefer</a><ul class="helia-nav-links"><li><a href="stevenschaefer.html">About Me</a></li><li><a href="research.html">Research</a></li><li><a href="new.html">New</a></li></ul><button type="button" class="helia-search-button" aria-label="Search (/ or Ctrl+K)" aria-haspopup="dialog"><span class="helia-search-icon">⌕</span><span class="helia-search-label">Search</span><kbd class="helia-search-key">/</kbd></button></nav>
+<div class="helia-page" data-kind="reference">
+<article class="helia-article">
+<header class="helia-header" data-entry="lin-2024-flowcert" data-kind="reference">
+<h2 class="helia-heading"><span class="helia-taxon">Reference.</span> FlowCert: Translation Validation for Asynchronous Dataflow via Dynamic Fractional Permissions</h2>
+<div class="helia-meta"><span class="helia-author"><a class="helia-entry-link" href="zhengyaolin.html" data-entry="zhengyaolin">Zhengyao Lin</a>, <a class="helia-entry-link" href="joshuagancher.html" data-entry="joshuagancher">Joshua Gancher</a>, <a class="helia-entry-link" href="bryanparno.html" data-entry="bryanparno">Bryan Parno</a></span> · <span class="helia-byline"><a class="helia-entry-link" href="oopsla.html" data-entry="oopsla">OOPSLA</a> · 2024</span> · <span class="helia-tags"><span class="helia-tag" data-tag="hardware"><a class="helia-entry-link" href="tag-hardware.html" data-entry="tag-hardware">hardware</a></span> <span class="helia-tag" data-tag="compilation"><a class="helia-entry-link" href="tag-compilation.html" data-entry="tag-compilation">compilation</a></span></span> · <span class="helia-entry-links"><span class="helia-entry-link" data-field="pdf-url"><a class="helia-link helia-external" href="https://dl.acm.org/doi/pdf/10.1145/3689729">PDF</a></span> · <span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/3689729">DOI</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/journals/pacmpl/LinGP24">pldb</a></span></span></div>
+</header>
+<div class="helia-body">
+<div class="helia-abstract">Coarse-grained reconfigurable arrays (CGRAs) have gained attention in recent years due to their promising power efficiency compared to traditional von Neumann architectures. To program these architectures using ordinary languages such as C, a dataflow compiler must transform the original sequential, imperative program into an equivalent dataflow graph, composed of dataflow operators running in parallel. This transformation is challenging since the asynchronous nature of dataflow graphs allows out-of-order execution of operators, leading to behaviors not present in the original imperative programs. Weaddress this challenge by developing a translation validation technique for dataflow compilers to ensure that the dataflow program has the same behavior as the original imperative program on all possible inputs and schedules of execution. We apply this method to a state-of-the-art dataflow compiler targeting the RipTide CGRAarchitecture. Our tool uncovers 8 compiler bugs where the compiler outputs incorrect dataflow graphs, including a data race that is otherwise hard to discover via testing. After repairing these bugs, our tool verifies the correct compilation of all programs in the RipTide benchmark suite.</div>
+</div>
+<div class="helia-cite helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><h3 class="helia-heading">Cite</h3>
+</summary>
+<div class="helia-group-body">
+<div class="helia-widget" data-widget="helia-cite-formats" data-props="{&quot;key&quot;:&quot;lin-2024-flowcert&quot;,&quot;bibtex&quot;:&quot;@article{lin-2024-flowcert, title={FlowCert: Translation Validation for Asynchronous Dataflow via Dynamic Fractional Permissions}, volume={8}, ISSN={2475-1421}, url={http://dx.doi.org/10.1145/3689729}, DOI={10.1145/3689729}, number={OOPSLA2}, journal={Proceedings of the ACM on Programming Languages}, publisher={Association for Computing Machinery (ACM)}, author={Lin, Zhengyao and Gancher, Joshua and Parno, Bryan}, year={2024}, month=Oct, pages={499–526} }&quot;,&quot;bib-file&quot;:&quot;lin-2024-flowcert.bib&quot;,&quot;hayagriva&quot;:&quot;lin-2024-flowcert:\n  type: article\n  title: &#39;FlowCert: Translation Validation for Asynchronous Dataflow via Dynamic Fractional Permissions&#39;\n  author:\n  - Lin, Zhengyao\n  - Gancher, Joshua\n  - Parno, Bryan\n  date: 2024-10\n  page-range: 499-526\n  url: http://dx.doi.org/10.1145/3689729\n  serial-number:\n    doi: 10.1145/3689729\n    issn: 2475-1421\n  parent:\n    type: periodical\n    title: Proceedings of the ACM on Programming Languages\n    publisher: Association for Computing Machinery (ACM)\n    issue: OOPSLA2\n    volume: 8\n&quot;,&quot;yml-file&quot;:&quot;lin-2024-flowcert.yml&quot;}"><div class="helia-cite-key" data-copy="@lin-2024-flowcert" data-copy-label="citation key"><span class="helia-bib-key">Cite as</span> <code class="helia-raw-inline">@lin-2024-flowcert</code> (helia, typst) · <code class="helia-raw-inline">\cite{lin-2024-flowcert}</code> (LaTeX)</div>
+<div class="helia-cite-format helia-collapsible" data-format="bibtex" data-copy="true" data-copy-label="BibTeX">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">BibTeX</span></summary>
+<div class="helia-group-body">
+<details class="helia-code" open><summary class="helia-code-summary"><span class="helia-code-lang">bibtex</span> · <span class="helia-code-lines">1 line</span></summary><pre class="helia-raw"><code class="language-bibtex"><span class="hl-text hl-bibtex"><span class="hl-meta hl-entry hl-braces hl-bibtex"><span class="hl-keyword hl-other hl-entry-type hl-bibtex"><span class="hl-punctuation hl-definition hl-keyword hl-bibtex">@</span>article</span><span class="hl-punctuation hl-section hl-entry hl-begin hl-bibtex">{</span><span class="hl-entity hl-name hl-type hl-entry-key hl-bibtex">lin-2024-flowcert</span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">title</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>FlowCert: Translation Validation for Asynchronous Dataflow via Dynamic Fractional Permissions<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">volume</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>8<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">ISSN</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>2475-1421<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">url</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>http://dx.doi.org/10.1145/3689729<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">DOI</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>10.1145/3689729<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">number</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>OOPSLA2<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">journal</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>Proceedings of the ACM on Programming Languages<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">publisher</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>Association for Computing Machinery (ACM)<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">author</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>Lin, Zhengyao and Gancher, Joshua and Parno, Bryan<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">year</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>2024<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">month</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span>Oct</span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">pages</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>499–526<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span> </span><span class="hl-punctuation hl-section hl-entry hl-end hl-bibtex">}</span></span></span></code></pre></details>
+</div>
+</details>
+</div>
+<div class="helia-cite-format helia-collapsible" data-format="hayagriva" data-copy="true" data-copy-label="hayagriva YAML">
+<details>
+<summary class="helia-group-summary"><span class="helia-group-title">hayagriva YAML (typst)</span></summary>
+<div class="helia-group-body">
+<details class="helia-code" open><summary class="helia-code-summary"><span class="helia-code-lang">yaml</span> · <span class="helia-code-lines">19 lines</span></summary><pre class="helia-raw"><code class="language-yaml"><span class="hl-source hl-yaml"><span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">lin-2024-flowcert</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">type</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">article</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">title</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-quoted hl-single hl-yaml"><span class="hl-punctuation hl-definition hl-string hl-begin hl-yaml">&#39;</span>FlowCert: Translation Validation for Asynchronous Dataflow via Dynamic Fractional Permissions<span class="hl-punctuation hl-definition hl-string hl-end hl-yaml">&#39;</span></span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">author</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Lin, Zhengyao</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Gancher, Joshua</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Parno, Bryan</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">date</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">2024-10</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">page-range</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">499-526</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">url</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">http://dx.doi.org/10.1145/3689729</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">serial-number</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">doi</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">10.1145/3689729</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">issn</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">2475-1421</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">parent</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">type</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">periodical</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">title</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Proceedings of the ACM on Programming Languages</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">publisher</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Association for Computing Machinery (ACM)</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">issue</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">OOPSLA2</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">volume</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-constant hl-numeric hl-integer hl-decimal hl-yaml">8</span>
+</span></code></pre></details>
+</div>
+</details>
+</div>
+<div class="helia-cite-files">Download: <a class="helia-link" href="lin-2024-flowcert.bib">lin-2024-flowcert.bib</a> · <a class="helia-link" href="lin-2024-flowcert.yml">lin-2024-flowcert.yml</a></div>
+</div>
+</div>
+</details>
+</div>
+<div class="helia-reference-cites helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">Cites 55 works (2 here)</span></summary>
+<div class="helia-group-body">
+<div class="helia-reference-cites-here helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">With notes (2)</span></summary>
+<div class="helia-group-body">
+<section class="helia-transclusion" data-entry="lattuada-2023-verus" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="lattuada-2023-verus"><span class="helia-title">Verus: Verifying Rust Programs using Linear Ghost Types</span>&nbsp;<a class="helia-slug" href="lattuada-2023-verus.html">lattuada-2023-verus</a><span class="helia-byline"><span class="helia-entry-link" data-entry="oopsla">OOPSLA</span> · 2023</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="lattuada-2023-verus" data-kind="reference">
+<div class="helia-abstract">The Rust programming language provides a powerful type system that checks linearity and borrowing, allowing code to safely manipulate memory without garbage collection and making Rust ideal for developing low-level, high-assurance systems. For such systems, formal verification can be useful to prove functional correctness properties beyond type safety. This paper presents Verus, an SMT-based tool for formally verifying Rust programs. With Verus, programmers express proofs and specifications using the Rust language, allowing proofs to take advantage of Rust’s linear types and borrow checking. We show how this allows proofs to manipulate linearly typed permissions that let Rust code safely manipulate memory, pointers, and concurrent resources. Verus organizes proofs and specifications using a novel mode system that distinguishes specifications, which are not checked for linearity and borrowing, from executable code and proofs, which are checked for linearity and borrowing. We formalize Verus’ linearity, borrowing, and modes in a small lambda calculus, for which we prove type safety and termination of specifications and proofs. We demonstrate Verus on a series of examples, including pointer-manipulating code (an xor-based doubly linked list), code with interior mutability, and concurrent code.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="pdf-url"><a class="helia-link helia-external" href="https://dl.acm.org/doi/pdf/10.1145/3586037">PDF</a></span> · <span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/3586037">DOI</a></span> · <span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/2303.05491">arXiv</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/journals/pacmpl/LattuadaHCBSZHPH23">pldb</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="leroy_formal_2009" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="leroy_formal_2009"><span class="helia-title">Formal verification of a realistic compiler</span>&nbsp;<a class="helia-slug" href="leroy_formal_2009.html">leroy_formal_2009</a><span class="helia-byline"><span class="helia-entry-link" data-entry="cacm">CACM</span> · 2009</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="leroy_formal_2009" data-kind="reference">
+<div class="helia-abstract">This paper reports on the development and formal verification (proof of semantic preservation) of CompCert, a compiler from Clight (a large subset of the C programming language) to PowerPC assembly code, using the Coq proof assistant both for programming the compiler and for proving its correctness. Such a verified compiler is useful in the context of critical software and its formal verification: the verification of the compiler guarantees that the safety properties proved on the source code hold for the executable compiled code as well.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/1538788.1538814">DOI</a></span></div>
+</div>
+</div>
+</details>
+</section>
+</div>
+</details>
+</div>
+<div class="helia-reference-cites-away helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">External (53)</span></summary>
+<div class="helia-group-body">
+<ul>
+<li>Basic implementations of standard cryptography algorithms (2024)</li>
+<li>FlowCert GitHub repository (2024)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.5281/zenodo.12552491">Translation validation for asynchronous dataflow via dynamic fractional permissions (artifact)</a> (2024)</li>
+<li>Clang: a C language family frontend for LLVM (2024)</li>
+<li>LLVM language reference manual (2024)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3613424.3614283">Pipestitch: An energy-minimal dataflow architecture with lightweight threads</a> (2023)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1109/micro56248.2022.00046">A programmable, energy-minimal dataflow compiler and architecture</a> (2022)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1109/isca52012.2021.00084">Snafu: An Ultra-Low-Power, Energy-Minimal CGRA-Generation Framework and Architecture</a> (2021)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3445814.3446751">Language-parametric compiler validation with application to LLVM</a> (2021)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3453483.3454030">Alive2: bounded translation validation for LLVM</a> (2021)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1016/j.jlamp.2019.100513">Ground confluence of order-sorted conditional specifications modulo axioms</a> (2020)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3385412.3385980">Inductive sequentialization of asynchronous programs</a> (2020)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3357375">A Survey of Coarse-Grained Reconfigurable Architecture and Design</a> (2019)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3290372">Pretend synchrony: synchronous verification of asynchronous distributed programs</a> (2019)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3182657">A Survey of Symbolic Execution Techniques</a> (2018)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3133934">Verifying distributed programs via canonical sequentialization</a> (2017)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3062341.3062358">A formally verified compiler for Lustre</a> (2017)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-662-49122-5_2">Viper: a verification infrastructure for permission-based reasoning</a> (2016)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-319-41540-6_29">The Kind 2 Model Checker</a> (2016)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/2775051.2676980">Iris</a> (2015)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/2737924.2737965">Provably Correct Peephole Optimizations with Alive</a> (2015)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1109/tpds.2013.125">Hybrid Dataflow/von-Neumann Architectures</a> (2014)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-642-36946-9_10">Fractional Permissions</a> (2013)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/2509136.2509509">Data-driven equivalence checking</a> (2013)</li>
+<li>Denotational translation validation (2012)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/1993498.1993533">Evaluating value-graph translation validation for LLVM</a> (2011)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/1542476.1542513">Proving optimizations correct using parameterized program equivalence</a> (2009)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/1480881.1480915">Equality saturation: a new approach to optimization</a> (2009)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-540-78800-3_24">Z3: An Efficient SMT Solver</a> (2008)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1109/fmcad.2008.ecp.19">Scaling Up the Formal Verification of Lustre Programs with SMT-Based Techniques</a> (2008)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1016/j.entcs.2006.04.008">Variables as Resource for Shared-Memory Programs: Semantics and Soundness</a> (2006)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/1133981.1134029">Termination proofs for systems code</a> (2006)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/1013208.1013209">Advances in dataflow programming languages</a> (2004)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1109/cgo.2004.1281665">LLVM: a compilation framework for lifelong program analysis &amp; transformation</a> (2004)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1109/micro.2003.1253203">WaveScalar</a> (2003)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1016/s0304-3975(01)00359-0">Maude: specification and programming in rewriting logic</a> (2002)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/568425.568433">Paxos made simple</a> (2001)</li>
+<li>The π-calculus: a theory of mobile processes (2001)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1109/2.839324">PipeRench: A Reconfigurable Architecture and Compiler</a> (2000)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/349299.349314">Translation validation for an optimizing compiler</a> (2000)</li>
+<li>Communicating and mobile systems: the π-calculus (1999)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1017/cbo9781139172752">Term rewriting and all that</a> (1998)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/bfb0028770">XEVE, an ESTEREL Verification Environment</a> (1998)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/bfb0054170">Translation Validation</a> (1998)</li>
+<li>The theory and practice of concurrency (1997)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/3-540-57208-2_35">Types for Dyadic Interaction</a> (1993)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1109/proc.1987.13876">Synchronous data flow</a> (1987)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1146/annurev.cs.01.060186.001301">Dataflow architectures</a> (1986)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1109/mc.1982.1653938">Data flow languages</a> (1982)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/641675.642111">A preliminary architecture for a basic data-flow processor</a> (1974)</li>
+<li>The semantics of a simple language for parallel programming (1974)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1016/b978-0-08-012975-4.50028-x">Simple word problems in universal algebras</a> (1970)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1137/0114108">Properties of a model for parallel computations: determinacy</a> (1966)</li>
+</ul>
+</div>
+</details>
+</div>
+</div>
+</details>
+</div>
+<footer class="helia-footer">
+<div class="helia-related helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><h3 class="helia-heading">Related</h3>
+</summary>
+<div class="helia-group-body">
+<ul>
+<li><a class="helia-entry-link" href="vanhattum-2020-a.html" data-entry="vanhattum-2020-a">A Synthesis-Aided Compiler for DSP Architectures (WiP Paper)</a> <span class="helia-related-tags"><a class="helia-entry-link" href="tag-hardware.html" data-entry="tag-hardware">#hardware</a> <a class="helia-entry-link" href="tag-compilation.html" data-entry="tag-compilation">#compilation</a></span></li>
+<li><a class="helia-entry-link" href="vanhattum-2021-vectorization.html" data-entry="vanhattum-2021-vectorization">Vectorization for digital signal processors via equality saturation</a> <span class="helia-related-tags"><a class="helia-entry-link" href="tag-hardware.html" data-entry="tag-hardware">#hardware</a> <a class="helia-entry-link" href="tag-compilation.html" data-entry="tag-compilation">#compilation</a></span></li>
+</ul>
+</div>
+</details>
+</div>
+</footer>
+</article>
+<div class="helia-identity"><span class="helia-id">lin-2024-flowcert</span> <span class="helia-kind">reference</span> <span class="helia-path">entries/refs/lin-2024-flowcert/lin-2024-flowcert.hel</span></div>
+</div>
+</body>
+</html>

@@ -1,0 +1,1 @@
+heliaSearchData("d/speight-2026-impredicativity",{"id":"speight-2026-impredicativity","title":"Impredicativity in Linear Dependent Type Theory","kind":"reference","tags":["linear-logic","type-theory"],"authors":["Niels van der Weide","Sam Speight"],"venue":["arXiv"],"date":null,"url":"speight-2026-impredicativity.html","headings":[],"body":""});

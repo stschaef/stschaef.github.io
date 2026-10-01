@@ -1,0 +1,1 @@
+heliaSearchData("d/tag-substructural",{"id":"tag-substructural","title":"substructural","kind":"tag","tags":[],"authors":[],"venue":[],"date":null,"url":"tag-substructural.html","headings":[],"body":""});

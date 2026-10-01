@@ -1,0 +1,1 @@
+heliaSearchData("d/benjaminquiring",{"id":"benjaminquiring","title":"Benjamin Quiring","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"benjaminquiring.html","headings":[],"body":""});

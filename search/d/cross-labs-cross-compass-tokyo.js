@@ -1,0 +1,1 @@
+heliaSearchData("d/cross-labs-cross-compass-tokyo",{"id":"cross-labs-cross-compass-tokyo","title":"Cross Labs (Cross Compass), Tokyo","kind":"institution","tags":[],"authors":[],"venue":[],"date":null,"url":"cross-labs-cross-compass-tokyo.html","headings":[],"body":""});

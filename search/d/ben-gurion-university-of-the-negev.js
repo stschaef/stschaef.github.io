@@ -1,0 +1,1 @@
+heliaSearchData("d/ben-gurion-university-of-the-negev",{"id":"ben-gurion-university-of-the-negev","title":"Ben-Gurion University of the Negev","kind":"institution","tags":[],"authors":[],"venue":[],"date":null,"url":"ben-gurion-university-of-the-negev.html","headings":[],"body":""});

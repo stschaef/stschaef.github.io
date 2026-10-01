@@ -1,0 +1,1 @@
+heliaSearchData("d/samuelgruetter",{"id":"samuelgruetter","title":"Samuel Gruetter","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"samuelgruetter.html","headings":[],"body":""});

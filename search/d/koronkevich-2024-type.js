@@ -1,0 +1,1 @@
+heliaSearchData("d/koronkevich-2024-type",{"id":"koronkevich-2024-type","title":"Type Universes as Allocation Effects","kind":"reference","tags":["universes"],"authors":["Paulette Koronkevich","William J. Bowman"],"venue":["arXiv"],"date":null,"url":"koronkevich-2024-type.html","headings":[],"body":""});

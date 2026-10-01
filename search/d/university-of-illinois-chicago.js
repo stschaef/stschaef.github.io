@@ -1,0 +1,1 @@
+heliaSearchData("d/university-of-illinois-chicago",{"id":"university-of-illinois-chicago","title":"University of Illinois Chicago","kind":"institution","tags":[],"authors":[],"venue":[],"date":null,"url":"university-of-illinois-chicago.html","headings":[],"body":""});

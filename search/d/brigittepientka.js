@@ -1,0 +1,1 @@
+heliaSearchData("d/brigittepientka",{"id":"brigittepientka","title":"Brigitte Pientka","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"brigittepientka.html","headings":[],"body":""});

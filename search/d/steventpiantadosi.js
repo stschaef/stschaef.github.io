@@ -1,0 +1,1 @@
+heliaSearchData("d/steventpiantadosi",{"id":"steventpiantadosi","title":"Steven T. Piantadosi","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"steventpiantadosi.html","headings":[],"body":""});

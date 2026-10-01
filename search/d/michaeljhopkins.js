@@ -1,0 +1,1 @@
+heliaSearchData("d/michaeljhopkins",{"id":"michaeljhopkins","title":"Michael J. Hopkins","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"michaeljhopkins.html","headings":[],"body":""});

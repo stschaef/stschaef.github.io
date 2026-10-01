@@ -1,0 +1,1 @@
+heliaSearchData("d/pixar-animation-studios",{"id":"pixar-animation-studios","title":"Pixar Animation Studios","kind":"institution","tags":[],"authors":[],"venue":[],"date":null,"url":"pixar-animation-studios.html","headings":[],"body":""});

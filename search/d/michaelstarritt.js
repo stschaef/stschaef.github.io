@@ -1,0 +1,1 @@
+heliaSearchData("d/michaelstarritt",{"id":"michaelstarritt","title":"Michael Starritt","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"michaelstarritt.html","headings":[],"body":""});

@@ -1,0 +1,1 @@
+heliaSearchData("d/newcastle-university",{"id":"newcastle-university","title":"Newcastle University","kind":"institution","tags":[],"authors":[],"venue":[],"date":null,"url":"newcastle-university.html","headings":[],"body":""});

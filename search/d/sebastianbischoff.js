@@ -1,0 +1,1 @@
+heliaSearchData("d/sebastianbischoff",{"id":"sebastianbischoff","title":"Sebastian Bischoff","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"sebastianbischoff.html","headings":[],"body":""});

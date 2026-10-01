@@ -1,0 +1,1 @@
+heliaSearchData("d/davidjohnwheeler",{"id":"davidjohnwheeler","title":"David John Wheeler","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"davidjohnwheeler.html","headings":[],"body":""});

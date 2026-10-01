@@ -1,0 +1,1 @@
+heliaSearchData("d/universite-louis-pasteur-strasbourg",{"id":"universite-louis-pasteur-strasbourg","title":"Université Louis Pasteur, Strasbourg","kind":"institution","tags":[],"authors":[],"venue":[],"date":null,"url":"universite-louis-pasteur-strasbourg.html","headings":[],"body":""});

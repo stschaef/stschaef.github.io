@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>Frex: Dependently Typed Algebraic Simplification</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Ctext y=%22.9em%22 font-size=%2290%22%3E%F0%9F%8C%BB%3C/text%3E%3C/svg%3E">
+<meta name="generator" content="helia">
+<link rel="alternate" type="application/atom+xml" title="Steven Schaefer" href="feed.xml">
+<link rel="alternate" type="application/feed+json" title="Steven Schaefer" href="feed.json">
+<script src="helia/theme-version.js"></script>
+<script src="theme/folio-early.js"></script>
+<link rel="stylesheet" href="helia/theme.css">
+<link rel="stylesheet" href="helia/highlight.css">
+<link rel="stylesheet" href="helia/search.css">
+<link rel="stylesheet" href="theme/katex.css">
+<link rel="stylesheet" href="theme/recipe.css">
+<link rel="stylesheet" href="theme/site.css">
+<link rel="stylesheet" href="theme/folio.css">
+<script defer src="helia/runtime.js"></script>
+<script defer src="helia/search.js"></script>
+<script defer src="theme/glyphcraft.js"></script>
+<script defer src="theme/glyphart.js"></script>
+<script defer src="theme/glyphgen.js"></script>
+<script defer src="theme/ornament.js"></script>
+<script defer src="theme/folio.js"></script>
+<script defer src="theme/portrait.js"></script>
+<script type="application/json" id="helia-widgets">{"helia-cite-formats":"widgets/helia-cite-formats-a3294ac7.js"}</script>
+<link rel="modulepreload" href="widgets/helia-cite-formats-a3294ac7.js">
+<script type="module" src="widgets/runtime.js"></script>
+</head>
+<body>
+<nav class="helia-topbar"><a class="helia-home" href="home.html">Steven Schaefer</a><ul class="helia-nav-links"><li><a href="stevenschaefer.html">About Me</a></li><li><a href="research.html">Research</a></li><li><a href="new.html">New</a></li></ul><button type="button" class="helia-search-button" aria-label="Search (/ or Ctrl+K)" aria-haspopup="dialog"><span class="helia-search-icon">⌕</span><span class="helia-search-label">Search</span><kbd class="helia-search-key">/</kbd></button></nav>
+<div class="helia-page" data-kind="reference">
+<article class="helia-article">
+<header class="helia-header" data-entry="allais-2025-frex" data-kind="reference">
+<h2 class="helia-heading"><span class="helia-taxon">Reference.</span> Frex: Dependently Typed Algebraic Simplification</h2>
+<div class="helia-meta"><span class="helia-author"><a class="helia-entry-link" href="guillaumeallais.html" data-entry="guillaumeallais">Guillaume Allais</a>, <a class="helia-entry-link" href="edwinbrady.html" data-entry="edwinbrady">Edwin Brady</a>, <a class="helia-entry-link" href="nathancorbyn.html" data-entry="nathancorbyn">Nathan Corbyn</a>, <a class="helia-entry-link" href="ohadkammar.html" data-entry="ohadkammar">Ohad Kammar</a>, <a class="helia-entry-link" href="jeremyyallop.html" data-entry="jeremyyallop">Jeremy Yallop</a></span> · <span class="helia-byline"><a class="helia-entry-link" href="icfp.html" data-entry="icfp">ICFP</a> · 2025</span> · <span class="helia-entry-links"><span class="helia-entry-link" data-field="pdf-url"><a class="helia-link helia-external" href="https://dl.acm.org/doi/pdf/10.1145/3747506">PDF</a></span> · <span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/3747506">DOI</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/journals/pacmpl/AllaisBCKY25">pldb</a></span></span></div>
+</header>
+<div class="helia-body">
+<div class="helia-abstract">We present a new design for an algebraic simplification library structured around concepts from universal algebra: theories, models, homomorphisms, and universal properties of free algebras and free extensions of algebras. The library’s dependently typed interface guarantees that both built-in and user-defined simplification modules are terminating, sound, and complete with respect to a well-specified class of equations. We have implemented the design in the Idris 2 and Agda dependently typed programming languages and shown that it supports modular extension to new theories, proof extraction and certification, goal extraction via reflection, and interactive development.</div>
+</div>
+<div class="helia-cite helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><h3 class="helia-heading">Cite</h3>
+</summary>
+<div class="helia-group-body">
+<div class="helia-widget" data-widget="helia-cite-formats" data-props="{&quot;key&quot;:&quot;allais-2025-frex&quot;,&quot;bibtex&quot;:&quot;@article{allais-2025-frex, title={Frex: Dependently Typed Algebraic Simplification}, volume={9}, ISSN={2475-1421}, url={http://dx.doi.org/10.1145/3747506}, DOI={10.1145/3747506}, number={ICFP}, journal={Proceedings of the ACM on Programming Languages}, publisher={Association for Computing Machinery (ACM)}, author={Allais, Guillaume and Brady, Edwin and Corbyn, Nathan and Kammar, Ohad and Yallop, Jeremy}, year={2025}, month=Aug, pages={30–65} }&quot;,&quot;bib-file&quot;:&quot;allais-2025-frex.bib&quot;,&quot;hayagriva&quot;:&quot;allais-2025-frex:\n  type: article\n  title: &#39;Frex: Dependently Typed Algebraic Simplification&#39;\n  author:\n  - Allais, Guillaume\n  - Brady, Edwin\n  - Corbyn, Nathan\n  - Kammar, Ohad\n  - Yallop, Jeremy\n  date: 2025-08\n  page-range: 30-65\n  url: http://dx.doi.org/10.1145/3747506\n  serial-number:\n    doi: 10.1145/3747506\n    issn: 2475-1421\n  parent:\n    type: periodical\n    title: Proceedings of the ACM on Programming Languages\n    publisher: Association for Computing Machinery (ACM)\n    issue: ICFP\n    volume: 9\n&quot;,&quot;yml-file&quot;:&quot;allais-2025-frex.yml&quot;}"><div class="helia-cite-key" data-copy="@allais-2025-frex" data-copy-label="citation key"><span class="helia-bib-key">Cite as</span> <code class="helia-raw-inline">@allais-2025-frex</code> (helia, typst) · <code class="helia-raw-inline">\cite{allais-2025-frex}</code> (LaTeX)</div>
+<div class="helia-cite-format helia-collapsible" data-format="bibtex" data-copy="true" data-copy-label="BibTeX">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">BibTeX</span></summary>
+<div class="helia-group-body">
+<details class="helia-code" open><summary class="helia-code-summary"><span class="helia-code-lang">bibtex</span> · <span class="helia-code-lines">1 line</span></summary><pre class="helia-raw"><code class="language-bibtex"><span class="hl-text hl-bibtex"><span class="hl-meta hl-entry hl-braces hl-bibtex"><span class="hl-keyword hl-other hl-entry-type hl-bibtex"><span class="hl-punctuation hl-definition hl-keyword hl-bibtex">@</span>article</span><span class="hl-punctuation hl-section hl-entry hl-begin hl-bibtex">{</span><span class="hl-entity hl-name hl-type hl-entry-key hl-bibtex">allais-2025-frex</span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">title</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>Frex: Dependently Typed Algebraic Simplification<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">volume</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>9<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">ISSN</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>2475-1421<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">url</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>http://dx.doi.org/10.1145/3747506<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">DOI</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>10.1145/3747506<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">number</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>ICFP<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">journal</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>Proceedings of the ACM on Programming Languages<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">publisher</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>Association for Computing Machinery (ACM)<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">author</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>Allais, Guillaume and Brady, Edwin and Corbyn, Nathan and Kammar, Ohad and Yallop, Jeremy<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">year</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>2025<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">month</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span>Aug</span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">pages</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>30–65<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span> </span><span class="hl-punctuation hl-section hl-entry hl-end hl-bibtex">}</span></span></span></code></pre></details>
+</div>
+</details>
+</div>
+<div class="helia-cite-format helia-collapsible" data-format="hayagriva" data-copy="true" data-copy-label="hayagriva YAML">
+<details>
+<summary class="helia-group-summary"><span class="helia-group-title">hayagriva YAML (typst)</span></summary>
+<div class="helia-group-body">
+<details class="helia-code" open><summary class="helia-code-summary"><span class="helia-code-lang">yaml</span> · <span class="helia-code-lines">21 lines</span></summary><pre class="helia-raw"><code class="language-yaml"><span class="hl-source hl-yaml"><span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">allais-2025-frex</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">type</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">article</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">title</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-quoted hl-single hl-yaml"><span class="hl-punctuation hl-definition hl-string hl-begin hl-yaml">&#39;</span>Frex: Dependently Typed Algebraic Simplification<span class="hl-punctuation hl-definition hl-string hl-end hl-yaml">&#39;</span></span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">author</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Allais, Guillaume</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Brady, Edwin</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Corbyn, Nathan</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Kammar, Ohad</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Yallop, Jeremy</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">date</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">2025-08</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">page-range</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">30-65</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">url</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">http://dx.doi.org/10.1145/3747506</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">serial-number</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">doi</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">10.1145/3747506</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">issn</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">2475-1421</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">parent</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">type</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">periodical</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">title</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Proceedings of the ACM on Programming Languages</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">publisher</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Association for Computing Machinery (ACM)</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">issue</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">ICFP</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">volume</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-constant hl-numeric hl-integer hl-decimal hl-yaml">9</span>
+</span></code></pre></details>
+</div>
+</details>
+</div>
+<div class="helia-cite-files">Download: <a class="helia-link" href="allais-2025-frex.bib">allais-2025-frex.bib</a> · <a class="helia-link" href="allais-2025-frex.yml">allais-2025-frex.yml</a></div>
+</div>
+</div>
+</details>
+</div>
+<div class="helia-reference-cites helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">Cites 67 works (12 here)</span></summary>
+<div class="helia-group-body">
+<div class="helia-reference-cites-here helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">With notes (12)</span></summary>
+<div class="helia-group-body">
+<section class="helia-transclusion" data-entry="fiore-2022-formal" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="fiore-2022-formal"><span class="helia-title">Formal metatheory of second-order abstract syntax</span>&nbsp;<a class="helia-slug" href="fiore-2022-formal.html">fiore-2022-formal</a><span class="helia-byline"><span class="helia-entry-link" data-entry="popl">POPL</span> · 2022</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="fiore-2022-formal" data-kind="reference">
+<div class="helia-abstract">Despite extensive research both on the theoretical and practical fronts, formalising, reasoning about, and implementing languages with variable binding is still a daunting endeavour – repetitive boilerplate and the overly complicated metatheory of capture-avoiding substitution often get in the way of progressing on to the actually interesting properties of a language. Existing developments offer some relief, however at the expense of inconvenient and error-prone term encodings and lack of formal foundations. We present a mathematically-inspired language-formalisation framework implemented in Agda. The system translates the description of a syntax signature with variable-binding operators into an intrinsically-encoded, inductive data type equipped with syntactic operations such as weakening and substitution, along with their correctness properties. The generated metatheory further incorporates metavariables and their associated operation of metasubstitution, which enables second-order equational/rewriting reasoning. The underlying mathematical foundation of the framework – initial algebra semantics – derives compositional interpretations of languages into their models satisfying the semantic substitution lemma by construction.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="pdf-url"><a class="helia-link helia-external" href="https://dl.acm.org/doi/pdf/10.1145/3498715">PDF</a></span> · <span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/3498715">DOI</a></span> · <span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/2201.03504">arXiv</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/journals/pacmpl/FioreS22">pldb</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="hu-2021-formalizing" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="hu-2021-formalizing"><span class="helia-title">Formalizing category theory in Agda</span>&nbsp;<a class="helia-slug" href="hu-2021-formalizing.html">hu-2021-formalizing</a><span class="helia-byline"><span class="helia-entry-link" data-entry="cpp">CPP</span> · 2021</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="hu-2021-formalizing" data-kind="reference">
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="pdf-url"><a class="helia-link helia-external" href="https://arxiv.org/pdf/2005.07059">PDF</a></span> · <span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/3437992.3439922">DOI</a></span> · <span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/2005.07059">arXiv</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/conf/cpp/HuC21">pldb</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="sterling_angiuli_2021" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="sterling_angiuli_2021"><span class="helia-title">Normalization for Cubical Type Theory</span>&nbsp;<a class="helia-slug" href="sterling_angiuli_2021.html">sterling_angiuli_2021</a><span class="helia-byline"><span class="helia-entry-link" data-entry="lics">LICS</span> · 2021</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="sterling_angiuli_2021" data-kind="reference">
+<div class="helia-abstract">We prove normalization for (univalent, Cartesian) cubical type theory, closing the last major open problem in the syntactic metatheory of cubical type theory. Our normalization result is reduction-free, in the sense of yielding a bijection between equivalence classes of terms in context and a tractable language of β/η-normal forms. As corollaries we obtain both decidability of judgmental equality and the injectivity of type constructors.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="url"><a class="helia-link helia-external" href="https://arxiv.org/abs/2101.11479">Web</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="carette-2020-leveraging" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="carette-2020-leveraging"><span class="helia-title">Leveraging the Information Contained in Theory Presentations</span>&nbsp;<a class="helia-slug" href="carette-2020-leveraging.html">carette-2020-leveraging</a><span class="helia-byline"><span class="helia-entry-link" data-entry="cicm">CICM</span> · 2020</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="carette-2020-leveraging" data-kind="reference">
+<div class="helia-abstract">A theorem prover without an extensive library is much less useful to its potential users. Algebra, the study of algebraic structures, is a core component of such libraries. Algebraic theories also are themselves structured, the study of which was started as Universal Algebra. Various constructions (homomorphism, term algebras, products, etc) and their properties are both universal and constructive. Thus they are ripe for being automated. Unfortunately, current practice still requires library builders to write these by hand. We first highlight specific redundancies in libraries of existing systems. Then we describe a framework for generating these derived concepts from theory definitions. We demonstrate the usefulness of this framework on a test library of 227 theories.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-030-53518-6_4">DOI</a></span> · <span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/2006.09292">arXiv</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="VezzosiMortbergAbel2019" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="VezzosiMortbergAbel2019"><span class="helia-title">Cubical Agda: A Dependently Typed Programming Language with Univalence and Higher Inductive Types</span>&nbsp;<a class="helia-slug" href="VezzosiMortbergAbel2019.html">VezzosiMortbergAbel2019</a><span class="helia-byline"><span class="helia-entry-link" data-entry="icfp">ICFP</span> · 2019</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="VezzosiMortbergAbel2019" data-kind="reference">
+<div class="helia-abstract">Proof assistants based on dependent type theory provide expressive languages for both programming and proving within the same system. However, all of the major implementations lack powerful extensionality principles for reasoning about equality, such as function and propositional extensionality. These principles are typically added axiomatically which disrupts the constructive properties of these systems. Cubical type theory provides a solution by giving computational meaning to Homotopy Type Theory and Univalent Foundations, in particular to the univalence axiom and higher inductive types. This paper describes an extension of the dependently typed functional programming language Agda with cubical primitives, making it into a full-blown proof assistant with native support for univalence and a general schema of higher inductive types. These new primitives make function and propositional extensionality as well as quotient types directly definable with computational content. Additionally, thanks also to copatterns, bisimilarity is equivalent to equality for coinductive types. This extends Agda with support for a wide range of extensionality principles, without sacrificing type checking and constructivity.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="pdf-url"><a class="helia-link helia-external" href="https://dl.acm.org/doi/pdf/10.1145/3341691">PDF</a></span> · <span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/3341691">DOI</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/journals/pacmpl/VezzosiM019">pldb</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="atkey-2018-syntax" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="atkey-2018-syntax"><span class="helia-title">Syntax and Semantics of Quantitative Type Theory</span>&nbsp;<a class="helia-slug" href="atkey-2018-syntax.html">atkey-2018-syntax</a><span class="helia-byline"><span class="helia-entry-link" data-entry="lics">LICS</span> · 2018</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="atkey-2018-syntax" data-kind="reference">
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/3209108.3209189">DOI</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="yallop-2018-partially" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="yallop-2018-partially"><span class="helia-title">Partially-static data as free extension of algebras</span>&nbsp;<a class="helia-slug" href="yallop-2018-partially.html">yallop-2018-partially</a><span class="helia-byline"><span class="helia-entry-link" data-entry="icfp">ICFP</span> · 2018</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="yallop-2018-partially" data-kind="reference">
+<div class="helia-abstract">Partially-static data structures are a well-known technique for improving binding times. However, they are often defined in an ad-hoc manner, without a unifying framework to ensure full use of the equations associated with each operation. We present a foundational view of partially-static data structures as free extensions of algebras for suitable equational theories, i.e. the coproduct of an algebra and a free algebra in the category of algebras and their homomorphisms. By precalculating these free extensions, we construct a high-level library of partially-static data representations for common algebraic structures. We demonstrate our library with common use-cases from the literature: string and list manipulation, linear algebra, and numerical simplification.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="pdf-url"><a class="helia-link helia-external" href="https://dl.acm.org/doi/pdf/10.1145/3236795">PDF</a></span> · <span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/3236795">DOI</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/journals/pacmpl/YallopGK18">pldb</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="altenkirch_etal_2018" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="altenkirch_etal_2018"><span class="helia-title">Quotient Inductive-Inductive Types</span>&nbsp;<a class="helia-slug" href="altenkirch_etal_2018.html">altenkirch_etal_2018</a><span class="helia-byline"><span class="helia-entry-link" data-entry="fossacs">FoSSaCS</span> · 2018</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="altenkirch_etal_2018" data-kind="reference">
+<div class="helia-abstract">Higher inductive types (HITs) in Homotopy Type Theory allow the definition of datatypes which have constructors for equalities over the defined type. HITs generalise quotient types, and allow to define types with non-trivial higher equality types, such as spheres, suspensions and the torus. However, there are also interesting uses of HITs to define types satisfying uniqueness of equality proofs, such as the Cauchy reals, the partiality monad, and the well-typed syntax of type theory. In each of these examples we define several types that depend on each other mutually, i.e. they are inductive-inductive definitions. We call those HITs quotient inductive-inductive types (QIITs). Although there has been recent progress on a general theory of HITs, there is not yet a theoretical foundation for the combination of equality constructors and induction-induction, despite many interesting applications. In the present paper we present a first step towards a semantic definition of QIITs. In particular, we give an initial-algebra semantics. We further derive a section induction principle, stating that every algebra morphism into the algebra in question has a section, which is close to the intuitively expected elimination rules.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-319-89366-2_16">DOI</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="mcbride-2016-i" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="mcbride-2016-i"><span class="helia-title">I Got Plenty o’ Nuttin’</span>&nbsp;<a class="helia-slug" href="mcbride-2016-i.html">mcbride-2016-i</a><span class="helia-byline">A List of Successes That Can Change the World · 2016</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="mcbride-2016-i" data-kind="reference">
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-319-30936-1_12">DOI</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="altenkirch-2007-observational" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="altenkirch-2007-observational"><span class="helia-title">Observational equality, now!</span>&nbsp;<a class="helia-slug" href="altenkirch-2007-observational.html">altenkirch-2007-observational</a><span class="helia-byline"><span class="helia-entry-link" data-entry="plpv">PLPV</span> · 2007</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="altenkirch-2007-observational" data-kind="reference">
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/1292597.1292608">DOI</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="NormalizationAndTheYonedaEmbedding" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="NormalizationAndTheYonedaEmbedding"><span class="helia-title">Normalization and the Yoneda embedding</span>&nbsp;<a class="helia-slug" href="NormalizationAndTheYonedaEmbedding.html">NormalizationAndTheYonedaEmbedding</a><span class="helia-byline"><span class="helia-entry-link" data-entry="mscs">MSCS</span> · 1998</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="NormalizationAndTheYonedaEmbedding" data-kind="reference">
+<div class="helia-abstract">We show how to solve the word problem for simply typed λβη-calculus by using a few well-known facts about categories of presheaves and the Yoneda embedding. The formal setting for these results is 𝒫-category theory, a version of ordinary category theory where each hom-set is equipped with a partial equivalence relation. The part of 𝒫-category theory we develop here is constructive and thus permits extraction of programs from proofs. It is important to stress that in our method we make no use of traditional proof-theoretic or rewriting techniques. To show the robustness of our method, we give an extended treatment for more general λ-theories in the Appendix.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1017/s0960129597002508">DOI</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="altenkirch_etal_nd" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="altenkirch_etal_nd"><span class="helia-title">Normalization by evaluation for typed lambda calculus with coproducts</span>&nbsp;<a class="helia-slug" href="altenkirch_etal_nd.html">altenkirch_etal_nd</a><span class="helia-byline"><span class="helia-entry-link" data-entry="lics">LICS</span></span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="altenkirch_etal_nd" data-kind="reference">
+<div class="helia-abstract">Solves the decision problem for the simply typed lambda calculus with a strong binary sum, or, equivalently, the word problem for free Cartesian closed categories with binary co-products. Our method is based on the semantic technique known as “normalization by evaluation”, and involves inverting the interpretation of the syntax in a suitable sheaf model and, from this, extracting an appropriate unique normal form. There is no rewriting theory involved and the proof is completely constructive, allowing program extraction from the proof.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1109/lics.2001.932506">DOI</a></span></div>
+</div>
+</div>
+</details>
+</section>
+</div>
+</details>
+</div>
+<div class="helia-reference-cites-away helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">External (55)</span></summary>
+<div class="helia-group-body">
+<ul>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3719342">Observational Equality Meets CIC</a> (2025)</li>
+<li>Agda Standard Library (2024)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1017/s0956796823000060">Normalization by evaluation for modal dependent type theory</a> (2023)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3571739">Impredicative Observational Equality</a> (2023)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.5281/zenodo.7118596">Mathematical Components</a> (2022)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3498693">Observational equality: now for good</a> (2022)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3434341">The taming of the rew: a type theory with computational assumptions</a> (2021)</li>
+<li>Proof Synthesis with Free Extensions in Intensional Type Theory. Technical Report (2021)</li>
+<li><a class="helia-link helia-external" href="https://arxiv.org/abs/2111.07936">Birkhoff's Completeness Theorem for Multi-Sorted Algebras Formalized in Agda</a> (2021)</li>
+<li>The Coq Proof Assistant Reference Manual: Ring and field: solvers for polynomial and rational equations (2021)</li>
+<li>Frex: indexing modulo equations with free extensions (2020)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.4230/lipics.types.2019.2">Type Theory Unchained: Extending Agda with User-Defined Rewrite Rules</a> (2019)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3290315">Constructing quotient inductive-inductive types</a> (2019)</li>
+<li>Automatically and Efficiently Illustrating Polynomial Equalities in Agda. Technical Report (2019)</li>
+<li>Fast Elaboration for Dependent Type Theories (2019)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-030-17184-1_2">Meta-F $$^\star $$ : Proof Automation with SMT, Tactics, and Metaprograms</a> (2019)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1016/j.entcs.2018.10.010">Formalization of Universal Algebra in Agda</a> (2018)</li>
+<li>Automatic generation of proof terms in dependently typed programming languages (PhD thesis) (2018)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3110277">Normalization by evaluation for sized dependent types</a> (2017)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-319-62075-6_4">Automatically Proving Equivalence by Type-Safe Reflection</a> (2017)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/2837614.2837638">Type theory in type theory using quotient inductive types</a> (2016)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/2951913.2951932">Elaborator reflection: extending Idris in Idris</a> (2016)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.4230/lipics.types.2015.5">Cubical Type Theory: A Constructive Interpretation of the Univalence Axiom</a> (2015)</li>
+<li>Big operators in Agda (2015)</li>
+<li>Big operators in Agda (MSc thesis) (2015)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-319-08970-6_18">Experience Implementing a Performant Category-Theory Library in Coq</a> (2014)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/2633357.2633360">Reflection without remorse</a> (2014)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/2502409.2502411">New Equations for Neutral Terms: A Sound and Complete Decision Procedure, Formalized</a> (2013)</li>
+<li>Type Inference, Haskell and Dependent Types (PhD thesis) (2013)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/s10701-011-9595-7">Involutive Categories and Monoids, with a GNS-Correspondence</a> (2011)</li>
+<li>Categories for the working mathematician (2010)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-642-15205-4_40">Coq Modulo Theory</a> (2010)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/1577824.1577832">Higher-order constraint simplification in dependent type theory</a> (2009)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-540-71067-7_11">Canonical Big Operators</a> (2008)</li>
+<li>Connecting Gröbner Bases Programs with Coq to do Proofs in Algebra, Geometry and Arithmetics (2008)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1016/j.entcs.2007.02.025">Normalization by Evaluation for Martin-Löf Type Theory with One Universe</a> (2007)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1109/lics.2007.33">Normalization by Evaluation for Martin-Löf Type Theory with Typed Equality Judgements</a> (2007)</li>
+<li>Constructing Correct Circuits: Verification of Functional Aspects of Hardware Specifications with Dependent Types (2007)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-540-73595-3_5">Automating Elementary Number-Theoretic Proofs Using Gröbner Bases</a> (2007)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1016/j.tcs.2006.07.007">Discrete Lawvere theories and computational effects</a> (2006)</li>
+<li>Epigram Reloaded: A Standalone Typechecker for ETT (2005)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/11541868_7">Proving Equalities in a Commutative Ring Done Right in Coq</a> (2005)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/11548133_22">Discrete Lawvere Theories</a> (2005)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1109/lics.1991.151645">An inverse of the evaluation functional for typed lambda -calculus</a> (2002)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1093/oso/9780198501275.003.0012">On universes in type theory</a> (1998)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/bfb0014565">Using reflection to build efficient and certified decision procedures</a> (1997)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1017/s0960129596002150">Intuitionistic model constructions and normalization proofs</a> (1997)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-1-4471-0963-1">Extensional Constructs in Intensional Type Theory</a> (1997)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/3-540-60164-3_27">Categorical reconstruction of a reduction free normalization proof</a> (1995)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/3-540-61780-9_61">Extracting a Proof of Coherence for Monoidal Categories from a Proof of Normalization for Monoids</a> (1995)</li>
+<li>Extensional concepts in intensional type theory (PhD thesis) (1995)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1016/0747-7171(92)90011-r">Unification under a mixed prefix</a> (1992)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-1-4613-8130-3">A Course in Universal Algebra</a> (1981)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1016/s0049-237x(08)71945-1">An Intuitionistic Theory of Types: Predicative Part</a> (1975)</li>
+<li>Foundations of Constructive Analysis (1967)</li>
+</ul>
+</div>
+</details>
+</div>
+</div>
+</details>
+</div>
+</article>
+<div class="helia-identity"><span class="helia-id">allais-2025-frex</span> <span class="helia-kind">reference</span> <span class="helia-path">entries/refs/allais-2025-frex/allais-2025-frex.hel</span></div>
+</div>
+</body>
+</html>

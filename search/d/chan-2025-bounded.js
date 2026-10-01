@@ -1,0 +1,1 @@
+heliaSearchData("d/chan-2025-bounded",{"id":"chan-2025-bounded","title":"Bounded First-Class Universe Levels in Dependent Type Theory","kind":"reference","tags":["universes"],"authors":["Jonathan Chan","Stephanie Weirich"],"venue":["arXiv"],"date":null,"url":"chan-2025-bounded.html","headings":[],"body":""});

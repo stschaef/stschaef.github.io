@@ -1,0 +1,1 @@
+heliaSearchData("d/jeanchristophefilliatre",{"id":"jeanchristophefilliatre","title":"Jean-Christophe Filliâtre","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"jeanchristophefilliatre.html","headings":[],"body":""});

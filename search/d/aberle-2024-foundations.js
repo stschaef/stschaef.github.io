@@ -1,0 +1,1 @@
+heliaSearchData("d/aberle-2024-foundations",{"id":"aberle-2024-foundations","title":"Foundations of Substructural Dependent Type Theory","kind":"reference","tags":["substructural","type-theory"],"authors":["CB Aberle"],"venue":["arXiv"],"date":null,"url":"aberle-2024-foundations.html","headings":[],"body":""});

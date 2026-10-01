@@ -1,0 +1,1 @@
+heliaSearchData("d/university-of-haifa",{"id":"university-of-haifa","title":"University of Haifa","kind":"institution","tags":[],"authors":[],"venue":[],"date":null,"url":"university-of-haifa.html","headings":[],"body":""});

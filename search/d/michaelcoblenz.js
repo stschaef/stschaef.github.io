@@ -1,0 +1,1 @@
+heliaSearchData("d/michaelcoblenz",{"id":"michaelcoblenz","title":"Michael Coblenz","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"michaelcoblenz.html","headings":[],"body":""});

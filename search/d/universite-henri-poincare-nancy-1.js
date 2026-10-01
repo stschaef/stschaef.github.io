@@ -1,0 +1,1 @@
+heliaSearchData("d/universite-henri-poincare-nancy-1",{"id":"universite-henri-poincare-nancy-1","title":"Université Henri Poincaré (Nancy 1)","kind":"institution","tags":[],"authors":[],"venue":[],"date":null,"url":"universite-henri-poincare-nancy-1.html","headings":[],"body":""});

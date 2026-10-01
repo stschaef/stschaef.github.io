@@ -1,0 +1,1 @@
+heliaSearchData("d/parno-2011-bootstrapping",{"id":"parno-2011-bootstrapping","title":"Bootstrapping Trust in Modern Computers","kind":"reference","tags":["security"],"authors":["Adrian Perrig","Bryan Parno","Jonathan M. McCune"],"venue":[],"date":null,"url":"parno-2011-bootstrapping.html","headings":[],"body":""});

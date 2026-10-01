@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>Bicategorical type theory: semantics and syntax</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Ctext y=%22.9em%22 font-size=%2290%22%3E%F0%9F%8C%BB%3C/text%3E%3C/svg%3E">
+<meta name="generator" content="helia">
+<link rel="alternate" type="application/atom+xml" title="Steven Schaefer" href="feed.xml">
+<link rel="alternate" type="application/feed+json" title="Steven Schaefer" href="feed.json">
+<script src="helia/theme-version.js"></script>
+<script src="theme/folio-early.js"></script>
+<link rel="stylesheet" href="helia/theme.css">
+<link rel="stylesheet" href="helia/highlight.css">
+<link rel="stylesheet" href="helia/search.css">
+<link rel="stylesheet" href="theme/katex.css">
+<link rel="stylesheet" href="theme/recipe.css">
+<link rel="stylesheet" href="theme/site.css">
+<link rel="stylesheet" href="theme/folio.css">
+<script defer src="helia/runtime.js"></script>
+<script defer src="helia/search.js"></script>
+<script defer src="theme/glyphcraft.js"></script>
+<script defer src="theme/glyphart.js"></script>
+<script defer src="theme/glyphgen.js"></script>
+<script defer src="theme/ornament.js"></script>
+<script defer src="theme/folio.js"></script>
+<script defer src="theme/portrait.js"></script>
+<script type="application/json" id="helia-widgets">{"helia-cite-formats":"widgets/helia-cite-formats-a3294ac7.js"}</script>
+<link rel="modulepreload" href="widgets/helia-cite-formats-a3294ac7.js">
+<script type="module" src="widgets/runtime.js"></script>
+</head>
+<body>
+<nav class="helia-topbar"><a class="helia-home" href="home.html">Steven Schaefer</a><ul class="helia-nav-links"><li><a href="stevenschaefer.html">About Me</a></li><li><a href="research.html">Research</a></li><li><a href="new.html">New</a></li></ul><button type="button" class="helia-search-button" aria-label="Search (/ or Ctrl+K)" aria-haspopup="dialog"><span class="helia-search-icon">⌕</span><span class="helia-search-label">Search</span><kbd class="helia-search-key">/</kbd></button></nav>
+<div class="helia-page" data-kind="reference">
+<article class="helia-article">
+<header class="helia-header" data-entry="ahrens-2023-bicategorical" data-kind="reference">
+<h2 class="helia-heading"><span class="helia-taxon">Reference.</span> Bicategorical type theory: semantics and syntax</h2>
+<div class="helia-meta"><span class="helia-author"><a class="helia-entry-link" href="benediktahrens.html" data-entry="benediktahrens">Benedikt Ahrens</a>, <a class="helia-entry-link" href="paigerandallnorth.html" data-entry="paigerandallnorth">Paige Randall North</a>, <a class="helia-entry-link" href="nielsvanderweide.html" data-entry="nielsvanderweide">Niels van der Weide</a></span> · <span class="helia-byline"><a class="helia-entry-link" href="mscs.html" data-entry="mscs">MSCS</a> · 2023</span> · <span class="helia-tags"><span class="helia-tag" data-tag="type-theory"><a class="helia-entry-link" href="tag-type-theory.html" data-entry="tag-type-theory">type-theory</a></span> <span class="helia-tag" data-tag="category-theory"><a class="helia-entry-link" href="tag-category-theory.html" data-entry="tag-category-theory">category-theory</a></span></span> · <span class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1017/s0960129523000312">DOI</a></span></span></div>
+</header>
+<div class="helia-body">
+<div class="helia-abstract">We develop semantics and syntax for bicategorical type theory. Bicategorical type theory features contexts, types, terms, and directed reductions between terms. This type theory is naturally interpreted in a class of structured bicategories. We start by developing the semantics, in the form of comprehension bicategories . Examples of comprehension bicategories are plentiful; we study both specific examples as well as classes of examples constructed from other data. From the notion of comprehension bicategory, we extract the syntax of bicategorical type theory, that is, judgment forms and structural inference rules. We prove soundness of the rules by giving an interpretation in any comprehension bicategory. The semantic aspects of our work are fully checked in the Coq proof assistant, based on the UniMath library.</div>
+</div>
+<div class="helia-cite helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><h3 class="helia-heading">Cite</h3>
+</summary>
+<div class="helia-group-body">
+<div class="helia-widget" data-widget="helia-cite-formats" data-props="{&quot;key&quot;:&quot;ahrens-2023-bicategorical&quot;,&quot;bibtex&quot;:&quot;@article{ahrens-2023-bicategorical, title={Bicategorical type theory: semantics and syntax}, volume={33}, ISSN={1469-8072}, url={http://dx.doi.org/10.1017/s0960129523000312}, DOI={10.1017/s0960129523000312}, number={10}, journal={Mathematical Structures in Computer Science}, publisher={Cambridge University Press (CUP)}, author={Ahrens, Benedikt and North, Paige Randall and van der Weide, Niels}, year={2023}, month=Oct, pages={868–912} }&quot;,&quot;bib-file&quot;:&quot;ahrens-2023-bicategorical.bib&quot;,&quot;hayagriva&quot;:&quot;ahrens-2023-bicategorical:\n  type: article\n  title: &#39;Bicategorical type theory: semantics and syntax&#39;\n  author:\n  - Ahrens, Benedikt\n  - North, Paige Randall\n  - name: Weide\n    given-name: Niels\n    prefix: van der\n  date: 2023-10\n  page-range: 868-912\n  url: http://dx.doi.org/10.1017/s0960129523000312\n  serial-number:\n    doi: 10.1017/s0960129523000312\n    issn: 1469-8072\n  parent:\n    type: periodical\n    title: Mathematical Structures in Computer Science\n    publisher: Cambridge University Press (CUP)\n    issue: 10\n    volume: 33\n&quot;,&quot;yml-file&quot;:&quot;ahrens-2023-bicategorical.yml&quot;}"><div class="helia-cite-key" data-copy="@ahrens-2023-bicategorical" data-copy-label="citation key"><span class="helia-bib-key">Cite as</span> <code class="helia-raw-inline">@ahrens-2023-bicategorical</code> (helia, typst) · <code class="helia-raw-inline">\cite{ahrens-2023-bicategorical}</code> (LaTeX)</div>
+<div class="helia-cite-format helia-collapsible" data-format="bibtex" data-copy="true" data-copy-label="BibTeX">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">BibTeX</span></summary>
+<div class="helia-group-body">
+<details class="helia-code" open><summary class="helia-code-summary"><span class="helia-code-lang">bibtex</span> · <span class="helia-code-lines">1 line</span></summary><pre class="helia-raw"><code class="language-bibtex"><span class="hl-text hl-bibtex"><span class="hl-meta hl-entry hl-braces hl-bibtex"><span class="hl-keyword hl-other hl-entry-type hl-bibtex"><span class="hl-punctuation hl-definition hl-keyword hl-bibtex">@</span>article</span><span class="hl-punctuation hl-section hl-entry hl-begin hl-bibtex">{</span><span class="hl-entity hl-name hl-type hl-entry-key hl-bibtex">ahrens-2023-bicategorical</span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">title</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>Bicategorical type theory: semantics and syntax<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">volume</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>33<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">ISSN</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>1469-8072<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">url</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>http://dx.doi.org/10.1017/s0960129523000312<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">DOI</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>10.1017/s0960129523000312<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">number</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>10<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">journal</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>Mathematical Structures in Computer Science<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">publisher</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>Cambridge University Press (CUP)<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">author</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>Ahrens, Benedikt and North, Paige Randall and van der Weide, Niels<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">year</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>2023<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">month</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span>Oct</span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">pages</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>868–912<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span> </span><span class="hl-punctuation hl-section hl-entry hl-end hl-bibtex">}</span></span></span></code></pre></details>
+</div>
+</details>
+</div>
+<div class="helia-cite-format helia-collapsible" data-format="hayagriva" data-copy="true" data-copy-label="hayagriva YAML">
+<details>
+<summary class="helia-group-summary"><span class="helia-group-title">hayagriva YAML (typst)</span></summary>
+<div class="helia-group-body">
+<details class="helia-code" open><summary class="helia-code-summary"><span class="helia-code-lang">yaml</span> · <span class="helia-code-lines">21 lines</span></summary><pre class="helia-raw"><code class="language-yaml"><span class="hl-source hl-yaml"><span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">ahrens-2023-bicategorical</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">type</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">article</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">title</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-quoted hl-single hl-yaml"><span class="hl-punctuation hl-definition hl-string hl-begin hl-yaml">&#39;</span>Bicategorical type theory: semantics and syntax<span class="hl-punctuation hl-definition hl-string hl-end hl-yaml">&#39;</span></span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">author</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Ahrens, Benedikt</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">North, Paige Randall</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">name</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Weide</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">given-name</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Niels</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">prefix</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">van der</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">date</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">2023-10</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">page-range</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">868-912</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">url</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">http://dx.doi.org/10.1017/s0960129523000312</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">serial-number</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">doi</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">10.1017/s0960129523000312</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">issn</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">1469-8072</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">parent</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">type</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">periodical</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">title</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Mathematical Structures in Computer Science</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">publisher</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Cambridge University Press (CUP)</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">issue</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-constant hl-numeric hl-integer hl-decimal hl-yaml">10</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">volume</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-constant hl-numeric hl-integer hl-decimal hl-yaml">33</span>
+</span></code></pre></details>
+</div>
+</details>
+</div>
+<div class="helia-cite-files">Download: <a class="helia-link" href="ahrens-2023-bicategorical.bib">ahrens-2023-bicategorical.bib</a> · <a class="helia-link" href="ahrens-2023-bicategorical.yml">ahrens-2023-bicategorical.yml</a></div>
+</div>
+</div>
+</details>
+</div>
+<div class="helia-reference-cited-by helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">Cited by (5)</span></summary>
+<div class="helia-group-body">
+<section class="helia-transclusion" data-entry="najmaei-2026-from" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="najmaei-2026-from"><span class="helia-title">From Semantics to Syntax: A Type Theory for Comprehension Categories</span>&nbsp;<a class="helia-slug" href="najmaei-2026-from.html">najmaei-2026-from</a><span class="helia-byline"><span class="helia-entry-link" data-entry="popl">POPL</span> · 2026</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="najmaei-2026-from" data-kind="reference">
+<div class="helia-abstract">Recent models of intensional type theory have been constructed in algebraic weak factorization systems (AWFSs). AWFSs give rise to comprehension categories that feature non-trivial morphisms between types; these morphisms are not used in the standard interpretation of Martin-Löf type theory in comprehension categories. We develop a type theory that internalizes morphisms between types, reflecting this semantic feature back into syntax. Our type theory comes with Π-, Σ-, and identity types. We discuss how it can be viewed as an extension of Martin-Löf type theory with coercive subtyping, as sketched by Coraglia and Emmenegger. We furthermore define semantic structure that interprets our type theory and prove a soundness result. Finally, we exhibit many examples of the semantic structure, yielding a plethora of interpretations.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="pdf-url"><a class="helia-link helia-external" href="https://dl.acm.org/doi/pdf/10.1145/3776725">PDF</a></span> · <span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/3776725">DOI</a></span> · <span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/2503.10868">arXiv</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/journals/pacmpl/NajmaeiWAN26">pldb</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="gratzer-2026-the" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="gratzer-2026-the"><span class="helia-title">The ∞-Category of ∞-Categories in Simplicial Type Theory</span>&nbsp;<a class="helia-slug" href="gratzer-2026-the.html">gratzer-2026-the</a><span class="helia-byline"><span class="helia-entry-link" data-entry="lics">LICS</span> · 2026</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="gratzer-2026-the" data-kind="reference">
+<div class="helia-abstract">Simplicial type theory (STT) was introduced by Riehl and Shulman to leverage homotopy type theory to prove results about (∞,1)-categories. Initial work on simplicial type theory focused on “formal” arguments in higher category theory and, in particular, no non-trivial examples of ∞-category theory were constructible within STT. More recent work has changed this state of affairs by applying techniques developed initially for cubical type theory to construct the ∞-category of spaces. We complete this process by constructing the ∞-category of ∞-categories, recovering one of the main foundational results of ∞-category theory (straightening-unstraightening) purely type-theoretically. We also show how this construction enables new examples of the directed version of the structure identity principle: the structure homomorphism principle.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.4230/lipics.lics.2026.52">DOI</a></span> · <span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/2602.02218">arXiv</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="gratzer-2025-the" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="gratzer-2025-the"><span class="helia-title">The Yoneda embedding in simplicial type theory</span>&nbsp;<a class="helia-slug" href="gratzer-2025-the.html">gratzer-2025-the</a><span class="helia-byline"><span class="helia-entry-link" data-entry="lics">LICS</span> · 2025</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="gratzer-2025-the" data-kind="reference">
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1109/lics65433.2025.00017">DOI</a></span> · <span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/2501.13229">arXiv</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="vanderweide-2025-thex" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="vanderweide-2025-thex"><span class="helia-title">The Formal Theory of Monads, Univalently</span>&nbsp;<a class="helia-slug" href="vanderweide-2025-thex.html">vanderweide-2025-thex</a><span class="helia-byline"><span class="helia-entry-link" data-entry="lmcs">LMCS</span> · 2025</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="vanderweide-2025-thex" data-kind="reference">
+<div class="helia-abstract">We develop the formal theory of monads, as established by Street, in univalent foundations. This allows us to formally reason about various kinds of monads on the right level of abstraction. In particular, we define the bicategory of monads internal to a bicategory, and prove that it is univalent. We also define Eilenberg-Moore objects, and we show that both Eilenberg-Moore categories and Kleisli categories give rise to Eilenberg-Moore objects. Finally, we relate monads and adjunctions in arbitrary bicategories. Our work is formalized in Coq using the UniMath library.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.46298/lmcs-21(1:16)2025">DOI</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="gratzer-2024-directed" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="gratzer-2024-directed"><span class="helia-title">Directed univalence in simplicial homotopy type theory</span>&nbsp;<a class="helia-slug" href="gratzer-2024-directed.html">gratzer-2024-directed</a><span class="helia-byline"><span class="helia-entry-link" data-entry="arxiv">arXiv</span> · 2024</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="gratzer-2024-directed" data-kind="reference">
+<div class="helia-abstract">Simplicial type theory extends homotopy type theory with a directed path type which internalizes the notion of a homomorphism within a type. This concept has significant applications both within mathematics – where it allows for synthetic (higher) category theory – and programming languages – where it leads to a directed version of the structure identity principle. In this work, we construct the first types in simplicial type theory with non-trivial homomorphisms. We extend simplicial type theory with modalities and new reasoning principles to obtain triangulated type theory in order to construct the universe of discrete types <span class="helia-math helia-math-inline helia-mathml"><math><mi>𝒮︀</mi></math></span>. We prove that homomorphisms in this type correspond to ordinary functions of types i.e., that <span class="helia-math helia-math-inline helia-mathml"><math><mi>𝒮︀</mi></math></span> is directed univalent. The construction of <span class="helia-math helia-math-inline helia-mathml"><math><mi>𝒮︀</mi></math></span> is foundational for both of the aforementioned applications of simplicial type theory. We are able to define several crucial examples of categories and to recover important results from category theory. Using <span class="helia-math helia-math-inline helia-mathml"><math><mi>𝒮︀</mi></math></span>, we are also able to define various types whose usage is guaranteed to be functorial. These provide the first complete examples of the proposed directed structure identity principle.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/2407.09146">arXiv</a></span></div>
+</div>
+</div>
+</details>
+</section>
+</div>
+</details>
+</div>
+<div class="helia-reference-cites helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">Cites 46 works (4 here)</span></summary>
+<div class="helia-group-body">
+<div class="helia-reference-cites-here helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">With notes (4)</span></summary>
+<div class="helia-group-body">
+<section class="helia-transclusion" data-entry="ahrens-2021-bicategories" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="ahrens-2021-bicategories"><span class="helia-title">Bicategories in univalent foundations</span>&nbsp;<a class="helia-slug" href="ahrens-2021-bicategories.html">ahrens-2021-bicategories</a><span class="helia-byline"><span class="helia-entry-link" data-entry="mscs">MSCS</span> · 2021</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="ahrens-2021-bicategories" data-kind="reference">
+<div class="helia-abstract">We develop bicategory theory in univalent foundations. Guided by the notion of univalence for (1-)categories studied by Ahrens, Kapulkin, and Shulman, we define and study univalent bicategories. To construct examples of univalent bicategories in a modular fashion, we develop displayed bicategories , an analog of displayed 1-categories introduced by Ahrens and Lumsdaine. We demonstrate the applicability of this notion and prove that several bicategories of interest are univalent. Among these are the bicategory of univalent categories with families and the bicategory of pseudofunctors between univalent bicategories. Furthermore, we show that every bicategory with univalent hom-categories is weakly equivalent to a univalent bicategory. All of our work is formalized in Coq as part of the UniMath library of univalent mathematics.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1017/s0960129522000032">DOI</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="ahrens-lumsdaine-2019" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="ahrens-lumsdaine-2019"><span class="helia-title">Displayed Categories</span>&nbsp;<a class="helia-slug" href="ahrens-lumsdaine-2019.html">ahrens-lumsdaine-2019</a><span class="helia-byline">lmcs · 2019</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="ahrens-lumsdaine-2019" data-kind="reference">
+<div class="helia-abstract">We introduce and develop the notion of displayed categories. A displayed category over a category C is equivalent to “a category D and functor F : D –&gt; C”, but instead of having a single collection of “objects of D” with a map to the objects of C, the objects are given as a family indexed by objects of C, and similarly for the morphisms. This encapsulates a common way of building categories in practice, by starting with an existing category and adding extra data/properties to the objects and morphisms. The interest of this seemingly trivial reformulation is that various properties of functors are more naturally defined as properties of the corresponding displayed categories. Grothendieck fibrations, for example, when defined as certain functors, use equality on objects in their definition. When defined instead as certain displayed categories, no reference to equality on objects is required. Moreover, almost all examples of fibrations in nature are, in fact, categories whose standard construction can be seen as going via displayed categories. We therefore propose displayed categories as a basis for the development of fibrations in the type-theoretic setting, and similarly for various other notions whose classical definitions involve equality on objects. Besides giving a conceptual clarification of such issues, displayed categories also provide a powerful tool in computer formalisation, unifying and abstracting common constructions and proof techniques of category theory, and enabling modular reasoning about categories of multi-component structures. As such, most of the material of this article has been formalised in Coq over the UniMath library, with the aim of providing a practical library for use in further developments.</div>
+<p>We introduce and develop the notion of <em>displayed categories</em>. A displayed category over a category <span class="helia-math helia-math-inline helia-mathml"><math><mi>𝐶</mi></math></span> is equivalent to “a category <span class="helia-math helia-math-inline helia-mathml"><math><mi>𝐷</mi></math></span> and functor <span class="helia-math helia-math-inline helia-mathml"><math><mi>𝐹</mi><mo lspace="0.2777777777777778em" rspace="0.2777777777777778em">:</mo><mi>𝐷</mi><mo stretchy="false">→</mo><mi>𝐶</mi></math></span>, but instead of having a single collection of “objects of <span class="helia-math helia-math-inline helia-mathml"><math><mi>𝐷</mi></math></span>” with a map to the objects of <span class="helia-math helia-math-inline helia-mathml"><math><mi>𝐶</mi></math></span>, the objects are given as a family indexed by objects of <span class="helia-math helia-math-inline helia-mathml"><math><mi>𝐶</mi></math></span>, and similarly for the morphisms. This encapsulates a common way of building categories in practice, by starting with an existing category and adding extra data/properties to the objects and morphisms. The interest of this seemingly trivial reformulation is that various properties of functors are more naturally defined as properties of the corresponding displayed categories. Grothendieck fibrations, for example, when defined as certain functors, use equality on objects in their definition. When defined instead as certain displayed categories, no reference to equality on objects is required. Moreover, almost all examples of fibrations in nature are, in fact, categories whose standard construction can be seen as going via displayed categories. We therefore propose displayed categories as a basis for the development of fibrations in the type-theoretic setting, and similarly for various other notions whose classical definitions involve equality on objects. Besides giving a conceptual clarification of such issues, displayed categories also provide a powerful tool in computer formalisation, unifying and abstracting common constructions and proof techniques of category theory, and enabling modular reasoning about categories of multi-component structures. As such, most of the material of this article has been formalised in Coq over the UniMath library, with the aim of providing a practical library for use in further developments.</p>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.23638/lmcs-15(1:20)2019">DOI</a></span> · <span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/1705.04296">arXiv</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="riehl-2017-a" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="riehl-2017-a"><span class="helia-title">A type theory for synthetic <span class="helia-math helia-math-inline helia-mathml"><math><mi>∞</mi></math></span>-categories</span>&nbsp;<a class="helia-slug" href="riehl-2017-a.html">riehl-2017-a</a><span class="helia-byline"><span class="helia-entry-link" data-entry="higher-structures">Higher Structures</span> · 2017</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="riehl-2017-a" data-kind="reference">
+<div class="helia-abstract">We propose foundations for a synthetic theory of <span class="helia-math helia-math-inline helia-mathml"><math><mrow><mo stretchy="false">(</mo><mrow><mi>∞</mi><mo>,</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></math></span>-categories within homotopy type theory. We axiomatize a directed interval type, then define higher simplices from it and use them to probe the internal categorical structures of arbitrary types. We define Segal types, in which binary composites exist uniquely up to homotopy; this automatically ensures composition is coherently associative and unital at all dimensions. We define Rezk types, in which the categorical isomorphisms are additionally equivalent to the type-theoretic identities - a “local univalence” condition. And we define covariant fibrations, which are type families varying functorially over a Segal type, and prove a “dependent Yoneda lemma” that can be viewed as a directed form of the usual elimination rule for identity types. We conclude by studying homotopically correct adjunctions between Segal types, and showing that for a functor between Rezk types to have an adjoint is a mere proposition. To make the bookkeeping in such proofs manageable, we use a three-layered type theory with shapes, whose contexts are extended by polytopes within directed cubes, which can be abstracted over using “extension types” that generalize the path-types of cubical type theory. In an appendix, we describe the motivating semantics in the Reedy model structure on bisimplicial sets, in which our Segal and Rezk types correspond to Segal spaces and complete Segal spaces.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.21136/hs.2017.06">DOI</a></span> · <span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/1705.07442">arXiv</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="ahrens_etal_2015" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="ahrens_etal_2015"><span class="helia-title">Univalent categories and the Rezk completion</span>&nbsp;<a class="helia-slug" href="ahrens_etal_2015.html">ahrens_etal_2015</a><span class="helia-byline"><span class="helia-entry-link" data-entry="mscs">MSCS</span> · 2015</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="ahrens_etal_2015" data-kind="reference">
+<div class="helia-abstract">We develop category theory within Univalent Foundations, which is a foundational system for mathematics based on a homotopical interpretation of dependent type theory. In this system, we propose a definition of ‘category’ for which equality and equivalence of categories agree. Such categories satisfy a version of the univalence axiom, saying that the type of isomorphisms between any two objects is equivalent to the identity type between these objects; we call them ‘saturated’ or ‘univalent’ categories. Moreover, we show that any category is weakly equivalent to a univalent one in a universal way. In homotopical and higher-categorical semantics, this construction corresponds to a truncated version of the Rezk completion for Segal spaces, and also to the stack completion of a prestack.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1017/s0960129514000486">DOI</a></span> · <span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/1303.0584">arXiv</a></span></div>
+</div>
+</div>
+</details>
+</section>
+</div>
+</details>
+</div>
+<div class="helia-reference-cites-away helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">External (42)</span></summary>
+<div class="helia-group-body">
+<ul>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3531130.3533363">A Type Theory for Strictly Unital ∞-Categories</a> (2022)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3531130.3533334">Semantics for two-dimensional type theory</a> (2022)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.5281/zenodo.5846982">The Coq Proof Assistant</a> (2022)</li>
+<li>UniMath: a computer-checked library of univalent mathematics (2022)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.4171/jems/1050">The simplicial model of Univalent Foundations (after Voevodsky)</a> (2021)</li>
+<li><a class="helia-link helia-external" href="https://arxiv.org/abs/2106.04475">Globular weak $ω$-categories as models of a type theory</a> (2021)</li>
+<li><a class="helia-link helia-external" href="https://arxiv.org/abs/2105.01724">Synthetic fibered (infinity,1)-category theory</a> (2021)</li>
+<li><a class="helia-link helia-external" href="https://arxiv.org/abs/2111.09438">Context, judgement, deduction</a> (2021)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3373718.3394794">A Constructive Model of Directed Univalence in Bicubical Sets</a> (2020)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1109/lics.2019.8785895">High-level methods for homotopy construction in associative n-categories</a> (2019)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1016/j.entcs.2019.09.012">Towards a Directed Homotopy Type Theory</a> (2019)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1109/lics.2019.8785708">A type theory for cartesian closed bicategories (Extended Abstract)</a> (2019)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1016/j.exmath.2019.02.004">Categorical notions of fibration</a> (2019)</li>
+<li>Fibrational slice (nLab personal page) (2019)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.23638/lmcs-14(1:8)2018">Globular: an online proof assistant for higher-dimensional rewriting</a> (2018)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1109/lics.2017.8005130">Stack semantics of type theory</a> (2017)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1109/lics.2017.8005124">A type-theoretical definition of weak ω-categories</a> (2017)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-319-15398-8">Directed Algebraic Topology and Concurrency</a> (2016)</li>
+<li><a class="helia-link helia-external" href="https://arxiv.org/abs/1606.05916">On the Homotopy Groups of Spheres in Homotopy Type Theory (PhD thesis)</a> (2016)</li>
+<li>Towards a Directed Homotopy Type Theory Based on 4 Kinds of Variance (Master's thesis) (2015)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.2168/lmcs-9(3:10)2013">Cartesian closed 2-categories and permutation equivalence in higher-order rewriting</a> (2013)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1016/j.jpaa.2013.11.002">Fibred 2-categories and bicategories</a> (2013)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/2103656.2103697">Canonicity for 2-dimensional type theory</a> (2012)</li>
+<li>2-categorical logic (nLab personal page) (2012)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/1960510.1960514">Aspect oriented programming: a language for 2-categories</a> (2011)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1016/j.entcs.2011.09.026">2-Dimensional Directed Type Theory</a> (2011)</li>
+<li>Dependently Typed Programming with Domain-Specific Logics (PhD thesis) (2011)</li>
+<li>Internal logic of a 2-category (nLab personal page) (2011)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1112/plms/pdq026">Types are weak ω -groupoids</a> (2010)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.2168/lmcs-6(3:24)2010">Weak omega-categories from intensional type theory</a> (2010)</li>
+<li>Functorially dependent types (nLab personal page) (2010)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1017/s0960129509007646">Two-dimensional models of type theory</a> (2009)</li>
+<li>An Algebraic Theory of Tricategories (PhD thesis) (2006)</li>
+<li>Practical Foundations of Mathematics (1999)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1016/s0022-4049(97)00129-1">Some properties of Fib as a fibred 2-category</a> (1999)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1109/lics.1994.316071">The groupoid model refutes uniqueness of identity proofs</a> (1994)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/bf00880041">Fibrations and partial products in a 2-category</a> (1993)</li>
+<li>Modelling computations: a 2-categorical framework (1987)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/bfb0066909">Characterization of bicategories of stacks</a> (1982)</li>
+<li>Fibrations in bicategories (1980)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/bfb0074299">Introduction to bicategories</a> (1967)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-642-99902-4_2">Fibred and Cofibred Categories</a> (1966)</li>
+</ul>
+</div>
+</details>
+</div>
+</div>
+</details>
+</div>
+<footer class="helia-footer">
+<div class="helia-related helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><h3 class="helia-heading">Related</h3>
+</summary>
+<div class="helia-group-body">
+<ul>
+<li><a class="helia-entry-link" href="equalizers-in-type-theory.html" data-entry="equalizers-in-type-theory">Constructing Equalizers in Type Theory</a> <span class="helia-related-tags"><a class="helia-entry-link" href="tag-type-theory.html" data-entry="tag-type-theory">#type-theory</a> <a class="helia-entry-link" href="tag-category-theory.html" data-entry="tag-category-theory">#category-theory</a></span></li>
+<li><a class="helia-entry-link" href="jacobs-1999.html" data-entry="jacobs-1999">Categorical Logic and Type Theory</a> <span class="helia-related-tags"><a class="helia-entry-link" href="tag-type-theory.html" data-entry="tag-type-theory">#type-theory</a> <a class="helia-entry-link" href="tag-category-theory.html" data-entry="tag-category-theory">#category-theory</a></span></li>
+<li><a class="helia-entry-link" href="lambek_scott_1986.html" data-entry="lambek_scott_1986">Introduction to Higher-Order Categorical Logic</a> <span class="helia-related-tags"><a class="helia-entry-link" href="tag-type-theory.html" data-entry="tag-type-theory">#type-theory</a> <a class="helia-entry-link" href="tag-category-theory.html" data-entry="tag-category-theory">#category-theory</a></span></li>
+<li><a class="helia-entry-link" href="new_licata_2023.html" data-entry="new_licata_2023">A Formal Logic for Formal Category Theory</a> <span class="helia-related-tags"><a class="helia-entry-link" href="tag-type-theory.html" data-entry="tag-type-theory">#type-theory</a> <a class="helia-entry-link" href="tag-category-theory.html" data-entry="tag-category-theory">#category-theory</a></span></li>
+</ul>
+</div>
+</details>
+</div>
+</footer>
+</article>
+<div class="helia-identity"><span class="helia-id">ahrens-2023-bicategorical</span> <span class="helia-kind">reference</span> <span class="helia-path">entries/refs/ahrens-2023-bicategorical/ahrens-2023-bicategorical.hel</span></div>
+</div>
+</body>
+</html>

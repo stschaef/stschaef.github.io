@@ -1,0 +1,1 @@
+heliaSearchData("d/mortenkroghjespersen",{"id":"mortenkroghjespersen","title":"Morten Krogh-Jespersen","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"mortenkroghjespersen.html","headings":[],"body":""});

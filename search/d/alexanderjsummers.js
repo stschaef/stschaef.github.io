@@ -1,0 +1,1 @@
+heliaSearchData("d/alexanderjsummers",{"id":"alexanderjsummers","title":"Alexander J. Summers","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"alexanderjsummers.html","headings":[],"body":""});

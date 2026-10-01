@@ -1,0 +1,1 @@
+heliaSearchData("d/tiberiusnkinyili",{"id":"tiberiusnkinyili","title":"Tiberius Nkinyili","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"tiberiusnkinyili.html","headings":[],"body":""});

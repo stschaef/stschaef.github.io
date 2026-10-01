@@ -1,0 +1,1 @@
+heliaSearchData("d/university-of-kansas",{"id":"university-of-kansas","title":"University of Kansas","kind":"institution","tags":[],"authors":[],"venue":[],"date":null,"url":"university-of-kansas.html","headings":[],"body":""});

@@ -1,0 +1,1 @@
+heliaSearchData("d/dickinson-college",{"id":"dickinson-college","title":"Dickinson College","kind":"institution","tags":[],"authors":[],"venue":[],"date":null,"url":"dickinson-college.html","headings":[],"body":""});

@@ -1,0 +1,1 @@
+heliaSearchData("d/stephendavidgilmore",{"id":"stephendavidgilmore","title":"Stephen David Gilmore","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"stephendavidgilmore.html","headings":[],"body":""});

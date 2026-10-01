@@ -1,0 +1,1 @@
+heliaSearchData("d/danielpfriedman",{"id":"danielpfriedman","title":"Daniel P. Friedman","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"danielpfriedman.html","headings":[],"body":""});

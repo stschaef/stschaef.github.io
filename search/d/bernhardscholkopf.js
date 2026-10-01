@@ -1,0 +1,1 @@
+heliaSearchData("d/bernhardscholkopf",{"id":"bernhardscholkopf","title":"Bernhard Schölkopf","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"bernhardscholkopf.html","headings":[],"body":""});

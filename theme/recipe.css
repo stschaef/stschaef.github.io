@@ -101,16 +101,32 @@
   margin-top: -0.2em;
 }
 
+/* the card's title is a plain heading: no fold marker, and no browser disclosure triangle
+   (Firefox draws one on a summary unless told not to); it still folds when clicked */
+.helia-recipe-ingredients > details > summary { list-style: none; }
+.helia-recipe-ingredients > details > summary::-webkit-details-marker { display: none; }
+.helia-recipe-ingredients > details > summary::before,
+.helia-recipe-ingredients > details > summary::marker { content: none !important; display: none; }
+
+/* quantities in a column as wide as the longest, the ingredients lined up after it */
 .helia-recipe-ingredients ul {
   list-style: none;
   padding: 0;
   margin: 0.4em 0 0;
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  column-gap: 0.9em;
 }
 
 .helia-recipe-ingredients li {
+  display: grid;
+  grid-column: 1 / -1;
+  grid-template-columns: subgrid;
   padding: 0.35em 0;
   border-bottom: 1px dashed var(--recipe-rule);
 }
+
+.helia-recipe-ingredients li > .helia-recipe-item:first-child { grid-column: 1 / -1; }
 
 .helia-recipe-ingredients li:last-child {
   border-bottom: 0;
@@ -118,7 +134,6 @@
 
 .helia-recipe-qty {
   display: inline-block;
-  min-width: 4.2em;
   font-weight: 700;
   color: var(--recipe-accent);
   font-variant-numeric: tabular-nums;

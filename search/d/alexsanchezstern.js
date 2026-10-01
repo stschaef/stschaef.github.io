@@ -1,0 +1,1 @@
+heliaSearchData("d/alexsanchezstern",{"id":"alexsanchezstern","title":"Alex Sanchez-Stern","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"alexsanchezstern.html","headings":[],"body":""});

@@ -1,0 +1,1 @@
+heliaSearchData("d/manuelbaltieri",{"id":"manuelbaltieri","title":"Manuel Baltieri","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"manuelbaltieri.html","headings":[],"body":""});

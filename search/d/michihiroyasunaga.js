@@ -1,0 +1,1 @@
+heliaSearchData("d/michihiroyasunaga",{"id":"michihiroyasunaga","title":"Michihiro Yasunaga","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"michihiroyasunaga.html","headings":[],"body":""});

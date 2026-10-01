@@ -1,0 +1,1 @@
+heliaSearchData("d/ames-2025-categorical",{"id":"ames-2025-categorical","title":"Categorical Lyapunov Theory II: Stability of Systems","kind":"reference","tags":["coalgebra","dynamical-systems"],"authors":["Aaron D. Ames","Joe Moeller","Sébastien Mattenet"],"venue":["arXiv"],"date":null,"url":"ames-2025-categorical.html","headings":[],"body":""});

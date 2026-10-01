@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>PAKE Combiners and Efficient Post-quantum Instantiations</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Ctext y=%22.9em%22 font-size=%2290%22%3E%F0%9F%8C%BB%3C/text%3E%3C/svg%3E">
+<meta name="generator" content="helia">
+<link rel="alternate" type="application/atom+xml" title="Steven Schaefer" href="feed.xml">
+<link rel="alternate" type="application/feed+json" title="Steven Schaefer" href="feed.json">
+<script src="helia/theme-version.js"></script>
+<script src="theme/folio-early.js"></script>
+<link rel="stylesheet" href="helia/theme.css">
+<link rel="stylesheet" href="helia/highlight.css">
+<link rel="stylesheet" href="helia/search.css">
+<link rel="stylesheet" href="theme/katex.css">
+<link rel="stylesheet" href="theme/recipe.css">
+<link rel="stylesheet" href="theme/site.css">
+<link rel="stylesheet" href="theme/folio.css">
+<script defer src="helia/runtime.js"></script>
+<script defer src="helia/search.js"></script>
+<script defer src="theme/glyphcraft.js"></script>
+<script defer src="theme/glyphart.js"></script>
+<script defer src="theme/glyphgen.js"></script>
+<script defer src="theme/ornament.js"></script>
+<script defer src="theme/folio.js"></script>
+<script defer src="theme/portrait.js"></script>
+<script type="application/json" id="helia-widgets">{"helia-cite-formats":"widgets/helia-cite-formats-a3294ac7.js"}</script>
+<link rel="modulepreload" href="widgets/helia-cite-formats-a3294ac7.js">
+<script type="module" src="widgets/runtime.js"></script>
+</head>
+<body>
+<nav class="helia-topbar"><a class="helia-home" href="home.html">Steven Schaefer</a><ul class="helia-nav-links"><li><a href="stevenschaefer.html">About Me</a></li><li><a href="research.html">Research</a></li><li><a href="new.html">New</a></li></ul><button type="button" class="helia-search-button" aria-label="Search (/ or Ctrl+K)" aria-haspopup="dialog"><span class="helia-search-icon">⌕</span><span class="helia-search-label">Search</span><kbd class="helia-search-key">/</kbd></button></nav>
+<div class="helia-page" data-kind="reference">
+<article class="helia-article">
+<header class="helia-header" data-entry="hesse-2025-pake" data-kind="reference">
+<h2 class="helia-heading"><span class="helia-taxon">Reference.</span> PAKE Combiners and Efficient Post-quantum Instantiations</h2>
+<div class="helia-meta"><span class="helia-author"><a class="helia-entry-link" href="juliahesse.html" data-entry="juliahesse">Julia Hesse</a>, <a class="helia-entry-link" href="michaelrosenberg.html" data-entry="michaelrosenberg">Michael Rosenberg</a></span> · <span class="helia-byline"><a class="helia-entry-link" href="eurocrypt.html" data-entry="eurocrypt">EUROCRYPT</a> · 2025</span> · <span class="helia-tags"><span class="helia-tag" data-tag="security"><a class="helia-entry-link" href="tag-security.html" data-entry="tag-security">security</a></span></span> · <span class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-031-91124-8_14">DOI</a></span></span></div>
+</header>
+<div class="helia-body">
+</div>
+<div class="helia-cite helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><h3 class="helia-heading">Cite</h3>
+</summary>
+<div class="helia-group-body">
+<div class="helia-widget" data-widget="helia-cite-formats" data-props="{&quot;key&quot;:&quot;hesse-2025-pake&quot;,&quot;bibtex&quot;:&quot;@inbook{hesse-2025-pake, title={PAKE Combiners and Efficient Post-quantum Instantiations}, ISBN={9783031911248}, ISSN={1611-3349}, url={http://dx.doi.org/10.1007/978-3-031-91124-8_14}, DOI={10.1007/978-3-031-91124-8_14}, booktitle={Advances in Cryptology – EUROCRYPT 2025}, publisher={Springer Nature Switzerland}, author={Hesse, Julia and Rosenberg, Michael}, year={2025}, pages={395–420} }&quot;,&quot;bib-file&quot;:&quot;hesse-2025-pake.bib&quot;,&quot;hayagriva&quot;:&quot;hesse-2025-pake:\n  type: chapter\n  title: PAKE Combiners and Efficient Post-quantum Instantiations\n  author:\n  - Hesse, Julia\n  - Rosenberg, Michael\n  date: 2025\n  page-range: 395-420\n  url: http://dx.doi.org/10.1007/978-3-031-91124-8_14\n  serial-number:\n    doi: 10.1007/978-3-031-91124-8_14\n    isbn: &#39;9783031911248&#39;\n    issn: 1611-3349\n  parent:\n    type: book\n    title: Advances in Cryptology – EUROCRYPT 2025\n    publisher: Springer Nature Switzerland\n&quot;,&quot;yml-file&quot;:&quot;hesse-2025-pake.yml&quot;}"><div class="helia-cite-key" data-copy="@hesse-2025-pake" data-copy-label="citation key"><span class="helia-bib-key">Cite as</span> <code class="helia-raw-inline">@hesse-2025-pake</code> (helia, typst) · <code class="helia-raw-inline">\cite{hesse-2025-pake}</code> (LaTeX)</div>
+<div class="helia-cite-format helia-collapsible" data-format="bibtex" data-copy="true" data-copy-label="BibTeX">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">BibTeX</span></summary>
+<div class="helia-group-body">
+<details class="helia-code" open><summary class="helia-code-summary"><span class="helia-code-lang">bibtex</span> · <span class="helia-code-lines">1 line</span></summary><pre class="helia-raw"><code class="language-bibtex"><span class="hl-text hl-bibtex"><span class="hl-meta hl-entry hl-braces hl-bibtex"><span class="hl-keyword hl-other hl-entry-type hl-bibtex"><span class="hl-punctuation hl-definition hl-keyword hl-bibtex">@</span>inbook</span><span class="hl-punctuation hl-section hl-entry hl-begin hl-bibtex">{</span><span class="hl-entity hl-name hl-type hl-entry-key hl-bibtex">hesse-2025-pake</span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">title</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>PAKE Combiners and Efficient Post-quantum Instantiations<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">ISBN</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>9783031911248<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">ISSN</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>1611-3349<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">url</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>http://dx.doi.org/10.1007/978-3-031-91124-8_14<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">DOI</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>10.1007/978-3-031-91124-8_14<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">booktitle</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>Advances in Cryptology – EUROCRYPT 2025<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">publisher</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>Springer Nature Switzerland<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">author</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>Hesse, Julia and Rosenberg, Michael<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">year</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>2025<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">pages</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>395–420<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span> </span><span class="hl-punctuation hl-section hl-entry hl-end hl-bibtex">}</span></span></span></code></pre></details>
+</div>
+</details>
+</div>
+<div class="helia-cite-format helia-collapsible" data-format="hayagriva" data-copy="true" data-copy-label="hayagriva YAML">
+<details>
+<summary class="helia-group-summary"><span class="helia-group-title">hayagriva YAML (typst)</span></summary>
+<div class="helia-group-body">
+<details class="helia-code" open><summary class="helia-code-summary"><span class="helia-code-lang">yaml</span> · <span class="helia-code-lines">17 lines</span></summary><pre class="helia-raw"><code class="language-yaml"><span class="hl-source hl-yaml"><span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">hesse-2025-pake</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">type</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">chapter</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">title</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">PAKE Combiners and Efficient Post-quantum Instantiations</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">author</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Hesse, Julia</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Rosenberg, Michael</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">date</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-constant hl-numeric hl-integer hl-decimal hl-yaml">2025</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">page-range</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">395-420</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">url</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">http://dx.doi.org/10.1007/978-3-031-91124-8_14</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">serial-number</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">doi</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">10.1007/978-3-031-91124-8_14</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">isbn</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-quoted hl-single hl-yaml"><span class="hl-punctuation hl-definition hl-string hl-begin hl-yaml">&#39;</span>9783031911248<span class="hl-punctuation hl-definition hl-string hl-end hl-yaml">&#39;</span></span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">issn</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">1611-3349</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">parent</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">type</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">book</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">title</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Advances in Cryptology – EUROCRYPT 2025</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">publisher</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Springer Nature Switzerland</span>
+</span></code></pre></details>
+</div>
+</details>
+</div>
+<div class="helia-cite-files">Download: <a class="helia-link" href="hesse-2025-pake.bib">hesse-2025-pake.bib</a> · <a class="helia-link" href="hesse-2025-pake.yml">hesse-2025-pake.yml</a></div>
+</div>
+</div>
+</details>
+</div>
+<div class="helia-reference-cites helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">Cites 55 works (1 here)</span></summary>
+<div class="helia-group-body">
+<div class="helia-reference-cites-here helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">With notes (1)</span></summary>
+<div class="helia-group-body">
+<section class="helia-transclusion" data-entry="katz-2024-latke" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="katz-2024-latke"><span class="helia-title">LATKE: A Framework for Constructing Identity-Binding PAKEs</span>&nbsp;<a class="helia-slug" href="katz-2024-latke.html">katz-2024-latke</a><span class="helia-byline"><span class="helia-entry-link" data-entry="crypto">CRYPTO</span> · 2024</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="katz-2024-latke" data-kind="reference">
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-031-68379-4_7">DOI</a></span></div>
+</div>
+</div>
+</details>
+</section>
+</div>
+</details>
+</div>
+<div class="helia-reference-cites-away helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">External (54)</span></summary>
+<div class="helia-group-body">
+<ul>
+<li>NoIC: PAKE from KEM without ideal ciphers (2025)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-981-96-0935-2_2">Efficient asymmetric PAKE compiler from KEM and AE</a> (2025)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.62056/a3qj89n4e">X-Wing: The hybrid KEM you've been looking for</a> (2024)</li>
+<li>Deployments of fancy cryptography (GitHub list) (2024)</li>
+<li>CPace, a balanced composable PAKE (IETF draft-irtf-cfrg-cpace-13) (2024)</li>
+<li>Advancing our amazing bet on asymmetric cryptography (2024)</li>
+<li>NICE-PAKE: on the security of KEM-based PAKE constructions without ideal ciphers (2024)</li>
+<li>C’est très chic: a compact password-authenticated key exchange from lattice-based KEM (2024)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-031-68379-4_6">Bare PAKE: universally composable key exchange from just passwords</a> (2024)</li>
+<li>KyberSlash: exploiting secret-dependent division timings in Kyber implementations (2024)</li>
+<li>SWOOSH: efficient lattice-based non-interactive key exchange (2024)</li>
+<li>BSI TR-02102-1, Cryptographic mechanisms: recommendations and key lengths (2024)</li>
+<li>PAKE combiners and efficient post-quantum instantiations (2024)</li>
+<li>Under what conditions is encrypted key exchange actually secure? (2024)</li>
+<li>Hybrid password authentication key exchange in the UC framework (2024)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-031-58754-2_5">Universal composable password authenticated key exchange for the post-quantum world</a> (2024)</li>
+<li>The state of the post-quantum Internet (2024)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-031-33491-7_19">GeT a CAKE: Generic Transformations from Key Encapsulation Mechanisms to Password Authenticated Key Exchanges</a> (2023)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.46586/tches.v2023.i3.136-163">Cache-Timing Attack Against HQC</a> (2023)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-031-35486-1_11">Compact Password Authenticated Key Exchange from Group Actions</a> (2023)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.17487/rfc9382">SPAKE2, a Password-Authenticated Key Exchange</a> (2023)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-981-99-8742-9_5">A Generic Construction of Tightly Secure Password-Based Authenticated Key Exchange</a> (2023)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-031-30589-4_5">Randomized Half-Ideal Cipher on Groups with Applications to UC (a)PAKE</a> (2023)</li>
+<li>A note on hybrid signature schemes (2023)</li>
+<li>The labyrinth encrypted message storage protocol (2023)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-031-15979-4_24">Password-Authenticated Key Exchange from Group Actions</a> (2022)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.46586/tches.v2022.i3.223-263">Don’t Reject This: Key-Recovery Timing Attacks Due to Rejection-Sampling in HQC and BIKE</a> (2022)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-031-08896-4_7">Practical Post-quantum Password-Authenticated Key Exchange Based-on Module-Lattice</a> (2022)</li>
+<li>ANSSI views on the post-quantum cryptography transition (2022)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-030-92068-5_24">Security Analysis of CPace</a> (2021)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-030-56784-2_10">Universally Composable Relaxed Password Authenticated Key Exchange</a> (2020)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-030-57990-6_29">Separating Symmetric and Asymmetric Password-Authenticated Key Exchange</a> (2020)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3372297.3417870">Minimal Symmetric PAKE and 1-out-of-N OT from Programmable-Once Public Functions</a> (2020)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-030-56880-1_13">A key-recovery timing attack on post-quantum primitives using the Fujisaki-Okamoto transformation and its application on FrodoKEM</a> (2020)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-030-64381-2_2">Security analysis of SPAKE2+</a> (2020)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-030-21568-2_22">Password-Authenticated Public-Key Encryption</a> (2019)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.46586/tches.v2019.i2.1-48">AuCPace: Efficient verifier-based PAKE protocol tailored for the IIoT</a> (2019)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-319-78372-7_15">OPAQUE: an asymmetric PAKE protocol secure against pre-computation attacks</a> (2018)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3052973.3053026">VTBPEKE: Verifier-based two-basis password exponential key exchange</a> (2017)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-319-52153-4_11">Provably secure password authenticated key exchange based on RLWE for the post-quantum world</a> (2017)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/2976749.2978425">Frodo: Take off the ring! Practical, quantum-secure key exchange from LWE</a> (2016)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.17487/rfc7748">Elliptic Curves for Security</a> (2016)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/2508859.2516734">Elligator: elliptic-curve points indistinguishable from uniform random strings</a> (2013)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-642-19571-6_18">Round-Optimal Password-Based Authenticated Key Exchange</a> (2011)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-642-19074-2_21">Better Key Sizes (and Attacks) for LWE-Based Encryption</a> (2011)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/11818175_9">A method for making password-based key exchange resilient to server compromise</a> (2006)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-540-30574-3_14">Simple Password-Based Encrypted Key Exchange Protocols</a> (2005)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/11426639_24">Universally Composable Password-Based Key Exchange</a> (2005)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/1060590.1060603">On lattices, learning with errors, random linear codes, and cryptography</a> (2005)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-540-45146-4_16">Universal composition with joint state</a> (2003)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1109/sfcs.2001.959888">Universally composable security: a new paradigm for cryptographic protocols</a> (2001)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1137/s0097539793244708">A Pseudorandom Generator from any One-way Function</a> (1999)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/168588.168592">Lower bounds on messages and rounds for network authentication protocols</a> (1993)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1109/risp.1992.213269">Encrypted key exchange: password-based protocols secure against dictionary attacks</a> (1992)</li>
+</ul>
+</div>
+</details>
+</div>
+</div>
+</details>
+</div>
+</article>
+<div class="helia-identity"><span class="helia-id">hesse-2025-pake</span> <span class="helia-kind">reference</span> <span class="helia-path">entries/refs/hesse-2025-pake/hesse-2025-pake.hel</span></div>
+</div>
+</body>
+</html>

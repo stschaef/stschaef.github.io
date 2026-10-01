@@ -1,0 +1,1 @@
+heliaSearchData("d/max-planck-institute-for-informatics",{"id":"max-planck-institute-for-informatics","title":"Max Planck Institute for Informatics","kind":"institution","tags":[],"authors":[],"venue":[],"date":null,"url":"max-planck-institute-for-informatics.html","headings":[],"body":""});

@@ -1,0 +1,1 @@
+heliaSearchData("d/faustynakrawiec",{"id":"faustynakrawiec","title":"Faustyna Krawiec","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"faustynakrawiec.html","headings":[],"body":""});

@@ -1,0 +1,1 @@
+heliaSearchData("d/kyoto-sangyo-university",{"id":"kyoto-sangyo-university","title":"Kyoto Sangyo University","kind":"institution","tags":[],"authors":[],"venue":[],"date":null,"url":"kyoto-sangyo-university.html","headings":[],"body":""});

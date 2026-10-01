@@ -1,0 +1,1 @@
+heliaSearchData("d/mcbride-2002-elimination",{"id":"mcbride-2002-elimination","title":"Elimination with a Motive","kind":"reference","tags":["type-theory"],"authors":["Conor McBride"],"venue":["TYPES","Types for Proofs and Programs"],"date":null,"url":"mcbride-2002-elimination.html","headings":[],"body":""});

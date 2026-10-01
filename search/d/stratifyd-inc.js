@@ -1,0 +1,1 @@
+heliaSearchData("d/stratifyd-inc",{"id":"stratifyd-inc","title":"Stratifyd Inc","kind":"institution","tags":[],"authors":[],"venue":[],"date":null,"url":"stratifyd-inc.html","headings":[],"body":""});

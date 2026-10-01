@@ -1,0 +1,1 @@
+heliaSearchData("d/seanmclaughlin",{"id":"seanmclaughlin","title":"Sean McLaughlin","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"seanmclaughlin.html","headings":[],"body":""});

@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>Vectorization for digital signal processors via equality saturation</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Ctext y=%22.9em%22 font-size=%2290%22%3E%F0%9F%8C%BB%3C/text%3E%3C/svg%3E">
+<meta name="generator" content="helia">
+<link rel="alternate" type="application/atom+xml" title="Steven Schaefer" href="feed.xml">
+<link rel="alternate" type="application/feed+json" title="Steven Schaefer" href="feed.json">
+<script src="helia/theme-version.js"></script>
+<script src="theme/folio-early.js"></script>
+<link rel="stylesheet" href="helia/theme.css">
+<link rel="stylesheet" href="helia/highlight.css">
+<link rel="stylesheet" href="helia/search.css">
+<link rel="stylesheet" href="theme/katex.css">
+<link rel="stylesheet" href="theme/recipe.css">
+<link rel="stylesheet" href="theme/site.css">
+<link rel="stylesheet" href="theme/folio.css">
+<script defer src="helia/runtime.js"></script>
+<script defer src="helia/search.js"></script>
+<script defer src="theme/glyphcraft.js"></script>
+<script defer src="theme/glyphart.js"></script>
+<script defer src="theme/glyphgen.js"></script>
+<script defer src="theme/ornament.js"></script>
+<script defer src="theme/folio.js"></script>
+<script defer src="theme/portrait.js"></script>
+<script type="application/json" id="helia-widgets">{"helia-cite-formats":"widgets/helia-cite-formats-a3294ac7.js"}</script>
+<link rel="modulepreload" href="widgets/helia-cite-formats-a3294ac7.js">
+<script type="module" src="widgets/runtime.js"></script>
+</head>
+<body>
+<nav class="helia-topbar"><a class="helia-home" href="home.html">Steven Schaefer</a><ul class="helia-nav-links"><li><a href="stevenschaefer.html">About Me</a></li><li><a href="research.html">Research</a></li><li><a href="new.html">New</a></li></ul><button type="button" class="helia-search-button" aria-label="Search (/ or Ctrl+K)" aria-haspopup="dialog"><span class="helia-search-icon">⌕</span><span class="helia-search-label">Search</span><kbd class="helia-search-key">/</kbd></button></nav>
+<div class="helia-page" data-kind="reference">
+<article class="helia-article">
+<header class="helia-header" data-entry="vanhattum-2021-vectorization" data-kind="reference">
+<h2 class="helia-heading"><span class="helia-taxon">Reference.</span> Vectorization for digital signal processors via equality saturation</h2>
+<div class="helia-meta"><span class="helia-author"><a class="helia-entry-link" href="alexavanhattum.html" data-entry="alexavanhattum">Alexa VanHattum</a>, <a class="helia-entry-link" href="rachitnigam.html" data-entry="rachitnigam">Rachit Nigam</a>, <a class="helia-entry-link" href="vincenttlee.html" data-entry="vincenttlee">Vincent T. Lee</a>, <a class="helia-entry-link" href="jamesbornholt.html" data-entry="jamesbornholt">James Bornholt</a>, <a class="helia-entry-link" href="adriansampson.html" data-entry="adriansampson">Adrian Sampson</a></span> · <span class="helia-byline"><a class="helia-entry-link" href="asplos.html" data-entry="asplos">ASPLOS</a> · 2021</span> · <span class="helia-tags"><span class="helia-tag" data-tag="compilation"><a class="helia-entry-link" href="tag-compilation.html" data-entry="tag-compilation">compilation</a></span> <span class="helia-tag" data-tag="hardware"><a class="helia-entry-link" href="tag-hardware.html" data-entry="tag-hardware">hardware</a></span></span> · <span class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/3445814.3446707">DOI</a></span></span></div>
+</header>
+<div class="helia-body">
+</div>
+<div class="helia-cite helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><h3 class="helia-heading">Cite</h3>
+</summary>
+<div class="helia-group-body">
+<div class="helia-widget" data-widget="helia-cite-formats" data-props="{&quot;key&quot;:&quot;vanhattum-2021-vectorization&quot;,&quot;bibtex&quot;:&quot;@inproceedings{vanhattum-2021-vectorization, series={ASPLOS ’21}, title={Vectorization for digital signal processors via equality saturation}, url={http://dx.doi.org/10.1145/3445814.3446707}, DOI={10.1145/3445814.3446707}, booktitle={Proceedings of the 26th ACM International Conference on Architectural Support for Programming Languages and Operating Systems}, publisher={ACM}, author={VanHattum, Alexa and Nigam, Rachit and Lee, Vincent T. and Bornholt, James and Sampson, Adrian}, year={2021}, month=Apr, pages={874–886}, collection={ASPLOS ’21} }&quot;,&quot;bib-file&quot;:&quot;vanhattum-2021-vectorization.bib&quot;,&quot;hayagriva&quot;:&quot;vanhattum-2021-vectorization:\n  type: article\n  title: Vectorization for digital signal processors via equality saturation\n  author:\n  - VanHattum, Alexa\n  - Nigam, Rachit\n  - Lee, Vincent T.\n  - Bornholt, James\n  - Sampson, Adrian\n  date: 2021-04\n  page-range: 874-886\n  url: http://dx.doi.org/10.1145/3445814.3446707\n  serial-number:\n    doi: 10.1145/3445814.3446707\n  parent:\n    type: proceedings\n    title: Proceedings of the 26th ACM International Conference on Architectural Support for Programming Languages and Operating Systems\n    publisher: ACM\n    parent:\n      type: proceedings\n      title: ASPLOS ’21\n&quot;,&quot;yml-file&quot;:&quot;vanhattum-2021-vectorization.yml&quot;}"><div class="helia-cite-key" data-copy="@vanhattum-2021-vectorization" data-copy-label="citation key"><span class="helia-bib-key">Cite as</span> <code class="helia-raw-inline">@vanhattum-2021-vectorization</code> (helia, typst) · <code class="helia-raw-inline">\cite{vanhattum-2021-vectorization}</code> (LaTeX)</div>
+<div class="helia-cite-format helia-collapsible" data-format="bibtex" data-copy="true" data-copy-label="BibTeX">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">BibTeX</span></summary>
+<div class="helia-group-body">
+<details class="helia-code" open><summary class="helia-code-summary"><span class="helia-code-lang">bibtex</span> · <span class="helia-code-lines">1 line</span></summary><pre class="helia-raw"><code class="language-bibtex"><span class="hl-text hl-bibtex"><span class="hl-meta hl-entry hl-braces hl-bibtex"><span class="hl-keyword hl-other hl-entry-type hl-bibtex"><span class="hl-punctuation hl-definition hl-keyword hl-bibtex">@</span>inproceedings</span><span class="hl-punctuation hl-section hl-entry hl-begin hl-bibtex">{</span><span class="hl-entity hl-name hl-type hl-entry-key hl-bibtex">vanhattum-2021-vectorization</span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">series</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>ASPLOS ’21<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">title</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>Vectorization for digital signal processors via equality saturation<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">url</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>http://dx.doi.org/10.1145/3445814.3446707<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">DOI</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>10.1145/3445814.3446707<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">booktitle</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>Proceedings of the 26th ACM International Conference on Architectural Support for Programming Languages and Operating Systems<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">publisher</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>ACM<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">author</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>VanHattum, Alexa and Nigam, Rachit and Lee, Vincent T. and Bornholt, James and Sampson, Adrian<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">year</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>2021<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">month</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span>Apr</span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">pages</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>874–886<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">collection</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>ASPLOS ’21<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span> </span><span class="hl-punctuation hl-section hl-entry hl-end hl-bibtex">}</span></span></span></code></pre></details>
+</div>
+</details>
+</div>
+<div class="helia-cite-format helia-collapsible" data-format="hayagriva" data-copy="true" data-copy-label="hayagriva YAML">
+<details>
+<summary class="helia-group-summary"><span class="helia-group-title">hayagriva YAML (typst)</span></summary>
+<div class="helia-group-body">
+<details class="helia-code" open><summary class="helia-code-summary"><span class="helia-code-lang">yaml</span> · <span class="helia-code-lines">21 lines</span></summary><pre class="helia-raw"><code class="language-yaml"><span class="hl-source hl-yaml"><span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">vanhattum-2021-vectorization</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">type</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">article</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">title</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Vectorization for digital signal processors via equality saturation</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">author</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">VanHattum, Alexa</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Nigam, Rachit</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Lee, Vincent T.</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Bornholt, James</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Sampson, Adrian</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">date</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">2021-04</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">page-range</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">874-886</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">url</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">http://dx.doi.org/10.1145/3445814.3446707</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">serial-number</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">doi</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">10.1145/3445814.3446707</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">parent</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">type</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">proceedings</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">title</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Proceedings of the 26th ACM International Conference on Architectural Support for Programming Languages and Operating Systems</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">publisher</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">ACM</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">parent</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span>
+      <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">type</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">proceedings</span>
+      <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">title</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">ASPLOS ’21</span>
+</span></code></pre></details>
+</div>
+</details>
+</div>
+<div class="helia-cite-files">Download: <a class="helia-link" href="vanhattum-2021-vectorization.bib">vanhattum-2021-vectorization.bib</a> · <a class="helia-link" href="vanhattum-2021-vectorization.yml">vanhattum-2021-vectorization.yml</a></div>
+</div>
+</div>
+</details>
+</div>
+<div class="helia-reference-cites helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">Cites 41 works (2 here)</span></summary>
+<div class="helia-group-body">
+<div class="helia-reference-cites-here helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">With notes (2)</span></summary>
+<div class="helia-group-body">
+<section class="helia-transclusion" data-entry="willsey-2021-egg" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="willsey-2021-egg"><span class="helia-title">egg: Fast and Extensible Equality Saturation</span>&nbsp;<a class="helia-slug" href="willsey-2021-egg.html">willsey-2021-egg</a><span class="helia-byline"><span class="helia-entry-link" data-entry="popl">POPL</span> · 2021</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="willsey-2021-egg" data-kind="reference">
+<div class="helia-abstract">An e-graph efficiently represents a congruence relation over many expressions. Although they were originally developed in the late 1970s for use in automated theorem provers, a more recent technique known as equality saturation repurposes e-graphs to implement state-of-the-art, rewrite-driven compiler optimizations and program synthesizers. However, e-graphs remain unspecialized for this newer use case. Equality saturation workloads exhibit distinct characteristics and often require ad-hoc e-graph extensions to incorporate transformations beyond purely syntactic rewrites. This work contributes two techniques that make e-graphs fast and extensible, specializing them to equality saturation. A new amortized invariant restoration technique called rebuilding takes advantage of equality saturation’s distinct workload, providing asymptotic speedups over current techniques in practice. A general mechanism called e-class analyses integrates domain-specific analyses into the e-graph, reducing the need for ad hoc manipulation. We implemented these techniques in a new open-source library called egg. Our case studies on three previously published applications of equality saturation highlight how egg’s performance and flexibility enable state-of-the-art results across diverse domains.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="pdf-url"><a class="helia-link helia-external" href="https://dl.acm.org/doi/pdf/10.1145/3434304">PDF</a></span> · <span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/3434304">DOI</a></span> · <span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/2004.03082">arXiv</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/journals/pacmpl/WillseyNWFTP21">pldb</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="vanhattum-2020-a" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="vanhattum-2020-a"><span class="helia-title">A Synthesis-Aided Compiler for DSP Architectures (WiP Paper)</span>&nbsp;<a class="helia-slug" href="vanhattum-2020-a.html">vanhattum-2020-a</a><span class="helia-byline"><span class="helia-entry-link" data-entry="lctes">LCTES</span> · 2020</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="vanhattum-2020-a" data-kind="reference">
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/3372799.3394358">DOI</a></span></div>
+</div>
+</div>
+</details>
+</section>
+</div>
+</details>
+</div>
+<div class="helia-reference-cites-away helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">External (39)</span></summary>
+<div class="helia-group-body">
+<ul>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3368826.3377912">Automatic generation of high-performance quantized machine learning kernels</a> (2020)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3385412.3386012">Synthesizing structured CAD models with equality saturation and inverse transformations</a> (2020)</li>
+<li>Perfect is the Enemy of Good: Best-Effort Program Synthesis (2020)</li>
+<li>Tensilica Customizable Cores (Cadence) (2020)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3297858.3304059">Swizzle Inventor: Data Movement Synthesis for GPU Kernels</a> (2019)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3343031.3350539">OpenVSLAM: A Versatile Visual SLAM Framework</a> (2019)</li>
+<li>GoSLP: Globally Optimized Superword Level Parallelism Framework (2018)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3168812">Program Generation for Small-Scale Linear Algebra Applications</a> (2018)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1109/tro.2017.2705103">ORB-SLAM2: An Open-Source SLAM System for Monocular, Stereo, and RGB-D Cameras</a> (2017)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3106343">Extending Halide to Improve Software Development for Imaging DSPs</a> (2017)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1109/dsd.2016.90">Video SIMDBench: Benchmarking the Compiler Vectorization for Multimedia Applications</a> (2016)</li>
+<li>Optimizing Synthesis with Metasketches (2016)</li>
+<li>Verified Lifting of Stencil Computations (2016)</li>
+<li>Theia Multiview Geometry Library: Tutorial &amp; Reference (2016)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.7873/date.2015.0182">A basic linear algebra compiler for embedded processors</a> (2015)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1109/tro.2015.2463671">ORB-SLAM: A Versatile and Accurate Monocular SLAM System</a> (2015)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/2666356.2594340">A lightweight symbolic virtual machine for solver-aided host languages</a> (2014)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1109/sc.2014.31">MSL: A Synthesis Enabled Language for Distributed Implementations</a> (2014)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1016/j.parco.2013.11.001">The effect of communication and synchronization on Amdahl's law in multicore systems</a> (2014)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/2442516.2442529">From relational verification to SIMD loop synthesis</a> (2013)</li>
+<li>Exploiting Vector Instructions with Generalized Stream Fusion (2013)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/2491956.2462176">Halide: a language and compiler for optimizing parallelism, locality, and recomputation in image processing pipelines</a> (2013)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/1995896.1995938">Automatic SIMD vectorization of fast fourier transforms for the larrabee and AVX instruction sets</a> (2011)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1109/iccv.2011.6126517">Double window optimisation for constant time visual SLAM</a> (2011)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/1815961.1816011">Modeling critical sections in Amdahl's law and its implications for multicore design</a> (2010)</li>
+<li>Eigen v3 (software) (2010)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/1594834.1480915">Equality saturation: a new approach to optimization</a> (2009)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-540-78791-4_8">Generating SIMD Vectorized Permutations</a> (2008)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/s10766-006-0028-8">Amdahl’s Law Revisited for Single Chip Systems</a> (2007)</li>
+<li>Auto-Vectorization of Interleaved Data for SIMD (2006)</li>
+<li>Combinatorial Sketching for Finite Programs (2006)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-540-71351-7_28">A rewriting system for the vectorization of signal transforms</a> (2006)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1109/jproc.2004.840306">SPIRAL: Code Generation for DSP Transforms</a> (2005)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/781131.781140">A comparison of empirical and model-driven optimization</a> (2003)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1109/40.848473">Xtensa: A configurable and extensible processor</a> (2000)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/349299.349320">Exploiting Superword Level Parallelism with Multimedia Instruction Sets</a> (2000)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/29873.29875">Automatic translation of FORTRAN programs to vector form</a> (1987)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1016/s0747-7171(87)80027-5">Complexity of matching problems</a> (1987)</li>
+<li>Denali: A Goal-directed Superoptimizer</li>
+</ul>
+</div>
+</details>
+</div>
+</div>
+</details>
+</div>
+<footer class="helia-footer">
+<div class="helia-related helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><h3 class="helia-heading">Related</h3>
+</summary>
+<div class="helia-group-body">
+<ul>
+<li><a class="helia-entry-link" href="lin-2024-flowcert.html" data-entry="lin-2024-flowcert">FlowCert: Translation Validation for Asynchronous Dataflow via Dynamic Fractional Permissions</a> <span class="helia-related-tags"><a class="helia-entry-link" href="tag-hardware.html" data-entry="tag-hardware">#hardware</a> <a class="helia-entry-link" href="tag-compilation.html" data-entry="tag-compilation">#compilation</a></span></li>
+</ul>
+</div>
+</details>
+</div>
+</footer>
+</article>
+<div class="helia-identity"><span class="helia-id">vanhattum-2021-vectorization</span> <span class="helia-kind">reference</span> <span class="helia-path">entries/refs/vanhattum-2021-vectorization/vanhattum-2021-vectorization.hel</span></div>
+</div>
+</body>
+</html>

@@ -1,0 +1,1 @@
+heliaSearchData("d/wullaert-2026-the",{"id":"wullaert-2026-the","title":"The Rezk Completion for Elementary Topoi","kind":"reference","tags":["category-theory","homotopy-type-theory"],"authors":["Kobe Wullaert","Niels van der Weide"],"venue":["TYPES","Types for Proofs and Programs"],"date":null,"url":"wullaert-2026-the.html","headings":[],"body":""});

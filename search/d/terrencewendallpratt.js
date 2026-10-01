@@ -1,0 +1,1 @@
+heliaSearchData("d/terrencewendallpratt",{"id":"terrencewendallpratt","title":"Terrence Wendall Pratt","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"terrencewendallpratt.html","headings":[],"body":""});

@@ -1,0 +1,1 @@
+heliaSearchData("d/roux-2014-the",{"id":"roux-2014-the","title":"The Structural Theory of Pure Type Systems","kind":"reference","tags":["type-theory"],"authors":["Cody Roux","Floris van Doorn"],"venue":["TLCA","Typed Lambda Calculi and Applications"],"date":null,"url":"roux-2014-the.html","headings":[],"body":""});

@@ -1,0 +1,1 @@
+heliaSearchData("d/university-of-san-francisco",{"id":"university-of-san-francisco","title":"University of San Francisco","kind":"institution","tags":[],"authors":[],"venue":[],"date":null,"url":"university-of-san-francisco.html","headings":[],"body":""});

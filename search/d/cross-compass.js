@@ -1,0 +1,1 @@
+heliaSearchData("d/cross-compass",{"id":"cross-compass","title":"Cross Compass","kind":"institution","tags":[],"authors":[],"venue":[],"date":null,"url":"cross-compass.html","headings":[],"body":""});

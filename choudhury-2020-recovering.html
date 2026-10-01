@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>Recovering purity with comonads and capabilities</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Ctext y=%22.9em%22 font-size=%2290%22%3E%F0%9F%8C%BB%3C/text%3E%3C/svg%3E">
+<meta name="generator" content="helia">
+<link rel="alternate" type="application/atom+xml" title="Steven Schaefer" href="feed.xml">
+<link rel="alternate" type="application/feed+json" title="Steven Schaefer" href="feed.json">
+<script src="helia/theme-version.js"></script>
+<script src="theme/folio-early.js"></script>
+<link rel="stylesheet" href="helia/theme.css">
+<link rel="stylesheet" href="helia/highlight.css">
+<link rel="stylesheet" href="helia/search.css">
+<link rel="stylesheet" href="theme/katex.css">
+<link rel="stylesheet" href="theme/recipe.css">
+<link rel="stylesheet" href="theme/site.css">
+<link rel="stylesheet" href="theme/folio.css">
+<script defer src="helia/runtime.js"></script>
+<script defer src="helia/search.js"></script>
+<script defer src="theme/glyphcraft.js"></script>
+<script defer src="theme/glyphart.js"></script>
+<script defer src="theme/glyphgen.js"></script>
+<script defer src="theme/ornament.js"></script>
+<script defer src="theme/folio.js"></script>
+<script defer src="theme/portrait.js"></script>
+<script type="application/json" id="helia-widgets">{"helia-cite-formats":"widgets/helia-cite-formats-a3294ac7.js"}</script>
+<link rel="modulepreload" href="widgets/helia-cite-formats-a3294ac7.js">
+<script type="module" src="widgets/runtime.js"></script>
+</head>
+<body>
+<nav class="helia-topbar"><a class="helia-home" href="home.html">Steven Schaefer</a><ul class="helia-nav-links"><li><a href="stevenschaefer.html">About Me</a></li><li><a href="research.html">Research</a></li><li><a href="new.html">New</a></li></ul><button type="button" class="helia-search-button" aria-label="Search (/ or Ctrl+K)" aria-haspopup="dialog"><span class="helia-search-icon">⌕</span><span class="helia-search-label">Search</span><kbd class="helia-search-key">/</kbd></button></nav>
+<div class="helia-page" data-kind="reference">
+<article class="helia-article">
+<header class="helia-header" data-entry="choudhury-2020-recovering" data-kind="reference">
+<h2 class="helia-heading"><span class="helia-taxon">Reference.</span> Recovering purity with comonads and capabilities</h2>
+<div class="helia-meta"><span class="helia-author"><a class="helia-entry-link" href="vikramanchoudhury.html" data-entry="vikramanchoudhury">Vikraman Choudhury</a>, <a class="helia-entry-link" href="neelkrishnaswami.html" data-entry="neelkrishnaswami">Neel Krishnaswami</a></span> · <span class="helia-byline"><a class="helia-entry-link" href="icfp.html" data-entry="icfp">ICFP</a> · 2020</span> · <span class="helia-tags"><span class="helia-tag" data-tag="effects"><a class="helia-entry-link" href="tag-effects.html" data-entry="tag-effects">effects</a></span></span> · <span class="helia-entry-links"><span class="helia-entry-link" data-field="pdf-url"><a class="helia-link helia-external" href="https://dl.acm.org/doi/pdf/10.1145/3408993">PDF</a></span> · <span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/3408993">DOI</a></span> · <span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/1907.07283">arXiv</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/journals/pacmpl/ChoudhuryK20">pldb</a></span></span></div>
+</header>
+<div class="helia-body">
+<div class="helia-abstract">In this paper, we take a pervasively effectful (in the style of ML) typed lambda calculus, and show how to extend it to permit capturing pure expressions with types. Our key observation is that, just as the pure simply-typed lambda calculus can be extended to support effects with a monadic type discipline, an impure typed lambda calculus can be extended to support purity with a comonadic type discipline. We establish the correctness of our type system via a simple denotational model, which we call the capability space model. Our model formalises the intuition common to systems programmers that the ability to perform effects should be controlled via access to a permission or capability, and that a program is capability-safe if it performs no effects that it does not have a runtime capability for. We then identify the axiomatic categorical structure that the capability space model validates, and use these axioms to give a categorical semantics for our comonadic type system. We then give an equational theory (substitution and the call-by-value β and η laws) for the imperative lambda calculus, and show its soundness relative to this semantics. Finally, we give a translation of the pure simply-typed lambda calculus into our comonadic imperative calculus, and show that any two terms which are βη-equal in the STLC are equal in the equational theory of the comonadic calculus, establishing that pure programs can be mapped in an equation-preserving way into our imperative calculus.</div>
+</div>
+<div class="helia-cite helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><h3 class="helia-heading">Cite</h3>
+</summary>
+<div class="helia-group-body">
+<div class="helia-widget" data-widget="helia-cite-formats" data-props="{&quot;key&quot;:&quot;choudhury-2020-recovering&quot;,&quot;bibtex&quot;:&quot;@article{choudhury-2020-recovering, title={Recovering purity with comonads and capabilities}, volume={4}, ISSN={2475-1421}, url={http://dx.doi.org/10.1145/3408993}, DOI={10.1145/3408993}, number={ICFP}, journal={Proceedings of the ACM on Programming Languages}, publisher={Association for Computing Machinery (ACM)}, author={Choudhury, Vikraman and Krishnaswami, Neel}, year={2020}, month=Aug, pages={1–28} }&quot;,&quot;bib-file&quot;:&quot;choudhury-2020-recovering.bib&quot;,&quot;hayagriva&quot;:&quot;choudhury-2020-recovering:\n  type: article\n  title: Recovering purity with comonads and capabilities\n  author:\n  - Choudhury, Vikraman\n  - Krishnaswami, Neel\n  date: 2020-08\n  page-range: 1-28\n  url: http://dx.doi.org/10.1145/3408993\n  serial-number:\n    doi: 10.1145/3408993\n    issn: 2475-1421\n  parent:\n    type: periodical\n    title: Proceedings of the ACM on Programming Languages\n    publisher: Association for Computing Machinery (ACM)\n    issue: ICFP\n    volume: 4\n&quot;,&quot;yml-file&quot;:&quot;choudhury-2020-recovering.yml&quot;}"><div class="helia-cite-key" data-copy="@choudhury-2020-recovering" data-copy-label="citation key"><span class="helia-bib-key">Cite as</span> <code class="helia-raw-inline">@choudhury-2020-recovering</code> (helia, typst) · <code class="helia-raw-inline">\cite{choudhury-2020-recovering}</code> (LaTeX)</div>
+<div class="helia-cite-format helia-collapsible" data-format="bibtex" data-copy="true" data-copy-label="BibTeX">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">BibTeX</span></summary>
+<div class="helia-group-body">
+<details class="helia-code" open><summary class="helia-code-summary"><span class="helia-code-lang">bibtex</span> · <span class="helia-code-lines">1 line</span></summary><pre class="helia-raw"><code class="language-bibtex"><span class="hl-text hl-bibtex"><span class="hl-meta hl-entry hl-braces hl-bibtex"><span class="hl-keyword hl-other hl-entry-type hl-bibtex"><span class="hl-punctuation hl-definition hl-keyword hl-bibtex">@</span>article</span><span class="hl-punctuation hl-section hl-entry hl-begin hl-bibtex">{</span><span class="hl-entity hl-name hl-type hl-entry-key hl-bibtex">choudhury-2020-recovering</span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">title</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>Recovering purity with comonads and capabilities<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">volume</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>4<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">ISSN</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>2475-1421<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">url</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>http://dx.doi.org/10.1145/3408993<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">DOI</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>10.1145/3408993<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">number</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>ICFP<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">journal</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>Proceedings of the ACM on Programming Languages<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">publisher</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>Association for Computing Machinery (ACM)<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">author</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>Choudhury, Vikraman and Krishnaswami, Neel<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">year</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>2020<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">month</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span>Aug</span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">pages</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>1–28<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span> </span><span class="hl-punctuation hl-section hl-entry hl-end hl-bibtex">}</span></span></span></code></pre></details>
+</div>
+</details>
+</div>
+<div class="helia-cite-format helia-collapsible" data-format="hayagriva" data-copy="true" data-copy-label="hayagriva YAML">
+<details>
+<summary class="helia-group-summary"><span class="helia-group-title">hayagriva YAML (typst)</span></summary>
+<div class="helia-group-body">
+<details class="helia-code" open><summary class="helia-code-summary"><span class="helia-code-lang">yaml</span> · <span class="helia-code-lines">18 lines</span></summary><pre class="helia-raw"><code class="language-yaml"><span class="hl-source hl-yaml"><span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">choudhury-2020-recovering</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">type</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">article</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">title</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Recovering purity with comonads and capabilities</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">author</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Choudhury, Vikraman</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Krishnaswami, Neel</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">date</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">2020-08</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">page-range</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">1-28</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">url</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">http://dx.doi.org/10.1145/3408993</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">serial-number</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">doi</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">10.1145/3408993</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">issn</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">2475-1421</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">parent</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">type</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">periodical</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">title</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Proceedings of the ACM on Programming Languages</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">publisher</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Association for Computing Machinery (ACM)</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">issue</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">ICFP</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">volume</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-constant hl-numeric hl-integer hl-decimal hl-yaml">4</span>
+</span></code></pre></details>
+</div>
+</details>
+</div>
+<div class="helia-cite-files">Download: <a class="helia-link" href="choudhury-2020-recovering.bib">choudhury-2020-recovering.bib</a> · <a class="helia-link" href="choudhury-2020-recovering.yml">choudhury-2020-recovering.yml</a></div>
+</div>
+</div>
+</details>
+</div>
+<div class="helia-reference-cites helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">Cites 41 works (4 here)</span></summary>
+<div class="helia-group-body">
+<div class="helia-reference-cites-here helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">With notes (4)</span></summary>
+<div class="helia-group-body">
+<section class="helia-transclusion" data-entry="reynolds_separation_2002" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="reynolds_separation_2002"><span class="helia-title">Separation logic: A logic for shared mutable data structures</span>&nbsp;<a class="helia-slug" href="reynolds_separation_2002.html">reynolds_separation_2002</a><span class="helia-byline"><span class="helia-entry-link" data-entry="lics">LICS</span> · 2002</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="reynolds_separation_2002" data-kind="reference">
+<div class="helia-abstract">In joint work with Peter O’Hearn and others, based on early ideas of Burstall, we have developed an extension of Hoare logic that permits reasoning about low-level imperative programs that use shared mutable data structure. The simple imperative programming language is extended with commands (not expressions) for accessing and modifying shared structures, and for explicit allocation and deallocation of storage. Assertions are extended by introducing a “separating conjunction” that asserts that its subformulas hold for disjoint parts of the heap, and a closely related “separating implication”. Coupled with the inductive definition of predicates on abstract data structures, this extension permits the concise and flexible description of structures with controlled sharing. In this paper, we survey the current development of this program logic, including extensions that permit unrestricted address arithmetic, dynamically allocated arrays, and recursive procedures. We also discuss promising future directions.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1109/lics.2002.1029817">DOI</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="pfenning-2001-a" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="pfenning-2001-a"><span class="helia-title">A judgmental reconstruction of modal logic</span>&nbsp;<a class="helia-slug" href="pfenning-2001-a.html">pfenning-2001-a</a><span class="helia-byline"><span class="helia-entry-link" data-entry="mscs">MSCS</span> · 2001</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="pfenning-2001-a" data-kind="reference">
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1017/s0960129501003322">DOI</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="ohearn_pym_bi_1999" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="ohearn_pym_bi_1999"><span class="helia-title">The logic of bunched implications</span>&nbsp;<a class="helia-slug" href="ohearn_pym_bi_1999.html">ohearn_pym_bi_1999</a><span class="helia-byline"><span class="helia-entry-link" data-entry="bsl">BSL</span> · 1999</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="ohearn_pym_bi_1999" data-kind="reference">
+<div class="helia-abstract">We introduce a logic BI in which a multiplicative (or linear) and an additive (or intuitionistic) implication live side-by-side. The propositional version of BI arises from an analysis of the proof-theoretic relationship between conjunction and implication; it can be viewed as a merging of intuitionistic logic and multiplicative intuitionistic linear logic. The naturality of BI can be seen categorically: models of propositional BI’s proofs are given by bicartesian doubly closed categories, i.e., categories which freely combine the semantics of propositional intuitionistic logic and propositional multiplicative intuitionistic linear logic. The predicate version of BI includes, in addition to standard additive quantifiers, multiplicative (or intensional) quantifiers [inline image] and [inline image] which arise from observing restrictions on structural rules on the level of terms as well as propositions. We discuss computational interpretations, based on sharing, at both the propositional and predicate levels.</div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="girard_linear_1987" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="girard_linear_1987"><span class="helia-title">Linear logic</span>&nbsp;<a class="helia-slug" href="girard_linear_1987.html">girard_linear_1987</a><span class="helia-byline"><span class="helia-entry-link" data-entry="tcs">TCS</span> · 1987</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="girard_linear_1987" data-kind="reference">
+<div class="helia-abstract">The familiar connective of negation is broken into two operations: linear negation which is the purely negative part of negation and the modality “of course” which has the meaning of a reaffirmation. Following this basic discovery, a completely new approach to the whole area between constructive logics and programmation is initiated.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1016/0304-3975(87)90045-4">DOI</a></span></div>
+</div>
+</div>
+</details>
+</section>
+</div>
+</details>
+</div>
+<div class="helia-reference-cites-away helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">External (37)</span></summary>
+<div class="helia-group-body">
+<ul>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3341714">Quantitative program reasoning with graded modal types</a> (2019)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-319-89366-2_14">Fitch-Style Modal Lambda Calculi</a> (2018)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/2628136.2628160">Coeffects: a calculus of context-dependent computation</a> (2014)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-642-54833-8_19">A Core Quantitative Coeffect Calculus</a> (2014)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/2500365.2500588">Higher-order functional reactive programming without spacetime leaks</a> (2013)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1109/sp.2010.16">Object Capabilities and Isolation of Untrusted Web Applications</a> (2010)</li>
+<li>Joe-E: A Security-Oriented Subset of Java (2010)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-642-00590-9_26">Deny-Guarantee Reasoning</a> (2009)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-642-02273-9_8">Bounded Linear Logic, Revisited</a> (2009)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/s00153-007-0042-6">Light affine lambda calculus and polynomial time strong normalization</a> (2007)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/11817949_15">A Capability Calculus for Concurrency and Determinism</a> (2006)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/1111037.1111056">Fast and loose reasoning is morally correct</a> (2006)</li>
+<li>Robust composition: towards a unified approach to access control and concurrency control (2006)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/11804192_6">Smallfoot: Modular Automatic Assertion Checking with Separation Logic</a> (2006)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/11417170_22">L3: A Linear Language with Locations</a> (2005)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1016/s0890-5401(03)00009-9">Linear types and non-size-increasing polynomial time computation</a> (2003)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1016/s0890-5401(03)00088-9">Modelling environments in call-by-value programming languages</a> (2003)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/3-540-47797-7_5">Calculating Functional Programs</a> (2002)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/3-540-44802-0_21">Categorical and Kripke Semantics for Constructive S4 Modal Logic</a> (2001)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/3-540-48092-7_6">Type and Effect Systems</a> (1999)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/292540.292564">Typed Memory Management in a Calculus of Capabilities</a> (1999)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1017/s0956796897002943">What is a purely functional language?</a> (1998)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/289423.289429">The marriage of effects and monads</a> (1998)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1016/s0304-3975(96)00169-7">Monad as modality</a> (1997)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/bf01806033">Categorical models for local names</a> (1996)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1017/s0960129500000311">A model for syntactic control of interference</a> (1993)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1016/0890-5401(91)90052-4">Notions of computation and monads</a> (1991)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1016/0304-3975(90)90147-a">Deforestation: transforming programs to eliminate trees</a> (1990)</li>
+<li>Proofs and Types (1989)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1109/lics.1989.39155">Computational lambda-calculus and monads</a> (1989)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/319838.319848">Integrating functional and imperative programming</a> (1986)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1016/c2013-0-01290-x">Capability-based computer systems</a> (1984)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/850657.850658">On the duality of operating system structures</a> (1979)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/512760.512766">Syntactic control of interference</a> (1978)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/355616.364017">HYDRA: The Kernel of a Multiprocessor Operating System</a> (1974)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/365230.365252">Programming semantics for multiprogrammed computations</a> (1966)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.2307/2268135">Some theorems about the sentential calculi of Lewis and Heyting</a> (1948)</li>
+</ul>
+</div>
+</details>
+</div>
+</div>
+</details>
+</div>
+</article>
+<div class="helia-identity"><span class="helia-id">choudhury-2020-recovering</span> <span class="helia-kind">reference</span> <span class="helia-path">entries/refs/choudhury-2020-recovering/choudhury-2020-recovering.hel</span></div>
+</div>
+</body>
+</html>

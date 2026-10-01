@@ -1,0 +1,1 @@
+heliaSearchData("d/laboratoire-d-informatique-de-l-ecole-polytechnique",{"id":"laboratoire-d-informatique-de-l-ecole-polytechnique","title":"Laboratoire d’Informatique de l’École Polytechnique","kind":"institution","tags":[],"authors":[],"venue":[],"date":null,"url":"laboratoire-d-informatique-de-l-ecole-polytechnique.html","headings":[],"body":""});

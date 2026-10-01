@@ -1,0 +1,1 @@
+heliaSearchData("d/johns-hopkins-university-applied-physics-laboratory",{"id":"johns-hopkins-university-applied-physics-laboratory","title":"Johns Hopkins University Applied Physics Laboratory","kind":"institution","tags":[],"authors":[],"venue":[],"date":null,"url":"johns-hopkins-university-applied-physics-laboratory.html","headings":[],"body":""});

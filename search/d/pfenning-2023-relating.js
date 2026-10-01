@@ -1,0 +1,1 @@
+heliaSearchData("d/pfenning-2023-relating",{"id":"pfenning-2023-relating","title":"Relating Message Passing and Shared Memory, Proof-Theoretically","kind":"reference","tags":["session-types"],"authors":["Frank Pfenning","Klaas Pruiksma"],"venue":[],"date":null,"url":"pfenning-2023-relating.html","headings":[],"body":""});

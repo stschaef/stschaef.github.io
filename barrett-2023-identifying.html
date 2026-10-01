@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>Identifying and Mitigating the Security Risks of Generative AI</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Ctext y=%22.9em%22 font-size=%2290%22%3E%F0%9F%8C%BB%3C/text%3E%3C/svg%3E">
+<meta name="generator" content="helia">
+<link rel="alternate" type="application/atom+xml" title="Steven Schaefer" href="feed.xml">
+<link rel="alternate" type="application/feed+json" title="Steven Schaefer" href="feed.json">
+<script src="helia/theme-version.js"></script>
+<script src="theme/folio-early.js"></script>
+<link rel="stylesheet" href="helia/theme.css">
+<link rel="stylesheet" href="helia/highlight.css">
+<link rel="stylesheet" href="helia/search.css">
+<link rel="stylesheet" href="theme/katex.css">
+<link rel="stylesheet" href="theme/recipe.css">
+<link rel="stylesheet" href="theme/site.css">
+<link rel="stylesheet" href="theme/folio.css">
+<script defer src="helia/runtime.js"></script>
+<script defer src="helia/search.js"></script>
+<script defer src="theme/glyphcraft.js"></script>
+<script defer src="theme/glyphart.js"></script>
+<script defer src="theme/glyphgen.js"></script>
+<script defer src="theme/ornament.js"></script>
+<script defer src="theme/folio.js"></script>
+<script defer src="theme/portrait.js"></script>
+<script type="application/json" id="helia-widgets">{"helia-cite-formats":"widgets/helia-cite-formats-a3294ac7.js"}</script>
+<link rel="modulepreload" href="widgets/helia-cite-formats-a3294ac7.js">
+<script type="module" src="widgets/runtime.js"></script>
+</head>
+<body>
+<nav class="helia-topbar"><a class="helia-home" href="home.html">Steven Schaefer</a><ul class="helia-nav-links"><li><a href="stevenschaefer.html">About Me</a></li><li><a href="research.html">Research</a></li><li><a href="new.html">New</a></li></ul><button type="button" class="helia-search-button" aria-label="Search (/ or Ctrl+K)" aria-haspopup="dialog"><span class="helia-search-icon">⌕</span><span class="helia-search-label">Search</span><kbd class="helia-search-key">/</kbd></button></nav>
+<div class="helia-page" data-kind="reference">
+<article class="helia-article">
+<header class="helia-header" data-entry="barrett-2023-identifying" data-kind="reference">
+<h2 class="helia-heading"><span class="helia-taxon">Reference.</span> Identifying and Mitigating the Security Risks of Generative AI</h2>
+<div class="helia-meta"><span class="helia-author"><a class="helia-entry-link" href="clarkbarrett.html" data-entry="clarkbarrett">Clark Barrett</a>, <a class="helia-entry-link" href="bradboyd.html" data-entry="bradboyd">Brad Boyd</a>, <a class="helia-entry-link" href="eliebursztein.html" data-entry="eliebursztein">Elie Bursztein</a>, <a class="helia-entry-link" href="nicholascarlini.html" data-entry="nicholascarlini">Nicholas Carlini</a>, <a class="helia-entry-link" href="bradchen.html" data-entry="bradchen">Brad Chen</a>, <a class="helia-entry-link" href="jihyechoi.html" data-entry="jihyechoi">Jihye Choi</a>, <a class="helia-entry-link" href="amritaroychowdhury.html" data-entry="amritaroychowdhury">Amrita Roy Chowdhury</a>, <a class="helia-entry-link" href="mihaichristodorescu.html" data-entry="mihaichristodorescu">Mihai Christodorescu</a>, <a class="helia-entry-link" href="anupamdatta.html" data-entry="anupamdatta">Anupam Datta</a>, <a class="helia-entry-link" href="soheilfeizi.html" data-entry="soheilfeizi">Soheil Feizi</a>, <a class="helia-entry-link" href="kathleenfisher.html" data-entry="kathleenfisher">Kathleen Fisher</a>, <a class="helia-entry-link" href="tatsunorihashimoto.html" data-entry="tatsunorihashimoto">Tatsunori Hashimoto</a>, <a class="helia-entry-link" href="danhendrycks.html" data-entry="danhendrycks">Dan Hendrycks</a>, <a class="helia-entry-link" href="someshjha.html" data-entry="someshjha">Somesh Jha</a>, <a class="helia-entry-link" href="danielkang.html" data-entry="danielkang">Daniel Kang</a>, <a class="helia-entry-link" href="floriankerschbaum.html" data-entry="floriankerschbaum">Florian Kerschbaum</a>, <a class="helia-entry-link" href="ericmitchell.html" data-entry="ericmitchell">Eric Mitchell</a>, <a class="helia-entry-link" href="johncmitchell.html" data-entry="johncmitchell">John C. Mitchell</a>, <a class="helia-entry-link" href="zulfikarramzan.html" data-entry="zulfikarramzan">Zulfikar Ramzan</a>, <a class="helia-entry-link" href="khawajashams.html" data-entry="khawajashams">Khawaja Shams</a>, <a class="helia-entry-link" href="dawnsong.html" data-entry="dawnsong">Dawn Song</a>, <a class="helia-entry-link" href="ankurtaly.html" data-entry="ankurtaly">Ankur Taly</a>, <a class="helia-entry-link" href="diyiyang.html" data-entry="diyiyang">Diyi Yang</a></span> · <span class="helia-byline"><a class="helia-entry-link" href="foundations-and-trends-in-privacy-and-security.html" data-entry="foundations-and-trends-in-privacy-and-security">Foundations and Trends® in Privacy and Security</a> · 2023</span> · <span class="helia-tags"><span class="helia-tag" data-tag="ai-safety"><a class="helia-entry-link" href="tag-ai-safety.html" data-entry="tag-ai-safety">ai-safety</a></span> <span class="helia-tag" data-tag="machine-learning"><a class="helia-entry-link" href="tag-machine-learning.html" data-entry="tag-machine-learning">machine-learning</a></span></span> · <span class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1561/3300000041">DOI</a></span> · <span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/2308.14840">arXiv</a></span></span></div>
+</header>
+<div class="helia-body">
+<div class="helia-abstract">Every major technical invention resurfaces the dual-use dilemma—the new technology has the potential to be used for good as well as for harm. Generative AI (GenAI) techniques, such as large language models (LLMs) and diffusion models, have shown remarkable capabilities (e.g., in-context learning, code-completion, and text-to-image generation and editing). However, GenAI can be used just as well by attackers to generate new attacks and increase the velocity and efficacy of existing attacks. This monograph reports the findings of a workshop held at Google (co-organized by Stanford University and the University of Wisconsin-Madison) on the dual-use dilemma posed by GenAI. This work is not meant to be comprehensive, but is rather an attempt to synthesize some of the interesting findings from the workshop. We discuss short-term and long-term goals for the community on this topic. We hope this work provides both a launching point for a discussion on this important topic as well as interesting problems that the research community can work to address.</div>
+</div>
+<div class="helia-cite helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><h3 class="helia-heading">Cite</h3>
+</summary>
+<div class="helia-group-body">
+<div class="helia-widget" data-widget="helia-cite-formats" data-props="{&quot;key&quot;:&quot;barrett-2023-identifying&quot;,&quot;bibtex&quot;:&quot;@article{barrett-2023-identifying, title={Identifying and Mitigating the Security Risks of Generative AI}, volume={6}, ISSN={2474-1566}, url={http://dx.doi.org/10.1561/3300000041}, DOI={10.1561/3300000041}, number={1}, journal={Foundations and Trends® in Privacy and Security}, publisher={Emerald}, author={Barrett, Clark and Boyd, Brad and Bursztein, Elie and Carlini, Nicholas and Chen, Brad and Choi, Jihye and Chowdhury, Amrita Roy and Christodorescu, Mihai and Datta, Anupam and Feizi, Soheil and Fisher, Kathleen and Hashimoto, Tatsunori and Hendrycks, Dan and Jha, Somesh and Kang, Daniel and Kerschbaum, Florian and Mitchell, Eric and Mitchell, John and Ramzan, Zulfikar and Shams, Khawaja and Song, Dawn and Taly, Ankur and Yang, Diyi}, year={2023}, month=Dec, pages={1–52} }&quot;,&quot;bib-file&quot;:&quot;barrett-2023-identifying.bib&quot;,&quot;hayagriva&quot;:&quot;barrett-2023-identifying:\n  type: article\n  title: Identifying and Mitigating the Security Risks of Generative AI\n  author:\n  - Barrett, Clark\n  - Boyd, Brad\n  - Bursztein, Elie\n  - Carlini, Nicholas\n  - Chen, Brad\n  - Choi, Jihye\n  - Chowdhury, Amrita Roy\n  - Christodorescu, Mihai\n  - Datta, Anupam\n  - Feizi, Soheil\n  - Fisher, Kathleen\n  - Hashimoto, Tatsunori\n  - Hendrycks, Dan\n  - Jha, Somesh\n  - Kang, Daniel\n  - Kerschbaum, Florian\n  - Mitchell, Eric\n  - Mitchell, John\n  - Ramzan, Zulfikar\n  - Shams, Khawaja\n  - Song, Dawn\n  - Taly, Ankur\n  - Yang, Diyi\n  date: 2023-12\n  page-range: 1-52\n  url: http://dx.doi.org/10.1561/3300000041\n  serial-number:\n    doi: 10.1561/3300000041\n    issn: 2474-1566\n  parent:\n    type: periodical\n    title: Foundations and Trends® in Privacy and Security\n    publisher: Emerald\n    issue: 1\n    volume: 6\n&quot;,&quot;yml-file&quot;:&quot;barrett-2023-identifying.yml&quot;}"><div class="helia-cite-key" data-copy="@barrett-2023-identifying" data-copy-label="citation key"><span class="helia-bib-key">Cite as</span> <code class="helia-raw-inline">@barrett-2023-identifying</code> (helia, typst) · <code class="helia-raw-inline">\cite{barrett-2023-identifying}</code> (LaTeX)</div>
+<div class="helia-cite-format helia-collapsible" data-format="bibtex" data-copy="true" data-copy-label="BibTeX">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">BibTeX</span></summary>
+<div class="helia-group-body">
+<details class="helia-code" open><summary class="helia-code-summary"><span class="helia-code-lang">bibtex</span> · <span class="helia-code-lines">1 line</span></summary><pre class="helia-raw"><code class="language-bibtex"><span class="hl-text hl-bibtex"><span class="hl-meta hl-entry hl-braces hl-bibtex"><span class="hl-keyword hl-other hl-entry-type hl-bibtex"><span class="hl-punctuation hl-definition hl-keyword hl-bibtex">@</span>article</span><span class="hl-punctuation hl-section hl-entry hl-begin hl-bibtex">{</span><span class="hl-entity hl-name hl-type hl-entry-key hl-bibtex">barrett-2023-identifying</span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">title</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>Identifying and Mitigating the Security Risks of Generative AI<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">volume</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>6<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">ISSN</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>2474-1566<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">url</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>http://dx.doi.org/10.1561/3300000041<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">DOI</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>10.1561/3300000041<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">number</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>1<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">journal</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>Foundations and Trends® in Privacy and Security<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">publisher</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>Emerald<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">author</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>Barrett, Clark and Boyd, Brad and Bursztein, Elie and Carlini, Nicholas and Chen, Brad and Choi, Jihye and Chowdhury, Amrita Roy and Christodorescu, Mihai and Datta, Anupam and Feizi, Soheil and Fisher, Kathleen and Hashimoto, Tatsunori and Hendrycks, Dan and Jha, Somesh and Kang, Daniel and Kerschbaum, Florian and Mitchell, Eric and Mitchell, John and Ramzan, Zulfikar and Shams, Khawaja and Song, Dawn and Taly, Ankur and Yang, Diyi<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">year</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>2023<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">month</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span>Dec</span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">pages</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>1–52<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span> </span><span class="hl-punctuation hl-section hl-entry hl-end hl-bibtex">}</span></span></span></code></pre></details>
+</div>
+</details>
+</div>
+<div class="helia-cite-format helia-collapsible" data-format="hayagriva" data-copy="true" data-copy-label="hayagriva YAML">
+<details>
+<summary class="helia-group-summary"><span class="helia-group-title">hayagriva YAML (typst)</span></summary>
+<div class="helia-group-body">
+<details class="helia-code" open><summary class="helia-code-summary"><span class="helia-code-lang">yaml</span> · <span class="helia-code-lines">39 lines</span></summary><pre class="helia-raw"><code class="language-yaml"><span class="hl-source hl-yaml"><span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">barrett-2023-identifying</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">type</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">article</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">title</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Identifying and Mitigating the Security Risks of Generative AI</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">author</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Barrett, Clark</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Boyd, Brad</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Bursztein, Elie</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Carlini, Nicholas</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Chen, Brad</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Choi, Jihye</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Chowdhury, Amrita Roy</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Christodorescu, Mihai</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Datta, Anupam</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Feizi, Soheil</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Fisher, Kathleen</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Hashimoto, Tatsunori</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Hendrycks, Dan</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Jha, Somesh</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Kang, Daniel</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Kerschbaum, Florian</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Mitchell, Eric</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Mitchell, John</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Ramzan, Zulfikar</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Shams, Khawaja</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Song, Dawn</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Taly, Ankur</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Yang, Diyi</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">date</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">2023-12</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">page-range</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">1-52</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">url</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">http://dx.doi.org/10.1561/3300000041</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">serial-number</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">doi</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">10.1561/3300000041</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">issn</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">2474-1566</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">parent</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">type</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">periodical</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">title</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Foundations and Trends® in Privacy and Security</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">publisher</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Emerald</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">issue</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-constant hl-numeric hl-integer hl-decimal hl-yaml">1</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">volume</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-constant hl-numeric hl-integer hl-decimal hl-yaml">6</span>
+</span></code></pre></details>
+</div>
+</details>
+</div>
+<div class="helia-cite-files">Download: <a class="helia-link" href="barrett-2023-identifying.bib">barrett-2023-identifying.bib</a> · <a class="helia-link" href="barrett-2023-identifying.yml">barrett-2023-identifying.yml</a></div>
+</div>
+</div>
+</details>
+</div>
+<div class="helia-reference-cites helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">Cites 108 works (0 here)</span></summary>
+<div class="helia-group-body">
+<div class="helia-reference-cites-away helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">External (108)</span></summary>
+<div class="helia-group-body">
+<ul>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1109/sp54263.2024.00179">Poisoning Web-Scale Training Datasets is Practical</a> (2024)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1109/spw63631.2024.00018">Exploiting Programmatic Behavior of LLMs: Dual-Use Through Standard Security Attacks</a> (2024)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.5220/0012422000003660">Towards the Detection of Diffusion Model Deepfakes</a> (2024)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/s10657-024-09794-z">Product liability for defective AI</a> (2024)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1109/iccv51070.2023.02053">The Stable Signature: Rooting Watermarks in Latent Diffusion Models</a> (2023)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.18653/v1/2023.acl-long.910">RARR: Researching and Revising What Language Models Say, Using Language Models</a> (2023)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3576915.3623175">Large Language Models for Code: Security Hardening and Adversarial Testing</a> (2023)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3576915.3623189">Evading Watermark based Detection of AI-Generated Content</a> (2023)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1016/j.patter.2023.100779">GPT detectors are biased against non-native English writers</a> (2023)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.48550/arxiv.2304.07361">PTW: Pivotal tuning watermarking for pre-trained image generators</a> (2023)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1109/cvpr52729.2023.02345">Towards universal fake image detectors that generalize across generative models</a> (2023)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1162/tacl_a_00605">In-Context Retrieval-Augmented Language Models</a> (2023)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1162/coli_a_00490">Measuring Attribution in Natural Language Generation Models</a> (2023)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3576915.3616588">DE-FAKE: Detection and Attribution of Fake Images Generated by Text-to-Image Generation Models</a> (2023)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1080/10447318.2023.2225931">ChatGPT: More than a ‘weapon of mass deception’ ethical challenges and responses from the human-centered artificial intelligence (HCAI) perspective</a> (2023)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3689217.3690621">PromptRobust: Towards Evaluating the Robustness of Large Language Models on Adversarial Prompts</a> (2023)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1162/coli_a_00502">Can Large Language Models Transform Computational Social Science?</a> (2023)</li>
+<li><a class="helia-link helia-external" href="https://arxiv.org/abs/2210.03629">ReAct: Synergizing Reasoning and Acting in Language Models</a> (2023)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.48550/arxiv.2303.17651">Self-Refine: Iterative Refinement with Self-Feedback</a> (2023)</li>
+<li><a class="helia-link helia-external" href="https://arxiv.org/abs/2307.15043">Universal and Transferable Adversarial Attacks on Aligned Language Models</a> (2023)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.48550/arxiv.2303.11156">Can AI-Generated Text be Reliably Detected?</a> (2023)</li>
+<li><a class="helia-link helia-external" href="https://arxiv.org/abs/2305.17493">The Curse of Recursion: Training on Generated Data Makes Models Forget</a> (2023)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.48550/arxiv.2301.11305">DetectGPT: Zero-Shot Machine-Generated Text Detection using Probability Curvature</a> (2023)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1038/s42256-024-00832-8">ChemCrow: Augmenting large-language models with chemistry tools</a> (2023)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.48550/arxiv.2301.10226">A Watermark for Large Language Models</a> (2023)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.48550/arxiv.2302.12095">On the Robustness of ChatGPT: An Adversarial and Out-of-distribution Perspective</a> (2023)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.48550/arxiv.2303.13408">Paraphrasing evades detectors of AI-generated text, but retrieval is an effective defense</a> (2023)</li>
+<li>GPT-4 is OpenAI's most advanced system, producing safer and more useful responses (web page) (2023)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.48550/arxiv.2306.15447">Are aligned neural networks adversarially aligned?</a> (2023)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.48550/arxiv.2306.04634">On the Reliability of Watermarks for Large Language Models</a> (2023)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.48550/arxiv.2307.10719">LLM Censorship: A Machine Learning Challenge or a Computer Security Problem?</a> (2023)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.48550/arxiv.2307.15593">Robust Distortion-free Watermarks for Language Models</a> (2023)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.48550/arxiv.2306.17439">Provable Robust Watermarking for AI-Generated Text</a> (2023)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.48550/arxiv.2308.14132">Detecting Language Model Attacks with Perplexity</a> (2023)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.48550/arxiv.2306.09194">Undetectable Watermarks for Language Models</a> (2023)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.48550/arxiv.2306.03100">Rethinking Model Evaluation as Narrowing the Socio-Technical Gap</a> (2023)</li>
+<li>Authors Guild letter seeks compensation from AI companies for using authors' writings in AI (2023)</li>
+<li>ChaosGPT: Empowering GPT with Internet and Memory to Destroy Humanity (video) (2023)</li>
+<li>Securing the Future of GenAI: Mitigating Security Risks (workshop site) (2023)</li>
+<li>OpenAI, Google will watermark AI-generated content to hinder deepfakes, misinfo (2023)</li>
+<li>Lawyer Used ChatGPT In Court - And Cited Fake Cases. A Judge Is Considering Sanctions (2023)</li>
+<li>Lawsuit says OpenAI violated US authors' copyrights to train AI chatbot (2023)</li>
+<li><a class="helia-link helia-external" href="https://arxiv.org/abs/2305.18341">Tuning Models of Code with Compiler-Generated Reinforcement Learning Feedback</a> (2023)</li>
+<li>WormGPT - The Generative AI Tool Cybercriminals Are Using to Launch Business Email Compromise Attacks (2023)</li>
+<li>FraudGPT: The Villain Avatar of ChatGPT (2023)</li>
+<li>Introducing Llama 2 (Meta) (2023)</li>
+<li>Stable Diffusion (website) (2023)</li>
+<li><a class="helia-link helia-external" href="https://arxiv.org/abs/2309.03450">Long Sequence Modeling with XGen: A 7B LLM Trained on 8K Input Sequence Length</a> (2023)</li>
+<li>DALL-E: Creating images from text (OpenAI) (2023)</li>
+<li><a class="helia-link helia-external" href="https://arxiv.org/abs/2303.08774">GPT-4 Technical Report</a> (2023)</li>
+<li>My AI: Snapchat chatbot coaches 'girl, 13' on losing virginity (2023)</li>
+<li>Executive Order on the Safe, Secure, and Trustworthy Development and Use of Artificial Intelligence (2023)</li>
+<li>FACT SHEET: Biden-Harris Administration Announces National Cyber Workforce and Education Strategy (2023)</li>
+<li>Detecting child sexual abuse material shouldn't be done at any cost (2023)</li>
+<li>Dual-use technology - Wikipedia (2023)</li>
+<li>Large language model - Wikipedia (2023)</li>
+<li>'He Would Still Be Here': Man Dies by Suicide After Talking with AI Chatbot, Widow Says (2023)</li>
+<li><a class="helia-link helia-external" href="https://arxiv.org/abs/2302.03162">Protecting Language Generation Models via Invisible Watermarking</a> (2023)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.18653/v1/2022.naacl-main.287">TRUE: Re-evaluating Factual Consistency Evaluation</a> (2022)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.52202/068431-2011">Training language models to follow instructions with human feedback</a> (2022)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1109/sp46214.2022.9833571">Asleep at the Keyboard? Assessing the Security of GitHub Copilot’s Code Contributions</a> (2022)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.18653/v1/2022.emnlp-main.225">Red teaming language models with language models</a> (2022)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.48550/arxiv.2206.07682">Emergent Abilities of Large Language Models</a> (2022)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.48550/arxiv.2203.11147">Teaching language models to support answers with verified quotes</a> (2022)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.48550/arxiv.2209.03942">Data Feedback Loops: Model-driven Amplification of Dataset Biases</a> (2022)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.48550/arxiv.2212.08073">Constitutional AI: Harmlessness from AI Feedback</a> (2022)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.48550/arxiv.2209.07858">Red Teaming Language Models to Reduce Harms: Methods, Scaling Behaviors, and Lessons Learned</a> (2022)</li>
+<li><a class="helia-link helia-external" href="https://arxiv.org/abs/2106.09667">Poisoning and Backdooring Contrastive Learning</a> (2022)</li>
+<li>How the EU can take on the challenge posed by general-purpose AI systems (2022)</li>
+<li>Temporary policy: Generative AI (e.g., ChatGPT) is banned (Stack Overflow) (2022)</li>
+<li>ChatGPT: Optimizing Language Models for Dialogue (OpenAI blog) (2022)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1371/journal.pone.0251415">TweepFake: About detecting deepfake tweets</a> (2021)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.18653/v1/2021.naacl-main.49">The importance of modeling social factors of language: Theory and practice</a> (2021)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.18653/v1/2021.findings-emnlp.210">Challenges in Detoxifying Language Models</a> (2021)</li>
+<li><a class="helia-link helia-external" href="https://arxiv.org/abs/2106.10328">Process for Adapting Language Models to Society (PALMS) with\n Values-Targeted Datasets</a> (2021)</li>
+<li>DARPA Announces Research Teams Selected to Semantic Forensics Program (2021)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-030-44041-1_114">Generating sentiment-preserving fake online reviews using neural language models and their human-and machine-based detection</a> (2020)</li>
+<li><a class="helia-link helia-external" href="https://arxiv.org/abs/2012.07805">Extracting training data from large language models</a> (2020)</li>
+<li><a class="helia-link helia-external" href="https://arxiv.org/abs/2003.08685">Leveraging frequency analysis for deep fake image recognition</a> (2020)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/s11023-020-09539-2">Artificial intelligence, values, and alignment</a> (2020)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.18653/v1/2020.findings-emnlp.301">RealToxicityPrompts: Evaluating neural toxic degeneration in language models</a> (2020)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1109/cvprw50498.2020.00341">Deepfake detection by analyzing convolutional traces</a> (2020)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.18653/v1/2020.acl-main.164">Automatic Detection of Generated Text is Easiest when Humans are Fooled</a> (2020)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.18653/v1/2020.coling-main.208">Automatic Detection of Machine Generated Text: A Critical Survey</a> (2020)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1109/cvpr42600.2020.00808">Global texture enhancement for fake face detection in the wild</a> (2020)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1109/cvpr42600.2020.00872">CNN-generated images are surprisingly easy to spot for now</a> (2020)</li>
+<li><a class="helia-link helia-external" href="https://arxiv.org/abs/2010.07079">Recipes for Safety in Open-domain Chatbots</a> (2020)</li>
+<li><a class="helia-link helia-external" href="https://arxiv.org/abs/2009.01325">Learning to summarize with human feedback</a> (2020)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.18653/v1/p19-3019">GLTR: Statistical Detection and Visualization of Generated Text</a> (2019)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1109/wifs47025.2019.9035099">Incremental learning for the detection and classification of GAN-generated images</a> (2019)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.2352/issn.2470-1173.2019.5.mwsf-532">Detecting GAN generated Fake Images using Co-occurrence Matrices</a> (2019)</li>
+<li>Deepfake bot submissions to federal public comment websites cannot be distinguished from human submissions (2019)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1109/wifs47025.2019.9035107">Detecting and simulating artifacts in gan fake images</a> (2019)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1109/icip.2019.8803661">Detecting GAN-Generated Imagery Using Saturation Cues</a> (2019)</li>
+<li><a class="helia-link helia-external" href="https://arxiv.org/abs/1904.09675">BERTScore: Evaluating Text Generation with BERT</a> (2019)</li>
+<li><a class="helia-link helia-external" href="https://arxiv.org/abs/1908.09203">Release Strategies and the Social Impacts of Language Models</a> (2019)</li>
+<li><a class="helia-link helia-external" href="https://arxiv.org/abs/1911.00686">Unmasking DeepFakes with simple Features</a> (2019)</li>
+<li><a class="helia-link helia-external" href="https://arxiv.org/abs/1906.03351">Real or fake? Learning to discriminate machine from human generated text</a> (2019)</li>
+<li><a class="helia-link helia-external" href="https://arxiv.org/abs/1907.11692">RoBERTa: A Robustly Optimized BERT Pretraining Approach</a> (2019)</li>
+<li>GPT-2: 1.5B release (OpenAI) (2019)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1109/mipr.2018.00084">Detection of gan-generated fake images over social networks</a> (2018)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.18653/v1/d17-1323">Men Also Like Shopping: Reducing Gender Bias Amplification using Corpus-level Constraints</a> (2017)</li>
+<li><a class="helia-link helia-external" href="https://arxiv.org/abs/1706.03762">Attention is All you Need</a> (2017)</li>
+<li>Information Hiding (Katzenbeisser &amp; Petitcolas) (2016)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1117/12.2039213">Linguistic steganography on Twitter: Hierarchical language modeling with manual interaction</a> (2014)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/3-540-45496-9_14">Natural language watermarking: Design, analysis, and a proof-of-concept implementation</a> (2001)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1207/s15327051hci1523_5">The intellectual challenge of CSCW: The gap between social requirements and technical feasibility</a> (2000)</li>
+<li>Your AI model might be telling you this is not a cat (web demo)</li>
+</ul>
+</div>
+</details>
+</div>
+</div>
+</details>
+</div>
+<footer class="helia-footer">
+<div class="helia-related helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><h3 class="helia-heading">Related</h3>
+</summary>
+<div class="helia-group-body">
+<ul>
+<li><a class="helia-entry-link" href="andriushchenko-2024-agentharm.html" data-entry="andriushchenko-2024-agentharm">AgentHarm: A Benchmark for Measuring Harmfulness of LLM Agents</a> <span class="helia-related-tags"><a class="helia-entry-link" href="tag-ai-safety.html" data-entry="tag-ai-safety">#ai-safety</a> <a class="helia-entry-link" href="tag-machine-learning.html" data-entry="tag-machine-learning">#machine-learning</a></span></li>
+<li><a class="helia-entry-link" href="davies-2025-fundamental.html" data-entry="davies-2025-fundamental">Fundamental Limitations in Pointwise Defences of LLM Finetuning APIs</a> <span class="helia-related-tags"><a class="helia-entry-link" href="tag-ai-safety.html" data-entry="tag-ai-safety">#ai-safety</a> <a class="helia-entry-link" href="tag-machine-learning.html" data-entry="tag-machine-learning">#machine-learning</a></span></li>
+<li><a class="helia-entry-link" href="davies-2026-boundary.html" data-entry="davies-2026-boundary">Boundary Point Jailbreaking of Black-Box LLMs</a> <span class="helia-related-tags"><a class="helia-entry-link" href="tag-ai-safety.html" data-entry="tag-ai-safety">#ai-safety</a> <a class="helia-entry-link" href="tag-machine-learning.html" data-entry="tag-machine-learning">#machine-learning</a></span></li>
+<li><a class="helia-entry-link" href="dziemian-2026-how.html" data-entry="dziemian-2026-how">How Vulnerable Are AI Agents to Indirect Prompt Injections? Insights from a Large-Scale Public Competition</a> <span class="helia-related-tags"><a class="helia-entry-link" href="tag-ai-safety.html" data-entry="tag-ai-safety">#ai-safety</a> <a class="helia-entry-link" href="tag-machine-learning.html" data-entry="tag-machine-learning">#machine-learning</a></span></li>
+</ul>
+</div>
+</details>
+</div>
+</footer>
+</article>
+<div class="helia-identity"><span class="helia-id">barrett-2023-identifying</span> <span class="helia-kind">reference</span> <span class="helia-path">entries/refs/barrett-2023-identifying/barrett-2023-identifying.hel</span></div>
+</div>
+</body>
+</html>

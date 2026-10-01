@@ -1,0 +1,1 @@
+heliaSearchData("d/nancy-university",{"id":"nancy-university","title":"Nancy University","kind":"institution","tags":[],"authors":[],"venue":[],"date":null,"url":"nancy-university.html","headings":[],"body":""});

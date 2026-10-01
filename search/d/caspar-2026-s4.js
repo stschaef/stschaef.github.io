@@ -1,0 +1,1 @@
+heliaSearchData("d/caspar-2026-s4",{"id":"caspar-2026-s4","title":"S4 modal sequent calculus as intermediate logic and intermediate language","kind":"reference","tags":["compilation"],"authors":["Guillaume Munch-Maccagnoni","Jean Caspar"],"venue":["arXiv"],"date":null,"url":"caspar-2026-s4.html","headings":[],"body":""});

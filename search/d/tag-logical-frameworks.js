@@ -1,0 +1,1 @@
+heliaSearchData("d/tag-logical-frameworks",{"id":"tag-logical-frameworks","title":"logical-frameworks","kind":"tag","tags":[],"authors":[],"venue":[],"date":null,"url":"tag-logical-frameworks.html","headings":[],"body":""});

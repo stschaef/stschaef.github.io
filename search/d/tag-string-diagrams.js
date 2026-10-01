@@ -1,0 +1,1 @@
+heliaSearchData("d/tag-string-diagrams",{"id":"tag-string-diagrams","title":"string-diagrams","kind":"tag","tags":[],"authors":[],"venue":[],"date":null,"url":"tag-string-diagrams.html","headings":[],"body":""});

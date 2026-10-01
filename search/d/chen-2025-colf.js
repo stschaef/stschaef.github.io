@@ -1,0 +1,1 @@
+heliaSearchData("d/chen-2025-colf",{"id":"chen-2025-colf","title":"CoLF Logic Programming as Infinitary Proof Exploration","kind":"reference","tags":["logic-programming","logical-frameworks"],"authors":["Frank Pfenning","Zhibo Chen"],"venue":["EPTCS","Electronic Proceedings in Theoretical Computer Science"],"date":null,"url":"chen-2025-colf.html","headings":[],"body":""});

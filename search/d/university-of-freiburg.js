@@ -1,0 +1,1 @@
+heliaSearchData("d/university-of-freiburg",{"id":"university-of-freiburg","title":"University of Freiburg","kind":"institution","tags":[],"authors":[],"venue":[],"date":null,"url":"university-of-freiburg.html","headings":[],"body":""});

@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>Proof Repair Infrastructure for Supervised Models: Building a Large Proof Repair Dataset</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Ctext y=%22.9em%22 font-size=%2290%22%3E%F0%9F%8C%BB%3C/text%3E%3C/svg%3E">
+<meta name="generator" content="helia">
+<link rel="alternate" type="application/atom+xml" title="Steven Schaefer" href="feed.xml">
+<link rel="alternate" type="application/feed+json" title="Steven Schaefer" href="feed.json">
+<script src="helia/theme-version.js"></script>
+<script src="theme/folio-early.js"></script>
+<link rel="stylesheet" href="helia/theme.css">
+<link rel="stylesheet" href="helia/highlight.css">
+<link rel="stylesheet" href="helia/search.css">
+<link rel="stylesheet" href="theme/katex.css">
+<link rel="stylesheet" href="theme/recipe.css">
+<link rel="stylesheet" href="theme/site.css">
+<link rel="stylesheet" href="theme/folio.css">
+<script defer src="helia/runtime.js"></script>
+<script defer src="helia/search.js"></script>
+<script defer src="theme/glyphcraft.js"></script>
+<script defer src="theme/glyphart.js"></script>
+<script defer src="theme/glyphgen.js"></script>
+<script defer src="theme/ornament.js"></script>
+<script defer src="theme/folio.js"></script>
+<script defer src="theme/portrait.js"></script>
+<script type="application/json" id="helia-widgets">{"helia-cite-formats":"widgets/helia-cite-formats-a3294ac7.js"}</script>
+<link rel="modulepreload" href="widgets/helia-cite-formats-a3294ac7.js">
+<script type="module" src="widgets/runtime.js"></script>
+</head>
+<body>
+<nav class="helia-topbar"><a class="helia-home" href="home.html">Steven Schaefer</a><ul class="helia-nav-links"><li><a href="stevenschaefer.html">About Me</a></li><li><a href="research.html">Research</a></li><li><a href="new.html">New</a></li></ul><button type="button" class="helia-search-button" aria-label="Search (/ or Ctrl+K)" aria-haspopup="dialog"><span class="helia-search-icon">⌕</span><span class="helia-search-label">Search</span><kbd class="helia-search-key">/</kbd></button></nav>
+<div class="helia-page" data-kind="reference">
+<article class="helia-article">
+<header class="helia-header" data-entry="reichel-2023-proof" data-kind="reference">
+<h2 class="helia-heading"><span class="helia-taxon">Reference.</span> Proof Repair Infrastructure for Supervised Models: Building a Large Proof Repair Dataset</h2>
+<div class="helia-meta"><span class="helia-author"><a class="helia-entry-link" href="tomreichel.html" data-entry="tomreichel">Tom Reichel</a>, <a class="helia-entry-link" href="rwesleyhenderson.html" data-entry="rwesleyhenderson">R. Wesley Henderson</a>, <a class="helia-entry-link" href="andrewtouchet.html" data-entry="andrewtouchet">Andrew Touchet</a>, <a class="helia-entry-link" href="andrewgardner.html" data-entry="andrewgardner">Andrew Gardner</a>, <a class="helia-entry-link" href="taliaringer.html" data-entry="taliaringer">Talia Ringer</a></span> · <span class="helia-byline"><a class="helia-entry-link" href="itp.html" data-entry="itp">ITP</a> · 2023</span> · <span class="helia-tags"><span class="helia-tag" data-tag="proof-engineering"><a class="helia-entry-link" href="tag-proof-engineering.html" data-entry="tag-proof-engineering">proof-engineering</a></span></span> · <span class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.4230/lipics.itp.2023.26">DOI</a></span></span></div>
+</header>
+<div class="helia-body">
+<div class="helia-abstract">We report on our efforts building a new, large proof-repair dataset and benchmark suite for the Coq proof assistant. The dataset is made up of Git commits from open-source projects with old and new versions of definitions and proofs aligned across commits. Building this dataset has been a significant undertaking, highlighting a number of challenges and gaps in existing infrastructure. We discuss these challenges and gaps, and we provide recommendations for how the proof assistant community can address them. Our hope is to make it easier to build datasets and benchmark suites so that machine-learning tools for proofs will move to target the tasks that matter most and do so equitably across proof assistants.</div>
+</div>
+<div class="helia-cite helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><h3 class="helia-heading">Cite</h3>
+</summary>
+<div class="helia-group-body">
+<div class="helia-widget" data-widget="helia-cite-formats" data-props="{&quot;key&quot;:&quot;reichel-2023-proof&quot;,&quot;bibtex&quot;:&quot;@inproceedings{reichel-2023-proof,\n  doi = {10.4230/LIPICS.ITP.2023.26},\n  url = {https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.ITP.2023.26},\n  author = {Reichel, Tom and Henderson, R. Wesley and Touchet, Andrew and Gardner, Andrew and Ringer, Talia},\n  keywords = {proof repair, datasets, benchmarks, machine learning, formal proof, Computing methodologies → Machine learning, Software and its engineering → Software maintenance tools, Security and privacy → Logic and verification},\n  language = {en},\n  title = {Proof Repair Infrastructure for Supervised Models: Building a Large Proof Repair Dataset},\n  volume = {268},\n  pages = {26:1-26:20},\n  publisher = {Schloss Dagstuhl – Leibniz-Zentrum für Informatik},\n  year = {2023},\n  copyright = {Creative Commons Attribution 4.0 International license},\n  booktitle = {14th International Conference on Interactive Theorem Proving (ITP 2023)}\n}&quot;,&quot;bib-file&quot;:&quot;reichel-2023-proof.bib&quot;,&quot;hayagriva&quot;:&quot;reichel-2023-proof:\n  type: article\n  title: &#39;Proof Repair Infrastructure for Supervised Models: Building a Large Proof Repair Dataset&#39;\n  author:\n  - Reichel, Tom\n  - Henderson, R. Wesley\n  - Touchet, Andrew\n  - Gardner, Andrew\n  - Ringer, Talia\n  date: 2023\n  page-range: 26:1-26:20\n  url: https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.ITP.2023.26\n  serial-number:\n    doi: 10.4230/LIPICS.ITP.2023.26\n  parent:\n    type: proceedings\n    title: 14th International Conference on Interactive Theorem Proving (ITP 2023)\n    publisher: Schloss Dagstuhl – Leibniz-Zentrum für Informatik\n    volume: 268\n&quot;,&quot;yml-file&quot;:&quot;reichel-2023-proof.yml&quot;}"><div class="helia-cite-key" data-copy="@reichel-2023-proof" data-copy-label="citation key"><span class="helia-bib-key">Cite as</span> <code class="helia-raw-inline">@reichel-2023-proof</code> (helia, typst) · <code class="helia-raw-inline">\cite{reichel-2023-proof}</code> (LaTeX)</div>
+<div class="helia-cite-format helia-collapsible" data-format="bibtex" data-copy="true" data-copy-label="BibTeX">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">BibTeX</span></summary>
+<div class="helia-group-body">
+<details class="helia-code" open><summary class="helia-code-summary"><span class="helia-code-lang">bibtex</span> · <span class="helia-code-lines">14 lines</span></summary><pre class="helia-raw"><code class="language-bibtex"><span class="hl-text hl-bibtex"><span class="hl-meta hl-entry hl-braces hl-bibtex"><span class="hl-keyword hl-other hl-entry-type hl-bibtex"><span class="hl-punctuation hl-definition hl-keyword hl-bibtex">@</span>inproceedings</span><span class="hl-punctuation hl-section hl-entry hl-begin hl-bibtex">{</span><span class="hl-entity hl-name hl-type hl-entry-key hl-bibtex">reichel-2023-proof</span>,
+  <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">doi</span> <span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span> <span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>10.4230/LIPICS.ITP.2023.26<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>,
+  <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">url</span> <span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span> <span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.ITP.2023.26<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>,
+  <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">author</span> <span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span> <span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>Reichel, Tom and Henderson, R. Wesley and Touchet, Andrew and Gardner, Andrew and Ringer, Talia<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>,
+  <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">keywords</span> <span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span> <span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>proof repair, datasets, benchmarks, machine learning, formal proof, Computing methodologies → Machine learning, Software and its engineering → Software maintenance tools, Security and privacy → Logic and verification<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>,
+  <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">language</span> <span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span> <span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>en<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>,
+  <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">title</span> <span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span> <span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>Proof Repair Infrastructure for Supervised Models: Building a Large Proof Repair Dataset<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>,
+  <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">volume</span> <span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span> <span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>268<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>,
+  <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">pages</span> <span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span> <span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>26:1-26:20<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>,
+  <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">publisher</span> <span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span> <span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>Schloss Dagstuhl – Leibniz-Zentrum für Informatik<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>,
+  <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">year</span> <span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span> <span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>2023<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>,
+  <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">copyright</span> <span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span> <span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>Creative Commons Attribution 4.0 International license<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>,
+  <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">booktitle</span> <span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span> <span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>14th International Conference on Interactive Theorem Proving (ITP 2023)<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span>
+</span><span class="hl-punctuation hl-section hl-entry hl-end hl-bibtex">}</span></span></span></code></pre></details>
+</div>
+</details>
+</div>
+<div class="helia-cite-format helia-collapsible" data-format="hayagriva" data-copy="true" data-copy-label="hayagriva YAML">
+<details>
+<summary class="helia-group-summary"><span class="helia-group-title">hayagriva YAML (typst)</span></summary>
+<div class="helia-group-body">
+<details class="helia-code" open><summary class="helia-code-summary"><span class="helia-code-lang">yaml</span> · <span class="helia-code-lines">19 lines</span></summary><pre class="helia-raw"><code class="language-yaml"><span class="hl-source hl-yaml"><span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">reichel-2023-proof</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">type</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">article</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">title</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-quoted hl-single hl-yaml"><span class="hl-punctuation hl-definition hl-string hl-begin hl-yaml">&#39;</span>Proof Repair Infrastructure for Supervised Models: Building a Large Proof Repair Dataset<span class="hl-punctuation hl-definition hl-string hl-end hl-yaml">&#39;</span></span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">author</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Reichel, Tom</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Henderson, R. Wesley</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Touchet, Andrew</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Gardner, Andrew</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Ringer, Talia</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">date</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-constant hl-numeric hl-integer hl-decimal hl-yaml">2023</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">page-range</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">26:1-26:20</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">url</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.ITP.2023.26</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">serial-number</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">doi</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">10.4230/LIPICS.ITP.2023.26</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">parent</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">type</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">proceedings</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">title</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">14th International Conference on Interactive Theorem Proving (ITP 2023)</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">publisher</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Schloss Dagstuhl – Leibniz-Zentrum für Informatik</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">volume</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-constant hl-numeric hl-integer hl-decimal hl-yaml">268</span>
+</span></code></pre></details>
+</div>
+</details>
+</div>
+<div class="helia-cite-files">Download: <a class="helia-link" href="reichel-2023-proof.bib">reichel-2023-proof.bib</a> · <a class="helia-link" href="reichel-2023-proof.yml">reichel-2023-proof.yml</a></div>
+</div>
+</div>
+</details>
+</div>
+<div class="helia-reference-cited-by helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">Cited by (1)</span></summary>
+<div class="helia-group-body">
+<section class="helia-transclusion" data-entry="hu-2025-hybridprover" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="hu-2025-hybridprover"><span class="helia-title">HybridProver: Augmenting Theorem Proving with LLM-Driven Proof Synthesis and Refinement</span>&nbsp;<a class="helia-slug" href="hu-2025-hybridprover.html">hu-2025-hybridprover</a><span class="helia-byline"><span class="helia-entry-link" data-entry="arxiv">arXiv</span> · 2025</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="hu-2025-hybridprover" data-kind="reference">
+<div class="helia-abstract">Formal methods play a crucial role in ensuring the reliability of critical systems through rigorous mathematical verification. However, their adoption remains limited due to the labor-intensive nature of manual proof construction. Recent advances in large language models (LLMs) have opened new opportunities for automated theorem proving. Two main paradigms have emerged: stepwise tactic-based generation and whole-proof synthesis. While both approaches have complementary strengths, existing work largely treats them in isolation. In this work, we propose HybridProver, a unified framework that integrates whole-proof synthesis and tactic-based generation through proof sketches as an intermediate representation. This design enables the reuse of partially correct proof structures while effectively combining high-level planning with fine-grained reasoning. We implement HybridProver in Isabelle/HOL and post-train two 7B-scale LLMs on our optimized Isabelle datasets. Experiments on the miniF2F Isabelle benchmark achieved a 73.8% success rate and improved upon the previous state of the art (61.9%), demonstrating that lightweight models, when combined with our approach, can effectively generate Isabelle/HOL proofs without relying on very large LLMs. Ablation studies further analyze the impact of dataset quality, training configurations, and sampling strategies on proof generation.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/2505.15740">arXiv</a></span></div>
+</div>
+</div>
+</details>
+</section>
+</div>
+</details>
+</div>
+<div class="helia-reference-cites helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">Cites 56 works (4 here)</span></summary>
+<div class="helia-group-body">
+<div class="helia-reference-cites-here helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">With notes (4)</span></summary>
+<div class="helia-group-body">
+<section class="helia-transclusion" data-entry="ringer-2021-proof" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="ringer-2021-proof"><span class="helia-title">Proof repair across type equivalences</span>&nbsp;<a class="helia-slug" href="ringer-2021-proof.html">ringer-2021-proof</a><span class="helia-byline"><span class="helia-entry-link" data-entry="pldi">PLDI</span> · 2021</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="ringer-2021-proof" data-kind="reference">
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="pdf-url"><a class="helia-link helia-external" href="https://arxiv.org/pdf/2010.00774">PDF</a></span> · <span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/3453483.3454033">DOI</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/conf/pldi/RingerPYLG21">pldb</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="ringer-2020-replica" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="ringer-2020-replica"><span class="helia-title">REPLica: REPL instrumentation for Coq analysis</span>&nbsp;<a class="helia-slug" href="ringer-2020-replica.html">ringer-2020-replica</a><span class="helia-byline"><span class="helia-entry-link" data-entry="cpp">CPP</span> · 2020</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="ringer-2020-replica" data-kind="reference">
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="pdf-url"><a class="helia-link helia-external" href="https://dl.acm.org/doi/pdf/10.1145/3372885.3373823">PDF</a></span> · <span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/3372885.3373823">DOI</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/conf/cpp/RingerSGL20">pldb</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="ringer-2019-ornaments" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="ringer-2019-ornaments"><span class="helia-title">Ornaments for Proof Reuse in Coq</span>&nbsp;<a class="helia-slug" href="ringer-2019-ornaments.html">ringer-2019-ornaments</a><span class="helia-byline"><span class="helia-entry-link" data-entry="itp">ITP</span> · 2019</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="ringer-2019-ornaments" data-kind="reference">
+<div class="helia-abstract">Ornaments express relations between inductive types with the same inductive structure. We implement fully automatic proof reuse for a particular class of ornaments in a Coq plugin, and show how such a tool can give programmers the rewards of using indexed inductive types while automating away many of the costs. The plugin works directly on Coq code; it is the first ornamentation tool for a non-embedded dependently typed language. It is also the first tool to automatically identify ornaments: To lift a function or proof, the user must provide only the source type, the destination type, and the source function or proof. In taking advantage of the mathematical properties of ornaments, our approach produces faster functions and smaller terms than a more general approach to proof reuse in Coq.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.4230/lipics.itp.2019.26">DOI</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="ringer-2018-adapting" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="ringer-2018-adapting"><span class="helia-title">Adapting proof automation to adapt proofs</span>&nbsp;<a class="helia-slug" href="ringer-2018-adapting.html">ringer-2018-adapting</a><span class="helia-byline"><span class="helia-entry-link" data-entry="cpp">CPP</span> · 2018</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="ringer-2018-adapting" data-kind="reference">
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="pdf-url"><a class="helia-link helia-external" href="https://dl.acm.org/doi/pdf/10.1145/3167094">PDF</a></span> · <span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/3167094">DOI</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/conf/cpp/RingerYLG18">pldb</a></span></div>
+</div>
+</div>
+</details>
+</section>
+</div>
+</details>
+</div>
+<div class="helia-reference-cites-away helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">External (52)</span></summary>
+<div class="helia-group-body">
+<ul>
+<li><a class="helia-link helia-external" href="https://doi.org/10.48550/arxiv.2301.02195">Towards Autoformalization of Mathematics and Code Correctness: Experiments with Elementary Proofs</a> (2023)</li>
+<li><a class="helia-link helia-external" href="https://arxiv.org/abs/2208.03133">Out of the bleu: how should we assess quality of the code generation models</a> (2023)</li>
+<li>2nd MATH-AI Workshop at NeurIPS’22 (2022)</li>
+<li>AI for Theorem Proving (AITP), 2016-2022 (2022)</li>
+<li>ProofNet: A benchmark for autoformalizing and formally proving undergraduate-level mathematics problems (2022)</li>
+<li>Beyond Bayes: Paths Towards Universal Reasoning Systems (2022)</li>
+<li>A parallel corpus of natural language and isabelle artefacts (2022)</li>
+<li>Diversity-driven automated formal verification (2022)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.48550/arxiv.2205.11491">HyperTree Proof Search for Neural Theorem Proving</a> (2022)</li>
+<li><a class="helia-link helia-external" href="https://arxiv.org/abs/2205.12615">Autoformalization with large language models</a> (2022)</li>
+<li>minif2f: a cross-system benchmark for formal olympiad-level mathematics (2022)</li>
+<li><a class="helia-link helia-external" href="https://arxiv.org/abs/2102.06203">Proof artifact co-training for theorem proving with language models</a> (2021)</li>
+<li>Lisa: Language models of isabelle proofs (2021)</li>
+<li>Towards the automatic mathematician (2021)</li>
+<li>Break-it-fix-it: Unsupervised learning for program repair (2021)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-030-53518-6_17">The Tactician: A Seamless, Interactive Tactic Learner and Prover for Coq</a> (2020)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3395363.3397369">CoCoNuT: combining context-aware neural translation models using ensemble for program repair</a> (2020)</li>
+<li><a class="helia-link helia-external" href="https://arxiv.org/abs/2009.03393">Generative language modeling for automated theorem proving</a> (2020)</li>
+<li><a class="helia-link helia-external" href="https://arxiv.org/abs/2009.10297">Codebleu: a method for automatic evaluation of code synthesis</a> (2020)</li>
+<li><a class="helia-link helia-external" href="https://arxiv.org/abs/2003.06458">QED at large: A survey of engineering of formally verified software</a> (2020)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3360585">Getafix: learning to fix bugs automatically</a> (2019)</li>
+<li>Holist: An environment for machine learning of higher order logic theorem proving (2019)</li>
+<li>Metamath: A Computer Language for Mathematical Proofs (2019)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.48550/arxiv.1907.07794">Generating Correctness Proofs with Neural Networks</a> (2019)</li>
+<li>Automatic refactoring for agda (2019)</li>
+<li>Learning to prove theorems via interacting with proof assistants (2019)</li>
+<li>Automatic software repair: A survey (2018)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3105906">Automatic Software Repair: A Bibliography</a> (2018)</li>
+<li>Front-end tooling for building and maintaining dependently-typed functional programs (2018)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3180155.3180233">Context-aware patch generation for better automated program repair</a> (2018)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1371/journal.pmed.1002683">Variable generalization performance of a deep learning model to detect pneumonia in chest radiographs: A cross-sectional study</a> (2018)</li>
+<li>SerAPI: Machine-Friendly, Data-Centric Serialization for COQ (2016)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/2771783.2771791">An analysis of patch plausibility and correctness for generate-and-validate patch generation systems</a> (2015)</li>
+<li><a class="helia-link helia-external" href="https://arxiv.org/abs/1505.07002">Automatic repair of real bugs: An experience report on the defects4j dataset</a> (2015)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/2610384.2628055">Defects4J: a database of existing faults to enable controlled testing studies for Java programs</a> (2014)</li>
+<li>Encyclopedia of Distances (2014)</li>
+<li>Mash: Machine learning for sledgehammer (2013)</li>
+<li><a class="helia-link helia-external" href="https://arxiv.org/abs/1207.3441">Isabelle/jedit — a prover IDE within the PIDE framework</a> (2012)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1109/iccv.2009.5459199">Fast and robust earth mover’s distances</a> (2009)</li>
+<li>Proof reuse with extended inductive types (2004)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.3115/1073083.1073135">BLEU: a method for automatic evaluation of machine translation</a> (2002)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/3-540-58216-9_25">Generalization and reuse of tactic proofs</a> (1994)</li>
+<li>Proof Transformations in Higher-Order Logic (1987)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1016/0022-2836(81)90087-5">Identification of common molecular subsequences</a> (1981)</li>
+<li>Algorithms for the Assignment and Transportation Problems (1957)</li>
+<li>Statistics - archive of formal proofs</li>
+<li>Proof engineering, adaptation, repair, and learning for software (pearls)</li>
+<li>Is there a full documentation of coq’s grammar?</li>
+<li>Proposal: a custom build tool for coq projects</li>
+<li>Query ast returns empty result</li>
+<li>Serapi ’classic mode’ final release notice</li>
+<li>Portal-to-isabelle</li>
+</ul>
+</div>
+</details>
+</div>
+</div>
+</details>
+</div>
+</article>
+<div class="helia-identity"><span class="helia-id">reichel-2023-proof</span> <span class="helia-kind">reference</span> <span class="helia-path">entries/refs/reichel-2023-proof/reichel-2023-proof.hel</span></div>
+</div>
+</body>
+</html>

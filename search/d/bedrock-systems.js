@@ -1,0 +1,1 @@
+heliaSearchData("d/bedrock-systems",{"id":"bedrock-systems","title":"BedRock Systems","kind":"institution","tags":[],"authors":[],"venue":[],"date":null,"url":"bedrock-systems.html","headings":[],"body":""});

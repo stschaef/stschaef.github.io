@@ -1,0 +1,1 @@
+heliaSearchData("d/andrewslattery",{"id":"andrewslattery","title":"Andrew Slattery","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"andrewslattery.html","headings":[],"body":""});

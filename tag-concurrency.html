@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>concurrency</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Ctext y=%22.9em%22 font-size=%2290%22%3E%F0%9F%8C%BB%3C/text%3E%3C/svg%3E">
+<meta name="generator" content="helia">
+<link rel="alternate" type="application/atom+xml" title="Steven Schaefer" href="feed.xml">
+<link rel="alternate" type="application/feed+json" title="Steven Schaefer" href="feed.json">
+<script src="helia/theme-version.js"></script>
+<script src="theme/folio-early.js"></script>
+<link rel="stylesheet" href="helia/theme.css">
+<link rel="stylesheet" href="helia/highlight.css">
+<link rel="stylesheet" href="helia/search.css">
+<link rel="stylesheet" href="theme/katex.css">
+<link rel="stylesheet" href="theme/recipe.css">
+<link rel="stylesheet" href="theme/site.css">
+<link rel="stylesheet" href="theme/folio.css">
+<script defer src="helia/runtime.js"></script>
+<script defer src="helia/search.js"></script>
+<script defer src="theme/glyphcraft.js"></script>
+<script defer src="theme/glyphart.js"></script>
+<script defer src="theme/glyphgen.js"></script>
+<script defer src="theme/ornament.js"></script>
+<script defer src="theme/folio.js"></script>
+<script defer src="theme/portrait.js"></script>
+</head>
+<body>
+<nav class="helia-topbar"><a class="helia-home" href="home.html">Steven Schaefer</a><ul class="helia-nav-links"><li><a href="stevenschaefer.html">About Me</a></li><li><a href="research.html">Research</a></li><li><a href="new.html">New</a></li></ul><button type="button" class="helia-search-button" aria-label="Search (/ or Ctrl+K)" aria-haspopup="dialog"><span class="helia-search-icon">⌕</span><span class="helia-search-label">Search</span><kbd class="helia-search-key">/</kbd></button></nav>
+<div class="helia-page" data-kind="tag">
+<article class="helia-article">
+<header class="helia-header" data-entry="tag-concurrency" data-kind="tag">
+<h2 class="helia-heading"><span class="helia-taxon">Tag.</span> concurrency</h2>
+<div class="helia-meta"><span class="helia-byline"><span class="helia-tag-name">concurrency</span></span></div>
+</header>
+<div class="helia-body">
+</div>
+<div class="helia-tag-group">
+<section class="helia-heading-section" data-level="1">
+<details open>
+<summary class="helia-heading-summary"><h2 class="helia-heading">References (28)</h2>
+</summary>
+<div class="helia-heading-body">
+<section class="helia-transclusion" data-entry="mathiasen-2026-verifying" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="mathiasen-2026-verifying"><span class="helia-title">Verifying Isolation Levels of Database Implementations for Free Using Separation Logic</span>&nbsp;<a class="helia-slug" href="mathiasen-2026-verifying.html">mathiasen-2026-verifying</a><span class="helia-byline"><span class="helia-entry-link" data-entry="arxiv">arXiv</span> · 2026</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="mathiasen-2026-verifying" data-kind="reference">
+<div class="helia-abstract">Modern databases are highly concurrent and provide transactions as a mean of grouping several database operations into atomically applied units. Database vendors and software engineers use isolation levels to describe the consistency guarantees of transactions. The popular isolation levels give weak guarantees, with intricate semantics, to optimize performance of applications. The problem of assuring that database implementations actually implement the isolation level guarantees that application developers build their systems upon has received a great deal of attention from the testing community. But until now, there exists no method for formally verifying that a database implementation actually implements the isolation level that database vendors says it provides. In this paper, we present a method for verifying that a database implements an isolation level: we derive isolation levels directly, as formalized in transactional consistency models by the database community, from the structure of separation logic specifications. By doing so, we consider all program executions that a database and arbitrary clients of the database could produce. The result is a so-called free theorem meaning that any database implementation, whose operations are verified against a specific set of separation logic specifications, actually implements its isolation level. As all proofs in this paper are mechanized in the Rocq proof assistant and build upon a detailed semantic model of program execution, we believe this contribution raises the bar for the achievable robustness of databases.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/2607.15877">arXiv</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="li-2026-contextual" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="li-2026-contextual"><span class="helia-title">Contextual Refinement of Higher-Order Concurrent Probabilistic Programs</span>&nbsp;<a class="helia-slug" href="li-2026-contextual.html">li-2026-contextual</a><span class="helia-byline"><span class="helia-entry-link" data-entry="pldi">PLDI</span> · 2026</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="li-2026-contextual" data-kind="reference">
+<div class="helia-abstract">We present Foxtrot, the first higher-order separation logic for proving contextual refinement of higherorder concurrent probabilistic programs with higher-order local state. From a high level, Foxtrot inherits various concurrency reasoning principles from standard concurrent separation logic, e.g. invariants and ghost resources, and supports advanced probabilistic reasoning principles for reasoning about complex probability distributions induced by concurrent threads, e.g. tape presampling and induction by error amplification. The integration of these strong reasoning principles is highly non-trivial due to the combination of probability and concurrency in the language and the complexity of the Foxtrot model; the soundness of the logic relies on a version of the axiom of choice within the Iris logic, which is not used in earlier work on Iris-based logics. We demonstrate the expressiveness of Foxtrot on a wide range of examples, including the adversarial von Neumann coin and the randombytes_uniform function of the Sodium cryptography software library. All results have been mechanized in the Rocq proof assistant and the Iris separation logic framework.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/3808265">DOI</a></span> · <span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/2511.10135">arXiv</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/journals/pacmpl/LiATB26">pldb</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="namakonov-2026-lawyer" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="namakonov-2026-lawyer"><span class="helia-title">Lawyer: Modular Obligations-Based Liveness Reasoning in Higher-Order Impredicative Concurrent Separation Logic</span>&nbsp;<a class="helia-slug" href="namakonov-2026-lawyer.html">namakonov-2026-lawyer</a><span class="helia-byline"><span class="helia-entry-link" data-entry="oopsla">OOPSLA</span> · 2026</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="namakonov-2026-lawyer" data-kind="reference">
+<div class="helia-abstract">Higher-order concurrent separation logics, such as Iris, have been tremendously successful in verifying safety properties of concurrent programs. However, state-of-the-art attempts to verify liveness properties in such logics have so far either lacked modularity (the ability to compose specifications of independent modules), or they have been far too complex to mechanize in a proof assistant. In this work, we introduce Lawyer — a mechanized program logic for modular verification of (fair) termination of concurrent programs. Lawyer draws inspiration from state-of-the-art approaches that use obligations for specifying and proving termination. However, unlike these approaches, which incorporate obligations by instrumenting the source code with erasable auxiliary code and state, Lawyer avoids such instrumentations. Instead, Lawyer incorporates obligations into the logic by embedding them into a purely logical labeled transition system that the program is shown to refine — this makes Lawyer far more amenable to mechanization. We demonstrate the expressivity of Lawyer by verifying termination of a range of examples, including modular verification of a client program whose termination relies on correctness of a fair lock library, and (separately) proving that a ticket lock implementation implements that library’s interface. To the best of our knowledge, Lawyer is the first mechanized program logic that supports modular higher-order impredicative liveness specifications of program modules. All the results that appear in the paper have been mechanized in the Rocq proof assistant on top of the Iris separation logic framework.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/3798240">DOI</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/journals/pacmpl/NamakonovFJBT26">pldb</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="liu-2026-an" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="liu-2026-an"><span class="helia-title">An Axiomatic Basis for Computer Programming on Relaxed Hardware Architectures: The AxSL Logics</span>&nbsp;<a class="helia-slug" href="liu-2026-an.html">liu-2026-an</a><span class="helia-byline"><span class="helia-entry-link" data-entry="toplas">TOPLAS</span> · 2026</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="liu-2026-an" data-kind="reference">
+<div class="helia-abstract">Very relaxed concurrency memory models, like those of the Arm-A, RISC-V and IBM Power hardware architectures, underpin much of computing but break a fundamental intuition about programs, namely that syntactic program order and the reads-from relation always both induce order in the execution. Instead, out-of-order execution is allowed except where prevented by certain pairwise dependencies, barriers, or other synchronisation. This means that there is no notion of the ‘current’ state of the program, making it challenging to design (and prove sound) syntax-directed, modular reasoning methods like Hoare logics, as usable resources cannot implicitly flow from one program point to the next. We present AxSL, a family of separation logics for relaxed hardware memory models, and instantiate it on sequential consistency and on the Arm-A memory model. The Arm-A instance captures the fine-grained reasoning underpinning the low-overhead synchronisation idioms used by high-performance systems code. We mechanise AxSL in the Iris separation logic framework, illustrate it on key examples, and prove it sound with respect to the axiomatic memory model of Arm-A. By instantiating AxSL on different memory models, we demonstrate the generality of our approach, and show that it is largely generic in the axiomatic model and in the instruction-set semantics, offering a potential way forward for compositional reasoning for other models, and for the combination of production concurrency models and full-scale ISAs.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/3786762">DOI</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/journals/toplas/LiuHPSBP26">pldb</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="kammar-2026-an" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="kammar-2026-an"><span class="helia-title">An Equational Axiomatization of Dynamic Threads via Algebraic Effects: Presheaves on Finite Relations, Labelled Posets, and Parameterized Algebraic Theories</span>&nbsp;<a class="helia-slug" href="kammar-2026-an.html">kammar-2026-an</a><span class="helia-byline"><span class="helia-entry-link" data-entry="popl">POPL</span> · 2026</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="kammar-2026-an" data-kind="reference">
+<div class="helia-abstract">We use the theory of algebraic effects to give a complete equational axiomatization for dynamic threads. Our method is based on parameterized algebraic theories, which give a concrete syntax for strong monads on functor categories, and are a convenient framework for names and binding. Our programs are built from the key primitives ‘fork’ and ‘wait’. ‘Fork’ creates a child thread and passes its name (thread ID) to the parent thread. ‘Wait’ allows us to wait for given child threads to finish. We provide a parameterized algebraic theory built from fork and wait, together with basic atomic actions and laws such as associativity of ‘fork’. Our equational axiomatization is complete in two senses. First, for closed expressions, it completely captures equality of labelled posets (pomsets), an established model of concurrency: model complete. Second, any two open expressions are provably equal if they are equal under all closing substitutions: syntactically complete. The benefit of algebraic effects is that the semantic analysis can focus on the algebraic operations of fork and wait. We then extend the analysis to a simple concurrent programming language by giving operational and denotational semantics. The denotational semantics is built using the methods of parameterized algebraic theories and we show that it is sound, adequate, and fully abstract at first order for labelled-poset observations.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/3776706">DOI</a></span> · <span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/2602.05850">arXiv</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/journals/pacmpl/KammarLLMS26">pldb</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="zilberstein-2026-probabilistic" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="zilberstein-2026-probabilistic"><span class="helia-title">Probabilistic Concurrent Reasoning in Outcome Logic: Independence, Conditioning, and Invariants</span>&nbsp;<a class="helia-slug" href="zilberstein-2026-probabilistic.html">zilberstein-2026-probabilistic</a><span class="helia-byline"><span class="helia-entry-link" data-entry="popl">POPL</span> · 2026</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="zilberstein-2026-probabilistic" data-kind="reference">
+<div class="helia-abstract">Although randomization has long been used in distributed computing, formal methods for reasoning aboutprobabilistic concurrent programs have lagged behind. No existing program logics can express specificationsabout the full distributions of outcomes resulting from programs that are both probabilistic and concurrent. To address this, we introduce Probabilistic Concurrent Outcome Logic ( pcOL ), which incorporates ideas fromconcurrent and probabilistic separation logics into Outcome Logic to introduce new compositional reasoningprinciples. At its core, pcOL reinterprets the rules of Concurrent Separation Logic in a setting where separationmodels probabilistic independence, so as to compositionally describe joint distributions over variables inconcurrent threads. Reasoning about outcomes also proves crucial, as case analysis is often necessary to deriveprecise information about threads that rely on randomized shared state. We demonstrate pcOL on a variety ofexamples, including to prove almost sure termination of unbounded loops.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="pdf-url"><a class="helia-link helia-external" href="https://arxiv.org/pdf/2411.11662">PDF</a></span> · <span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/3776651">DOI</a></span> · <span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/2411.11662">arXiv</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/journals/pacmpl/ZilbersteinST26">pldb</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="namakonov-2026-verifying" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="namakonov-2026-verifying"><span class="helia-title">Verifying Wait-Freedom for Concurrent Higher-Order Programs</span>&nbsp;<a class="helia-slug" href="namakonov-2026-verifying.html">namakonov-2026-verifying</a><span class="helia-byline"><span class="helia-entry-link" data-entry="ecoop">ECOOP</span> · 2026</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="namakonov-2026-verifying" data-kind="reference">
+<div class="helia-abstract">Wait-freedom is the strongest non-blocking progress guarantee for concurrent data structures, ensuring that every operation completes in a finite number of steps regardless of interference from other threads. While verification of wait-freedom has been studied for first-order languages, verifying it for higher-order programming languages with general references remains an open challenge. In such languages, operations may be used by arbitrary, unverified higher-order clients, making it unclear how to even define wait-freedom formally in terms of programs’ semantics, let alone prove it. In this paper, we present the first framework for verifying wait-freedom of concurrent programs written in a higher-order language with general references. Our approach is based on the Lawyer concurrent separation logic which has been recently introduced for termination verification. We identify a specification pattern in the Lawyer logic that captures wait-freedom. To establish this connection formally, we prove a novel adequacy theorem for Lawyer which states that programs which are proven correct in the Lawyer logic against a specification in the aforementioned specification pattern are wait-free. Proving wait-freedom requires to show that all calls made to operations by any arbitrary client terminate. Thus, as a part of proving the adequacy theorem above, we need to prove that the behavior of the client of the data structure is safe in the sense that it does not break the internal invariants of the data structure, e.g., by directly manipulating the data structure’s internal state. To this end, we develop a logical relations model that establishes safety for all clients once and for all. We demonstrate the effectiveness of our approach by proving wait-freedom for several representative examples, including a higher-order list map function, and a memory-efficient single-producer, single-consumer queue. For the latter, wait-freedom is conditional in that, as the name suggests, there can be at most one enqueuer thread and one dequeuer thread. To capture this formally, we introduce the notion of restricted wait-freedom as a variant of wait-freedom that restricts the number of concurrent threads, and show how our approach can support reasoning about restricted wait-freedom. All our results have been mechanized on top of the Rocq Prover and using the Iris separation logic framework that Lawyer is also based on.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="pdf-url"><a class="helia-link helia-external" href="https://drops.dagstuhl.de/storage/00lipics/lipics-vol372-ecoop2026/LIPIcs.ECOOP.2026.20/LIPIcs.ECOOP.2026.20.pdf">PDF</a></span> · <span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.4230/lipics.ecoop.2026.20">DOI</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/conf/ecoop/NamakonovBT26">pldb</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="stepanenko-2025-context" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="stepanenko-2025-context"><span class="helia-title">Context-Dependent Effects and Concurrency in Guarded Interaction Trees</span>&nbsp;<a class="helia-slug" href="stepanenko-2025-context.html">stepanenko-2025-context</a><span class="helia-byline"><span class="helia-entry-link" data-entry="arxiv">arXiv</span> · 2025</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="stepanenko-2025-context" data-kind="reference">
+<div class="helia-abstract">Guarded Interaction Trees are a structure and a fully formalized framework for representing higher-order computations with higher-order effects in Rocq. We present an extension of Guarded Interaction Trees to support formal reasoning about context-dependent effects. That is, effects whose behaviors depend on the evaluation context, e.g., call/cc, shift and reset. Using and reasoning about such effects is challenging since certain compositionality principles no longer hold in the presence of such effects. For example, the so-called “bind rule” in modern program logics is no longer valid. The goal of our extension is to support representation and reasoning about context-dependent effects in the most painless way possible. To that end, our extension is conservative: the reasoning principles for context-independent effects remain the same. We use it to give direct-style denotational semantics for higher-order programming languages with call/cc and with delimited continuations. We extend the program logic for Guarded Interaction Trees to account for context-dependent effects, and we use the program logic to prove that the denotational semantics is adequate with respect to the operational semantics. Additionally, we retain the ability to combine multiple effects in a modular way, which we demonstrate by showing type soundness for safe interoperability of a programming language with delimited continuations and a programming language with higher-order store. Furthermore, as another contribution, in addition to context-dependent effects, we show how to extend Guarded Interaction Trees with preemptive concurrency. To support implementation and verification of concurrent data structures and algorithms in the presence of preemptive concurrency one requires atomic state modification operations, e.g., compare-and-exchange.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/2512.11577">arXiv</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="alnormathiasen-2025-reasoning" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="alnormathiasen-2025-reasoning"><span class="helia-title">Reasoning about Weak Isolation Levels in Separation Logic</span>&nbsp;<a class="helia-slug" href="alnormathiasen-2025-reasoning.html">alnormathiasen-2025-reasoning</a><span class="helia-byline"><span class="helia-entry-link" data-entry="icfp">ICFP</span> · 2025</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="alnormathiasen-2025-reasoning" data-kind="reference">
+<div class="helia-abstract">Consistency guarantees among concurrently executing transactions in local- and distributed systems, commonly referred to as isolation levels, have been formalized in a number of models. Thus far, no model can reason about executable implementations of databases or local transaction libraries providing weak isolation levels. Weak isolation levels are characterized by being highly concurrent and, unlike their stronger counter part serializability, they are not equivalent to the consistency guarantees provided by a transaction library implemented using a global lock. Industrial-strength databases almost exclusively implement weak isolation levels as their default level. This calls for formalism as numerous bugs violating isolation have been detected in these databases. In this paper, we formalize three weak isolation levels in separation logic, namely read uncommitted, read committed, and snapshot isolation. We define modular separation logic specifications that are independent of the underlying transaction library implementation. Historically, isolation levels have been specified using examples of executions between concurrent transactions that are not allowed to occur, and we demonstrate that our specifications correctly prohibit such examples. To show that our specifications are realizable, we formally verify that an executable implementation of a key-value database running the multi-version concurrency control algorithm from the original snapshot isolation paper satisfies our specification of snapshot isolation. Moreover, we prove implications between the specifications—snapshot isolation implies read committed and read committed implies read uncommitted—and thus the verification effort of the database serves as proof that all of our specifications are realizable. All results are mechanized in the Rocq proof assistant on top of the Iris separation logic framework.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="pdf-url"><a class="helia-link helia-external" href="https://dl.acm.org/doi/pdf/10.1145/3747515">PDF</a></span> · <span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/3747515">DOI</a></span> · <span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/2501.14421">arXiv</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/journals/pacmpl/MathiasenGDTB25">pldb</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="li-2025-modular" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="li-2025-modular"><span class="helia-title">Modular Reasoning about Error Bounds for Concurrent Probabilistic Programs</span>&nbsp;<a class="helia-slug" href="li-2025-modular.html">li-2025-modular</a><span class="helia-byline"><span class="helia-entry-link" data-entry="icfp">ICFP</span> · 2025</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="li-2025-modular" data-kind="reference">
+<div class="helia-abstract">We present Coneris, the first higher-order concurrent separation logic for reasoning about error probability bounds of higher-order concurrent probabilistic programs with higher-order state. To support modular reasoning about concurrent (non-probabilistic) program modules, state-of-the-art program logics internalize the classic notion of linearizability within the logic through the concept of logical atomicity . In Coneris, we extend this idea to probabilistic concurrent program modules by capturing a novel notion of randomized logical atomicity within the logic. To do so, Coneris utilizes presampling tapes and a novel probabilistic update modality to describe how state is changed probabilistically at linearization points. We demonstrate this approach by means of smaller synthetic examples and larger case studies. All of the presented results, including the meta-theory, have been mechanized in the Rocq prover and the Iris separation logic framework.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="pdf-url"><a class="helia-link helia-external" href="https://dl.acm.org/doi/pdf/10.1145/3747514">PDF</a></span> · <span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/3747514">DOI</a></span> · <span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/2503.04512">arXiv</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/journals/pacmpl/Li0GHTB25">pldb</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="simner-2025-precise" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="simner-2025-precise"><span class="helia-title">Precise exceptions in relaxed architectures</span>&nbsp;<a class="helia-slug" href="simner-2025-precise.html">simner-2025-precise</a><span class="helia-byline"><span class="helia-entry-link" data-entry="isca">ISCA</span> · 2025</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="simner-2025-precise" data-kind="reference">
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/3695053.3731102">DOI</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="dvir-2025-a" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="dvir-2025-a"><span class="helia-title">A Brookes-Style Denotational Semantics for Release/Acquire Concurrency</span>&nbsp;<a class="helia-slug" href="dvir-2025-a.html">dvir-2025-a</a><span class="helia-byline"><span class="helia-entry-link" data-entry="toplas">TOPLAS</span> · 2025</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="dvir-2025-a" data-kind="reference">
+<div class="helia-abstract">We present a compositional denotational semantics for a functional language with first-class parallel composition and shared-memory operations whose operational semantics follows the Release/Acquire weak memory model (RA). The semantics is formulated in Moggi’s monadic approach and is based on Brookes-style traces. To do so we adapt Brookes’s traces to view-based machine for RA by Kang et al., and supplement Brookes’s mumble and stutter closure operations with additional operations, specific to RA. The latter provides a more nuanced understanding of traces that uncouples them from operational interrupted executions. We show that our denotational semantics is adequate and use it to validate various program transformations of interest. This is the first work to put weak memory models on the same footing as many other programming effects in Moggi’s standard monadic approach.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/3715096">DOI</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/journals/toplas/DvirKL25">pldb</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="dvir-2025-two" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="dvir-2025-two"><span class="helia-title">Two-sorted algebraic decompositions of Brookes’s shared-state denotational semantics</span>&nbsp;<a class="helia-slug" href="dvir-2025-two.html">dvir-2025-two</a><span class="helia-byline"><span class="helia-entry-link" data-entry="fossacs">FoSSaCS</span> · 2025</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="dvir-2025-two" data-kind="reference">
+<div class="helia-abstract">We define a two sorted equational theory of algebraic effects that models concurrent shared state with preemptive interleaving, recovering Brookes’s seminal 1996 trace-based model precisely. The decomposition allows us to analyse Brookes’s model algebraically in terms of separate but interacting components. The multiple sorts partition terms into layers. We use two sorts: a “hold” sort for layers that disallow interleaving of environment memory accesses, analogous to holding a global lock on the memory; and a “cede” sort for the opposite. The algebraic signature comprises of independent interlocking components: two new operators that switch between these sorts, delimiting the atomic layers, thought of as acquiring and releasing the global lock; non-deterministic choice; and state-accessing operators. The axioms similarly divide cleanly: the delimiters behave as a closure pair; all operators are strict, and distribute over non-empty non-deterministic choice; and non-deterministic global state obeys Plotkin and Power’s presentation of global state. Our representation theorem expresses the free algebras over a two-sorted family of variables as sets of traces with suitable closure conditions. When the held sort has no variables, we recover Brookes’s trace semantics. We define several other single-and two-sorted theories to elucidate the connection to Brookes’s model via translation embeddings and equivalences.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-031-90897-2_18">DOI</a></span> · <span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/2501.15104">arXiv</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="zilberstein-2025-denotational" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="zilberstein-2025-denotational"><span class="helia-title">Denotational Semantics for Probabilistic and Concurrent Programs</span>&nbsp;<a class="helia-slug" href="zilberstein-2025-denotational.html">zilberstein-2025-denotational</a><span class="helia-byline"><span class="helia-entry-link" data-entry="concur">CONCUR</span> · 2025</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="zilberstein-2025-denotational" data-kind="reference">
+<div class="helia-abstract">We develop a denotational model for probabilistic and concurrent imperative programs, a class of programs with standard control flow via conditionals and while-loops, as well as probabilistic actions and parallel composition. Whereas semantics for concurrent or randomized programs in isolation is well studied, their combination has not been thoroughly explored and presents unique challenges. The crux of the problem is that interactions between control flow, probabilistic actions, and concurrent execution cannot be captured by straightforward generalizations of prior work on pomsets and convex languages, prominent models for those effects, individually. Our model has good domain theoretic properties, important for semantics of unbounded loops. We also prove two adequacy theorems, showing that the model subsumes typical powerdomain semantics for concurrency and convex powerdomain semantics for probabilistic nondeterminism.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.4230/lipics.concur.2025.39">DOI</a></span> · <span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/2503.02768">arXiv</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="timany-2024-trillium" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="timany-2024-trillium"><span class="helia-title">Trillium: Higher-Order Concurrent and Distributed Separation Logic for Intensional Refinement</span>&nbsp;<a class="helia-slug" href="timany-2024-trillium.html">timany-2024-trillium</a><span class="helia-byline"><span class="helia-entry-link" data-entry="popl">POPL</span> · 2024</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="timany-2024-trillium" data-kind="reference">
+<div class="helia-abstract">Expressive state-of-the-art separation logics rely on step-indexing to model semantically complex features and to support modular reasoning about imperative higher-order concurrent and distributed programs. Stepindexing comes, however, with an inherent cost: it restricts the adequacy theorem of program logics to a fairly simple class of safety properties. In this paper, we explore if and how intensional refinement is a viable methodology for strengthening higher-order concurrent (and distributed) separation logic to prove non-trivial safety and liveness properties. Specifically, we introduce Trillium, a language-agnostic separation logic framework for showing intensional refinement relations between traces of a program and a model. We instantiate Trillium with a concurrent language and develop Fairis, a concurrent separation logic, that we use to show liveness properties of concurrent programs under fair scheduling assumptions through a fair liveness-preserving refinement of a model. We also instantiate Trillium with a distributed language and obtain an extension of Aneris, a distributed separation logic, which we use to show refinement relations between distributed systems and TLA + models.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="pdf-url"><a class="helia-link helia-external" href="https://dl.acm.org/doi/pdf/10.1145/3632851">PDF</a></span> · <span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/3632851">DOI</a></span> · <span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/2109.07863">arXiv</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/journals/pacmpl/TimanyGSHGNB24">pldb</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="dvir-2024-a" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="dvir-2024-a"><span class="helia-title">A Denotational Approach to Release/Acquire Concurrency</span>&nbsp;<a class="helia-slug" href="dvir-2024-a.html">dvir-2024-a</a><span class="helia-byline"><span class="helia-entry-link" data-entry="esop">ESOP</span> · 2024</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="dvir-2024-a" data-kind="reference">
+<div class="helia-abstract">We present a compositional denotational semantics for a functional language with first-class parallel composition and shared-memory operations whose operational semantics follows the Release/Acquire weak memory model (RA). The semantics is formulated in Moggi’s monadic approach, and is based on Brookes-style traces. To do so we adapt Brookes’s traces to Kang et al.’s view-based machine for RA, and supplement Brookes’s mumble and stutter closure operations with additional operations, specific to RA. The latter provides a more nuanced understanding of traces that uncouples them from operational interrupted executions. We show that our denotational semantics is adequate and use it to validate various program transformations of interest. This is the first work to put weak memory models on the same footing as many other programming effects in Moggi’s standard monadic approach.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="pdf-url"><a class="helia-link helia-external" href="https://link.springer.com/content/pdf/10.1007/978-3-031-57267-8_5.pdf">PDF</a></span> · <span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-031-57267-8_5">DOI</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/conf/esop/DvirKL24">pldb</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="hance-2023-leaf" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="hance-2023-leaf"><span class="helia-title">Leaf: Modularity for Temporary Sharing in Separation Logic</span>&nbsp;<a class="helia-slug" href="hance-2023-leaf.html">hance-2023-leaf</a><span class="helia-byline"><span class="helia-entry-link" data-entry="oopsla">OOPSLA</span> · 2023</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="hance-2023-leaf" data-kind="reference">
+<div class="helia-abstract">In concurrent verification, separation logic provides a strong story for handling both resources that are owned exclusively and resources that are shared persistently (i.e., forever). However, the situation is more complicated for temporarily shared state, where state might be shared and then later reclaimed as exclusive. We believe that a framework for temporarily-shared state should meet two key goals not adequately met by existing techniques. One, it should allow and encourage users to verify new sharing strategies. Two, it should provide an abstraction where users manipulate shared state in a way agnostic to the means with which it is shared. We present Leaf, a library in the Iris separation logic which accomplishes both of these goals by introducing a novel operator, which we call guarding, that allows one proposition to represent a shared version of another. We demonstrate that Leaf meets these two goals through a modular case study: we verify a reader-writer lock that supports shared state, and a hash table built on top of it that uses shared state.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="pdf-url"><a class="helia-link helia-external" href="https://dl.acm.org/doi/pdf/10.1145/3622798">PDF</a></span> · <span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/3622798">DOI</a></span> · <span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/2309.04851">arXiv</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/journals/pacmpl/HanceHPP23">pldb</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="lorch-2022-armada" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="lorch-2022-armada"><span class="helia-title">Armada: Automated Verification of Concurrent Code with Sound Semantic Extensibility</span>&nbsp;<a class="helia-slug" href="lorch-2022-armada.html">lorch-2022-armada</a><span class="helia-byline"><span class="helia-entry-link" data-entry="toplas">TOPLAS</span> · 2022</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="lorch-2022-armada" data-kind="reference">
+<div class="helia-abstract">Safely writing high-performance concurrent programs is notoriously difficult. To aid developers, we introduce Armada, a language and tool designed to formally verify such programs with relatively little effort. Via a C-like language and a small-step, state-machine-based semantics, Armadagives developers the flexibility to choose arbitrary memory layout and synchronization primitives so that they are never constrained in their pursuit of performance. To reduce developer effort, Armadaleverages SMT-powered automation and a library of powerful reasoning techniques, including rely-guarantee, TSO elimination, reduction, and pointer analysis. All of these techniques are proven sound, and Armadacan be soundly extended with additional strategies over time. Using Armada, we verify five concurrent case studies and show that we can achieve performance equivalent to that of unverified code.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="pdf-url"><a class="helia-link helia-external" href="https://dl.acm.org/doi/pdf/10.1145/3502491">PDF</a></span> · <span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/3502491">DOI</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/journals/toplas/LorchCKMPQSWZ22">pldb</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="gaher_etal_simuliris_2022" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="gaher_etal_simuliris_2022"><span class="helia-title">Simuliris: A Separation Logic Framework for Verifying Concurrent Program Optimizations</span>&nbsp;<a class="helia-slug" href="gaher_etal_simuliris_2022.html">gaher_etal_simuliris_2022</a><span class="helia-byline"><span class="helia-entry-link" data-entry="popl">POPL</span> · 2022</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="gaher_etal_simuliris_2022" data-kind="reference">
+<div class="helia-abstract">
+<p>Today’s compilers employ a variety of non-trivial optimizations to achieve good performance. One key trick compilers use to justify transformations of concurrent programs is to assume that the source program has no data races: if it does, they cause the program to have undefined behavior (UB) and give the compiler free rein. However, verifying correctness of optimizations that exploit this assumption is a non-trivial problem. In particular, prior work either has not proven that such optimizations preserve program termination (particularly non-obvious when considering optimizations that move instructions out of loop bodies), or has treated all synchronization operations as external functions (losing the ability to reorder instructions around them).</p>
+<p>In this work we present Simuliris, the first simulation technique to establish termination preservation (under a fair scheduler) for a range of concurrent program transformations that exploit UB in the source language. Simuliris is based on the idea of using ownership to reason modularly about the assumptions the compiler makes about programs with well-defined behavior. This brings the benefits of concurrent separation logics to the space of verifying program transformations: we can combine powerful reasoning techniques such as framing and coinduction to perform thread-local proofs of non-trivial concurrent program optimizations. Simuliris is built on a (non-step-indexed) variant of the Coq-based Iris framework, and is thus not tied to a particular language. In addition to demonstrating the effectiveness of Simuliris on standard compiler optimizations involving data race UB, we also instantiate it with Jung et al.’s Stacked Borrows semantics for Rust and generalize their proofs of interesting type-based aliasing optimizations to account for concurrency.</p>
+</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="pdf-url"><a class="helia-link helia-external" href="https://dl.acm.org/doi/pdf/10.1145/3498689">PDF</a></span> · <span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/3498689">DOI</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/journals/pacmpl/GaherSSJDKKD22">pldb</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="dvir-2022-an" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="dvir-2022-an"><span class="helia-title">An Algebraic Theory for Shared-State Concurrency</span>&nbsp;<a class="helia-slug" href="dvir-2022-an.html">dvir-2022-an</a><span class="helia-byline"><span class="helia-entry-link" data-entry="aplas">APLAS</span> · 2022</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="dvir-2022-an" data-kind="reference">
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-031-21037-2_1">DOI</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/conf/aplas/DvirKL22">pldb</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="frumin_krebbers_birkedal_reloc_2021" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="frumin_krebbers_birkedal_reloc_2021"><span class="helia-title">ReLoC Reloaded: A Mechanized Relational Logic for Fine-Grained Concurrency and Logical Atomicity</span>&nbsp;<a class="helia-slug" href="frumin_krebbers_birkedal_reloc_2021.html">frumin_krebbers_birkedal_reloc_2021</a><span class="helia-byline"><span class="helia-entry-link" data-entry="lmcs">LMCS</span> · 2021</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="frumin_krebbers_birkedal_reloc_2021" data-kind="reference">
+<div class="helia-abstract">We present a new version of ReLoC: a relational separation logic for proving refinements of programs with higher-order state, fine-grained concurrency, polymorphism and recursive types. The core of ReLoC is its refinement judgment <span class="helia-math helia-math-inline helia-mathml"><math><mi>𝑒</mi><mo>≾</mo><mrow><mi>𝑒</mi><mo lspace="0em" rspace="0em">′</mo></mrow><mo lspace="0.2777777777777778em" rspace="0.2777777777777778em">:</mo><mi>𝜏</mi></math></span>, which states that a program <span class="helia-math helia-math-inline helia-mathml"><math><mi>𝑒</mi></math></span> refines a program <span class="helia-math helia-math-inline helia-mathml"><math><mrow><mi>𝑒</mi><mo lspace="0em" rspace="0em">′</mo></mrow></math></span> at type <span class="helia-math helia-math-inline helia-mathml"><math><mi>𝜏</mi></math></span>. ReLoC provides type-directed structural rules and symbolic execution rules in separation-logic style for manipulating the judgment, whereas in prior work on refinements for languages with higher-order state and concurrency, such proofs were carried out by unfolding the judgment into its definition in the model. ReLoC’s abstract proof rules make it simpler to carry out refinement proofs, and enable us to generalize the notion of logically atomic specifications to the relational case, which we call logically atomic relational specifications. We build ReLoC on top of the Iris framework for separation logic in Coq, allowing us to leverage features of Iris to prove soundness of ReLoC, and to carry out refinement proofs in ReLoC. We implement tactics for interactive proofs in ReLoC, allowing us to mechanize several case studies in Coq, and thereby demonstrate the practicality of ReLoC. ReLoC Reloaded extends ReLoC (LICS’18) with various technical improvements, a new Coq mechanization, and support for Iris’s prophecy variables. The latter allows us to carry out refinement proofs that involve reasoning about the program’s future. We also expand ReLoC’s notion of logically atomic relational specifications with a new flavor based on the HOCAP pattern by Svendsen et al.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.46298/lmcs-17(3:9)2021">DOI</a></span> · <span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/2006.13635">arXiv</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="lorch-2020-armada" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="lorch-2020-armada"><span class="helia-title">Armada: low-effort verification of high-performance concurrent programs</span>&nbsp;<a class="helia-slug" href="lorch-2020-armada.html">lorch-2020-armada</a><span class="helia-byline"><span class="helia-entry-link" data-entry="pldi">PLDI</span> · 2020</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="lorch-2020-armada" data-kind="reference">
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="pdf-url"><a class="helia-link helia-external" href="https://dl.acm.org/doi/pdf/10.1145/3385412.3385971">PDF</a></span> · <span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/3385412.3385971">DOI</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/conf/pldi/LorchCKPQSWZ20">pldb</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="jung_etal_iris_ground_up_2018" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="jung_etal_iris_ground_up_2018"><span class="helia-title">Iris from the ground up: A modular foundation for higher-order concurrent separation logic</span>&nbsp;<a class="helia-slug" href="jung_etal_iris_ground_up_2018.html">jung_etal_iris_ground_up_2018</a><span class="helia-byline"><span class="helia-entry-link" data-entry="jfp">JFP</span> · 2018</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="jung_etal_iris_ground_up_2018" data-kind="reference">
+<div class="helia-abstract">Iris is a framework for higher-order concurrent separation logic, which has been implemented in the Coq proof assistant and deployed very effectively in a wide variety of verification projects. Iris was designed with the express goal of simplifying and consolidating the foundations of modern separation logics, but it has evolved over time, and the design and semantic foundations of Iris itself have yet to be fully written down and explained together properly in one place. Here, we attempt to fill this gap, presenting a reasonably complete picture of the latest version of Iris (version 3.1), from first principles and in one coherent narrative.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="pdf-url"><a class="helia-link helia-external" href="https://www.cambridge.org/core/services/aop-cambridge-core/content/view/26301B518CE2C52796BFA12B8BAB5B5F/S0956796818000151a.pdf/div-class-title-iris-from-the-ground-up-a-modular-foundation-for-higher-order-concurrent-separation-logic-div.pdf">PDF</a></span> · <span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1017/s0956796818000151">DOI</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/journals/jfp/JungKJBBD18">pldb</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="tassarotti_jung_harper_2017" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="tassarotti_jung_harper_2017"><span class="helia-title">A Higher-Order Logic for Concurrent Termination-Preserving Refinement</span>&nbsp;<a class="helia-slug" href="tassarotti_jung_harper_2017.html">tassarotti_jung_harper_2017</a><span class="helia-byline"><span class="helia-entry-link" data-entry="esop">ESOP</span> · 2017</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="tassarotti_jung_harper_2017" data-kind="reference">
+<div class="helia-abstract">Compiler correctness proofs for higher-order concurrent languages are difficult: they involve establishing a termination-preserving refinement between a concurrent high-level source language and an implementation that uses low-level shared memory primitives. However, existing logics for proving concurrent refinement either neglect properties such as termination, or only handle first-order state. In this paper, we address these limitations by extending Iris, a recent higher-order concurrent separation logic, with support for reasoning about termination-preserving refinements. To demonstrate the power of these extensions, we prove the correctness of an efficient implementation of a higher-order, session-typed language. To our knowledge, this is the first program logic capable of giving a compiler correctness proof for such a language. The soundness of our extensions and our compiler correctness proof have been mechanized in Coq.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/1701.05888">arXiv</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/conf/esop/TassarottiJ017">pldb</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="jung_higher-order_2016" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="jung_higher-order_2016"><span class="helia-title">Higher-order ghost state</span>&nbsp;<a class="helia-slug" href="jung_higher-order_2016.html">jung_higher-order_2016</a><span class="helia-byline"><span class="helia-entry-link" data-entry="icfp">ICFP</span> · 2016</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="jung_higher-order_2016" data-kind="reference">
+<div class="helia-abstract">The development of concurrent separation logic (CSL) has sparked a long line of work on modular verification of sophisticated concurrent programs. Two of the most important features supported by several existing extensions to CSL are higher-order quantification and custom ghost state. However, none of the logics that support both of these features reap the full potential of their combination. In particular, none of them provide general support for a feature we dub “higher-order ghost state”: the ability to store arbitrary higher-order separation-logic predicates in ghost variables. In this paper, we propose higher-order ghost state as a interesting and useful extension to CSL, which we formalize in the framework of Jung et al.‘s recently developed Iris logic. To justify its soundness, we develop a novel algebraic structure called CMRAs (“cameras”), which can be thought of as “step-indexed partial commutative monoids”. Finally, we show that Iris proofs utilizing higher-order ghost state can be effectively formalized in Coq, and discuss the challenges we faced in formalizing them.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="pdf-url"><a class="helia-link helia-external" href="https://hdl.handle.net/21.11116/0000-0008-EAF5-C">PDF</a></span> · <span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/2951913.2951943">DOI</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/conf/icfp/0002KBD16">pldb</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="xie-2015-high" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="xie-2015-high"><span class="helia-title">High-performance ACID via modular concurrency control</span>&nbsp;<a class="helia-slug" href="xie-2015-high.html">xie-2015-high</a><span class="helia-byline"><span class="helia-entry-link" data-entry="sosp">SOSP</span> · 2015</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="xie-2015-high" data-kind="reference">
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/2815400.2815430">DOI</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="jung-2015-iris" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="jung-2015-iris"><span class="helia-title">Iris: Monoids and Invariants as an Orthogonal Basis for Concurrent Reasoning</span>&nbsp;<a class="helia-slug" href="jung-2015-iris.html">jung-2015-iris</a><span class="helia-byline"><span class="helia-entry-link" data-entry="popl">POPL</span> · 2015</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="jung-2015-iris" data-kind="reference">
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="pdf-url"><a class="helia-link helia-external" href="https://dl.acm.org/doi/pdf/10.1145/2676726.2676980">PDF</a></span> · <span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/2676726.2676980">DOI</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/conf/popl/JungSSSTBD15">pldb</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="hoare2009concurrent" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="hoare2009concurrent"><span class="helia-title">Concurrent Kleene Algebra</span>&nbsp;<a class="helia-slug" href="hoare2009concurrent.html">hoare2009concurrent</a><span class="helia-byline"><span class="helia-entry-link" data-entry="concur">CONCUR</span> · 2009</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="hoare2009concurrent" data-kind="reference">
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-642-04081-8_27">DOI</a></span></div>
+</div>
+</div>
+</details>
+</section>
+</div>
+</details>
+</section>
+</div>
+</article>
+<div class="helia-identity"><span class="helia-id">tag-concurrency</span> <span class="helia-kind">tag</span></div>
+</div>
+</body>
+</html>

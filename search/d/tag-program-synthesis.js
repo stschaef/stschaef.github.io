@@ -1,0 +1,1 @@
+heliaSearchData("d/tag-program-synthesis",{"id":"tag-program-synthesis","title":"program-synthesis","kind":"tag","tags":[],"authors":[],"venue":[],"date":null,"url":"tag-program-synthesis.html","headings":[],"body":""});

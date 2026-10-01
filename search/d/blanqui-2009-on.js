@@ -1,0 +1,1 @@
+heliaSearchData("d/blanqui-2009-on",{"id":"blanqui-2009-on","title":"On the Relation between Sized-Types Based Termination and Semantic Labelling","kind":"reference","tags":[],"authors":["Cody Roux","Frédéric Blanqui"],"venue":["CSL","Computer Science Logic (EACSL Annual Conference)"],"date":null,"url":"blanqui-2009-on.html","headings":[],"body":""});

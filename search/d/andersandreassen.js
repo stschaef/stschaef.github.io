@@ -1,0 +1,1 @@
+heliaSearchData("d/andersandreassen",{"id":"andersandreassen","title":"Anders Andreassen","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"andersandreassen.html","headings":[],"body":""});

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>A Dependently Typed Language with Dynamic Equality</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Ctext y=%22.9em%22 font-size=%2290%22%3E%F0%9F%8C%BB%3C/text%3E%3C/svg%3E">
+<meta name="generator" content="helia">
+<link rel="alternate" type="application/atom+xml" title="Steven Schaefer" href="feed.xml">
+<link rel="alternate" type="application/feed+json" title="Steven Schaefer" href="feed.json">
+<script src="helia/theme-version.js"></script>
+<script src="theme/folio-early.js"></script>
+<link rel="stylesheet" href="helia/theme.css">
+<link rel="stylesheet" href="helia/highlight.css">
+<link rel="stylesheet" href="helia/search.css">
+<link rel="stylesheet" href="theme/katex.css">
+<link rel="stylesheet" href="theme/recipe.css">
+<link rel="stylesheet" href="theme/site.css">
+<link rel="stylesheet" href="theme/folio.css">
+<script defer src="helia/runtime.js"></script>
+<script defer src="helia/search.js"></script>
+<script defer src="theme/glyphcraft.js"></script>
+<script defer src="theme/glyphart.js"></script>
+<script defer src="theme/glyphgen.js"></script>
+<script defer src="theme/ornament.js"></script>
+<script defer src="theme/folio.js"></script>
+<script defer src="theme/portrait.js"></script>
+<script type="application/json" id="helia-widgets">{"helia-cite-formats":"widgets/helia-cite-formats-a3294ac7.js"}</script>
+<link rel="modulepreload" href="widgets/helia-cite-formats-a3294ac7.js">
+<script type="module" src="widgets/runtime.js"></script>
+</head>
+<body>
+<nav class="helia-topbar"><a class="helia-home" href="home.html">Steven Schaefer</a><ul class="helia-nav-links"><li><a href="stevenschaefer.html">About Me</a></li><li><a href="research.html">Research</a></li><li><a href="new.html">New</a></li></ul><button type="button" class="helia-search-button" aria-label="Search (/ or Ctrl+K)" aria-haspopup="dialog"><span class="helia-search-icon">⌕</span><span class="helia-search-label">Search</span><kbd class="helia-search-key">/</kbd></button></nav>
+<div class="helia-page" data-kind="reference">
+<article class="helia-article">
+<header class="helia-header" data-entry="lemay-2023-a" data-kind="reference">
+<h2 class="helia-heading"><span class="helia-taxon">Reference.</span> A Dependently Typed Language with Dynamic Equality</h2>
+<div class="helia-meta"><span class="helia-author"><a class="helia-entry-link" href="marklemay.html" data-entry="marklemay">Mark Lemay</a>, <a class="helia-entry-link" href="qianchengfu.html" data-entry="qianchengfu">Qiancheng Fu</a>, <a class="helia-entry-link" href="williamblair.html" data-entry="williamblair">William Blair</a>, <a class="helia-entry-link" href="chengzhang.html" data-entry="chengzhang">Cheng Zhang</a>, <a class="helia-entry-link" href="hongweixi.html" data-entry="hongweixi">Hongwei Xi</a></span> · <span class="helia-byline"><a class="helia-entry-link" href="tyde.html" data-entry="tyde">TyDe</a> · 2023</span> · <span class="helia-tags"><span class="helia-tag" data-tag="type-theory"><a class="helia-entry-link" href="tag-type-theory.html" data-entry="tag-type-theory">type-theory</a></span></span> · <span class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/3609027.3609407">DOI</a></span></span></div>
+</header>
+<div class="helia-body">
+</div>
+<div class="helia-cite helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><h3 class="helia-heading">Cite</h3>
+</summary>
+<div class="helia-group-body">
+<div class="helia-widget" data-widget="helia-cite-formats" data-props="{&quot;key&quot;:&quot;lemay-2023-a&quot;,&quot;bibtex&quot;:&quot;@inproceedings{lemay-2023-a, series={TyDe ’23}, title={A Dependently Typed Language with Dynamic Equality}, url={http://dx.doi.org/10.1145/3609027.3609407}, DOI={10.1145/3609027.3609407}, booktitle={Proceedings of the 8th ACM SIGPLAN International Workshop on Type-Driven Development}, publisher={ACM}, author={Lemay, Mark and Fu, Qiancheng and Blair, William and Zhang, Cheng and Xi, Hongwei}, year={2023}, month=Aug, pages={44–57} }&quot;,&quot;bib-file&quot;:&quot;lemay-2023-a.bib&quot;,&quot;hayagriva&quot;:&quot;lemay-2023-a:\n  type: article\n  title: A Dependently Typed Language with Dynamic Equality\n  author:\n  - Lemay, Mark\n  - Fu, Qiancheng\n  - Blair, William\n  - Zhang, Cheng\n  - Xi, Hongwei\n  date: 2023-08\n  page-range: 44-57\n  url: http://dx.doi.org/10.1145/3609027.3609407\n  serial-number:\n    doi: 10.1145/3609027.3609407\n  parent:\n    type: proceedings\n    title: Proceedings of the 8th ACM SIGPLAN International Workshop on Type-Driven Development\n    publisher: ACM\n    parent:\n      type: proceedings\n      title: TyDe ’23\n&quot;,&quot;yml-file&quot;:&quot;lemay-2023-a.yml&quot;}"><div class="helia-cite-key" data-copy="@lemay-2023-a" data-copy-label="citation key"><span class="helia-bib-key">Cite as</span> <code class="helia-raw-inline">@lemay-2023-a</code> (helia, typst) · <code class="helia-raw-inline">\cite{lemay-2023-a}</code> (LaTeX)</div>
+<div class="helia-cite-format helia-collapsible" data-format="bibtex" data-copy="true" data-copy-label="BibTeX">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">BibTeX</span></summary>
+<div class="helia-group-body">
+<details class="helia-code" open><summary class="helia-code-summary"><span class="helia-code-lang">bibtex</span> · <span class="helia-code-lines">1 line</span></summary><pre class="helia-raw"><code class="language-bibtex"><span class="hl-text hl-bibtex"><span class="hl-meta hl-entry hl-braces hl-bibtex"><span class="hl-keyword hl-other hl-entry-type hl-bibtex"><span class="hl-punctuation hl-definition hl-keyword hl-bibtex">@</span>inproceedings</span><span class="hl-punctuation hl-section hl-entry hl-begin hl-bibtex">{</span><span class="hl-entity hl-name hl-type hl-entry-key hl-bibtex">lemay-2023-a</span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">series</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>TyDe ’23<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">title</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>A Dependently Typed Language with Dynamic Equality<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">url</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>http://dx.doi.org/10.1145/3609027.3609407<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">DOI</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>10.1145/3609027.3609407<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">booktitle</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>Proceedings of the 8th ACM SIGPLAN International Workshop on Type-Driven Development<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">publisher</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>ACM<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">author</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>Lemay, Mark and Fu, Qiancheng and Blair, William and Zhang, Cheng and Xi, Hongwei<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">year</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>2023<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">month</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span>Aug</span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">pages</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>44–57<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span> </span><span class="hl-punctuation hl-section hl-entry hl-end hl-bibtex">}</span></span></span></code></pre></details>
+</div>
+</details>
+</div>
+<div class="helia-cite-format helia-collapsible" data-format="hayagriva" data-copy="true" data-copy-label="hayagriva YAML">
+<details>
+<summary class="helia-group-summary"><span class="helia-group-title">hayagriva YAML (typst)</span></summary>
+<div class="helia-group-body">
+<details class="helia-code" open><summary class="helia-code-summary"><span class="helia-code-lang">yaml</span> · <span class="helia-code-lines">21 lines</span></summary><pre class="helia-raw"><code class="language-yaml"><span class="hl-source hl-yaml"><span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">lemay-2023-a</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">type</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">article</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">title</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">A Dependently Typed Language with Dynamic Equality</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">author</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Lemay, Mark</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Fu, Qiancheng</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Blair, William</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Zhang, Cheng</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Xi, Hongwei</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">date</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">2023-08</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">page-range</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">44-57</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">url</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">http://dx.doi.org/10.1145/3609027.3609407</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">serial-number</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">doi</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">10.1145/3609027.3609407</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">parent</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">type</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">proceedings</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">title</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Proceedings of the 8th ACM SIGPLAN International Workshop on Type-Driven Development</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">publisher</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">ACM</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">parent</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span>
+      <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">type</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">proceedings</span>
+      <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">title</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">TyDe ’23</span>
+</span></code></pre></details>
+</div>
+</details>
+</div>
+<div class="helia-cite-files">Download: <a class="helia-link" href="lemay-2023-a.bib">lemay-2023-a.bib</a> · <a class="helia-link" href="lemay-2023-a.yml">lemay-2023-a.yml</a></div>
+</div>
+</div>
+</details>
+</div>
+<div class="helia-reference-cites helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">Cites 37 works (2 here)</span></summary>
+<div class="helia-group-body">
+<div class="helia-reference-cites-here helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">With notes (2)</span></summary>
+<div class="helia-group-body">
+<section class="helia-transclusion" data-entry="dunfield-2021-bidirectional" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="dunfield-2021-bidirectional"><span class="helia-title">Bidirectional Typing</span>&nbsp;<a class="helia-slug" href="dunfield-2021-bidirectional.html">dunfield-2021-bidirectional</a><span class="helia-byline"><span class="helia-entry-link" data-entry="acm-computing-surveys">ACM Computing Surveys</span> · 2021</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="dunfield-2021-bidirectional" data-kind="reference">
+<div class="helia-abstract">Bidirectional typing combines two modes of typing: type checking, which checks that a program satisfies a known type, and type synthesis, which determines a type from the program. Using checking enables bidirectional typing to support features for which inference is undecidable; using synthesis enables bidirectional typing to avoid the large annotation burden of explicitly typed languages. In addition, bidirectional typing improves error locality. We highlight the design principles that underlie bidirectional type systems, survey the development of bidirectional typing from the prehistoric period before Pierce and Turner’s local type inference to the present day, and provide guidance for future investigations.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/3450952">DOI</a></span> · <span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/1908.05839">arXiv</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="mcbride-2002-elimination" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="mcbride-2002-elimination"><span class="helia-title">Elimination with a Motive</span>&nbsp;<a class="helia-slug" href="mcbride-2002-elimination.html">mcbride-2002-elimination</a><span class="helia-byline"><span class="helia-entry-link" data-entry="types">TYPES</span> · 2002</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="mcbride-2002-elimination" data-kind="reference">
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1007/3-540-45842-5_13">DOI</a></span></div>
+</div>
+</div>
+</details>
+</section>
+</div>
+</details>
+</div>
+<div class="helia-reference-cites-away helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">External (35)</span></summary>
+<div class="helia-group-body">
+<ul>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3495528">Gradualizing the Calculus of Inductive Constructions</a> (2020)</li>
+<li>Programming Language Foundations in Agda (2020)</li>
+<li>λdB: Blame tracking at higher fidelity (2020)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3341692">Approximate normalization for gradual dependent types</a> (2019)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3110283">Theorems for free for free: parametricity, with and without types</a> (2017)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3093333.3009856">Gradual refinement types</a> (2017)</li>
+<li><a class="helia-link helia-external" href="https://arxiv.org/abs/1610.07978">Dependent types in haskell: Theory and practice</a> (2016)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/2837614.2837670">Abstracting gradual typing</a> (2016)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-319-22102-1_24">Autosubst: Reasoning with de Bruijn Terms and Parallel Substitutions</a> (2015)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.4230/lipics.snapl.2015.274">Refined Criteria for Gradual Typing</a> (2015)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/2676726.2676974">Programming up to Congruence</a> (2015)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.4230/lipics.snapl.2015.309">A Complement to Blame</a> (2015)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.4204/eptcs.76.9">Irrelevance, heterogeneous equality, and call-by-value dependent type systems</a> (2012)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/2364527.2364554">Equality proofs and deferred type errors: a compiler pearl</a> (2012)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-642-12251-4_5">ΠΣ: Dependent Types without the Sugar</a> (2010)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/1707801.1706333">Dependent types and program equivalence</a> (2010)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/1667048.1667051">Hybrid type checking (TOPLAS)</a> (2010)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/1481848.1481853">Compositional reasoning and decidable checking for dependent contract types</a> (2009)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-642-00590-9_1">Well-Typed Programs Can't Be Blamed</a> (2009)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-540-73589-2_2">Gradual Typing for Objects</a> (2007)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1017/s0956796806006216">Dependent ML An approach to practical programming with dependent types</a> (2007)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/1111037.1111059">Hybrid type checking</a> (2006)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/1176617.1176755">Interlanguage migration</a> (2006)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/1-4020-8141-3_34">Dynamic Typing with Dependent Types</a> (2004)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/581478.581484">Contracts for higher-order functions</a> (2002)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/3-540-45842-5_4">An Implementation of Type: Type</a> (2000)</li>
+<li>Dependently typed functional programs and their proofs (PhD thesis) (2000)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/289423.289451">Cayenne—a language with dependent types</a> (1998)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1016/0167-6423(95)00021-6">An Algorithm for Type-Checking Dependent Types</a> (1996)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1006/inco.1994.1093">A Syntactic Approach to Type Soundness</a> (1994)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1016/0168-0072(90)90044-3">Domain Interpretations of Martin-Löf's Partial Type Theory</a> (1990)</li>
+<li>A Polymorphic λ-calculus with Type:Type (DEC SRC report) (1986)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/3-540-06859-7_148">Towards a theory of type structure</a> (1974)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1093/oso/9780198501275.003.0010">An intuitionistic theory of types</a> (1972)</li>
+<li>Towards a practical programming language based on dependent type theory. Ph. D. Dissertation. Department of Computer Science and Engineering</li>
+</ul>
+</div>
+</details>
+</div>
+</div>
+</details>
+</div>
+</article>
+<div class="helia-identity"><span class="helia-id">lemay-2023-a</span> <span class="helia-kind">reference</span> <span class="helia-path">entries/refs/lemay-2023-a/lemay-2023-a.hel</span></div>
+</div>
+</body>
+</html>

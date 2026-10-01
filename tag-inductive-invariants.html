@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>inductive-invariants</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Ctext y=%22.9em%22 font-size=%2290%22%3E%F0%9F%8C%BB%3C/text%3E%3C/svg%3E">
+<meta name="generator" content="helia">
+<link rel="alternate" type="application/atom+xml" title="Steven Schaefer" href="feed.xml">
+<link rel="alternate" type="application/feed+json" title="Steven Schaefer" href="feed.json">
+<script src="helia/theme-version.js"></script>
+<script src="theme/folio-early.js"></script>
+<link rel="stylesheet" href="helia/theme.css">
+<link rel="stylesheet" href="helia/highlight.css">
+<link rel="stylesheet" href="helia/search.css">
+<link rel="stylesheet" href="theme/katex.css">
+<link rel="stylesheet" href="theme/recipe.css">
+<link rel="stylesheet" href="theme/site.css">
+<link rel="stylesheet" href="theme/folio.css">
+<script defer src="helia/runtime.js"></script>
+<script defer src="helia/search.js"></script>
+<script defer src="theme/glyphcraft.js"></script>
+<script defer src="theme/glyphart.js"></script>
+<script defer src="theme/glyphgen.js"></script>
+<script defer src="theme/ornament.js"></script>
+<script defer src="theme/folio.js"></script>
+<script defer src="theme/portrait.js"></script>
+</head>
+<body>
+<nav class="helia-topbar"><a class="helia-home" href="home.html">Steven Schaefer</a><ul class="helia-nav-links"><li><a href="stevenschaefer.html">About Me</a></li><li><a href="research.html">Research</a></li><li><a href="new.html">New</a></li></ul><button type="button" class="helia-search-button" aria-label="Search (/ or Ctrl+K)" aria-haspopup="dialog"><span class="helia-search-icon">⌕</span><span class="helia-search-label">Search</span><kbd class="helia-search-key">/</kbd></button></nav>
+<div class="helia-page" data-kind="tag">
+<article class="helia-article">
+<header class="helia-header" data-entry="tag-inductive-invariants" data-kind="tag">
+<h2 class="helia-heading"><span class="helia-taxon">Tag.</span> inductive-invariants</h2>
+<div class="helia-meta"><span class="helia-byline"><span class="helia-tag-name">inductive-invariants</span></span></div>
+</header>
+<div class="helia-body">
+</div>
+<div class="helia-tag-group">
+<section class="helia-heading-section" data-level="1">
+<details open>
+<summary class="helia-heading-summary"><h2 class="helia-heading">Notes (1)</h2>
+</summary>
+<div class="helia-heading-body">
+<section class="helia-transclusion" data-entry="groebner-loop-invariants" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="groebner-loop-invariants"><span class="helia-title">Gröbner Bases for Inferring Polynomial Loop Invariants</span>&nbsp;<a class="helia-slug" href="groebner-loop-invariants.html">groebner-loop-invariants</a></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-entry" data-entry="groebner-loop-invariants" data-kind="note">
+<p>When the tools in <a class="helia-entry-link" href="maI4IncrementalInference2019.html" data-entry="maI4IncrementalInference2019">I4: Incremental inference of inductive invariants for verification of distributed protocols</a> and <a class="helia-entry-link" href="goelSymmetryQuantificationNew2021.html" data-entry="goelSymmetryQuantificationNew2021">On Symmetry and Quantification: A New Approach to Verify Distributed Protocols</a> search for an inductive invariant of a distributed system, the search procedure instantiates a series of small finite models and tries to infer from their truth tables a series of logical formulae that hold over those finite models. These formulae are found by running the Quine-McCluskey algorithm for minimization of Boolean functions. The prime implicants found by Quine-McCluskey have a latent symmetry that can be abstracted into quantified formulae. There are only so many small numbers, and so small finite models may propose formulae that do not hold at larger sizes. However, if you find a formula that holds at size <span class="helia-math helia-math-inline helia-mathml"><math><mi>𝑛</mi></math></span> as well as size <span class="helia-math helia-math-inline helia-mathml"><math><mi>𝑛</mi><mo>+</mo><mn>1</mn></math></span>, then it is likely a good candidate to hold at all sizes. You need to be a little careful if your protocol is indexed by several variables, but mostly this general idea holds when abstracting to a protocol of unbounded size. Further discussion of this idea can be found in <a class="helia-entry-link" href="LuoSatBasedQuantifiedSymmetric.html" data-entry="LuoSatBasedQuantifiedSymmetric">SAT-based quantified symmetric minimization of the reachable states of distributed protocols: An update</a>.</p>
+<p>My observation was that Quine-McCluskey is just a special instance of Buchberger’s algorithm for computing <a class="helia-entry-link" href="groebner-basis.html" data-entry="groebner-basis">Gröbner Bases</a>. That is, you can describe Boolean formulae as polynomials over the field with two elements, and in this translation Quine-McCluskey and Buchberger each compute the same data. This observation isn’t new in and of itself, but it does open up an opportunity to generalize the invariant search procedure that is used above.</p>
+<p>The place I went looking to apply this idea was in the search of polynomial loop invariants. If a loop had an invariant that is expressible as a polynomial relation between the program variables, then you could apply the same idea as above to infer the loop invariant.</p>
+<p>Suppose <span class="helia-math helia-math-inline helia-mathml"><math><msub><mi>𝑥</mi><mn>1</mn></msub><mo>,</mo><mi>…</mi><mo>,</mo><msub><mi>𝑥</mi><mi>𝑛</mi></msub></math></span> are the variables in scope of program <span class="helia-math helia-math-inline helia-mathml"><math><mi>𝑆</mi></math></span> and <span class="helia-math helia-math-inline helia-mathml"><math><mi>𝑆</mi></math></span> contains a loop that we want to infer an invariant for. Denote the value of <span class="helia-math helia-math-inline helia-mathml"><math><msub><mi>𝑥</mi><mi>𝑖</mi></msub></math></span> at the <span class="helia-math helia-math-inline helia-mathml"><math><mi>𝑗</mi></math></span>-th loop iteration by <span class="helia-math helia-math-inline helia-mathml"><math><msub><mi>𝑥</mi><mrow><mi>𝑖</mi><mo rspace="0em">,</mo><mi>𝑗</mi></mrow></msub></math></span>. The invariant search procedure proceeds intuitively as the following: we will keep track of the minimal set of polynomials that could interpolate between all of the variable assignments that we have witnessed thus far. Formally this is kept track of by the ideal of polynomials. At the <span class="helia-math helia-math-inline helia-mathml"><math><mi>𝑗</mi></math></span>-th loop iteration we add a new generator to the ideal which corresponds to the assignments <span class="helia-math helia-math-inline helia-mathml"><math><msub><mi>𝑥</mi><mrow><mn>1</mn><mo rspace="0em">,</mo><mi>𝑗</mi></mrow></msub><mo>,</mo><mi>…</mi><mo>,</mo><msub><mi>𝑥</mi><mrow><mi>𝑛</mi><mo rspace="0em">,</mo><mi>𝑗</mi></mrow></msub></math></span>. The Gröbner basis for this ideal provides the minimal data needed to generate all the assignments witnessed thus far, so if this process saturates then the Gröbner basis encodes a polynomial loop invariant. The nice thing about polynomials is that they have finite degree which guarantees that this process does indeed saturate (provided that the degree of the invariant is smaller than the number of loop iterations).</p>
+<p>I was so excited to find this idea. I’d felt like it was my first good idea in grad school. Then I read <a class="helia-entry-link" href="rodriguez-carbonellAutomaticGenerationPolynomial.html" data-entry="rodriguez-carbonellAutomaticGenerationPolynomial">Automatic Generation of Polynomial Loop Invariants: Algebraic Foundations</a> and found out someone had done this 20 years ago. I still wonder from time to time if there is room to further refine this idea or perhaps further generalize it. For instance, there is further generalization beyond Quine-McCluskey or Buchberger to the Knuth-Bendix algorithm, which seems to be a more general instance of both of these algorithms. So perhaps this search procedure can be weakened to an even more general class? Although, I’m not yet familiar much with the Knuth-Bendix algorithm.</p>
+</div>
+</div>
+</details>
+</section>
+</div>
+</details>
+</section>
+</div>
+<div class="helia-tag-group">
+<section class="helia-heading-section" data-level="1">
+<details open>
+<summary class="helia-heading-summary"><h2 class="helia-heading">References (16)</h2>
+</summary>
+<div class="helia-heading-body">
+<section class="helia-transclusion" data-entry="LuoSatBasedQuantifiedSymmetric" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="LuoSatBasedQuantifiedSymmetric"><span class="helia-title">SAT-based quantified symmetric minimization of the reachable states of distributed protocols: An update</span>&nbsp;<a class="helia-slug" href="LuoSatBasedQuantifiedSymmetric.html">LuoSatBasedQuantifiedSymmetric</a><span class="helia-byline"><span class="helia-entry-link" data-entry="isola">ISoLA</span> · 2024</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="LuoSatBasedQuantifiedSymmetric" data-kind="reference">
+<div class="helia-abstract">In prior work [13], we introduced a procedure for deriving minimum formulas in first-order logic (FOL) for the reachable states of a restricted class of multi-sorted distributed protocol specifications: protocols with sorts representing unbounded sets of symmetric (indistinguishable) elements. This paper provides a deeper analysis of this idea that yields additional insights about the oft-cited observation that the behavior of such protocols can be inferred from analyzing relatively small finite instances whereby a protocol’s behavior becomes invariant, i.e. saturates [24], beyond certain cutoff sizes of its sorts. The paper discusses several issues in previous work [13] and provides more succinct FOL formulas of the reachable states for a collection of common protocols.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-031-75380-0_21">DOI</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="sharmaGroveSeparationLogicLibrary2023" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="sharmaGroveSeparationLogicLibrary2023"><span class="helia-title">Grove: A Separation-Logic Library for Verifying Distributed Systems</span>&nbsp;<a class="helia-slug" href="sharmaGroveSeparationLogicLibrary2023.html">sharmaGroveSeparationLogicLibrary2023</a><span class="helia-byline"><span class="helia-entry-link" data-entry="sosp">SOSP</span> · 2023</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="sharmaGroveSeparationLogicLibrary2023" data-kind="reference">
+<div class="helia-abstract">Grove is a concurrent separation logic library for verifying distributed systems. Grove is the first to handle time-based leases, including their interaction with reconfiguration, crash recovery, thread-level concurrency, and unreliable networks. This paper uses Grove to verify several distributed system components written in Go, including vKV, a realistic distributed multi-threaded key-value store. vKV supports reconfiguration, primary/backup replication, and crash recovery, and uses leases to execute read-only requests on any replica. vKV achieves high performance (67–73% of Redis on a single core), scales with more cores and more backup replicas (achieving about 2× the throughput when going from 1 to 3 servers), and can safely execute reads while reconfiguring.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/3600006.3613172">DOI</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="goelRegularityQuantificationNew" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="goelRegularityQuantificationNew"><span class="helia-title">Regularity and Quantification: A New Approach to Verify Distributed Protocols</span>&nbsp;<a class="helia-slug" href="goelRegularityQuantificationNew.html">goelRegularityQuantificationNew</a><span class="helia-byline"><span class="helia-entry-link" data-entry="innovations-in-systems-and-software-engineering">Innovations in Systems and Software Engineering</span> · 2022</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="goelRegularityQuantificationNew" data-kind="reference">
+<div class="helia-abstract">Proving that an unbounded distributed protocol satisfies a given safety property amounts to finding a quantified inductive invariant that implies the property for all possible instance sizes of the protocol. Existing methods for solving this problem can be described as search procedures for an invariant whose quantification prefix fits a particular template. We propose an alternative constructive approach that does not prescribe, a priori, a specific quantifier prefix. Instead, the required prefix is automatically inferred without any enumerative search by carefully analyzing the spatial and temporal regularity of the protocol. The key insight underlying this approach is that structural regularity and quantification are closely related concepts that express protocol invariance under different re-arrangements of its components and its unbounded evolution over time. We extended the finite-domain IC3/PDR algorithm to use these regularities and boost clause learning to automatically derive the required quantified inductive invariant by exploiting the connection between structural regularities and quantification. We also describe a procedure to automatically find a minimal finite size, the cutoff, that yields a quantified invariant proving safety for any size. Our approach is implemented in IC3PO, a new verifier for distributed protocols that significantly outperforms the state-of-the-art, scales orders of magnitude faster, and robustly derives compact inductive invariants fully automatically.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1007/s11334-022-00460-8">DOI</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="maSiftUsingRefinementguided" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="maSiftUsingRefinementguided"><span class="helia-title">Sift: Using Refinement-guided Automation to Verify Complex Distributed Systems</span>&nbsp;<a class="helia-slug" href="maSiftUsingRefinementguided.html">maSiftUsingRefinementguided</a><span class="helia-byline"><span class="helia-entry-link" data-entry="atc">USENIX ATC</span> · 2022</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="maSiftUsingRefinementguided" data-kind="reference">
+<div class="helia-abstract">Distributed systems are hard to design and implement correctly. Recent work has tried to use formal verification techniques to provide rigorous correctness guarantees. These works present a hard choice, though. One must either opt for the power of refinement-based approaches like IronFleet and Verdi, at the cost of large amounts of manual effort; or choose the more automated approach of I4, IC3PO, SWISS and DistAI which give up the ability to prove refinement and the power and scalability that come with it.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="url"><a class="helia-link helia-external" href="https://www.usenix.org/conference/atc22/presentation/ma">Web</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="goelSymmetryQuantificationNew2021" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="goelSymmetryQuantificationNew2021"><span class="helia-title">On Symmetry and Quantification: A New Approach to Verify Distributed Protocols</span>&nbsp;<a class="helia-slug" href="goelSymmetryQuantificationNew2021.html">goelSymmetryQuantificationNew2021</a><span class="helia-byline"><span class="helia-entry-link" data-entry="nfm">NFM</span> · 2021</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="goelSymmetryQuantificationNew2021" data-kind="reference">
+<div class="helia-abstract">Proving that an unbounded distributed protocol satisfies a given safety property amounts to finding a quantified inductive invariant that implies the property for all possible instance sizes of the protocol. Existing methods for solving this problem can be described as search procedures for an invariant whose quantification prefix fits a particular template. We propose an alternative constructive approach that does not prescribe, a priori, a specific quantifier prefix. Instead, the required prefix is automatically inferred without any search by carefully analyzing the structural symmetries of the protocol. The key insight underlying this approach is that symmetry and quantification are closely related concepts that express protocol invariance under different re-arrangements of its components. We propose symmetric incremental induction, an extension of the finite-domain IC3/PDR algorithm, that automatically derives the required quantified inductive invariant by exploiting the connection between symmetry and quantification. While various attempts have been made to exploit symmetry in verification applications, to our knowledge, this is the first demonstration of a direct link between symmetry and quantification in the context of clause learning during incremental induction. We also describe a procedure to automatically find a minimal finite size, the cutoff, that yields a quantified invariant proving safety for any size. Our approach is implemented in IC3PO, a new verifier for distributed protocols that significantly outperforms the state-of-the-art, scales orders of magnitude faster, and robustly derives compact inductive invariants fully automatically.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-030-76384-8_9">DOI</a></span> · <span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/2103.14831">arXiv</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="hanceFindingInvariantsDistributed" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="hanceFindingInvariantsDistributed"><span class="helia-title">Finding Invariants of Distributed Systems: It’s a Small (Enough) World After All</span>&nbsp;<a class="helia-slug" href="hanceFindingInvariantsDistributed.html">hanceFindingInvariantsDistributed</a><span class="helia-byline"><span class="helia-entry-link" data-entry="nsdi">NSDI</span> · 2021</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="hanceFindingInvariantsDistributed" data-kind="reference">
+<div class="helia-abstract">Today’s distributed systems are increasingly complex, leading to subtle bugs that are difficult to detect with standard testing methods. Formal verification can provably rule out such bugs, but historically it has been excessively labor intensive. For distributed systems, recent work shows that, given a correct inductive invariant, nearly all other proof work can be automated; however, the construction of such invariants is still a difficult manual task. In this paper, we demonstrate a new methodology for automating the construction of inductive invariants, given as input a (formal) description of the distributed system and a desired safety condition. Our system performs an exhaustive search within a given space of candidate invariants in order to find and verify inductive invariants which suffice to prove the safety condition. Central to our ability to search efficiently is our algorithm’s ability to learn from counterexamples whenever a candidate fails to be invariant, allowing us to check the remaining candidates more efficiently. We hypothesize that many distributed systems, even complex ones, may have concise invariants that make this approach practical, and in support of this, we show that our system is able to identify and verify inductive invariants for the Paxos protocol, which proved too complex for previous work.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="url"><a class="helia-link helia-external" href="https://www.usenix.org/conference/nsdi21/presentation/hance">Web</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="yaoDistAIDataDrivenAutomated" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="yaoDistAIDataDrivenAutomated"><span class="helia-title">DistAI: Data-Driven Automated Invariant Learning for Distributed Protocols</span>&nbsp;<a class="helia-slug" href="yaoDistAIDataDrivenAutomated.html">yaoDistAIDataDrivenAutomated</a><span class="helia-byline"><span class="helia-entry-link" data-entry="osdi">OSDI</span> · 2021</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="yaoDistAIDataDrivenAutomated" data-kind="reference">
+<div class="helia-abstract">Distributed systems are notoriously hard to implement correctly due to non-determinism. Finding the inductive invariant of the distributed protocol is a critical step in verifying the correctness of distributed systems, but takes a long time to do even for simple protocols. We present DistAI, a data-driven automated system for learning inductive invariants for distributed protocols. DistAI generates data by simulating the distributed protocol at different instance sizes and recording states as samples. Based on the observation that invariants are often concise in practice, DistAI starts with small invariant formulas and enumerates all strongest possible invariants that hold for all samples. It then feeds those invariants and the desired safety properties to an SMT solver to check if the conjunction of the invariants and the safety properties is inductive. Starting with small invariant formulas and strongest possible invariants avoids large SMT queries, improving SMT solver performance. Because DistAI starts with the strongest possible invariants, if the SMT solver fails, DistAI does not need to discard failed invariants, but knows to monotonically weaken them and try again with the solver, repeating the process until it eventually succeeds. We prove that DistAI is guaranteed to find the ∃-free inductive invariant that proves the desired safety properties in finite time, if one exists. Our evaluation shows that DistAI successfully verifies 13 common distributed protocols automatically and outperforms alternative methods both in the number of protocols it verifies and the speed at which it does so, in some cases by more than two orders of magnitude.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="url"><a class="helia-link helia-external" href="https://www.usenix.org/conference/osdi21/presentation/yao">Web</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="goelAVRAbstractlyVerifying2020" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="goelAVRAbstractlyVerifying2020"><span class="helia-title">AVR: Abstractly Verifying Reachability</span>&nbsp;<a class="helia-slug" href="goelAVRAbstractlyVerifying2020.html">goelAVRAbstractlyVerifying2020</a><span class="helia-byline"><span class="helia-entry-link" data-entry="tacas">TACAS</span> · 2020</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="goelAVRAbstractlyVerifying2020" data-kind="reference">
+<div class="helia-abstract">We present AVR, a push-button model checker for verifying state transition systems directly at the source-code level. AVR uses information embedded in the word-level syntax of the design representation to automatically perform scalable model checking by combining a novel syntax-guided abstraction-refinement technique with a word-level implementation of the IC3 algorithm. AVR provides independently-verifiable certificates that offer provable assurance and are easy to relate to the word-level system. Moreover, proof certificates can be further used in innovative ways to extract key design information and are useful in a growing number of applications.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="pdf-url"><a class="helia-link helia-external" href="https://link.springer.com/content/pdf/10.1007%2F978-3-030-45190-5_23.pdf">PDF</a></span> · <span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-030-45190-5_23">DOI</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/conf/tacas/GoelS20">pldb</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="mcmillanIvyMultimodalVerification2020" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="mcmillanIvyMultimodalVerification2020"><span class="helia-title">Ivy: A Multi-modal Verification Tool for Distributed Algorithms</span>&nbsp;<a class="helia-slug" href="mcmillanIvyMultimodalVerification2020.html">mcmillanIvyMultimodalVerification2020</a><span class="helia-byline"><span class="helia-entry-link" data-entry="cav">CAV</span> · 2020</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="mcmillanIvyMultimodalVerification2020" data-kind="reference">
+<div class="helia-abstract">Ivy is a multi-modal verification tool for correct design and implementation of distributed protocols and algorithms, supporting modular specification, implementation and proof. Ivy supports proving safety and liveness properties of parameterized and infinite-state systems via three modes: deductive verification using an SMT solver, abstraction and model checking, and manual proofs using natural deduction. It supports light-weight formal methods via compositional specification-based testing and bounded model checking. Ivy can extract executable distributed programs by translation to efficient C++ code. It is designed to support decidable automated reasoning, to improve proof stability and to provide transparency in the case of proof failures. For this purpose, it presents concrete finite counterexamples, automatically audits proofs for decidability of verification conditions, and provides modular hiding of theories.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="pdf-url"><a class="helia-link helia-external" href="https://link.springer.com/content/pdf/10.1007%2F978-3-030-53291-8_12.pdf">PDF</a></span> · <span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-030-53291-8_12">DOI</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/conf/cav/McMillanP20">pldb</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="maI4IncrementalInference2019" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="maI4IncrementalInference2019"><span class="helia-title">I4: Incremental inference of inductive invariants for verification of distributed protocols</span>&nbsp;<a class="helia-slug" href="maI4IncrementalInference2019.html">maI4IncrementalInference2019</a><span class="helia-byline"><span class="helia-entry-link" data-entry="sosp">SOSP</span> · 2019</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="maI4IncrementalInference2019" data-kind="reference">
+<div class="helia-abstract">Designing and implementing distributed systems correctly is a very challenging task. Recently, formal verification has been successfully used to prove the correctness of distributed systems. At the heart of formal verification lies a computerchecked proof with an inductive invariant. Finding this inductive invariant, however, is the most difficult part of the proof. Alas, current proof techniques require inductive invariants to be found manually—and painstakingly—by the developer. In this paper, we present a new approach, Incremental Inference of Inductive Invariants (I4), to automatically generate inductive invariants for distributed protocols. The essence of our idea is simple: the inductive invariant of a finite instance of the protocol can be used to infer a general inductive invariant for the infinite distributed protocol. In I4, we create a finite instance of the protocol; use a model checking tool to automatically derive the inductive invariant for this finite instance; and generalize this invariant to an inductive invariant for the infinite protocol. Our experiments show that I4 can prove the correctness of several distributed protocols like Chord, 2PC and Transaction Chains with little to no human effort.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/3341301.3359651">DOI</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="padonDeductiveVerificationDistributed2018" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="padonDeductiveVerificationDistributed2018"><span class="helia-title">Deductive Verification of Distributed Protocols in First-Order Logic</span>&nbsp;<a class="helia-slug" href="padonDeductiveVerificationDistributed2018.html">padonDeductiveVerificationDistributed2018</a><span class="helia-byline"><span class="helia-entry-link" data-entry="fmcad">FMCAD</span> · 2018</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="padonDeductiveVerificationDistributed2018" data-kind="reference">
+<div class="helia-abstract">Formal verification of infinite-state systems, and distributed systems in particular, is a long standing research goal. In the deductive verification approach, the programmer provides inductive invariants and pre/post specifications of procedures, reducing the verification problem to checking validity of logical verification conditions. This check is often performed by automated theorem provers and SMT solvers, substantially increasing productivity in the verification of complex systems. However, the unpredictability of automated provers presents a major hurdle to usability of these tools. This problem is particularly acute in case of provers that handle undecidable logics, for example, first-order logic with quantifiers and theories such as arithmetic. The resulting extreme sensitivity to minor changes has a strong negative impact on the convergence of the overall proof effort.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.23919/fmcad.2018.8603010">DOI</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="mcmillanDeductiveVerificationDecidable2018" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="mcmillanDeductiveVerificationDecidable2018"><span class="helia-title">Deductive Verification in Decidable Fragments with Ivy</span>&nbsp;<a class="helia-slug" href="mcmillanDeductiveVerificationDecidable2018.html">mcmillanDeductiveVerificationDecidable2018</a><span class="helia-byline"><span class="helia-entry-link" data-entry="sas">SAS</span> · 2018</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="mcmillanDeductiveVerificationDecidable2018" data-kind="reference">
+<div class="helia-abstract">This paper surveys the work to date on Ivy, a language and a tool for the formal specification and verification of distributed systems. Ivy supports deductive verification using automated provers, model checking, automated testing, manual theorem proving and generation of executable code. In order to achieve greater verification productivity, a key design goal for Ivy is to allow the engineer to apply automated provers in the realm in which their performance is relatively predictable, stable and transparent. In particular Ivy focuses on the use of decidable fragments of first-order logic. We consider the rationale or Ivy’s design, the various capabilities of the tool, as well as case studies and applications.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-319-99725-4_4">DOI</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/conf/sas/McMillanP18">pldb</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="padonIvySafetyVerification" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="padonIvySafetyVerification"><span class="helia-title">Ivy: Safety verification by interactive generalization</span>&nbsp;<a class="helia-slug" href="padonIvySafetyVerification.html">padonIvySafetyVerification</a><span class="helia-byline"><span class="helia-entry-link" data-entry="pldi">PLDI</span> · 2016</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="padonIvySafetyVerification" data-kind="reference">
+<div class="helia-abstract">Despite several decades of research, the problem of formal verification of infinite-state systems has resisted effective automation. We describe a system — Ivy — for interactively verifying safety of infinite-state systems. Ivy’s key principle is that whenever verification fails, Ivy graphically displays a concrete counterexample to induction. The user then interactively guides generalization from this counterexample. This process continues until an inductive invariant is found. Ivy searches for universally quantified invariants, and uses a restricted modeling language. This ensures that all verification conditions can be checked algorithmically. All user interactions are performed using graphical models, easing the user’s task. We describe our initial experience with verifying several distributed protocols.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="pdf-url"><a class="helia-link helia-external" href="https://dl.acm.org/doi/pdf/10.1145/2908080.2908118">PDF</a></span> · <span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/2908080.2908118">DOI</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/conf/pldi/PadonMPSS16">pldb</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="padonDecidabilityInferringInductive2016" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="padonDecidabilityInferringInductive2016"><span class="helia-title">Decidability of inferring inductive invariants</span>&nbsp;<a class="helia-slug" href="padonDecidabilityInferringInductive2016.html">padonDecidabilityInferringInductive2016</a><span class="helia-byline"><span class="helia-entry-link" data-entry="popl">POPL</span> · 2016</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="padonDecidabilityInferringInductive2016" data-kind="reference">
+<div class="helia-abstract">Induction is a successful approach for verification of hardware and software systems. A common practice is to model a system using logical formulas, and then use a decision procedure to verify that some logical formula is an inductive safety invariant for the system. A key ingredient in this approach is coming up with the inductive invariant, which is known as invariant inference. This is a major difficulty, and it is often left for humans or addressed by sound but incomplete abstract interpretation. This paper is motivated by the problem of inductive invariants in shape analysis and in distributed protocols. This paper approaches the general problem of inferring first-order inductive invariants by restricting the language L of candidate invariants. Notice that the problem of invariant inference in a restricted language L differs from the safety problem, since a system may be safe and still not have any inductive invariant in L that proves safety. Clearly, if L is finite (and if testing an inductive invariant is decidable), then inferring invariants in L is decidable. This paper presents some interesting cases when inferring inductive invariants in L is decidable even when L is an infinite language of universal formulas. Decidability is obtained by restricting L and defining a suitable well-quasi-order on the state space. We also present some undecidability results that show that our restrictions are necessary. We further present a framework for systematically constructing infinite languages while keeping the invariant inference problem decidable. We illustrate our approach by showing the decidability of inferring invariants for programs manipulating linked-lists, and for distributed protocols.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="pdf-url"><a class="helia-link helia-external" href="https://dl.acm.org/doi/pdf/10.1145/2837614.2837640?download=true">PDF</a></span> · <span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/2837614.2837640">DOI</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/conf/popl/PadonISKS16">pldb</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="anderson2014netkat" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="anderson2014netkat"><span class="helia-title">NetKAT: Semantic foundations for networks</span>&nbsp;<a class="helia-slug" href="anderson2014netkat.html">anderson2014netkat</a><span class="helia-byline"><span class="helia-entry-link" data-entry="popl">POPL</span> · 2014</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="anderson2014netkat" data-kind="reference">
+<div class="helia-abstract">Recent years have seen growing interest in high-level languages for programming networks. But the design of these languages has been largely ad hoc, driven more by the needs of applications and the capabilities of network hardware than by foundational principles. The lack of a semantic foundation has left language designers with little guidance in determining how to incorporate new features, and programmers without a means to reason precisely about their code. This paper presents NetKAT, a new network programming language that is based on a solid mathematical foundation and comes equipped with a sound and complete equational theory. We describe the design of NetKAT, including primitives for filtering, modifying, and transmitting packets; union and sequential composition operators; and a Kleene star operator that iterates programs. We show that NetKAT is an instance of a canonical and well-studied mathematical structure called a Kleene algebra with tests (KAT) and prove that its equational theory is sound and complete with respect to its denotational semantics. Finally, we present practical applications of the equational theory including syntactic techniques for checking reachability, proving non-interference properties that ensure isolation between programs, and establishing the correctness of compilation algorithms.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="pdf-url"><a class="helia-link helia-external" href="https://dl.acm.org/doi/pdf/10.1145/2535838.2535862">PDF</a></span> · <span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/2535838.2535862">DOI</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/conf/popl/AndersonFGJKSW14">pldb</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="bradleySATBasedModelChecking2011" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="bradleySATBasedModelChecking2011"><span class="helia-title">SAT-Based Model Checking without Unrolling</span>&nbsp;<a class="helia-slug" href="bradleySATBasedModelChecking2011.html">bradleySATBasedModelChecking2011</a><span class="helia-byline"><span class="helia-entry-link" data-entry="vmcai">VMCAI</span> · 2011</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="bradleySATBasedModelChecking2011" data-kind="reference">
+<div class="helia-abstract">A new form of SAT-based symbolic model checking is described. Instead of unrolling the transition relation, it incrementally generates clauses that are inductive relative to (and augment) stepwise approximate reachability information. In this way, the algorithm gradually refines the property, eventually producing either an inductive strengthening of the property or a counterexample trace. Our experimental studies show that induction is a powerful tool for generalizing the unreachability of given error states: it can refine away many states at once, and it is effective at focusing the proof search on aspects of the transition system relevant to the property. Furthermore, the incremental structure of the algorithm lends itself to a parallel implementation.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-642-18275-4_7">DOI</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/conf/vmcai/Bradley11">pldb</a></span></div>
+</div>
+</div>
+</details>
+</section>
+</div>
+</details>
+</section>
+</div>
+</article>
+<div class="helia-identity"><span class="helia-id">tag-inductive-invariants</span> <span class="helia-kind">tag</span></div>
+</div>
+</body>
+</html>

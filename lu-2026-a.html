@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>A Fast Quantitative Analyzer for NetKAT</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Ctext y=%22.9em%22 font-size=%2290%22%3E%F0%9F%8C%BB%3C/text%3E%3C/svg%3E">
+<meta name="generator" content="helia">
+<link rel="alternate" type="application/atom+xml" title="Steven Schaefer" href="feed.xml">
+<link rel="alternate" type="application/feed+json" title="Steven Schaefer" href="feed.json">
+<script src="helia/theme-version.js"></script>
+<script src="theme/folio-early.js"></script>
+<link rel="stylesheet" href="helia/theme.css">
+<link rel="stylesheet" href="helia/highlight.css">
+<link rel="stylesheet" href="helia/search.css">
+<link rel="stylesheet" href="theme/katex.css">
+<link rel="stylesheet" href="theme/recipe.css">
+<link rel="stylesheet" href="theme/site.css">
+<link rel="stylesheet" href="theme/folio.css">
+<script defer src="helia/runtime.js"></script>
+<script defer src="helia/search.js"></script>
+<script defer src="theme/glyphcraft.js"></script>
+<script defer src="theme/glyphart.js"></script>
+<script defer src="theme/glyphgen.js"></script>
+<script defer src="theme/ornament.js"></script>
+<script defer src="theme/folio.js"></script>
+<script defer src="theme/portrait.js"></script>
+<script type="application/json" id="helia-widgets">{"helia-cite-formats":"widgets/helia-cite-formats-a3294ac7.js"}</script>
+<link rel="modulepreload" href="widgets/helia-cite-formats-a3294ac7.js">
+<script type="module" src="widgets/runtime.js"></script>
+</head>
+<body>
+<nav class="helia-topbar"><a class="helia-home" href="home.html">Steven Schaefer</a><ul class="helia-nav-links"><li><a href="stevenschaefer.html">About Me</a></li><li><a href="research.html">Research</a></li><li><a href="new.html">New</a></li></ul><button type="button" class="helia-search-button" aria-label="Search (/ or Ctrl+K)" aria-haspopup="dialog"><span class="helia-search-icon">⌕</span><span class="helia-search-label">Search</span><kbd class="helia-search-key">/</kbd></button></nav>
+<div class="helia-page" data-kind="reference">
+<article class="helia-article">
+<header class="helia-header" data-entry="lu-2026-a" data-kind="reference">
+<h2 class="helia-heading"><span class="helia-taxon">Reference.</span> A Fast Quantitative Analyzer for NetKAT</h2>
+<div class="helia-meta"><span class="helia-author"><a class="helia-entry-link" href="thomaslu.html" data-entry="thomaslu">Thomas Lu</a>, <a class="helia-entry-link" href="qianchengfu.html" data-entry="qianchengfu">Qiancheng Fu</a>, <a class="helia-entry-link" href="kevinbatz.html" data-entry="kevinbatz">Kevin Batz</a>, <a class="helia-entry-link" href="oliverbving.html" data-entry="oliverbving">Oliver Bøving</a>, <a class="helia-entry-link" href="tiagoferreira.html" data-entry="tiagoferreira">Tiago Ferreira</a>, <a class="helia-entry-link" href="markmoeller.html" data-entry="markmoeller">Mark Moeller</a>, <a class="helia-entry-link" href="natefoster.html" data-entry="natefoster">Nate Foster</a>, <a class="helia-entry-link" href="alexandrasilva.html" data-entry="alexandrasilva">Alexandra Silva</a></span> · <span class="helia-byline"><a class="helia-entry-link" href="arxiv.html" data-entry="arxiv">arXiv</a> · 2026</span> · <span class="helia-tags"><span class="helia-tag" data-tag="kleene-algebra"><a class="helia-entry-link" href="tag-kleene-algebra.html" data-entry="tag-kleene-algebra">kleene-algebra</a></span></span> · <span class="helia-entry-links"><span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/2607.14420">arXiv</a></span></span></div>
+</header>
+<div class="helia-body">
+<div class="helia-abstract">When designing a network, engineers must navigate trade-offs (e.g., one topology offers more aggregate bandwidth, another lower latency or better resilience) that demand reasoning about quantitative properties. We present a fast analyzer for quantitative network properties based on weighted NetKAT (wNetKAT), a domain-specific language that provides a semantic foundation for quantitative reasoning by modeling network behavior using weights drawn from a semiring. At the core of our development is the design of a symbolic data structure – weighted symbolic packet programs (wSPPs) – that compactly represent the semantics of weighted policies, for which a direct implementation would be intractable. We show how to compute all policy constructs symbolically; unsurprisingly, the crux is Kleene star, for which we design a tailored algorithm. We further develop trace-carrying Pareto semirings, which compute multi-objective frontiers together with the network paths that realize them. We formalize the development in Lean and provide an optimized Rust implementation. Being parametric on a semiring, our implementation covers both classical and quantitative analyses: we show that it is competitive with KATch, a heavily optimized Boolean-reachability verifier, and orders of magnitude faster than McNetKAT and Storm on probabilistic analyses. A case study comparing Fat-tree and Jellyfish data-center topologies shows the framework supports multi-objective design-time analysis.</div>
+</div>
+<div class="helia-cite helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><h3 class="helia-heading">Cite</h3>
+</summary>
+<div class="helia-group-body">
+<div class="helia-widget" data-widget="helia-cite-formats" data-props="{&quot;key&quot;:&quot;lu-2026-a&quot;,&quot;bibtex&quot;:&quot;@misc{lu-2026-a,\n  author = {Thomas Lu and Qiancheng Fu and Kevin Batz and Oliver Bøving and Tiago Ferreira and Mark Moeller and Nate Foster and Alexandra Silva},\n  title = {A Fast Quantitative Analyzer for NetKAT},\n  year = {2026},\n  month = {7},\n  eprint = {2607.14420},\n  archiveprefix = {arXiv}\n}&quot;,&quot;bib-file&quot;:&quot;lu-2026-a.bib&quot;,&quot;hayagriva&quot;:&quot;lu-2026-a:\n  type: misc\n  title: A Fast Quantitative Analyzer for NetKAT\n  author:\n  - Lu, Thomas\n  - Fu, Qiancheng\n  - Batz, Kevin\n  - Bøving, Oliver\n  - Ferreira, Tiago\n  - Moeller, Mark\n  - Foster, Nate\n  - Silva, Alexandra\n  date: 2026-07\n  serial-number:\n    arxiv: &#39;2607.14420&#39;\n&quot;,&quot;yml-file&quot;:&quot;lu-2026-a.yml&quot;}"><div class="helia-cite-key" data-copy="@lu-2026-a" data-copy-label="citation key"><span class="helia-bib-key">Cite as</span> <code class="helia-raw-inline">@lu-2026-a</code> (helia, typst) · <code class="helia-raw-inline">\cite{lu-2026-a}</code> (LaTeX)</div>
+<div class="helia-cite-format helia-collapsible" data-format="bibtex" data-copy="true" data-copy-label="BibTeX">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">BibTeX</span></summary>
+<div class="helia-group-body">
+<details class="helia-code" open><summary class="helia-code-summary"><span class="helia-code-lang">bibtex</span> · <span class="helia-code-lines">8 lines</span></summary><pre class="helia-raw"><code class="language-bibtex"><span class="hl-text hl-bibtex"><span class="hl-meta hl-entry hl-braces hl-bibtex"><span class="hl-keyword hl-other hl-entry-type hl-bibtex"><span class="hl-punctuation hl-definition hl-keyword hl-bibtex">@</span>misc</span><span class="hl-punctuation hl-section hl-entry hl-begin hl-bibtex">{</span><span class="hl-entity hl-name hl-type hl-entry-key hl-bibtex">lu-2026-a</span>,
+  <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">author</span> <span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span> <span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>Thomas Lu and Qiancheng Fu and Kevin Batz and Oliver Bøving and Tiago Ferreira and Mark Moeller and Nate Foster and Alexandra Silva<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>,
+  <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">title</span> <span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span> <span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>A Fast Quantitative Analyzer for NetKAT<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>,
+  <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">year</span> <span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span> <span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>2026<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>,
+  <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">month</span> <span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span> <span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>7<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>,
+  <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">eprint</span> <span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span> <span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>2607.14420<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>,
+  <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">archiveprefix</span> <span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span> <span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>arXiv<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span>
+</span><span class="hl-punctuation hl-section hl-entry hl-end hl-bibtex">}</span></span></span></code></pre></details>
+</div>
+</details>
+</div>
+<div class="helia-cite-format helia-collapsible" data-format="hayagriva" data-copy="true" data-copy-label="hayagriva YAML">
+<details>
+<summary class="helia-group-summary"><span class="helia-group-title">hayagriva YAML (typst)</span></summary>
+<div class="helia-group-body">
+<details class="helia-code" open><summary class="helia-code-summary"><span class="helia-code-lang">yaml</span> · <span class="helia-code-lines">15 lines</span></summary><pre class="helia-raw"><code class="language-yaml"><span class="hl-source hl-yaml"><span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">lu-2026-a</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">type</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">misc</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">title</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">A Fast Quantitative Analyzer for NetKAT</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">author</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Lu, Thomas</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Fu, Qiancheng</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Batz, Kevin</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Bøving, Oliver</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Ferreira, Tiago</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Moeller, Mark</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Foster, Nate</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Silva, Alexandra</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">date</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">2026-07</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">serial-number</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">arxiv</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-quoted hl-single hl-yaml"><span class="hl-punctuation hl-definition hl-string hl-begin hl-yaml">&#39;</span>2607.14420<span class="hl-punctuation hl-definition hl-string hl-end hl-yaml">&#39;</span></span>
+</span></code></pre></details>
+</div>
+</details>
+</div>
+<div class="helia-cite-files">Download: <a class="helia-link" href="lu-2026-a.bib">lu-2026-a.bib</a> · <a class="helia-link" href="lu-2026-a.yml">lu-2026-a.yml</a></div>
+</div>
+</div>
+</details>
+</div>
+<div class="helia-reference-cites helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">Cites 65 works (4 here)</span></summary>
+<div class="helia-group-body">
+<div class="helia-reference-cites-here helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">With notes (4)</span></summary>
+<div class="helia-group-body">
+<section class="helia-transclusion" data-entry="suarezacevedo-2026-weighted" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="suarezacevedo-2026-weighted"><span class="helia-title">Weighted NetKAT: A Programming Language for Quantitative Network Verification</span>&nbsp;<a class="helia-slug" href="suarezacevedo-2026-weighted.html">suarezacevedo-2026-weighted</a><span class="helia-byline"><span class="helia-entry-link" data-entry="pldi">PLDI</span> · 2026</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="suarezacevedo-2026-weighted" data-kind="reference">
+<div class="helia-abstract">We introduce weighted NetKAT, a domain-specific language for modeling and verifying quantitative quantitative network properties. The language is parametric on a semiring , enabling the treatment of a wide range of quantities in a uniform way. We provide a denotational semantics and an equivalent operational semantics, the latter based on a novel model of weighted NetKAT automata ( WNKA ) capturing the stateful behavior of our language. With WNKA , we obtain a class of generic decision procedures for reasoning about quantitative safety and reachability in a fully automatic way, even in the presence of possibly unbounded iteration. We demonstrate the applicability of our framework in a case study using Internet2’s Abilene network as the underlying topology.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="pdf-url"><a class="helia-link helia-external" href="https://dl.acm.org/doi/pdf/10.1145/3808318">PDF</a></span> · <span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/3808318">DOI</a></span> · <span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/2604.13987">arXiv</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/journals/pacmpl/AcevedoFBBFS26">pldb</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="foster-2016-probabilistic" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="foster-2016-probabilistic"><span class="helia-title">Probabilistic NetKAT</span>&nbsp;<a class="helia-slug" href="foster-2016-probabilistic.html">foster-2016-probabilistic</a><span class="helia-byline"><span class="helia-entry-link" data-entry="esop">ESOP</span> · 2016</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="foster-2016-probabilistic" data-kind="reference">
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="pdf-url"><a class="helia-link helia-external" href="http://hdl.handle.net/2066/143761">PDF</a></span> · <span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-662-49498-1_12">DOI</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/conf/esop/FosterKMR016">pldb</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="anderson2014netkat" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="anderson2014netkat"><span class="helia-title">NetKAT: Semantic foundations for networks</span>&nbsp;<a class="helia-slug" href="anderson2014netkat.html">anderson2014netkat</a><span class="helia-byline"><span class="helia-entry-link" data-entry="popl">POPL</span> · 2014</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="anderson2014netkat" data-kind="reference">
+<div class="helia-abstract">Recent years have seen growing interest in high-level languages for programming networks. But the design of these languages has been largely ad hoc, driven more by the needs of applications and the capabilities of network hardware than by foundational principles. The lack of a semantic foundation has left language designers with little guidance in determining how to incorporate new features, and programmers without a means to reason precisely about their code. This paper presents NetKAT, a new network programming language that is based on a solid mathematical foundation and comes equipped with a sound and complete equational theory. We describe the design of NetKAT, including primitives for filtering, modifying, and transmitting packets; union and sequential composition operators; and a Kleene star operator that iterates programs. We show that NetKAT is an instance of a canonical and well-studied mathematical structure called a Kleene algebra with tests (KAT) and prove that its equational theory is sound and complete with respect to its denotational semantics. Finally, we present practical applications of the equational theory including syntactic techniques for checking reachability, proving non-interference properties that ensure isolation between programs, and establishing the correctness of compilation algorithms.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="pdf-url"><a class="helia-link helia-external" href="https://dl.acm.org/doi/pdf/10.1145/2535838.2535862">PDF</a></span> · <span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/2535838.2535862">DOI</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/conf/popl/AndersonFGJKSW14">pldb</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="kozen1997kleene" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="kozen1997kleene"><span class="helia-title">Kleene algebra with tests</span>&nbsp;<a class="helia-slug" href="kozen1997kleene.html">kozen1997kleene</a><span class="helia-byline"><span class="helia-entry-link" data-entry="toplas">TOPLAS</span> · 1997</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="kozen1997kleene" data-kind="reference">
+<div class="helia-abstract">We introduce Kleene algebra with tests, an equational system for manipulating programs. We give a purely equational proof, using Kleene algebra with tests and commutativity conditions, of the following classical result: every while program can be simulated by a while program with at most one while loop. The proof illustrates the use of Kleene algebra with tests and commutativity conditions in program equivalence proofs.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="pdf-url"><a class="helia-link helia-external" href="https://dl.acm.org/doi/pdf/10.1145/256167.256195">PDF</a></span> · <span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/256167.256195">DOI</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/journals/toplas/Kozen97">pldb</a></span></div>
+</div>
+</div>
+</details>
+</section>
+</div>
+</details>
+</div>
+<div class="helia-reference-cites-away helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">External (61)</span></summary>
+<div class="helia-group-body">
+<ul>
+<li><a class="helia-link helia-external" href="https://arxiv.org/abs/2604.15261">RNG: Flat Datacenter Networks at Scale</a> (2026)</li>
+<li>KATch2: a symbolic verifier for reversible NetKAT in Rust (2025)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3651890.3672265">Alibaba HPN: A Data Center Network for Large Language Model Training</a> (2024)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3656454">KATch: A Fast Symbolic Verifier for NetKAT</a> (2024)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3603269.3604866">Lessons from the evolution of the Batfish configuration analysis tool</a> (2023)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1002/net.22174">Targeted multiobjective Dijkstra algorithm</a> (2023)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3603269.3604834">P4Testgen: An Extensible Test Oracle For P4</a> (2022)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1016/j.cor.2021.105424">An Improved Multiobjective Shortest Path Algorithm</a> (2021)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.4230/lipics.csl.2021.17">Semiring Provenance for Fixed-Point Logic</a> (2021)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.5441/002/edbt.2021.08">Provenance-Based Algorithms for Rich Queries over Graph Databases</a> (2021)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.3336/gm.55.1.12">An algebraic framework for multi-objective and robust variants of path problems</a> (2020)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/s10009-021-00633-z">The probabilistic model checker Storm</a> (2020)</li>
+<li>APKeep: Realtime Verification for Real Networks (2020)</li>
+<li>Tiramisu: Fast Multilayer Network Verification (2020)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3341302.3342094">Validating datacenters at scale</a> (2019)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-030-25543-5_14">Reachability Analysis for AWS-Based Networks</a> (2019)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3314221.3314639">Scalable verification of probabilistic networks</a> (2019)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3230543.3230561">Asynchronous convergence of policy-rich distributed bellman-ford routing protocols</a> (2018)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3230543.3230582">p4v: practical verification for programmable data planes</a> (2018)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3230543.3230548">Debugging P4 programs with vera</a> (2018)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3192366.3192400">Bayonet: probabilistic inference for networks</a> (2018)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3098822.3098834">A General Approach to Network Configuration Verification</a> (2017)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/2934872.2934876">Fast Control Plane Analysis Using an Abstract Representation</a> (2016)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/2784731.2784761">A fast compiler for NetKAT</a> (2015)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/2785956.2787508">Jupiter rising: a decade of Clos topologies and centralized control in Google's datacenter network</a> (2015)</li>
+<li>A general approach to network configuration analysis (2015)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1609/aaai.v28i1.8853">A Knowledge Compilation Map for Ordered Real-Valued Decision Diagrams</a> (2014)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.5441/002/icdt.2014.22">Circuits for Datalog Provenance</a> (2014)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1109/icnp.2013.6733614">Real-time verification of network properties using atomic predicates</a> (2013)</li>
+<li>Real Time Network Policy Checking Using Header Space Analysis (2013)</li>
+<li>VeriFlow: verifying network-wide invariants in real time (2013)</li>
+<li>Header Space Analysis: Static Checking for Networks (2012)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1016/j.laa.2011.02.055">Solving multi-metric network problems: An interplay between idempotent semiring rules</a> (2011)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1109/jsac.2011.111002">The Internet Topology Zoo</a> (2011)</li>
+<li><a class="helia-link helia-external" href="https://arxiv.org/abs/1110.1687">Jellyfish: Networking Data Centers Randomly</a> (2011)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-642-19835-9_11">Quantitative Multi-objective Verification for Probabilistic Systems</a> (2011)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-642-22110-1_47">PRISM 4.0: verification of probabilistic real-time systems</a> (2011)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-642-17511-4_19">Semiring-Induced Propositional Logic: Definition and Basic Algorithms</a> (2010)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-642-01492-5_1">Semirings and Formal Power Series</a> (2009)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-540-89982-2_73">A Soft Approach to Multi-objective Optimization</a> (2008)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-0-387-75450-5">Graphs, dioids and semirings : new models and algorithms</a> (2008)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-540-85780-8_1">Iteration semirings</a> (2008)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-540-71209-1_6">Multi-objective model checking of Markov decision processes</a> (2007)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/1265530.1265535">Provenance semirings</a> (2007)</li>
+<li>Decision Diagrams for the Computation of Semiring Valuations (2005)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.3233/fun-2007-78103">An Algebra of Pareto Points</a> (2005)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/1080091.1080094">Metarouting</a> (2005)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1016/j.tcs.2004.03.050">Inductive *-semirings</a> (2004)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.25596/jalc-2002-321">Semiring Frameworks and Algorithms for Shortest-Distance Problems</a> (2002)</li>
+<li>Network Calculus: A Theory of Deterministic Queuing Systems for the Internet (2001)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.17487/rfc2992">Analysis of an Equal-Cost Multi-Path Algorithm</a> (2000)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1023/a:1008647823331">Multi-Terminal Binary Decision Diagrams: An Efficient Data Structure for Matrix Representation</a> (1997)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1023/a:1008699807402">Algebraic decision diagrams and their applications</a> (1997)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1093/oso/9780198537625.003.0001">Domain theory</a> (1995)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1090/advsov/013/08">The Fourier transform and semirings of Pareto sets</a> (1992)</li>
+<li>Edge-valued binary decision diagrams for multi-level hierarchical verification (1992)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1016/0304-3975(91)90147-t">Automata and languages generalized to ω-continuous semirings</a> (1991)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1109/tc.1986.1676819">Graph-Based Algorithms for Boolean Function Manipulation</a> (1986)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1016/0304-3975(77)90056-1">Algebraic Structures for Transitive Closure</a> (1976)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1287/mnsc.17.11.712">Finding the K shortest loopless paths in a network</a> (1971)</li>
+<li>Automating the Analysis and Improvement of Dynamic Programming Algorithms with Applications to Natural Language Processing</li>
+</ul>
+</div>
+</details>
+</div>
+</div>
+</details>
+</div>
+</article>
+<div class="helia-identity"><span class="helia-id">lu-2026-a</span> <span class="helia-kind">reference</span> <span class="helia-path">entries/refs/lu-2026-a/lu-2026-a.hel</span></div>
+</div>
+</body>
+</html>

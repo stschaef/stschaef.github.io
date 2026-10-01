@@ -1,0 +1,1 @@
+heliaSearchData("d/chalmers-university",{"id":"chalmers-university","title":"Chalmers University","kind":"institution","tags":[],"authors":[],"venue":[],"date":null,"url":"chalmers-university.html","headings":[],"body":""});

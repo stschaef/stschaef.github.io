@@ -1,0 +1,1 @@
+heliaSearchData("d/university-of-southern-california",{"id":"university-of-southern-california","title":"University of Southern California","kind":"institution","tags":[],"authors":[],"venue":[],"date":null,"url":"university-of-southern-california.html","headings":[],"body":""});

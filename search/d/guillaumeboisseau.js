@@ -1,0 +1,1 @@
+heliaSearchData("d/guillaumeboisseau",{"id":"guillaumeboisseau","title":"Guillaume Boisseau","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"guillaumeboisseau.html","headings":[],"body":""});

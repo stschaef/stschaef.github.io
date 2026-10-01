@@ -1,0 +1,1 @@
+heliaSearchData("d/tag-implementation",{"id":"tag-implementation","title":"implementation","kind":"tag","tags":[],"authors":[],"venue":[],"date":null,"url":"tag-implementation.html","headings":[],"body":""});

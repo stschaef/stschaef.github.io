@@ -1,0 +1,1 @@
+heliaSearchData("d/edsgerwdijkstra",{"id":"edsgerwdijkstra","title":"Edsger W. Dijkstra","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"edsgerwdijkstra.html","headings":[],"body":""});

@@ -1,0 +1,1 @@
+heliaSearchData("d/college-de-france",{"id":"college-de-france","title":"Collège de France","kind":"institution","tags":[],"authors":[],"venue":[],"date":null,"url":"college-de-france.html","headings":[],"body":""});

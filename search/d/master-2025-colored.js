@@ -1,0 +1,1 @@
+heliaSearchData("d/master-2025-colored",{"id":"master-2025-colored","title":"Colored Petri Nets are Monoidal Double Functors","kind":"reference","tags":["petri-nets"],"authors":["Jade Master","Joe Moeller"],"venue":["arXiv"],"date":null,"url":"master-2025-colored.html","headings":[],"body":""});

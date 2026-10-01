@@ -1,0 +1,1 @@
+heliaSearchData("d/zhang-2023-two",{"id":"zhang-2023-two","title":"Two tricks to trivialize higher-indexed families","kind":"reference","tags":["type-theory"],"authors":["Tesla Zhang"],"venue":["arXiv"],"date":null,"url":"zhang-2023-two.html","headings":[],"body":""});

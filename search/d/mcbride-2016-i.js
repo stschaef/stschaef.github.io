@@ -1,0 +1,1 @@
+heliaSearchData("d/mcbride-2016-i",{"id":"mcbride-2016-i","title":"I Got Plenty o’ Nuttin’","kind":"reference","tags":["substructural","type-theory"],"authors":["Conor McBride"],"venue":[],"date":null,"url":"mcbride-2016-i.html","headings":[],"body":""});

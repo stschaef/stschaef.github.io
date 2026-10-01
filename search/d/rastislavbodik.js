@@ -1,0 +1,1 @@
+heliaSearchData("d/rastislavbodik",{"id":"rastislavbodik","title":"Rastislav Bodik","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"rastislavbodik.html","headings":[],"body":""});

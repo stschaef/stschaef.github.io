@@ -1,0 +1,1 @@
+heliaSearchData("d/paulettekoronkevich",{"id":"paulettekoronkevich","title":"Paulette Koronkevich","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"paulettekoronkevich.html","headings":[],"body":""});

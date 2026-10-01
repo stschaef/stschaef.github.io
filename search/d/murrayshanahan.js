@@ -1,0 +1,1 @@
+heliaSearchData("d/murrayshanahan",{"id":"murrayshanahan","title":"Murray Shanahan","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"murrayshanahan.html","headings":[],"body":""});

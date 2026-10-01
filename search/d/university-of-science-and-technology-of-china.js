@@ -1,0 +1,1 @@
+heliaSearchData("d/university-of-science-and-technology-of-china",{"id":"university-of-science-and-technology-of-china","title":"University of Science and Technology of China","kind":"institution","tags":[],"authors":[],"venue":[],"date":null,"url":"university-of-science-and-technology-of-china.html","headings":[],"body":""});

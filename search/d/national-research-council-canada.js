@@ -1,0 +1,1 @@
+heliaSearchData("d/national-research-council-canada",{"id":"national-research-council-canada","title":"National Research Council Canada","kind":"institution","tags":[],"authors":[],"venue":[],"date":null,"url":"national-research-council-canada.html","headings":[],"body":""});

@@ -1,0 +1,1 @@
+heliaSearchData("d/virgo-2025-a",{"id":"virgo-2025-a","title":"A “good regulator theorem” for embodied agents","kind":"reference","tags":[],"authors":["Manuel Baltieri","Martin Biehl","Matteo Capucci","Nathaniel Virgo"],"venue":["arXiv"],"date":null,"url":"virgo-2025-a.html","headings":[],"body":""});

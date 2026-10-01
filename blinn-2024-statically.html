@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>Statically Contextualizing Large Language Models with Typed Holes</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Ctext y=%22.9em%22 font-size=%2290%22%3E%F0%9F%8C%BB%3C/text%3E%3C/svg%3E">
+<meta name="generator" content="helia">
+<link rel="alternate" type="application/atom+xml" title="Steven Schaefer" href="feed.xml">
+<link rel="alternate" type="application/feed+json" title="Steven Schaefer" href="feed.json">
+<script src="helia/theme-version.js"></script>
+<script src="theme/folio-early.js"></script>
+<link rel="stylesheet" href="helia/theme.css">
+<link rel="stylesheet" href="helia/highlight.css">
+<link rel="stylesheet" href="helia/search.css">
+<link rel="stylesheet" href="theme/katex.css">
+<link rel="stylesheet" href="theme/recipe.css">
+<link rel="stylesheet" href="theme/site.css">
+<link rel="stylesheet" href="theme/folio.css">
+<script defer src="helia/runtime.js"></script>
+<script defer src="helia/search.js"></script>
+<script defer src="theme/glyphcraft.js"></script>
+<script defer src="theme/glyphart.js"></script>
+<script defer src="theme/glyphgen.js"></script>
+<script defer src="theme/ornament.js"></script>
+<script defer src="theme/folio.js"></script>
+<script defer src="theme/portrait.js"></script>
+<script type="application/json" id="helia-widgets">{"helia-cite-formats":"widgets/helia-cite-formats-a3294ac7.js"}</script>
+<link rel="modulepreload" href="widgets/helia-cite-formats-a3294ac7.js">
+<script type="module" src="widgets/runtime.js"></script>
+</head>
+<body>
+<nav class="helia-topbar"><a class="helia-home" href="home.html">Steven Schaefer</a><ul class="helia-nav-links"><li><a href="stevenschaefer.html">About Me</a></li><li><a href="research.html">Research</a></li><li><a href="new.html">New</a></li></ul><button type="button" class="helia-search-button" aria-label="Search (/ or Ctrl+K)" aria-haspopup="dialog"><span class="helia-search-icon">⌕</span><span class="helia-search-label">Search</span><kbd class="helia-search-key">/</kbd></button></nav>
+<div class="helia-page" data-kind="reference">
+<article class="helia-article">
+<header class="helia-header" data-entry="blinn-2024-statically" data-kind="reference">
+<h2 class="helia-heading"><span class="helia-taxon">Reference.</span> Statically Contextualizing Large Language Models with Typed Holes</h2>
+<div class="helia-meta"><span class="helia-author"><a class="helia-entry-link" href="andrewblinn.html" data-entry="andrewblinn">Andrew Blinn</a>, <a class="helia-entry-link" href="xiangli.html" data-entry="xiangli">Xiang Li</a>, <a class="helia-entry-link" href="junehyungkim.html" data-entry="junehyungkim">June Hyung Kim</a>, <a class="helia-entry-link" href="cyrusomar.html" data-entry="cyrusomar">Cyrus Omar</a></span> · <span class="helia-byline"><a class="helia-entry-link" href="oopsla.html" data-entry="oopsla">OOPSLA</a> · 2024</span> · <span class="helia-tags"><span class="helia-tag" data-tag="live-programming"><a class="helia-entry-link" href="tag-live-programming.html" data-entry="tag-live-programming">live-programming</a></span></span> · <span class="helia-entry-links"><span class="helia-entry-link" data-field="pdf-url"><a class="helia-link helia-external" href="https://arxiv.org/pdf/2409.00921">PDF</a></span> · <span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/3689728">DOI</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/journals/pacmpl/BlinnLKO24">pldb</a></span></span></div>
+</header>
+<div class="helia-body">
+<div class="helia-abstract">Large language models (LLMs) have reshaped the landscape of program synthesis. However, contemporary LLM-based code completion systems often hallucinate broken code because they lack appropriate code context, particularly when working with definitions that are neither in the training data nor near the cursor. This paper demonstrates that tighter integration with the type and binding structure of the programming language in use, as exposed by its language server, can help address this contextualization problem in a token-efficient manner. In short, we contend that AIs need IDEs, too! In particular, we integrate LLM code generation into the Hazel live program sketching environment. The Hazel Language Server is able to identify the type and typing context of the hole that the programmer is filling, with Hazel’s total syntax and type error correction ensuring that a meaningful program sketch is available whenever the developer requests a completion. This allows the system to prompt the LLM with codebase-wide contextual information that is not lexically local to the cursor, nor necessarily in the same file, but that is likely to be semantically local to the developer’s goal. Completions synthesized by the LLM are then iteratively refined via further dialog with the language server, which provides error localization and error messages. To evaluate these techniques, we introduce MVUBench, a dataset of model-view-update (MVU) web applications with accompanying unit tests that have been written from scratch to avoid data contamination, and that can easily be ported to new languages because they do not have large external library dependencies. These applications serve as challenge problems due to their extensive reliance on application-specific data structures. Through an ablation study, we examine the impact of contextualization with type definitions, function headers, and errors messages, individually and in combination. We find that contextualization with type definitions is particularly impactful. After introducing our ideas in the context of Hazel, a low-resource language, we duplicate our techniques and port MVUBench to TypeScript in order to validate the applicability of these methods to higher-resource mainstream languages. Finally, we outline ChatLSP, a conservative extension to the Language Server Protocol (LSP) that language servers can implement to expose capabilities that AI code completion systems of various designs can use to incorporate static context when generating prompts for an LLM.</div>
+</div>
+<div class="helia-cite helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><h3 class="helia-heading">Cite</h3>
+</summary>
+<div class="helia-group-body">
+<div class="helia-widget" data-widget="helia-cite-formats" data-props="{&quot;key&quot;:&quot;blinn-2024-statically&quot;,&quot;bibtex&quot;:&quot;@article{blinn-2024-statically, title={Statically Contextualizing Large Language Models with Typed Holes}, volume={8}, ISSN={2475-1421}, url={http://dx.doi.org/10.1145/3689728}, DOI={10.1145/3689728}, number={OOPSLA2}, journal={Proceedings of the ACM on Programming Languages}, publisher={Association for Computing Machinery (ACM)}, author={Blinn, Andrew and Li, Xiang and Kim, June Hyung and Omar, Cyrus}, year={2024}, month=Oct, pages={468–498} }&quot;,&quot;bib-file&quot;:&quot;blinn-2024-statically.bib&quot;,&quot;hayagriva&quot;:&quot;blinn-2024-statically:\n  type: article\n  title: Statically Contextualizing Large Language Models with Typed Holes\n  author:\n  - Blinn, Andrew\n  - Li, Xiang\n  - Kim, June Hyung\n  - Omar, Cyrus\n  date: 2024-10\n  page-range: 468-498\n  url: http://dx.doi.org/10.1145/3689728\n  serial-number:\n    doi: 10.1145/3689728\n    issn: 2475-1421\n  parent:\n    type: periodical\n    title: Proceedings of the ACM on Programming Languages\n    publisher: Association for Computing Machinery (ACM)\n    issue: OOPSLA2\n    volume: 8\n&quot;,&quot;yml-file&quot;:&quot;blinn-2024-statically.yml&quot;}"><div class="helia-cite-key" data-copy="@blinn-2024-statically" data-copy-label="citation key"><span class="helia-bib-key">Cite as</span> <code class="helia-raw-inline">@blinn-2024-statically</code> (helia, typst) · <code class="helia-raw-inline">\cite{blinn-2024-statically}</code> (LaTeX)</div>
+<div class="helia-cite-format helia-collapsible" data-format="bibtex" data-copy="true" data-copy-label="BibTeX">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">BibTeX</span></summary>
+<div class="helia-group-body">
+<details class="helia-code" open><summary class="helia-code-summary"><span class="helia-code-lang">bibtex</span> · <span class="helia-code-lines">1 line</span></summary><pre class="helia-raw"><code class="language-bibtex"><span class="hl-text hl-bibtex"><span class="hl-meta hl-entry hl-braces hl-bibtex"><span class="hl-keyword hl-other hl-entry-type hl-bibtex"><span class="hl-punctuation hl-definition hl-keyword hl-bibtex">@</span>article</span><span class="hl-punctuation hl-section hl-entry hl-begin hl-bibtex">{</span><span class="hl-entity hl-name hl-type hl-entry-key hl-bibtex">blinn-2024-statically</span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">title</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>Statically Contextualizing Large Language Models with Typed Holes<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">volume</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>8<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">ISSN</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>2475-1421<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">url</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>http://dx.doi.org/10.1145/3689728<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">DOI</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>10.1145/3689728<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">number</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>OOPSLA2<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">journal</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>Proceedings of the ACM on Programming Languages<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">publisher</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>Association for Computing Machinery (ACM)<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">author</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>Blinn, Andrew and Li, Xiang and Kim, June Hyung and Omar, Cyrus<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">year</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>2024<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">month</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span>Oct</span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">pages</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>468–498<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span> </span><span class="hl-punctuation hl-section hl-entry hl-end hl-bibtex">}</span></span></span></code></pre></details>
+</div>
+</details>
+</div>
+<div class="helia-cite-format helia-collapsible" data-format="hayagriva" data-copy="true" data-copy-label="hayagriva YAML">
+<details>
+<summary class="helia-group-summary"><span class="helia-group-title">hayagriva YAML (typst)</span></summary>
+<div class="helia-group-body">
+<details class="helia-code" open><summary class="helia-code-summary"><span class="helia-code-lang">yaml</span> · <span class="helia-code-lines">20 lines</span></summary><pre class="helia-raw"><code class="language-yaml"><span class="hl-source hl-yaml"><span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">blinn-2024-statically</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">type</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">article</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">title</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Statically Contextualizing Large Language Models with Typed Holes</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">author</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Blinn, Andrew</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Li, Xiang</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Kim, June Hyung</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Omar, Cyrus</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">date</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">2024-10</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">page-range</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">468-498</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">url</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">http://dx.doi.org/10.1145/3689728</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">serial-number</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">doi</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">10.1145/3689728</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">issn</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">2475-1421</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">parent</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">type</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">periodical</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">title</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Proceedings of the ACM on Programming Languages</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">publisher</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Association for Computing Machinery (ACM)</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">issue</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">OOPSLA2</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">volume</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-constant hl-numeric hl-integer hl-decimal hl-yaml">8</span>
+</span></code></pre></details>
+</div>
+</details>
+</div>
+<div class="helia-cite-files">Download: <a class="helia-link" href="blinn-2024-statically.bib">blinn-2024-statically.bib</a> · <a class="helia-link" href="blinn-2024-statically.yml">blinn-2024-statically.yml</a></div>
+</div>
+</div>
+</details>
+</div>
+<div class="helia-reference-cites helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">Cites 87 works (7 here)</span></summary>
+<div class="helia-group-body">
+<div class="helia-reference-cites-here helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">With notes (7)</span></summary>
+<div class="helia-group-body">
+<section class="helia-transclusion" data-entry="zhao-2024-total" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="zhao-2024-total"><span class="helia-title">Total Type Error Localization and Recovery with Holes</span>&nbsp;<a class="helia-slug" href="zhao-2024-total.html">zhao-2024-total</a><span class="helia-byline"><span class="helia-entry-link" data-entry="popl">POPL</span> · 2024</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="zhao-2024-total" data-kind="reference">
+<div class="helia-abstract">Type systems typically only define the conditions under which an expression is well-typed, leaving ill-typed expressions formally meaningless. This approach is insufficient as the basis for language servers driving modern programming environments, which are expected to recover from simultaneously localized errors and continue to provide a variety of downstream semantic services. This paper addresses this problem, contributing the first comprehensive formal account of total type error localization and recovery: the marked lambda calculus. In particular, we define a gradual type system for expressions with marked errors, which operate as non-empty holes, together with a total procedure for marking arbitrary unmarked expressions. We mechanize the metatheory of the marked lambda calculus in Agda and implement it, scaled up, as the new basis for Hazel, a full-scale live functional programming environment with, uniquely, no meaningless editor states. The marked lambda calculus is bidirectionally typed, so localization decisions are systematically predictable based on a local flow of typing information. Constraint-based type inference can bring more distant information to bear in discovering inconsistencies but this notoriously complicates error localization. We approach this problem by deploying constraint solving as a type-hole-filling layer atop this gradual bidirectionally typed core. Errors arising from inconsistent unification constraints are localized exclusively to type and expression holes, i.e., the system identifies unfillable holes using a system of traced provenances, rather than localized in an ad hoc manner to particular expressions. The user can then interactively shift these errors to particular downstream expressions by selecting from suggested partially consistent type hole fillings, which returns control back to the bidirectional system. We implement this type hole inference system in Hazel.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="pdf-url"><a class="helia-link helia-external" href="https://dl.acm.org/doi/pdf/10.1145/3632910">PDF</a></span> · <span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/3632910">DOI</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/journals/pacmpl/ZhaoMDBPO24">pldb</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="moon-2023-gradual" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="moon-2023-gradual"><span class="helia-title">Gradual Structure Editing with Obligations</span>&nbsp;<a class="helia-slug" href="moon-2023-gradual.html">moon-2023-gradual</a><span class="helia-byline"><span class="helia-entry-link" data-entry="vlhcc">VL/HCC</span> · 2023</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="moon-2023-gradual" data-kind="reference">
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1109/vl-hcc57772.2023.00016">DOI</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="yuan-2023-live" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="yuan-2023-live"><span class="helia-title">Live Pattern Matching with Typed Holes</span>&nbsp;<a class="helia-slug" href="yuan-2023-live.html">yuan-2023-live</a><span class="helia-byline"><span class="helia-entry-link" data-entry="oopsla">OOPSLA</span> · 2023</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="yuan-2023-live" data-kind="reference">
+<div class="helia-abstract">Several modern programming systems, including GHC Haskell, Agda, Idris, and Hazel, support typed holes . Assigning static and, to varying degree, dynamic meaning to programs with holes allows program editors and other tools to offer meaningful feedback and assistance throughout editing, i.e. in a live manner. Prior work, however, has considered only holes appearing in expressions and types. This paper considers, from type theoretic and logical first principles, the problem of typed pattern holes. We confront two main difficulties, (1) statically reasoning about exhaustiveness and irredundancy when patterns are not fully known, and (2) live evaluation of expressions containing both pattern and expression holes. In both cases, this requires reasoning conservatively about all possible hole fillings. We develop a typed lambda calculus, Peanut, where reasoning about exhaustiveness and redundancy is mapped to the problem of deriving first order entailments. We equip Peanut with an operational semantics in the style of Hazelnut Live that allows us to evaluate around holes in both expressions and patterns. We mechanize the metatheory of Peanut in Agda and formalize a procedure capable of deciding the necessary entailments. Finally, we scale up and implement these mechanisms within Hazel, a programming environment for a dialect of Elm that automatically inserts holes during editing to provide static and dynamic feedback to the programmer in a maximally live manner, i.e. for every possible editor state. Hazel is the first maximally live environment for a general-purpose functional language.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="pdf-url"><a class="helia-link helia-external" href="https://dl.acm.org/doi/pdf/10.1145/3586048">PDF</a></span> · <span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/3586048">DOI</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/journals/pacmpl/YuanGGPMO23">pldb</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="blinn-2022-an" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="blinn-2022-an"><span class="helia-title">An Integrative Human-Centered Architecture for Interactive Programming Assistants</span>&nbsp;<a class="helia-slug" href="blinn-2022-an.html">blinn-2022-an</a><span class="helia-byline"><span class="helia-entry-link" data-entry="vlhcc">VL/HCC</span> · 2022</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="blinn-2022-an" data-kind="reference">
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1109/vl/hcc53370.2022.9833110">DOI</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="lubin-2020-program" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="lubin-2020-program"><span class="helia-title">Program sketching with live bidirectional evaluation</span>&nbsp;<a class="helia-slug" href="lubin-2020-program.html">lubin-2020-program</a><span class="helia-byline"><span class="helia-entry-link" data-entry="icfp">ICFP</span> · 2020</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="lubin-2020-program" data-kind="reference">
+<div class="helia-abstract">We present a system called Smyth for program sketching in a typed functional language whereby the concrete evaluation of ordinary assertions gives rise to input-output examples, which are then used to guide the search to complete the holes. The key innovation, called live bidirectional evaluation, propagates examples “backward” through partially evaluated sketches. Live bidirectional evaluation enables Smyth to (a) synthesize recursive functions without trace-complete sets of examples and (b) specify and solve interdependent synthesis goals. Eliminating the trace-completeness requirement resolves a significant limitation faced by prior synthesis techniques when given partial specifications in the form of input-output examples. To assess the practical implications of our techniques, we ran several experiments on benchmarks used to evaluate Myth, a state-of-the-art example-based synthesis tool. First, given expert examples (and no partial implementations), we find that Smyth requires on average 66% of the number of expert examples required by Myth. Second, we find that Smyth is robust to randomly-generated examples, synthesizing many tasks with relatively few more random examples than those provided by an expert. Third, we create a suite of small sketching tasks by systematically employing a simple sketching strategy to the Myth benchmarks; we find that user-provided sketches in Smyth often further reduce the total specification burden (i.e. the combination of partial implementations and examples). Lastly, we find that Leon and Synquid, two state-of-the-art logic-based synthesis tools, fail to complete several tasks on which Smyth succeeds.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="pdf-url"><a class="helia-link helia-external" href="https://dl.acm.org/doi/pdf/10.1145/3408991">PDF</a></span> · <span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/3408991">DOI</a></span> · <span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/1911.00583">arXiv</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/journals/pacmpl/LubinCOC20">pldb</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="omar-2019-live" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="omar-2019-live"><span class="helia-title">Live functional programming with typed holes</span>&nbsp;<a class="helia-slug" href="omar-2019-live.html">omar-2019-live</a><span class="helia-byline"><span class="helia-entry-link" data-entry="popl">POPL</span> · 2019</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="omar-2019-live" data-kind="reference">
+<div class="helia-abstract">Live programming environments aim to provide programmers (and sometimes audiences) with continuous feedback about a program’s dynamic behavior as it is being edited. The problem is that programming languages typically assign dynamic meaning only to programs that are complete, i.e. syntactically well-formed and free of type errors. Consequently, live feedback presented to the programmer exhibits temporal or perceptive gaps. This paper confronts this “gap problem” from type-theoretic first principles by developing a dynamic semantics for incomplete functional programs, starting from the static semantics for incomplete functional programs developed in recent work on Hazelnut. We model incomplete functional programs as expressions with holes, with empty holes standing for missing expressions or types, and non-empty holes operating as membranes around static and dynamic type inconsistencies. Rather than aborting when evaluation encounters any of these holes as in some existing systems, evaluation proceeds around holes, tracking the closure around each hole instance as it flows through the remainder of the program. Editor services can use the information in these hole closures to help the programmer develop and confirm their mental model of the behavior of the complete portions of the program as they decide how to fill the remaining holes. Hole closures also enable a fill-and-resume operation that avoids the need to restart evaluation after edits that amount to hole filling. Formally, the semantics borrows machinery from both gradual type theory (which supplies the basis for handling unfilled type holes) and contextual modal type theory (which supplies a logical basis for hole closures), combining these and developing additional machinery necessary to continue evaluation past holes while maintaining type safety. We have mechanized the metatheory of the core calculus, called Hazelnut Live, using the Agda proof assistant. We have also implemented these ideas into the Hazel programming environment. The implementation inserts holes automatically, following the Hazelnut edit action calculus, to guarantee that every editor state has some (possibly incomplete) type. Taken together with this paper’s type safety property, the result is a proof-of-concept live programming environment where rich dynamic feedback is truly available without gaps, i.e. for every reachable editor state.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="pdf-url"><a class="helia-link helia-external" href="https://dl.acm.org/doi/pdf/10.1145/3290327">PDF</a></span> · <span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/3290327">DOI</a></span> · <span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/1805.00155">arXiv</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/journals/pacmpl/OmarVCH19">pldb</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="omar-2017-hazelnut" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="omar-2017-hazelnut"><span class="helia-title">Hazelnut: a bidirectionally typed structure editor calculus</span>&nbsp;<a class="helia-slug" href="omar-2017-hazelnut.html">omar-2017-hazelnut</a><span class="helia-byline"><span class="helia-entry-link" data-entry="popl">POPL</span> · 2017</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="omar-2017-hazelnut" data-kind="reference">
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="pdf-url"><a class="helia-link helia-external" href="http://dl.acm.org/ft_gateway.cfm?id=3009900&amp;type=pdf">PDF</a></span> · <span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/3009837.3009900">DOI</a></span> · <span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/1607.04180">arXiv</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/conf/popl/OmarVHAH17">pldb</a></span></div>
+</div>
+</div>
+</details>
+</section>
+</div>
+</details>
+</div>
+<div class="helia-reference-cites-away helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">External (80)</span></summary>
+<div class="helia-group-body">
+<ul>
+<li><a class="helia-link helia-external" href="https://doi.org/10.5281/zenodo.12669479">Artifact for Statically Contextualizing Large Language Models with Typed Holes</a> (2024)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1109/icse55347.2025.00002">Towards Neural Synthesis for SMT-Assisted Proof-Oriented Programming</a> (2024)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.48550/arxiv.2212.10007">CoCoMIC: Code Completion by Jointly Modeling In-file and Cross-file Context</a> (2024)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.48550/arxiv.2402.13753">LongRoPE: Extending LLM Context Window Beyond 2 Million Tokens</a> (2024)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.48550/arxiv.2401.01701">De-Hallucinator: Iterative Grounding for LLM-Based Code Completion</a> (2024)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.48550/arxiv.2403.07974">LiveCodeBench: Holistic and Contamination Free Evaluation of Large Language Models for Code</a> (2024)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.18653/v1/2024.acl-long.818">Same Task, More Tokens: the Impact of Input Length on the Reasoning Performance of Large Language Models</a> (2024)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.18653/v1/2024.acl-long.859">LooGLE: Can Long-Context Language Models Understand Long Contexts?</a> (2024)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3643795.3648392">Enhancing LLM-Based Coding Tools through Native Integration of IDE-Derived Static Context</a> (2024)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3846180">STALL+: Boosting LLM-based Repository-level Code Completion with Static Analysis</a> (2024)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1162/tacl_a_00638">Lost in the Middle: How Language Models Use Long Contexts</a> (2024)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.48550/arxiv.2306.03091">RepoBench: Benchmarking Repository-Level Code Auto-Completion Systems</a> (2024)</li>
+<li>StarCoder 2 and The Stack v2: The Next Generation (2024)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1109/icse55347.2025.00162">The Fact Selection Problem in LLM-Based Program Repair</a> (2024)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.48550/arxiv.2402.09230">Context Composing for Full Line Code Completion</a> (2024)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1109/icse55347.2025.00014">RLCoder: Reinforcement Learning for Repository-Level Code Completion</a> (2024)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.48550/arxiv.2403.08319">Knowledge Conflicts for LLMs: A Survey</a> (2024)</li>
+<li>Hallucination is inevitable: An innate limitation of large language models (2024)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3649850">PyDex: Repairing Bugs in Introductory Python Assignments using LLMs</a> (2024)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3650212.3680384">AutoCodeRover: Autonomous Program Improvement</a> (2024)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3633453">Measuring GitHub Copilot's Impact on Productivity</a> (2024)</li>
+<li>Introducing the next generation of Claude (2024)</li>
+<li>How do you use personal data in model training? (Anthropic support article) (2024)</li>
+<li>Cursor Problems 2024 (Anysphere blog) (2024)</li>
+<li>Bing Image Creator from Designer Terms (2024)</li>
+<li>Hello GPT-4o (2024)</li>
+<li>OpenAI Platform Chat Completions (documentation) (2024)</li>
+<li>Introducing Zed AI (2024)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.52202/075280-1401">Monitor-Guided Decoding of Code LMs with Static Analysis of Repository Context</a> (2023)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3586030">Grounded Copilot: How Programmers Interact with Code-Generating Models</a> (2023)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3689735">Knowledge Transfer from High-Resource to Low-Resource Programming Languages for Code LLMs</a> (2023)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.48550/arxiv.2310.11248">CrossCodeEval: A Diverse and Multilingual Benchmark for Cross-File Code Completion</a> (2023)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1109/ase56229.2023.00109">What Makes Good In-Context Demonstrations for Code Intelligence Tasks with LLMs?</a> (2023)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.48550/arxiv.2312.10997">Retrieval-Augmented Generation for Large Language Models: A Survey</a> (2023)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1609/aaai.v37i4.25653">Better Context Makes Better Code Language Models: A Case Study on Function Call Argument Completion</a> (2023)</li>
+<li><a class="helia-link helia-external" href="https://arxiv.org/abs/2305.01210">Is your code generated by ChatGPT really correct? Rigorous evaluation of large language models for code generation</a> (2023)</li>
+<li>LLM is Like a Box of Chocolates: the Non-determinism of ChatGPT in Code Generation (2023)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1109/sp46215.2023.10179420">Examining Zero-Shot Vulnerability Repair with Large Language Models</a> (2023)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.48550/arxiv.2302.06590">The Impact of AI on Developer Productivity: Evidence from GitHub Copilot</a> (2023)</li>
+<li><a class="helia-link helia-external" href="https://arxiv.org/abs/2206.12839">Repository-level prompt generation for large language models of code</a> (2023)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1109/icse-seip58684.2023.00022">Towards More Effective AI-Assisted Programming: A Systematic Design Exploration to Improve Visual Studio IntelliCode’s User Experience</a> (2023)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3611643.3616271">Copiloting the Copilots: Fusing Large Language Models with Completion Engines for Automated Program Repair</a> (2023)</li>
+<li>Private-library-oriented code generation with large language models (2023)</li>
+<li>Siren’s song in the AI ocean: a survey on hallucination in large language models (2023)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1609/aaai.v37i4.25642">Repair Is Nearly Generation: Multilingual Program Repair with LLMs</a> (2023)</li>
+<li><a class="helia-link helia-external" href="https://arxiv.org/abs/2303.08774">GPT-4 technical report</a> (2023)</li>
+<li>Building a better repository map with tree sitter (Aider blog) (2023)</li>
+<li>Cody Context Architecture Whitepaper (2023)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3550355.3552452">Editing support for software languages</a> (2022)</li>
+<li><a class="helia-link helia-external" href="https://arxiv.org/abs/2203.15556">Training compute-optimal large language models</a> (2022)</li>
+<li><a class="helia-link helia-external" href="https://arxiv.org/abs/2201.10005">Text and Code Embeddings by Contrastive Pre-Training</a> (2022)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3524459.3527351">Can OpenAI's codex fix bugs?</a> (2022)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3491101.3519665">Expectation vs. Experience: Evaluating the Usability of Code Generation Tools Powered by Large Language Models</a> (2022)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3520312.3534862">A systematic evaluation of large language models of code</a> (2022)</li>
+<li>Emergent abilities of large language models (2022)</li>
+<li>Elm Architecture (Elm guide) (2022)</li>
+<li>The Hole Story: Type-Driven Synthesis and Repair (Licentiate thesis) (2022)</li>
+<li><a class="helia-link helia-external" href="https://arxiv.org/abs/2107.03374">Evaluating Large Language Models Trained on Code</a> (2021)</li>
+<li>Codetrek: Flexible modeling of code using an extensible relational representation (2021)</li>
+<li><a class="helia-link helia-external" href="https://arxiv.org/abs/2108.07732">Program Synthesis with Large Language Models</a> (2021)</li>
+<li>Introducing GitHub Copilot: your AI pair programmer (2021)</li>
+<li><a class="helia-link helia-external" href="https://arxiv.org/abs/2005.11401">Retrieval-augmented generation for knowledge-intensive NLP tasks</a> (2020)</li>
+<li>Pragmatic MVU With React And TypeScript (2020)</li>
+<li>Language models are unsupervised multitask learners (2019)</li>
+<li>Type holes in TypeScript (2019)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3236798">Merlin: a language server for OCaml (experience report)</a> (2018)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.4230/lipics.snapl.2017.11">Toward Semantic Foundations for Program Editors</a> (2017)</li>
+<li>Practical Foundations for Programming Languages (2nd ed.) (2016)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/2902362">On the naturalness of software</a> (2016)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/2699751">OverCode</a> (2015)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/2737924.2738007">Type-and-Example-Directed Program Synthesis</a> (2015)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.4230/lipics.snapl.2015.274">Refined Criteria for Gradual Typing</a> (2015)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/2610384.2628055">Defects4J: a database of existing faults to enable controlled testing studies for Java programs</a> (2014)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/1352582.1352591">Contextual modal type theory</a> (2008)</li>
+<li>Types and Programming Languages (2002)</li>
+<li>Photograph of World's First Computer, the Electronic Numerical Integrator and Calculator (1948)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.18653/v1/2023.emnlp-main.308">10.18653/v1/2023.emnlp-main.308</a></li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.18653/v1/2022.acl-long.431">10.18653/v1/2022.acl-long.431</a></li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.18653/v1/2023.findings-emnlp.722">10.18653/v1/2023.findings-emnlp.722</a></li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.18653/v1/2023.emnlp-main.151">10.18653/v1/2023.emnlp-main.151</a></li>
+</ul>
+</div>
+</details>
+</div>
+</div>
+</details>
+</div>
+</article>
+<div class="helia-identity"><span class="helia-id">blinn-2024-statically</span> <span class="helia-kind">reference</span> <span class="helia-path">entries/refs/blinn-2024-statically/blinn-2024-statically.hel</span></div>
+</div>
+</body>
+</html>

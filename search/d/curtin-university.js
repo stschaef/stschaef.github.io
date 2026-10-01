@@ -1,0 +1,1 @@
+heliaSearchData("d/curtin-university",{"id":"curtin-university","title":"Curtin University","kind":"institution","tags":[],"authors":[],"venue":[],"date":null,"url":"curtin-university.html","headings":[],"body":""});

@@ -1,0 +1,1 @@
+heliaSearchData("d/sieczkowski-2024-the",{"id":"sieczkowski-2024-the","title":"The Essence of Generalized Algebraic Data Types","kind":"reference","tags":[],"authors":["Filip Sieczkowski","Jon Sterling","Lars Birkedal","Sergei Stepanenko"],"venue":["POPL","Symposium on Principles of Programming Languages"],"date":null,"url":"sieczkowski-2024-the.html","headings":[],"body":""});

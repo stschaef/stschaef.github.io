@@ -1,0 +1,1 @@
+heliaSearchData("d/university-of-tubingen",{"id":"university-of-tubingen","title":"University of Tübingen","kind":"institution","tags":[],"authors":[],"venue":[],"date":null,"url":"university-of-tubingen.html","headings":[],"body":""});

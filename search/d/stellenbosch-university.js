@@ -1,0 +1,1 @@
+heliaSearchData("d/stellenbosch-university",{"id":"stellenbosch-university","title":"Stellenbosch University","kind":"institution","tags":[],"authors":[],"venue":[],"date":null,"url":"stellenbosch-university.html","headings":[],"body":""});

@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>Boundary Point Jailbreaking of Black-Box LLMs</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Ctext y=%22.9em%22 font-size=%2290%22%3E%F0%9F%8C%BB%3C/text%3E%3C/svg%3E">
+<meta name="generator" content="helia">
+<link rel="alternate" type="application/atom+xml" title="Steven Schaefer" href="feed.xml">
+<link rel="alternate" type="application/feed+json" title="Steven Schaefer" href="feed.json">
+<script src="helia/theme-version.js"></script>
+<script src="theme/folio-early.js"></script>
+<link rel="stylesheet" href="helia/theme.css">
+<link rel="stylesheet" href="helia/highlight.css">
+<link rel="stylesheet" href="helia/search.css">
+<link rel="stylesheet" href="theme/katex.css">
+<link rel="stylesheet" href="theme/recipe.css">
+<link rel="stylesheet" href="theme/site.css">
+<link rel="stylesheet" href="theme/folio.css">
+<script defer src="helia/runtime.js"></script>
+<script defer src="helia/search.js"></script>
+<script defer src="theme/glyphcraft.js"></script>
+<script defer src="theme/glyphart.js"></script>
+<script defer src="theme/glyphgen.js"></script>
+<script defer src="theme/ornament.js"></script>
+<script defer src="theme/folio.js"></script>
+<script defer src="theme/portrait.js"></script>
+<script type="application/json" id="helia-widgets">{"helia-cite-formats":"widgets/helia-cite-formats-a3294ac7.js"}</script>
+<link rel="modulepreload" href="widgets/helia-cite-formats-a3294ac7.js">
+<script type="module" src="widgets/runtime.js"></script>
+</head>
+<body>
+<nav class="helia-topbar"><a class="helia-home" href="home.html">Steven Schaefer</a><ul class="helia-nav-links"><li><a href="stevenschaefer.html">About Me</a></li><li><a href="research.html">Research</a></li><li><a href="new.html">New</a></li></ul><button type="button" class="helia-search-button" aria-label="Search (/ or Ctrl+K)" aria-haspopup="dialog"><span class="helia-search-icon">⌕</span><span class="helia-search-label">Search</span><kbd class="helia-search-key">/</kbd></button></nav>
+<div class="helia-page" data-kind="reference">
+<article class="helia-article">
+<header class="helia-header" data-entry="davies-2026-boundary" data-kind="reference">
+<h2 class="helia-heading"><span class="helia-taxon">Reference.</span> Boundary Point Jailbreaking of Black-Box LLMs</h2>
+<div class="helia-meta"><span class="helia-author"><a class="helia-entry-link" href="xanderdavies.html" data-entry="xanderdavies">Xander Davies</a>, <a class="helia-entry-link" href="giorgigiglemiani.html" data-entry="giorgigiglemiani">Giorgi Giglemiani</a>, <a class="helia-entry-link" href="edmundlau.html" data-entry="edmundlau">Edmund Lau</a>, <a class="helia-entry-link" href="ericwinsor.html" data-entry="ericwinsor">Eric Winsor</a>, <a class="helia-entry-link" href="geoffreyirving.html" data-entry="geoffreyirving">Geoffrey Irving</a>, <a class="helia-entry-link" href="yaringal.html" data-entry="yaringal">Yarin Gal</a></span> · <span class="helia-byline"><a class="helia-entry-link" href="arxiv.html" data-entry="arxiv">arXiv</a> · 2026</span> · <span class="helia-tags"><span class="helia-tag" data-tag="ai-safety"><a class="helia-entry-link" href="tag-ai-safety.html" data-entry="tag-ai-safety">ai-safety</a></span> <span class="helia-tag" data-tag="machine-learning"><a class="helia-entry-link" href="tag-machine-learning.html" data-entry="tag-machine-learning">machine-learning</a></span></span> · <span class="helia-entry-links"><span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/2602.15001">arXiv</a></span></span></div>
+</header>
+<div class="helia-body">
+<div class="helia-abstract">Frontier LLMs are safeguarded against attempts to extract harmful information via adversarial prompts known as “jailbreaks”. Recently, defenders have developed classifier-based systems that have survived thousands of hours of human red teaming. We introduce Boundary Point Jailbreaking (BPJ), a new class of automated jailbreak attacks that evade the strongest industry-deployed safeguards. Unlike previous attacks that rely on white/grey-box assumptions (such as classifier scores or gradients) or libraries of existing jailbreaks, BPJ is fully black-box and uses only a single bit of information per query: whether or not the classifier flags the interaction. To achieve this, BPJ addresses the core difficulty in optimising attacks against robust real-world defences: evaluating whether a proposed modification to an attack is an improvement. Instead of directly trying to learn an attack for a target harmful string, BPJ converts the string into a curriculum of intermediate attack targets and then actively selects evaluation points that best detect small changes in attack strength (“boundary points”). We believe BPJ is the first fully automated attack algorithm that succeeds in developing universal jailbreaks against Constitutional Classifiers, as well as the first automated attack algorithm that succeeds against GPT-5′s input classifier without relying on human attack seeds. BPJ is difficult to defend against in individual interactions but incurs many flags during optimisation, suggesting that effective defence requires supplementing single-interaction methods with batch-level monitoring.</div>
+</div>
+<div class="helia-cite helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><h3 class="helia-heading">Cite</h3>
+</summary>
+<div class="helia-group-body">
+<div class="helia-widget" data-widget="helia-cite-formats" data-props="{&quot;key&quot;:&quot;davies-2026-boundary&quot;,&quot;bibtex&quot;:&quot;@misc{davies-2026-boundary,\n  author = {Xander Davies and Giorgi Giglemiani and Edmund Lau and Eric Winsor and Geoffrey Irving and Yarin Gal},\n  title = {Boundary Point Jailbreaking of Black-Box LLMs},\n  year = {2026},\n  month = {2},\n  eprint = {2602.15001},\n  archiveprefix = {arXiv}\n}&quot;,&quot;bib-file&quot;:&quot;davies-2026-boundary.bib&quot;,&quot;hayagriva&quot;:&quot;davies-2026-boundary:\n  type: misc\n  title: Boundary Point Jailbreaking of Black-Box LLMs\n  author:\n  - Davies, Xander\n  - Giglemiani, Giorgi\n  - Lau, Edmund\n  - Winsor, Eric\n  - Irving, Geoffrey\n  - Gal, Yarin\n  date: 2026-02\n  serial-number:\n    arxiv: &#39;2602.15001&#39;\n&quot;,&quot;yml-file&quot;:&quot;davies-2026-boundary.yml&quot;}"><div class="helia-cite-key" data-copy="@davies-2026-boundary" data-copy-label="citation key"><span class="helia-bib-key">Cite as</span> <code class="helia-raw-inline">@davies-2026-boundary</code> (helia, typst) · <code class="helia-raw-inline">\cite{davies-2026-boundary}</code> (LaTeX)</div>
+<div class="helia-cite-format helia-collapsible" data-format="bibtex" data-copy="true" data-copy-label="BibTeX">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">BibTeX</span></summary>
+<div class="helia-group-body">
+<details class="helia-code" open><summary class="helia-code-summary"><span class="helia-code-lang">bibtex</span> · <span class="helia-code-lines">8 lines</span></summary><pre class="helia-raw"><code class="language-bibtex"><span class="hl-text hl-bibtex"><span class="hl-meta hl-entry hl-braces hl-bibtex"><span class="hl-keyword hl-other hl-entry-type hl-bibtex"><span class="hl-punctuation hl-definition hl-keyword hl-bibtex">@</span>misc</span><span class="hl-punctuation hl-section hl-entry hl-begin hl-bibtex">{</span><span class="hl-entity hl-name hl-type hl-entry-key hl-bibtex">davies-2026-boundary</span>,
+  <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">author</span> <span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span> <span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>Xander Davies and Giorgi Giglemiani and Edmund Lau and Eric Winsor and Geoffrey Irving and Yarin Gal<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>,
+  <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">title</span> <span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span> <span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>Boundary Point Jailbreaking of Black-Box LLMs<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>,
+  <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">year</span> <span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span> <span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>2026<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>,
+  <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">month</span> <span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span> <span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>2<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>,
+  <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">eprint</span> <span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span> <span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>2602.15001<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>,
+  <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">archiveprefix</span> <span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span> <span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>arXiv<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span>
+</span><span class="hl-punctuation hl-section hl-entry hl-end hl-bibtex">}</span></span></span></code></pre></details>
+</div>
+</details>
+</div>
+<div class="helia-cite-format helia-collapsible" data-format="hayagriva" data-copy="true" data-copy-label="hayagriva YAML">
+<details>
+<summary class="helia-group-summary"><span class="helia-group-title">hayagriva YAML (typst)</span></summary>
+<div class="helia-group-body">
+<details class="helia-code" open><summary class="helia-code-summary"><span class="helia-code-lang">yaml</span> · <span class="helia-code-lines">13 lines</span></summary><pre class="helia-raw"><code class="language-yaml"><span class="hl-source hl-yaml"><span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">davies-2026-boundary</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">type</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">misc</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">title</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Boundary Point Jailbreaking of Black-Box LLMs</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">author</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Davies, Xander</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Giglemiani, Giorgi</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Lau, Edmund</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Winsor, Eric</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Irving, Geoffrey</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Gal, Yarin</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">date</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">2026-02</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">serial-number</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">arxiv</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-quoted hl-single hl-yaml"><span class="hl-punctuation hl-definition hl-string hl-begin hl-yaml">&#39;</span>2602.15001<span class="hl-punctuation hl-definition hl-string hl-end hl-yaml">&#39;</span></span>
+</span></code></pre></details>
+</div>
+</details>
+</div>
+<div class="helia-cite-files">Download: <a class="helia-link" href="davies-2026-boundary.bib">davies-2026-boundary.bib</a> · <a class="helia-link" href="davies-2026-boundary.yml">davies-2026-boundary.yml</a></div>
+</div>
+</div>
+</details>
+</div>
+<div class="helia-reference-cites helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">Cites 40 works (0 here)</span></summary>
+<div class="helia-group-body">
+<div class="helia-reference-cites-away helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">External (40)</span></summary>
+<div class="helia-group-body">
+<ul>
+<li><a class="helia-link helia-external" href="https://doi.org/10.48550/arxiv.2601.04603">Constitutional Classifiers++: Efficient Production-Grade Defenses against Universal Jailbreaks</a> (2026)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.48550/arxiv.2510.16794">Black-box Optimization of LLM Outputs by Asking for Directions</a> (2025)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.48550/arxiv.2506.24068">STACK: Adversarial Attacks on LLM Safeguard Pipelines</a> (2025)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.48550/arxiv.2506.12880">Universal Jailbreak Suffixes Are Strong Attention Hijackers</a> (2025)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.48550/arxiv.2501.18837">Constitutional Classifiers: Defending against Universal Jailbreaks across Thousands of Hours of Red Teaming</a> (2025)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.18653/v1/2025.naacl-long.302">Stronger Universal and Transferable Attacks by Suppressing Refusals</a> (2025)</li>
+<li>Introducing GPT-4.1 in the API (2025)</li>
+<li>From bugs to bypasses: Adapting vulnerability disclosure for AI safeguards (2025)</li>
+<li>Prompt injection is not SQL injection (it may be worse) (2025)</li>
+<li>Automatically jailbreaking frontier language models with investigator agents (2025)</li>
+<li><a class="helia-link helia-external" href="https://arxiv.org/abs/2510.09023">The attacker moves second: Stronger adaptive attacks bypass defenses against LLM jailbreaks and prompt injections</a> (2025)</li>
+<li>Strengthening our safeguards through collaboration with US CAISI and UK AISI (Anthropic) (2025)</li>
+<li>Constitutional classifiers: Defending against universal jailbreaks (Anthropic research post) (2025)</li>
+<li>Working with US CAISI and UK AISI to build more secure AI systems (OpenAI) (2025)</li>
+<li>GPT-5 System Card (2025)</li>
+<li><a class="helia-link helia-external" href="https://arxiv.org/abs/2507.20526">Security challenges in AI agent deployment: Insights from a large scale public competition</a> (2025)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.48550/arxiv.2404.02151">Jailbreaking Leading Safety-Aligned LLMs with Simple Adaptive Attacks</a> (2024)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.48550/arxiv.2402.15570">Fast Adversarial Attacks on Language Models In One GPU Minute</a> (2024)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.48550/arxiv.2402.04249">HarmBench: A Standardized Evaluation Framework for Automated Red Teaming and Robust Refusal</a> (2024)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.48550/arxiv.2402.01806">HQA-Attack: Toward High Quality Black-Box Hard-Label Adversarial Attack on Text</a> (2024)</li>
+<li>Expanding our model safety bug bounty program (2024)</li>
+<li><a class="helia-link helia-external" href="https://arxiv.org/abs/2308.03825">"Do Anything Now": Characterizing and evaluating in-the-wild jailbreak prompts on large language models</a> (2024)</li>
+<li><a class="helia-link helia-external" href="https://arxiv.org/abs/2402.12329">Query-based adversarial prompt generation</a> (2024)</li>
+<li><a class="helia-link helia-external" href="https://arxiv.org/abs/2412.03556">Best-of-N jailbreaking</a> (2024)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.48550/arxiv.2312.02119">Tree of Attacks: Jailbreaking Black-Box LLMs Automatically</a> (2023)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1109/satml64287.2025.00010">Jailbreaking Black Box Large Language Models in Twenty Queries</a> (2023)</li>
+<li><a class="helia-link helia-external" href="https://arxiv.org/abs/2307.15043">Universal and Transferable Adversarial Attacks on Aligned Language Models</a> (2023)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3534678.3539357">LeapAttack: Hard-Label Adversarial Attack on Text via Gradient-Based Optimization</a> (2022)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1109/sp40000.2020.00045">HopSkipJumpAttack: A Query-Efficient Decision-Based Attack</a> (2019)</li>
+<li><a class="helia-link helia-external" href="https://arxiv.org/abs/1807.04457">Query-Efficient Hard-label Black-box Attack: An Optimization-based Approach</a> (2018)</li>
+<li><a class="helia-link helia-external" href="https://arxiv.org/abs/1712.04248">Decision-Based Adversarial Attacks: Reliable Attacks Against Black-Box Machine Learning Models</a> (2017)</li>
+<li><a class="helia-link helia-external" href="https://arxiv.org/abs/1611.02770">Delving into Transferable Adversarial Examples and Black-box Attacks</a> (2016)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/1553374.1553380">Curriculum learning</a> (2009)</li>
+<li>Active Learning Literature Survey (2009)</li>
+<li>Numerical Continuation Methods for Dynamical Systems: Path following and boundary value problems (2007)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/130385.130417">Query by committee</a> (1992)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1287/mnsc.38.6.884">Some Guidelines and Guarantees for Common Random Numbers</a> (1992)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.7551/mitpress/1090.001.0001">Adaptation in Natural and Artificial Systems: An Introductory Analysis with Applications to Biology, Control, and Artificial Intelligence</a> (1992)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-642-61257-2">Numerical Continuation Methods: An Introduction</a> (1990)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1038/227520a0">Selection and Covariance</a> (1970)</li>
+</ul>
+</div>
+</details>
+</div>
+</div>
+</details>
+</div>
+<footer class="helia-footer">
+<div class="helia-related helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><h3 class="helia-heading">Related</h3>
+</summary>
+<div class="helia-group-body">
+<ul>
+<li><a class="helia-entry-link" href="andriushchenko-2024-agentharm.html" data-entry="andriushchenko-2024-agentharm">AgentHarm: A Benchmark for Measuring Harmfulness of LLM Agents</a> <span class="helia-related-tags"><a class="helia-entry-link" href="tag-ai-safety.html" data-entry="tag-ai-safety">#ai-safety</a> <a class="helia-entry-link" href="tag-machine-learning.html" data-entry="tag-machine-learning">#machine-learning</a></span></li>
+<li><a class="helia-entry-link" href="barrett-2023-identifying.html" data-entry="barrett-2023-identifying">Identifying and Mitigating the Security Risks of Generative AI</a> <span class="helia-related-tags"><a class="helia-entry-link" href="tag-ai-safety.html" data-entry="tag-ai-safety">#ai-safety</a> <a class="helia-entry-link" href="tag-machine-learning.html" data-entry="tag-machine-learning">#machine-learning</a></span></li>
+<li><a class="helia-entry-link" href="davies-2025-fundamental.html" data-entry="davies-2025-fundamental">Fundamental Limitations in Pointwise Defences of LLM Finetuning APIs</a> <span class="helia-related-tags"><a class="helia-entry-link" href="tag-ai-safety.html" data-entry="tag-ai-safety">#ai-safety</a> <a class="helia-entry-link" href="tag-machine-learning.html" data-entry="tag-machine-learning">#machine-learning</a></span></li>
+<li><a class="helia-entry-link" href="dziemian-2026-how.html" data-entry="dziemian-2026-how">How Vulnerable Are AI Agents to Indirect Prompt Injections? Insights from a Large-Scale Public Competition</a> <span class="helia-related-tags"><a class="helia-entry-link" href="tag-ai-safety.html" data-entry="tag-ai-safety">#ai-safety</a> <a class="helia-entry-link" href="tag-machine-learning.html" data-entry="tag-machine-learning">#machine-learning</a></span></li>
+</ul>
+</div>
+</details>
+</div>
+</footer>
+</article>
+<div class="helia-identity"><span class="helia-id">davies-2026-boundary</span> <span class="helia-kind">reference</span> <span class="helia-path">entries/refs/davies-2026-boundary/davies-2026-boundary.hel</span></div>
+</div>
+</body>
+</html>

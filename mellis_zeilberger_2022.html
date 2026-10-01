@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>Parsing as a lifting problem and the Chomsky-Schützenberger representation theorem</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Ctext y=%22.9em%22 font-size=%2290%22%3E%F0%9F%8C%BB%3C/text%3E%3C/svg%3E">
+<meta name="generator" content="helia">
+<link rel="alternate" type="application/atom+xml" title="Steven Schaefer" href="feed.xml">
+<link rel="alternate" type="application/feed+json" title="Steven Schaefer" href="feed.json">
+<script src="helia/theme-version.js"></script>
+<script src="theme/folio-early.js"></script>
+<link rel="stylesheet" href="helia/theme.css">
+<link rel="stylesheet" href="helia/highlight.css">
+<link rel="stylesheet" href="helia/search.css">
+<link rel="stylesheet" href="theme/katex.css">
+<link rel="stylesheet" href="theme/recipe.css">
+<link rel="stylesheet" href="theme/site.css">
+<link rel="stylesheet" href="theme/folio.css">
+<script defer src="helia/runtime.js"></script>
+<script defer src="helia/search.js"></script>
+<script defer src="theme/glyphcraft.js"></script>
+<script defer src="theme/glyphart.js"></script>
+<script defer src="theme/glyphgen.js"></script>
+<script defer src="theme/ornament.js"></script>
+<script defer src="theme/folio.js"></script>
+<script defer src="theme/portrait.js"></script>
+<script type="application/json" id="helia-widgets">{"helia-cite-formats":"widgets/helia-cite-formats-a3294ac7.js"}</script>
+<link rel="modulepreload" href="widgets/helia-cite-formats-a3294ac7.js">
+<script type="module" src="widgets/runtime.js"></script>
+</head>
+<body>
+<nav class="helia-topbar"><a class="helia-home" href="home.html">Steven Schaefer</a><ul class="helia-nav-links"><li><a href="stevenschaefer.html">About Me</a></li><li><a href="research.html">Research</a></li><li><a href="new.html">New</a></li></ul><button type="button" class="helia-search-button" aria-label="Search (/ or Ctrl+K)" aria-haspopup="dialog"><span class="helia-search-icon">⌕</span><span class="helia-search-label">Search</span><kbd class="helia-search-key">/</kbd></button></nav>
+<div class="helia-page" data-kind="reference">
+<article class="helia-article">
+<header class="helia-header" data-entry="mellis_zeilberger_2022" data-kind="reference">
+<h2 class="helia-heading"><span class="helia-taxon">Reference.</span> Parsing as a lifting problem and the Chomsky-Schützenberger representation theorem</h2>
+<div class="helia-meta"><span class="helia-author"><a class="helia-entry-link" href="paulandremellies.html" data-entry="paulandremellies">Paul-André Melliès</a>, <a class="helia-entry-link" href="noamzeilberger.html" data-entry="noamzeilberger">Noam Zeilberger</a></span> · <span class="helia-byline"><a class="helia-entry-link" href="entcs.html" data-entry="entcs">ENTCS</a> · 2022</span> · <span class="helia-tags"><span class="helia-tag" data-tag="parsing"><a class="helia-entry-link" href="tag-parsing.html" data-entry="tag-parsing">parsing</a></span> <span class="helia-tag" data-tag="category-theory"><a class="helia-entry-link" href="tag-category-theory.html" data-entry="tag-category-theory">category-theory</a></span></span> · <span class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.46298/entics.10508">DOI</a></span> · <span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/2212.09060">arXiv</a></span></span></div>
+</header>
+<div class="helia-body">
+<div class="helia-abstract">
+<p>We begin by explaining how any context-free grammar encodes a functor of operads from a freely generated operad into a certain “operad of spliced words”. This motivates a more general notion of CFG over any category <span class="helia-math helia-math-inline helia-mathml"><math><mi>𝐶</mi></math></span>, defined as a finite species <span class="helia-math helia-math-inline helia-mathml"><math><mi>𝑆</mi></math></span> equipped with a color denoting the start symbol and a functor of operads <span class="helia-math helia-math-inline helia-mathml"><math><mi>𝑝</mi><mo lspace="0.2777777777777778em" rspace="0.2777777777777778em">:</mo><mi>𝐹</mi><mi>𝑟</mi><mi>𝑒</mi><mi>𝑒</mi><mrow><mo stretchy="false">[</mo><mi>𝑆</mi><mo stretchy="false">]</mo></mrow><mo stretchy="false">→</mo><mi>𝑊</mi><mrow><mo stretchy="false">[</mo><mi>𝐶</mi><mo stretchy="false">]</mo></mrow></math></span> into the operad of spliced arrows in <span class="helia-math helia-math-inline helia-mathml"><math><mi>𝐶</mi></math></span>. We show that many standard properties of CFGs can be formulated within this framework, and that usual closure properties of CF languages generalize to CF languages of arrows. We also discuss a dual fibrational perspective on the functor <span class="helia-math helia-math-inline helia-mathml"><math><mi>𝑝</mi></math></span> via the notion of “displayed” operad, corresponding to a lax functor of operads <span class="helia-math helia-math-inline helia-mathml"><math><mi>𝑊</mi><mrow><mo stretchy="false">[</mo><mi>𝐶</mi><mo stretchy="false">]</mo></mrow><mo stretchy="false">→</mo><mi>𝑆</mi><mi>𝑝</mi><mi>𝑎</mi><mi>𝑛</mi><mrow><mo stretchy="false">(</mo><mrow><mi>𝑆</mi><mi>𝑒</mi><mi>𝑡</mi></mrow><mo stretchy="false">)</mo></mrow></math></span>.</p>
+<p>We then turn to the Chomsky-Schützenberger Representation Theorem. We describe how a non-deterministic finite state automaton can be seen as a category <span class="helia-math helia-math-inline helia-mathml"><math><mi>𝑄</mi></math></span> equipped with a pair of objects denoting initial and accepting states and a functor of categories <span class="helia-math helia-math-inline helia-mathml"><math><mi>𝑄</mi><mo stretchy="false">→</mo><mi>𝐶</mi></math></span> satisfying the unique lifting of factorizations property and the finite fiber property. Then, we explain how to extend this notion of automaton to functors of operads, which generalize tree automata, allowing us to lift an automaton over a category to an automaton over its operad of spliced arrows. We show that every CFG over a category can be pulled back along a ND finite state automaton over the same category, and hence that CF languages are closed under intersection with regular languages. The last important ingredient is the identification of a left adjoint <span class="helia-math helia-math-inline helia-mathml"><math><mi>𝐶</mi><mrow><mo stretchy="false">[</mo><mo form="prefix">−</mo><mo stretchy="false">]</mo></mrow><mo lspace="0.2777777777777778em" rspace="0.2777777777777778em">:</mo><mi>𝑂</mi><mi>𝑝</mi><mi>𝑒</mi><mi>𝑟</mi><mi>𝑎</mi><mi>𝑑</mi><mo stretchy="false">→</mo><mi>𝐶</mi><mi>𝑎</mi><mi>𝑡</mi></math></span> to the operad of spliced arrows functor, building the “contour category” of an operad. Using this, we generalize the C-S representation theorem, proving that any context-free language of arrows over a category <span class="helia-math helia-math-inline helia-mathml"><math><mi>𝐶</mi></math></span> is the functorial image of the intersection of a <span class="helia-math helia-math-inline helia-mathml"><math><mi>𝐶</mi></math></span>-chromatic tree contour language and a regular language.</p>
+</div>
+</div>
+<div class="helia-cite helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><h3 class="helia-heading">Cite</h3>
+</summary>
+<div class="helia-group-body">
+<div class="helia-widget" data-widget="helia-cite-formats" data-props="{&quot;key&quot;:&quot;mellis_zeilberger_2022&quot;,&quot;bibtex&quot;:&quot;@article{mellis_zeilberger_2022,\n title = {Parsing as a lifting problem and the Chomsky-Schützenberger representation theorem},\n author = {Paul-André Melliès and Noam Zeilberger},\n year = {2022},\n eprint = {2212.09060},\n archiveprefix = {arXiv},\n url = {https://arxiv.org/abs/2212.09060},\n journal = {Electronic Notes in Theoretical Informatics and Computer Science},\n volume = {1},\n doi = {10.46298/entics.10508}\n}&quot;,&quot;bib-file&quot;:&quot;mellis_zeilberger_2022.bib&quot;,&quot;hayagriva&quot;:&quot;mellis_zeilberger_2022:\n  type: article\n  title: Parsing as a lifting problem and the Chomsky-Schützenberger representation theorem\n  author:\n  - Melliès, Paul-André\n  - Zeilberger, Noam\n  date: 2022\n  url: https://arxiv.org/abs/2212.09060\n  serial-number:\n    arxiv: &#39;2212.09060&#39;\n    doi: 10.46298/entics.10508\n  parent:\n    type: periodical\n    title: Electronic Notes in Theoretical Informatics and Computer Science\n    volume: 1\n&quot;,&quot;yml-file&quot;:&quot;mellis_zeilberger_2022.yml&quot;}"><div class="helia-cite-key" data-copy="@mellis_zeilberger_2022" data-copy-label="citation key"><span class="helia-bib-key">Cite as</span> <code class="helia-raw-inline">@mellis_zeilberger_2022</code> (helia, typst) · <code class="helia-raw-inline">\cite{mellis_zeilberger_2022}</code> (LaTeX)</div>
+<div class="helia-cite-format helia-collapsible" data-format="bibtex" data-copy="true" data-copy-label="BibTeX">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">BibTeX</span></summary>
+<div class="helia-group-body">
+<details class="helia-code" open><summary class="helia-code-summary"><span class="helia-code-lang">bibtex</span> · <span class="helia-code-lines">11 lines</span></summary><pre class="helia-raw"><code class="language-bibtex"><span class="hl-text hl-bibtex"><span class="hl-meta hl-entry hl-braces hl-bibtex"><span class="hl-keyword hl-other hl-entry-type hl-bibtex"><span class="hl-punctuation hl-definition hl-keyword hl-bibtex">@</span>article</span><span class="hl-punctuation hl-section hl-entry hl-begin hl-bibtex">{</span><span class="hl-entity hl-name hl-type hl-entry-key hl-bibtex">mellis_zeilberger_2022</span>,
+ <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">title</span> <span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span> <span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>Parsing as a lifting problem and the Chomsky-Schützenberger representation theorem<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>,
+ <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">author</span> <span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span> <span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>Paul-André Melliès and Noam Zeilberger<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>,
+ <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">year</span> <span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span> <span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>2022<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>,
+ <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">eprint</span> <span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span> <span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>2212.09060<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>,
+ <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">archiveprefix</span> <span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span> <span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>arXiv<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>,
+ <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">url</span> <span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span> <span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>https://arxiv.org/abs/2212.09060<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>,
+ <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">journal</span> <span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span> <span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>Electronic Notes in Theoretical Informatics and Computer Science<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>,
+ <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">volume</span> <span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span> <span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>1<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>,
+ <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">doi</span> <span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span> <span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>10.46298/entics.10508<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span>
+</span><span class="hl-punctuation hl-section hl-entry hl-end hl-bibtex">}</span></span></span></code></pre></details>
+</div>
+</details>
+</div>
+<div class="helia-cite-format helia-collapsible" data-format="hayagriva" data-copy="true" data-copy-label="hayagriva YAML">
+<details>
+<summary class="helia-group-summary"><span class="helia-group-title">hayagriva YAML (typst)</span></summary>
+<div class="helia-group-body">
+<details class="helia-code" open><summary class="helia-code-summary"><span class="helia-code-lang">yaml</span> · <span class="helia-code-lines">15 lines</span></summary><pre class="helia-raw"><code class="language-yaml"><span class="hl-source hl-yaml"><span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">mellis_zeilberger_2022</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">type</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">article</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">title</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Parsing as a lifting problem and the Chomsky-Schützenberger representation theorem</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">author</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Melliès, Paul-André</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Zeilberger, Noam</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">date</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-constant hl-numeric hl-integer hl-decimal hl-yaml">2022</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">url</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">https://arxiv.org/abs/2212.09060</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">serial-number</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">arxiv</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-quoted hl-single hl-yaml"><span class="hl-punctuation hl-definition hl-string hl-begin hl-yaml">&#39;</span>2212.09060<span class="hl-punctuation hl-definition hl-string hl-end hl-yaml">&#39;</span></span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">doi</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">10.46298/entics.10508</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">parent</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">type</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">periodical</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">title</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Electronic Notes in Theoretical Informatics and Computer Science</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">volume</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-constant hl-numeric hl-integer hl-decimal hl-yaml">1</span>
+</span></code></pre></details>
+</div>
+</details>
+</div>
+<div class="helia-cite-files">Download: <a class="helia-link" href="mellis_zeilberger_2022.bib">mellis_zeilberger_2022.bib</a> · <a class="helia-link" href="mellis_zeilberger_2022.yml">mellis_zeilberger_2022.yml</a></div>
+</div>
+</div>
+</details>
+</div>
+<div class="helia-reference-cited-by helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">Cited by (1)</span></summary>
+<div class="helia-group-body">
+<section class="helia-transclusion" data-entry="mellies-2025-the" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="mellies-2025-the"><span class="helia-title">The categorical contours of the Chomsky-Schützenberger representation theorem</span>&nbsp;<a class="helia-slug" href="mellies-2025-the.html">mellies-2025-the</a><span class="helia-byline"><span class="helia-entry-link" data-entry="lmcs">LMCS</span> · 2025</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="mellies-2025-the" data-kind="reference">
+<div class="helia-abstract">We develop fibrational perspectives on context-free grammars and on nondeterministic finite-state automata over categories and operads. A generalized CFG is a functor from a free colored operad (aka multicategory) generated by a pointed finite species into an arbitrary base operad: this encompasses classical CFGs by taking the base to be a certain operad constructed from a free monoid, as an instance of a more general construction of an <em>operad of spliced arrows</em> <span class="helia-math helia-math-inline helia-mathml"><math><mi>𝒲︀</mi><mspace width="0.1667em"/><mi>𝒞︀</mi></math></span> for any category <span class="helia-math helia-math-inline helia-mathml"><math><mi>𝒞︀</mi></math></span>. A generalized NFA is a functor from an arbitrary bipointed category or pointed operad satisfying the unique lifting of factorizations and finite fiber properties: this encompasses classical word automata and tree automata without <span class="helia-math helia-math-inline helia-mathml"><math><mi>𝜖</mi></math></span>-transitions, but also automata over non-free categories and operads. We show that generalized context-free and regular languages satisfy suitable generalizations of many of the usual closure properties, and in particular we give a simple conceptual proof that context-free languages are closed under intersection with regular languages. Finally, we observe that the splicing functor <span class="helia-math helia-math-inline helia-mathml"><math><mi>𝒲︀</mi><mo lspace="0.2777777777777778em" rspace="0.2777777777777778em">:</mo><mtext>Cat</mtext><mo stretchy="false">→</mo><mtext>Oper</mtext></math></span> admits a left adjoint <span class="helia-math helia-math-inline helia-mathml"><math><mi>𝒞︀</mi><mo lspace="0.2777777777777778em" rspace="0.2777777777777778em">:</mo><mtext>Oper</mtext><mo stretchy="false">→</mo><mtext>Cat</mtext></math></span>, which we call the <em>contour category</em> construction since the arrows of <span class="helia-math helia-math-inline helia-mathml"><math><mi>𝒞︀</mi><mspace width="0.1667em"/><mi>𝒪︀</mi></math></span> have a geometric interpretation as oriented contours of operations of <span class="helia-math helia-math-inline helia-mathml"><math><mi>𝒪︀</mi></math></span>. A direct consequence of the contour / splicing adjunction is that every pointed finite species induces a universal CFG generating a language of <em>tree contour words.</em> This leads us to a generalization of the Chomsky-Schützenberger Representation Theorem, establishing that a subset of a homset <span class="helia-math helia-math-inline helia-mathml"><math><mi>𝐿</mi><mo>⊆</mo><mi>𝒞︀</mi><mrow><mo stretchy="false">(</mo><mrow><mi>𝐴</mi><mo>,</mo><mi>𝐵</mi></mrow><mo stretchy="false">)</mo></mrow></math></span> is a CFL of arrows if and only if it is a functorial image of the intersection of a <span class="helia-math helia-math-inline helia-mathml"><math><mi>𝒞︀</mi></math></span>-chromatic tree contour language with a regular language.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.46298/lmcs-21(2:12)2025">DOI</a></span> · <span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/2405.14703">arXiv</a></span></div>
+</div>
+</div>
+</details>
+</section>
+</div>
+</details>
+</div>
+<div class="helia-reference-cites helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">Cites 31 works (6 here)</span></summary>
+<div class="helia-group-body">
+<div class="helia-reference-cites-here helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">With notes (6)</span></summary>
+<div class="helia-group-body">
+<section class="helia-transclusion" data-entry="ahrens-lumsdaine-2019" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="ahrens-lumsdaine-2019"><span class="helia-title">Displayed Categories</span>&nbsp;<a class="helia-slug" href="ahrens-lumsdaine-2019.html">ahrens-lumsdaine-2019</a><span class="helia-byline">lmcs · 2019</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="ahrens-lumsdaine-2019" data-kind="reference">
+<div class="helia-abstract">We introduce and develop the notion of displayed categories. A displayed category over a category C is equivalent to “a category D and functor F : D –&gt; C”, but instead of having a single collection of “objects of D” with a map to the objects of C, the objects are given as a family indexed by objects of C, and similarly for the morphisms. This encapsulates a common way of building categories in practice, by starting with an existing category and adding extra data/properties to the objects and morphisms. The interest of this seemingly trivial reformulation is that various properties of functors are more naturally defined as properties of the corresponding displayed categories. Grothendieck fibrations, for example, when defined as certain functors, use equality on objects in their definition. When defined instead as certain displayed categories, no reference to equality on objects is required. Moreover, almost all examples of fibrations in nature are, in fact, categories whose standard construction can be seen as going via displayed categories. We therefore propose displayed categories as a basis for the development of fibrations in the type-theoretic setting, and similarly for various other notions whose classical definitions involve equality on objects. Besides giving a conceptual clarification of such issues, displayed categories also provide a powerful tool in computer formalisation, unifying and abstracting common constructions and proof techniques of category theory, and enabling modular reasoning about categories of multi-component structures. As such, most of the material of this article has been formalised in Coq over the UniMath library, with the aim of providing a practical library for use in further developments.</div>
+<p>We introduce and develop the notion of <em>displayed categories</em>. A displayed category over a category <span class="helia-math helia-math-inline helia-mathml"><math><mi>𝐶</mi></math></span> is equivalent to “a category <span class="helia-math helia-math-inline helia-mathml"><math><mi>𝐷</mi></math></span> and functor <span class="helia-math helia-math-inline helia-mathml"><math><mi>𝐹</mi><mo lspace="0.2777777777777778em" rspace="0.2777777777777778em">:</mo><mi>𝐷</mi><mo stretchy="false">→</mo><mi>𝐶</mi></math></span>, but instead of having a single collection of “objects of <span class="helia-math helia-math-inline helia-mathml"><math><mi>𝐷</mi></math></span>” with a map to the objects of <span class="helia-math helia-math-inline helia-mathml"><math><mi>𝐶</mi></math></span>, the objects are given as a family indexed by objects of <span class="helia-math helia-math-inline helia-mathml"><math><mi>𝐶</mi></math></span>, and similarly for the morphisms. This encapsulates a common way of building categories in practice, by starting with an existing category and adding extra data/properties to the objects and morphisms. The interest of this seemingly trivial reformulation is that various properties of functors are more naturally defined as properties of the corresponding displayed categories. Grothendieck fibrations, for example, when defined as certain functors, use equality on objects in their definition. When defined instead as certain displayed categories, no reference to equality on objects is required. Moreover, almost all examples of fibrations in nature are, in fact, categories whose standard construction can be seen as going via displayed categories. We therefore propose displayed categories as a basis for the development of fibrations in the type-theoretic setting, and similarly for various other notions whose classical definitions involve equality on objects. Besides giving a conceptual clarification of such issues, displayed categories also provide a powerful tool in computer formalisation, unifying and abstracting common constructions and proof techniques of category theory, and enabling modular reasoning about categories of multi-component structures. As such, most of the material of this article has been formalised in Coq over the UniMath library, with the aim of providing a practical library for use in further developments.</p>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.23638/lmcs-15(1:20)2019">DOI</a></span> · <span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/1705.04296">arXiv</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="mellies-2017-an" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="mellies-2017-an"><span class="helia-title">An Isbell duality theorem for type refinement systems</span>&nbsp;<a class="helia-slug" href="mellies-2017-an.html">mellies-2017-an</a><span class="helia-byline"><span class="helia-entry-link" data-entry="mscs">MSCS</span> · 2017</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="mellies-2017-an" data-kind="reference">
+<div class="helia-abstract">Any refinement system (= functor) has a fully faithful representation in the refinement system of presheaves, by interpreting types as relative slice categories, and refinement types as presheaves over those categories. Motivated by an analogy between side effects in programming and context effects in linear logic, we study logical aspects of this ‘positive’ (covariant) representation, as well as of an associated ‘negative’ (contravariant) representation. We establish several preservation properties for these representations, including a generalization of Day’s embedding theorem for monoidal closed categories. Then, we establish that the positive and negative representations satisfy an Isbell-style duality. As corollaries, we derive two different formulas for the positive representation of a pushforward (inspired by the classical negative translations of proof theory), which express it either as the dual of a pullback of a dual or as the double dual of a pushforward. Besides explaining how these constructions on refinement systems generalize familiar category-theoretic ones (by viewing categories as special refinement systems), our main running examples involve representations of Hoare logic and linear sequent calculus.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1017/s0960129517000068">DOI</a></span> · <span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/1501.05115">arXiv</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="mellies_zeilberger_2015" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="mellies_zeilberger_2015"><span class="helia-title">Functors are type refinement systems</span>&nbsp;<a class="helia-slug" href="mellies_zeilberger_2015.html">mellies_zeilberger_2015</a><span class="helia-byline"><span class="helia-entry-link" data-entry="popl">POPL</span> · 2015</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="mellies_zeilberger_2015" data-kind="reference">
+<div class="helia-abstract">
+<p>The standard reading of type theory through the lens of category theory is based on the idea of viewing a type system as a category of well-typed terms. We propose a basic revision of this reading: rather than interpreting type systems as categories, we describe them as functors from a category of typing derivations to a category of underlying terms. Then, turning this around, we explain how in fact any functor gives rise to a generalized type system, with an abstract notion of typing judgment, typing derivations and typing rules. This leads to a purely categorical reformulation of various natural classes of type systems as natural classes of functors.</p>
+<p>The main purpose of this paper is to describe the general framework (which can also be seen as providing a categorical analysis of refinement types), and to present a few applications. As a larger case study, we revisit Reynolds’ paper on “The Meaning of Types” (2000), showing how the paper’s main results may be reconstructed along these lines.</p>
+</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="pdf-url"><a class="helia-link helia-external" href="https://inria.hal.science/hal-01096910/document">PDF</a></span> · <span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/2676726.2676970">DOI</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/conf/popl/MelliesZ15">pldb</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="girard_linear_1987" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="girard_linear_1987"><span class="helia-title">Linear logic</span>&nbsp;<a class="helia-slug" href="girard_linear_1987.html">girard_linear_1987</a><span class="helia-byline"><span class="helia-entry-link" data-entry="tcs">TCS</span> · 1987</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="girard_linear_1987" data-kind="reference">
+<div class="helia-abstract">The familiar connective of negation is broken into two operations: linear negation which is the purely negative part of negation and the modality “of course” which has the meaning of a reaffirmation. Following this basic discovery, a completely new approach to the whole area between constructive logics and programmation is initiated.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1016/0304-3975(87)90045-4">DOI</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="Earley1970" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="Earley1970"><span class="helia-title">An efficient context-free parsing algorithm</span>&nbsp;<a class="helia-slug" href="Earley1970.html">Earley1970</a><span class="helia-byline"><span class="helia-entry-link" data-entry="cacm">CACM</span> · 1970</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="Earley1970" data-kind="reference">
+<div class="helia-abstract">A parsing algorithm which seems to be the most efficient general context-free algorithm known is described. It is similar to both Knuth’s LR(k) algorithm and the familiar top-down algorithm. It has a time bound proportional to n3 (where n is the length of the string being parsed) in general; it has an n2 bound for unambiguous grammars; and it runs in linear time on a large class of grammars, which seems to include most practical context-free programming language grammars. In an empirical comparison it appears to be superior to the top-down and bottom-up algorithms studied by Griffiths and Petrick.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/362007.362035">DOI</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="KNUTH1965607" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="KNUTH1965607"><span class="helia-title">On the translation of languages from left to right</span>&nbsp;<a class="helia-slug" href="KNUTH1965607.html">KNUTH1965607</a><span class="helia-byline"><span class="helia-entry-link" data-entry="iandc">I&amp;C</span> · 1965</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="KNUTH1965607" data-kind="reference">
+<div class="helia-abstract">There has been much recent interest in languages whose grammar is sufficiently simple that an efficient left-to-right parsing algorithm can be mechanically produced from the grammar. In this paper, we define LR(k) grammars, which are perhaps the most general ones of this type, and they provide the basis for understanding all of the special tricks which have been used in the construction of parsing algorithms for languages with simple structure, e.g. algebraic languages. We give algorithms for deciding if a given grammar satisfies the LR(k) condition, for given k, and also give methods for generating recognizes for LR(k) grammars. It is shown that the problem of whether or not a grammar is LR(k) for some k is undecidable, and the paper concludes by establishing various connections between LR(k) grammars and deterministic languages. In particular, the LR(k) condition is a natural analogue, for grammars, of the deterministic condition, for languages.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1016/s0019-9958(65)90426-2">DOI</a></span></div>
+</div>
+</div>
+</details>
+</section>
+</div>
+</details>
+</div>
+<div class="helia-reference-cites-away helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">External (25)</span></summary>
+<div class="helia-group-body">
+<ul>
+<li><a class="helia-link helia-external" href="https://arxiv.org/abs/1911.03962">Classical linear logic, cobordisms and categorial grammars</a> (2020)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.23638/lmcs-16(1:32)2020">Automata Minimization: a Functorial Approach</a> (2020)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/2933575.2934525">A bifibrational reconstruction of Lawvere’s presheaf hyperdoctrine</a> (2016)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.70930/tac/nysi02zr">The Hopf algebra of Möbius intervals</a> (2010)</li>
+<li>To CNF or not to CNF? An Efficient Yet Presentable Version of the CYK Algorithm (2009)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1112/jlms/jdm096">The cartesian closed bicategory of generalised species of structures</a> (2008)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/s10849-004-2114-x">On the Expressive Power of Abstract Categorial Grammars: Representing Context-Free Formalisms</a> (2004)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1017/cbo9780511525896">Higher Operads, Higher Categories</a> (2004)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1090/surv/096">Operads in algebra, topology, and physics</a> (2002)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.3115/1073012.1073045">Towards Abstract Categorial Grammars</a> (2001)</li>
+<li>Distributors at work (2000)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1017/cbo9781107325913">Combinatorial species and tree-like structures</a> (1997)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1090/conm/202/02597">Cohomology of Monoids in Monoidal Categories</a> (1997)</li>
+<li>Tree automata techniques and applications (1997)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1017/cbo9780511569302.006">Maps, hypermaps, and triangle groups</a> (1994)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-0-8176-4576-2_8">Drawing Curves Over Number Fields</a> (1990)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1016/0022-4049(89)90151-5">A note on context-free languages</a> (1989)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.3115/981623.981640">How to cover a grammar</a> (1989)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1016/s0049-237x(08)70271-4">Geometry of Interaction 1: Interpretation of System F</a> (1989)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1090/conm/092">Multicategories revisited</a> (1989)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-642-61345-6">Parsing Theory - Volume I: Languages and Parsing</a> (1988)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/bfb0072514">Foncteurs analytiques et espèces de structures</a> (1986)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1016/0001-8708(81)90052-9">Une théorie combinatoire des séries formelles</a> (1981)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/bfb0083085">Ordinal sums and equational doctrines</a> (1969)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1016/s0049-237x(08)72023-8">The Algebraic Theory of Context-Free Languages*</a> (1963)</li>
+</ul>
+</div>
+</details>
+</div>
+</div>
+</details>
+</div>
+<footer class="helia-footer">
+<div class="helia-related helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><h3 class="helia-heading">Related</h3>
+</summary>
+<div class="helia-group-body">
+<ul>
+<li><a class="helia-entry-link" href="day-quotient.html" data-entry="day-quotient">The Quotient and its Right Adjoint in Day Convolution</a> <span class="helia-related-tags"><a class="helia-entry-link" href="tag-parsing.html" data-entry="tag-parsing">#parsing</a> <a class="helia-entry-link" href="tag-category-theory.html" data-entry="tag-category-theory">#category-theory</a></span></li>
+</ul>
+</div>
+</details>
+</div>
+</footer>
+</article>
+<div class="helia-identity"><span class="helia-id">mellis_zeilberger_2022</span> <span class="helia-kind">reference</span> <span class="helia-path">entries/refs/mellis_zeilberger_2022/mellis_zeilberger_2022.hel</span></div>
+</div>
+</body>
+</html>

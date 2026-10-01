@@ -1,0 +1,1 @@
+heliaSearchData("d/vladimirkolmogorov",{"id":"vladimirkolmogorov","title":"Vladimir Kolmogorov","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"vladimirkolmogorov.html","headings":[],"body":""});

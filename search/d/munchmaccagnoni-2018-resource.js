@@ -1,0 +1,1 @@
+heliaSearchData("d/munchmaccagnoni-2018-resource",{"id":"munchmaccagnoni-2018-resource","title":"Resource Polymorphism","kind":"reference","tags":["ownership"],"authors":["Guillaume Munch-Maccagnoni"],"venue":["arXiv"],"date":null,"url":"munchmaccagnoni-2018-resource.html","headings":[],"body":""});

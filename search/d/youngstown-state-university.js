@@ -1,0 +1,1 @@
+heliaSearchData("d/youngstown-state-university",{"id":"youngstown-state-university","title":"Youngstown State University","kind":"institution","tags":[],"authors":[],"venue":[],"date":null,"url":"youngstown-state-university.html","headings":[],"body":""});

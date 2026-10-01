@@ -1,0 +1,1 @@
+heliaSearchData("d/juhatuomaskarhunen",{"id":"juhatuomaskarhunen","title":"Juha Tuomas Karhunen","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"juhatuomaskarhunen.html","headings":[],"body":""});

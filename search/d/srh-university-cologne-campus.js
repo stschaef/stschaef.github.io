@@ -1,0 +1,1 @@
+heliaSearchData("d/srh-university-cologne-campus",{"id":"srh-university-cologne-campus","title":"SRH University (Cologne Campus)","kind":"institution","tags":[],"authors":[],"venue":[],"date":null,"url":"srh-university-cologne-campus.html","headings":[],"body":""});

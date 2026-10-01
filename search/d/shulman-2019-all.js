@@ -1,0 +1,1 @@
+heliaSearchData("d/shulman-2019-all",{"id":"shulman-2019-all","title":"All ( ∞ , 1 )-toposes have strict univalent universes","kind":"reference","tags":["homotopy-type-theory"],"authors":["Michael Shulman"],"venue":["arXiv"],"date":null,"url":"shulman-2019-all.html","headings":[],"body":""});

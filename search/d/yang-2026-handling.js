@@ -1,0 +1,1 @@
+heliaSearchData("d/yang-2026-handling",{"id":"yang-2026-handling","title":"Handling Higher-Order Effectful Operations with Judgemental Monadic Laws","kind":"reference","tags":["effects"],"authors":["Nicolas Wu","Zhixuan Yang"],"venue":["POPL","Symposium on Principles of Programming Languages"],"date":null,"url":"yang-2026-handling.html","headings":[],"body":""});

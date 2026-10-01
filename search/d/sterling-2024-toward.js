@@ -1,0 +1,1 @@
+heliaSearchData("d/sterling-2024-toward",{"id":"sterling-2024-toward","title":"Toward a Geometry for Syntax","kind":"reference","tags":[],"authors":["Jon Sterling"],"venue":[],"date":null,"url":"sterling-2024-toward.html","headings":[],"body":""});

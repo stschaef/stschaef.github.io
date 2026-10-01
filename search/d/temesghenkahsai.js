@@ -1,0 +1,1 @@
+heliaSearchData("d/temesghenkahsai",{"id":"temesghenkahsai","title":"Temesghen Kahsai","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"temesghenkahsai.html","headings":[],"body":""});

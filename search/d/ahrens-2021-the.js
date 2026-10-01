@@ -1,0 +1,1 @@
+heliaSearchData("d/ahrens-2021-the",{"id":"ahrens-2021-the","title":"The Univalence Principle","kind":"reference","tags":["homotopy-type-theory"],"authors":["Benedikt Ahrens","Dimitris Tsementzis","Michael Shulman","Paige Randall North"],"venue":["Mem. AMS","Memoirs of the American Mathematical Society"],"date":null,"url":"ahrens-2021-the.html","headings":[],"body":""});

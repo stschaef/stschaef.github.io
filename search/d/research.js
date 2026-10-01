@@ -1,1 +1,1 @@
-heliaSearchData("d/research",{"id":"research","title":"Research Interests","kind":"note","tags":[],"authors":["Steven Schaefer"],"venue":[],"date":"2024-08-06","url":"research.html","headings":[],"body":"Mechanized category theory in Agda."});
+heliaSearchData("d/research",{"id":"research","title":"Research Interests","kind":"note","tags":[],"authors":["Steven Schaefer"],"venue":[],"date":"2024-08-06","url":"research.html","headings":[],"body":""});

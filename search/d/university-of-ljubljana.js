@@ -1,0 +1,1 @@
+heliaSearchData("d/university-of-ljubljana",{"id":"university-of-ljubljana","title":"University of Ljubljana","kind":"institution","tags":[],"authors":[],"venue":[],"date":null,"url":"university-of-ljubljana.html","headings":[],"body":""});

@@ -1,0 +1,1 @@
+heliaSearchData("d/stefanjahnichen",{"id":"stefanjahnichen","title":"Stefan Jähnichen","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"stefanjahnichen.html","headings":[],"body":""});

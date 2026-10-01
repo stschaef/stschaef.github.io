@@ -1,0 +1,1 @@
+heliaSearchData("d/germane-2017-a",{"id":"germane-2017-a","title":"A posteriori environment analysis with Pushdown Delta CFA","kind":"reference","tags":["control-flow-analysis"],"authors":["Kimball Germane","Matthew Might"],"venue":["POPL","Symposium on Principles of Programming Languages"],"date":null,"url":"germane-2017-a.html","headings":[],"body":""});

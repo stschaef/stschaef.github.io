@@ -1,0 +1,1 @@
+heliaSearchData("d/jeanjacqueslevy",{"id":"jeanjacqueslevy","title":"Jean-Jacques Lévy","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"jeanjacqueslevy.html","headings":[],"body":""});

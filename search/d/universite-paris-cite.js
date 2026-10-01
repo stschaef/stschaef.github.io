@@ -1,0 +1,1 @@
+heliaSearchData("d/universite-paris-cite",{"id":"universite-paris-cite","title":"Université Paris Cité","kind":"institution","tags":[],"authors":[],"venue":[],"date":null,"url":"universite-paris-cite.html","headings":[],"body":""});

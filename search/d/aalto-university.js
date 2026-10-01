@@ -1,0 +1,1 @@
+heliaSearchData("d/aalto-university",{"id":"aalto-university","title":"Aalto University","kind":"institution","tags":[],"authors":[],"venue":[],"date":null,"url":"aalto-university.html","headings":[],"body":""});

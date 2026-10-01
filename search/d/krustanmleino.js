@@ -1,0 +1,1 @@
+heliaSearchData("d/krustanmleino",{"id":"krustanmleino","title":"K. Rustan M. Leino","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"krustanmleino.html","headings":[],"body":""});

@@ -1,0 +1,1 @@
+heliaSearchData("d/deyoung-2023-data",{"id":"deyoung-2023-data","title":"Data Layout from a Type-Theoretic Perspective","kind":"reference","tags":[],"authors":["Frank Pfenning","Henry DeYoung"],"venue":["ENTCS","Electronic Notes in Theoretical Computer Science (now ENTICS)"],"date":null,"url":"deyoung-2023-data.html","headings":[],"body":""});

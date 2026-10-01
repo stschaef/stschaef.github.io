@@ -1,0 +1,1 @@
+heliaSearchData("d/university-of-wrocaw",{"id":"university-of-wrocaw","title":"University of Wrocław","kind":"institution","tags":[],"authors":[],"venue":[],"date":null,"url":"university-of-wrocaw.html","headings":[],"body":""});

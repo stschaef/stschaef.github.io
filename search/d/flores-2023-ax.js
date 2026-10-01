@@ -1,0 +1,1 @@
+heliaSearchData("d/flores-2023-ax",{"id":"flores-2023-ax","title":"A Formal Algebraic Framework for DSL Composition","kind":"reference","tags":[],"authors":["Angelo Taranto","Eric Bond","Zachary Flores"],"venue":["arXiv"],"date":null,"url":"flores-2023-ax.html","headings":[],"body":""});

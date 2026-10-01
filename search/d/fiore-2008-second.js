@@ -1,0 +1,1 @@
+heliaSearchData("d/fiore-2008-second",{"id":"fiore-2008-second","title":"Second-Order and Dependently-Sorted Abstract Syntax","kind":"reference","tags":["abstract-syntax"],"authors":["Marcelo P. Fiore"],"venue":["LICS","Symposium on Logic in Computer Science"],"date":null,"url":"fiore-2008-second.html","headings":[],"body":""});

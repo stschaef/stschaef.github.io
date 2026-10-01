@@ -1,0 +1,1 @@
+heliaSearchData("d/robertlanglands",{"id":"robertlanglands","title":"Robert Langlands","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"robertlanglands.html","headings":[],"body":""});

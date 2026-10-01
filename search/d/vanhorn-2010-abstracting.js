@@ -1,0 +1,1 @@
+heliaSearchData("d/vanhorn-2010-abstracting",{"id":"vanhorn-2010-abstracting","title":"Abstracting abstract machines","kind":"reference","tags":["control-flow-analysis"],"authors":["David Van Horn","Matthew Might"],"venue":["ICFP","International Conference on Functional Programming"],"date":null,"url":"vanhorn-2010-abstracting.html","headings":[],"body":""});

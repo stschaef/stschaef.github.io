@@ -1,0 +1,1 @@
+heliaSearchData("d/stassen-2023-mitten",{"id":"stassen-2023-mitten","title":"mitten: A Flexible Multimodal Proof Assistant","kind":"reference","tags":["modal-type-theory"],"authors":["Daniel Gratzer","Lars Birkedal","Philipp Stassen"],"venue":["TYPES","Types for Proofs and Programs"],"date":null,"url":"stassen-2023-mitten.html","headings":[],"body":""});

@@ -1,0 +1,1 @@
+heliaSearchData("d/mercer-2022-implicit",{"id":"mercer-2022-implicit","title":"Implicit Polarized F: local type inference for impredicativity","kind":"reference","tags":["bidirectional-typing","focusing"],"authors":["Cameron Ramsay","Henry Mercer","Neel Krishnaswami"],"venue":["arXiv"],"date":null,"url":"mercer-2022-implicit.html","headings":[],"body":""});

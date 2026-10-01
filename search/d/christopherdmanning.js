@@ -1,0 +1,1 @@
+heliaSearchData("d/christopherdmanning",{"id":"christopherdmanning","title":"Christopher D. Manning","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"christopherdmanning.html","headings":[],"body":""});

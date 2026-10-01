@@ -1,0 +1,1 @@
+heliaSearchData("d/solomonfeferman",{"id":"solomonfeferman","title":"Solomon Feferman","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"solomonfeferman.html","headings":[],"body":""});

@@ -1,0 +1,1 @@
+heliaSearchData("d/chen-2024-a",{"id":"chen-2024-a","title":"A Saturation-Based Unification Algorithm for Higher-Order Rational Patterns","kind":"reference","tags":["unification"],"authors":["Frank Pfenning","Zhibo Chen"],"venue":["TOCL","ACM Transactions on Computational Logic"],"date":null,"url":"chen-2024-a.html","headings":[],"body":""});

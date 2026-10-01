@@ -7,6 +7,8 @@
 <title>ECOOP</title>
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Ctext y=%22.9em%22 font-size=%2290%22%3E%F0%9F%8C%BB%3C/text%3E%3C/svg%3E">
 <meta name="generator" content="helia">
+<link rel="alternate" type="application/atom+xml" title="Steven Schaefer" href="feed.xml">
+<link rel="alternate" type="application/feed+json" title="Steven Schaefer" href="feed.json">
 <script src="helia/theme-version.js"></script>
 <script src="theme/folio-early.js"></script>
 <link rel="stylesheet" href="helia/theme.css">
@@ -34,6 +36,68 @@
 <div class="helia-meta"><span class="helia-byline">European Conference on Object-Oriented Programming · Conference · LIPIcs</span></div>
 </header>
 <div class="helia-body">
+</div>
+<div class="helia-venue-year">
+<section class="helia-heading-section" data-level="1">
+<details open>
+<summary class="helia-heading-summary"><h2 class="helia-heading">2026</h2>
+</summary>
+<div class="helia-heading-body">
+<section class="helia-transclusion" data-entry="namakonov-2026-verifying" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="namakonov-2026-verifying"><span class="helia-title">Verifying Wait-Freedom for Concurrent Higher-Order Programs</span>&nbsp;<a class="helia-slug" href="namakonov-2026-verifying.html">namakonov-2026-verifying</a><span class="helia-byline"><span class="helia-entry-link" data-entry="ecoop">ECOOP</span> · 2026</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="namakonov-2026-verifying" data-kind="reference">
+<div class="helia-abstract">Wait-freedom is the strongest non-blocking progress guarantee for concurrent data structures, ensuring that every operation completes in a finite number of steps regardless of interference from other threads. While verification of wait-freedom has been studied for first-order languages, verifying it for higher-order programming languages with general references remains an open challenge. In such languages, operations may be used by arbitrary, unverified higher-order clients, making it unclear how to even define wait-freedom formally in terms of programs’ semantics, let alone prove it. In this paper, we present the first framework for verifying wait-freedom of concurrent programs written in a higher-order language with general references. Our approach is based on the Lawyer concurrent separation logic which has been recently introduced for termination verification. We identify a specification pattern in the Lawyer logic that captures wait-freedom. To establish this connection formally, we prove a novel adequacy theorem for Lawyer which states that programs which are proven correct in the Lawyer logic against a specification in the aforementioned specification pattern are wait-free. Proving wait-freedom requires to show that all calls made to operations by any arbitrary client terminate. Thus, as a part of proving the adequacy theorem above, we need to prove that the behavior of the client of the data structure is safe in the sense that it does not break the internal invariants of the data structure, e.g., by directly manipulating the data structure’s internal state. To this end, we develop a logical relations model that establishes safety for all clients once and for all. We demonstrate the effectiveness of our approach by proving wait-freedom for several representative examples, including a higher-order list map function, and a memory-efficient single-producer, single-consumer queue. For the latter, wait-freedom is conditional in that, as the name suggests, there can be at most one enqueuer thread and one dequeuer thread. To capture this formally, we introduce the notion of restricted wait-freedom as a variant of wait-freedom that restricts the number of concurrent threads, and show how our approach can support reasoning about restricted wait-freedom. All our results have been mechanized on top of the Rocq Prover and using the Iris separation logic framework that Lawyer is also based on.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="pdf-url"><a class="helia-link helia-external" href="https://drops.dagstuhl.de/storage/00lipics/lipics-vol372-ecoop2026/LIPIcs.ECOOP.2026.20/LIPIcs.ECOOP.2026.20.pdf">PDF</a></span> · <span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.4230/lipics.ecoop.2026.20">DOI</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/conf/ecoop/NamakonovBT26">pldb</a></span></div>
+</div>
+</div>
+</details>
+</section>
+</div>
+</details>
+</section>
+</div>
+<div class="helia-venue-year">
+<section class="helia-heading-section" data-level="1">
+<details open>
+<summary class="helia-heading-summary"><h2 class="helia-heading">2023</h2>
+</summary>
+<div class="helia-heading-body">
+<section class="helia-transclusion" data-entry="nieto-2023-modular" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="nieto-2023-modular"><span class="helia-title">Modular Verification of State-Based CRDTs in Separation Logic</span>&nbsp;<a class="helia-slug" href="nieto-2023-modular.html">nieto-2023-modular</a><span class="helia-byline"><span class="helia-entry-link" data-entry="ecoop">ECOOP</span> · 2023</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="nieto-2023-modular" data-kind="reference">
+<div class="helia-abstract">Conflict-free Replicated Datatypes (CRDTs) are a class of distributed data structures that are highly-available and weakly consistent. The CRDT taxonomy is further divided into two subclasses: state-based and operation-based (op-based). Recent prior work showed how to use separation logic to verify convergence and functional correctness of op-based CRDTs while (a) verifying implementations (as opposed to high-level protocols), (b) giving high level specifications that abstract from low-level implementation details, and (c) providing specifications that are modular (i.e. allow client code to use the CRDT like an abstract data type). We extend this separation logic approach to verification of CRDTs to handle state-based CRDTs, while respecting the desiderata (a)-(c). The key idea is to track the state of a CRDT as a function of the set of operations that produced that state. Using the observation that state-based CRDTs are automatically causally-consistent, we obtain CRDT specifications that are agnostic to whether a CRDT is state- or op-based. When taken together with prior work, our technique thus provides a unified approach to specification and verification of op- and state-based CRDTs. We have tested our approach by verifying StateLib, a library for building state-based CRDTs. Using StateLib, we have further verified convergence and functional correctness of multiple example CRDTs from the literature. Our proofs are written in the Aneris distributed separation logic and are mechanized in Coq.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="pdf-url"><a class="helia-link helia-external" href="https://arxiv.org/pdf/1604.08080">PDF</a></span> · <span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.4230/lipics.ecoop.2023.22">DOI</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/conf/ecoop/NietoDGTB23">pldb</a></span></div>
+</div>
+</div>
+</details>
+</section>
+</div>
+</details>
+</section>
+</div>
+<div class="helia-venue-year">
+<section class="helia-heading-section" data-level="1">
+<details open>
+<summary class="helia-heading-summary"><h2 class="helia-heading">2014</h2>
+</summary>
+<div class="helia-heading-body">
+<section class="helia-transclusion" data-entry="omar-2014-safely" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="omar-2014-safely"><span class="helia-title">Safely Composable Type-Specific Languages</span>&nbsp;<a class="helia-slug" href="omar-2014-safely.html">omar-2014-safely</a><span class="helia-byline"><span class="helia-entry-link" data-entry="ecoop">ECOOP</span> · 2014</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="omar-2014-safely" data-kind="reference">
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-662-44202-9_5">DOI</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/conf/ecoop/OmarKNCPA14">pldb</a></span></div>
+</div>
+</div>
+</details>
+</section>
+</div>
+</details>
+</section>
 </div>
 </article>
 <div class="helia-identity"><span class="helia-id">ecoop</span> <span class="helia-kind">venue</span> <span class="helia-path">entries/venues/ecoop.hel</span></div>

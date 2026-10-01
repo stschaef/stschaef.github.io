@@ -1,0 +1,1 @@
+heliaSearchData("d/kristenchiafullo",{"id":"kristenchiafullo","title":"Kristen Chiafullo","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"kristenchiafullo.html","headings":[],"body":""});

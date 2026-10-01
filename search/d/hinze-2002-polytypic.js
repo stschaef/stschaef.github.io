@@ -1,0 +1,1 @@
+heliaSearchData("d/hinze-2002-polytypic",{"id":"hinze-2002-polytypic","title":"Polytypic values possess polykinded types","kind":"reference","tags":["generic-programming"],"authors":["Ralf Hinze"],"venue":["SCP","Science of Computer Programming"],"date":null,"url":"hinze-2002-polytypic.html","headings":[],"body":""});

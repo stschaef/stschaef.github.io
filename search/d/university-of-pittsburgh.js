@@ -1,0 +1,1 @@
+heliaSearchData("d/university-of-pittsburgh",{"id":"university-of-pittsburgh","title":"University of Pittsburgh","kind":"institution","tags":[],"authors":[],"venue":[],"date":null,"url":"university-of-pittsburgh.html","headings":[],"body":""});

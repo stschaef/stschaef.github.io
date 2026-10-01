@@ -1,0 +1,1 @@
+heliaSearchData("d/ringer-2025-mathematicians",{"id":"ringer-2025-mathematicians","title":"Mathematicians put AI model AlphaProof to the test","kind":"reference","tags":[],"authors":["Talia Ringer"],"venue":["Nature"],"date":null,"url":"ringer-2025-mathematicians.html","headings":[],"body":""});

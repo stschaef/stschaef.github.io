@@ -1,0 +1,1 @@
+heliaSearchData("d/idaho-national-laboratory",{"id":"idaho-national-laboratory","title":"Idaho National Laboratory","kind":"institution","tags":[],"authors":[],"venue":[],"date":null,"url":"idaho-national-laboratory.html","headings":[],"body":""});

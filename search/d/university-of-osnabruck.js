@@ -1,0 +1,1 @@
+heliaSearchData("d/university-of-osnabruck",{"id":"university-of-osnabruck","title":"University of Osnabrück","kind":"institution","tags":[],"authors":[],"venue":[],"date":null,"url":"university-of-osnabruck.html","headings":[],"body":""});

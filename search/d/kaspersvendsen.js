@@ -1,0 +1,1 @@
+heliaSearchData("d/kaspersvendsen",{"id":"kaspersvendsen","title":"Kasper Svendsen","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"kaspersvendsen.html","headings":[],"body":""});

@@ -1,0 +1,1 @@
+heliaSearchData("d/university-of-st-gallen",{"id":"university-of-st-gallen","title":"University of St. Gallen","kind":"institution","tags":[],"authors":[],"venue":[],"date":null,"url":"university-of-st-gallen.html","headings":[],"body":""});

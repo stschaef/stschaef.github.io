@@ -1,0 +1,1 @@
+heliaSearchData("d/bonchi-2012-brzozowski",{"id":"bonchi-2012-brzozowski","title":"Brzozowski’s Algorithm (Co)Algebraically","kind":"reference","tags":["coalgebra","parsing"],"authors":["Alexandra Silva","Filippo Bonchi","Jan Rutten","Marcello M. Bonsangue"],"venue":[],"date":null,"url":"bonchi-2012-brzozowski.html","headings":[],"body":""});

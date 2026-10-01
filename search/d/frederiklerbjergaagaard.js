@@ -1,0 +1,1 @@
+heliaSearchData("d/frederiklerbjergaagaard",{"id":"frederiklerbjergaagaard","title":"Frederik Lerbjerg Aagaard","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"frederiklerbjergaagaard.html","headings":[],"body":""});

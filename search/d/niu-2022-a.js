@@ -1,0 +1,1 @@
+heliaSearchData("d/niu-2022-a",{"id":"niu-2022-a","title":"A cost-aware logical framework","kind":"reference","tags":["cost-analysis"],"authors":["Harrison Grodin","Jon Sterling","Robert Harper","Yue Niu"],"venue":["POPL","Symposium on Principles of Programming Languages"],"date":null,"url":"niu-2022-a.html","headings":[],"body":""});

@@ -1,0 +1,1 @@
+heliaSearchData("d/fiore-2022-formal",{"id":"fiore-2022-formal","title":"Formal metatheory of second-order abstract syntax","kind":"reference","tags":["abstract-syntax"],"authors":["Dmitrij Szamozvancev","Marcelo P. Fiore"],"venue":["POPL","Symposium on Principles of Programming Languages"],"date":null,"url":"fiore-2022-formal.html","headings":[],"body":""});

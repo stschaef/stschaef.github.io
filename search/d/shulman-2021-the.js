@@ -1,0 +1,1 @@
+heliaSearchData("d/shulman-2021-the",{"id":"shulman-2021-the","title":"The derivator of setoids","kind":"reference","tags":[],"authors":["Michael Shulman"],"venue":["arXiv"],"date":null,"url":"shulman-2021-the.html","headings":[],"body":""});

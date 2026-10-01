@@ -1,0 +1,1 @@
+heliaSearchData("d/shulman-2023-semantics",{"id":"shulman-2023-semantics","title":"Semantics of multimodal adjoint type theory","kind":"reference","tags":["modal-type-theory"],"authors":["Michael Shulman"],"venue":["ENTCS","Electronic Notes in Theoretical Computer Science (now ENTICS)"],"date":null,"url":"shulman-2023-semantics.html","headings":[],"body":""});

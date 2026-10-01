@@ -1,0 +1,1 @@
+heliaSearchData("d/ellis-amsterdam-unit",{"id":"ellis-amsterdam-unit","title":"ELLIS Amsterdam unit","kind":"institution","tags":[],"authors":[],"venue":[],"date":null,"url":"ellis-amsterdam-unit.html","headings":[],"body":""});

@@ -1,0 +1,1 @@
+heliaSearchData("d/curien-2010-the",{"id":"curien-2010-the","title":"The Duality of Computation under Focus","kind":"reference","tags":["focusing"],"authors":["Guillaume Munch-Maccagnoni","Pierre-Louis Curien"],"venue":["IFIP TCS","IFIP International Conference on Theoretical Computer Science"],"date":null,"url":"curien-2010-the.html","headings":[],"body":""});

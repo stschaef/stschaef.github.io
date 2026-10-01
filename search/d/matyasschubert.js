@@ -1,0 +1,1 @@
+heliaSearchData("d/matyasschubert",{"id":"matyasschubert","title":"Mátyás Schubert","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"matyasschubert.html","headings":[],"body":""});

@@ -1,0 +1,1 @@
+heliaSearchData("d/peking-university",{"id":"peking-university","title":"Peking University","kind":"institution","tags":[],"authors":[],"venue":[],"date":null,"url":"peking-university.html","headings":[],"body":""});

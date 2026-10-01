@@ -1,0 +1,1 @@
+heliaSearchData("d/forschungszentrum-julich",{"id":"forschungszentrum-julich","title":"Forschungszentrum Jülich","kind":"institution","tags":[],"authors":[],"venue":[],"date":null,"url":"forschungszentrum-julich.html","headings":[],"body":""});

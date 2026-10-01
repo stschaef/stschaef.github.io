@@ -1,0 +1,1 @@
+heliaSearchData("d/hue-university-of-education",{"id":"hue-university-of-education","title":"Hue University of Education","kind":"institution","tags":[],"authors":[],"venue":[],"date":null,"url":"hue-university-of-education.html","headings":[],"body":""});

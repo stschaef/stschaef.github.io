@@ -1,0 +1,1 @@
+heliaSearchData("d/zhang-2024-domain",{"id":"zhang-2024-domain","title":"Domain Reasoning in TopKAT","kind":"reference","tags":["kleene-algebra"],"authors":["Arthur Azevedo de Amorim","Cheng Zhang","Marco Gaboardi"],"venue":["ICALP","International Colloquium on Automata, Languages and Programming"],"date":null,"url":"zhang-2024-domain.html","headings":[],"body":""});

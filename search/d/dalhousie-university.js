@@ -1,0 +1,1 @@
+heliaSearchData("d/dalhousie-university",{"id":"dalhousie-university","title":"Dalhousie University","kind":"institution","tags":[],"authors":[],"venue":[],"date":null,"url":"dalhousie-university.html","headings":[],"body":""});

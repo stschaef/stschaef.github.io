@@ -1,0 +1,1 @@
+heliaSearchData("d/zacharytatlock",{"id":"zacharytatlock","title":"Zachary Tatlock","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"zacharytatlock.html","headings":[],"body":""});

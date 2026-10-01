@@ -1,0 +1,1 @@
+heliaSearchData("d/fisher-2005-pads",{"id":"fisher-2005-pads","title":"PADS: a domain-specific language for processing ad hoc data","kind":"reference","tags":["parsing"],"authors":["Kathleen Fisher","Robert Gruber"],"venue":["PLDI","Conference on Programming Language Design and Implementation"],"date":null,"url":"fisher-2005-pads.html","headings":[],"body":""});

@@ -1,0 +1,1 @@
+heliaSearchData("d/egolf-2022-verbatim",{"id":"egolf-2022-verbatim","title":"Verbatim++: verified, optimized, and semantically rich lexing with derivatives","kind":"reference","tags":["parsing"],"authors":["Derek Egolf","Kathleen Fisher","Sam Lasser"],"venue":["CPP","Certified Programs and Proofs"],"date":null,"url":"egolf-2022-verbatim.html","headings":[],"body":""});

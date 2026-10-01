@@ -1,0 +1,1 @@
+heliaSearchData("d/johnedwardhhopcroft",{"id":"johnedwardhhopcroft","title":"John Edward H. Hopcroft","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"johnedwardhhopcroft.html","headings":[],"body":""});

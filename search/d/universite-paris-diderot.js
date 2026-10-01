@@ -1,0 +1,1 @@
+heliaSearchData("d/universite-paris-diderot",{"id":"universite-paris-diderot","title":"Université Paris Diderot","kind":"institution","tags":[],"authors":[],"venue":[],"date":null,"url":"universite-paris-diderot.html","headings":[],"body":""});

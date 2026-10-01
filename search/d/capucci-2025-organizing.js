@@ -1,0 +1,1 @@
+heliaSearchData("d/capucci-2025-organizing",{"id":"capucci-2025-organizing","title":"Organizing Physics with Open Energy-Driven Systems","kind":"reference","tags":[],"authors":["David I. Spivak","Matteo Capucci","Owen Lynch"],"venue":["EPTCS","Electronic Proceedings in Theoretical Computer Science"],"date":null,"url":"capucci-2025-organizing.html","headings":[],"body":""});

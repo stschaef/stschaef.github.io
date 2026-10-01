@@ -1,0 +1,1 @@
+heliaSearchData("d/heidelberg-institute-for-theoretical-studies",{"id":"heidelberg-institute-for-theoretical-studies","title":"Heidelberg Institute for Theoretical Studies","kind":"institution","tags":[],"authors":[],"venue":[],"date":null,"url":"heidelberg-institute-for-theoretical-studies.html","headings":[],"body":""});

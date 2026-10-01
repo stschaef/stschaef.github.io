@@ -1,0 +1,1 @@
+heliaSearchData("d/timany-2016-category",{"id":"timany-2016-category","title":"Category Theory in Coq 8.5","kind":"reference","tags":["category-theory"],"authors":["Amin Timany","Bart Jacobs"],"venue":["FSCD","Formal Structures for Computation and Deduction"],"date":null,"url":"timany-2016-category.html","headings":[],"body":""});

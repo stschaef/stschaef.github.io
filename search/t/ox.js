@@ -1,1 +1,1 @@
-heliaSearchData("t/ox",{"oxford":[498,32,214,160,244,160],"oxymoron":[930,1]});
+heliaSearchData("t/ox",{"oxford":[1961,32,892,160,1,160,581,160,482,160,86,160],"oxymoron":[3820,1]});

@@ -1,0 +1,1 @@
+heliaSearchData("d/davies-2026-boundary",{"id":"davies-2026-boundary","title":"Boundary Point Jailbreaking of Black-Box LLMs","kind":"reference","tags":["ai-safety","machine-learning"],"authors":["Edmund Lau","Eric Winsor","Geoffrey Irving","Giorgi Giglemiani","Xander Davies","Yarin Gal"],"venue":["arXiv"],"date":null,"url":"davies-2026-boundary.html","headings":[],"body":""});

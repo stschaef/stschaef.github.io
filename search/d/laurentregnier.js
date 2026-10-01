@@ -1,0 +1,1 @@
+heliaSearchData("d/laurentregnier",{"id":"laurentregnier","title":"Laurent Regnier","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"laurentregnier.html","headings":[],"body":""});

@@ -1,0 +1,1 @@
+heliaSearchData("d/amorim-2026-a",{"id":"amorim-2026-a","title":"A Framework for Coalgebraic Reward-Sensitive Bisimulation (Extended Version)","kind":"reference","tags":["coalgebra"],"authors":["Koko Muroya","Mayuko Kori","Pedro H. Azevedo de Amorim"],"venue":["arXiv"],"date":null,"url":"amorim-2026-a.html","headings":[],"body":""});

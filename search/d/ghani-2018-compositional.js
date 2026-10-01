@@ -1,0 +1,1 @@
+heliaSearchData("d/ghani-2018-compositional",{"id":"ghani-2018-compositional","title":"Compositional Game Theory","kind":"reference","tags":["open-games"],"authors":["Jules Hedges","Neil Ghani","Philipp Zahn","Viktor Winschel"],"venue":["LICS","Symposium on Logic in Computer Science"],"date":null,"url":"ghani-2018-compositional.html","headings":[],"body":""});

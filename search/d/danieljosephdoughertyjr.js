@@ -1,0 +1,1 @@
+heliaSearchData("d/danieljosephdoughertyjr",{"id":"danieljosephdoughertyjr","title":"Daniel Joseph Dougherty, Jr.","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"danieljosephdoughertyjr.html","headings":[],"body":""});

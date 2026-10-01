@@ -7,6 +7,8 @@
 <title>ITP</title>
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Ctext y=%22.9em%22 font-size=%2290%22%3E%F0%9F%8C%BB%3C/text%3E%3C/svg%3E">
 <meta name="generator" content="helia">
+<link rel="alternate" type="application/atom+xml" title="Steven Schaefer" href="feed.xml">
+<link rel="alternate" type="application/feed+json" title="Steven Schaefer" href="feed.json">
 <script src="helia/theme-version.js"></script>
 <script src="theme/folio-early.js"></script>
 <link rel="stylesheet" href="helia/theme.css">
@@ -38,6 +40,48 @@
 <div class="helia-venue-year">
 <section class="helia-heading-section" data-level="1">
 <details open>
+<summary class="helia-heading-summary"><h2 class="helia-heading">2024</h2>
+</summary>
+<div class="helia-heading-body">
+<section class="helia-transclusion" data-entry="seo-2024-correctly" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="seo-2024-correctly"><span class="helia-title">Correctly Compiling Proofs About Programs Without Proving Compilers Correct</span>&nbsp;<a class="helia-slug" href="seo-2024-correctly.html">seo-2024-correctly</a><span class="helia-byline"><span class="helia-entry-link" data-entry="itp">ITP</span> · 2024</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="seo-2024-correctly" data-kind="reference">
+<div class="helia-abstract">Guaranteeing correct compilation is nearly synonymous with compiler verification. However, the correctness guarantees for certified compilers and translation validation can be stronger than we need. While many compilers do have incorrect behavior, even when a compiler bug occurs it may not change the program’s behavior meaningfully with respect to its specification. Many real-world specifications are necessarily partial in that they do not completely specify all of a program’s behavior. While compiler verification and formal methods have had great success for safety-critical systems, there are magnitudes more code, such as math libraries, compiled with incorrect compilers, that would benefit from a guarantee of its partial specification. This paper explores a technique to get guarantees about compiled programs even in the presence of an unverified, or even incorrect, compiler. Our workflow compiles programs, specifications, and proof objects, from an embedded source language and logic to an embedded target language and logic. We implement two simple imperative languages, each with its own Hoare-style program logic, and a system for instantiating proof compilers out of compilers between these two languages that fulfill certain equational conditions in Coq. We instantiate our system on four compilers: one that is incomplete, two that are incorrect, and one that is correct but unverified. We use these instances to compile Hoare proofs for several programs, and we are able to leverage compiled proofs to assist in proofs of larger programs. Our proof compiler system is formally proven sound in Coq. We demonstrate how our approach enables strong target program guarantees even in the presence of incorrect compilation, opening up new options for which proof burdens one might shoulder instead of, or in addition to, compiler correctness.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.4230/lipics.itp.2024.33">DOI</a></span></div>
+</div>
+</div>
+</details>
+</section>
+</div>
+</details>
+</section>
+</div>
+<div class="helia-venue-year">
+<section class="helia-heading-section" data-level="1">
+<details open>
+<summary class="helia-heading-summary"><h2 class="helia-heading">2023</h2>
+</summary>
+<div class="helia-heading-body">
+<section class="helia-transclusion" data-entry="reichel-2023-proof" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="reichel-2023-proof"><span class="helia-title">Proof Repair Infrastructure for Supervised Models: Building a Large Proof Repair Dataset</span>&nbsp;<a class="helia-slug" href="reichel-2023-proof.html">reichel-2023-proof</a><span class="helia-byline"><span class="helia-entry-link" data-entry="itp">ITP</span> · 2023</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="reichel-2023-proof" data-kind="reference">
+<div class="helia-abstract">We report on our efforts building a new, large proof-repair dataset and benchmark suite for the Coq proof assistant. The dataset is made up of Git commits from open-source projects with old and new versions of definitions and proofs aligned across commits. Building this dataset has been a significant undertaking, highlighting a number of challenges and gaps in existing infrastructure. We discuss these challenges and gaps, and we provide recommendations for how the proof assistant community can address them. Our hope is to make it easier to build datasets and benchmark suites so that machine-learning tools for proofs will move to target the tasks that matter most and do so equitably across proof assistants.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.4230/lipics.itp.2023.26">DOI</a></span></div>
+</div>
+</div>
+</details>
+</section>
+</div>
+</details>
+</section>
+</div>
+<div class="helia-venue-year">
+<section class="helia-heading-section" data-level="1">
+<details open>
 <summary class="helia-heading-summary"><h2 class="helia-heading">2019</h2>
 </summary>
 <div class="helia-heading-body">
@@ -49,6 +93,17 @@
 <div class="helia-abstract">An LL(1) parser is a recursive descent algorithm that uses a single token of lookahead to build a grammatical derivation for an input sequence. We present an LL(1) parser generator that, when applied to grammar G, produces an LL(1) parser for G if such a parser exists. We use the Coq Proof Assistant to verify that the generator and the parsers that it produces are sound and complete, and that they terminate on all inputs without using fuel parameters. As a case study, we extract the tool’s source code and use it to generate a JSON parser. The generated parser runs in linear time; it is two to four times slower than an unverified parser for the same grammar.</div>
 <p>Predecessor to <a class="helia-entry-link" href="lasserCoStarVerifiedALL2021.html" data-entry="lasserCoStarVerifiedALL2021">CoStar</a> and <a class="helia-entry-link" href="lasserCoStar2023.html" data-entry="lasserCoStar2023">CoStar++</a>.</p>
 <div class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.4230/lipics.itp.2019.24">DOI</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="ringer-2019-ornaments" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="ringer-2019-ornaments"><span class="helia-title">Ornaments for Proof Reuse in Coq</span>&nbsp;<a class="helia-slug" href="ringer-2019-ornaments.html">ringer-2019-ornaments</a><span class="helia-byline"><span class="helia-entry-link" data-entry="itp">ITP</span> · 2019</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="ringer-2019-ornaments" data-kind="reference">
+<div class="helia-abstract">Ornaments express relations between inductive types with the same inductive structure. We implement fully automatic proof reuse for a particular class of ornaments in a Coq plugin, and show how such a tool can give programmers the rewards of using indexed inductive types while automating away many of the costs. The plugin works directly on Coq code; it is the first ornamentation tool for a non-embedded dependently typed language. It is also the first tool to automatically identify ornaments: To lift a function or proof, the user must provide only the source type, the destination type, and the source function or proof. In taking advantage of the mathematical properties of ornaments, our approach produces faster functions and smaller terms than a more general approach to proof reuse in Coq.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.4230/lipics.itp.2019.26">DOI</a></span></div>
 </div>
 </div>
 </details>

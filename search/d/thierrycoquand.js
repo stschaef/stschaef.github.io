@@ -1,0 +1,1 @@
+heliaSearchData("d/thierrycoquand",{"id":"thierrycoquand","title":"Thierry Coquand","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"thierrycoquand.html","headings":[],"body":""});

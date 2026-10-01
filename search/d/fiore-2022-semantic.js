@@ -1,0 +1,1 @@
+heliaSearchData("d/fiore-2022-semantic",{"id":"fiore-2022-semantic","title":"Semantic analysis of normalisation by evaluation for typed lambda calculus","kind":"reference","tags":["metatheory"],"authors":["Marcelo P. Fiore"],"venue":["MSCS","Mathematical Structures in Computer Science"],"date":null,"url":"fiore-2022-semantic.html","headings":[],"body":""});

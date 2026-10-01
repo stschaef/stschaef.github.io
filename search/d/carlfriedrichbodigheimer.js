@@ -1,0 +1,1 @@
+heliaSearchData("d/carlfriedrichbodigheimer",{"id":"carlfriedrichbodigheimer","title":"Carl-Friedrich Bödigheimer","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"carlfriedrichbodigheimer.html","headings":[],"body":""});

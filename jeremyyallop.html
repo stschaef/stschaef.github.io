@@ -7,6 +7,8 @@
 <title>Jeremy Yallop</title>
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Ctext y=%22.9em%22 font-size=%2290%22%3E%F0%9F%8C%BB%3C/text%3E%3C/svg%3E">
 <meta name="generator" content="helia">
+<link rel="alternate" type="application/atom+xml" title="Steven Schaefer" href="feed.xml">
+<link rel="alternate" type="application/feed+json" title="Steven Schaefer" href="feed.json">
 <script src="helia/theme-version.js"></script>
 <script src="theme/folio-early.js"></script>
 <link rel="stylesheet" href="helia/theme.css">
@@ -40,13 +42,46 @@
 <summary class="helia-heading-summary"><h3 class="helia-heading">Papers</h3>
 </summary>
 <div class="helia-heading-body">
+<section class="helia-transclusion" data-entry="allais-2025-frex" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="allais-2025-frex"><span class="helia-title">Frex: Dependently Typed Algebraic Simplification</span>&nbsp;<a class="helia-slug" href="allais-2025-frex.html">allais-2025-frex</a><span class="helia-byline"><span class="helia-entry-link" data-entry="icfp">ICFP</span> · 2025</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="allais-2025-frex" data-kind="reference">
+<div class="helia-abstract">We present a new design for an algebraic simplification library structured around concepts from universal algebra: theories, models, homomorphisms, and universal properties of free algebras and free extensions of algebras. The library’s dependently typed interface guarantees that both built-in and user-defined simplification modules are terminating, sound, and complete with respect to a well-specified class of equations. We have implemented the design in the Idris 2 and Agda dependently typed programming languages and shown that it supports modular extension to new theories, proof extraction and certification, goal extraction via reflection, and interactive development.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="pdf-url"><a class="helia-link helia-external" href="https://dl.acm.org/doi/pdf/10.1145/3747506">PDF</a></span> · <span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/3747506">DOI</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/journals/pacmpl/AllaisBCKY25">pldb</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="yallop-2023-flap" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="yallop-2023-flap"><span class="helia-title">flap: A Deterministic Parser with Fused Lexing</span>&nbsp;<a class="helia-slug" href="yallop-2023-flap.html">yallop-2023-flap</a><span class="helia-byline"><span class="helia-entry-link" data-entry="pldi">PLDI</span> · 2023</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="yallop-2023-flap" data-kind="reference">
+<div class="helia-abstract">Lexers and parsers are typically defined separately and connected by a token stream. This separate definition is important for modularity and reduces the potential for parsing ambiguity. However, materializing tokens as data structures and case-switching on tokens comes with a cost. We show how to fuse separately-defined lexers and parsers, drastically improving performance without compromising modularity or increasing ambiguity. We propose a deterministic variant of Greibach Normal Form that ensures deterministic parsing with a single token of lookahead and makes fusion strikingly simple, and prove that normalizing context free expressions into the deterministic normal form is semantics-preserving. Our staged parser combinator library, flap, provides a standard interface, but generates specialized token-free code that runs two to six times faster than ocamlyacc on a range of benchmarks.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="pdf-url"><a class="helia-link helia-external" href="https://dl.acm.org/doi/pdf/10.1145/3591269">PDF</a></span> · <span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/3591269">DOI</a></span> · <span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/2304.05276">arXiv</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/journals/pacmpl/YallopXK23">pldb</a></span></div>
+</div>
+</div>
+</details>
+</section>
 <section class="helia-transclusion" data-entry="krishnaswami_typed_2019" data-depth="1">
 <details>
 <summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="krishnaswami_typed_2019"><span class="helia-title">A typed, algebraic approach to parsing</span>&nbsp;<a class="helia-slug" href="krishnaswami_typed_2019.html">krishnaswami_typed_2019</a><span class="helia-byline"><span class="helia-entry-link" data-entry="pldi">PLDI</span> · 2019</span></h2></summary>
 <div class="helia-transclusion-body">
 <div class="helia-reference" data-entry="krishnaswami_typed_2019" data-kind="reference">
 <div class="helia-abstract">In this paper, we recall the definition of the context-free expressions (or µ-regular expressions), an algebraic presentation of the context-free languages. Then, we define a core type system for the context-free expressions which gives a compositional criterion for identifying those context-free expressions which can be parsed unambiguously by predictive algorithms in the style of recursive descent or LL(1). Next, we show how these typed grammar expressions can be used to derive a parser combinator library which both guarantees linear-time parsing with no backtracking and single-token lookahead, and which respects the natural denotational semantics of context-free expressions. Finally, we show how to exploit the type information to write a staged version of this library, which produces dramatic increases in performance, even outperforming code generated by the standard parser generator tool ocamlyacc.</div>
-<div class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/3314221.3314625">DOI</a></span></div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/3314221.3314625">DOI</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/conf/pldi/KrishnaswamiY19">pldb</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="yallop-2018-partially" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="yallop-2018-partially"><span class="helia-title">Partially-static data as free extension of algebras</span>&nbsp;<a class="helia-slug" href="yallop-2018-partially.html">yallop-2018-partially</a><span class="helia-byline"><span class="helia-entry-link" data-entry="icfp">ICFP</span> · 2018</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="yallop-2018-partially" data-kind="reference">
+<div class="helia-abstract">Partially-static data structures are a well-known technique for improving binding times. However, they are often defined in an ad-hoc manner, without a unifying framework to ensure full use of the equations associated with each operation. We present a foundational view of partially-static data structures as free extensions of algebras for suitable equational theories, i.e. the coproduct of an algebra and a free algebra in the category of algebras and their homomorphisms. By precalculating these free extensions, we construct a high-level library of partially-static data representations for common algebraic structures. We demonstrate our library with common use-cases from the literature: string and list manipulation, linear algebra, and numerical simplification.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="pdf-url"><a class="helia-link helia-external" href="https://dl.acm.org/doi/pdf/10.1145/3236795">PDF</a></span> · <span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/3236795">DOI</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/journals/pacmpl/YallopGK18">pldb</a></span></div>
 </div>
 </div>
 </details>

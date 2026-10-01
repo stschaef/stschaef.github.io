@@ -1,0 +1,1 @@
+heliaSearchData("d/ernst-barlach-gymnasium-schonberg",{"id":"ernst-barlach-gymnasium-schonberg","title":"Ernst-Barlach-Gymnasium Schönberg","kind":"institution","tags":[],"authors":[],"venue":[],"date":null,"url":"ernst-barlach-gymnasium-schonberg.html","headings":[],"body":""});

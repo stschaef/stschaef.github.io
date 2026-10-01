@@ -1,0 +1,1 @@
+heliaSearchData("d/christianvoigt",{"id":"christianvoigt","title":"Christian Voigt","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"christianvoigt.html","headings":[],"body":""});

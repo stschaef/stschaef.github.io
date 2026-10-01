@@ -1,0 +1,1 @@
+heliaSearchData("d/philippghaselwarter",{"id":"philippghaselwarter","title":"Philipp G. Haselwarter","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"philippghaselwarter.html","headings":[],"body":""});

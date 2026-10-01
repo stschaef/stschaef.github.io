@@ -1,0 +1,1 @@
+heliaSearchData("d/bolt-2023-bayesian",{"id":"bolt-2023-bayesian","title":"Bayesian open games","kind":"reference","tags":["open-games","probabilistic"],"authors":["Joe Bolt","Jules Hedges","Philipp Zahn"],"venue":["Compositionality"],"date":null,"url":"bolt-2023-bayesian.html","headings":[],"body":""});

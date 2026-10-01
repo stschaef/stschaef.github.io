@@ -1,0 +1,1 @@
+heliaSearchData("d/moon-2023-gradual",{"id":"moon-2023-gradual","title":"Gradual Structure Editing with Obligations","kind":"reference","tags":["live-programming"],"authors":["Andrew Blinn","Cyrus Omar","David Moon"],"venue":["VL/HCC","Symposium on Visual Languages and Human-Centric Computing"],"date":null,"url":"moon-2023-gradual.html","headings":[],"body":""});

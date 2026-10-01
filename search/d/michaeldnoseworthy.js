@@ -1,0 +1,1 @@
+heliaSearchData("d/michaeldnoseworthy",{"id":"michaeldnoseworthy","title":"Michael D. Noseworthy","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"michaeldnoseworthy.html","headings":[],"body":""});

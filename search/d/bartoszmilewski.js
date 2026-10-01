@@ -1,0 +1,1 @@
+heliaSearchData("d/bartoszmilewski",{"id":"bartoszmilewski","title":"Bartosz Milewski","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"bartoszmilewski.html","headings":[],"body":""});

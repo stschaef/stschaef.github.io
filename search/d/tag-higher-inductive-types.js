@@ -1,0 +1,1 @@
+heliaSearchData("d/tag-higher-inductive-types",{"id":"tag-higher-inductive-types","title":"higher-inductive-types","kind":"tag","tags":[],"authors":[],"venue":[],"date":null,"url":"tag-higher-inductive-types.html","headings":[],"body":""});

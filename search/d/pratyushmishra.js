@@ -1,0 +1,1 @@
+heliaSearchData("d/pratyushmishra",{"id":"pratyushmishra","title":"Pratyush Mishra","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"pratyushmishra.html","headings":[],"body":""});

@@ -1,0 +1,1 @@
+heliaSearchData("d/heunen-2017-a",{"id":"heunen-2017-a","title":"A convenient category for higher-order probability theory","kind":"reference","tags":["probabilistic"],"authors":["Chris Heunen","Hongseok Yang","Ohad Kammar","Sam Staton"],"venue":["LICS","Symposium on Logic in Computer Science"],"date":null,"url":"heunen-2017-a.html","headings":[],"body":""});

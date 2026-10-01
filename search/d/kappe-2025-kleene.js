@@ -1,0 +1,1 @@
+heliaSearchData("d/kappe-2025-kleene",{"id":"kappe-2025-kleene","title":"Kleene Algebra","kind":"reference","tags":["kleene-algebra"],"authors":["Alexandra Silva","Jana Wagemaker","Tobias Kappé"],"venue":["arXiv"],"date":null,"url":"kappe-2025-kleene.html","headings":[],"body":""});

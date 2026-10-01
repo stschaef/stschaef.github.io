@@ -1,0 +1,1 @@
+heliaSearchData("d/hosseinrastgoftar",{"id":"hosseinrastgoftar","title":"Hossein Rastgoftar","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"hosseinrastgoftar.html","headings":[],"body":""});

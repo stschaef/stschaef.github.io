@@ -1,0 +1,1 @@
+heliaSearchData("d/tag-refinement-types",{"id":"tag-refinement-types","title":"refinement-types","kind":"tag","tags":[],"authors":[],"venue":[],"date":null,"url":"tag-refinement-types.html","headings":[],"body":""});

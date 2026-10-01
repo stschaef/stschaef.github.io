@@ -1,0 +1,1 @@
+heliaSearchData("d/utah-state-university",{"id":"utah-state-university","title":"Utah State University","kind":"institution","tags":[],"authors":[],"venue":[],"date":null,"url":"utah-state-university.html","headings":[],"body":""});

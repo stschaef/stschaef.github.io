@@ -1,0 +1,1 @@
+heliaSearchData("d/university-of-regina",{"id":"university-of-regina","title":"University of Regina","kind":"institution","tags":[],"authors":[],"venue":[],"date":null,"url":"university-of-regina.html","headings":[],"body":""});

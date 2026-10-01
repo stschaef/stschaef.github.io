@@ -1,0 +1,1 @@
+heliaSearchData("d/georgedrettakis",{"id":"georgedrettakis","title":"George Drettakis","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"georgedrettakis.html","headings":[],"body":""});

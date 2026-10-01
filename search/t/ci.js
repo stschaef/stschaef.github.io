@@ -1,1 +1,1 @@
-heliaSearchData("t/ci",{"cicm":[190,160],"citation":[930,1]});
+heliaSearchData("t/ci",{"cicm":[618,32,145,160,2939,32],"cindy":[764,128,2669,32],"cindyramirez":[764,32],"circle":[504,128,1741,128],"circuit":[621,128],"circular":[703,128],"citation":[3820,1],"cite":[1763,160,2141,160],"city":[765,160,285,160]});

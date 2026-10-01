@@ -1,0 +1,1 @@
+heliaSearchData("d/tag-modal-type-theory",{"id":"tag-modal-type-theory","title":"modal-type-theory","kind":"tag","tags":[],"authors":[],"venue":[],"date":null,"url":"tag-modal-type-theory.html","headings":[],"body":""});

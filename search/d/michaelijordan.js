@@ -1,0 +1,1 @@
+heliaSearchData("d/michaelijordan",{"id":"michaelijordan","title":"Michael I. Jordan","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"michaelijordan.html","headings":[],"body":""});

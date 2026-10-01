@@ -1,0 +1,1 @@
+heliaSearchData("d/wood-2022-a",{"id":"wood-2022-a","title":"A Framework for Substructural Type Systems","kind":"reference","tags":["substructural"],"authors":["James Wood","Robert Atkey"],"venue":["ESOP","European Symposium on Programming"],"date":null,"url":"wood-2022-a.html","headings":[],"body":""});

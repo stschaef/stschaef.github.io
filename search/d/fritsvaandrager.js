@@ -1,0 +1,1 @@
+heliaSearchData("d/fritsvaandrager",{"id":"fritsvaandrager","title":"Frits Vaandrager","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"fritsvaandrager.html","headings":[],"body":""});

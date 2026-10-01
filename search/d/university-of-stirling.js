@@ -1,0 +1,1 @@
+heliaSearchData("d/university-of-stirling",{"id":"university-of-stirling","title":"University of Stirling","kind":"institution","tags":[],"authors":[],"venue":[],"date":null,"url":"university-of-stirling.html","headings":[],"body":""});

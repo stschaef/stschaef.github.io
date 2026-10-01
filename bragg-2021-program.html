@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>Program Sketching by Automatically Generating Mocks from Tests</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Ctext y=%22.9em%22 font-size=%2290%22%3E%F0%9F%8C%BB%3C/text%3E%3C/svg%3E">
+<meta name="generator" content="helia">
+<link rel="alternate" type="application/atom+xml" title="Steven Schaefer" href="feed.xml">
+<link rel="alternate" type="application/feed+json" title="Steven Schaefer" href="feed.json">
+<script src="helia/theme-version.js"></script>
+<script src="theme/folio-early.js"></script>
+<link rel="stylesheet" href="helia/theme.css">
+<link rel="stylesheet" href="helia/highlight.css">
+<link rel="stylesheet" href="helia/search.css">
+<link rel="stylesheet" href="theme/katex.css">
+<link rel="stylesheet" href="theme/recipe.css">
+<link rel="stylesheet" href="theme/site.css">
+<link rel="stylesheet" href="theme/folio.css">
+<script defer src="helia/runtime.js"></script>
+<script defer src="helia/search.js"></script>
+<script defer src="theme/glyphcraft.js"></script>
+<script defer src="theme/glyphart.js"></script>
+<script defer src="theme/glyphgen.js"></script>
+<script defer src="theme/ornament.js"></script>
+<script defer src="theme/folio.js"></script>
+<script defer src="theme/portrait.js"></script>
+<script type="application/json" id="helia-widgets">{"helia-cite-formats":"widgets/helia-cite-formats-a3294ac7.js"}</script>
+<link rel="modulepreload" href="widgets/helia-cite-formats-a3294ac7.js">
+<script type="module" src="widgets/runtime.js"></script>
+</head>
+<body>
+<nav class="helia-topbar"><a class="helia-home" href="home.html">Steven Schaefer</a><ul class="helia-nav-links"><li><a href="stevenschaefer.html">About Me</a></li><li><a href="research.html">Research</a></li><li><a href="new.html">New</a></li></ul><button type="button" class="helia-search-button" aria-label="Search (/ or Ctrl+K)" aria-haspopup="dialog"><span class="helia-search-icon">⌕</span><span class="helia-search-label">Search</span><kbd class="helia-search-key">/</kbd></button></nav>
+<div class="helia-page" data-kind="reference">
+<article class="helia-article">
+<header class="helia-header" data-entry="bragg-2021-program" data-kind="reference">
+<h2 class="helia-heading"><span class="helia-taxon">Reference.</span> Program Sketching by Automatically Generating Mocks from Tests</h2>
+<div class="helia-meta"><span class="helia-author"><a class="helia-entry-link" href="nateffbragg.html" data-entry="nateffbragg">Nate F. F. Bragg</a>, <a class="helia-entry-link" href="jeffreysfoster.html" data-entry="jeffreysfoster">Jeffrey S. Foster</a>, <a class="helia-entry-link" href="codyroux.html" data-entry="codyroux">Cody Roux</a>, <a class="helia-entry-link" href="armandosolarlezama.html" data-entry="armandosolarlezama">Armando Solar-Lezama</a></span> · <span class="helia-byline"><a class="helia-entry-link" href="cav.html" data-entry="cav">CAV</a> · 2021</span> · <span class="helia-tags"><span class="helia-tag" data-tag="program-synthesis"><a class="helia-entry-link" href="tag-program-synthesis.html" data-entry="tag-program-synthesis">program-synthesis</a></span></span> · <span class="helia-entry-links"><span class="helia-entry-link" data-field="pdf-url"><a class="helia-link helia-external" href="https://link.springer.com/content/pdf/10.1007/978-3-030-81685-8_38.pdf">PDF</a></span> · <span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-030-81685-8_38">DOI</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/conf/cav/BraggFRS21">pldb</a></span></span></div>
+</header>
+<div class="helia-body">
+<div class="helia-abstract">Sketch is a popular program synthesis tool that solves for unknowns in a sketch or partial program. However, while Sketch is powerful, it does not directly support modular synthesis of dependencies, potentially limiting scalability. In this paper, we introduce Sketcham, a new technique that modularizes a regular sketch by automatically generating mocks —functions that approximate the behavior of complete implementations—from the sketch’s test suite. For example, if the function f originally calls g , Sketcham creates a mock <span class="helia-math helia-math-inline helia-mathml"><math><msub><mi>𝑔</mi><mi>𝑚</mi></msub></math></span> from g ’s tests and augments the sketch with a version of f that calls <span class="helia-math helia-math-inline helia-mathml"><math><msub><mi>𝑔</mi><mi>𝑚</mi></msub></math></span> . This change allows the unknowns in f and g to be solved separately, enabling modular synthesis with no extra work from the Sketch user. We evaluated Sketcham on ten benchmarks, performing enough runs to show at a 95% confidence level that Sketcham improves median synthesis performance on six of our ten benchmarks by a factor of up to 5× compared to plain Sketch, including one benchmark that times out on Sketch, while exhibiting similar performance on the remaining four. Our results show that Sketcham can achieve modular synthesis by automatically generating mocks from tests.</div>
+</div>
+<div class="helia-cite helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><h3 class="helia-heading">Cite</h3>
+</summary>
+<div class="helia-group-body">
+<div class="helia-widget" data-widget="helia-cite-formats" data-props="{&quot;key&quot;:&quot;bragg-2021-program&quot;,&quot;bibtex&quot;:&quot;@inbook{bragg-2021-program, title={Program Sketching by Automatically Generating Mocks from Tests}, ISBN={9783030816858}, ISSN={1611-3349}, url={http://dx.doi.org/10.1007/978-3-030-81685-8_38}, DOI={10.1007/978-3-030-81685-8_38}, booktitle={Computer Aided Verification}, publisher={Springer International Publishing}, author={Bragg, Nate F. F. and Foster, Jeffrey S. and Roux, Cody and Solar-Lezama, Armando}, year={2021}, pages={808–831} }&quot;,&quot;bib-file&quot;:&quot;bragg-2021-program.bib&quot;,&quot;hayagriva&quot;:&quot;bragg-2021-program:\n  type: chapter\n  title: Program Sketching by Automatically Generating Mocks from Tests\n  author:\n  - Bragg, Nate F. F.\n  - Foster, Jeffrey S.\n  - Roux, Cody\n  - Solar-Lezama, Armando\n  date: 2021\n  page-range: 808-831\n  url: http://dx.doi.org/10.1007/978-3-030-81685-8_38\n  serial-number:\n    doi: 10.1007/978-3-030-81685-8_38\n    isbn: &#39;9783030816858&#39;\n    issn: 1611-3349\n  parent:\n    type: book\n    title: Computer Aided Verification\n    publisher: Springer International Publishing\n&quot;,&quot;yml-file&quot;:&quot;bragg-2021-program.yml&quot;}"><div class="helia-cite-key" data-copy="@bragg-2021-program" data-copy-label="citation key"><span class="helia-bib-key">Cite as</span> <code class="helia-raw-inline">@bragg-2021-program</code> (helia, typst) · <code class="helia-raw-inline">\cite{bragg-2021-program}</code> (LaTeX)</div>
+<div class="helia-cite-format helia-collapsible" data-format="bibtex" data-copy="true" data-copy-label="BibTeX">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">BibTeX</span></summary>
+<div class="helia-group-body">
+<details class="helia-code" open><summary class="helia-code-summary"><span class="helia-code-lang">bibtex</span> · <span class="helia-code-lines">1 line</span></summary><pre class="helia-raw"><code class="language-bibtex"><span class="hl-text hl-bibtex"><span class="hl-meta hl-entry hl-braces hl-bibtex"><span class="hl-keyword hl-other hl-entry-type hl-bibtex"><span class="hl-punctuation hl-definition hl-keyword hl-bibtex">@</span>inbook</span><span class="hl-punctuation hl-section hl-entry hl-begin hl-bibtex">{</span><span class="hl-entity hl-name hl-type hl-entry-key hl-bibtex">bragg-2021-program</span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">title</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>Program Sketching by Automatically Generating Mocks from Tests<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">ISBN</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>9783030816858<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">ISSN</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>1611-3349<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">url</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>http://dx.doi.org/10.1007/978-3-030-81685-8_38<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">DOI</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>10.1007/978-3-030-81685-8_38<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">booktitle</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>Computer Aided Verification<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">publisher</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>Springer International Publishing<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">author</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>Bragg, Nate F. F. and Foster, Jeffrey S. and Roux, Cody and Solar-Lezama, Armando<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">year</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>2021<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">pages</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>808–831<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span> </span><span class="hl-punctuation hl-section hl-entry hl-end hl-bibtex">}</span></span></span></code></pre></details>
+</div>
+</details>
+</div>
+<div class="helia-cite-format helia-collapsible" data-format="hayagriva" data-copy="true" data-copy-label="hayagriva YAML">
+<details>
+<summary class="helia-group-summary"><span class="helia-group-title">hayagriva YAML (typst)</span></summary>
+<div class="helia-group-body">
+<details class="helia-code" open><summary class="helia-code-summary"><span class="helia-code-lang">yaml</span> · <span class="helia-code-lines">19 lines</span></summary><pre class="helia-raw"><code class="language-yaml"><span class="hl-source hl-yaml"><span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">bragg-2021-program</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">type</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">chapter</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">title</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Program Sketching by Automatically Generating Mocks from Tests</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">author</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Bragg, Nate F. F.</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Foster, Jeffrey S.</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Roux, Cody</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Solar-Lezama, Armando</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">date</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-constant hl-numeric hl-integer hl-decimal hl-yaml">2021</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">page-range</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">808-831</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">url</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">http://dx.doi.org/10.1007/978-3-030-81685-8_38</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">serial-number</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">doi</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">10.1007/978-3-030-81685-8_38</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">isbn</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-quoted hl-single hl-yaml"><span class="hl-punctuation hl-definition hl-string hl-begin hl-yaml">&#39;</span>9783030816858<span class="hl-punctuation hl-definition hl-string hl-end hl-yaml">&#39;</span></span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">issn</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">1611-3349</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">parent</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">type</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">book</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">title</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Computer Aided Verification</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">publisher</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Springer International Publishing</span>
+</span></code></pre></details>
+</div>
+</details>
+</div>
+<div class="helia-cite-files">Download: <a class="helia-link" href="bragg-2021-program.bib">bragg-2021-program.bib</a> · <a class="helia-link" href="bragg-2021-program.yml">bragg-2021-program.yml</a></div>
+</div>
+</div>
+</details>
+</div>
+<div class="helia-reference-cites helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">Cites 31 works (0 here)</span></summary>
+<div class="helia-group-body">
+<div class="helia-reference-cites-away helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">External (31)</span></summary>
+<div class="helia-group-body">
+<ul>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3324884.3418927">A framework for automated test mocking of mobile apps</a> (2020)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3385412.3386027">Reconciling enumerative and deductive program synthesis</a> (2020)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-030-53291-8_29">Synthesizing JIT Compilers for In-Kernel DSLs</a> (2020)</li>
+<li>The Sketch Programmers Manual (2020)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/s10009-019-00512-8">EdSketch: execution-driven sketching for Java</a> (2019)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3360558">Program synthesis with algebraic library specifications</a> (2019)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3371120">Synthesizing replacement classes</a> (2019)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3290386">FrAngel: component-based synthesis with control structures</a> (2019)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-030-11245-5_2">Program Synthesis with Equivalence Reduction</a> (2019)</li>
+<li><a class="helia-link helia-external" href="https://arxiv.org/abs/1707.09627">Learning to Infer Graphics Programs from Hand-Drawn Images</a> (2018)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-662-54577-5_14">Synthesis of Recursive ADT Transformations from Reusable Templates</a> (2017)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-662-54577-5_17">Connecting Program Synthesis and Reachability: Automatic Program Repair Using Test-Input Generation</a> (2017)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-319-40970-2_19">Synthesis of Domain Specific CNF Encoders for Bit-Vector Solvers</a> (2016)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/2884781.2884856">Synthesizing framework models for symbolic execution</a> (2016)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/2908080.2908093">Program synthesis from polymorphic refinement types</a> (2016)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/2786805.2803189">JSketch: sketching for Java</a> (2015)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-642-54013-4_22">Modular Synthesis of Sketches Using Models</a> (2014)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/2396761.2398507">Using program synthesis for social recommendations</a> (2012)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/1993498.1993506">Synthesis of loop-free programs</a> (2011)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-642-14203-1_27">Linear Quantifier Elimination as an Abstract Decision Procedure</a> (2010)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/1706299.1706339">Programming with angelic nondeterminism</a> (2010)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/1806596.1806632">Complete functional synthesis</a> (2010)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-642-10672-9_3">The Sketching Approach to Program Synthesis</a> (2009)</li>
+<li>Program synthesis by sketching (2008)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/1297105.1297033">Statistically rigorous java performance evaluation</a> (2007)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/1250734.1250754">Sketching stencils</a> (2007)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-540-74113-8">The Calculus of Computation: Decision Procedures with Applications to Verification</a> (2007)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/1168857.1168907">Combinatorial sketching for finite programs</a> (2006)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/1101908.1101927">Automatic test factoring for java</a> (2005)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/359842.359859">A fast string searching algorithm</a> (1977)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1093/biomet/26.4.404">THE USE OF CONFIDENCE OR FIDUCIAL LIMITS ILLUSTRATED IN THE CASE OF THE BINOMIAL</a> (1934)</li>
+</ul>
+</div>
+</details>
+</div>
+</div>
+</details>
+</div>
+</article>
+<div class="helia-identity"><span class="helia-id">bragg-2021-program</span> <span class="helia-kind">reference</span> <span class="helia-path">entries/refs/bragg-2021-program/bragg-2021-program.hel</span></div>
+</div>
+</body>
+</html>

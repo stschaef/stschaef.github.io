@@ -1,0 +1,1 @@
+heliaSearchData("d/houfavonia-2023-an",{"id":"houfavonia-2023-an","title":"An Order-Theoretic Analysis of Universe Polymorphism","kind":"reference","tags":["universes"],"authors":["Carlo Angiuli","Kuen-Bang Hou (Favonia)","Reed Mullanix"],"venue":["POPL","Symposium on Principles of Programming Languages"],"date":null,"url":"houfavonia-2023-an.html","headings":[],"body":""});

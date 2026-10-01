@@ -1,0 +1,1 @@
+heliaSearchData("d/donaldarthurnorman",{"id":"donaldarthurnorman","title":"Donald Arthur Norman","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"donaldarthurnorman.html","headings":[],"body":""});

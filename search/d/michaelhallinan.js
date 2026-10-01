@@ -1,0 +1,1 @@
+heliaSearchData("d/michaelhallinan",{"id":"michaelhallinan","title":"Michael Hallinan","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"michaelhallinan.html","headings":[],"body":""});

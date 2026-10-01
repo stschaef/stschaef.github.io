@@ -1,0 +1,1 @@
+heliaSearchData("d/danielkhashabi",{"id":"danielkhashabi","title":"Daniel Khashabi","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"danielkhashabi.html","headings":[],"body":""});

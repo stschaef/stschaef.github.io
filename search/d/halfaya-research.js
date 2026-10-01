@@ -1,0 +1,1 @@
+heliaSearchData("d/halfaya-research",{"id":"halfaya-research","title":"Halfaya Research","kind":"institution","tags":[],"authors":[],"venue":[],"date":null,"url":"halfaya-research.html","headings":[],"body":""});

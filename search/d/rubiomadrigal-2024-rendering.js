@@ -1,0 +1,1 @@
+heliaSearchData("d/rubiomadrigal-2024-rendering",{"id":"rubiomadrigal-2024-rendering","title":"Rendering string diagrams recursively","kind":"reference","tags":["string-diagrams"],"authors":["Celia Rubio-Madrigal","Jules Hedges"],"venue":["arXiv"],"date":null,"url":"rubiomadrigal-2024-rendering.html","headings":[],"body":""});

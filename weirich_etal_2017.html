@@ -7,6 +7,8 @@
 <title>A Specification for Dependent Types in Haskell</title>
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Ctext y=%22.9em%22 font-size=%2290%22%3E%F0%9F%8C%BB%3C/text%3E%3C/svg%3E">
 <meta name="generator" content="helia">
+<link rel="alternate" type="application/atom+xml" title="Steven Schaefer" href="feed.xml">
+<link rel="alternate" type="application/feed+json" title="Steven Schaefer" href="feed.json">
 <script src="helia/theme-version.js"></script>
 <script src="theme/folio-early.js"></script>
 <link rel="stylesheet" href="helia/theme.css">
@@ -34,7 +36,7 @@
 <article class="helia-article">
 <header class="helia-header" data-entry="weirich_etal_2017" data-kind="reference">
 <h2 class="helia-heading"><span class="helia-taxon">Reference.</span> A Specification for Dependent Types in Haskell</h2>
-<div class="helia-meta"><span class="helia-author"><a class="helia-entry-link" href="stephanieweirich.html" data-entry="stephanieweirich">Stephanie Weirich</a>, <a class="helia-entry-link" href="antoinevoizard.html" data-entry="antoinevoizard">Antoine Voizard</a>, <a class="helia-entry-link" href="pedrohaamorim.html" data-entry="pedrohaamorim">Pedro H. Azevedo de Amorim</a>, <a class="helia-entry-link" href="richardeisenberg.html" data-entry="richardeisenberg">Richard A. Eisenberg</a></span> · <span class="helia-byline"><a class="helia-entry-link" href="icfp.html" data-entry="icfp">ICFP</a> · 2017</span> · <span class="helia-tags"><span class="helia-tag" data-tag="type-theory"><span class="helia-entry-link helia-unavailable">type-theory</span></span> <span class="helia-tag" data-tag="haskell"><span class="helia-entry-link helia-unavailable">haskell</span></span></span> · <span class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/3110275">DOI</a></span></span></div>
+<div class="helia-meta"><span class="helia-author"><a class="helia-entry-link" href="stephanieweirich.html" data-entry="stephanieweirich">Stephanie Weirich</a>, <a class="helia-entry-link" href="antoinevoizard.html" data-entry="antoinevoizard">Antoine Voizard</a>, <a class="helia-entry-link" href="pedrohaamorim.html" data-entry="pedrohaamorim">Pedro H. Azevedo de Amorim</a>, <a class="helia-entry-link" href="richardeisenberg.html" data-entry="richardeisenberg">Richard A. Eisenberg</a></span> · <span class="helia-byline"><a class="helia-entry-link" href="icfp.html" data-entry="icfp">ICFP</a> · 2017</span> · <span class="helia-tags"><span class="helia-tag" data-tag="type-theory"><a class="helia-entry-link" href="tag-type-theory.html" data-entry="tag-type-theory">type-theory</a></span> <span class="helia-tag" data-tag="haskell"><a class="helia-entry-link" href="tag-haskell.html" data-entry="tag-haskell">haskell</a></span></span> · <span class="helia-entry-links"><span class="helia-entry-link" data-field="pdf-url"><a class="helia-link helia-external" href="http://dl.acm.org/ft_gateway.cfm?id=3110275&amp;type=pdf">PDF</a></span> · <span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/3110275">DOI</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/journals/pacmpl/WeirichVAE17">pldb</a></span></span></div>
 </header>
 <div class="helia-body">
 </div>
@@ -95,16 +97,60 @@
 </div>
 </details>
 </div>
+<div class="helia-reference-cited-by helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">Cited by (1)</span></summary>
+<div class="helia-group-body">
+<section class="helia-transclusion" data-entry="chan-2025-internalizing" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="chan-2025-internalizing"><span class="helia-title">Internalizing Extensions in Lattices of Type Theories</span>&nbsp;<a class="helia-slug" href="chan-2025-internalizing.html">chan-2025-internalizing</a><span class="helia-byline"><span class="helia-entry-link" data-entry="arxiv">arXiv</span> · 2025</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="chan-2025-internalizing" data-kind="reference">
+<div class="helia-abstract">Many proof assistants allow the use of features and axioms that increase their expressive power. However, these extensions must be used with care, as some combinations are known to lead to logical inconsistencies. Therefore, proof assistants include mechanisms that track which extensions are used in a proof development or module, ensuring that incompatible extensions are not used simultaneously. Unfortunately, existing extension tracking mechanisms are external to the type system. This means that we cannot specify precisely which extensions a definition depends on. Having the ability to write more precise specifications means we are not picking an overapproximation of the extensions needed, which prevents reusing definitions in the presence of incompatible extensions. Furthermore, we cannot refer to definitions that use incompatible extensions even if they are never used in inconsistent ways. The reasoning principles of one extension therefore cannot be used as a metatheory to reason about the properties of an incompatible extension. In this report, I explore the use of the Dependent Calculus of Indistinguishability (DCOI) by Liu et al. for extension tracking. DCOI is a dependent type system with dependency tracking, where terms and variables are assigned dependency levels alongside their types. These dependency levels form a lattice that describes which levels are permitted to access what. To instead track extensions, each set of extensions would correspond to a dependency level, and the lattice would describe how extensions are permitted to interact.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/2510.26839">arXiv</a></span></div>
+</div>
+</div>
+</details>
+</section>
+</div>
+</details>
+</div>
 <div class="helia-reference-cites helia-collapsible">
 <details open>
-<summary class="helia-group-summary"><span class="helia-group-title">Cites 61 works (0 here)</span></summary>
+<summary class="helia-group-summary"><span class="helia-group-title">Cites 61 works (2 here)</span></summary>
 <div class="helia-group-body">
+<div class="helia-reference-cites-here helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">With notes (2)</span></summary>
+<div class="helia-group-body">
+<section class="helia-transclusion" data-entry="angiuli-2017-computational" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="angiuli-2017-computational"><span class="helia-title">Computational higher-dimensional type theory</span>&nbsp;<a class="helia-slug" href="angiuli-2017-computational.html">angiuli-2017-computational</a><span class="helia-byline"><span class="helia-entry-link" data-entry="popl">POPL</span> · 2017</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="angiuli-2017-computational" data-kind="reference">
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="pdf-url"><a class="helia-link helia-external" href="https://dl.acm.org/doi/pdf/10.1145/3009837.3009861">PDF</a></span> · <span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/3009837.3009861">DOI</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/conf/popl/AngiuliHW17">pldb</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="mcbride-2002-elimination" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="mcbride-2002-elimination"><span class="helia-title">Elimination with a Motive</span>&nbsp;<a class="helia-slug" href="mcbride-2002-elimination.html">mcbride-2002-elimination</a><span class="helia-byline"><span class="helia-entry-link" data-entry="types">TYPES</span> · 2002</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="mcbride-2002-elimination" data-kind="reference">
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1007/3-540-45842-5_13">DOI</a></span></div>
+</div>
+</div>
+</details>
+</section>
+</div>
+</details>
+</div>
 <div class="helia-reference-cites-away helia-collapsible">
 <details open>
-<summary class="helia-group-summary"><span class="helia-group-title">External (61)</span></summary>
+<summary class="helia-group-summary"><span class="helia-group-title">External (59)</span></summary>
 <div class="helia-group-body">
 <ul>
-<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3009837.3009861">Computational higher-dimensional type theory</a> (2017)</li>
 <li><a class="helia-link helia-external" href="https://doi.org/10.1145/3062341.3062357">Levity polymorphism</a> (2017)</li>
 <li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-662-49498-1_10">Visible Type Application</a> (2016)</li>
 <li><a class="helia-link helia-external" href="https://doi.org/10.1017/s0956796817000053">The Calculus of Dependent Lambda Eliminations</a> (2016)</li>
@@ -145,7 +191,6 @@
 <li><a class="helia-link helia-external" href="https://doi.org/10.1016/j.entcs.2007.11.011">A logical framework with explicit conversions</a> (2004)</li>
 <li>The Coq proof assistant reference manual, version 8.0 (2004)</li>
 <li>First-Class Phantom Types (2003)</li>
-<li><a class="helia-link helia-external" href="https://doi.org/10.1007/3-540-45842-5_13">Elimination with a Motive</a> (2002)</li>
 <li><a class="helia-link helia-external" href="https://doi.org/10.1007/3-540-45413-6_27">The Implicit Calculus of Constructions Extending Pure Type Systems with an Intersection Type Binder and Subtyping</a> (2001)</li>
 <li><a class="helia-link helia-external" href="https://doi.org/10.1109/lics.2001.932499">Intensionality, extensionality, and proof irrelevance in modal type theory</a> (2001)</li>
 <li><a class="helia-link helia-external" href="https://doi.org/10.1145/345099.345100">Local type inference</a> (2000)</li>

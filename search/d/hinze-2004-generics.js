@@ -1,0 +1,1 @@
+heliaSearchData("d/hinze-2004-generics",{"id":"hinze-2004-generics","title":"Generics for the masses","kind":"reference","tags":["generic-programming"],"authors":["Ralf Hinze"],"venue":["ICFP","International Conference on Functional Programming"],"date":null,"url":"hinze-2004-generics.html","headings":[],"body":""});

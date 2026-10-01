@@ -1,0 +1,1 @@
+heliaSearchData("d/shiraz-university",{"id":"shiraz-university","title":"Shiraz University","kind":"institution","tags":[],"authors":[],"venue":[],"date":null,"url":"shiraz-university.html","headings":[],"body":""});

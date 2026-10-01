@@ -1,0 +1,1 @@
+heliaSearchData("d/maximelegoupil",{"id":"maximelegoupil","title":"Maxime Legoupil","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"maximelegoupil.html","headings":[],"body":""});

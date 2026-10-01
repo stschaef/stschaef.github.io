@@ -1,0 +1,1 @@
+heliaSearchData("d/tag-kleene-algebra",{"id":"tag-kleene-algebra","title":"kleene-algebra","kind":"tag","tags":[],"authors":[],"venue":[],"date":null,"url":"tag-kleene-algebra.html","headings":[],"body":""});

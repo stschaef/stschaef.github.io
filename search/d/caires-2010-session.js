@@ -1,0 +1,1 @@
+heliaSearchData("d/caires-2010-session",{"id":"caires-2010-session","title":"Session Types as Intuitionistic Linear Propositions","kind":"reference","tags":["linear-logic","session-types"],"authors":["Frank Pfenning","Luís Caires"],"venue":["CONCUR","International Conference on Concurrency Theory"],"date":null,"url":"caires-2010-session.html","headings":[],"body":""});

@@ -1,0 +1,1 @@
+heliaSearchData("d/zeilberger-2008-on",{"id":"zeilberger-2008-on","title":"On the unity of duality","kind":"reference","tags":["focusing"],"authors":["Noam Zeilberger"],"venue":["APAL","Annals of Pure and Applied Logic"],"date":null,"url":"zeilberger-2008-on.html","headings":[],"body":""});

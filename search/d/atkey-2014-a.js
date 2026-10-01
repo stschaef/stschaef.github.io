@@ -1,0 +1,1 @@
+heliaSearchData("d/atkey-2014-a",{"id":"atkey-2014-a","title":"A relationally parametric model of dependent type theory","kind":"reference","tags":["parametricity","type-theory"],"authors":["Neil Ghani","Patricia Johann","Robert Atkey"],"venue":["POPL","Symposium on Principles of Programming Languages"],"date":null,"url":"atkey-2014-a.html","headings":[],"body":""});

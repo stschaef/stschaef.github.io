@@ -1,0 +1,1 @@
+heliaSearchData("d/zhou-2024-authoring",{"id":"zhou-2024-authoring","title":"Authoring Games with Tile Rewrite Rule Behavior Trees","kind":"reference","tags":["game-design"],"authors":["Chris Martens","Jiayi Zhou","Seth Cooper"],"venue":["FDG","International Conference on the Foundations of Digital Games"],"date":null,"url":"zhou-2024-authoring.html","headings":[],"body":""});

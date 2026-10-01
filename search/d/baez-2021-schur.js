@@ -1,0 +1,1 @@
+heliaSearchData("d/baez-2021-schur",{"id":"baez-2021-schur","title":"Schur Functors and Categorified Plethysm","kind":"reference","tags":["category-theory"],"authors":["Joe Moeller","John C. Baez","Todd Trimble"],"venue":["arXiv"],"date":null,"url":"baez-2021-schur.html","headings":[],"body":""});

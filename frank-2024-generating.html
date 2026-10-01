@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>Generating Well-Typed Terms That Are Not “Useless”</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Ctext y=%22.9em%22 font-size=%2290%22%3E%F0%9F%8C%BB%3C/text%3E%3C/svg%3E">
+<meta name="generator" content="helia">
+<link rel="alternate" type="application/atom+xml" title="Steven Schaefer" href="feed.xml">
+<link rel="alternate" type="application/feed+json" title="Steven Schaefer" href="feed.json">
+<script src="helia/theme-version.js"></script>
+<script src="theme/folio-early.js"></script>
+<link rel="stylesheet" href="helia/theme.css">
+<link rel="stylesheet" href="helia/highlight.css">
+<link rel="stylesheet" href="helia/search.css">
+<link rel="stylesheet" href="theme/katex.css">
+<link rel="stylesheet" href="theme/recipe.css">
+<link rel="stylesheet" href="theme/site.css">
+<link rel="stylesheet" href="theme/folio.css">
+<script defer src="helia/runtime.js"></script>
+<script defer src="helia/search.js"></script>
+<script defer src="theme/glyphcraft.js"></script>
+<script defer src="theme/glyphart.js"></script>
+<script defer src="theme/glyphgen.js"></script>
+<script defer src="theme/ornament.js"></script>
+<script defer src="theme/folio.js"></script>
+<script defer src="theme/portrait.js"></script>
+<script type="application/json" id="helia-widgets">{"helia-cite-formats":"widgets/helia-cite-formats-a3294ac7.js"}</script>
+<link rel="modulepreload" href="widgets/helia-cite-formats-a3294ac7.js">
+<script type="module" src="widgets/runtime.js"></script>
+</head>
+<body>
+<nav class="helia-topbar"><a class="helia-home" href="home.html">Steven Schaefer</a><ul class="helia-nav-links"><li><a href="stevenschaefer.html">About Me</a></li><li><a href="research.html">Research</a></li><li><a href="new.html">New</a></li></ul><button type="button" class="helia-search-button" aria-label="Search (/ or Ctrl+K)" aria-haspopup="dialog"><span class="helia-search-icon">⌕</span><span class="helia-search-label">Search</span><kbd class="helia-search-key">/</kbd></button></nav>
+<div class="helia-page" data-kind="reference">
+<article class="helia-article">
+<header class="helia-header" data-entry="frank-2024-generating" data-kind="reference">
+<h2 class="helia-heading"><span class="helia-taxon">Reference.</span> Generating Well-Typed Terms That Are Not “Useless”</h2>
+<div class="helia-meta"><span class="helia-author"><a class="helia-entry-link" href="justinefrank.html" data-entry="justinefrank">Justine Frank</a>, <a class="helia-entry-link" href="benjaminquiring.html" data-entry="benjaminquiring">Benjamin Quiring</a>, <a class="helia-entry-link" href="leonidaslampropoulos.html" data-entry="leonidaslampropoulos">Leonidas Lampropoulos</a></span> · <span class="helia-byline"><a class="helia-entry-link" href="popl.html" data-entry="popl">POPL</a> · 2024</span> · <span class="helia-tags"><span class="helia-tag" data-tag="enumeration"><a class="helia-entry-link" href="tag-enumeration.html" data-entry="tag-enumeration">enumeration</a></span></span> · <span class="helia-entry-links"><span class="helia-entry-link" data-field="pdf-url"><a class="helia-link helia-external" href="https://dl.acm.org/doi/pdf/10.1145/3632919">PDF</a></span> · <span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/3632919">DOI</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/journals/pacmpl/FrankQL24">pldb</a></span></span></div>
+</header>
+<div class="helia-body">
+<div class="helia-abstract">Random generation of well-typed terms lies at the core of effective random testing of compilers for functional languages. Existing techniques have had success following a top-down type-oriented approach to generation that makes choices locally, which suffers from an inherent limitation: the type of an expression is often generated independently from the expression itself. Such generation frequently yields functions with argument types that cannot be used to produce a result in a meaningful way, leaving those arguments unused. Such “use-less” functions can hinder both performance, as the argument generation code is dead but still needs to be compiled, and effectiveness, as a lot of interesting optimizations are tested less frequently. In this paper, we introduce a novel algorithm that is significantly more effective at generating functions that use their arguments. We formalize both the “local” and the “nonlocal” algorithms as step-relations in an extension of the simply-typed lambda calculus with type and arguments holes, showing how delaying the generation of types for subexpressions by allowing nonlocal generation steps leads to “useful” functions. We implement our algorithm demonstrating that it’s much closer to real programs in terms of argument usage rate, and we replicate a case study from the literature that finds bugs in the strictness analyzer of GHC, with our approach finding bugs four times faster than the current state-of-the-art local approach.</div>
+</div>
+<div class="helia-cite helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><h3 class="helia-heading">Cite</h3>
+</summary>
+<div class="helia-group-body">
+<div class="helia-widget" data-widget="helia-cite-formats" data-props="{&quot;key&quot;:&quot;frank-2024-generating&quot;,&quot;bibtex&quot;:&quot;@article{frank-2024-generating, title={Generating Well-Typed Terms That Are Not “Useless”}, volume={8}, ISSN={2475-1421}, url={http://dx.doi.org/10.1145/3632919}, DOI={10.1145/3632919}, number={POPL}, journal={Proceedings of the ACM on Programming Languages}, publisher={Association for Computing Machinery (ACM)}, author={Frank, Justine and Quiring, Benjamin and Lampropoulos, Leonidas}, year={2024}, month=Jan, pages={2318–2339} }&quot;,&quot;bib-file&quot;:&quot;frank-2024-generating.bib&quot;,&quot;hayagriva&quot;:&quot;frank-2024-generating:\n  type: article\n  title: Generating Well-Typed Terms That Are Not “Useless”\n  author:\n  - Frank, Justine\n  - Quiring, Benjamin\n  - Lampropoulos, Leonidas\n  date: 2024-01\n  page-range: 2318-2339\n  url: http://dx.doi.org/10.1145/3632919\n  serial-number:\n    doi: 10.1145/3632919\n    issn: 2475-1421\n  parent:\n    type: periodical\n    title: Proceedings of the ACM on Programming Languages\n    publisher: Association for Computing Machinery (ACM)\n    issue: POPL\n    volume: 8\n&quot;,&quot;yml-file&quot;:&quot;frank-2024-generating.yml&quot;}"><div class="helia-cite-key" data-copy="@frank-2024-generating" data-copy-label="citation key"><span class="helia-bib-key">Cite as</span> <code class="helia-raw-inline">@frank-2024-generating</code> (helia, typst) · <code class="helia-raw-inline">\cite{frank-2024-generating}</code> (LaTeX)</div>
+<div class="helia-cite-format helia-collapsible" data-format="bibtex" data-copy="true" data-copy-label="BibTeX">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">BibTeX</span></summary>
+<div class="helia-group-body">
+<details class="helia-code" open><summary class="helia-code-summary"><span class="helia-code-lang">bibtex</span> · <span class="helia-code-lines">1 line</span></summary><pre class="helia-raw"><code class="language-bibtex"><span class="hl-text hl-bibtex"><span class="hl-meta hl-entry hl-braces hl-bibtex"><span class="hl-keyword hl-other hl-entry-type hl-bibtex"><span class="hl-punctuation hl-definition hl-keyword hl-bibtex">@</span>article</span><span class="hl-punctuation hl-section hl-entry hl-begin hl-bibtex">{</span><span class="hl-entity hl-name hl-type hl-entry-key hl-bibtex">frank-2024-generating</span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">title</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>Generating Well-Typed Terms That Are Not “Useless”<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">volume</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>8<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">ISSN</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>2475-1421<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">url</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>http://dx.doi.org/10.1145/3632919<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">DOI</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>10.1145/3632919<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">number</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>POPL<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">journal</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>Proceedings of the ACM on Programming Languages<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">publisher</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>Association for Computing Machinery (ACM)<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">author</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>Frank, Justine and Quiring, Benjamin and Lampropoulos, Leonidas<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">year</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>2024<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">month</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span>Jan</span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">pages</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>2318–2339<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span> </span><span class="hl-punctuation hl-section hl-entry hl-end hl-bibtex">}</span></span></span></code></pre></details>
+</div>
+</details>
+</div>
+<div class="helia-cite-format helia-collapsible" data-format="hayagriva" data-copy="true" data-copy-label="hayagriva YAML">
+<details>
+<summary class="helia-group-summary"><span class="helia-group-title">hayagriva YAML (typst)</span></summary>
+<div class="helia-group-body">
+<details class="helia-code" open><summary class="helia-code-summary"><span class="helia-code-lang">yaml</span> · <span class="helia-code-lines">19 lines</span></summary><pre class="helia-raw"><code class="language-yaml"><span class="hl-source hl-yaml"><span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">frank-2024-generating</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">type</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">article</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">title</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Generating Well-Typed Terms That Are Not “Useless”</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">author</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Frank, Justine</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Quiring, Benjamin</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Lampropoulos, Leonidas</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">date</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">2024-01</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">page-range</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">2318-2339</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">url</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">http://dx.doi.org/10.1145/3632919</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">serial-number</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">doi</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">10.1145/3632919</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">issn</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">2475-1421</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">parent</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">type</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">periodical</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">title</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Proceedings of the ACM on Programming Languages</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">publisher</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Association for Computing Machinery (ACM)</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">issue</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">POPL</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">volume</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-constant hl-numeric hl-integer hl-decimal hl-yaml">8</span>
+</span></code></pre></details>
+</div>
+</details>
+</div>
+<div class="helia-cite-files">Download: <a class="helia-link" href="frank-2024-generating.bib">frank-2024-generating.bib</a> · <a class="helia-link" href="frank-2024-generating.yml">frank-2024-generating.yml</a></div>
+</div>
+</div>
+</details>
+</div>
+<div class="helia-reference-cites helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">Cites 38 works (1 here)</span></summary>
+<div class="helia-group-body">
+<div class="helia-reference-cites-here helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">With notes (1)</span></summary>
+<div class="helia-group-body">
+<section class="helia-transclusion" data-entry="yangFindingUnderstandingBugs" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="yangFindingUnderstandingBugs"><span class="helia-title">Finding and Understanding Bugs in C Compilers</span>&nbsp;<a class="helia-slug" href="yangFindingUnderstandingBugs.html">yangFindingUnderstandingBugs</a><span class="helia-byline"><span class="helia-entry-link" data-entry="pldi">PLDI</span> · 2011</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="yangFindingUnderstandingBugs" data-kind="reference">
+<div class="helia-abstract">Compilers should be correct. To improve the quality of C compilers, we created Csmith, a randomized test-case generation tool, and spent three years using it to find compiler bugs. During this period we reported more than 325 previously unknown bugs to compiler developers. Every compiler we tested was found to crash and also to silently generate wrong code when presented with valid input. In this paper we present our compiler-testing tool and the results of our bug-hunting study. Our first contribution is to advance the state of the art in compiler testing. Unlike previous tools, Csmith generates programs that cover a large subset of C while avoiding the undefined and unspecified behaviors that would destroy its ability to automatically find wrong-code bugs. Our second contribution is a collection of qualitative and quantitative results about the bugs we have found in open-source C compilers.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="pdf-url"><a class="helia-link helia-external" href="https://dl.acm.org/doi/pdf/10.1145/1993498.1993532">PDF</a></span> · <span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/1993498.1993532">DOI</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/conf/pldi/YangCER11">pldb</a></span></div>
+</div>
+</div>
+</details>
+</section>
+</div>
+</details>
+</div>
+<div class="helia-reference-cites-away helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">External (37)</span></summary>
+<div class="helia-group-body">
+<ul>
+<li><a class="helia-link helia-external" href="https://doi.org/10.5281/zenodo.8423782">Reproduction Package for Article `Generating Well-Typed Terms That Are Not "Useless"`</a> (2024)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3547653">Random Testing of a Higher-Order Blockchain Language (Experience Report)</a> (2022)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1109/csf54842.2022.9919657">A Formal Model of Checked C</a> (2022)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3547645">Analyzing binding extent in 3CPS</a> (2022)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-030-72019-3_10">Do Judge a Test by its Cover: Combining Combinatorial and Property-Based Testing</a> (2021)</li>
+<li>Ray Tracing in One Weekend (2020)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1016/j.entcs.2019.04.002">Generating Random Well-Typed Featherweight Java Programs Using QuickCheck</a> (2019)</li>
+<li>Testing of OCaml exceptions by effect-driven generation of programs (2019)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-030-17138-4_4">Achieving Safety Incrementally with Checked C</a> (2019)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-319-94460-9_7">Liveness-Driven Random Program Generation</a> (2018)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1561/9781680832938">Program Synthesis</a> (2017)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3009837.3009868">Beginner's luck: a language for property-based generators</a> (2017)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3122955.3122959">Ode on a random urn (functional pearl)</a> (2017)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3110259">Effect-driven QuickChecking of compilers</a> (2017)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-319-51676-9_8">Boltzmann Samplers for Closed Simply-Typed Lambda Terms</a> (2016)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/2980983.2908093">Program synthesis from polymorphic refinement types</a> (2016)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1017/s0956796815000143">Generating constrained random data with uniform distribution</a> (2015)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/2737924.2737977">Synthesizing data structure transformations from input-output examples</a> (2015)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-662-46669-8_16">Making Random Judgments: Automatically Generating Well-Typed Terms from the Definition of a Type-System</a> (2015)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/2737924.2738007">Type-and-example-directed program synthesis</a> (2015)</li>
+<li>On Type-directed Generation of Lambda Terms (2015)</li>
+<li><a class="helia-link helia-external" href="https://arxiv.org/abs/1404.3875">Boltzmann samplers for random generation of lambda terms</a> (2014)</li>
+<li>Random Structured Test Data Generation for Black-Box Testing (2014)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1109/issre.2013.6698888">Finding test data with specific properties via metaheuristic search</a> (2013)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-642-41582-1_4">Advances in Lazy SmallCheck</a> (2013)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/2364506.2364515">Feat</a> (2012)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1017/s0956796813000178">Counting and generating lambda terms</a> (2012)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1017/s0956796812000263">Every bit counts: The binary representation of typed data and programs</a> (2012)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/1982595.1982615">Testing an optimising compiler by generating random lambda terms</a> (2011)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/1411286.1411292">Smallcheck and lazy smallcheck</a> (2008)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1017/s0963548304006315">Boltzmann Samplers for the Random Generation of Combinatorial Structures</a> (2004)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/503502.503505">Featherweight Java</a> (2001)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/345099.345125">Efficient and safe-for-space closure conversion</a> (2000)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1017/s0956796800001891">Benchmarking implementations of functional languages with ‘Pseudoknot’, a float-intensive benchmark</a> (1996)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1016/0304-3975(94)90226-7">A calculus for the random generation of labelled combinatorial structures</a> (1994)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1017/s0960129500001535">Representing Control: a Study of the CPS Transformation</a> (1992)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1214/aoms/1177730491">On a Test of Whether one of Two Random Variables is Stochastically Larger than the Other</a> (1947)</li>
+</ul>
+</div>
+</details>
+</div>
+</div>
+</details>
+</div>
+</article>
+<div class="helia-identity"><span class="helia-id">frank-2024-generating</span> <span class="helia-kind">reference</span> <span class="helia-path">entries/refs/frank-2024-generating/frank-2024-generating.hel</span></div>
+</div>
+</body>
+</html>

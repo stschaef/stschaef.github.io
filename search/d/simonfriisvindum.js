@@ -1,0 +1,1 @@
+heliaSearchData("d/simonfriisvindum",{"id":"simonfriisvindum","title":"Simon Friis Vindum","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"simonfriisvindum.html","headings":[],"body":""});

@@ -1,0 +1,1 @@
+heliaSearchData("d/maksymandriushchenko",{"id":"maksymandriushchenko","title":"Maksym Andriushchenko","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"maksymandriushchenko.html","headings":[],"body":""});

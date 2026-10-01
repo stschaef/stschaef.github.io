@@ -1,0 +1,1 @@
+heliaSearchData("d/tag-functional-analysis",{"id":"tag-functional-analysis","title":"functional-analysis","kind":"tag","tags":[],"authors":[],"venue":[],"date":null,"url":"tag-functional-analysis.html","headings":[],"body":""});

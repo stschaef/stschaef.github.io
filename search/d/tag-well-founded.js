@@ -1,0 +1,1 @@
+heliaSearchData("d/tag-well-founded",{"id":"tag-well-founded","title":"well-founded","kind":"tag","tags":[],"authors":[],"venue":[],"date":null,"url":"tag-well-founded.html","headings":[],"body":""});

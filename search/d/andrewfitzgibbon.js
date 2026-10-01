@@ -1,0 +1,1 @@
+heliaSearchData("d/andrewfitzgibbon",{"id":"andrewfitzgibbon","title":"Andrew Fitzgibbon","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"andrewfitzgibbon.html","headings":[],"body":""});

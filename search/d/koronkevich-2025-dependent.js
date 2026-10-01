@@ -1,0 +1,1 @@
+heliaSearchData("d/koronkevich-2025-dependent",{"id":"koronkevich-2025-dependent","title":"Dependent-Type-Preserving Memory Allocation","kind":"reference","tags":["compilation"],"authors":["Paulette Koronkevich","William J. Bowman"],"venue":["arXiv"],"date":null,"url":"koronkevich-2025-dependent.html","headings":[],"body":""});

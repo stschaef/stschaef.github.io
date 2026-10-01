@@ -1,0 +1,1 @@
+heliaSearchData("d/gratzer-2026-the",{"id":"gratzer-2026-the","title":"The ∞-Category of ∞-Categories in Simplicial Type Theory","kind":"reference","tags":["homotopy-type-theory"],"authors":["Daniel Gratzer","Jonathan Weinberger","Ulrik Buchholtz"],"venue":["LICS","Symposium on Logic in Computer Science"],"date":null,"url":"gratzer-2026-the.html","headings":[],"body":""});

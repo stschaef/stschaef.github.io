@@ -1,0 +1,1 @@
+heliaSearchData("d/nishantkheterpal",{"id":"nishantkheterpal","title":"Nishant Kheterpal","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"nishantkheterpal.html","headings":[],"body":""});

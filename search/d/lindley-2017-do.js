@@ -1,0 +1,1 @@
+heliaSearchData("d/lindley-2017-do",{"id":"lindley-2017-do","title":"Do be do be do","kind":"reference","tags":["effects"],"authors":["Conor McBride","Craig McLaughlin","Sam Lindley"],"venue":["POPL","Symposium on Principles of Programming Languages"],"date":null,"url":"lindley-2017-do.html","headings":[],"body":""});

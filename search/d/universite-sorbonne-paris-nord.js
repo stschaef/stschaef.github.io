@@ -1,0 +1,1 @@
+heliaSearchData("d/universite-sorbonne-paris-nord",{"id":"universite-sorbonne-paris-nord","title":"Université Sorbonne Paris Nord","kind":"institution","tags":[],"authors":[],"venue":[],"date":null,"url":"universite-sorbonne-paris-nord.html","headings":[],"body":""});

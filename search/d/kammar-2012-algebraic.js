@@ -1,0 +1,1 @@
+heliaSearchData("d/kammar-2012-algebraic",{"id":"kammar-2012-algebraic","title":"Algebraic foundations for effect-dependent optimisations","kind":"reference","tags":["effects"],"authors":["Gordon Plotkin","Ohad Kammar"],"venue":["POPL","Symposium on Principles of Programming Languages"],"date":null,"url":"kammar-2012-algebraic.html","headings":[],"body":""});

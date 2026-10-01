@@ -1,0 +1,1 @@
+heliaSearchData("d/kylerichardson",{"id":"kylerichardson","title":"Kyle Richardson","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"kylerichardson.html","headings":[],"body":""});

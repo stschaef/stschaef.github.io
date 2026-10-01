@@ -1,0 +1,1 @@
+heliaSearchData("d/ekaterinakomendantskya",{"id":"ekaterinakomendantskya","title":"Ekaterina Komendantskya","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"ekaterinakomendantskya.html","headings":[],"body":""});

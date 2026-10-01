@@ -1,0 +1,1 @@
+heliaSearchData("d/edwardaashcroft",{"id":"edwardaashcroft","title":"Edward A. Ashcroft","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"edwardaashcroft.html","headings":[],"body":""});

@@ -1,0 +1,1 @@
+heliaSearchData("d/geoffreyhulette",{"id":"geoffreyhulette","title":"Geoffrey Hulette","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"geoffreyhulette.html","headings":[],"body":""});

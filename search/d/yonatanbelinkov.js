@@ -1,0 +1,1 @@
+heliaSearchData("d/yonatanbelinkov",{"id":"yonatanbelinkov","title":"Yonatan Belinkov","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"yonatanbelinkov.html","headings":[],"body":""});

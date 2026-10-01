@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>Towards Verified Rounding Error Analysis for Stationary Iterative Methods</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Ctext y=%22.9em%22 font-size=%2290%22%3E%F0%9F%8C%BB%3C/text%3E%3C/svg%3E">
+<meta name="generator" content="helia">
+<link rel="alternate" type="application/atom+xml" title="Steven Schaefer" href="feed.xml">
+<link rel="alternate" type="application/feed+json" title="Steven Schaefer" href="feed.json">
+<script src="helia/theme-version.js"></script>
+<script src="theme/folio-early.js"></script>
+<link rel="stylesheet" href="helia/theme.css">
+<link rel="stylesheet" href="helia/highlight.css">
+<link rel="stylesheet" href="helia/search.css">
+<link rel="stylesheet" href="theme/katex.css">
+<link rel="stylesheet" href="theme/recipe.css">
+<link rel="stylesheet" href="theme/site.css">
+<link rel="stylesheet" href="theme/folio.css">
+<script defer src="helia/runtime.js"></script>
+<script defer src="helia/search.js"></script>
+<script defer src="theme/glyphcraft.js"></script>
+<script defer src="theme/glyphart.js"></script>
+<script defer src="theme/glyphgen.js"></script>
+<script defer src="theme/ornament.js"></script>
+<script defer src="theme/folio.js"></script>
+<script defer src="theme/portrait.js"></script>
+<script type="application/json" id="helia-widgets">{"helia-cite-formats":"widgets/helia-cite-formats-a3294ac7.js"}</script>
+<link rel="modulepreload" href="widgets/helia-cite-formats-a3294ac7.js">
+<script type="module" src="widgets/runtime.js"></script>
+</head>
+<body>
+<nav class="helia-topbar"><a class="helia-home" href="home.html">Steven Schaefer</a><ul class="helia-nav-links"><li><a href="stevenschaefer.html">About Me</a></li><li><a href="research.html">Research</a></li><li><a href="new.html">New</a></li></ul><button type="button" class="helia-search-button" aria-label="Search (/ or Ctrl+K)" aria-haspopup="dialog"><span class="helia-search-icon">⌕</span><span class="helia-search-label">Search</span><kbd class="helia-search-key">/</kbd></button></nav>
+<div class="helia-page" data-kind="reference">
+<article class="helia-article">
+<header class="helia-header" data-entry="kellison-2022-towards" data-kind="reference">
+<h2 class="helia-heading"><span class="helia-taxon">Reference.</span> Towards Verified Rounding Error Analysis for Stationary Iterative Methods</h2>
+<div class="helia-meta"><span class="helia-author"><a class="helia-entry-link" href="arielekellison.html" data-entry="arielekellison">Ariel E. Kellison</a>, <a class="helia-entry-link" href="mohittekriwal.html" data-entry="mohittekriwal">Mohit Tekriwal</a>, <a class="helia-entry-link" href="jeanbaptistejeannin.html" data-entry="jeanbaptistejeannin">Jean-Baptiste Jeannin</a>, <a class="helia-entry-link" href="geoffreyhulette.html" data-entry="geoffreyhulette">Geoffrey Hulette</a></span> · <span class="helia-byline"><a class="helia-entry-link" href="correctness.html" data-entry="correctness">Correctness</a> · 2022</span> · <span class="helia-tags"><span class="helia-tag" data-tag="numerical-verification"><a class="helia-entry-link" href="tag-numerical-verification.html" data-entry="tag-numerical-verification">numerical-verification</a></span></span> · <span class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1109/correctness56720.2022.00007">DOI</a></span></span></div>
+</header>
+<div class="helia-body">
+</div>
+<div class="helia-cite helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><h3 class="helia-heading">Cite</h3>
+</summary>
+<div class="helia-group-body">
+<div class="helia-widget" data-widget="helia-cite-formats" data-props="{&quot;key&quot;:&quot;kellison-2022-towards&quot;,&quot;bibtex&quot;:&quot;@inproceedings{kellison-2022-towards, title={Towards Verified Rounding Error Analysis for Stationary Iterative Methods}, url={http://dx.doi.org/10.1109/correctness56720.2022.00007}, DOI={10.1109/correctness56720.2022.00007}, booktitle={2022 IEEE/ACM Sixth International Workshop on Software Correctness for HPC Applications (Correctness)}, publisher={IEEE}, author={Kellison, Ariel and Tekriwal, Mohit and Jeannin, Jean-Baptiste and Hulette, Geoffrey}, year={2022}, month=Nov, pages={10–17} }&quot;,&quot;bib-file&quot;:&quot;kellison-2022-towards.bib&quot;,&quot;hayagriva&quot;:&quot;kellison-2022-towards:\n  type: article\n  title: Towards Verified Rounding Error Analysis for Stationary Iterative Methods\n  author:\n  - Kellison, Ariel\n  - Tekriwal, Mohit\n  - Jeannin, Jean-Baptiste\n  - Hulette, Geoffrey\n  date: 2022-11\n  page-range: 10-17\n  url: http://dx.doi.org/10.1109/correctness56720.2022.00007\n  serial-number:\n    doi: 10.1109/correctness56720.2022.00007\n  parent:\n    type: proceedings\n    title: 2022 IEEE/ACM Sixth International Workshop on Software Correctness for HPC Applications (Correctness)\n    publisher: IEEE\n&quot;,&quot;yml-file&quot;:&quot;kellison-2022-towards.yml&quot;}"><div class="helia-cite-key" data-copy="@kellison-2022-towards" data-copy-label="citation key"><span class="helia-bib-key">Cite as</span> <code class="helia-raw-inline">@kellison-2022-towards</code> (helia, typst) · <code class="helia-raw-inline">\cite{kellison-2022-towards}</code> (LaTeX)</div>
+<div class="helia-cite-format helia-collapsible" data-format="bibtex" data-copy="true" data-copy-label="BibTeX">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">BibTeX</span></summary>
+<div class="helia-group-body">
+<details class="helia-code" open><summary class="helia-code-summary"><span class="helia-code-lang">bibtex</span> · <span class="helia-code-lines">1 line</span></summary><pre class="helia-raw"><code class="language-bibtex"><span class="hl-text hl-bibtex"><span class="hl-meta hl-entry hl-braces hl-bibtex"><span class="hl-keyword hl-other hl-entry-type hl-bibtex"><span class="hl-punctuation hl-definition hl-keyword hl-bibtex">@</span>inproceedings</span><span class="hl-punctuation hl-section hl-entry hl-begin hl-bibtex">{</span><span class="hl-entity hl-name hl-type hl-entry-key hl-bibtex">kellison-2022-towards</span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">title</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>Towards Verified Rounding Error Analysis for Stationary Iterative Methods<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">url</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>http://dx.doi.org/10.1109/correctness56720.2022.00007<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">DOI</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>10.1109/correctness56720.2022.00007<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">booktitle</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>2022 IEEE/ACM Sixth International Workshop on Software Correctness for HPC Applications (Correctness)<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">publisher</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>IEEE<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">author</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>Kellison, Ariel and Tekriwal, Mohit and Jeannin, Jean-Baptiste and Hulette, Geoffrey<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">year</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>2022<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">month</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span>Nov</span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">pages</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>10–17<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span> </span><span class="hl-punctuation hl-section hl-entry hl-end hl-bibtex">}</span></span></span></code></pre></details>
+</div>
+</details>
+</div>
+<div class="helia-cite-format helia-collapsible" data-format="hayagriva" data-copy="true" data-copy-label="hayagriva YAML">
+<details>
+<summary class="helia-group-summary"><span class="helia-group-title">hayagriva YAML (typst)</span></summary>
+<div class="helia-group-body">
+<details class="helia-code" open><summary class="helia-code-summary"><span class="helia-code-lang">yaml</span> · <span class="helia-code-lines">17 lines</span></summary><pre class="helia-raw"><code class="language-yaml"><span class="hl-source hl-yaml"><span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">kellison-2022-towards</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">type</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">article</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">title</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Towards Verified Rounding Error Analysis for Stationary Iterative Methods</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">author</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Kellison, Ariel</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Tekriwal, Mohit</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Jeannin, Jean-Baptiste</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Hulette, Geoffrey</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">date</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">2022-11</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">page-range</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">10-17</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">url</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">http://dx.doi.org/10.1109/correctness56720.2022.00007</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">serial-number</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">doi</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">10.1109/correctness56720.2022.00007</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">parent</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">type</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">proceedings</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">title</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">2022 IEEE/ACM Sixth International Workshop on Software Correctness for HPC Applications (Correctness)</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">publisher</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">IEEE</span>
+</span></code></pre></details>
+</div>
+</details>
+</div>
+<div class="helia-cite-files">Download: <a class="helia-link" href="kellison-2022-towards.bib">kellison-2022-towards.bib</a> · <a class="helia-link" href="kellison-2022-towards.yml">kellison-2022-towards.yml</a></div>
+</div>
+</div>
+</details>
+</div>
+<div class="helia-reference-cited-by helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">Cited by (1)</span></summary>
+<div class="helia-group-body">
+<section class="helia-transclusion" data-entry="tekriwal-2023-verified" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="tekriwal-2023-verified"><span class="helia-title">Verified Correctness, Accuracy, and Convergence of a Stationary Iterative Linear Solver: Jacobi Method</span>&nbsp;<a class="helia-slug" href="tekriwal-2023-verified.html">tekriwal-2023-verified</a><span class="helia-byline"><span class="helia-entry-link" data-entry="cicm">CICM</span> · 2023</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="tekriwal-2023-verified" data-kind="reference">
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-031-42753-4_14">DOI</a></span></div>
+</div>
+</div>
+</details>
+</section>
+</div>
+</details>
+</div>
+<div class="helia-reference-cites helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">Cites 47 works (1 here)</span></summary>
+<div class="helia-group-body">
+<div class="helia-reference-cites-here helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">With notes (1)</span></summary>
+<div class="helia-group-body">
+<section class="helia-transclusion" data-entry="appel_vst_2011" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="appel_vst_2011"><span class="helia-title">Verified Software Toolchain</span>&nbsp;<a class="helia-slug" href="appel_vst_2011.html">appel_vst_2011</a><span class="helia-byline"><span class="helia-entry-link" data-entry="esop">ESOP</span> · 2011</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="appel_vst_2011" data-kind="reference">
+</div>
+</div>
+</details>
+</section>
+</div>
+</details>
+</div>
+<div class="helia-reference-cites-away helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">External (46)</span></summary>
+<div class="helia-group-body">
+<ul>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3497775.3503951">Coq’s vibrant ecosystem for verification engineering (invited talk)</a> (2022)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-031-21222-2_9">Verified Numerical Methods for Ordinary Differential Equations</a> (2022)</li>
+<li>Dandelion: Certified Approximations of Elementary Functions (2022)</li>
+<li>Introduction and contents — Coq 8.15.2 documentation (2022)</li>
+<li>VCFloat2: Floating-point Error Analysis in Coq (2022)</li>
+<li><a class="helia-link helia-external" href="https://arxiv.org/abs/2202.05587">Formal verification of iterative convergence of numerical algorithms</a> (2022)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1016/j.jlamp.2021.100699">A Perron–Frobenius theorem for deciding matrix growth</a> (2021)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-030-76384-8_20">A Formal Proof of the Lax Equivalence Theorem for Finite Difference Schemes</a> (2021)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1098/rsta.2019.0050">On the cost of iterative computations</a> (2020)</li>
+<li>QED at large: A survey of engineering of formally verified software (2020)</li>
+<li>C-language floating-point proofs layered with VST and Flocq (2020)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-030-30942-8_3">Provably Correct Floating-Point Implementation of a Point-in-Polygon Algorithm</a> (2019)</li>
+<li>A verified ode solver and smales 14th problem (2018)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/s10817-018-9449-5">The Flow of ODEs: Formalization of Variational Equation and Poincaré Map</a> (2018)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.23919/fmcad.2018.8603019">A Verified Certificate Checker for Finite-Precision Error Bounds in Coq and HOL4</a> (2018)</li>
+<li>A formally verified floating-point implementation of the compact position reporting algorithm (2018)</li>
+<li>Report of the HPC Correctness Summit, January 25-26, 2017, Washington, DC (2017)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-319-43144-4_12">The Flow of ODEs</a> (2016)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/2854065.2854066">A unified Coq framework for verifying C programs with floating-point computations</a> (2016)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/s00165-016-0383-1">Formalisation of the computation of the echelon form of a matrix in Isabelle/HOL</a> (2016)</li>
+<li>Compcert-a formally verified optimizing compiler (2016)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.2172/1149042">Applied Mathematics Research for Exascale Computing</a> (2014)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/s11786-014-0181-1">Coquelicot: A User-Friendly Library of Real Analysis for Coq</a> (2014)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1016/j.camwa.2014.06.004">Trusting computations: A mechanized proof from partial differential equations to actual program</a> (2014)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-319-06200-6_9">Formally Verified Computation of Enclosures of Solutions of Ordinary Differential Equations</a> (2014)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1155/2014/195276">Formalization of Matrix Theory in HOL4</a> (2014)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1109/synasc.2013.33">Certified, Efficient and Sharp Univariate Taylor Models in COQ</a> (2013)</li>
+<li>Matrices a blocs et en forme canonique (2013)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/s10817-012-9255-4">Wave Equation Numerical Resolution: A Comprehensive Mechanized Proof of a C Program</a> (2012)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-642-32347-8_26">Numerical Analysis of Ordinary Differential Equations in Isabelle/HOL</a> (2012)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-642-28891-3_15">PVS Linear Algebra Libraries for Verification of Control Software Algorithms in C/ACSL</a> (2012)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1016/j.ic.2011.09.005">Floating-point arithmetic in the Coq system</a> (2012)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1109/arith.2011.40">Flocq: A Unified Library for Proving Floating-Point Algorithms in Coq</a> (2011)</li>
+<li>Formal verification for numerical methods (2010)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-642-14052-5_12">Formal Proof of a Wave Equation Resolution Scheme: The Method Error</a> (2010)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-642-03359-9_23">Packaging Mathematical Structures</a> (2009)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-540-71067-7_21">Certified Exact Transcendental Real Number Computation in Coq</a> (2008)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-540-71067-7_6">A Brief Overview of HOL4</a> (2008)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/11757283_8">Floating-Point Verification Using Theorem Proving</a> (2006)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1137/1.9780898718003">Iterative Methods for Sparse Linear Systems</a> (2003)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1137/1.9780898718027">Accuracy and Stability of Numerical Algorithms</a> (2002)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1023/a:1008712907154">Floating point verification in HOL Light: The exponential function</a> (2000)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/bfb0031814">HOL Light: A tutorial introduction</a> (1996)</li>
+<li>Defining the IEEE-854 floating-point standard in PVS (1995)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-1-4613-8351-2_3">Componentwise Error Analysis for Stationary Iterative Methods</a> (1993)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/3-540-55602-8_217">PVS: A prototype verification system</a> (1992)</li>
+</ul>
+</div>
+</details>
+</div>
+</div>
+</details>
+</div>
+</article>
+<div class="helia-identity"><span class="helia-id">kellison-2022-towards</span> <span class="helia-kind">reference</span> <span class="helia-path">entries/refs/kellison-2022-towards/kellison-2022-towards.hel</span></div>
+</div>
+</body>
+</html>

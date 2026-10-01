@@ -1,0 +1,1 @@
+heliaSearchData("d/davideverettrumelhart",{"id":"davideverettrumelhart","title":"David Everett Rumelhart","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"davideverettrumelhart.html","headings":[],"body":""});

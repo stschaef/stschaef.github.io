@@ -1,0 +1,1 @@
+heliaSearchData("d/electric-power-research-institute",{"id":"electric-power-research-institute","title":"Electric Power Research Institute","kind":"institution","tags":[],"authors":[],"venue":[],"date":null,"url":"electric-power-research-institute.html","headings":[],"body":""});

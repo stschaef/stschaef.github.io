@@ -1,0 +1,1 @@
+heliaSearchData("d/vanheerdt-2017-calf",{"id":"vanheerdt-2017-calf","title":"CALF: Categorical Automata Learning Framework","kind":"reference","tags":["coalgebra"],"authors":["Alexandra Silva","Gerco van Heerdt","Matteo Sammartino"],"venue":["CSL","Computer Science Logic (EACSL Annual Conference)"],"date":null,"url":"vanheerdt-2017-calf.html","headings":[],"body":""});

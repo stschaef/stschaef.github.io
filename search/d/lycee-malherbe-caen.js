@@ -1,0 +1,1 @@
+heliaSearchData("d/lycee-malherbe-caen",{"id":"lycee-malherbe-caen","title":"Lycée Malherbe, Caen","kind":"institution","tags":[],"authors":[],"venue":[],"date":null,"url":"lycee-malherbe-caen.html","headings":[],"body":""});

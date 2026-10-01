@@ -1,0 +1,1 @@
+heliaSearchData("d/simon-fraser-university",{"id":"simon-fraser-university","title":"Simon Fraser University","kind":"institution","tags":[],"authors":[],"venue":[],"date":null,"url":"simon-fraser-university.html","headings":[],"body":""});

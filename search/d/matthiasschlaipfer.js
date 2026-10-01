@@ -1,0 +1,1 @@
+heliaSearchData("d/matthiasschlaipfer",{"id":"matthiasschlaipfer","title":"Matthias Schlaipfer","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"matthiasschlaipfer.html","headings":[],"body":""});

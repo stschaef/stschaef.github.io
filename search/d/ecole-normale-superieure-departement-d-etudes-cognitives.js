@@ -1,0 +1,1 @@
+heliaSearchData("d/ecole-normale-superieure-departement-d-etudes-cognitives",{"id":"ecole-normale-superieure-departement-d-etudes-cognitives","title":"École Normale Supérieure Département d’Études Cognitives","kind":"institution","tags":[],"authors":[],"venue":[],"date":null,"url":"ecole-normale-superieure-departement-d-etudes-cognitives.html","headings":[],"body":""});

@@ -1,0 +1,1 @@
+heliaSearchData("d/daphneippolito",{"id":"daphneippolito","title":"Daphne Ippolito","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"daphneippolito.html","headings":[],"body":""});

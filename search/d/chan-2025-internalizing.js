@@ -1,0 +1,1 @@
+heliaSearchData("d/chan-2025-internalizing",{"id":"chan-2025-internalizing","title":"Internalizing Extensions in Lattices of Type Theories","kind":"reference","tags":["type-theory"],"authors":["Jonathan Chan"],"venue":["arXiv"],"date":null,"url":"chan-2025-internalizing.html","headings":[],"body":""});

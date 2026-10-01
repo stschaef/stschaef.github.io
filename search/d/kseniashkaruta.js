@@ -1,0 +1,1 @@
+heliaSearchData("d/kseniashkaruta",{"id":"kseniashkaruta","title":"Ksenia Shkaruta","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"kseniashkaruta.html","headings":[],"body":""});

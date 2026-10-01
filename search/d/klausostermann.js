@@ -1,0 +1,1 @@
+heliaSearchData("d/klausostermann",{"id":"klausostermann","title":"Klaus Ostermann","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"klausostermann.html","headings":[],"body":""});

@@ -1,0 +1,1 @@
+heliaSearchData("d/hellmuthkneser",{"id":"hellmuthkneser","title":"Hellmuth Kneser","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"hellmuthkneser.html","headings":[],"body":""});

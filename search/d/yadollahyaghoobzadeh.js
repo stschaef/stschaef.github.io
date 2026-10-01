@@ -1,0 +1,1 @@
+heliaSearchData("d/yadollahyaghoobzadeh",{"id":"yadollahyaghoobzadeh","title":"Yadollah Yaghoobzadeh","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"yadollahyaghoobzadeh.html","headings":[],"body":""});

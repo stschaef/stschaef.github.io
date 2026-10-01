@@ -7,6 +7,8 @@
 <title>Verified Software Toolchain</title>
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Ctext y=%22.9em%22 font-size=%2290%22%3E%F0%9F%8C%BB%3C/text%3E%3C/svg%3E">
 <meta name="generator" content="helia">
+<link rel="alternate" type="application/atom+xml" title="Steven Schaefer" href="feed.xml">
+<link rel="alternate" type="application/feed+json" title="Steven Schaefer" href="feed.json">
 <script src="helia/theme-version.js"></script>
 <script src="theme/folio-early.js"></script>
 <link rel="stylesheet" href="helia/theme.css">
@@ -34,7 +36,7 @@
 <article class="helia-article">
 <header class="helia-header" data-entry="appel_vst_2011" data-kind="reference">
 <h2 class="helia-heading"><span class="helia-taxon">Reference.</span> Verified Software Toolchain</h2>
-<div class="helia-meta"><span class="helia-author"><a class="helia-entry-link" href="andrewappel.html" data-entry="andrewappel">Andrew W. Appel</a></span> · <span class="helia-byline"><a class="helia-entry-link" href="esop.html" data-entry="esop">ESOP</a> · 2011</span> · <span class="helia-tags"><span class="helia-tag" data-tag="separation-logic"><span class="helia-entry-link helia-unavailable">separation-logic</span></span></span></div>
+<div class="helia-meta"><span class="helia-author"><a class="helia-entry-link" href="andrewappel.html" data-entry="andrewappel">Andrew W. Appel</a></span> · <span class="helia-byline"><a class="helia-entry-link" href="esop.html" data-entry="esop">ESOP</a> · 2011</span> · <span class="helia-tags"><span class="helia-tag" data-tag="separation-logic"><a class="helia-entry-link" href="tag-separation-logic.html" data-entry="tag-separation-logic">separation-logic</a></span></span></div>
 </header>
 <div class="helia-body">
 </div>
@@ -88,15 +90,90 @@
 </div>
 <div class="helia-reference-cited-by helia-collapsible">
 <details open>
-<summary class="helia-group-summary"><span class="helia-group-title">Cited by (1)</span></summary>
+<summary class="helia-group-summary"><span class="helia-group-title">Cited by (8)</span></summary>
 <div class="helia-group-body">
+<section class="helia-transclusion" data-entry="namakonov-2026-lawyer" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="namakonov-2026-lawyer"><span class="helia-title">Lawyer: Modular Obligations-Based Liveness Reasoning in Higher-Order Impredicative Concurrent Separation Logic</span>&nbsp;<a class="helia-slug" href="namakonov-2026-lawyer.html">namakonov-2026-lawyer</a><span class="helia-byline"><span class="helia-entry-link" data-entry="oopsla">OOPSLA</span> · 2026</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="namakonov-2026-lawyer" data-kind="reference">
+<div class="helia-abstract">Higher-order concurrent separation logics, such as Iris, have been tremendously successful in verifying safety properties of concurrent programs. However, state-of-the-art attempts to verify liveness properties in such logics have so far either lacked modularity (the ability to compose specifications of independent modules), or they have been far too complex to mechanize in a proof assistant. In this work, we introduce Lawyer — a mechanized program logic for modular verification of (fair) termination of concurrent programs. Lawyer draws inspiration from state-of-the-art approaches that use obligations for specifying and proving termination. However, unlike these approaches, which incorporate obligations by instrumenting the source code with erasable auxiliary code and state, Lawyer avoids such instrumentations. Instead, Lawyer incorporates obligations into the logic by embedding them into a purely logical labeled transition system that the program is shown to refine — this makes Lawyer far more amenable to mechanization. We demonstrate the expressivity of Lawyer by verifying termination of a range of examples, including modular verification of a client program whose termination relies on correctness of a fair lock library, and (separately) proving that a ticket lock implementation implements that library’s interface. To the best of our knowledge, Lawyer is the first mechanized program logic that supports modular higher-order impredicative liveness specifications of program modules. All the results that appear in the paper have been mechanized in the Rocq proof assistant on top of the Iris separation logic framework.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/3798240">DOI</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/journals/pacmpl/NamakonovFJBT26">pldb</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="namakonov-2026-verifying" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="namakonov-2026-verifying"><span class="helia-title">Verifying Wait-Freedom for Concurrent Higher-Order Programs</span>&nbsp;<a class="helia-slug" href="namakonov-2026-verifying.html">namakonov-2026-verifying</a><span class="helia-byline"><span class="helia-entry-link" data-entry="ecoop">ECOOP</span> · 2026</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="namakonov-2026-verifying" data-kind="reference">
+<div class="helia-abstract">Wait-freedom is the strongest non-blocking progress guarantee for concurrent data structures, ensuring that every operation completes in a finite number of steps regardless of interference from other threads. While verification of wait-freedom has been studied for first-order languages, verifying it for higher-order programming languages with general references remains an open challenge. In such languages, operations may be used by arbitrary, unverified higher-order clients, making it unclear how to even define wait-freedom formally in terms of programs’ semantics, let alone prove it. In this paper, we present the first framework for verifying wait-freedom of concurrent programs written in a higher-order language with general references. Our approach is based on the Lawyer concurrent separation logic which has been recently introduced for termination verification. We identify a specification pattern in the Lawyer logic that captures wait-freedom. To establish this connection formally, we prove a novel adequacy theorem for Lawyer which states that programs which are proven correct in the Lawyer logic against a specification in the aforementioned specification pattern are wait-free. Proving wait-freedom requires to show that all calls made to operations by any arbitrary client terminate. Thus, as a part of proving the adequacy theorem above, we need to prove that the behavior of the client of the data structure is safe in the sense that it does not break the internal invariants of the data structure, e.g., by directly manipulating the data structure’s internal state. To this end, we develop a logical relations model that establishes safety for all clients once and for all. We demonstrate the effectiveness of our approach by proving wait-freedom for several representative examples, including a higher-order list map function, and a memory-efficient single-producer, single-consumer queue. For the latter, wait-freedom is conditional in that, as the name suggests, there can be at most one enqueuer thread and one dequeuer thread. To capture this formally, we introduce the notion of restricted wait-freedom as a variant of wait-freedom that restricts the number of concurrent threads, and show how our approach can support reasoning about restricted wait-freedom. All our results have been mechanized on top of the Rocq Prover and using the Iris separation logic framework that Lawyer is also based on.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="pdf-url"><a class="helia-link helia-external" href="https://drops.dagstuhl.de/storage/00lipics/lipics-vol372-ecoop2026/LIPIcs.ECOOP.2026.20/LIPIcs.ECOOP.2026.20.pdf">PDF</a></span> · <span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.4230/lipics.ecoop.2026.20">DOI</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/conf/ecoop/NamakonovBT26">pldb</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="aagaard-2023-a" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="aagaard-2023-a"><span class="helia-title">A denotationally-based program logic for higher-order store</span>&nbsp;<a class="helia-slug" href="aagaard-2023-a.html">aagaard-2023-a</a><span class="helia-byline"><span class="helia-entry-link" data-entry="entcs">ENTCS</span> · 2023</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="aagaard-2023-a" data-kind="reference">
+<div class="helia-abstract">Separation logic is used to reason locally about stateful programs. State of the art program logics for higher-order store are usually built on top of untyped operational semantics, in part because traditional denotational methods have struggled to simultaneously account for general references and parametric polymorphism. The recent discovery of simple denotational semantics for general references and polymorphism in synthetic guarded domain theory has enabled us to develop TULIP, a higher-order separation logic over the typed equational theory of higher-order store for a monadic version of System F{mu,ref}. The Tulip logic differs from operationally-based program logics in two ways: predicates range over the meanings of typed terms rather than over the raw code of untyped terms, and they are automatically invariant under the equational congruence of higher-order store, which applies even underneath a binder. As a result, “pure” proof steps that conventionally require focusing the Hoare triple on an operational redex are replaced by a simple equational rewrite in Tulip. We have evaluated Tulip against standard examples involving linked lists in the heap, comparing our abstract equational reasoning with more familiar operational-style reasoning. Our main result is the soundness of Tulip, which we establish by constructing a BI-hyperdoctrine over the denotational semantics of F{mu,ref} in an impredicative version of synthetic guarded domain theory.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.46298/entics.12232">DOI</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="zhou-2023-galapagos" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="zhou-2023-galapagos"><span class="helia-title">Galápagos: Developing Verified Low Level Cryptography on Heterogeneous Hardwares</span>&nbsp;<a class="helia-slug" href="zhou-2023-galapagos.html">zhou-2023-galapagos</a><span class="helia-byline"><span class="helia-entry-link" data-entry="ccs">CCS</span> · 2023</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="zhou-2023-galapagos" data-kind="reference">
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/3576915.3616603">DOI</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="sanchezstern-2023-passport" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="sanchezstern-2023-passport"><span class="helia-title">Passport: Improving Automated Formal Verification Using Identifiers</span>&nbsp;<a class="helia-slug" href="sanchezstern-2023-passport.html">sanchezstern-2023-passport</a><span class="helia-byline"><span class="helia-entry-link" data-entry="toplas">TOPLAS</span> · 2023</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="sanchezstern-2023-passport" data-kind="reference">
+<div class="helia-abstract">Formally verifying system properties is one of the most effective ways of improving system quality, but its high manual effort requirements often render it prohibitively expensive. Tools that automate formal verification by learning from proof corpora to synthesize proofs have just begun to show their promise. These tools are effective because of the richness of the data the proof corpora contain. This richness comes from the stylistic conventions followed by communities of proof developers, together with the powerful logical systems beneath proof assistants. However, this richness remains underexploited, with most work thus far focusing on architecture rather than on how to make the most of the proof data. This article systematically explores how to most effectively exploit one aspect of that proof data: identifiers. We develop the Passport approach, a method for enriching the predictive Coq model used by an existing proof-synthesis tool with three new encoding mechanisms for identifiers: category vocabulary indexing, subword sequence modeling, and path elaboration. We evaluate our approach’s enrichment effect on three existing base tools: ASTactic, Tac, and Tok. In head-to-head comparisons, Passport automatically proves 29% more theorems than the best-performing of these base tools. Combining the three tools enhanced by the Passport approach automatically proves 38% more theorems than combining the three base tools. Finally, together, these base tools and their enhanced versions prove 45% more theorems than the combined base tools. Overall, our findings suggest that modeling identifiers can play a significant role in improving proof synthesis, leading to higher-quality software.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="pdf-url"><a class="helia-link helia-external" href="https://dl.acm.org/doi/pdf/10.1145/3593374">PDF</a></span> · <span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/3593374">DOI</a></span> · <span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/2204.10370">arXiv</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/journals/toplas/SanchezSternFZKBR23">pldb</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="kellison-2022-towards" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="kellison-2022-towards"><span class="helia-title">Towards Verified Rounding Error Analysis for Stationary Iterative Methods</span>&nbsp;<a class="helia-slug" href="kellison-2022-towards.html">kellison-2022-towards</a><span class="helia-byline"><span class="helia-entry-link" data-entry="correctness">Correctness</span> · 2022</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="kellison-2022-towards" data-kind="reference">
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1109/correctness56720.2022.00007">DOI</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="ringer-2019-qed" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="ringer-2019-qed"><span class="helia-title">QED at Large: A Survey of Engineering of Formally Verified Software</span>&nbsp;<a class="helia-slug" href="ringer-2019-qed.html">ringer-2019-qed</a><span class="helia-byline"><span class="helia-entry-link" data-entry="foundations-and-trends-in-programming-languages">Foundations and Trends® in Programming Languages</span> · 2019</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="ringer-2019-qed" data-kind="reference">
+<div class="helia-abstract">Development of formal proofs of correctness of programs can increase actual and perceived reliability and facilitate better understanding of program specifications and their underlying assumptions. Tools supporting such development have been available for over 40 years, but have only recently seen wide practical use. Projects based on construction of machine-checked formal proofs are now reaching an unprecedented scale, comparable to large software projects, which leads to new challenges in proof development and maintenance. Despite its increasing importance, the field of proof engineering is seldom considered in its own right; related theories, techniques, and tools span many fields and venues. This survey of the literature presents a holistic understanding of proof engineering for program correctness, covering impact in practice, foundations, proof automation, proof organization, and practical proof development.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1561/2500000045">DOI</a></span></div>
+</div>
+</div>
+</details>
+</section>
 <section class="helia-transclusion" data-entry="kumar_cakeml_2014" data-depth="1">
 <details>
 <summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="kumar_cakeml_2014"><span class="helia-title">CakeML: A verified implementation of ML</span>&nbsp;<a class="helia-slug" href="kumar_cakeml_2014.html">kumar_cakeml_2014</a><span class="helia-byline"><span class="helia-entry-link" data-entry="popl">POPL</span> · 2014</span></h2></summary>
 <div class="helia-transclusion-body">
 <div class="helia-reference" data-entry="kumar_cakeml_2014" data-kind="reference">
 <div class="helia-abstract">We have developed and mechanically verified an ML system called CakeML, which supports a substantial subset of Standard ML. CakeML is implemented as an interactive read-eval-print loop (REPL) in x86-64 machine code. Our correctness theorem ensures that this REPL implementation prints only those results permitted by the semantics of CakeML. Our verification effort touches on a breadth of topics including lexing, parsing, type checking, incremental and dynamic compilation, garbage collection, arbitraryprecision arithmetic, and compiler bootstrapping.</div>
-<div class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/2535838.2535841">DOI</a></span></div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="pdf-url"><a class="helia-link helia-external" href="https://dl.acm.org/doi/pdf/10.1145/2535838.2535841">PDF</a></span> · <span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/2535838.2535841">DOI</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/conf/popl/KumarMNO14">pldb</a></span></div>
 </div>
 </div>
 </details>

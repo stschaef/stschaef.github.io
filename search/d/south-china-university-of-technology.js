@@ -1,0 +1,1 @@
+heliaSearchData("d/south-china-university-of-technology",{"id":"south-china-university-of-technology","title":"South China University of Technology","kind":"institution","tags":[],"authors":[],"venue":[],"date":null,"url":"south-china-university-of-technology.html","headings":[],"body":""});

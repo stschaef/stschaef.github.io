@@ -1,0 +1,1 @@
+heliaSearchData("d/hartmann-2022-algorithm",{"id":"hartmann-2022-algorithm","title":"Algorithm Design with the Selection Monad","kind":"reference","tags":["effects","program-calculation"],"authors":["Jeremy Gibbons","Johannes Hartmann"],"venue":[],"date":null,"url":"hartmann-2022-algorithm.html","headings":[],"body":""});

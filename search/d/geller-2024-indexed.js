@@ -1,0 +1,1 @@
+heliaSearchData("d/geller-2024-indexed",{"id":"geller-2024-indexed","title":"Indexed Types for a Statically Safe WebAssembly","kind":"reference","tags":["refinement-types"],"authors":["Adam T. Geller","Justine Frank","William J. Bowman"],"venue":["POPL","Symposium on Principles of Programming Languages"],"date":null,"url":"geller-2024-indexed.html","headings":[],"body":""});

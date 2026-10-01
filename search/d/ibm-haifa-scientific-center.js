@@ -1,0 +1,1 @@
+heliaSearchData("d/ibm-haifa-scientific-center",{"id":"ibm-haifa-scientific-center","title":"IBM Haifa Scientific Center","kind":"institution","tags":[],"authors":[],"venue":[],"date":null,"url":"ibm-haifa-scientific-center.html","headings":[],"body":""});

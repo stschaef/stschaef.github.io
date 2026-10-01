@@ -1,0 +1,1 @@
+heliaSearchData("d/riehl-2017-a",{"id":"riehl-2017-a","title":"A type theory for synthetic ∞-categories","kind":"reference","tags":["homotopy-type-theory"],"authors":["Emily Riehl","Michael Shulman"],"venue":["Higher Structures"],"date":null,"url":"riehl-2017-a.html","headings":[],"body":""});

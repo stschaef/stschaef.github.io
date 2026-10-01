@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>AgentHarm: A Benchmark for Measuring Harmfulness of LLM Agents</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Ctext y=%22.9em%22 font-size=%2290%22%3E%F0%9F%8C%BB%3C/text%3E%3C/svg%3E">
+<meta name="generator" content="helia">
+<link rel="alternate" type="application/atom+xml" title="Steven Schaefer" href="feed.xml">
+<link rel="alternate" type="application/feed+json" title="Steven Schaefer" href="feed.json">
+<script src="helia/theme-version.js"></script>
+<script src="theme/folio-early.js"></script>
+<link rel="stylesheet" href="helia/theme.css">
+<link rel="stylesheet" href="helia/highlight.css">
+<link rel="stylesheet" href="helia/search.css">
+<link rel="stylesheet" href="theme/katex.css">
+<link rel="stylesheet" href="theme/recipe.css">
+<link rel="stylesheet" href="theme/site.css">
+<link rel="stylesheet" href="theme/folio.css">
+<script defer src="helia/runtime.js"></script>
+<script defer src="helia/search.js"></script>
+<script defer src="theme/glyphcraft.js"></script>
+<script defer src="theme/glyphart.js"></script>
+<script defer src="theme/glyphgen.js"></script>
+<script defer src="theme/ornament.js"></script>
+<script defer src="theme/folio.js"></script>
+<script defer src="theme/portrait.js"></script>
+<script type="application/json" id="helia-widgets">{"helia-cite-formats":"widgets/helia-cite-formats-a3294ac7.js"}</script>
+<link rel="modulepreload" href="widgets/helia-cite-formats-a3294ac7.js">
+<script type="module" src="widgets/runtime.js"></script>
+</head>
+<body>
+<nav class="helia-topbar"><a class="helia-home" href="home.html">Steven Schaefer</a><ul class="helia-nav-links"><li><a href="stevenschaefer.html">About Me</a></li><li><a href="research.html">Research</a></li><li><a href="new.html">New</a></li></ul><button type="button" class="helia-search-button" aria-label="Search (/ or Ctrl+K)" aria-haspopup="dialog"><span class="helia-search-icon">⌕</span><span class="helia-search-label">Search</span><kbd class="helia-search-key">/</kbd></button></nav>
+<div class="helia-page" data-kind="reference">
+<article class="helia-article">
+<header class="helia-header" data-entry="andriushchenko-2024-agentharm" data-kind="reference">
+<h2 class="helia-heading"><span class="helia-taxon">Reference.</span> AgentHarm: A Benchmark for Measuring Harmfulness of LLM Agents</h2>
+<div class="helia-meta"><span class="helia-author"><a class="helia-entry-link" href="maksymandriushchenko.html" data-entry="maksymandriushchenko">Maksym Andriushchenko</a>, <a class="helia-entry-link" href="alexandrasouly.html" data-entry="alexandrasouly">Alexandra Souly</a>, <a class="helia-entry-link" href="mateuszdziemian.html" data-entry="mateuszdziemian">Mateusz Dziemian</a>, <a class="helia-entry-link" href="derekduenas.html" data-entry="derekduenas">Derek Duenas</a>, <a class="helia-entry-link" href="maxwelllin.html" data-entry="maxwelllin">Maxwell Lin</a>, <a class="helia-entry-link" href="justinwang.html" data-entry="justinwang">Justin Wang</a>, <a class="helia-entry-link" href="danhendrycks.html" data-entry="danhendrycks">Dan Hendrycks</a>, <a class="helia-entry-link" href="andyzou.html" data-entry="andyzou">Andy Zou</a>, <a class="helia-entry-link" href="zicokolter.html" data-entry="zicokolter">Zico Kolter</a>, <a class="helia-entry-link" href="mattfredrikson.html" data-entry="mattfredrikson">Matt Fredrikson</a>, <a class="helia-entry-link" href="ericwinsor.html" data-entry="ericwinsor">Eric Winsor</a>, <a class="helia-entry-link" href="jeromewynne.html" data-entry="jeromewynne">Jerome Wynne</a>, <a class="helia-entry-link" href="yaringal.html" data-entry="yaringal">Yarin Gal</a>, <a class="helia-entry-link" href="xanderdavies.html" data-entry="xanderdavies">Xander Davies</a></span> · <span class="helia-byline"><a class="helia-entry-link" href="iclr.html" data-entry="iclr">ICLR</a> · 2025</span> · <span class="helia-tags"><span class="helia-tag" data-tag="ai-safety"><a class="helia-entry-link" href="tag-ai-safety.html" data-entry="tag-ai-safety">ai-safety</a></span> <span class="helia-tag" data-tag="machine-learning"><a class="helia-entry-link" href="tag-machine-learning.html" data-entry="tag-machine-learning">machine-learning</a></span></span> · <span class="helia-entry-links"><span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/2410.09024">arXiv</a></span></span></div>
+</header>
+<div class="helia-body">
+<div class="helia-abstract">The robustness of LLMs to jailbreak attacks, where users design prompts to circumvent safety measures and misuse model capabilities, has been studied primarily for LLMs acting as simple chatbots. Meanwhile, LLM agents – which use external tools and can execute multi-stage tasks – may pose a greater risk if misused, but their robustness remains underexplored. To facilitate research on LLM agent misuse, we propose a new benchmark called AgentHarm. The benchmark includes a diverse set of 110 explicitly malicious agent tasks (440 with augmentations), covering 11 harm categories including fraud, cybercrime, and harassment. In addition to measuring whether models refuse harmful agentic requests, scoring well on AgentHarm requires jailbroken agents to maintain their capabilities following an attack to complete a multi-step task. We evaluate a range of leading LLMs, and find (1) leading LLMs are surprisingly compliant with malicious agent requests without jailbreaking, (2) simple universal jailbreak templates can be adapted to effectively jailbreak agents, and (3) these jailbreaks enable coherent and malicious multi-step agent behavior and retain model capabilities. To enable simple and reliable evaluation of attacks and defenses for LLM-based agents, we publicly release AgentHarm at https://huggingface.co/datasets/ai-safety-institute/AgentHarm.</div>
+</div>
+<div class="helia-cite helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><h3 class="helia-heading">Cite</h3>
+</summary>
+<div class="helia-group-body">
+<div class="helia-widget" data-widget="helia-cite-formats" data-props="{&quot;key&quot;:&quot;andriushchenko-2024-agentharm&quot;,&quot;bibtex&quot;:&quot;@inproceedings{andriushchenko-2024-agentharm,\n  author = {Maksym Andriushchenko and Alexandra Souly and Mateusz Dziemian and Derek Duenas and Maxwell Lin and Justin Wang and Dan Hendrycks and Andy Zou and Zico Kolter and Matt Fredrikson and Eric Winsor and Jerome Wynne and Yarin Gal and Xander Davies},\n  title = {AgentHarm: A Benchmark for Measuring Harmfulness of LLM Agents},\n  booktitle = {The Thirteenth International Conference on Learning Representations (ICLR 2025)},\n  year = {2025},\n  eprint = {2410.09024},\n  archiveprefix = {arXiv}\n}&quot;,&quot;bib-file&quot;:&quot;andriushchenko-2024-agentharm.bib&quot;,&quot;hayagriva&quot;:&quot;andriushchenko-2024-agentharm:\n  type: article\n  title: &#39;AgentHarm: A Benchmark for Measuring Harmfulness of LLM Agents&#39;\n  author:\n  - Andriushchenko, Maksym\n  - Souly, Alexandra\n  - Dziemian, Mateusz\n  - Duenas, Derek\n  - Lin, Maxwell\n  - Wang, Justin\n  - Hendrycks, Dan\n  - Zou, Andy\n  - Kolter, Zico\n  - Fredrikson, Matt\n  - Winsor, Eric\n  - Wynne, Jerome\n  - Gal, Yarin\n  - Davies, Xander\n  date: 2025\n  serial-number:\n    arxiv: &#39;2410.09024&#39;\n  parent:\n    type: proceedings\n    title: The Thirteenth International Conference on Learning Representations (ICLR 2025)\n&quot;,&quot;yml-file&quot;:&quot;andriushchenko-2024-agentharm.yml&quot;}"><div class="helia-cite-key" data-copy="@andriushchenko-2024-agentharm" data-copy-label="citation key"><span class="helia-bib-key">Cite as</span> <code class="helia-raw-inline">@andriushchenko-2024-agentharm</code> (helia, typst) · <code class="helia-raw-inline">\cite{andriushchenko-2024-agentharm}</code> (LaTeX)</div>
+<div class="helia-cite-format helia-collapsible" data-format="bibtex" data-copy="true" data-copy-label="BibTeX">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">BibTeX</span></summary>
+<div class="helia-group-body">
+<details class="helia-code" open><summary class="helia-code-summary"><span class="helia-code-lang">bibtex</span> · <span class="helia-code-lines">8 lines</span></summary><pre class="helia-raw"><code class="language-bibtex"><span class="hl-text hl-bibtex"><span class="hl-meta hl-entry hl-braces hl-bibtex"><span class="hl-keyword hl-other hl-entry-type hl-bibtex"><span class="hl-punctuation hl-definition hl-keyword hl-bibtex">@</span>inproceedings</span><span class="hl-punctuation hl-section hl-entry hl-begin hl-bibtex">{</span><span class="hl-entity hl-name hl-type hl-entry-key hl-bibtex">andriushchenko-2024-agentharm</span>,
+  <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">author</span> <span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span> <span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>Maksym Andriushchenko and Alexandra Souly and Mateusz Dziemian and Derek Duenas and Maxwell Lin and Justin Wang and Dan Hendrycks and Andy Zou and Zico Kolter and Matt Fredrikson and Eric Winsor and Jerome Wynne and Yarin Gal and Xander Davies<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>,
+  <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">title</span> <span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span> <span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>AgentHarm: A Benchmark for Measuring Harmfulness of LLM Agents<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>,
+  <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">booktitle</span> <span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span> <span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>The Thirteenth International Conference on Learning Representations (ICLR 2025)<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>,
+  <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">year</span> <span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span> <span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>2025<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>,
+  <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">eprint</span> <span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span> <span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>2410.09024<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>,
+  <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">archiveprefix</span> <span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span> <span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>arXiv<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span>
+</span><span class="hl-punctuation hl-section hl-entry hl-end hl-bibtex">}</span></span></span></code></pre></details>
+</div>
+</details>
+</div>
+<div class="helia-cite-format helia-collapsible" data-format="hayagriva" data-copy="true" data-copy-label="hayagriva YAML">
+<details>
+<summary class="helia-group-summary"><span class="helia-group-title">hayagriva YAML (typst)</span></summary>
+<div class="helia-group-body">
+<details class="helia-code" open><summary class="helia-code-summary"><span class="helia-code-lang">yaml</span> · <span class="helia-code-lines">24 lines</span></summary><pre class="helia-raw"><code class="language-yaml"><span class="hl-source hl-yaml"><span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">andriushchenko-2024-agentharm</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">type</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">article</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">title</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-quoted hl-single hl-yaml"><span class="hl-punctuation hl-definition hl-string hl-begin hl-yaml">&#39;</span>AgentHarm: A Benchmark for Measuring Harmfulness of LLM Agents<span class="hl-punctuation hl-definition hl-string hl-end hl-yaml">&#39;</span></span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">author</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Andriushchenko, Maksym</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Souly, Alexandra</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Dziemian, Mateusz</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Duenas, Derek</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Lin, Maxwell</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Wang, Justin</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Hendrycks, Dan</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Zou, Andy</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Kolter, Zico</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Fredrikson, Matt</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Winsor, Eric</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Wynne, Jerome</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Gal, Yarin</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Davies, Xander</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">date</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-constant hl-numeric hl-integer hl-decimal hl-yaml">2025</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">serial-number</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">arxiv</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-quoted hl-single hl-yaml"><span class="hl-punctuation hl-definition hl-string hl-begin hl-yaml">&#39;</span>2410.09024<span class="hl-punctuation hl-definition hl-string hl-end hl-yaml">&#39;</span></span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">parent</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">type</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">proceedings</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">title</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">The Thirteenth International Conference on Learning Representations (ICLR 2025)</span>
+</span></code></pre></details>
+</div>
+</details>
+</div>
+<div class="helia-cite-files">Download: <a class="helia-link" href="andriushchenko-2024-agentharm.bib">andriushchenko-2024-agentharm.bib</a> · <a class="helia-link" href="andriushchenko-2024-agentharm.yml">andriushchenko-2024-agentharm.yml</a></div>
+</div>
+</div>
+</details>
+</div>
+<div class="helia-reference-cited-by helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">Cited by (1)</span></summary>
+<div class="helia-group-body">
+<section class="helia-transclusion" data-entry="dziemian-2026-how" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="dziemian-2026-how"><span class="helia-title">How Vulnerable Are AI Agents to Indirect Prompt Injections? Insights from a Large-Scale Public Competition</span>&nbsp;<a class="helia-slug" href="dziemian-2026-how.html">dziemian-2026-how</a><span class="helia-byline"><span class="helia-entry-link" data-entry="arxiv">arXiv</span> · 2026</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="dziemian-2026-how" data-kind="reference">
+<div class="helia-abstract">LLM based agents are increasingly deployed in high stakes settings where they process external data sources such as emails, documents, and code repositories. This creates exposure to indirect prompt injection attacks, where adversarial instructions embedded in external content manipulate agent behavior without user awareness. A critical but underexplored dimension of this threat is concealment: since users tend to observe only an agent’s final response, an attack can conceal its existence by presenting no clue of compromise in the final user facing response while successfully executing harmful actions. This leaves users unaware of the manipulation and likely to accept harmful outcomes as legitimate. We present findings from a large scale public red teaming competition evaluating this dual objective across three agent settings: tool calling, coding, and computer use. The competition attracted 464 participants who submitted 272000 attack attempts against 13 frontier models, yielding 8648 successful attacks across 41 scenarios. All models proved vulnerable, with attack success rates ranging from 0.5% (Claude Opus 4.5) to 8.5% (Gemini 2.5 Pro). We identify universal attack strategies that transfer across 21 of 41 behaviors and multiple model families, suggesting fundamental weaknesses in instruction following architectures. Capability and robustness showed weak correlation, with Gemini 2.5 Pro exhibiting both high capability and high vulnerability. To address benchmark saturation and obsoleteness, we will endeavor to deliver quarterly updates through continued red teaming competitions. We open source the competition environment for use in evaluations, along with 95 successful attacks against Qwen that did not transfer to any closed source model. We share model-specific attack data with respective frontier labs and the full dataset with the UK AISI and US CAISI to support robustness research.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/2603.15714">arXiv</a></span></div>
+</div>
+</div>
+</details>
+</section>
+</div>
+</details>
+</div>
+<div class="helia-reference-cites helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">Cites 38 works (0 here)</span></summary>
+<div class="helia-group-body">
+<div class="helia-reference-cites-away helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">External (38)</span></summary>
+<div class="helia-group-body">
+<ul>
+<li><a class="helia-link helia-external" href="https://doi.org/10.48550/arxiv.2410.09114">Catastrophic Cyber Capabilities Benchmark (3CB): Robustly Evaluating LLM Agent Cyber Offense Capabilities</a> (2024)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.48550/arxiv.2409.00137">Emerging Vulnerabilities in Frontier Models: Multi-Turn Jailbreak Attacks</a> (2024)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.48550/arxiv.2408.15221">LLM Defenses Are Not Robust to Multi-Turn Human Jailbreaks Yet</a> (2024)</li>
+<li><a class="helia-link helia-external" href="https://arxiv.org/abs/2408.08926">Cybench: A Framework for Evaluating Cybersecurity Capabilities and Risks of Language Models</a> (2024)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.48550/arxiv.2408.04682">ToolSandbox: A Stateful, Conversational, Interactive Evaluation Benchmark for LLM Tool Use Capabilities</a> (2024)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.48550/arxiv.2407.20859">Breaking Agents: Compromising Autonomous LLM Agents Through Malfunction Amplification</a> (2024)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.48550/arxiv.2407.17915">The Dark Side of Function Calling: Pathways to Jailbreaking Large Language Models</a> (2024)</li>
+<li><a class="helia-link helia-external" href="https://arxiv.org/abs/2407.16741">OpenHands: An Open Platform for AI Software Developers as Generalist Agents</a> (2024)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.48550/arxiv.2407.12784">AgentPoison: Red-teaming LLM Agents via Poisoning Memory or Knowledge Bases</a> (2024)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.48550/arxiv.2406.13352">AgentDojo: A Dynamic Environment to Evaluate Attacks and Defenses for LLM Agents</a> (2024)</li>
+<li><a class="helia-link helia-external" href="https://arxiv.org/abs/2406.09187">GuardAgent: Safeguard LLM Agents via Knowledge-Enabled Reasoning</a> (2024)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.48550/arxiv.2406.04313">Improving Alignment and Robustness with Circuit Breakers</a> (2024)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.48550/arxiv.2406.01364">BELLS: A Framework Towards Future Proof Benchmarks for the Evaluation of LLM Safeguards</a> (2024)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.48550/arxiv.2404.02151">Jailbreaking Leading Safety-Aligned LLMs with Simple Adaptive Attacks</a> (2024)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.48550/arxiv.2404.01318">JailbreakBench: An Open Robustness Benchmark for Jailbreaking Large Language Models</a> (2024)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.48550/arxiv.2403.02691">InjecAgent: Benchmarking Indirect Prompt Injections in Tool-Integrated Large Language Model Agents</a> (2024)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.48550/arxiv.2402.15911">PRP: Propagating Universal Perturbations to Attack Large Language Model Guard-Rails</a> (2024)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.48550/arxiv.2402.04249">HarmBench: A Standardized Evaluation Framework for Automated Red Teaming and Robust Refusal</a> (2024)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.52202/079017-4121">Many-shot Jailbreaking</a> (2024)</li>
+<li><a class="helia-link helia-external" href="https://arxiv.org/abs/2402.10260">A StrongREJECT for Empty Jailbreaks</a> (2024)</li>
+<li><a class="helia-link helia-external" href="https://arxiv.org/abs/2310.02446">Low-Resource Languages Jailbreak GPT-4</a> (2024)</li>
+<li>Berkeley Function Calling Leaderboard (2024)</li>
+<li>Inspect AI: Framework for Large Language Model Evaluations (2024)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.48550/arxiv.2312.14302">Exploiting Novel GPT-4 APIs</a> (2023)</li>
+<li><a class="helia-link helia-external" href="https://arxiv.org/abs/2312.11671">Evaluating Language-Model Agents on Realistic Autonomous Tasks</a> (2023)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.48550/arxiv.2311.12983">GAIA: a benchmark for General AI Assistants</a> (2023)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.48550/arxiv.2311.11855">Evil Geniuses: Delving into the Safety of LLM-based Agents</a> (2023)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.48550/arxiv.2309.15817">Identifying the Risks of LM Agents with an LM-Emulated Sandbox</a> (2023)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.48550/arxiv.2309.13308">Calibrating LLM-Based Evaluator</a> (2023)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.48550/arxiv.2307.16789">ToolLLM: Facilitating Large Language Models to Master 16000+ Real-world APIs</a> (2023)</li>
+<li><a class="helia-link helia-external" href="https://arxiv.org/abs/2307.15043">Universal and Transferable Adversarial Attacks on Aligned Language Models</a> (2023)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.52202/075280-2020">Judging LLM-as-a-judge with MT-Bench and Chatbot Arena</a> (2023)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.52202/079017-4020">Gorilla: Large Language Model Connected with Massive APIs</a> (2023)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.48550/arxiv.2304.05332">Emergent autonomous scientific research capabilities of large language models</a> (2023)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.48550/arxiv.2304.03279">Do the Rewards Justify the Means? Measuring Trade-Offs Between Rewards and Ethical Behavior in the MACHIAVELLI Benchmark</a> (2023)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3605764.3623985">Not What You've Signed Up For: Compromising Real-World LLM-Integrated Applications with Indirect Prompt Injection</a> (2023)</li>
+<li><a class="helia-link helia-external" href="https://arxiv.org/abs/2304.05376">ChemCrow: Augmenting large-language models with chemistry tools</a> (2023)</li>
+<li><a class="helia-link helia-external" href="https://arxiv.org/abs/2210.03629">ReAct: Synergizing Reasoning and Acting in Language Models</a> (2022)</li>
+</ul>
+</div>
+</details>
+</div>
+</div>
+</details>
+</div>
+<footer class="helia-footer">
+<div class="helia-related helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><h3 class="helia-heading">Related</h3>
+</summary>
+<div class="helia-group-body">
+<ul>
+<li><a class="helia-entry-link" href="barrett-2023-identifying.html" data-entry="barrett-2023-identifying">Identifying and Mitigating the Security Risks of Generative AI</a> <span class="helia-related-tags"><a class="helia-entry-link" href="tag-ai-safety.html" data-entry="tag-ai-safety">#ai-safety</a> <a class="helia-entry-link" href="tag-machine-learning.html" data-entry="tag-machine-learning">#machine-learning</a></span></li>
+<li><a class="helia-entry-link" href="davies-2025-fundamental.html" data-entry="davies-2025-fundamental">Fundamental Limitations in Pointwise Defences of LLM Finetuning APIs</a> <span class="helia-related-tags"><a class="helia-entry-link" href="tag-ai-safety.html" data-entry="tag-ai-safety">#ai-safety</a> <a class="helia-entry-link" href="tag-machine-learning.html" data-entry="tag-machine-learning">#machine-learning</a></span></li>
+<li><a class="helia-entry-link" href="davies-2026-boundary.html" data-entry="davies-2026-boundary">Boundary Point Jailbreaking of Black-Box LLMs</a> <span class="helia-related-tags"><a class="helia-entry-link" href="tag-ai-safety.html" data-entry="tag-ai-safety">#ai-safety</a> <a class="helia-entry-link" href="tag-machine-learning.html" data-entry="tag-machine-learning">#machine-learning</a></span></li>
+</ul>
+</div>
+</details>
+</div>
+</footer>
+</article>
+<div class="helia-identity"><span class="helia-id">andriushchenko-2024-agentharm</span> <span class="helia-kind">reference</span> <span class="helia-path">entries/refs/andriushchenko-2024-agentharm/andriushchenko-2024-agentharm.hel</span></div>
+</div>
+</body>
+</html>

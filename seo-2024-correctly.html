@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>Correctly Compiling Proofs About Programs Without Proving Compilers Correct</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Ctext y=%22.9em%22 font-size=%2290%22%3E%F0%9F%8C%BB%3C/text%3E%3C/svg%3E">
+<meta name="generator" content="helia">
+<link rel="alternate" type="application/atom+xml" title="Steven Schaefer" href="feed.xml">
+<link rel="alternate" type="application/feed+json" title="Steven Schaefer" href="feed.json">
+<script src="helia/theme-version.js"></script>
+<script src="theme/folio-early.js"></script>
+<link rel="stylesheet" href="helia/theme.css">
+<link rel="stylesheet" href="helia/highlight.css">
+<link rel="stylesheet" href="helia/search.css">
+<link rel="stylesheet" href="theme/katex.css">
+<link rel="stylesheet" href="theme/recipe.css">
+<link rel="stylesheet" href="theme/site.css">
+<link rel="stylesheet" href="theme/folio.css">
+<script defer src="helia/runtime.js"></script>
+<script defer src="helia/search.js"></script>
+<script defer src="theme/glyphcraft.js"></script>
+<script defer src="theme/glyphart.js"></script>
+<script defer src="theme/glyphgen.js"></script>
+<script defer src="theme/ornament.js"></script>
+<script defer src="theme/folio.js"></script>
+<script defer src="theme/portrait.js"></script>
+<script type="application/json" id="helia-widgets">{"helia-cite-formats":"widgets/helia-cite-formats-a3294ac7.js"}</script>
+<link rel="modulepreload" href="widgets/helia-cite-formats-a3294ac7.js">
+<script type="module" src="widgets/runtime.js"></script>
+</head>
+<body>
+<nav class="helia-topbar"><a class="helia-home" href="home.html">Steven Schaefer</a><ul class="helia-nav-links"><li><a href="stevenschaefer.html">About Me</a></li><li><a href="research.html">Research</a></li><li><a href="new.html">New</a></li></ul><button type="button" class="helia-search-button" aria-label="Search (/ or Ctrl+K)" aria-haspopup="dialog"><span class="helia-search-icon">⌕</span><span class="helia-search-label">Search</span><kbd class="helia-search-key">/</kbd></button></nav>
+<div class="helia-page" data-kind="reference">
+<article class="helia-article">
+<header class="helia-header" data-entry="seo-2024-correctly" data-kind="reference">
+<h2 class="helia-heading"><span class="helia-taxon">Reference.</span> Correctly Compiling Proofs About Programs Without Proving Compilers Correct</h2>
+<div class="helia-meta"><span class="helia-author"><a class="helia-entry-link" href="audreyseo.html" data-entry="audreyseo">Audrey Seo</a>, <a class="helia-entry-link" href="christopherlam.html" data-entry="christopherlam">Christopher Lam</a>, <a class="helia-entry-link" href="dangrossman.html" data-entry="dangrossman">Dan Grossman</a>, <a class="helia-entry-link" href="taliaringer.html" data-entry="taliaringer">Talia Ringer</a></span> · <span class="helia-byline"><a class="helia-entry-link" href="itp.html" data-entry="itp">ITP</a> · 2024</span> · <span class="helia-tags"><span class="helia-tag" data-tag="compilation"><a class="helia-entry-link" href="tag-compilation.html" data-entry="tag-compilation">compilation</a></span></span> · <span class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.4230/lipics.itp.2024.33">DOI</a></span></span></div>
+</header>
+<div class="helia-body">
+<div class="helia-abstract">Guaranteeing correct compilation is nearly synonymous with compiler verification. However, the correctness guarantees for certified compilers and translation validation can be stronger than we need. While many compilers do have incorrect behavior, even when a compiler bug occurs it may not change the program’s behavior meaningfully with respect to its specification. Many real-world specifications are necessarily partial in that they do not completely specify all of a program’s behavior. While compiler verification and formal methods have had great success for safety-critical systems, there are magnitudes more code, such as math libraries, compiled with incorrect compilers, that would benefit from a guarantee of its partial specification. This paper explores a technique to get guarantees about compiled programs even in the presence of an unverified, or even incorrect, compiler. Our workflow compiles programs, specifications, and proof objects, from an embedded source language and logic to an embedded target language and logic. We implement two simple imperative languages, each with its own Hoare-style program logic, and a system for instantiating proof compilers out of compilers between these two languages that fulfill certain equational conditions in Coq. We instantiate our system on four compilers: one that is incomplete, two that are incorrect, and one that is correct but unverified. We use these instances to compile Hoare proofs for several programs, and we are able to leverage compiled proofs to assist in proofs of larger programs. Our proof compiler system is formally proven sound in Coq. We demonstrate how our approach enables strong target program guarantees even in the presence of incorrect compilation, opening up new options for which proof burdens one might shoulder instead of, or in addition to, compiler correctness.</div>
+</div>
+<div class="helia-cite helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><h3 class="helia-heading">Cite</h3>
+</summary>
+<div class="helia-group-body">
+<div class="helia-widget" data-widget="helia-cite-formats" data-props="{&quot;key&quot;:&quot;seo-2024-correctly&quot;,&quot;bibtex&quot;:&quot;@inproceedings{seo-2024-correctly,\n  doi = {10.4230/LIPICS.ITP.2024.33},\n  url = {https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.ITP.2024.33},\n  author = {Seo, Audrey and Lam, Christopher and Grossman, Dan and Ringer, Talia},\n  keywords = {proof transformations, compiler validation, program logics, proof engineering, Theory of computation → Logic and verification, Theory of computation → Hoare logic, Software and its engineering → Compilers},\n  language = {en},\n  title = {Correctly Compiling Proofs About Programs Without Proving Compilers Correct},\n  volume = {309},\n  pages = {33:1-33:20},\n  publisher = {Schloss Dagstuhl – Leibniz-Zentrum für Informatik},\n  year = {2024},\n  copyright = {Creative Commons Attribution 4.0 International license},\n  booktitle = {15th International Conference on Interactive Theorem Proving (ITP 2024)}\n}&quot;,&quot;bib-file&quot;:&quot;seo-2024-correctly.bib&quot;,&quot;hayagriva&quot;:&quot;seo-2024-correctly:\n  type: article\n  title: Correctly Compiling Proofs About Programs Without Proving Compilers Correct\n  author:\n  - Seo, Audrey\n  - Lam, Christopher\n  - Grossman, Dan\n  - Ringer, Talia\n  date: 2024\n  page-range: 33:1-33:20\n  url: https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.ITP.2024.33\n  serial-number:\n    doi: 10.4230/LIPICS.ITP.2024.33\n  parent:\n    type: proceedings\n    title: 15th International Conference on Interactive Theorem Proving (ITP 2024)\n    publisher: Schloss Dagstuhl – Leibniz-Zentrum für Informatik\n    volume: 309\n&quot;,&quot;yml-file&quot;:&quot;seo-2024-correctly.yml&quot;}"><div class="helia-cite-key" data-copy="@seo-2024-correctly" data-copy-label="citation key"><span class="helia-bib-key">Cite as</span> <code class="helia-raw-inline">@seo-2024-correctly</code> (helia, typst) · <code class="helia-raw-inline">\cite{seo-2024-correctly}</code> (LaTeX)</div>
+<div class="helia-cite-format helia-collapsible" data-format="bibtex" data-copy="true" data-copy-label="BibTeX">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">BibTeX</span></summary>
+<div class="helia-group-body">
+<details class="helia-code" open><summary class="helia-code-summary"><span class="helia-code-lang">bibtex</span> · <span class="helia-code-lines">14 lines</span></summary><pre class="helia-raw"><code class="language-bibtex"><span class="hl-text hl-bibtex"><span class="hl-meta hl-entry hl-braces hl-bibtex"><span class="hl-keyword hl-other hl-entry-type hl-bibtex"><span class="hl-punctuation hl-definition hl-keyword hl-bibtex">@</span>inproceedings</span><span class="hl-punctuation hl-section hl-entry hl-begin hl-bibtex">{</span><span class="hl-entity hl-name hl-type hl-entry-key hl-bibtex">seo-2024-correctly</span>,
+  <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">doi</span> <span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span> <span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>10.4230/LIPICS.ITP.2024.33<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>,
+  <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">url</span> <span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span> <span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.ITP.2024.33<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>,
+  <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">author</span> <span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span> <span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>Seo, Audrey and Lam, Christopher and Grossman, Dan and Ringer, Talia<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>,
+  <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">keywords</span> <span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span> <span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>proof transformations, compiler validation, program logics, proof engineering, Theory of computation → Logic and verification, Theory of computation → Hoare logic, Software and its engineering → Compilers<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>,
+  <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">language</span> <span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span> <span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>en<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>,
+  <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">title</span> <span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span> <span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>Correctly Compiling Proofs About Programs Without Proving Compilers Correct<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>,
+  <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">volume</span> <span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span> <span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>309<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>,
+  <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">pages</span> <span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span> <span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>33:1-33:20<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>,
+  <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">publisher</span> <span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span> <span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>Schloss Dagstuhl – Leibniz-Zentrum für Informatik<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>,
+  <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">year</span> <span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span> <span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>2024<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>,
+  <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">copyright</span> <span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span> <span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>Creative Commons Attribution 4.0 International license<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>,
+  <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">booktitle</span> <span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span> <span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>15th International Conference on Interactive Theorem Proving (ITP 2024)<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span>
+</span><span class="hl-punctuation hl-section hl-entry hl-end hl-bibtex">}</span></span></span></code></pre></details>
+</div>
+</details>
+</div>
+<div class="helia-cite-format helia-collapsible" data-format="hayagriva" data-copy="true" data-copy-label="hayagriva YAML">
+<details>
+<summary class="helia-group-summary"><span class="helia-group-title">hayagriva YAML (typst)</span></summary>
+<div class="helia-group-body">
+<details class="helia-code" open><summary class="helia-code-summary"><span class="helia-code-lang">yaml</span> · <span class="helia-code-lines">18 lines</span></summary><pre class="helia-raw"><code class="language-yaml"><span class="hl-source hl-yaml"><span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">seo-2024-correctly</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">type</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">article</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">title</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Correctly Compiling Proofs About Programs Without Proving Compilers Correct</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">author</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Seo, Audrey</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Lam, Christopher</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Grossman, Dan</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Ringer, Talia</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">date</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-constant hl-numeric hl-integer hl-decimal hl-yaml">2024</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">page-range</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">33:1-33:20</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">url</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.ITP.2024.33</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">serial-number</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">doi</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">10.4230/LIPICS.ITP.2024.33</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">parent</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">type</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">proceedings</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">title</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">15th International Conference on Interactive Theorem Proving (ITP 2024)</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">publisher</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Schloss Dagstuhl – Leibniz-Zentrum für Informatik</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">volume</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-constant hl-numeric hl-integer hl-decimal hl-yaml">309</span>
+</span></code></pre></details>
+</div>
+</details>
+</div>
+<div class="helia-cite-files">Download: <a class="helia-link" href="seo-2024-correctly.bib">seo-2024-correctly.bib</a> · <a class="helia-link" href="seo-2024-correctly.yml">seo-2024-correctly.yml</a></div>
+</div>
+</div>
+</details>
+</div>
+<div class="helia-reference-cites helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">Cites 45 works (7 here)</span></summary>
+<div class="helia-group-body">
+<div class="helia-reference-cites-here helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">With notes (7)</span></summary>
+<div class="helia-group-body">
+<section class="helia-transclusion" data-entry="koronkevich-2022-anf" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="koronkevich-2022-anf"><span class="helia-title">ANF preserves dependent types up to extensional equality</span>&nbsp;<a class="helia-slug" href="koronkevich-2022-anf.html">koronkevich-2022-anf</a><span class="helia-byline"><span class="helia-entry-link" data-entry="jfp">JFP</span> · 2022</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="koronkevich-2022-anf" data-kind="reference">
+<div class="helia-abstract">Many programmers use dependently typed languages such as Coq to machine-verify high-assurance software. However, existing compilers for these languages provide no guarantees after compiling, nor when linking after compilation. Type-preserving compilers preserve guarantees encoded in types and then use type checking to verify compiled code and ensure safe linking with external code. Unfortunately, standard compiler passes do not preserve the dependent typing of commonly used (intensional) type theories. This is because assumptions valid in simpler type systems no longer hold, and intensional dependent type systems are highly sensitive to syntactic changes, including compilation. We develop an A-normal form (ANF) translation with join-point optimization—a standard translation for making control flow explicit in functional languages—from the Extended Calculus of Constructions (ECC) with dependent elimination of booleans and natural numbers (a representative subset of Coq). Our dependently typed target language has equality reflection, allowing the type system to encode semantic equality of terms. This is key to proving type preservation and correctness of separate compilation for this translation. This is the first ANF translation for dependent types. Unlike related translations, it supports the universe hierarchy, and does not rely on parametricity or impredicativity.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="pdf-url"><a class="helia-link helia-external" href="https://www.cambridge.org/core/services/aop-cambridge-core/content/view/73FC888A23E5E87BAE16B158ABE349C8/S0956796822000090a.pdf/div-class-title-anf-preserves-dependent-types-up-to-extensional-equality-div.pdf">PDF</a></span> · <span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1017/s0956796822000090">DOI</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/journals/jfp/KoronkevichRAB22">pldb</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="krebbers-2017-interactive" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="krebbers-2017-interactive"><span class="helia-title">Interactive proofs in higher-order concurrent separation logic</span>&nbsp;<a class="helia-slug" href="krebbers-2017-interactive.html">krebbers-2017-interactive</a><span class="helia-byline"><span class="helia-entry-link" data-entry="popl">POPL</span> · 2017</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="krebbers-2017-interactive" data-kind="reference">
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="pdf-url"><a class="helia-link helia-external" href="https://dl.acm.org/doi/pdf/10.1145/3009837.3009855">PDF</a></span> · <span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/3009837.3009855">DOI</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/conf/popl/KrebbersTB17">pldb</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="jung-2015-iris" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="jung-2015-iris"><span class="helia-title">Iris: Monoids and Invariants as an Orthogonal Basis for Concurrent Reasoning</span>&nbsp;<a class="helia-slug" href="jung-2015-iris.html">jung-2015-iris</a><span class="helia-byline"><span class="helia-entry-link" data-entry="popl">POPL</span> · 2015</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="jung-2015-iris" data-kind="reference">
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="pdf-url"><a class="helia-link helia-external" href="https://dl.acm.org/doi/pdf/10.1145/2676726.2676980">PDF</a></span> · <span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/2676726.2676980">DOI</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/conf/popl/JungSSSTBD15">pldb</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="kumar_cakeml_2014" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="kumar_cakeml_2014"><span class="helia-title">CakeML: A verified implementation of ML</span>&nbsp;<a class="helia-slug" href="kumar_cakeml_2014.html">kumar_cakeml_2014</a><span class="helia-byline"><span class="helia-entry-link" data-entry="popl">POPL</span> · 2014</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="kumar_cakeml_2014" data-kind="reference">
+<div class="helia-abstract">We have developed and mechanically verified an ML system called CakeML, which supports a substantial subset of Standard ML. CakeML is implemented as an interactive read-eval-print loop (REPL) in x86-64 machine code. Our correctness theorem ensures that this REPL implementation prints only those results permitted by the semantics of CakeML. Our verification effort touches on a breadth of topics including lexing, parsing, type checking, incremental and dynamic compilation, garbage collection, arbitraryprecision arithmetic, and compiler bootstrapping.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="pdf-url"><a class="helia-link helia-external" href="https://dl.acm.org/doi/pdf/10.1145/2535838.2535841">PDF</a></span> · <span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/2535838.2535841">DOI</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/conf/popl/KumarMNO14">pldb</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="yangFindingUnderstandingBugs" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="yangFindingUnderstandingBugs"><span class="helia-title">Finding and Understanding Bugs in C Compilers</span>&nbsp;<a class="helia-slug" href="yangFindingUnderstandingBugs.html">yangFindingUnderstandingBugs</a><span class="helia-byline"><span class="helia-entry-link" data-entry="pldi">PLDI</span> · 2011</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="yangFindingUnderstandingBugs" data-kind="reference">
+<div class="helia-abstract">Compilers should be correct. To improve the quality of C compilers, we created Csmith, a randomized test-case generation tool, and spent three years using it to find compiler bugs. During this period we reported more than 325 previously unknown bugs to compiler developers. Every compiler we tested was found to crash and also to silently generate wrong code when presented with valid input. In this paper we present our compiler-testing tool and the results of our bug-hunting study. Our first contribution is to advance the state of the art in compiler testing. Unlike previous tools, Csmith generates programs that cover a large subset of C while avoiding the undefined and unspecified behaviors that would destroy its ability to automatically find wrong-code bugs. Our second contribution is a collection of qualitative and quantitative results about the bugs we have found in open-source C compilers.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="pdf-url"><a class="helia-link helia-external" href="https://dl.acm.org/doi/pdf/10.1145/1993498.1993532">PDF</a></span> · <span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/1993498.1993532">DOI</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/conf/pldi/YangCER11">pldb</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="leroy_formal_2009" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="leroy_formal_2009"><span class="helia-title">Formal verification of a realistic compiler</span>&nbsp;<a class="helia-slug" href="leroy_formal_2009.html">leroy_formal_2009</a><span class="helia-byline"><span class="helia-entry-link" data-entry="cacm">CACM</span> · 2009</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="leroy_formal_2009" data-kind="reference">
+<div class="helia-abstract">This paper reports on the development and formal verification (proof of semantic preservation) of CompCert, a compiler from Clight (a large subset of the C programming language) to PowerPC assembly code, using the Coq proof assistant both for programming the compiler and for proving its correctness. Such a verified compiler is useful in the context of critical software and its formal verification: the verification of the compiler guarantees that the safety properties proved on the source code hold for the executable compiled code as well.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/1538788.1538814">DOI</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="kozen2000certification" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="kozen2000certification"><span class="helia-title">Certification of Compiler Optimizations Using Kleene Algebra with Tests</span>&nbsp;<a class="helia-slug" href="kozen2000certification.html">kozen2000certification</a><span class="helia-byline">Computational Logic — CL 2000 · 2000</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="kozen2000certification" data-kind="reference">
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1007/3-540-44957-4_38">DOI</a></span></div>
+</div>
+</div>
+</details>
+</section>
+</div>
+</details>
+</div>
+<div class="helia-reference-cites-away helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">External (38)</span></summary>
+<div class="helia-group-body">
+<ul>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3571220">Dimsum: A decentralized approach to multi-language semantics and verification</a> (2023)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.5281/zenodo.8161141">The coq proof assistant</a> (2023)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3519939.3523706">Relational compilation for performance-critical applications: Extensible proof-producing translation of functional models into low-level code</a> (2022)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/s10703-020-00353-1">Abstraction and subsumption in modular verification of C programs</a> (2021)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3453483.3454097">Compcerto: Compiling certified open c components</a> (2021)</li>
+<li>Coq development for the course "Mechanized semantics" (2021)</li>
+<li>Metamath zero: Designing a theorem prover prover (2020)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/s10817-017-9437-1">Refinement to imperative HOL</a> (2019)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3290375">An abstract stack based approach to verified compositional compilation to machine code</a> (2019)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/s10817-018-9457-5">VST-Floyd: A Separation Logic Tool to Verify Correctness of C Programs</a> (2018)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3167089">Oeuf: Minimizing the Coq extraction TCB</a> (2018)</li>
+<li>CertiCoq: A verified compiler for Coq (2017)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3158110">Type-preserving cps translation of Σ and Π types is not not possible</a> (2017)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.4230/lipics.snapl.2017.12">Linking Types for Multi-Language Software: Have Your Cake and Eat It Too</a> (2017)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/2872362.2872404">Cogent: Verifying high-assurance file system implementations</a> (2016)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-319-43144-4_20">A framework for the automatic formal verification of refinement from Cogent to C</a> (2016)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/2815400.2815402">Using crash hoare logic for certifying the fscq file system</a> (2015)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/2775051.2676975">Deep specifications and certified abstraction layers</a> (2015)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/2544174.2500592">The bedrock structured programming system: Combining generative metaprogramming and hoare logic in an extensible program verifier</a> (2013)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/2034574.2034828">Characteristic formulae for the verification of imperative programs</a> (2011)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/1993316.1993526">Mostly-automated verification of low-level programs in computational separation logic</a> (2011)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/1538917.1538919">Certificate translation for optimizing compilers</a> (2009)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/s10817-009-9148-3">Mechanized Semantics for the Clight Subset of the C Language</a> (2009)</li>
+<li>Embedding proof-carrying components into Isabelle (2009)</li>
+<li>Certificate Translation Alongside Program Transformations (2009)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/1411203.1411237">Ynot: Dependent types for imperative programs</a> (2008)</li>
+<li>Formalizing proof-transforming compilation of Eiffel programs (2008)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/1292316.1292321">Proof-transforming compilation of programs with abrupt termination</a> (2007)</li>
+<li>Formal certification of a compiler back-end, or: programming a compiler with a proof assistant (2006)</li>
+<li>Proof obligations preserving compilation (2005)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-540-30142-4_12">Theorem reuse by proof term transformation</a> (2004)</li>
+<li>Changing data representation within the Coq system (2003)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1016/s0020-0255(01)00164-5">On the completeness of propositional hoare logic</a> (2001)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/349299.349314">Translation validation for an optimizing compiler</a> (2000)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-94-017-0435-9_8">Proof Analysis, Generalization and Reuse</a> (1998)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/263699.263712">Proof-carrying code</a> (1997)</li>
+<li>Generalization at higher types (1992)</li>
+<li>Proof Transformations in Higher-Order Logic (1987)</li>
+</ul>
+</div>
+</details>
+</div>
+</div>
+</details>
+</div>
+</article>
+<div class="helia-identity"><span class="helia-id">seo-2024-correctly</span> <span class="helia-kind">reference</span> <span class="helia-path">entries/refs/seo-2024-correctly/seo-2024-correctly.hel</span></div>
+</div>
+</body>
+</html>

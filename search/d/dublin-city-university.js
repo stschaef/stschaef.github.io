@@ -1,0 +1,1 @@
+heliaSearchData("d/dublin-city-university",{"id":"dublin-city-university","title":"Dublin City University","kind":"institution","tags":[],"authors":[],"venue":[],"date":null,"url":"dublin-city-university.html","headings":[],"body":""});

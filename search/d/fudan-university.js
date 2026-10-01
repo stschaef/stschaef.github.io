@@ -1,0 +1,1 @@
+heliaSearchData("d/fudan-university",{"id":"fudan-university","title":"Fudan University","kind":"institution","tags":[],"authors":[],"venue":[],"date":null,"url":"fudan-university.html","headings":[],"body":""});

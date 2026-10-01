@@ -1,0 +1,1 @@
+heliaSearchData("d/chapman-university",{"id":"chapman-university","title":"Chapman University","kind":"institution","tags":[],"authors":[],"venue":[],"date":null,"url":"chapman-university.html","headings":[],"body":""});

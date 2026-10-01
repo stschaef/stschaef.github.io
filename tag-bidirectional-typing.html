@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>bidirectional-typing</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Ctext y=%22.9em%22 font-size=%2290%22%3E%F0%9F%8C%BB%3C/text%3E%3C/svg%3E">
+<meta name="generator" content="helia">
+<link rel="alternate" type="application/atom+xml" title="Steven Schaefer" href="feed.xml">
+<link rel="alternate" type="application/feed+json" title="Steven Schaefer" href="feed.json">
+<script src="helia/theme-version.js"></script>
+<script src="theme/folio-early.js"></script>
+<link rel="stylesheet" href="helia/theme.css">
+<link rel="stylesheet" href="helia/highlight.css">
+<link rel="stylesheet" href="helia/search.css">
+<link rel="stylesheet" href="theme/katex.css">
+<link rel="stylesheet" href="theme/recipe.css">
+<link rel="stylesheet" href="theme/site.css">
+<link rel="stylesheet" href="theme/folio.css">
+<script defer src="helia/runtime.js"></script>
+<script defer src="helia/search.js"></script>
+<script defer src="theme/glyphcraft.js"></script>
+<script defer src="theme/glyphart.js"></script>
+<script defer src="theme/glyphgen.js"></script>
+<script defer src="theme/ornament.js"></script>
+<script defer src="theme/folio.js"></script>
+<script defer src="theme/portrait.js"></script>
+</head>
+<body>
+<nav class="helia-topbar"><a class="helia-home" href="home.html">Steven Schaefer</a><ul class="helia-nav-links"><li><a href="stevenschaefer.html">About Me</a></li><li><a href="research.html">Research</a></li><li><a href="new.html">New</a></li></ul><button type="button" class="helia-search-button" aria-label="Search (/ or Ctrl+K)" aria-haspopup="dialog"><span class="helia-search-icon">⌕</span><span class="helia-search-label">Search</span><kbd class="helia-search-key">/</kbd></button></nav>
+<div class="helia-page" data-kind="tag">
+<article class="helia-article">
+<header class="helia-header" data-entry="tag-bidirectional-typing" data-kind="tag">
+<h2 class="helia-heading"><span class="helia-taxon">Tag.</span> bidirectional-typing</h2>
+<div class="helia-meta"><span class="helia-byline"><span class="helia-tag-name">bidirectional-typing</span></span></div>
+</header>
+<div class="helia-body">
+</div>
+<div class="helia-tag-group">
+<section class="helia-heading-section" data-level="1">
+<details open>
+<summary class="helia-heading-summary"><h2 class="helia-heading">References (7)</h2>
+</summary>
+<div class="helia-heading-body">
+<section class="helia-transclusion" data-entry="mihejevs-2025-canonical" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="mihejevs-2025-canonical"><span class="helia-title">Canonical bidirectional typechecking</span>&nbsp;<a class="helia-slug" href="mihejevs-2025-canonical.html">mihejevs-2025-canonical</a><span class="helia-byline"><span class="helia-entry-link" data-entry="arxiv">arXiv</span> · 2025</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="mihejevs-2025-canonical" data-kind="reference">
+<div class="helia-abstract">We demonstrate that the checkable/synthesisable split in bidirectional typechecking coincides with existing dualities in polarised System L, also known as polarised <span class="helia-math helia-math-inline helia-mathml"><math><mi>𝜇</mi><mover accent="true"><mi>𝜇</mi><mo>˜</mo></mover></math></span>-calculus. Specifically, positive terms and negative coterms are checkable, and negative terms and positive coterms are synthesisable. This combines a standard formulation of bidirectional typechecking with Zeilberger’s ‘cocontextual’ variant. We extend this to ordinary ‘cartesian’ System L using Mc Bride’s co-de Bruijn formulation of scopes, and show that both can be combined in a linear-nonlinear style, where linear types are positive and cartesian types are negative. This yields a remarkable 3-way coincidence between the shifts of polarised System L, LNL calculi, and bidirectional calculi.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/2512.07511">arXiv</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="porter-2025-incremental" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="porter-2025-incremental"><span class="helia-title">Incremental Bidirectional Typing via Order Maintenance</span>&nbsp;<a class="helia-slug" href="porter-2025-incremental.html">porter-2025-incremental</a><span class="helia-byline"><span class="helia-entry-link" data-entry="oopsla">OOPSLA</span> · 2025</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="porter-2025-incremental" data-kind="reference">
+<div class="helia-abstract">Live programming environments provide various semantic services, including type checking and evaluation, continuously as the user is editing the program. The live paradigm promises to improve the developer experience, but liveness is an implementation challenge, particularly when working with large programs. This paper specifies and efficiently implements a system that is able to incrementally update type information for a live program in response to fine-grained program edits. This information includes type error marks and information about the expected and actual type of every expression. The system is specified type-theoretically as a small-step dynamics that propagates updates through the marked and annotated program. Most updates flow according to a base bidirectional type system. Additional pointers are maintained to connect bound variables to their binding locations, with type updates traversing these pointers directly. Order maintenance data structures are employed to efficiently maintain these pointers and to prioritize the order of update propagation. We prove this system is equivalent to naive reanalysis in the Agda theorem prover, along with other important metatheoretic properties. We then provide an efficient OCaml implementation, detailing a number of impactful optimizations. We evaluate this implementation’s performance with a large stress-test and find that it is able to achieve multiple orders of magnitude speed-up compared to from-scratch reanalysis.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="pdf-url"><a class="helia-link helia-external" href="https://dl.acm.org/doi/pdf/10.1145/3763117">PDF</a></span> · <span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/3763117">DOI</a></span> · <span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/2504.08946">arXiv</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/journals/pacmpl/PorterKWPO25">pldb</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="adams-2025-grove" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="adams-2025-grove"><span class="helia-title">Grove: A Bidirectionally Typed Collaborative Structure Editor Calculus</span>&nbsp;<a class="helia-slug" href="adams-2025-grove.html">adams-2025-grove</a><span class="helia-byline"><span class="helia-entry-link" data-entry="popl">POPL</span> · 2025</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="adams-2025-grove" data-kind="reference">
+<div class="helia-abstract">Version control systems typically rely on a patch language , heuristic patch synthesis algorithms like diff , and three-way merge algorithms . Standard patch languages and merge algorithms often fail to identify conflicts correctly when there are multiple edits to one line of code or code is relocated. This paper introduces Grove, a collaborative structure editor calculus that eliminates patch synthesis and three-way merge algorithms entirely. Instead, patches are derived directly from the log of the developer’s edit actions and all edits commute, i.e. the repository state forms a commutative replicated data type (CmRDT). To handle conflicts that can arise due to code relocation, the core datatype in Grove is a labeled directed multi-graph with uniquely identified vertices and edges. All edits amount to edge insertion and deletion, with deletion being permanent. To support tree-based editing, we define a decomposition from graphs into groves , which are a set of syntax trees with conflicts–including local, relocation, and unicyclic relocation conflicts–represented explicitly using holes and references between trees. Finally, we define a type error localization system for groves that enjoys a totality property, i.e. all editor states in Grove are statically meaningful, so developers can use standard editor services while working to resolve these explicitly represented conflicts. The static semantics is defined as a bidirectional marking system in line with recent work, with gradual typing employed to handle situations where errors and conflicts prevent type determination. We then layer on a unification-based type inference system to opportunistically fill type holes and fail gracefully when no solution exists. We mechanize the metatheory of Grove using the Agda theorem prover. We implement these ideas as the Grove Workbench , which generates the necessary data structures and algorithms in OCaml given a syntax tree specification.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/3704909">DOI</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/journals/pacmpl/AdamsGPSZO25">pldb</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="mercer-2022-implicit" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="mercer-2022-implicit"><span class="helia-title">Implicit Polarized F: local type inference for impredicativity</span>&nbsp;<a class="helia-slug" href="mercer-2022-implicit.html">mercer-2022-implicit</a><span class="helia-byline"><span class="helia-entry-link" data-entry="arxiv">arXiv</span> · 2022</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="mercer-2022-implicit" data-kind="reference">
+<div class="helia-abstract">System F, the polymorphic lambda calculus, features the principle of impredicativity: polymorphic types may be (explicitly) instantiated at other types, enabling many powerful idioms such as Church encoding and data abstraction. Unfortunately, type applications need to be implicit for a language to be human-usable, and the problem of inferring all type applications in System F is undecidable. As a result, language designers have historically avoided impredicative type inference. We reformulate System F in terms of call-by-push-value, and study type inference for it. Surprisingly, this new perspective yields a novel type inference algorithm which is extremely simple to implement (not even requiring unification), infers many types, and has a simple declarative specification. Furthermore, our approach offers type theoretic explanations of how many of the heuristics used in existing algorithms for impredicative polymorphism arise.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/2203.01835">arXiv</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="dunfield-2021-bidirectional" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="dunfield-2021-bidirectional"><span class="helia-title">Bidirectional Typing</span>&nbsp;<a class="helia-slug" href="dunfield-2021-bidirectional.html">dunfield-2021-bidirectional</a><span class="helia-byline"><span class="helia-entry-link" data-entry="acm-computing-surveys">ACM Computing Surveys</span> · 2021</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="dunfield-2021-bidirectional" data-kind="reference">
+<div class="helia-abstract">Bidirectional typing combines two modes of typing: type checking, which checks that a program satisfies a known type, and type synthesis, which determines a type from the program. Using checking enables bidirectional typing to support features for which inference is undecidable; using synthesis enables bidirectional typing to avoid the large annotation burden of explicitly typed languages. In addition, bidirectional typing improves error locality. We highlight the design principles that underlie bidirectional type systems, survey the development of bidirectional typing from the prehistoric period before Pierce and Turner’s local type inference to the present day, and provide guidance for future investigations.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/3450952">DOI</a></span> · <span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/1908.05839">arXiv</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="omar-2017-hazelnut" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="omar-2017-hazelnut"><span class="helia-title">Hazelnut: a bidirectionally typed structure editor calculus</span>&nbsp;<a class="helia-slug" href="omar-2017-hazelnut.html">omar-2017-hazelnut</a><span class="helia-byline"><span class="helia-entry-link" data-entry="popl">POPL</span> · 2017</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="omar-2017-hazelnut" data-kind="reference">
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="pdf-url"><a class="helia-link helia-external" href="http://dl.acm.org/ft_gateway.cfm?id=3009900&amp;type=pdf">PDF</a></span> · <span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/3009837.3009900">DOI</a></span> · <span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/1607.04180">arXiv</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/conf/popl/OmarVHAH17">pldb</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="dunfield-2013-complete" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="dunfield-2013-complete"><span class="helia-title">Complete and easy bidirectional typechecking for higher-rank polymorphism</span>&nbsp;<a class="helia-slug" href="dunfield-2013-complete.html">dunfield-2013-complete</a><span class="helia-byline"><span class="helia-entry-link" data-entry="icfp">ICFP</span> · 2013</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="dunfield-2013-complete" data-kind="reference">
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="pdf-url"><a class="helia-link helia-external" href="https://dl.acm.org/doi/pdf/10.1145/2500365.2500582">PDF</a></span> · <span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/2500365.2500582">DOI</a></span> · <span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/1306.6032">arXiv</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/conf/icfp/DunfieldK13">pldb</a></span></div>
+</div>
+</div>
+</details>
+</section>
+</div>
+</details>
+</section>
+</div>
+</article>
+<div class="helia-identity"><span class="helia-id">tag-bidirectional-typing</span> <span class="helia-kind">tag</span></div>
+</div>
+</body>
+</html>

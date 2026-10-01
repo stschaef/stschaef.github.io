@@ -1,0 +1,1 @@
+heliaSearchData("d/williamfclocksin",{"id":"williamfclocksin","title":"William F. Clocksin","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"williamfclocksin.html","headings":[],"body":""});

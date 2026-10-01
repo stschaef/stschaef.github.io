@@ -1,0 +1,1 @@
+heliaSearchData("d/tristanravitch",{"id":"tristanravitch","title":"Tristan Ravitch","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"tristanravitch.html","headings":[],"body":""});

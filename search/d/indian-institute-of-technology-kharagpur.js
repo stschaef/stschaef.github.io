@@ -1,0 +1,1 @@
+heliaSearchData("d/indian-institute-of-technology-kharagpur",{"id":"indian-institute-of-technology-kharagpur","title":"Indian Institute of Technology Kharagpur","kind":"institution","tags":[],"authors":[],"venue":[],"date":null,"url":"indian-institute-of-technology-kharagpur.html","headings":[],"body":""});

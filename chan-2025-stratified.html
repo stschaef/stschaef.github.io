@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>Stratified Type Theory</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Ctext y=%22.9em%22 font-size=%2290%22%3E%F0%9F%8C%BB%3C/text%3E%3C/svg%3E">
+<meta name="generator" content="helia">
+<link rel="alternate" type="application/atom+xml" title="Steven Schaefer" href="feed.xml">
+<link rel="alternate" type="application/feed+json" title="Steven Schaefer" href="feed.json">
+<script src="helia/theme-version.js"></script>
+<script src="theme/folio-early.js"></script>
+<link rel="stylesheet" href="helia/theme.css">
+<link rel="stylesheet" href="helia/highlight.css">
+<link rel="stylesheet" href="helia/search.css">
+<link rel="stylesheet" href="theme/katex.css">
+<link rel="stylesheet" href="theme/recipe.css">
+<link rel="stylesheet" href="theme/site.css">
+<link rel="stylesheet" href="theme/folio.css">
+<script defer src="helia/runtime.js"></script>
+<script defer src="helia/search.js"></script>
+<script defer src="theme/glyphcraft.js"></script>
+<script defer src="theme/glyphart.js"></script>
+<script defer src="theme/glyphgen.js"></script>
+<script defer src="theme/ornament.js"></script>
+<script defer src="theme/folio.js"></script>
+<script defer src="theme/portrait.js"></script>
+<script type="application/json" id="helia-widgets">{"helia-cite-formats":"widgets/helia-cite-formats-a3294ac7.js"}</script>
+<link rel="modulepreload" href="widgets/helia-cite-formats-a3294ac7.js">
+<script type="module" src="widgets/runtime.js"></script>
+</head>
+<body>
+<nav class="helia-topbar"><a class="helia-home" href="home.html">Steven Schaefer</a><ul class="helia-nav-links"><li><a href="stevenschaefer.html">About Me</a></li><li><a href="research.html">Research</a></li><li><a href="new.html">New</a></li></ul><button type="button" class="helia-search-button" aria-label="Search (/ or Ctrl+K)" aria-haspopup="dialog"><span class="helia-search-icon">⌕</span><span class="helia-search-label">Search</span><kbd class="helia-search-key">/</kbd></button></nav>
+<div class="helia-page" data-kind="reference">
+<article class="helia-article">
+<header class="helia-header" data-entry="chan-2025-stratified" data-kind="reference">
+<h2 class="helia-heading"><span class="helia-taxon">Reference.</span> Stratified Type Theory</h2>
+<div class="helia-meta"><span class="helia-author"><a class="helia-entry-link" href="jonathanchan.html" data-entry="jonathanchan">Jonathan Chan</a>, <a class="helia-entry-link" href="stephanieweirich.html" data-entry="stephanieweirich">Stephanie Weirich</a></span> · <span class="helia-byline"><a class="helia-entry-link" href="esop.html" data-entry="esop">ESOP</a> · 2025</span> · <span class="helia-tags"><span class="helia-tag" data-tag="universes"><a class="helia-entry-link" href="tag-universes.html" data-entry="tag-universes">universes</a></span></span> · <span class="helia-entry-links"><span class="helia-entry-link" data-field="pdf-url"><a class="helia-link helia-external" href="https://link.springer.com/content/pdf/10.1007/978-3-031-91118-7_10.pdf">PDF</a></span> · <span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-031-91118-7_10">DOI</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/conf/esop/ChanW25">pldb</a></span></span></div>
+</header>
+<div class="helia-body">
+<div class="helia-abstract">A hierarchy of type universes is a rudimentary ingredient in the type theories of many proof assistants to prevent the logical inconsistency resulting from combining dependent functions and the type-in-type axiom. In this work, we argue that a universe hierarchy is not the only option for universes in type theory. Taking inspiration from Leivant’s Stratified System F, we introduce Stratified Type Theory (), where rather than stratifying universes by levels, we stratify typing judgements and restrict the domain of dependent functions to strictly lower levels. Even with type-in-type, this restriction suffices to enforce consistency. In , we consider a number of extensions beyond just stratified dependent functions. First, the subsystem employs McBride’s crude-but-effective stratification (also known as displacement) as a simple form of level polymorphism where global definitions with concrete levels can be displaced uniformly to any higher level. Second, to recover some expressivity lost due to the restriction on dependent function domains, the full includes a separate nondependent function type with a floating domain whose level matches that of the overall function type. Finally, we have implemented a prototype type checker for extended with datatypes and inference for level and displacement annotations, along with a small core library. We have proven to be consistent and to be type safe, but consistency of the full remains an open problem, largely due to the interaction between floating functions and cumulativity of judgements. Nevertheless, we believe to be consistent, and as evidence have verified the ill-typedness of some well-known type-theoretic paradoxes using our implementation.</div>
+</div>
+<div class="helia-cite helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><h3 class="helia-heading">Cite</h3>
+</summary>
+<div class="helia-group-body">
+<div class="helia-widget" data-widget="helia-cite-formats" data-props="{&quot;key&quot;:&quot;chan-2025-stratified&quot;,&quot;bibtex&quot;:&quot;@inbook{chan-2025-stratified, title={Stratified Type Theory}, ISBN={9783031911187}, ISSN={1611-3349}, url={http://dx.doi.org/10.1007/978-3-031-91118-7_10}, DOI={10.1007/978-3-031-91118-7_10}, booktitle={Programming Languages and Systems}, publisher={Springer Nature Switzerland}, author={Chan, Jonathan and Weirich, Stephanie}, year={2025}, pages={236–263} }&quot;,&quot;bib-file&quot;:&quot;chan-2025-stratified.bib&quot;,&quot;hayagriva&quot;:&quot;chan-2025-stratified:\n  type: chapter\n  title: Stratified Type Theory\n  author:\n  - Chan, Jonathan\n  - Weirich, Stephanie\n  date: 2025\n  page-range: 236-263\n  url: http://dx.doi.org/10.1007/978-3-031-91118-7_10\n  serial-number:\n    doi: 10.1007/978-3-031-91118-7_10\n    isbn: &#39;9783031911187&#39;\n    issn: 1611-3349\n  parent:\n    type: book\n    title: Programming Languages and Systems\n    publisher: Springer Nature Switzerland\n&quot;,&quot;yml-file&quot;:&quot;chan-2025-stratified.yml&quot;}"><div class="helia-cite-key" data-copy="@chan-2025-stratified" data-copy-label="citation key"><span class="helia-bib-key">Cite as</span> <code class="helia-raw-inline">@chan-2025-stratified</code> (helia, typst) · <code class="helia-raw-inline">\cite{chan-2025-stratified}</code> (LaTeX)</div>
+<div class="helia-cite-format helia-collapsible" data-format="bibtex" data-copy="true" data-copy-label="BibTeX">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">BibTeX</span></summary>
+<div class="helia-group-body">
+<details class="helia-code" open><summary class="helia-code-summary"><span class="helia-code-lang">bibtex</span> · <span class="helia-code-lines">1 line</span></summary><pre class="helia-raw"><code class="language-bibtex"><span class="hl-text hl-bibtex"><span class="hl-meta hl-entry hl-braces hl-bibtex"><span class="hl-keyword hl-other hl-entry-type hl-bibtex"><span class="hl-punctuation hl-definition hl-keyword hl-bibtex">@</span>inbook</span><span class="hl-punctuation hl-section hl-entry hl-begin hl-bibtex">{</span><span class="hl-entity hl-name hl-type hl-entry-key hl-bibtex">chan-2025-stratified</span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">title</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>Stratified Type Theory<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">ISBN</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>9783031911187<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">ISSN</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>1611-3349<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">url</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>http://dx.doi.org/10.1007/978-3-031-91118-7_10<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">DOI</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>10.1007/978-3-031-91118-7_10<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">booktitle</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>Programming Languages and Systems<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">publisher</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>Springer Nature Switzerland<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">author</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>Chan, Jonathan and Weirich, Stephanie<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">year</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>2025<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">pages</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>236–263<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span> </span><span class="hl-punctuation hl-section hl-entry hl-end hl-bibtex">}</span></span></span></code></pre></details>
+</div>
+</details>
+</div>
+<div class="helia-cite-format helia-collapsible" data-format="hayagriva" data-copy="true" data-copy-label="hayagriva YAML">
+<details>
+<summary class="helia-group-summary"><span class="helia-group-title">hayagriva YAML (typst)</span></summary>
+<div class="helia-group-body">
+<details class="helia-code" open><summary class="helia-code-summary"><span class="helia-code-lang">yaml</span> · <span class="helia-code-lines">17 lines</span></summary><pre class="helia-raw"><code class="language-yaml"><span class="hl-source hl-yaml"><span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">chan-2025-stratified</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">type</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">chapter</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">title</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Stratified Type Theory</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">author</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Chan, Jonathan</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Weirich, Stephanie</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">date</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-constant hl-numeric hl-integer hl-decimal hl-yaml">2025</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">page-range</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">236-263</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">url</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">http://dx.doi.org/10.1007/978-3-031-91118-7_10</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">serial-number</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">doi</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">10.1007/978-3-031-91118-7_10</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">isbn</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-quoted hl-single hl-yaml"><span class="hl-punctuation hl-definition hl-string hl-begin hl-yaml">&#39;</span>9783031911187<span class="hl-punctuation hl-definition hl-string hl-end hl-yaml">&#39;</span></span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">issn</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">1611-3349</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">parent</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">type</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">book</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">title</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Programming Languages and Systems</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">publisher</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Springer Nature Switzerland</span>
+</span></code></pre></details>
+</div>
+</details>
+</div>
+<div class="helia-cite-files">Download: <a class="helia-link" href="chan-2025-stratified.bib">chan-2025-stratified.bib</a> · <a class="helia-link" href="chan-2025-stratified.yml">chan-2025-stratified.yml</a></div>
+</div>
+</div>
+</details>
+</div>
+<div class="helia-reference-cited-by helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">Cited by (2)</span></summary>
+<div class="helia-group-body">
+<section class="helia-transclusion" data-entry="chan-2025-internalizing" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="chan-2025-internalizing"><span class="helia-title">Internalizing Extensions in Lattices of Type Theories</span>&nbsp;<a class="helia-slug" href="chan-2025-internalizing.html">chan-2025-internalizing</a><span class="helia-byline"><span class="helia-entry-link" data-entry="arxiv">arXiv</span> · 2025</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="chan-2025-internalizing" data-kind="reference">
+<div class="helia-abstract">Many proof assistants allow the use of features and axioms that increase their expressive power. However, these extensions must be used with care, as some combinations are known to lead to logical inconsistencies. Therefore, proof assistants include mechanisms that track which extensions are used in a proof development or module, ensuring that incompatible extensions are not used simultaneously. Unfortunately, existing extension tracking mechanisms are external to the type system. This means that we cannot specify precisely which extensions a definition depends on. Having the ability to write more precise specifications means we are not picking an overapproximation of the extensions needed, which prevents reusing definitions in the presence of incompatible extensions. Furthermore, we cannot refer to definitions that use incompatible extensions even if they are never used in inconsistent ways. The reasoning principles of one extension therefore cannot be used as a metatheory to reason about the properties of an incompatible extension. In this report, I explore the use of the Dependent Calculus of Indistinguishability (DCOI) by Liu et al. for extension tracking. DCOI is a dependent type system with dependency tracking, where terms and variables are assigned dependency levels alongside their types. These dependency levels form a lattice that describes which levels are permitted to access what. To instead track extensions, each set of extensions would correspond to a dependency level, and the lattice would describe how extensions are permitted to interact.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/2510.26839">arXiv</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="koronkevich-2025-type" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="koronkevich-2025-type"><span class="helia-title">Type Universes as Kripke Worlds</span>&nbsp;<a class="helia-slug" href="koronkevich-2025-type.html">koronkevich-2025-type</a><span class="helia-byline"><span class="helia-entry-link" data-entry="icfp">ICFP</span> · 2025</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="koronkevich-2025-type" data-kind="reference">
+<div class="helia-abstract">What are mutable references; what do they mean? The answers to these questions have spawned lots of important theoretical work and form the foundation of many impactful tools. However, existing semantics collapse a key distinction: which allocations does a reference depend on? In this paper, we deconstruct the space of mutable higher-order references. We formalize a novel distinction–splitting the design space of references not only into higher-order vs (full-)ground references, but also dependency of an allocation on past vs future allocations. This distinction is fundamental to a thorny issue that arises in constructing semantic models of mutable references–the type-world circularity. The issue disappears for what we call predicative references, those that only quantify over past, not future, allocations, and for non-higher-order impredicative references. We design a syntax and semantics for each point in our newly described space. The syntax relies on a type universe hierarchy, à la dependent type theory, to kind the types of allocated terms, and stratify allocations. Each type universe corresponds to a semantic Kripke world, giving a lightweight syntactic mechanism to design and restrict heap shapes. The semantics bear a resemblance to work on regions, and suggest some connection between universe systems and regions, which we describe in some detail.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="pdf-url"><a class="helia-link helia-external" href="https://dl.acm.org/doi/pdf/10.1145/3747532">PDF</a></span> · <span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/3747532">DOI</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/journals/pacmpl/KoronkevichB25">pldb</a></span></div>
+</div>
+</div>
+</details>
+</section>
+</div>
+</details>
+</div>
+<div class="helia-reference-cites helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">Cites 41 works (2 here)</span></summary>
+<div class="helia-group-body">
+<div class="helia-reference-cites-here helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">With notes (2)</span></summary>
+<div class="helia-group-body">
+<section class="helia-transclusion" data-entry="houfavonia-2023-an" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="houfavonia-2023-an"><span class="helia-title">An Order-Theoretic Analysis of Universe Polymorphism</span>&nbsp;<a class="helia-slug" href="houfavonia-2023-an.html">houfavonia-2023-an</a><span class="helia-byline"><span class="helia-entry-link" data-entry="popl">POPL</span> · 2023</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="houfavonia-2023-an" data-kind="reference">
+<div class="helia-abstract">We present a novel formulation of universe polymorphism in dependent type theory in terms of monads on the category of strict partial orders, and a novel algebraic structure, displacement algebras, on top of which one can implement a generalized form of McBride’s “crude but effective stratification” scheme for lightweight universe polymorphism. We give some examples of exotic but consistent universe hierarchies, and prove that every universe hierarchy in our sense can be embedded in a displacement algebra and hence implemented via our generalization of McBride’s scheme. Many of our technical results are mechanized in Agda, and we have an OCaml library for universe levels based on displacement algebras, for use in proof assistant implementations.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="pdf-url"><a class="helia-link helia-external" href="https://dl.acm.org/doi/pdf/10.1145/3571250">PDF</a></span> · <span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/3571250">DOI</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/journals/pacmpl/FavoniaAM23">pldb</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="hottbook" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="hottbook"><span class="helia-title">Homotopy Type Theory: Univalent Foundations of Mathematics</span>&nbsp;<a class="helia-slug" href="hottbook.html">hottbook</a><span class="helia-byline"><span class="helia-entry-link" data-entry="arxiv">arXiv</span> · 2013</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="hottbook" data-kind="reference">
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="url"><a class="helia-link helia-external" href="https://homotopytypetheory.org/book">Web</a></span> · <span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/1308.0729">arXiv</a></span></div>
+</div>
+</div>
+</details>
+</section>
+</div>
+</details>
+</div>
+<div class="helia-reference-cites-away helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">External (39)</span></summary>
+<div class="helia-group-body">
+<ul>
+<li><a class="helia-link helia-external" href="https://doi.org/10.5281/zenodo.13958530">Artifact for Stratified Type Theory</a> (2025)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3636501.3636951">Martin-Löf à la Coq</a> (2024)</li>
+<li>Mechanized consistency proof for MLTT (2024)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3607843">Generic Programming with Extensible Data Types: Or, Making Ad Hoc Extensible Data Types Less Ad Hoc</a> (2023)</li>
+<li>Towards Tagless Interpretation of Stratified System F (TyDe 2023 talk) (2023)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.5281/zenodo.5846982">The Coq Proof Assistant (v8.15)</a> (2022)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.48550/arxiv.2207.02129">Implementing Dependent Types in pi-forall</a> (2022)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.4230/lipics.csl.2022.28">Generalized Universe Hierarchies and First-Class Universe Levels</a> (2021)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3158111">Decidability of conversion for type theory in type theory</a> (2017)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/2837614.2837655">Dependent types and multi-monadic effects in F*</a> (2016)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.4204/eptcs.185.5">Equations for Hereditary Substitution in Leivant's Predicative System F: A Case Study</a> (2015)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-319-21401-6_26">The Lean Theorem Prover (System Description)</a> (2015)</li>
+<li>Arend - Proof-assistant assisted pedagogy (Master's thesis) (2015)</li>
+<li>Datatypes of Datatypes (summer school notes) (2015)</li>
+<li>[Agda] Simple contradiction from type-in-type (mailing list post) (2013)</li>
+<li>Crude but Effective Stratification (2011 blog post) (2011)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1017/s0956796809990293">Ott: Effective tool support for the working semanticist</a> (2010)</li>
+<li>LNgen: Tool Support for Locally Nameless Representations (tech report) (2010)</li>
+<li>Hereditary substitution for stratified System F (2010)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/1328438.1328443">Engineering formal metatheory</a> (2008)</li>
+<li>Towards a practical programming language based on dependent type theory (PhD thesis) (2007)</li>
+<li>Crude but Effective Stratification (2002 note) (2002)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.2307/2586554">A general formulation of simultaneous inductive-recursive definitions in type theory</a> (2000)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1017/s0960129599002868">Stratified polymorphism and primitive recursion</a> (1999)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/bfb0014058">A simplification of Girard's paradox</a> (1995)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1109/lics.1994.316071">The groupoid model refutes uniqueness of identity proofs</a> (1994)</li>
+<li>Lambda calculi with types (1993)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/bf01995104">The paradox of trees in type theory</a> (1992)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1016/0890-5401(91)90053-5">Finitely stratified polymorphism</a> (1991)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1109/lics.1989.39157">Stratified polymorphism</a> (1989)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1016/0304-3975(85)90135-5">Automatic synthesis of typed Λ-programs on term algebras</a> (1985)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1109/sfcs.1981.24">Number theoretic functions computable by polymorphic programs</a> (1981)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/3-540-06859-7_148">Towards a theory of type structure</a> (1974)</li>
+<li>Interprétation fonctionnelle et élimination des coupures de l'arithmétique d'ordre supérieur (PhD thesis) (1972)</li>
+<li>An intuitionistic theory of types (1972)</li>
+<li>A theory of types (1971)</li>
+<li>The Principles of Mathematics (1903)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/bf03015911">Una questione sui numeri transfiniti</a> (1897)</li>
+<li>Discours de métaphysique (1686)</li>
+</ul>
+</div>
+</details>
+</div>
+</div>
+</details>
+</div>
+</article>
+<div class="helia-identity"><span class="helia-id">chan-2025-stratified</span> <span class="helia-kind">reference</span> <span class="helia-path">entries/refs/chan-2025-stratified/chan-2025-stratified.hel</span></div>
+</div>
+</body>
+</html>

@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>Seminaïve evaluation for a higher-order functional language</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Ctext y=%22.9em%22 font-size=%2290%22%3E%F0%9F%8C%BB%3C/text%3E%3C/svg%3E">
+<meta name="generator" content="helia">
+<link rel="alternate" type="application/atom+xml" title="Steven Schaefer" href="feed.xml">
+<link rel="alternate" type="application/feed+json" title="Steven Schaefer" href="feed.json">
+<script src="helia/theme-version.js"></script>
+<script src="theme/folio-early.js"></script>
+<link rel="stylesheet" href="helia/theme.css">
+<link rel="stylesheet" href="helia/highlight.css">
+<link rel="stylesheet" href="helia/search.css">
+<link rel="stylesheet" href="theme/katex.css">
+<link rel="stylesheet" href="theme/recipe.css">
+<link rel="stylesheet" href="theme/site.css">
+<link rel="stylesheet" href="theme/folio.css">
+<script defer src="helia/runtime.js"></script>
+<script defer src="helia/search.js"></script>
+<script defer src="theme/glyphcraft.js"></script>
+<script defer src="theme/glyphart.js"></script>
+<script defer src="theme/glyphgen.js"></script>
+<script defer src="theme/ornament.js"></script>
+<script defer src="theme/folio.js"></script>
+<script defer src="theme/portrait.js"></script>
+<script type="application/json" id="helia-widgets">{"helia-cite-formats":"widgets/helia-cite-formats-a3294ac7.js"}</script>
+<link rel="modulepreload" href="widgets/helia-cite-formats-a3294ac7.js">
+<script type="module" src="widgets/runtime.js"></script>
+</head>
+<body>
+<nav class="helia-topbar"><a class="helia-home" href="home.html">Steven Schaefer</a><ul class="helia-nav-links"><li><a href="stevenschaefer.html">About Me</a></li><li><a href="research.html">Research</a></li><li><a href="new.html">New</a></li></ul><button type="button" class="helia-search-button" aria-label="Search (/ or Ctrl+K)" aria-haspopup="dialog"><span class="helia-search-icon">⌕</span><span class="helia-search-label">Search</span><kbd class="helia-search-key">/</kbd></button></nav>
+<div class="helia-page" data-kind="reference">
+<article class="helia-article">
+<header class="helia-header" data-entry="arntzenius-2019-seminaive" data-kind="reference">
+<h2 class="helia-heading"><span class="helia-taxon">Reference.</span> Seminaïve evaluation for a higher-order functional language</h2>
+<div class="helia-meta"><span class="helia-author"><a class="helia-entry-link" href="michaelarntzenius.html" data-entry="michaelarntzenius">Michael Arntzenius</a>, <a class="helia-entry-link" href="neelkrishnaswami.html" data-entry="neelkrishnaswami">Neel Krishnaswami</a></span> · <span class="helia-byline"><a class="helia-entry-link" href="popl.html" data-entry="popl">POPL</a> · 2020</span> · <span class="helia-tags"><span class="helia-tag" data-tag="logic-programming"><a class="helia-entry-link" href="tag-logic-programming.html" data-entry="tag-logic-programming">logic-programming</a></span></span> · <span class="helia-entry-links"><span class="helia-entry-link" data-field="pdf-url"><a class="helia-link helia-external" href="https://dl.acm.org/doi/pdf/10.1145/3371090">PDF</a></span> · <span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/3371090">DOI</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/journals/pacmpl/ArntzeniusK20">pldb</a></span></span></div>
+</header>
+<div class="helia-body">
+<div class="helia-abstract">One of the workhorse techniques for implementing bottom-up Datalog engines is seminaïve evaluation. This optimization improves the performance of Datalog’s most distinctive feature: recursively defined predicates. These are computed iteratively, and under a naïve evaluation strategy, each iteration recomputes all previous values. Seminaïve evaluation computes a safe approximation of the difference between iterations. This can asymptotically improve the performance of Datalog queries. Seminaïve evaluation is defined partly as a program transformation and partly as a modified iteration strategy, and takes advantage of the first-order nature of Datalog code. This paper extends the seminaïve transformation to higher-order programs written in the Datafun language, which extends Datalog with features like first-class relations, higher-order functions, and datatypes like sum types.</div>
+</div>
+<div class="helia-cite helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><h3 class="helia-heading">Cite</h3>
+</summary>
+<div class="helia-group-body">
+<div class="helia-widget" data-widget="helia-cite-formats" data-props="{&quot;key&quot;:&quot;arntzenius-2019-seminaive&quot;,&quot;bibtex&quot;:&quot;@article{arntzenius-2019-seminaive,\n  author    = {Michael Arntzenius and\n               Neel Krishnaswami},\n  title     = {Semina{\\\&quot;{\\i}}ve evaluation for a higher-order functional language},\n  journal   = {{PACMPL}},\n  volume    = {4},\n  number    = {{POPL}},\n  pages     = {22:1--22:28},\n  year      = {2020},,\n  doi       = {10.1145/3371090},\n}&quot;,&quot;bib-file&quot;:&quot;arntzenius-2019-seminaive.bib&quot;,&quot;hayagriva&quot;:&quot;arntzenius-2019-seminaive:\n  type: article\n  title: Seminaïve evaluation for a higher-order functional language\n  author:\n  - Arntzenius, Michael\n  - Krishnaswami, Neelakantan R.\n  date: 2020\n  page-range: 22:1–22:28\n  serial-number:\n    doi: 10.1145/3371090\n  parent:\n    type: periodical\n    title: PACMPL\n    publisher: Association for Computing Machinery (ACM)\n    issue: POPL\n    volume: 4\n&quot;,&quot;yml-file&quot;:&quot;arntzenius-2019-seminaive.yml&quot;}"><div class="helia-cite-key" data-copy="@arntzenius-2019-seminaive" data-copy-label="citation key"><span class="helia-bib-key">Cite as</span> <code class="helia-raw-inline">@arntzenius-2019-seminaive</code> (helia, typst) · <code class="helia-raw-inline">\cite{arntzenius-2019-seminaive}</code> (LaTeX)</div>
+<div class="helia-cite-format helia-collapsible" data-format="bibtex" data-copy="true" data-copy-label="BibTeX">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">BibTeX</span></summary>
+<div class="helia-group-body">
+<details class="helia-code" open><summary class="helia-code-summary"><span class="helia-code-lang">bibtex</span> · <span class="helia-code-lines">11 lines</span></summary><pre class="helia-raw"><code class="language-bibtex"><span class="hl-text hl-bibtex"><span class="hl-meta hl-entry hl-braces hl-bibtex"><span class="hl-keyword hl-other hl-entry-type hl-bibtex"><span class="hl-punctuation hl-definition hl-keyword hl-bibtex">@</span>article</span><span class="hl-punctuation hl-section hl-entry hl-begin hl-bibtex">{</span><span class="hl-entity hl-name hl-type hl-entry-key hl-bibtex">arntzenius-2019-seminaive</span>,
+  <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">author</span>    <span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span> <span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>Michael Arntzenius and
+               Neel Krishnaswami<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>,
+  <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">title</span>     <span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span> <span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>Semina<span class="hl-punctuation hl-definition hl-group hl-begin hl-bibtex">{</span>\&quot;<span class="hl-punctuation hl-definition hl-group hl-begin hl-bibtex">{</span>\i<span class="hl-punctuation hl-definition hl-group hl-end hl-bibtex">}</span><span class="hl-punctuation hl-definition hl-group hl-end hl-bibtex">}</span>ve evaluation for a higher-order functional language<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>,
+  <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">journal</span>   <span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span> <span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span><span class="hl-punctuation hl-definition hl-group hl-begin hl-bibtex">{</span>PACMPL<span class="hl-punctuation hl-definition hl-group hl-end hl-bibtex">}</span><span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>,
+  <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">volume</span>    <span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span> <span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>4<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>,
+  <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">number</span>    <span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span> <span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span><span class="hl-punctuation hl-definition hl-group hl-begin hl-bibtex">{</span>POPL<span class="hl-punctuation hl-definition hl-group hl-end hl-bibtex">}</span><span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>,
+  <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">pages</span>     <span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span> <span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>22:1--22:28<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>,
+  <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">year</span>      <span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span> <span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>2020<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>,,
+  <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">doi</span>       <span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span> <span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>10.1145/3371090<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>,
+<span class="hl-punctuation hl-section hl-entry hl-end hl-bibtex">}</span></span></span></code></pre></details>
+</div>
+</details>
+</div>
+<div class="helia-cite-format helia-collapsible" data-format="hayagriva" data-copy="true" data-copy-label="hayagriva YAML">
+<details>
+<summary class="helia-group-summary"><span class="helia-group-title">hayagriva YAML (typst)</span></summary>
+<div class="helia-group-body">
+<details class="helia-code" open><summary class="helia-code-summary"><span class="helia-code-lang">yaml</span> · <span class="helia-code-lines">16 lines</span></summary><pre class="helia-raw"><code class="language-yaml"><span class="hl-source hl-yaml"><span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">arntzenius-2019-seminaive</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">type</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">article</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">title</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Seminaïve evaluation for a higher-order functional language</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">author</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Arntzenius, Michael</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Krishnaswami, Neelakantan R.</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">date</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-constant hl-numeric hl-integer hl-decimal hl-yaml">2020</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">page-range</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">22:1–22:28</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">serial-number</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">doi</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">10.1145/3371090</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">parent</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">type</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">periodical</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">title</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">PACMPL</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">publisher</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Association for Computing Machinery (ACM)</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">issue</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">POPL</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">volume</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-constant hl-numeric hl-integer hl-decimal hl-yaml">4</span>
+</span></code></pre></details>
+</div>
+</details>
+</div>
+<div class="helia-cite-files">Download: <a class="helia-link" href="arntzenius-2019-seminaive.bib">arntzenius-2019-seminaive.bib</a> · <a class="helia-link" href="arntzenius-2019-seminaive.yml">arntzenius-2019-seminaive.yml</a></div>
+</div>
+</div>
+</details>
+</div>
+<div class="helia-reference-cites helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">Cites 28 works (2 here)</span></summary>
+<div class="helia-group-body">
+<div class="helia-reference-cites-here helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">With notes (2)</span></summary>
+<div class="helia-group-body">
+<section class="helia-transclusion" data-entry="arntzenius-2016-datafun" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="arntzenius-2016-datafun"><span class="helia-title">Datafun: a functional Datalog</span>&nbsp;<a class="helia-slug" href="arntzenius-2016-datafun.html">arntzenius-2016-datafun</a><span class="helia-byline"><span class="helia-entry-link" data-entry="icfp">ICFP</span> · 2016</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="arntzenius-2016-datafun" data-kind="reference">
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="pdf-url"><a class="helia-link helia-external" href="https://www.repository.cam.ac.uk/bitstreams/9adb9a24-14d3-4156-9e2a-ea26626e167b/download">PDF</a></span> · <span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/2951913.2951948">DOI</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/conf/icfp/ArntzeniusK16">pldb</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="pfenning-2001-a" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="pfenning-2001-a"><span class="helia-title">A judgmental reconstruction of modal logic</span>&nbsp;<a class="helia-slug" href="pfenning-2001-a.html">pfenning-2001-a</a><span class="helia-byline"><span class="helia-entry-link" data-entry="mscs">MSCS</span> · 2001</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="pfenning-2001-a" data-kind="reference">
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1017/s0960129501003322">DOI</a></span></div>
+</div>
+</div>
+</details>
+</section>
+</div>
+</details>
+</div>
+<div class="helia-reference-cites-away helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">External (26)</span></summary>
+<div class="helia-group-body">
+<ul>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-030-17184-1_20">Incremental lambda-Calculus in Cache-Transfer Style: Static Memoization by Program Transformation</a> (2019)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.4230/lipics.ecoop.2019.15">Deep Static Modeling of invokedynamic</a> (2019)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-030-17184-1_19">Fixing Incremental Computation: Derivatives of Fixpoints, and the Recursive Semantics of Datalog</a> (2018)</li>
+<li>Static differentiation of monotone fixed points (unpublished note; in the published list only) (2017)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-319-41540-6_23">Soufflé: On Synthesis of Program Analyzers</a> (2016)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/2908080.2908096">From Datalog to flix: a declarative language for fixed points on lattices</a> (2016)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/2723372.2742796">Design and Implementation of the LogicBlox System</a> (2015)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1561/9781680830217">Pointer Analysis</a> (2015)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/2594291.2594304">A theory of changes for higher-order languages</a> (2014)</li>
+<li>Datomic: The fully transactional, cloud-ready, distributed database (2012)</li>
+<li>Consistency Analysis in Bloom: a CALM and Collected Approach (2011)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.3233/jcs-2009-0364">SecPAL: Design and semantics of a decentralized authorization language</a> (2010)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/1706299.1706317">Type inference for datalog with complex type hierarchies</a> (2010)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-540-88643-3_3">.QL: Object-Oriented Queries Made Easy</a> (2007)</li>
+<li>Context-Sensitive Pointer Analysis using Binary Decision Diagrams (PhD thesis; author PDF only) (2007)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1017/s0960129506005676">Differential categories</a> (2006)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/996841.996859">Cloning-based context-sensitive pointer alias analysis using binary decision diagrams</a> (2004)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1016/s0304-3975(03)00392-x">The differential lambda-calculus</a> (2003)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/3-540-44802-0_21">Categorical and Kripke Semantics for Constructive S4 Modal Logic</a> (2001)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/502807.502810">Complexity and expressive power of logic programming</a> (2001)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/bfb0028020">A mixed modal/linear lambda calculus with applications to bellantoni-cook safe recursion</a> (1998)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/153724.153752">The parallel complexity of simple logic programs</a> (1993)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1017/s0960129500001560">Comprehending monads</a> (1992)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1109/69.43410">What you always wanted to know about Datalog (and never dared to ask)</a> (1989)</li>
+<li>Naive Evaluation of Recursively Defined Relations (1986)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/6012.15399">Magic sets and other strange ways to implement logic programs (extended abstract)</a> (1985)</li>
+</ul>
+</div>
+</details>
+</div>
+</div>
+</details>
+</div>
+</article>
+<div class="helia-identity"><span class="helia-id">arntzenius-2019-seminaive</span> <span class="helia-kind">reference</span> <span class="helia-path">entries/refs/arntzenius-2019-seminaive/arntzenius-2019-seminaive.hel</span></div>
+</div>
+</body>
+</html>

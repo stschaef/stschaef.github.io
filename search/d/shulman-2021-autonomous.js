@@ -1,0 +1,1 @@
+heliaSearchData("d/shulman-2021-autonomous",{"id":"shulman-2021-autonomous","title":"*-Autonomous Envelopes and Conservativity","kind":"reference","tags":["linear-logic","star-autonomous-categories"],"authors":["Michael Shulman"],"venue":["EPTCS","Electronic Proceedings in Theoretical Computer Science"],"date":null,"url":"shulman-2021-autonomous.html","headings":[],"body":""});

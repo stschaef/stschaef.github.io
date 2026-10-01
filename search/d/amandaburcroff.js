@@ -1,0 +1,1 @@
+heliaSearchData("d/amandaburcroff",{"id":"amandaburcroff","title":"Amanda Burcroff","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"amandaburcroff.html","headings":[],"body":""});

@@ -1,0 +1,1 @@
+heliaSearchData("d/fu-2026-revisiting",{"id":"fu-2026-revisiting","title":"Revisiting Soundness for Occurrence Typing, Semantically","kind":"reference","tags":["refinement-types"],"authors":["Carlo Angiuli","Sam Tobin-Hochstadt","Yuquan Fu"],"venue":["arXiv"],"date":null,"url":"fu-2026-revisiting.html","headings":[],"body":""});

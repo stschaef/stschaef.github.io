@@ -1,0 +1,1 @@
+heliaSearchData("d/gentaindrawinata",{"id":"gentaindrawinata","title":"Genta Indra Winata","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"gentaindrawinata.html","headings":[],"body":""});

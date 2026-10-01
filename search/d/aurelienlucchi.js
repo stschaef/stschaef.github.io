@@ -1,0 +1,1 @@
+heliaSearchData("d/aurelienlucchi",{"id":"aurelienlucchi","title":"Aurelien Lucchi","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"aurelienlucchi.html","headings":[],"body":""});

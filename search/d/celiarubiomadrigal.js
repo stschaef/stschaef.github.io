@@ -1,0 +1,1 @@
+heliaSearchData("d/celiarubiomadrigal",{"id":"celiarubiomadrigal","title":"Celia Rubio-Madrigal","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"celiarubiomadrigal.html","headings":[],"body":""});

@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>Finally tagless, partially evaluated: Tagless staged interpreters for simpler typed languages</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Ctext y=%22.9em%22 font-size=%2290%22%3E%F0%9F%8C%BB%3C/text%3E%3C/svg%3E">
+<meta name="generator" content="helia">
+<link rel="alternate" type="application/atom+xml" title="Steven Schaefer" href="feed.xml">
+<link rel="alternate" type="application/feed+json" title="Steven Schaefer" href="feed.json">
+<script src="helia/theme-version.js"></script>
+<script src="theme/folio-early.js"></script>
+<link rel="stylesheet" href="helia/theme.css">
+<link rel="stylesheet" href="helia/highlight.css">
+<link rel="stylesheet" href="helia/search.css">
+<link rel="stylesheet" href="theme/katex.css">
+<link rel="stylesheet" href="theme/recipe.css">
+<link rel="stylesheet" href="theme/site.css">
+<link rel="stylesheet" href="theme/folio.css">
+<script defer src="helia/runtime.js"></script>
+<script defer src="helia/search.js"></script>
+<script defer src="theme/glyphcraft.js"></script>
+<script defer src="theme/glyphart.js"></script>
+<script defer src="theme/glyphgen.js"></script>
+<script defer src="theme/ornament.js"></script>
+<script defer src="theme/folio.js"></script>
+<script defer src="theme/portrait.js"></script>
+<script type="application/json" id="helia-widgets">{"helia-cite-formats":"widgets/helia-cite-formats-a3294ac7.js"}</script>
+<link rel="modulepreload" href="widgets/helia-cite-formats-a3294ac7.js">
+<script type="module" src="widgets/runtime.js"></script>
+</head>
+<body>
+<nav class="helia-topbar"><a class="helia-home" href="home.html">Steven Schaefer</a><ul class="helia-nav-links"><li><a href="stevenschaefer.html">About Me</a></li><li><a href="research.html">Research</a></li><li><a href="new.html">New</a></li></ul><button type="button" class="helia-search-button" aria-label="Search (/ or Ctrl+K)" aria-haspopup="dialog"><span class="helia-search-icon">⌕</span><span class="helia-search-label">Search</span><kbd class="helia-search-key">/</kbd></button></nav>
+<div class="helia-page" data-kind="reference">
+<article class="helia-article">
+<header class="helia-header" data-entry="carette-2009-finally" data-kind="reference">
+<h2 class="helia-heading"><span class="helia-taxon">Reference.</span> Finally tagless, partially evaluated: Tagless staged interpreters for simpler typed languages</h2>
+<div class="helia-meta"><span class="helia-author"><a class="helia-entry-link" href="jacquescarette.html" data-entry="jacquescarette">Jacques Carette</a>, <a class="helia-entry-link" href="olegkiselyov.html" data-entry="olegkiselyov">Oleg Kiselyov</a>, <a class="helia-entry-link" href="chungchiehshan.html" data-entry="chungchiehshan">Chung-chieh Shan</a></span> · <span class="helia-byline"><a class="helia-entry-link" href="jfp.html" data-entry="jfp">JFP</a> · 2009</span> · <span class="helia-entry-links"><span class="helia-entry-link" data-field="pdf-url"><a class="helia-link helia-external" href="https://www.cambridge.org/core/services/aop-cambridge-core/content/view/7B2DC44A2127EBBA71ADE63809D9425F/S0956796809007205a.pdf/div-class-title-finally-tagless-partially-evaluated-tagless-staged-interpreters-for-simpler-typed-languages-div.pdf">PDF</a></span> · <span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1017/s0956796809007205">DOI</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/journals/jfp/CaretteKS09">pldb</a></span></span></div>
+</header>
+<div class="helia-body">
+<div class="helia-abstract">We have built the first family of tagless interpretations for a higher-order typed object language in a typed metalanguage (Haskell or ML) that require no dependent types, generalized algebraic data types, or postprocessing to eliminate tags. The statically type-preserving interpretations include an evaluator, a compiler (or staged evaluator), a partial evaluator, and call-by-name and call-by-value continuation-passing style (CPS) transformers. Our principal technique is to encode de Bruijn or higher-order abstract syntax using combinator functions rather than data constructors. In other words, we represent object terms not in an initial algebra but using the coalgebraic structure of the λ-calculus. Our representation also simulates inductive maps from types to types, which are required for typed partial evaluation and CPS transformations. Our encoding of an object term abstracts uniformly over the family of ways to interpret it, yet statically assures that the interpreters never get stuck. This family of interpreters thus demonstrates again that it is useful to abstract over higher-kinded types.</div>
+</div>
+<div class="helia-cite helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><h3 class="helia-heading">Cite</h3>
+</summary>
+<div class="helia-group-body">
+<div class="helia-widget" data-widget="helia-cite-formats" data-props="{&quot;key&quot;:&quot;carette-2009-finally&quot;,&quot;bibtex&quot;:&quot;@article{carette-2009-finally, title={Finally tagless, partially evaluated: Tagless staged interpreters for simpler typed languages}, volume={19}, ISSN={1469-7653}, url={http://dx.doi.org/10.1017/s0956796809007205}, DOI={10.1017/s0956796809007205}, number={5}, journal={Journal of Functional Programming}, publisher={Cambridge University Press (CUP)}, author={CARETTE, JACQUES and KISELYOV, OLEG and SHAN, CHUNG-CHIEH}, year={2009}, month=Apr, pages={509–543} }&quot;,&quot;bib-file&quot;:&quot;carette-2009-finally.bib&quot;,&quot;hayagriva&quot;:&quot;carette-2009-finally:\n  type: article\n  title: &#39;Finally tagless, partially evaluated: Tagless staged interpreters for simpler typed languages&#39;\n  author:\n  - CARETTE, JACQUES\n  - KISELYOV, OLEG\n  - SHAN, CHUNG-CHIEH\n  date: 2009-04\n  page-range: 509-543\n  url: http://dx.doi.org/10.1017/s0956796809007205\n  serial-number:\n    doi: 10.1017/s0956796809007205\n    issn: 1469-7653\n  parent:\n    type: periodical\n    title: Journal of Functional Programming\n    publisher: Cambridge University Press (CUP)\n    issue: 5\n    volume: 19\n&quot;,&quot;yml-file&quot;:&quot;carette-2009-finally.yml&quot;}"><div class="helia-cite-key" data-copy="@carette-2009-finally" data-copy-label="citation key"><span class="helia-bib-key">Cite as</span> <code class="helia-raw-inline">@carette-2009-finally</code> (helia, typst) · <code class="helia-raw-inline">\cite{carette-2009-finally}</code> (LaTeX)</div>
+<div class="helia-cite-format helia-collapsible" data-format="bibtex" data-copy="true" data-copy-label="BibTeX">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">BibTeX</span></summary>
+<div class="helia-group-body">
+<details class="helia-code" open><summary class="helia-code-summary"><span class="helia-code-lang">bibtex</span> · <span class="helia-code-lines">1 line</span></summary><pre class="helia-raw"><code class="language-bibtex"><span class="hl-text hl-bibtex"><span class="hl-meta hl-entry hl-braces hl-bibtex"><span class="hl-keyword hl-other hl-entry-type hl-bibtex"><span class="hl-punctuation hl-definition hl-keyword hl-bibtex">@</span>article</span><span class="hl-punctuation hl-section hl-entry hl-begin hl-bibtex">{</span><span class="hl-entity hl-name hl-type hl-entry-key hl-bibtex">carette-2009-finally</span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">title</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>Finally tagless, partially evaluated: Tagless staged interpreters for simpler typed languages<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">volume</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>19<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">ISSN</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>1469-7653<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">url</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>http://dx.doi.org/10.1017/s0956796809007205<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">DOI</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>10.1017/s0956796809007205<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">number</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>5<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">journal</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>Journal of Functional Programming<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">publisher</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>Cambridge University Press (CUP)<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">author</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>CARETTE, JACQUES and KISELYOV, OLEG and SHAN, CHUNG-CHIEH<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">year</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>2009<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">month</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span>Apr</span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">pages</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>509–543<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span> </span><span class="hl-punctuation hl-section hl-entry hl-end hl-bibtex">}</span></span></span></code></pre></details>
+</div>
+</details>
+</div>
+<div class="helia-cite-format helia-collapsible" data-format="hayagriva" data-copy="true" data-copy-label="hayagriva YAML">
+<details>
+<summary class="helia-group-summary"><span class="helia-group-title">hayagriva YAML (typst)</span></summary>
+<div class="helia-group-body">
+<details class="helia-code" open><summary class="helia-code-summary"><span class="helia-code-lang">yaml</span> · <span class="helia-code-lines">19 lines</span></summary><pre class="helia-raw"><code class="language-yaml"><span class="hl-source hl-yaml"><span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">carette-2009-finally</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">type</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">article</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">title</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-quoted hl-single hl-yaml"><span class="hl-punctuation hl-definition hl-string hl-begin hl-yaml">&#39;</span>Finally tagless, partially evaluated: Tagless staged interpreters for simpler typed languages<span class="hl-punctuation hl-definition hl-string hl-end hl-yaml">&#39;</span></span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">author</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">CARETTE, JACQUES</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">KISELYOV, OLEG</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">SHAN, CHUNG-CHIEH</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">date</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">2009-04</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">page-range</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">509-543</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">url</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">http://dx.doi.org/10.1017/s0956796809007205</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">serial-number</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">doi</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">10.1017/s0956796809007205</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">issn</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">1469-7653</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">parent</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">type</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">periodical</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">title</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Journal of Functional Programming</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">publisher</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Cambridge University Press (CUP)</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">issue</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-constant hl-numeric hl-integer hl-decimal hl-yaml">5</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">volume</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-constant hl-numeric hl-integer hl-decimal hl-yaml">19</span>
+</span></code></pre></details>
+</div>
+</details>
+</div>
+<div class="helia-cite-files">Download: <a class="helia-link" href="carette-2009-finally.bib">carette-2009-finally.bib</a> · <a class="helia-link" href="carette-2009-finally.yml">carette-2009-finally.yml</a></div>
+</div>
+</div>
+</details>
+</div>
+<div class="helia-reference-cited-by helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">Cited by (7)</span></summary>
+<div class="helia-group-body">
+<section class="helia-transclusion" data-entry="keles-2026-programmable" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="keles-2026-programmable"><span class="helia-title">Programmable Property-Based Testing</span>&nbsp;<a class="helia-slug" href="keles-2026-programmable.html">keles-2026-programmable</a><span class="helia-byline"><span class="helia-entry-link" data-entry="icfp">ICFP</span> · 2026</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="keles-2026-programmable" data-kind="reference">
+<div class="helia-abstract">Property-based testing (PBT) is a popular technique for establishing confidence in software, where users write properties —i.e. executable specifications—that can be checked many times in a loop by a testing framework. In modern PBT frameworks, properties are usually written in shallowly embedded domain-specific languages, and their definition is tightly coupled to the way they are tested. Such frameworks often provide convenient configuration options to customize aspects of the testing process, but users are limited to precisely what library authors had the prescience to allow for when developing the framework; if they want more flexibility, they may need to write a new framework from scratch. We propose a new, deeper language for properties based on a mixed embedding that we call deferred binding abstract syntax , which reifies properties as a data structure and decouples them from the property runners that execute them. We implement this language in Rocq and Racket, leveraging the power of dependent and dynamic types, respectively. Finally, we showcase the flexibility of this new approach by implementing a variety of property runners in a shared framework, highlighting domain-specific testing improvements that can be unlocked by more programmable testing.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="pdf-url"><a class="helia-link helia-external" href="https://arxiv.org/pdf/2602.18545">PDF</a></span> · <span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/3828685">DOI</a></span> · <span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/2602.18545">arXiv</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/journals/pacmpl/KelesFMGL26">pldb</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="carette-2023-symbolic" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="carette-2023-symbolic"><span class="helia-title">Symbolic Execution of Hadamard-Toffoli Quantum Circuits</span>&nbsp;<a class="helia-slug" href="carette-2023-symbolic.html">carette-2023-symbolic</a><span class="helia-byline"><span class="helia-entry-link" data-entry="pepm">PEPM</span> · 2023</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="carette-2023-symbolic" data-kind="reference">
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/3571786.3573018">DOI</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="carette-2020-leveraging" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="carette-2020-leveraging"><span class="helia-title">Leveraging the Information Contained in Theory Presentations</span>&nbsp;<a class="helia-slug" href="carette-2020-leveraging.html">carette-2020-leveraging</a><span class="helia-byline"><span class="helia-entry-link" data-entry="cicm">CICM</span> · 2020</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="carette-2020-leveraging" data-kind="reference">
+<div class="helia-abstract">A theorem prover without an extensive library is much less useful to its potential users. Algebra, the study of algebraic structures, is a core component of such libraries. Algebraic theories also are themselves structured, the study of which was started as Universal Algebra. Various constructions (homomorphism, term algebras, products, etc) and their properties are both universal and constructive. Thus they are ripe for being automated. Unfortunately, current practice still requires library builders to write these by hand. We first highlight specific redundancies in libraries of existing systems. Then we describe a framework for generating these derived concepts from theory definitions. We demonstrate the usefulness of this framework on a test library of 227 theories.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-030-53518-6_4">DOI</a></span> · <span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/2006.09292">arXiv</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="yallop-2018-partially" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="yallop-2018-partially"><span class="helia-title">Partially-static data as free extension of algebras</span>&nbsp;<a class="helia-slug" href="yallop-2018-partially.html">yallop-2018-partially</a><span class="helia-byline"><span class="helia-entry-link" data-entry="icfp">ICFP</span> · 2018</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="yallop-2018-partially" data-kind="reference">
+<div class="helia-abstract">Partially-static data structures are a well-known technique for improving binding times. However, they are often defined in an ad-hoc manner, without a unifying framework to ensure full use of the equations associated with each operation. We present a foundational view of partially-static data structures as free extensions of algebras for suitable equational theories, i.e. the coproduct of an algebra and a free algebra in the category of algebras and their homomorphisms. By precalculating these free extensions, we construct a high-level library of partially-static data representations for common algebraic structures. We demonstrate our library with common use-cases from the literature: string and list manipulation, linear algebra, and numerical simplification.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="pdf-url"><a class="helia-link helia-external" href="https://dl.acm.org/doi/pdf/10.1145/3236795">PDF</a></span> · <span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/3236795">DOI</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/journals/pacmpl/YallopGK18">pldb</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="allais-2017-type" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="allais-2017-type"><span class="helia-title">Type-and-scope safe programs and their proofs</span>&nbsp;<a class="helia-slug" href="allais-2017-type.html">allais-2017-type</a><span class="helia-byline"><span class="helia-entry-link" data-entry="cpp">CPP</span> · 2017</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="allais-2017-type" data-kind="reference">
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="pdf-url"><a class="helia-link helia-external" href="https://strathprints.strath.ac.uk/59447/1/Allais_etal_CPP_2017_Type_and_scope_safe_programs.pdf">PDF</a></span> · <span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/3018610.3018613">DOI</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/conf/cpp/Allais0MM17">pldb</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="mellies_zeilberger_2015" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="mellies_zeilberger_2015"><span class="helia-title">Functors are type refinement systems</span>&nbsp;<a class="helia-slug" href="mellies_zeilberger_2015.html">mellies_zeilberger_2015</a><span class="helia-byline"><span class="helia-entry-link" data-entry="popl">POPL</span> · 2015</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="mellies_zeilberger_2015" data-kind="reference">
+<div class="helia-abstract">
+<p>The standard reading of type theory through the lens of category theory is based on the idea of viewing a type system as a category of well-typed terms. We propose a basic revision of this reading: rather than interpreting type systems as categories, we describe them as functors from a category of typing derivations to a category of underlying terms. Then, turning this around, we explain how in fact any functor gives rise to a generalized type system, with an abstract notion of typing judgment, typing derivations and typing rules. This leads to a purely categorical reformulation of various natural classes of type systems as natural classes of functors.</p>
+<p>The main purpose of this paper is to describe the general framework (which can also be seen as providing a categorical analysis of refinement types), and to present a few applications. As a larger case study, we revisit Reynolds’ paper on “The Meaning of Types” (2000), showing how the paper’s main results may be reconstructed along these lines.</p>
+</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="pdf-url"><a class="helia-link helia-external" href="https://inria.hal.science/hal-01096910/document">PDF</a></span> · <span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/2676726.2676970">DOI</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/conf/popl/MelliesZ15">pldb</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="gibbons-2014-folding" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="gibbons-2014-folding"><span class="helia-title">Folding domain-specific languages: deep and shallow embeddings (functional Pearl)</span>&nbsp;<a class="helia-slug" href="gibbons-2014-folding.html">gibbons-2014-folding</a><span class="helia-byline"><span class="helia-entry-link" data-entry="icfp">ICFP</span> · 2014</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="gibbons-2014-folding" data-kind="reference">
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="pdf-url"><a class="helia-link helia-external" href="https://dl.acm.org/doi/pdf/10.1145/2628136.2628138">PDF</a></span> · <span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/2628136.2628138">DOI</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/conf/icfp/GibbonsW14">pldb</a></span></div>
+</div>
+</div>
+</details>
+</section>
+</div>
+</details>
+</div>
+<div class="helia-reference-cites helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">Cites 81 works (1 here)</span></summary>
+<div class="helia-group-body">
+<div class="helia-reference-cites-here helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">With notes (1)</span></summary>
+<div class="helia-group-body">
+<section class="helia-transclusion" data-entry="pfenning-1988-higher" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="pfenning-1988-higher"><span class="helia-title">Higher-order abstract syntax</span>&nbsp;<a class="helia-slug" href="pfenning-1988-higher.html">pfenning-1988-higher</a><span class="helia-byline"><span class="helia-entry-link" data-entry="pldi">PLDI</span> · 1988</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="pfenning-1988-higher" data-kind="reference">
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="pdf-url"><a class="helia-link helia-external" href="https://dl.acm.org/doi/pdf/10.1145/53990.54010">PDF</a></span> · <span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/53990.54010">DOI</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/conf/pldi/PfenningE88">pldb</a></span></div>
+</div>
+</div>
+</details>
+</section>
+</div>
+</details>
+</div>
+<div class="helia-reference-cites-away helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">External (80)</span></summary>
+<div class="helia-group-body">
+<ul>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/1449764.1449798">Generics of a higher kind</a> (2008)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/1352582.1352591">Contextual modal type theory</a> (2008)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/1449913.1449935">Polymorphic embedding of DSLs</a> (2008)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1017/s0956796807006557">Boxes go bananas: Encoding higher-order abstract syntax with parametric polymorphism</a> (2007)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-540-76637-7_15">Finally Tagless, Partially Evaluated (APLAS 2007)</a> (2007)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/1244381.1244400">Concoqtion: Indexed types now!</a> (2007)</li>
+<li>Introduction to coalgebra: Towards mathematics of states and observations (draft book) (2007)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/1159803.1159811">Simple unification-based type inference for GADTs</a> (2006)</li>
+<li>Statically verified type-preserving code transformations in Haskell (2006)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/11561347_18">Multi-stage Programming with Functors and Monads: Eliminating Abstraction Overhead from Generic Code</a> (2005)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/1053468.1053469">A type system for certified binaries</a> (2005)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1017/s0956796804005398">Embedded interpreters</a> (2005)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1017/s095679680500568x">Staged computation with names and necessity</a> (2005)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/1088348.1088358">TypeCase</a> (2005)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1016/j.entcs.2005.11.045">ML module mania: A type-safe, separately compiled, extensible interpreter</a> (2005)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/964001.964007">Extensional normalisation and type-directed partial evaluation for typed lambda calculus with sums</a> (2004)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1016/j.scico.2003.07.001">Type-indexed data types</a> (2004)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-540-24725-8_7">ML-Like Inference for Classifiers</a> (2004)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1016/j.tcs.2003.11.017">Encoding types in ML-like languages</a> (2003)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/604131.604134">Environment classifiers</a> (2003)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/3-540-36575-3_23">Tagging, Encoding, and Jones Optimality</a> (2003)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/777388.777392">Implementing typeful program transformations</a> (2003)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/604131.604150">Guarded recursive datatype constructors</a> (2003)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/581478.581499">Tagless staged interpreters for typed languages</a> (2002)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/bf03037258">Binding-time analysis for both static and dynamic expressions</a> (2002)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/581690.581691">Template meta-programming for Haskell</a> (2002)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/581478.581494">Typing dynamic typing</a> (2002)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/581478.581498">Meta-programming with names and necessity</a> (2002)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/571157.571161">Semantic analysis of normalisation by evaluation for typed lambda calculus</a> (2002)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1023/a:1012984529382">A Hybrid Approach to Online and Offline Partial Evaluation</a> (2001)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/382780.382785">A modal analysis of staged computation</a> (2001)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/3-540-44978-7_15">Tag Elimination and Jones-Optimality</a> (2001)</li>
+<li>Higher-Order program generation (PhD thesis) (2001)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/3-540-45350-4_11">On Jones-Optimal Specialization for Strongly Typed Languages</a> (2000)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1017/s096012959900287x">Coinductive characterizations of applicative structures</a> (1999)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1017/s0956796899003469">Combinators for program generation</a> (1999)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/328690.328697">A sound reduction semantics for untyped CBN multi-stage computation. Or, the theory of MetaML is non-trival</a> (1999)</li>
+<li>Quasiquotation in Lisp (1999)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/289121.289135">Type specialization</a> (1998)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/bfb0055112">A simple solution to type specialization</a> (1998)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/289423.289440">Lava</a> (1998)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/289423.289436">Typed cross-module compilation</a> (1998)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/258915.258935">Two for the price of one: Composing partial evaluation and compilation</a> (1997)</li>
+<li>Program generation with class (1997)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/237721.237784">Type-directed partial evaluation</a> (1996)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/242224.242477">Building domain-specific embedded languages</a> (1996)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1201/9780203748671-17">Infinite lambda-calculus and non-sensible models</a> (1996)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/3-540-61580-6_23">Self-applicable online partial evaluation</a> (1996)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/199448.199475">Compiling polymorphism using intensional type analysis</a> (1995)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/bfb0014057">Final semantics for untyped λ-calculus</a> (1995)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/215465.215469">Self-applicable online partial evaluation of the pure lambda calculus</a> (1995)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/199448.199507">A call-by-need lambda calculus</a> (1995)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/174675.178047">Representing monads</a> (1994)</li>
+<li>Abstract interpretation: A semantics-based tool for program analysis (1994)</li>
+<li>Partial Evaluation and Automatic Program Generation (1993)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/154630.154645">A tour of Schism</a> (1993)</li>
+<li>Partial evaluation of Standard ML (Master's thesis) (1993)</li>
+<li>Self-interpretation and reflection in a statically typed language (1993)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1017/s0960129500001535">Representing Control: a Study of the CPS Transformation</a> (1992)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1017/s0956796800000423">Efficient self-interpretation in lambda calculus</a> (1992)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1017/cbo9780511526572">Two-Level Functional Languages</a> (1992)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1016/0890-5401(91)90052-4">Notions of computation and monads</a> (1991)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1017/s0956796800000058">A partial evaluator for the untyped lambda-calculus</a> (1991)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1016/0304-3975(90)90109-u">Metacircularity in the polymorphic λ-calculus</a> (1991)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1016/0167-6423(91)90002-f">Automatic autoprojection of recursive equations with global variables and abstract data types</a> (1991)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/bf01806312">Mix: A self-applicable partial evaluator for experiments in compiler generation</a> (1989)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1016/0890-5401(88)90041-7">Strictness analysis and denotational abstract interpretation</a> (1988)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/73560.73569">Automatic binding time analysis for a typed λ-calculus</a> (1988)</li>
+<li>Language triplets: The AMIX approach (1988)</li>
+<li>A logic programming approach to manipulating formulas and programs (1987)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1016/0304-3975(85)90135-5">Automatic synthesis of typed Λ-programs on term algebras</a> (1985)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1016/0022-0000(78)90014-4">A theory of type polymorphism in programming</a> (1978)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1016/0304-3975(77)90044-5">LCF considered as a programming language</a> (1977)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1016/0304-3975(75)90017-1">Call-by-name, call-by-value and the λ-calculus</a> (1975)</li>
+<li>User-defined types and procedural data structures as complementary approaches to data abstraction (1975)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/3-540-06841-4_57">On the relation between direct and continuation semantics</a> (1974)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/800194.805852">Definitional interpreters for higher-order programming languages</a> (1972)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1023/a:1010095604496">Partial evaluation of computation process–An approach to a compiler-compiler</a> (1971)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.2307/1995158">The principal type-scheme of an object in combinatory logic</a> (1969)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/365230.365257">The next 700 programming languages</a> (1966)</li>
+</ul>
+</div>
+</details>
+</div>
+</div>
+</details>
+</div>
+</article>
+<div class="helia-identity"><span class="helia-id">carette-2009-finally</span> <span class="helia-kind">reference</span> <span class="helia-path">entries/refs/carette-2009-finally/carette-2009-finally.hel</span></div>
+</div>
+</body>
+</html>

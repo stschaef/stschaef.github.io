@@ -1,0 +1,1 @@
+heliaSearchData("d/eleonoremangel",{"id":"eleonoremangel","title":"Éléonore Mangel","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"eleonoremangel.html","headings":[],"body":""});

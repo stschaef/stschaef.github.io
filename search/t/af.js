@@ -1,1 +1,1 @@
-heliaSearchData("t/af",{"affective":[437,160],"afresh":[698,1,10,2],"after":[131,1,249,1,21,128,470,1]});
+heliaSearchData("t/af",{"affective":[1696,160,1690,160],"affeldt":[2403,32,677,128],"affiliate":[2949,160],"affine":[2741,128],"afresh":[2832,1,10,2],"african":[78,160],"after":[1458,1,84,128,743,128,1164,1]});

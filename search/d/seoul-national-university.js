@@ -1,0 +1,1 @@
+heliaSearchData("d/seoul-national-university",{"id":"seoul-national-university","title":"Seoul National University","kind":"institution","tags":[],"authors":[],"venue":[],"date":null,"url":"seoul-national-university.html","headings":[],"body":""});

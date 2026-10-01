@@ -1,0 +1,1 @@
+heliaSearchData("d/carette-2023-generating",{"id":"carette-2023-generating","title":"Generating Software for Well-Understood Domains","kind":"reference","tags":[],"authors":["Jacques Carette","Jason Balaci","Spencer Smith"],"venue":["EVCS"],"date":null,"url":"carette-2023-generating.html","headings":[],"body":""});

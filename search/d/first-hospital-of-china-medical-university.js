@@ -1,0 +1,1 @@
+heliaSearchData("d/first-hospital-of-china-medical-university",{"id":"first-hospital-of-china-medical-university","title":"First Hospital of China Medical University","kind":"institution","tags":[],"authors":[],"venue":[],"date":null,"url":"first-hospital-of-china-medical-university.html","headings":[],"body":""});

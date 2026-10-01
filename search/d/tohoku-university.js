@@ -1,0 +1,1 @@
+heliaSearchData("d/tohoku-university",{"id":"tohoku-university","title":"Tohoku University","kind":"institution","tags":[],"authors":[],"venue":[],"date":null,"url":"tohoku-university.html","headings":[],"body":""});

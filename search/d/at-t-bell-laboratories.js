@@ -1,0 +1,1 @@
+heliaSearchData("d/at-t-bell-laboratories",{"id":"at-t-bell-laboratories","title":"AT&T Bell Laboratories","kind":"institution","tags":[],"authors":[],"venue":[],"date":null,"url":"at-t-bell-laboratories.html","headings":[],"body":""});

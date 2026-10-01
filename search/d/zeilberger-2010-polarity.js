@@ -1,0 +1,1 @@
+heliaSearchData("d/zeilberger-2010-polarity",{"id":"zeilberger-2010-polarity","title":"Polarity and the Logic of Delimited Continuations","kind":"reference","tags":["focusing"],"authors":["Noam Zeilberger"],"venue":["LICS","Symposium on Logic in Computer Science"],"date":null,"url":"zeilberger-2010-polarity.html","headings":[],"body":""});

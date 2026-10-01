@@ -1,0 +1,1 @@
+heliaSearchData("d/astrakolomatskaia",{"id":"astrakolomatskaia","title":"Astra Kolomatskaia","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"astrakolomatskaia.html","headings":[],"body":""});

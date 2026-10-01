@@ -1,0 +1,1 @@
+heliaSearchData("d/university-college-cork",{"id":"university-college-cork","title":"University College Cork","kind":"institution","tags":[],"authors":[],"venue":[],"date":null,"url":"university-college-cork.html","headings":[],"body":""});

@@ -1,0 +1,1 @@
+heliaSearchData("d/carette-2023-symbolic",{"id":"carette-2023-symbolic","title":"Symbolic Execution of Hadamard-Toffoli Quantum Circuits","kind":"reference","tags":["quantum"],"authors":["Amr Sabry","Gerardo Ortiz","Jacques Carette"],"venue":["PEPM","Workshop on Partial Evaluation and Program Manipulation"],"date":null,"url":"carette-2023-symbolic.html","headings":[],"body":""});

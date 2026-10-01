@@ -1,0 +1,1 @@
+heliaSearchData("d/hacettepe-university",{"id":"hacettepe-university","title":"Hacettepe University","kind":"institution","tags":[],"authors":[],"venue":[],"date":null,"url":"hacettepe-university.html","headings":[],"body":""});

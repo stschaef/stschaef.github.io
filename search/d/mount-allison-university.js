@@ -1,0 +1,1 @@
+heliaSearchData("d/mount-allison-university",{"id":"mount-allison-university","title":"Mount Allison University","kind":"institution","tags":[],"authors":[],"venue":[],"date":null,"url":"mount-allison-university.html","headings":[],"body":""});

@@ -1,0 +1,1 @@
+heliaSearchData("d/gregoryrosenblatt",{"id":"gregoryrosenblatt","title":"Gregory Rosenblatt","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"gregoryrosenblatt.html","headings":[],"body":""});

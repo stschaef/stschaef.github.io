@@ -1,0 +1,1 @@
+heliaSearchData("d/gregorymalecha",{"id":"gregorymalecha","title":"Gregory Malecha","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"gregorymalecha.html","headings":[],"body":""});

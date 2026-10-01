@@ -1,0 +1,1 @@
+heliaSearchData("d/yang-2026-modular",{"id":"yang-2026-modular","title":"Modular models of monoids with operations by lifting functors along fibrations","kind":"reference","tags":["effects"],"authors":["Nicolas Wu","Zhixuan Yang"],"venue":["JFP","Journal of Functional Programming"],"date":null,"url":"yang-2026-modular.html","headings":[],"body":""});

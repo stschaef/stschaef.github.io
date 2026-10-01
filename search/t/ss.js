@@ -1,1 +1,1 @@
-heliaSearchData("t/ss",{"ssastry":[865,32]});
+heliaSearchData("t/ss",{"ssa":[1420,128],"ssastry":[3434,32]});

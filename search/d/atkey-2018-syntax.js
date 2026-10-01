@@ -1,0 +1,1 @@
+heliaSearchData("d/atkey-2018-syntax",{"id":"atkey-2018-syntax","title":"Syntax and Semantics of Quantitative Type Theory","kind":"reference","tags":["substructural","type-theory"],"authors":["Robert Atkey"],"venue":["LICS","Symposium on Logic in Computer Science"],"date":null,"url":"atkey-2018-syntax.html","headings":[],"body":""});

@@ -1,0 +1,1 @@
+heliaSearchData("d/wojciechrozowski",{"id":"wojciechrozowski","title":"Wojciech Różowski","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"wojciechrozowski.html","headings":[],"body":""});

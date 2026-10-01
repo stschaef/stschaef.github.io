@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>The category of iterative sets in homotopy type theory and univalent foundations</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Ctext y=%22.9em%22 font-size=%2290%22%3E%F0%9F%8C%BB%3C/text%3E%3C/svg%3E">
+<meta name="generator" content="helia">
+<link rel="alternate" type="application/atom+xml" title="Steven Schaefer" href="feed.xml">
+<link rel="alternate" type="application/feed+json" title="Steven Schaefer" href="feed.json">
+<script src="helia/theme-version.js"></script>
+<script src="theme/folio-early.js"></script>
+<link rel="stylesheet" href="helia/theme.css">
+<link rel="stylesheet" href="helia/highlight.css">
+<link rel="stylesheet" href="helia/search.css">
+<link rel="stylesheet" href="theme/katex.css">
+<link rel="stylesheet" href="theme/recipe.css">
+<link rel="stylesheet" href="theme/site.css">
+<link rel="stylesheet" href="theme/folio.css">
+<script defer src="helia/runtime.js"></script>
+<script defer src="helia/search.js"></script>
+<script defer src="theme/glyphcraft.js"></script>
+<script defer src="theme/glyphart.js"></script>
+<script defer src="theme/glyphgen.js"></script>
+<script defer src="theme/ornament.js"></script>
+<script defer src="theme/folio.js"></script>
+<script defer src="theme/portrait.js"></script>
+<script type="application/json" id="helia-widgets">{"helia-cite-formats":"widgets/helia-cite-formats-a3294ac7.js"}</script>
+<link rel="modulepreload" href="widgets/helia-cite-formats-a3294ac7.js">
+<script type="module" src="widgets/runtime.js"></script>
+</head>
+<body>
+<nav class="helia-topbar"><a class="helia-home" href="home.html">Steven Schaefer</a><ul class="helia-nav-links"><li><a href="stevenschaefer.html">About Me</a></li><li><a href="research.html">Research</a></li><li><a href="new.html">New</a></li></ul><button type="button" class="helia-search-button" aria-label="Search (/ or Ctrl+K)" aria-haspopup="dialog"><span class="helia-search-icon">⌕</span><span class="helia-search-label">Search</span><kbd class="helia-search-key">/</kbd></button></nav>
+<div class="helia-page" data-kind="reference">
+<article class="helia-article">
+<header class="helia-header" data-entry="gratzer-2024-the" data-kind="reference">
+<h2 class="helia-heading"><span class="helia-taxon">Reference.</span> The category of iterative sets in homotopy type theory and univalent foundations</h2>
+<div class="helia-meta"><span class="helia-author"><a class="helia-entry-link" href="danielgratzer.html" data-entry="danielgratzer">Daniel Gratzer</a>, <a class="helia-entry-link" href="hakonrobbestadgylterud.html" data-entry="hakonrobbestadgylterud">Håkon Robbestad Gylterud</a>, <a class="helia-entry-link" href="andersmortberg.html" data-entry="andersmortberg">Anders Mörtberg</a>, <a class="helia-entry-link" href="elisabethstenholm.html" data-entry="elisabethstenholm">Elisabeth Stenholm</a></span> · <span class="helia-byline"><a class="helia-entry-link" href="mscs.html" data-entry="mscs">MSCS</a> · 2024</span> · <span class="helia-tags"><span class="helia-tag" data-tag="homotopy-type-theory"><a class="helia-entry-link" href="tag-homotopy-type-theory.html" data-entry="tag-homotopy-type-theory">homotopy-type-theory</a></span></span> · <span class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1017/s0960129524000288">DOI</a></span> · <span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/2402.04893">arXiv</a></span></span></div>
+</header>
+<div class="helia-body">
+<div class="helia-abstract">When working in homotopy type theory and univalent foundations, the traditional role of the category of sets, <span class="helia-math helia-math-inline helia-mathml"><math><mi>𝒮︀</mi><mi>ℯ︀</mi><mi>𝓉︀</mi></math></span> , is replaced by the category <span class="helia-math helia-math-inline helia-mathml"><math><mi>𝒽︀</mi><mi>𝒮︀</mi><mi>ℯ︀</mi><mi>𝓉︀</mi></math></span> of homotopy sets (h-sets); types with h-propositional identity types. Many of the properties of <span class="helia-math helia-math-inline helia-mathml"><math><mi>𝒮︀</mi><mi>ℯ︀</mi><mi>𝓉︀</mi></math></span> hold for <span class="helia-math helia-math-inline helia-mathml"><math><mi>𝒽︀</mi><mi>𝒮︀</mi><mi>ℯ︀</mi><mi>𝓉︀</mi></math></span> ((co)completeness, exactness, local cartesian closure, etc.). Notably, however, the univalence axiom implies that <span class="helia-math helia-math-inline helia-mathml"><math><mtext>𝖮𝖻</mtext><mspace width="0.1667em"/><mi>𝒽︀</mi><mi>𝒮︀</mi><mi>ℯ︀</mi><mi>𝓉︀</mi></math></span> is not itself an h-set, but an h-groupoid. This is expected in univalent foundations, but it is sometimes useful to also have a stricter universe of sets, for example, when constructing internal models of type theory. In this work, we equip the type of iterative sets <span class="helia-math helia-math-inline helia-mathml"><math><msup><mtext>𝖵</mtext><mn>0</mn></msup></math></span> , due to Gylterud ((2018). The Journal of Symbolic Logic 83 (3) 1132–1146) as a refinement of the pioneering work of Aczel ((1978). Logic Colloquium’77 , Studies in Logic and the Foundations of Mathematics, vol. 96, Elsevier, 55–66.) on universes of sets in type theory, with the structure of a Tarski universe and show that it satisfies many of the good properties of h-sets. In particular, we organize <span class="helia-math helia-math-inline helia-mathml"><math><msup><mtext>𝖵</mtext><mn>0</mn></msup></math></span> into a (non-univalent strict) category and prove that it is locally cartesian closed. This enables us to organize it into a category with families with the structure necessary to model extensional type theory internally in HoTT/UF. We do this in a rather minimal univalent type theory with W-types, in particular we do not rely on any HITs, or other complex extensions of type theory. Furthermore, the construction of <span class="helia-math helia-math-inline helia-mathml"><math><msup><mtext>𝖵</mtext><mn>0</mn></msup></math></span> and the model is fully constructive and predicative, while still being very convenient to work with as the decoding from <span class="helia-math helia-math-inline helia-mathml"><math><msup><mtext>𝖵</mtext><mn>0</mn></msup></math></span> into h-sets commutes definitionally for all type constructors. Almost all of the paper has been formalized in <span class="helia-math helia-math-inline helia-mathml"><math><mtext>𝙰𝚐𝚍𝚊</mtext></math></span> using the <span class="helia-math helia-math-inline helia-mathml"><math><mtext>𝚊𝚐𝚍𝚊</mtext></math></span> - <span class="helia-math helia-math-inline helia-mathml"><math><mtext>𝚞𝚗𝚒𝚖𝚊𝚝𝚑</mtext></math></span> library of univalent mathematics.</div>
+</div>
+<div class="helia-cite helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><h3 class="helia-heading">Cite</h3>
+</summary>
+<div class="helia-group-body">
+<div class="helia-widget" data-widget="helia-cite-formats" data-props="{&quot;key&quot;:&quot;gratzer-2024-the&quot;,&quot;bibtex&quot;:&quot;@article{gratzer-2024-the, title={The category of iterative sets in homotopy type theory and univalent foundations}, volume={34}, ISSN={1469-8072}, url={http://dx.doi.org/10.1017/s0960129524000288}, DOI={10.1017/s0960129524000288}, number={9}, journal={Mathematical Structures in Computer Science}, publisher={Cambridge University Press (CUP)}, author={Gratzer, Daniel and Gylterud, Håkon Robbestad and Mörtberg, Anders and Stenholm, Elisabeth}, year={2024}, month=Oct, pages={945–970} }&quot;,&quot;bib-file&quot;:&quot;gratzer-2024-the.bib&quot;,&quot;hayagriva&quot;:&quot;gratzer-2024-the:\n  type: article\n  title: The category of iterative sets in homotopy type theory and univalent foundations\n  author:\n  - Gratzer, Daniel\n  - Gylterud, Håkon Robbestad\n  - Mörtberg, Anders\n  - Stenholm, Elisabeth\n  date: 2024-10\n  page-range: 945-970\n  url: http://dx.doi.org/10.1017/s0960129524000288\n  serial-number:\n    doi: 10.1017/s0960129524000288\n    issn: 1469-8072\n  parent:\n    type: periodical\n    title: Mathematical Structures in Computer Science\n    publisher: Cambridge University Press (CUP)\n    issue: 9\n    volume: 34\n&quot;,&quot;yml-file&quot;:&quot;gratzer-2024-the.yml&quot;}"><div class="helia-cite-key" data-copy="@gratzer-2024-the" data-copy-label="citation key"><span class="helia-bib-key">Cite as</span> <code class="helia-raw-inline">@gratzer-2024-the</code> (helia, typst) · <code class="helia-raw-inline">\cite{gratzer-2024-the}</code> (LaTeX)</div>
+<div class="helia-cite-format helia-collapsible" data-format="bibtex" data-copy="true" data-copy-label="BibTeX">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">BibTeX</span></summary>
+<div class="helia-group-body">
+<details class="helia-code" open><summary class="helia-code-summary"><span class="helia-code-lang">bibtex</span> · <span class="helia-code-lines">1 line</span></summary><pre class="helia-raw"><code class="language-bibtex"><span class="hl-text hl-bibtex"><span class="hl-meta hl-entry hl-braces hl-bibtex"><span class="hl-keyword hl-other hl-entry-type hl-bibtex"><span class="hl-punctuation hl-definition hl-keyword hl-bibtex">@</span>article</span><span class="hl-punctuation hl-section hl-entry hl-begin hl-bibtex">{</span><span class="hl-entity hl-name hl-type hl-entry-key hl-bibtex">gratzer-2024-the</span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">title</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>The category of iterative sets in homotopy type theory and univalent foundations<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">volume</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>34<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">ISSN</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>1469-8072<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">url</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>http://dx.doi.org/10.1017/s0960129524000288<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">DOI</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>10.1017/s0960129524000288<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">number</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>9<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">journal</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>Mathematical Structures in Computer Science<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">publisher</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>Cambridge University Press (CUP)<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">author</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>Gratzer, Daniel and Gylterud, Håkon Robbestad and Mörtberg, Anders and Stenholm, Elisabeth<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">year</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>2024<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">month</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span>Oct</span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">pages</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>945–970<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span> </span><span class="hl-punctuation hl-section hl-entry hl-end hl-bibtex">}</span></span></span></code></pre></details>
+</div>
+</details>
+</div>
+<div class="helia-cite-format helia-collapsible" data-format="hayagriva" data-copy="true" data-copy-label="hayagriva YAML">
+<details>
+<summary class="helia-group-summary"><span class="helia-group-title">hayagriva YAML (typst)</span></summary>
+<div class="helia-group-body">
+<details class="helia-code" open><summary class="helia-code-summary"><span class="helia-code-lang">yaml</span> · <span class="helia-code-lines">20 lines</span></summary><pre class="helia-raw"><code class="language-yaml"><span class="hl-source hl-yaml"><span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">gratzer-2024-the</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">type</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">article</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">title</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">The category of iterative sets in homotopy type theory and univalent foundations</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">author</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Gratzer, Daniel</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Gylterud, Håkon Robbestad</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Mörtberg, Anders</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Stenholm, Elisabeth</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">date</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">2024-10</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">page-range</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">945-970</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">url</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">http://dx.doi.org/10.1017/s0960129524000288</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">serial-number</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">doi</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">10.1017/s0960129524000288</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">issn</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">1469-8072</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">parent</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">type</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">periodical</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">title</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Mathematical Structures in Computer Science</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">publisher</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Cambridge University Press (CUP)</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">issue</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-constant hl-numeric hl-integer hl-decimal hl-yaml">9</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">volume</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-constant hl-numeric hl-integer hl-decimal hl-yaml">34</span>
+</span></code></pre></details>
+</div>
+</details>
+</div>
+<div class="helia-cite-files">Download: <a class="helia-link" href="gratzer-2024-the.bib">gratzer-2024-the.bib</a> · <a class="helia-link" href="gratzer-2024-the.yml">gratzer-2024-the.yml</a></div>
+</div>
+</div>
+</details>
+</div>
+<div class="helia-reference-cited-by helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">Cited by (1)</span></summary>
+<div class="helia-group-body">
+<section class="helia-transclusion" data-entry="vanderweide-2025-the" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="vanderweide-2025-the"><span class="helia-title">The internal languages of univalent categories</span>&nbsp;<a class="helia-slug" href="vanderweide-2025-the.html">vanderweide-2025-the</a><span class="helia-byline"><span class="helia-entry-link" data-entry="lics">LICS</span> · 2025</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="vanderweide-2025-the" data-kind="reference">
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1109/lics65433.2025.00016">DOI</a></span> · <span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/2411.06636">arXiv</a></span></div>
+</div>
+</div>
+</details>
+</section>
+</div>
+</details>
+</div>
+<div class="helia-reference-cites helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">Cites 51 works (5 here)</span></summary>
+<div class="helia-group-body">
+<div class="helia-reference-cites-here helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">With notes (5)</span></summary>
+<div class="helia-group-body">
+<section class="helia-transclusion" data-entry="angiuli-2021-internalizing" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="angiuli-2021-internalizing"><span class="helia-title">Internalizing representation independence with univalence</span>&nbsp;<a class="helia-slug" href="angiuli-2021-internalizing.html">angiuli-2021-internalizing</a><span class="helia-byline"><span class="helia-entry-link" data-entry="popl">POPL</span> · 2021</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="angiuli-2021-internalizing" data-kind="reference">
+<div class="helia-abstract">In their usual form, representation independence metatheorems provide an external guarantee that two implementations of an abstract interface are interchangeable when they are related by an operation-preserving correspondence. If our programming language is dependently-typed, however, we would like to appeal to such invariance results within the language itself, in order to obtain correctness theorems for complex implementations by transferring them from simpler, related implementations. Recent work in proof assistants has shown that Voevodsky’s univalence principle allows transferring theorems between isomorphic types, but many instances of representation independence in programming involve non-isomorphic representations. In this paper, we develop techniques for establishing internal relational representation independence results in dependent type theory, by using higher inductive types to simultaneously quotient two related implementation types by a heterogeneous correspondence between them. The correspondence becomes an isomorphism between the quotiented types, thereby allowing us to obtain an equality of implementations by univalence. We illustrate our techniques by considering applications to matrices, queues, and finite multisets. Our results are all formalized in Cubical Agda, a recent extension of Agda which supports univalence and higher inductive types in a computationally well-behaved way.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="pdf-url"><a class="helia-link helia-external" href="https://dl.acm.org/doi/pdf/10.1145/3434293">PDF</a></span> · <span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/3434293">DOI</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/journals/pacmpl/AngiuliCMZ21">pldb</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="ahrens_etal_2015" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="ahrens_etal_2015"><span class="helia-title">Univalent categories and the Rezk completion</span>&nbsp;<a class="helia-slug" href="ahrens_etal_2015.html">ahrens_etal_2015</a><span class="helia-byline"><span class="helia-entry-link" data-entry="mscs">MSCS</span> · 2015</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="ahrens_etal_2015" data-kind="reference">
+<div class="helia-abstract">We develop category theory within Univalent Foundations, which is a foundational system for mathematics based on a homotopical interpretation of dependent type theory. In this system, we propose a definition of ‘category’ for which equality and equivalence of categories agree. Such categories satisfy a version of the univalence axiom, saying that the type of isomorphisms between any two objects is equivalent to the identity type between these objects; we call them ‘saturated’ or ‘univalent’ categories. Moreover, we show that any category is weakly equivalent to a univalent one in a universal way. In homotopical and higher-categorical semantics, this construction corresponds to a truncated version of the Rezk completion for Segal spaces, and also to the stack completion of a prestack.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1017/s0960129514000486">DOI</a></span> · <span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/1303.0584">arXiv</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="hottbook" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="hottbook"><span class="helia-title">Homotopy Type Theory: Univalent Foundations of Mathematics</span>&nbsp;<a class="helia-slug" href="hottbook.html">hottbook</a><span class="helia-byline"><span class="helia-entry-link" data-entry="arxiv">arXiv</span> · 2013</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="hottbook" data-kind="reference">
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="url"><a class="helia-link helia-external" href="https://homotopytypetheory.org/book">Web</a></span> · <span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/1308.0729">arXiv</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="jacobs-1999" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="jacobs-1999"><span class="helia-title">Categorical Logic and Type Theory</span>&nbsp;<a class="helia-slug" href="jacobs-1999.html">jacobs-1999</a><span class="helia-byline">1999</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="jacobs-1999" data-kind="reference">
+<p>This book is an attempt to give a systematic presentation of both logic and type theory from a categorical perspective, using the unifying concept of fibred category. Its intended audience consists of logicians, type theorists, category theorists and (theoretical) computer scientists.</p>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="Hofmann_1997" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="Hofmann_1997"><span class="helia-title">Syntax and semantics of dependent types</span>&nbsp;<a class="helia-slug" href="Hofmann_1997.html">Hofmann_1997</a><span class="helia-byline">Semantics and Logics of Computation · 1997</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="Hofmann_1997" data-kind="reference">
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1017/cbo9780511526619.004">DOI</a></span></div>
+</div>
+</div>
+</details>
+</section>
+</div>
+</details>
+</div>
+<div class="helia-reference-cites-away helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">External (46)</span></summary>
+<div class="helia-group-body">
+<ul>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1109/lics56636.2023.10175762">Set-Theoretic and Type-Theoretic Ordinals Coincide</a> (2023)</li>
+<li>Iterative multisets, iterative sets, and iterative ordinals in the TypeTopology library (2023)</li>
+<li><a class="helia-link helia-external" href="https://arxiv.org/abs/2312.13024">Univalent Material Set Theory</a> (2023)</li>
+<li>The Agda Programming Language (2023)</li>
+<li>Constructive Final Semantics of Finite Bags (2023)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.4171/jems/1050">The simplicial model of Univalent Foundations (after Voevodsky)</a> (2021)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1017/s0956796821000034">Cubical Agda: A dependently typed programming language with univalence and higher inductive types</a> (2021)</li>
+<li>The Coq Proof Assistant (2021)</li>
+<li>Type-Theoretic Constructions of the Final Coalgebra of the Finite Powerset Functor (2021)</li>
+<li>The agda-unimath library (2021)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1017/s0305004119000045">Multisets in type theory</a> (2020)</li>
+<li>UniMath - a computer-checked library of univalent mathematics (2020)</li>
+<li><a class="helia-link helia-external" href="https://arxiv.org/abs/1909.01414">From type theory to setoids and back</a> (2019)</li>
+<li>The finite-multiset construction in HoTT (2019)</li>
+<li>Introduction to univalent foundations of mathematics with Agda (2019)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1017/s0960129516000268">Natural models of homotopy type theory</a> (2018)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1017/jsl.2017.84">From multisets to sets in homotopy type theory</a> (2018)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3176245.3167085">Finite sets in homotopy type theory</a> (2018)</li>
+<li>Cubical Type Theory: A Constructive Interpretation of the Univalence Axiom (2018)</li>
+<li>Category structures on well-ordered sets in UniMath (2018)</li>
+<li>Higher inductive types in programming (2017)</li>
+<li>Type category structure on h-set valued presheaves in UniMath (2017)</li>
+<li>Parts of a CwF structure on h-set valued presheaves in Cubical Agda (2017)</li>
+<li><a class="helia-link helia-external" href="https://arxiv.org/abs/1701.07538">The join construction</a> (2017)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/2914770.2837638">Type theory in type theory using quotient inductive types</a> (2016)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1017/s0960129514000577">An experimental library of formalized Mathematics based on the univalent foundations</a> (2015)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1017/s0960129514000553">Sets in homotopy type theory</a> (2015)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1016/j.tcs.2014.03.003">Revisiting the categorical interpretation of dependent type theory</a> (2014)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1093/philmat/nkt030">Structuralism, Invariance, and Univalence</a> (2014)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-642-31585-5_22">Discrete Generalised Polynomial Functors</a> (2012)</li>
+<li>Semantical investigations in intuitionistic set theory and type theories with inductive families (2012)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.6092/issn.1972-5787/1695">Sets in Coq, Coq in sets</a> (2010)</li>
+<li>The equivalence axiom and univalent models of type theory (2010)</li>
+<li><a class="helia-link helia-external" href="https://arxiv.org/abs/1004.3802">Stack semantics and the comparison of material and structural set theories</a> (2010)</li>
+<li>On Relating Type Theories and Set Theories (1999)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/bfb0014566">Sets in Types, Types in Sets</a> (1997)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/3-540-61780-9_66">Internal type theory</a> (1996)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1016/0304-3975(93)90169-t">Comprehension Categories and the Semantics of Type Dependency</a> (1993)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-1-4612-0433-6">Semantics of Type Theory</a> (1991)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1016/0168-0072(86)90053-9">Generalised algebraic theories and contextual categories</a> (1986)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1017/s0305004100061284">Locally cartesian closed categories and type theory</a> (1984)</li>
+<li>Typeteori - en studie (1984)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1016/s0049-237x(09)70189-2">Constructive mathematics and computer programming</a> (1982)</li>
+<li>The Type Theoretic Interpretation of Constructive Set Theory (1978)</li>
+<li>Formal Systems for Constructive Mathematics (1976)</li>
+<li>An Intuitionistic Theory of Types: Predicative Part (1975)</li>
+</ul>
+</div>
+</details>
+</div>
+</div>
+</details>
+</div>
+</article>
+<div class="helia-identity"><span class="helia-id">gratzer-2024-the</span> <span class="helia-kind">reference</span> <span class="helia-path">entries/refs/gratzer-2024-the/gratzer-2024-the.hel</span></div>
+</div>
+</body>
+</html>

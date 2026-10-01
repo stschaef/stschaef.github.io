@@ -1,0 +1,1 @@
+heliaSearchData("d/gibbons-2020-the",{"id":"gibbons-2020-the","title":"The School of Squiggol: A History of the Bird–Meertens Formalism","kind":"reference","tags":["program-calculation"],"authors":["Jeremy Gibbons"],"venue":["FM","International Symposium on Formal Methods"],"date":null,"url":"gibbons-2020-the.html","headings":[],"body":""});

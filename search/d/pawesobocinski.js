@@ -1,0 +1,1 @@
+heliaSearchData("d/pawesobocinski",{"id":"pawesobocinski","title":"Paweł Sobociński","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"pawesobocinski.html","headings":[],"body":""});

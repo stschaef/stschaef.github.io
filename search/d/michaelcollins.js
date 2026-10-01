@@ -1,0 +1,1 @@
+heliaSearchData("d/michaelcollins",{"id":"michaelcollins","title":"Michael Collins","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"michaelcollins.html","headings":[],"body":""});

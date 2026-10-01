@@ -1,0 +1,1 @@
+heliaSearchData("d/ingridcdaubechies",{"id":"ingridcdaubechies","title":"Ingrid C. Daubechies","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"ingridcdaubechies.html","headings":[],"body":""});

@@ -1,0 +1,1 @@
+heliaSearchData("d/hu-2021-formalizing",{"id":"hu-2021-formalizing","title":"Formalizing category theory in Agda","kind":"reference","tags":["category-theory"],"authors":["Jacques Carette","Jason Z. S. Hu"],"venue":["CPP","Certified Programs and Proofs"],"date":null,"url":"hu-2021-formalizing.html","headings":[],"body":""});

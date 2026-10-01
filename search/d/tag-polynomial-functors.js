@@ -1,0 +1,1 @@
+heliaSearchData("d/tag-polynomial-functors",{"id":"tag-polynomial-functors","title":"polynomial-functors","kind":"tag","tags":[],"authors":[],"venue":[],"date":null,"url":"tag-polynomial-functors.html","headings":[],"body":""});

@@ -1,0 +1,1 @@
+heliaSearchData("d/yonathanfisseha",{"id":"yonathanfisseha","title":"Yonathan Fisseha","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"yonathanfisseha.html","headings":[],"body":""});

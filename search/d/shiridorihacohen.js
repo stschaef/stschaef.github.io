@@ -1,0 +1,1 @@
+heliaSearchData("d/shiridorihacohen",{"id":"shiridorihacohen","title":"Shiri Dori-Hacohen","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"shiridorihacohen.html","headings":[],"body":""});

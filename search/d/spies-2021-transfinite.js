@@ -1,0 +1,1 @@
+heliaSearchData("d/spies-2021-transfinite",{"id":"spies-2021-transfinite","title":"Transfinite step-indexing for termination","kind":"reference","tags":["logical-relations"],"authors":["Derek Dreyer","Neel Krishnaswami","Simon Spies"],"venue":["POPL","Symposium on Principles of Programming Languages"],"date":null,"url":"spies-2021-transfinite.html","headings":[],"body":""});

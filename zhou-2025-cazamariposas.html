@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>Cazamariposas: Automated Instability Debugging in SMT-Based Program Verification</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Ctext y=%22.9em%22 font-size=%2290%22%3E%F0%9F%8C%BB%3C/text%3E%3C/svg%3E">
+<meta name="generator" content="helia">
+<link rel="alternate" type="application/atom+xml" title="Steven Schaefer" href="feed.xml">
+<link rel="alternate" type="application/feed+json" title="Steven Schaefer" href="feed.json">
+<script src="helia/theme-version.js"></script>
+<script src="theme/folio-early.js"></script>
+<link rel="stylesheet" href="helia/theme.css">
+<link rel="stylesheet" href="helia/highlight.css">
+<link rel="stylesheet" href="helia/search.css">
+<link rel="stylesheet" href="theme/katex.css">
+<link rel="stylesheet" href="theme/recipe.css">
+<link rel="stylesheet" href="theme/site.css">
+<link rel="stylesheet" href="theme/folio.css">
+<script defer src="helia/runtime.js"></script>
+<script defer src="helia/search.js"></script>
+<script defer src="theme/glyphcraft.js"></script>
+<script defer src="theme/glyphart.js"></script>
+<script defer src="theme/glyphgen.js"></script>
+<script defer src="theme/ornament.js"></script>
+<script defer src="theme/folio.js"></script>
+<script defer src="theme/portrait.js"></script>
+<script type="application/json" id="helia-widgets">{"helia-cite-formats":"widgets/helia-cite-formats-a3294ac7.js"}</script>
+<link rel="modulepreload" href="widgets/helia-cite-formats-a3294ac7.js">
+<script type="module" src="widgets/runtime.js"></script>
+</head>
+<body>
+<nav class="helia-topbar"><a class="helia-home" href="home.html">Steven Schaefer</a><ul class="helia-nav-links"><li><a href="stevenschaefer.html">About Me</a></li><li><a href="research.html">Research</a></li><li><a href="new.html">New</a></li></ul><button type="button" class="helia-search-button" aria-label="Search (/ or Ctrl+K)" aria-haspopup="dialog"><span class="helia-search-icon">⌕</span><span class="helia-search-label">Search</span><kbd class="helia-search-key">/</kbd></button></nav>
+<div class="helia-page" data-kind="reference">
+<article class="helia-article">
+<header class="helia-header" data-entry="zhou-2025-cazamariposas" data-kind="reference">
+<h2 class="helia-heading"><span class="helia-taxon">Reference.</span> Cazamariposas: Automated Instability Debugging in SMT-Based Program Verification</h2>
+<div class="helia-meta"><span class="helia-author"><a class="helia-entry-link" href="yizhou.html" data-entry="yizhou">Yi Zhou</a>, <a class="helia-entry-link" href="amarshah.html" data-entry="amarshah">Amar Shah</a>, <a class="helia-entry-link" href="zhengyaolin.html" data-entry="zhengyaolin">Zhengyao Lin</a>, <a class="helia-entry-link" href="marijnheule.html" data-entry="marijnheule">Marijn Heule</a>, <a class="helia-entry-link" href="bryanparno.html" data-entry="bryanparno">Bryan Parno</a></span> · <span class="helia-byline"><a class="helia-entry-link" href="cade.html" data-entry="cade">CADE</a> · 2025</span> · <span class="helia-tags"><span class="helia-tag" data-tag="proof-engineering"><a class="helia-entry-link" href="tag-proof-engineering.html" data-entry="tag-proof-engineering">proof-engineering</a></span></span> · <span class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-031-99984-0_5">DOI</a></span></span></div>
+</header>
+<div class="helia-body">
+<div class="helia-abstract">Program verification languages such as Dafny and F<span class="helia-math helia-math-inline helia-mathml"><math><mo lspace="0em" rspace="0em">⋆</mo></math></span> often rely heavily on Satisfiability Modulo Theories (SMT) solvers for proof automation. However, SMT-based verification suffers from instability, where semantically irrelevant changes in the source program can cause spurious proof failures. While existing mitigation techniques emphasize preemptive measures, we propose a complementary approach that focuses on diagnosing and repairing specific instances of instability-induced failures. Our key technique is a novel differential analysis to pinpoint problematic quantified formulas in an unstable query. We implement this technique in Cazamariposas, a tool that automatically identifies such quantified formulas and suggests fixes. We evaluate Cazamariposas on multiple large-scale systems verification projects written in three different program verification languages. Our results demonstrate Cazamariposas’ effectiveness as an instability debugger. In the majority of cases, Cazamariposas successfully isolates the issue to a single problematic quantifier, while providing a stabilizing fix.</div>
+</div>
+<div class="helia-cite helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><h3 class="helia-heading">Cite</h3>
+</summary>
+<div class="helia-group-body">
+<div class="helia-widget" data-widget="helia-cite-formats" data-props="{&quot;key&quot;:&quot;zhou-2025-cazamariposas&quot;,&quot;bibtex&quot;:&quot;@inbook{zhou-2025-cazamariposas, title={Cazamariposas: Automated Instability Debugging in SMT-Based Program Verification}, ISBN={9783031999840}, ISSN={1611-3349}, url={http://dx.doi.org/10.1007/978-3-031-99984-0_5}, DOI={10.1007/978-3-031-99984-0_5}, booktitle={Automated Deduction – CADE 30}, publisher={Springer Nature Switzerland}, author={Zhou, Yi and Shah, Amar and Lin, Zhengyao and Heule, Marijn J. H. and Parno, Bryan}, year={2025}, pages={75–94} }&quot;,&quot;bib-file&quot;:&quot;zhou-2025-cazamariposas.bib&quot;,&quot;hayagriva&quot;:&quot;zhou-2025-cazamariposas:\n  type: chapter\n  title: &#39;Cazamariposas: Automated Instability Debugging in SMT-Based Program Verification&#39;\n  author:\n  - Zhou, Yi\n  - Shah, Amar\n  - Lin, Zhengyao\n  - Heule, Marijn J. H.\n  - Parno, Bryan\n  date: 2025\n  page-range: 75-94\n  url: http://dx.doi.org/10.1007/978-3-031-99984-0_5\n  serial-number:\n    doi: 10.1007/978-3-031-99984-0_5\n    isbn: &#39;9783031999840&#39;\n    issn: 1611-3349\n  parent:\n    type: book\n    title: Automated Deduction – CADE 30\n    publisher: Springer Nature Switzerland\n&quot;,&quot;yml-file&quot;:&quot;zhou-2025-cazamariposas.yml&quot;}"><div class="helia-cite-key" data-copy="@zhou-2025-cazamariposas" data-copy-label="citation key"><span class="helia-bib-key">Cite as</span> <code class="helia-raw-inline">@zhou-2025-cazamariposas</code> (helia, typst) · <code class="helia-raw-inline">\cite{zhou-2025-cazamariposas}</code> (LaTeX)</div>
+<div class="helia-cite-format helia-collapsible" data-format="bibtex" data-copy="true" data-copy-label="BibTeX">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">BibTeX</span></summary>
+<div class="helia-group-body">
+<details class="helia-code" open><summary class="helia-code-summary"><span class="helia-code-lang">bibtex</span> · <span class="helia-code-lines">1 line</span></summary><pre class="helia-raw"><code class="language-bibtex"><span class="hl-text hl-bibtex"><span class="hl-meta hl-entry hl-braces hl-bibtex"><span class="hl-keyword hl-other hl-entry-type hl-bibtex"><span class="hl-punctuation hl-definition hl-keyword hl-bibtex">@</span>inbook</span><span class="hl-punctuation hl-section hl-entry hl-begin hl-bibtex">{</span><span class="hl-entity hl-name hl-type hl-entry-key hl-bibtex">zhou-2025-cazamariposas</span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">title</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>Cazamariposas: Automated Instability Debugging in SMT-Based Program Verification<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">ISBN</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>9783031999840<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">ISSN</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>1611-3349<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">url</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>http://dx.doi.org/10.1007/978-3-031-99984-0_5<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">DOI</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>10.1007/978-3-031-99984-0_5<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">booktitle</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>Automated Deduction – CADE 30<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">publisher</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>Springer Nature Switzerland<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">author</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>Zhou, Yi and Shah, Amar and Lin, Zhengyao and Heule, Marijn J. H. and Parno, Bryan<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">year</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>2025<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">pages</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>75–94<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span> </span><span class="hl-punctuation hl-section hl-entry hl-end hl-bibtex">}</span></span></span></code></pre></details>
+</div>
+</details>
+</div>
+<div class="helia-cite-format helia-collapsible" data-format="hayagriva" data-copy="true" data-copy-label="hayagriva YAML">
+<details>
+<summary class="helia-group-summary"><span class="helia-group-title">hayagriva YAML (typst)</span></summary>
+<div class="helia-group-body">
+<details class="helia-code" open><summary class="helia-code-summary"><span class="helia-code-lang">yaml</span> · <span class="helia-code-lines">20 lines</span></summary><pre class="helia-raw"><code class="language-yaml"><span class="hl-source hl-yaml"><span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">zhou-2025-cazamariposas</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">type</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">chapter</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">title</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-quoted hl-single hl-yaml"><span class="hl-punctuation hl-definition hl-string hl-begin hl-yaml">&#39;</span>Cazamariposas: Automated Instability Debugging in SMT-Based Program Verification<span class="hl-punctuation hl-definition hl-string hl-end hl-yaml">&#39;</span></span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">author</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Zhou, Yi</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Shah, Amar</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Lin, Zhengyao</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Heule, Marijn J. H.</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Parno, Bryan</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">date</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-constant hl-numeric hl-integer hl-decimal hl-yaml">2025</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">page-range</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">75-94</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">url</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">http://dx.doi.org/10.1007/978-3-031-99984-0_5</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">serial-number</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">doi</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">10.1007/978-3-031-99984-0_5</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">isbn</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-quoted hl-single hl-yaml"><span class="hl-punctuation hl-definition hl-string hl-begin hl-yaml">&#39;</span>9783031999840<span class="hl-punctuation hl-definition hl-string hl-end hl-yaml">&#39;</span></span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">issn</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">1611-3349</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">parent</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">type</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">book</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">title</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Automated Deduction – CADE 30</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">publisher</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Springer Nature Switzerland</span>
+</span></code></pre></details>
+</div>
+</details>
+</div>
+<div class="helia-cite-files">Download: <a class="helia-link" href="zhou-2025-cazamariposas.bib">zhou-2025-cazamariposas.bib</a> · <a class="helia-link" href="zhou-2025-cazamariposas.yml">zhou-2025-cazamariposas.yml</a></div>
+</div>
+</div>
+</details>
+</div>
+<div class="helia-reference-cites helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">Cites 34 works (4 here)</span></summary>
+<div class="helia-group-body">
+<div class="helia-reference-cites-here helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">With notes (4)</span></summary>
+<div class="helia-group-body">
+<section class="helia-transclusion" data-entry="chakarov-2025-formally" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="chakarov-2025-formally"><span class="helia-title">Formally Verified Cloud-Scale Authorization</span>&nbsp;<a class="helia-slug" href="chakarov-2025-formally.html">chakarov-2025-formally</a><span class="helia-byline"><span class="helia-entry-link" data-entry="icse">ICSE</span> · 2025</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="chakarov-2025-formally" data-kind="reference">
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1109/icse55347.2025.00166">DOI</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/conf/icse/ChakarovGHHHJJL25">pldb</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="lattuada-2024-verus" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="lattuada-2024-verus"><span class="helia-title">Verus: A Practical Foundation for Systems Verification</span>&nbsp;<a class="helia-slug" href="lattuada-2024-verus.html">lattuada-2024-verus</a><span class="helia-byline"><span class="helia-entry-link" data-entry="sosp">SOSP</span> · 2024</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="lattuada-2024-verus" data-kind="reference">
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/3694715.3695952">DOI</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="lattuada-2023-verus" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="lattuada-2023-verus"><span class="helia-title">Verus: Verifying Rust Programs using Linear Ghost Types</span>&nbsp;<a class="helia-slug" href="lattuada-2023-verus.html">lattuada-2023-verus</a><span class="helia-byline"><span class="helia-entry-link" data-entry="oopsla">OOPSLA</span> · 2023</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="lattuada-2023-verus" data-kind="reference">
+<div class="helia-abstract">The Rust programming language provides a powerful type system that checks linearity and borrowing, allowing code to safely manipulate memory without garbage collection and making Rust ideal for developing low-level, high-assurance systems. For such systems, formal verification can be useful to prove functional correctness properties beyond type safety. This paper presents Verus, an SMT-based tool for formally verifying Rust programs. With Verus, programmers express proofs and specifications using the Rust language, allowing proofs to take advantage of Rust’s linear types and borrow checking. We show how this allows proofs to manipulate linearly typed permissions that let Rust code safely manipulate memory, pointers, and concurrent resources. Verus organizes proofs and specifications using a novel mode system that distinguishes specifications, which are not checked for linearity and borrowing, from executable code and proofs, which are checked for linearity and borrowing. We formalize Verus’ linearity, borrowing, and modes in a small lambda calculus, for which we prove type safety and termination of specifications and proofs. We demonstrate Verus on a series of examples, including pointer-manipulating code (an xor-based doubly linked list), code with interior mutability, and concurrent code.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="pdf-url"><a class="helia-link helia-external" href="https://dl.acm.org/doi/pdf/10.1145/3586037">PDF</a></span> · <span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/3586037">DOI</a></span> · <span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/2303.05491">arXiv</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/journals/pacmpl/LattuadaHCBSZHPH23">pldb</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="hawblitzel-2015-ironfleet" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="hawblitzel-2015-ironfleet"><span class="helia-title">IronFleet: proving practical distributed systems correct</span>&nbsp;<a class="helia-slug" href="hawblitzel-2015-ironfleet.html">hawblitzel-2015-ironfleet</a><span class="helia-byline"><span class="helia-entry-link" data-entry="sosp">SOSP</span> · 2015</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="hawblitzel-2015-ironfleet" data-kind="reference">
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/2815400.2815428">DOI</a></span></div>
+</div>
+</div>
+</details>
+</section>
+</div>
+</details>
+</div>
+<div class="helia-reference-cites-away helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">External (30)</span></summary>
+<div class="helia-group-body">
+<ul>
+<li>Cazamariposas (software repository) (2025)</li>
+<li>Cazamariposas: Automated Instability Debugging in SMT-based Program Verification (Technical Report) (2025)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-031-71162-6_8">Free Facts: An Alternative to Inefficient Axioms in Dafny</a> (2024)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3649835">Cedar: A New Language for Expressive, Fast, Safe, and Analyzable Authorization</a> (2024)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3689773">StarMalloc: Verifying a Modern, Hardened Memory Allocator</a> (2024)</li>
+<li><a class="helia-link helia-external" href="https://arxiv.org/abs/2410.22419">Using normalization to improve SMT solver stability (arXiv: Towards SMT Solver Stability via Input Normalization)</a> (2024)</li>
+<li>Context pruning for more robust SMT-based program verification (2024)</li>
+<li>Avoiding verification brittleness in Dafny (blog) (2023)</li>
+<li>Mariposa: Measuring SMT instability in automated program verification (2023)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-030-99524-9_24">cvc5: A Versatile and Industrial-Strength SMT Solver</a> (2022)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1109/msec.2022.3153035">Formally Verifying Industry Cryptography</a> (2022)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-031-13185-1_1">A Billion SMT Queries a Day (Invited Paper)</a> (2022)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1109/sp40000.2020.00114">EverCrypt: A Fast, Verified, Cross-Platform Cryptographic Provider</a> (2020)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-030-17462-0_6">The Axiom Profiler: Understanding and Debugging SMT Quantifier Instantiations</a> (2019)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-030-29436-6_29">Faster, Higher, Stronger: E 2.3</a> (2019)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.23919/fmcad.2018.8602994">Semantic-based Automated Reasoning for AWS Access Policies using SMT</a> (2018)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3132747.3132782">Komodo: Using Verification to Disentangle Secure-Enclave Hardware from Software</a> (2017)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-319-41528-4_20">Trigger Selection Strategies to Stabilize Program Verifiers</a> (2016)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/2837614.2837655">Dependent types and multi-monadic effects in F*</a> (2016)</li>
+<li>Ironclad Apps: End-to-end security via automated full-system verification (2014)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-642-39799-8_1">First-Order Theorem Proving and Vampire</a> (2013)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-642-22438-6_23">Sine Qua Non for Large Theory Reasoning</a> (2011)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-642-17511-4_20">Dafny: An Automatic Program Verifier for Functional Correctness</a> (2010)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/1670412.1670416">Programming with triggers</a> (2009)</li>
+<li>Proof reconstruction for Z3 in Isabelle/HOL (2009)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-540-78800-3_24">Z3: An Efficient SMT Solver</a> (2008)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-540-73595-3_13">Efficient E-Matching for SMT Solvers</a> (2007)</li>
+<li>A survey of axiom selection as a machine learning problem</li>
+<li>Profiling Z3 and solving proof performance issues (F* tutorial)</li>
+<li>Verification debugging when verification fails (Dafny reference manual)</li>
+</ul>
+</div>
+</details>
+</div>
+</div>
+</details>
+</div>
+</article>
+<div class="helia-identity"><span class="helia-id">zhou-2025-cazamariposas</span> <span class="helia-kind">reference</span> <span class="helia-path">entries/refs/zhou-2025-cazamariposas/zhou-2025-cazamariposas.hel</span></div>
+</div>
+</body>
+</html>

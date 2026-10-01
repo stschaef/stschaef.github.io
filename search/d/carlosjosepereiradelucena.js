@@ -1,0 +1,1 @@
+heliaSearchData("d/carlosjosepereiradelucena",{"id":"carlosjosepereiradelucena","title":"Carlos José Pereira de Lucena","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"carlosjosepereiradelucena.html","headings":[],"body":""});

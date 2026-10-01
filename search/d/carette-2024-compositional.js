@@ -1,0 +1,1 @@
+heliaSearchData("d/carette-2024-compositional",{"id":"carette-2024-compositional","title":"Compositional Reversible Computation","kind":"reference","tags":["quantum"],"authors":["Amr Sabry","Chris Heunen","Jacques Carette","Robin Kaarsgaard"],"venue":["RC","Reversible Computation"],"date":null,"url":"carette-2024-compositional.html","headings":[],"body":""});

@@ -1,0 +1,1 @@
+heliaSearchData("d/andreipaskevich",{"id":"andreipaskevich","title":"Andrei Paskevich","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"andreipaskevich.html","headings":[],"body":""});

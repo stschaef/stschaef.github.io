@@ -1,0 +1,1 @@
+heliaSearchData("d/yang-2021-reasoning",{"id":"yang-2021-reasoning","title":"Reasoning about effect interaction by fusion","kind":"reference","tags":["effects"],"authors":["Nicolas Wu","Zhixuan Yang"],"venue":["ICFP","International Conference on Functional Programming"],"date":null,"url":"yang-2021-reasoning.html","headings":[],"body":""});

@@ -1,0 +1,1 @@
+heliaSearchData("d/tag-dynamical-systems",{"id":"tag-dynamical-systems","title":"dynamical-systems","kind":"tag","tags":[],"authors":[],"venue":[],"date":null,"url":"tag-dynamical-systems.html","headings":[],"body":""});

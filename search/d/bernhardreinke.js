@@ -1,0 +1,1 @@
+heliaSearchData("d/bernhardreinke",{"id":"bernhardreinke","title":"Bernhard Reinke","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"bernhardreinke.html","headings":[],"body":""});

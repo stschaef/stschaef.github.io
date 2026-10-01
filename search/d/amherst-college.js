@@ -1,0 +1,1 @@
+heliaSearchData("d/amherst-college",{"id":"amherst-college","title":"Amherst College","kind":"institution","tags":[],"authors":[],"venue":[],"date":null,"url":"amherst-college.html","headings":[],"body":""});

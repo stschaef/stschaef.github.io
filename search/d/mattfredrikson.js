@@ -1,0 +1,1 @@
+heliaSearchData("d/mattfredrikson",{"id":"mattfredrikson","title":"Matt Fredrikson","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"mattfredrikson.html","headings":[],"body":""});

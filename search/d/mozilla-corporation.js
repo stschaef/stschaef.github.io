@@ -1,0 +1,1 @@
+heliaSearchData("d/mozilla-corporation",{"id":"mozilla-corporation","title":"Mozilla Corporation","kind":"institution","tags":[],"authors":[],"venue":[],"date":null,"url":"mozilla-corporation.html","headings":[],"body":""});

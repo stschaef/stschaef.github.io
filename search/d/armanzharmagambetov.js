@@ -1,0 +1,1 @@
+heliaSearchData("d/armanzharmagambetov",{"id":"armanzharmagambetov","title":"Arman Zharmagambetov","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"armanzharmagambetov.html","headings":[],"body":""});

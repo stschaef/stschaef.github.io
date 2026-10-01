@@ -1,0 +1,1 @@
+heliaSearchData("d/alasdairarmstrong",{"id":"alasdairarmstrong","title":"Alasdair Armstrong","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"alasdairarmstrong.html","headings":[],"body":""});

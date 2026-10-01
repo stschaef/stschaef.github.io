@@ -1,0 +1,1 @@
+heliaSearchData("d/ringer-2024-proofs",{"id":"ringer-2024-proofs","title":"Proofs and Conversations","kind":"reference","tags":[],"authors":["Talia Ringer"],"venue":["Notices of the American Mathematical Society"],"date":null,"url":"ringer-2024-proofs.html","headings":[],"body":""});

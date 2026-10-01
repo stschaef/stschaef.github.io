@@ -1,0 +1,1 @@
+heliaSearchData("d/vanderweide-2025-the",{"id":"vanderweide-2025-the","title":"The internal languages of univalent categories","kind":"reference","tags":["category-theory","homotopy-type-theory"],"authors":["Niels van der Weide"],"venue":["LICS","Symposium on Logic in Computer Science"],"date":null,"url":"vanderweide-2025-the.html","headings":[],"body":""});

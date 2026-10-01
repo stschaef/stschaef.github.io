@@ -1,0 +1,1 @@
+heliaSearchData("d/fiore-2024-logical",{"id":"fiore-2024-logical","title":"Logical Structure on Inverse Functor Categories","kind":"reference","tags":["category-theory"],"authors":["Chris Kapulkin","Marcelo P. Fiore","Yufeng Li"],"venue":["arXiv"],"date":null,"url":"fiore-2024-logical.html","headings":[],"body":""});

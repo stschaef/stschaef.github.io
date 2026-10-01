@@ -1,1 +1,1 @@
-heliaSearchData("t/av",{"averse":[370,1],"avoid":[326,1],"avr":[377,128]});
+heliaSearchData("t/av",{"ava":[424,128,1861,32],"avansmith":[424,32],"avanzati":[3288,160],"avary":[425,128,862,32],"avarylanier":[425,32],"avaya":[426,160],"averse":[1413,1],"avi":[430,128,3274,32],"avia":[427,128,3006,32],"aviaefrat":[427,32],"aviation":[1232,160],"avigad":[428,32,1458,128,729,32],"avijit":[429,128,98,32],"avijitghosh":[429,32],"avitachnafram":[430,32],"aviv":[3705,160],"avoid":[1323,1],"avoidance":[1870,128,1,128,235,128,1,128],"avr":[1454,128],"avron":[346,128]});

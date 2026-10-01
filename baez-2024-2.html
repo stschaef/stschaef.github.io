@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>2-Rig Extensions and the Splitting Principle</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Ctext y=%22.9em%22 font-size=%2290%22%3E%F0%9F%8C%BB%3C/text%3E%3C/svg%3E">
+<meta name="generator" content="helia">
+<link rel="alternate" type="application/atom+xml" title="Steven Schaefer" href="feed.xml">
+<link rel="alternate" type="application/feed+json" title="Steven Schaefer" href="feed.json">
+<script src="helia/theme-version.js"></script>
+<script src="theme/folio-early.js"></script>
+<link rel="stylesheet" href="helia/theme.css">
+<link rel="stylesheet" href="helia/highlight.css">
+<link rel="stylesheet" href="helia/search.css">
+<link rel="stylesheet" href="theme/katex.css">
+<link rel="stylesheet" href="theme/recipe.css">
+<link rel="stylesheet" href="theme/site.css">
+<link rel="stylesheet" href="theme/folio.css">
+<script defer src="helia/runtime.js"></script>
+<script defer src="helia/search.js"></script>
+<script defer src="theme/glyphcraft.js"></script>
+<script defer src="theme/glyphart.js"></script>
+<script defer src="theme/glyphgen.js"></script>
+<script defer src="theme/ornament.js"></script>
+<script defer src="theme/folio.js"></script>
+<script defer src="theme/portrait.js"></script>
+<script type="application/json" id="helia-widgets">{"helia-cite-formats":"widgets/helia-cite-formats-a3294ac7.js"}</script>
+<link rel="modulepreload" href="widgets/helia-cite-formats-a3294ac7.js">
+<script type="module" src="widgets/runtime.js"></script>
+</head>
+<body>
+<nav class="helia-topbar"><a class="helia-home" href="home.html">Steven Schaefer</a><ul class="helia-nav-links"><li><a href="stevenschaefer.html">About Me</a></li><li><a href="research.html">Research</a></li><li><a href="new.html">New</a></li></ul><button type="button" class="helia-search-button" aria-label="Search (/ or Ctrl+K)" aria-haspopup="dialog"><span class="helia-search-icon">⌕</span><span class="helia-search-label">Search</span><kbd class="helia-search-key">/</kbd></button></nav>
+<div class="helia-page" data-kind="reference">
+<article class="helia-article">
+<header class="helia-header" data-entry="baez-2024-2" data-kind="reference">
+<h2 class="helia-heading"><span class="helia-taxon">Reference.</span> 2-Rig Extensions and the Splitting Principle</h2>
+<div class="helia-meta"><span class="helia-author"><a class="helia-entry-link" href="johncbaez.html" data-entry="johncbaez">John C. Baez</a>, <a class="helia-entry-link" href="joemoeller.html" data-entry="joemoeller">Joe Moeller</a>, <a class="helia-entry-link" href="toddtrimble.html" data-entry="toddtrimble">Todd Trimble</a></span> · <span class="helia-byline"><a class="helia-entry-link" href="arxiv.html" data-entry="arxiv">arXiv</a> · 2024</span> · <span class="helia-tags"><span class="helia-tag" data-tag="category-theory"><a class="helia-entry-link" href="tag-category-theory.html" data-entry="tag-category-theory">category-theory</a></span></span> · <span class="helia-entry-links"><span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/2410.05598">arXiv</a></span></span></div>
+</header>
+<div class="helia-body">
+<div class="helia-abstract">Classically, the splitting principle says how to pull back a vector bundle in such a way that it splits into line bundles and the pullback map induces an injection on <span class="helia-math helia-math-inline helia-mathml"><math><mi>𝐾</mi></math></span>-theory. Here we categorify the splitting principle and generalize it to the context of 2-rigs. A 2-rig is a kind of categorified “ring without negatives”, such as a category of vector bundles with <span class="helia-math helia-math-inline helia-mathml"><math><mo lspace="0em" rspace="0em">⊕</mo></math></span> as addition and <span class="helia-math helia-math-inline helia-mathml"><math><mo lspace="0em" rspace="0em">⊗</mo></math></span> as multiplication. Technically, we define a 2-rig to be a Cauchy complete <span class="helia-math helia-math-inline helia-mathml"><math><mi>𝑘</mi></math></span>-linear symmetric monoidal category where <span class="helia-math helia-math-inline helia-mathml"><math><mi>𝑘</mi></math></span> has characteristic zero. We conjecture that for any suitably finite-dimensional object <span class="helia-math helia-math-inline helia-mathml"><math><mi>𝑟</mi></math></span> of a 2-rig <span class="helia-math helia-math-inline helia-mathml"><math><mtext>𝖱</mtext></math></span>, there is a 2-rig map <span class="helia-math helia-math-inline helia-mathml"><math><mi>𝐸</mi><mo lspace="0.2777777777777778em" rspace="0.2777777777777778em">:</mo><mtext>𝖱</mtext><mo stretchy="false">→</mo><mrow><mtext>𝖱</mtext><mo lspace="0em" rspace="0em">′</mo></mrow></math></span> such that <span class="helia-math helia-math-inline helia-mathml"><math><mi>𝐸</mi><mrow><mo stretchy="false">(</mo><mi>𝑟</mi><mo stretchy="false">)</mo></mrow></math></span> splits as a direct sum of finitely many “subline objects” and <span class="helia-math helia-math-inline helia-mathml"><math><mi>𝐸</mi></math></span> has various good properties: it is faithful, conservative, essentially injective, and the induced map of Grothendieck rings <span class="helia-math helia-math-inline helia-mathml"><math><mi>𝐾</mi><mrow><mo stretchy="false">(</mo><mi>𝐸</mi><mo stretchy="false">)</mo></mrow><mo lspace="0.2777777777777778em" rspace="0.2777777777777778em">:</mo><mi>𝐾</mi><mrow><mo stretchy="false">(</mo><mtext>𝖱</mtext><mo stretchy="false">)</mo></mrow><mo stretchy="false">→</mo><mi>𝐾</mi><mrow><mo stretchy="false">(</mo><mrow><mtext>𝖱</mtext><mo lspace="0em" rspace="0em">′</mo></mrow><mo stretchy="false">)</mo></mrow></math></span> is injective. We prove this conjecture for the free 2-rig on one object, namely the category of Schur functors, whose Grothendieck ring is the free <span class="helia-math helia-math-inline helia-mathml"><math><mi>𝜆</mi></math></span>-ring on one generator, also known as the ring of symmetric functions. We use this task as an excuse to develop the representation theory of affine categories - that is, categories enriched in affine schemes - using the theory of 2-rigs.</div>
+</div>
+<div class="helia-cite helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><h3 class="helia-heading">Cite</h3>
+</summary>
+<div class="helia-group-body">
+<div class="helia-widget" data-widget="helia-cite-formats" data-props="{&quot;key&quot;:&quot;baez-2024-2&quot;,&quot;bibtex&quot;:&quot;@misc{baez-2024-2,\n  author = {John C. Baez and Joe Moeller and Todd Trimble},\n  title = {2-Rig Extensions and the Splitting Principle},\n  year = {2024},\n  month = {10},\n  eprint = {2410.05598},\n  archiveprefix = {arXiv}\n}&quot;,&quot;bib-file&quot;:&quot;baez-2024-2.bib&quot;,&quot;hayagriva&quot;:&quot;baez-2024-2:\n  type: misc\n  title: 2-Rig Extensions and the Splitting Principle\n  author:\n  - Baez, John C.\n  - Moeller, Joe\n  - Trimble, Todd\n  date: 2024-10\n  serial-number:\n    arxiv: &#39;2410.05598&#39;\n&quot;,&quot;yml-file&quot;:&quot;baez-2024-2.yml&quot;}"><div class="helia-cite-key" data-copy="@baez-2024-2" data-copy-label="citation key"><span class="helia-bib-key">Cite as</span> <code class="helia-raw-inline">@baez-2024-2</code> (helia, typst) · <code class="helia-raw-inline">\cite{baez-2024-2}</code> (LaTeX)</div>
+<div class="helia-cite-format helia-collapsible" data-format="bibtex" data-copy="true" data-copy-label="BibTeX">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">BibTeX</span></summary>
+<div class="helia-group-body">
+<details class="helia-code" open><summary class="helia-code-summary"><span class="helia-code-lang">bibtex</span> · <span class="helia-code-lines">8 lines</span></summary><pre class="helia-raw"><code class="language-bibtex"><span class="hl-text hl-bibtex"><span class="hl-meta hl-entry hl-braces hl-bibtex"><span class="hl-keyword hl-other hl-entry-type hl-bibtex"><span class="hl-punctuation hl-definition hl-keyword hl-bibtex">@</span>misc</span><span class="hl-punctuation hl-section hl-entry hl-begin hl-bibtex">{</span><span class="hl-entity hl-name hl-type hl-entry-key hl-bibtex">baez-2024-2</span>,
+  <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">author</span> <span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span> <span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>John C. Baez and Joe Moeller and Todd Trimble<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>,
+  <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">title</span> <span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span> <span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>2-Rig Extensions and the Splitting Principle<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>,
+  <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">year</span> <span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span> <span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>2024<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>,
+  <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">month</span> <span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span> <span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>10<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>,
+  <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">eprint</span> <span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span> <span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>2410.05598<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>,
+  <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">archiveprefix</span> <span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span> <span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>arXiv<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span>
+</span><span class="hl-punctuation hl-section hl-entry hl-end hl-bibtex">}</span></span></span></code></pre></details>
+</div>
+</details>
+</div>
+<div class="helia-cite-format helia-collapsible" data-format="hayagriva" data-copy="true" data-copy-label="hayagriva YAML">
+<details>
+<summary class="helia-group-summary"><span class="helia-group-title">hayagriva YAML (typst)</span></summary>
+<div class="helia-group-body">
+<details class="helia-code" open><summary class="helia-code-summary"><span class="helia-code-lang">yaml</span> · <span class="helia-code-lines">10 lines</span></summary><pre class="helia-raw"><code class="language-yaml"><span class="hl-source hl-yaml"><span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">baez-2024-2</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">type</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">misc</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">title</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">2-Rig Extensions and the Splitting Principle</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">author</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Baez, John C.</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Moeller, Joe</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Trimble, Todd</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">date</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">2024-10</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">serial-number</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">arxiv</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-quoted hl-single hl-yaml"><span class="hl-punctuation hl-definition hl-string hl-begin hl-yaml">&#39;</span>2410.05598<span class="hl-punctuation hl-definition hl-string hl-end hl-yaml">&#39;</span></span>
+</span></code></pre></details>
+</div>
+</details>
+</div>
+<div class="helia-cite-files">Download: <a class="helia-link" href="baez-2024-2.bib">baez-2024-2.bib</a> · <a class="helia-link" href="baez-2024-2.yml">baez-2024-2.yml</a></div>
+</div>
+</div>
+</details>
+</div>
+<div class="helia-reference-cites helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">Cites 10 works (0 here)</span></summary>
+<div class="helia-group-body">
+<div class="helia-reference-cites-away helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">External (10)</span></summary>
+<div class="helia-group-body">
+<ul>
+<li><a class="helia-link helia-external" href="https://doi.org/10.21136/hs.2024.01">Schur functors and categorified plethysm</a> (2024)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1090/gsm/193">A Tour of Representation Theory</a> (2018)</li>
+<li>Algebraic Groups: The Theory of Group Schemes of Finite Type over a Field (2017)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1090/surv/205">Tensor Categories</a> (2015)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1017/s0305004114000401">Ind-abelian categories and quasi-coherent sheaves</a> (2014)</li>
+<li>Basic Theory of Aﬃne Group Schemes (2012)</li>
+<li><a class="helia-link helia-external" href="https://arxiv.org/abs/0804.3888">Witt vectors. Part 1</a> (2009)</li>
+<li>Basic Concepts of Enriched Category Theory (2005)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.70930/tac/7lpny27k">Higher-Dimensional Algebra V: 2-Groups</a> (2003)</li>
+<li>Symmetric Functions and Hall Polynomials (2nd ed.) (1995)</li>
+</ul>
+</div>
+</details>
+</div>
+</div>
+</details>
+</div>
+</article>
+<div class="helia-identity"><span class="helia-id">baez-2024-2</span> <span class="helia-kind">reference</span> <span class="helia-path">entries/refs/baez-2024-2/baez-2024-2.hel</span></div>
+</div>
+</body>
+</html>

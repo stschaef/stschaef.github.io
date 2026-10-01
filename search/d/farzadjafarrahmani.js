@@ -1,0 +1,1 @@
+heliaSearchData("d/farzadjafarrahmani",{"id":"farzadjafarrahmani","title":"Farzad Jafarrahmani","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"farzadjafarrahmani.html","headings":[],"body":""});

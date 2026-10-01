@@ -1,0 +1,1 @@
+heliaSearchData("d/gratzer-2022-the",{"id":"gratzer-2022-the","title":"The directed plump ordering","kind":"reference","tags":["type-theory"],"authors":["Daniel Gratzer","Jon Sterling","Michael Shulman"],"venue":["arXiv"],"date":null,"url":"gratzer-2022-the.html","headings":[],"body":""});

@@ -1,0 +1,1 @@
+heliaSearchData("d/fiore-2006-remarks",{"id":"fiore-2006-remarks","title":"Remarks on isomorphisms in typed lambda calculi with empty and sum types","kind":"reference","tags":[],"authors":["Marcelo P. Fiore","Roberto Di Cosmo","Vincent Balat"],"venue":["APAL","Annals of Pure and Applied Logic"],"date":null,"url":"fiore-2006-remarks.html","headings":[],"body":""});

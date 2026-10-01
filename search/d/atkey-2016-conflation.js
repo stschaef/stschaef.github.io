@@ -1,0 +1,1 @@
+heliaSearchData("d/atkey-2016-conflation",{"id":"atkey-2016-conflation","title":"Conflation Confers Concurrency","kind":"reference","tags":[],"authors":["J. Garrett Morris","Robert Atkey","Sam Lindley"],"venue":[],"date":null,"url":"atkey-2016-conflation.html","headings":[],"body":""});

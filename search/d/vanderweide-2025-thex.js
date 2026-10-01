@@ -1,0 +1,1 @@
+heliaSearchData("d/vanderweide-2025-thex",{"id":"vanderweide-2025-thex","title":"The Formal Theory of Monads, Univalently","kind":"reference","tags":["category-theory","homotopy-type-theory"],"authors":["Niels van der Weide"],"venue":["LMCS","Logical Methods in Computer Science"],"date":null,"url":"vanderweide-2025-thex.html","headings":[],"body":""});

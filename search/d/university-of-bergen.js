@@ -1,0 +1,1 @@
+heliaSearchData("d/university-of-bergen",{"id":"university-of-bergen","title":"University of Bergen","kind":"institution","tags":[],"authors":[],"venue":[],"date":null,"url":"university-of-bergen.html","headings":[],"body":""});

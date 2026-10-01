@@ -1,0 +1,1 @@
+heliaSearchData("d/gesellschaft-fur-mathematik-und-datenverarbeitung",{"id":"gesellschaft-fur-mathematik-und-datenverarbeitung","title":"Gesellschaft Fur Mathematik Und Datenverarbeitung","kind":"institution","tags":[],"authors":[],"venue":[],"date":null,"url":"gesellschaft-fur-mathematik-und-datenverarbeitung.html","headings":[],"body":""});

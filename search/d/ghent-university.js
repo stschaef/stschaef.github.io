@@ -1,0 +1,1 @@
+heliaSearchData("d/ghent-university",{"id":"ghent-university","title":"Ghent University","kind":"institution","tags":[],"authors":[],"venue":[],"date":null,"url":"ghent-university.html","headings":[],"body":""});

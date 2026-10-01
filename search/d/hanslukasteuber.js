@@ -1,0 +1,1 @@
+heliaSearchData("d/hanslukasteuber",{"id":"hanslukasteuber","title":"Hans-Lukas Teuber","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"hanslukasteuber.html","headings":[],"body":""});

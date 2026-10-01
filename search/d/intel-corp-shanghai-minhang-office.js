@@ -1,0 +1,1 @@
+heliaSearchData("d/intel-corp-shanghai-minhang-office",{"id":"intel-corp-shanghai-minhang-office","title":"Intel Corp Shanghai Minhang Office","kind":"institution","tags":[],"authors":[],"venue":[],"date":null,"url":"intel-corp-shanghai-minhang-office.html","headings":[],"body":""});

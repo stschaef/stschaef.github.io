@@ -1,0 +1,1 @@
+heliaSearchData("d/facey-2025-game",{"id":"facey-2025-game","title":"Game Behaviour Trees Using Tile Rewrite Rules","kind":"reference","tags":["game-design"],"authors":["Chris Martens","Cynthia Li","Kaylah Facey","Seth Cooper"],"venue":["AIIDE","Artificial Intelligence and Interactive Digital Entertainment"],"date":null,"url":"facey-2025-game.html","headings":[],"body":""});

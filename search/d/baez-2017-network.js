@@ -1,0 +1,1 @@
+heliaSearchData("d/baez-2017-network",{"id":"baez-2017-network","title":"Network Models","kind":"reference","tags":["category-theory"],"authors":["Blake S. Pollard","Joe Moeller","John C. Baez","John Foley"],"venue":["arXiv"],"date":null,"url":"baez-2017-network.html","headings":[],"body":""});

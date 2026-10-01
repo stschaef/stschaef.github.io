@@ -1,0 +1,1 @@
+heliaSearchData("d/intel-corporation",{"id":"intel-corporation","title":"Intel Corporation","kind":"institution","tags":[],"authors":[],"venue":[],"date":null,"url":"intel-corporation.html","headings":[],"body":""});

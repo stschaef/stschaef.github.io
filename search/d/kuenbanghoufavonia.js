@@ -1,0 +1,1 @@
+heliaSearchData("d/kuenbanghoufavonia",{"id":"kuenbanghoufavonia","title":"Kuen-Bang Hou (Favonia)","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"kuenbanghoufavonia.html","headings":[],"body":""});

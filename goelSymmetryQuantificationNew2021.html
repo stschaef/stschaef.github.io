@@ -7,6 +7,8 @@
 <title>On Symmetry and Quantification: A New Approach to Verify Distributed Protocols</title>
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Ctext y=%22.9em%22 font-size=%2290%22%3E%F0%9F%8C%BB%3C/text%3E%3C/svg%3E">
 <meta name="generator" content="helia">
+<link rel="alternate" type="application/atom+xml" title="Steven Schaefer" href="feed.xml">
+<link rel="alternate" type="application/feed+json" title="Steven Schaefer" href="feed.json">
 <script src="helia/theme-version.js"></script>
 <script src="theme/folio-early.js"></script>
 <link rel="stylesheet" href="helia/theme.css">
@@ -34,7 +36,7 @@
 <article class="helia-article">
 <header class="helia-header" data-entry="goelSymmetryQuantificationNew2021" data-kind="reference">
 <h2 class="helia-heading"><span class="helia-taxon">Reference.</span> On Symmetry and Quantification: A New Approach to Verify Distributed Protocols</h2>
-<div class="helia-meta"><span class="helia-author"><a class="helia-entry-link" href="amangoel.html" data-entry="amangoel">Aman Goel</a>, <a class="helia-entry-link" href="karemsakallah.html" data-entry="karemsakallah">Karem A. Sakallah</a></span> · <span class="helia-byline"><a class="helia-entry-link" href="nfm.html" data-entry="nfm">NFM</a> · 2021</span> · <span class="helia-tags"><span class="helia-tag" data-tag="distributed-systems"><span class="helia-entry-link helia-unavailable">distributed-systems</span></span> <span class="helia-tag" data-tag="inductive-invariants"><span class="helia-entry-link helia-unavailable">inductive-invariants</span></span></span> · <span class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-030-76384-8_9">DOI</a></span> · <span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/2103.14831">arXiv</a></span></span></div>
+<div class="helia-meta"><span class="helia-author"><a class="helia-entry-link" href="amangoel.html" data-entry="amangoel">Aman Goel</a>, <a class="helia-entry-link" href="karemsakallah.html" data-entry="karemsakallah">Karem A. Sakallah</a></span> · <span class="helia-byline"><a class="helia-entry-link" href="nfm.html" data-entry="nfm">NFM</a> · 2021</span> · <span class="helia-tags"><span class="helia-tag" data-tag="distributed-systems"><a class="helia-entry-link" href="tag-distributed-systems.html" data-entry="tag-distributed-systems">distributed-systems</a></span> <span class="helia-tag" data-tag="inductive-invariants"><a class="helia-entry-link" href="tag-inductive-invariants.html" data-entry="tag-inductive-invariants">inductive-invariants</a></span></span> · <span class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-030-76384-8_9">DOI</a></span> · <span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/2103.14831">arXiv</a></span></span></div>
 </header>
 <div class="helia-body">
 <div class="helia-abstract">Proving that an unbounded distributed protocol satisfies a given safety property amounts to finding a quantified inductive invariant that implies the property for all possible instance sizes of the protocol. Existing methods for solving this problem can be described as search procedures for an invariant whose quantification prefix fits a particular template. We propose an alternative constructive approach that does not prescribe, a priori, a specific quantifier prefix. Instead, the required prefix is automatically inferred without any search by carefully analyzing the structural symmetries of the protocol. The key insight underlying this approach is that symmetry and quantification are closely related concepts that express protocol invariance under different re-arrangements of its components. We propose symmetric incremental induction, an extension of the finite-domain IC3/PDR algorithm, that automatically derives the required quantified inductive invariant by exploiting the connection between symmetry and quantification. While various attempts have been made to exploit symmetry in verification applications, to our knowledge, this is the first demonstration of a direct link between symmetry and quantification in the context of clause learning during incremental induction. We also describe a procedure to automatically find a minimal finite size, the cutoff, that yields a quantified invariant proving safety for any size. Our approach is implemented in IC3PO, a new verifier for distributed protocols that significantly outperforms the state-of-the-art, scales orders of magnitude faster, and robustly derives compact inductive invariants fully automatically.</div>
@@ -120,7 +122,7 @@
 </div>
 <div class="helia-reference-cited-by helia-collapsible">
 <details open>
-<summary class="helia-group-summary"><span class="helia-group-title">Cited by (3)</span></summary>
+<summary class="helia-group-summary"><span class="helia-group-title">Cited by (4)</span></summary>
 <div class="helia-group-body">
 <section class="helia-transclusion" data-entry="LuoSatBasedQuantifiedSymmetric" data-depth="1">
 <details>
@@ -129,6 +131,17 @@
 <div class="helia-reference" data-entry="LuoSatBasedQuantifiedSymmetric" data-kind="reference">
 <div class="helia-abstract">In prior work [13], we introduced a procedure for deriving minimum formulas in first-order logic (FOL) for the reachable states of a restricted class of multi-sorted distributed protocol specifications: protocols with sorts representing unbounded sets of symmetric (indistinguishable) elements. This paper provides a deeper analysis of this idea that yields additional insights about the oft-cited observation that the behavior of such protocols can be inferred from analyzing relatively small finite instances whereby a protocol’s behavior becomes invariant, i.e. saturates [24], beyond certain cutoff sizes of its sorts. The paper discusses several issues in previous work [13] and provides more succinct FOL formulas of the reachable states for a collection of common protocols.</div>
 <div class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-031-75380-0_21">DOI</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="tekriwal-2024-formally" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="tekriwal-2024-formally"><span class="helia-title">Formally verified asymptotic consensus in robust networks</span>&nbsp;<a class="helia-slug" href="tekriwal-2024-formally.html">tekriwal-2024-formally</a><span class="helia-byline"><span class="helia-entry-link" data-entry="tacas">TACAS</span> · 2024</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="tekriwal-2024-formally" data-kind="reference">
+<div class="helia-abstract">Distributed architectures are used to improve performance and reliability of various systems. Examples include drone swarms and load-balancing servers. An important capability of a distributed architecture is the ability to reach consensus among all its nodes. Several consensus algorithms have been proposed, and many of these algorithms come with intricate proofs of correctness, that are not mechanically checked. In the controls community, algorithms often achieve consensus asymptotically , e.g., for problems such as the design of human control systems, or the analysis of natural systems like bird flocking. This is in contrast to exact consensus algorithm such as Paxos, which have received much more recent attention in the formal methods community. This paper presents the first formal proof of an asymptotic consensus algorithm, and addresses various challenges in its formalization. Using the Coq proof assistant, we verify the correctness of a widely used consensus algorithm in the distributed controls community, the Weighted-Mean Subsequence Reduced (W-MSR) algorithm . We formalize the necessary and sufficient conditions required to achieve resilient asymptotic consensus under the assumed attacker model. During the formalization, we clarify several imprecisions in the paper proof, including an imprecision on quantifiers in the main theorem.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="pdf-url"><a class="helia-link helia-external" href="https://link.springer.com/content/pdf/10.1007/978-3-031-57246-3_14.pdf">PDF</a></span> · <span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-031-57246-3_14">DOI</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/conf/tacas/TekriwalTJKP24">pldb</a></span></div>
 </div>
 </div>
 </details>
@@ -160,11 +173,11 @@
 </div>
 <div class="helia-reference-cites helia-collapsible">
 <details open>
-<summary class="helia-group-summary"><span class="helia-group-title">Cites 68 works (4 here)</span></summary>
+<summary class="helia-group-summary"><span class="helia-group-title">Cites 68 works (6 here)</span></summary>
 <div class="helia-group-body">
 <div class="helia-reference-cites-here helia-collapsible">
 <details open>
-<summary class="helia-group-summary"><span class="helia-group-title">With notes (4)</span></summary>
+<summary class="helia-group-summary"><span class="helia-group-title">With notes (6)</span></summary>
 <div class="helia-group-body">
 <section class="helia-transclusion" data-entry="goelAVRAbstractlyVerifying2020" data-depth="1">
 <details>
@@ -172,7 +185,7 @@
 <div class="helia-transclusion-body">
 <div class="helia-reference" data-entry="goelAVRAbstractlyVerifying2020" data-kind="reference">
 <div class="helia-abstract">We present AVR, a push-button model checker for verifying state transition systems directly at the source-code level. AVR uses information embedded in the word-level syntax of the design representation to automatically perform scalable model checking by combining a novel syntax-guided abstraction-refinement technique with a word-level implementation of the IC3 algorithm. AVR provides independently-verifiable certificates that offer provable assurance and are easy to relate to the word-level system. Moreover, proof certificates can be further used in innovative ways to extract key design information and are useful in a growing number of applications.</div>
-<div class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-030-45190-5_23">DOI</a></span></div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="pdf-url"><a class="helia-link helia-external" href="https://link.springer.com/content/pdf/10.1007%2F978-3-030-45190-5_23.pdf">PDF</a></span> · <span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-030-45190-5_23">DOI</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/conf/tacas/GoelS20">pldb</a></span></div>
 </div>
 </div>
 </details>
@@ -188,13 +201,33 @@
 </div>
 </details>
 </section>
+<section class="helia-transclusion" data-entry="ma-2019-towards" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="ma-2019-towards"><span class="helia-title">Towards Automatic Inference of Inductive Invariants</span>&nbsp;<a class="helia-slug" href="ma-2019-towards.html">ma-2019-towards</a><span class="helia-byline"><span class="helia-entry-link" data-entry="hotos">HotOS</span> · 2019</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="ma-2019-towards" data-kind="reference">
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/3317550.3321451">DOI</a></span></div>
+</div>
+</div>
+</details>
+</section>
 <section class="helia-transclusion" data-entry="padonIvySafetyVerification" data-depth="1">
 <details>
-<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="padonIvySafetyVerification"><span class="helia-title">Ivy: Safety verification by interactive generalization</span>&nbsp;<a class="helia-slug" href="padonIvySafetyVerification.html">padonIvySafetyVerification</a><span class="helia-byline"><span class="helia-entry-link" data-entry="sigplan-notices">SIGPLAN Notices</span> · 2016</span></h2></summary>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="padonIvySafetyVerification"><span class="helia-title">Ivy: Safety verification by interactive generalization</span>&nbsp;<a class="helia-slug" href="padonIvySafetyVerification.html">padonIvySafetyVerification</a><span class="helia-byline"><span class="helia-entry-link" data-entry="pldi">PLDI</span> · 2016</span></h2></summary>
 <div class="helia-transclusion-body">
 <div class="helia-reference" data-entry="padonIvySafetyVerification" data-kind="reference">
 <div class="helia-abstract">Despite several decades of research, the problem of formal verification of infinite-state systems has resisted effective automation. We describe a system — Ivy — for interactively verifying safety of infinite-state systems. Ivy’s key principle is that whenever verification fails, Ivy graphically displays a concrete counterexample to induction. The user then interactively guides generalization from this counterexample. This process continues until an inductive invariant is found. Ivy searches for universally quantified invariants, and uses a restricted modeling language. This ensures that all verification conditions can be checked algorithmically. All user interactions are performed using graphical models, easing the user’s task. We describe our initial experience with verifying several distributed protocols.</div>
-<div class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/2980983.2908118">DOI</a></span></div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="pdf-url"><a class="helia-link helia-external" href="https://dl.acm.org/doi/pdf/10.1145/2908080.2908118">PDF</a></span> · <span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/2908080.2908118">DOI</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/conf/pldi/PadonMPSS16">pldb</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="hawblitzel-2015-ironfleet" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="hawblitzel-2015-ironfleet"><span class="helia-title">IronFleet: proving practical distributed systems correct</span>&nbsp;<a class="helia-slug" href="hawblitzel-2015-ironfleet.html">hawblitzel-2015-ironfleet</a><span class="helia-byline"><span class="helia-entry-link" data-entry="sosp">SOSP</span> · 2015</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="hawblitzel-2015-ironfleet" data-kind="reference">
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/2815400.2815428">DOI</a></span></div>
 </div>
 </div>
 </details>
@@ -205,7 +238,7 @@
 <div class="helia-transclusion-body">
 <div class="helia-reference" data-entry="bradleySATBasedModelChecking2011" data-kind="reference">
 <div class="helia-abstract">A new form of SAT-based symbolic model checking is described. Instead of unrolling the transition relation, it incrementally generates clauses that are inductive relative to (and augment) stepwise approximate reachability information. In this way, the algorithm gradually refines the property, eventually producing either an inductive strengthening of the property or a counterexample trace. Our experimental studies show that induction is a powerful tool for generalizing the unreachability of given error states: it can refine away many states at once, and it is effective at focusing the proof search on aspects of the transition system relevant to the property. Furthermore, the incremental structure of the algorithm lends itself to a parallel implementation.</div>
-<div class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-642-18275-4_7">DOI</a></span></div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-642-18275-4_7">DOI</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/conf/vmcai/Bradley11">pldb</a></span></div>
 </div>
 </div>
 </details>
@@ -215,7 +248,7 @@
 </div>
 <div class="helia-reference-cites-away helia-collapsible">
 <details open>
-<summary class="helia-group-summary"><span class="helia-group-title">External (64)</span></summary>
+<summary class="helia-group-summary"><span class="helia-group-title">External (62)</span></summary>
 <div class="helia-group-body">
 <ul>
 <li>Proceedings of SAT Competition 2020: Solver and Benchmark Descriptions (2020)</li>
@@ -226,7 +259,6 @@
 <li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-030-20652-9_11">Model Checking of Verilog RTL Using IC3 with Syntax-Guided Abstraction</a> (2019)</li>
 <li><a class="helia-link helia-external" href="https://doi.org/10.23919/date.2019.8715289">Empirical Evaluation of IC3-Based Model Checking Techniques on Verilog RTL Designs</a> (2019)</li>
 <li><a class="helia-link helia-external" href="https://doi.org/10.1145/3335772.3335939">The part-time parliament</a> (2019)</li>
-<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3317550.3321451">Towards Automatic Inference of Inductive Invariants</a> (2019)</li>
 <li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-030-25543-5_23">Inferring Inductive Invariants from Phase Structures</a> (2019)</li>
 <li><a class="helia-link helia-external" href="https://arxiv.org/abs/1905.07805">Verification of threshold-based distributed algorithms by decomposition to decidable logics</a> (2019)</li>
 <li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-030-01090-4_15">Quantifiers on Demand</a> (2018)</li>
@@ -236,7 +268,6 @@
 <li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-319-41528-4_16">Proving Parameterized Systems Safe by Generalizing Clausal Proofs of Small Instances</a> (2016)</li>
 <li>The Satisfiability Modulo Theories Library (SMT-LIB) (2016)</li>
 <li><a class="helia-link helia-external" href="https://doi.org/10.2200/s00658ed1v01y201508dct013">Decidability of Parameterized Verification</a> (2015)</li>
-<li><a class="helia-link helia-external" href="https://doi.org/10.1145/2815400.2815428">IronFleet: proving practical distributed systems correct</a> (2015)</li>
 <li><a class="helia-link helia-external" href="https://doi.org/10.1145/2699417">How Amazon web services uses formal methods</a> (2015)</li>
 <li><a class="helia-link helia-external" href="https://doi.org/10.1145/2737924.2737958">Verdi: a framework for implementing and formally verifying distributed systems</a> (2015)</li>
 <li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-319-24953-7_15">ParaVerifier: An Automatic Framework for Proving Parameterized Cache Coherence Protocols</a> (2015)</li>
@@ -296,14 +327,14 @@
 </summary>
 <div class="helia-group-body">
 <ul>
-<li><a class="helia-entry-link" href="anderson2014netkat.html" data-entry="anderson2014netkat">NetKAT: Semantic foundations for networks</a> <span class="helia-related-count">· 2 shared tags</span></li>
-<li><a class="helia-entry-link" href="hanceFindingInvariantsDistributed.html" data-entry="hanceFindingInvariantsDistributed">Finding Invariants of Distributed Systems: It’s a Small (Enough) World After All</a> <span class="helia-related-count">· 2 shared tags</span></li>
-<li><a class="helia-entry-link" href="mcmillanDeductiveVerificationDecidable2018.html" data-entry="mcmillanDeductiveVerificationDecidable2018">Deductive Verification in Decidable Fragments with Ivy</a> <span class="helia-related-count">· 2 shared tags</span></li>
-<li><a class="helia-entry-link" href="mcmillanIvyMultimodalVerification2020.html" data-entry="mcmillanIvyMultimodalVerification2020">Ivy: A Multi-modal Verification Tool for Distributed Algorithms</a> <span class="helia-related-count">· 2 shared tags</span></li>
-<li><a class="helia-entry-link" href="padonDecidabilityInferringInductive2016.html" data-entry="padonDecidabilityInferringInductive2016">Decidability of inferring inductive invariants</a> <span class="helia-related-count">· 2 shared tags</span></li>
-<li><a class="helia-entry-link" href="padonDeductiveVerificationDistributed2018.html" data-entry="padonDeductiveVerificationDistributed2018">Deductive Verification of Distributed Protocols in First-Order Logic</a> <span class="helia-related-count">· 2 shared tags</span></li>
-<li><a class="helia-entry-link" href="sharmaGroveSeparationLogicLibrary2023.html" data-entry="sharmaGroveSeparationLogicLibrary2023">Grove: A Separation-Logic Library for Verifying Distributed Systems</a> <span class="helia-related-count">· 2 shared tags</span></li>
-<li><a class="helia-entry-link" href="yaoDistAIDataDrivenAutomated.html" data-entry="yaoDistAIDataDrivenAutomated">DistAI: Data-Driven Automated Invariant Learning for Distributed Protocols</a> <span class="helia-related-count">· 2 shared tags</span></li>
+<li><a class="helia-entry-link" href="anderson2014netkat.html" data-entry="anderson2014netkat">NetKAT: Semantic foundations for networks</a> <span class="helia-related-tags"><a class="helia-entry-link" href="tag-inductive-invariants.html" data-entry="tag-inductive-invariants">#inductive-invariants</a> <a class="helia-entry-link" href="tag-distributed-systems.html" data-entry="tag-distributed-systems">#distributed-systems</a></span></li>
+<li><a class="helia-entry-link" href="hanceFindingInvariantsDistributed.html" data-entry="hanceFindingInvariantsDistributed">Finding Invariants of Distributed Systems: It’s a Small (Enough) World After All</a> <span class="helia-related-tags"><a class="helia-entry-link" href="tag-inductive-invariants.html" data-entry="tag-inductive-invariants">#inductive-invariants</a> <a class="helia-entry-link" href="tag-distributed-systems.html" data-entry="tag-distributed-systems">#distributed-systems</a></span></li>
+<li><a class="helia-entry-link" href="mcmillanDeductiveVerificationDecidable2018.html" data-entry="mcmillanDeductiveVerificationDecidable2018">Deductive Verification in Decidable Fragments with Ivy</a> <span class="helia-related-tags"><a class="helia-entry-link" href="tag-inductive-invariants.html" data-entry="tag-inductive-invariants">#inductive-invariants</a> <a class="helia-entry-link" href="tag-distributed-systems.html" data-entry="tag-distributed-systems">#distributed-systems</a></span></li>
+<li><a class="helia-entry-link" href="mcmillanIvyMultimodalVerification2020.html" data-entry="mcmillanIvyMultimodalVerification2020">Ivy: A Multi-modal Verification Tool for Distributed Algorithms</a> <span class="helia-related-tags"><a class="helia-entry-link" href="tag-inductive-invariants.html" data-entry="tag-inductive-invariants">#inductive-invariants</a> <a class="helia-entry-link" href="tag-distributed-systems.html" data-entry="tag-distributed-systems">#distributed-systems</a></span></li>
+<li><a class="helia-entry-link" href="padonDecidabilityInferringInductive2016.html" data-entry="padonDecidabilityInferringInductive2016">Decidability of inferring inductive invariants</a> <span class="helia-related-tags"><a class="helia-entry-link" href="tag-inductive-invariants.html" data-entry="tag-inductive-invariants">#inductive-invariants</a> <a class="helia-entry-link" href="tag-distributed-systems.html" data-entry="tag-distributed-systems">#distributed-systems</a></span></li>
+<li><a class="helia-entry-link" href="padonDeductiveVerificationDistributed2018.html" data-entry="padonDeductiveVerificationDistributed2018">Deductive Verification of Distributed Protocols in First-Order Logic</a> <span class="helia-related-tags"><a class="helia-entry-link" href="tag-inductive-invariants.html" data-entry="tag-inductive-invariants">#inductive-invariants</a> <a class="helia-entry-link" href="tag-distributed-systems.html" data-entry="tag-distributed-systems">#distributed-systems</a></span></li>
+<li><a class="helia-entry-link" href="sharmaGroveSeparationLogicLibrary2023.html" data-entry="sharmaGroveSeparationLogicLibrary2023">Grove: A Separation-Logic Library for Verifying Distributed Systems</a> <span class="helia-related-tags"><a class="helia-entry-link" href="tag-inductive-invariants.html" data-entry="tag-inductive-invariants">#inductive-invariants</a> <a class="helia-entry-link" href="tag-distributed-systems.html" data-entry="tag-distributed-systems">#distributed-systems</a></span></li>
+<li><a class="helia-entry-link" href="yaoDistAIDataDrivenAutomated.html" data-entry="yaoDistAIDataDrivenAutomated">DistAI: Data-Driven Automated Invariant Learning for Distributed Protocols</a> <span class="helia-related-tags"><a class="helia-entry-link" href="tag-inductive-invariants.html" data-entry="tag-inductive-invariants">#inductive-invariants</a> <a class="helia-entry-link" href="tag-distributed-systems.html" data-entry="tag-distributed-systems">#distributed-systems</a></span></li>
 </ul>
 </div>
 </details>

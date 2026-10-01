@@ -1,0 +1,1 @@
+heliaSearchData("d/university-of-york",{"id":"university-of-york","title":"University of York","kind":"institution","tags":[],"authors":[],"venue":[],"date":null,"url":"university-of-york.html","headings":[],"body":""});

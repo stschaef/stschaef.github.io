@@ -1,0 +1,1 @@
+heliaSearchData("d/omar-2025-a",{"id":"omar-2025-a","title":"A FAIR Case for a Live Computational Commons","kind":"reference","tags":[],"authors":["Anil Madhavapeddy","Cyrus Omar","Michael Coblenz"],"venue":["PROPL","ACM SIGPLAN International Workshop on Programming for the Planet"],"date":null,"url":"omar-2025-a.html","headings":[],"body":""});

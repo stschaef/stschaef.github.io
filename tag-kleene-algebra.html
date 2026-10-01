@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>kleene-algebra</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Ctext y=%22.9em%22 font-size=%2290%22%3E%F0%9F%8C%BB%3C/text%3E%3C/svg%3E">
+<meta name="generator" content="helia">
+<link rel="alternate" type="application/atom+xml" title="Steven Schaefer" href="feed.xml">
+<link rel="alternate" type="application/feed+json" title="Steven Schaefer" href="feed.json">
+<script src="helia/theme-version.js"></script>
+<script src="theme/folio-early.js"></script>
+<link rel="stylesheet" href="helia/theme.css">
+<link rel="stylesheet" href="helia/highlight.css">
+<link rel="stylesheet" href="helia/search.css">
+<link rel="stylesheet" href="theme/katex.css">
+<link rel="stylesheet" href="theme/recipe.css">
+<link rel="stylesheet" href="theme/site.css">
+<link rel="stylesheet" href="theme/folio.css">
+<script defer src="helia/runtime.js"></script>
+<script defer src="helia/search.js"></script>
+<script defer src="theme/glyphcraft.js"></script>
+<script defer src="theme/glyphart.js"></script>
+<script defer src="theme/glyphgen.js"></script>
+<script defer src="theme/ornament.js"></script>
+<script defer src="theme/folio.js"></script>
+<script defer src="theme/portrait.js"></script>
+</head>
+<body>
+<nav class="helia-topbar"><a class="helia-home" href="home.html">Steven Schaefer</a><ul class="helia-nav-links"><li><a href="stevenschaefer.html">About Me</a></li><li><a href="research.html">Research</a></li><li><a href="new.html">New</a></li></ul><button type="button" class="helia-search-button" aria-label="Search (/ or Ctrl+K)" aria-haspopup="dialog"><span class="helia-search-icon">⌕</span><span class="helia-search-label">Search</span><kbd class="helia-search-key">/</kbd></button></nav>
+<div class="helia-page" data-kind="tag">
+<article class="helia-article">
+<header class="helia-header" data-entry="tag-kleene-algebra" data-kind="tag">
+<h2 class="helia-heading"><span class="helia-taxon">Tag.</span> kleene-algebra</h2>
+<div class="helia-meta"><span class="helia-byline"><span class="helia-tag-name">kleene-algebra</span></span></div>
+</header>
+<div class="helia-body">
+</div>
+<div class="helia-tag-group">
+<section class="helia-heading-section" data-level="1">
+<details open>
+<summary class="helia-heading-summary"><h2 class="helia-heading">Notes (4)</h2>
+</summary>
+<div class="helia-heading-body">
+<section class="helia-transclusion" data-entry="star-continuity-semantic-property" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="star-continuity-semantic-property"><span class="helia-title">Star Continuity is a Semantic Property</span>&nbsp;<a class="helia-slug" href="star-continuity-semantic-property.html">star-continuity-semantic-property</a></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-entry" data-entry="star-continuity-semantic-property" data-kind="note">
+<p><a class="helia-entry-link" href="star-continuity-in-dependent-lambek.html" data-entry="star-continuity-in-dependent-lambek">Star continuity in Dependent Lambek Calculus</a> can often be a convenient proof technique, but it’s important to remember that this shouldn’t be the first line of defense.</p>
+<p>Star continuity holds in the Agda model, but does it hold in the syntactic model? I believe that it does because of the presence of the indexed coproducts. So perhaps it isn’t so sinister after all. It is worth noting that much of the reasoning performed by inducting on the length of a Kleene star isn’t very elegant. If a proof necessitates star continuity, then it doesn’t seem to be aided greatly by the type system.</p>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="kleene-star" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="kleene-star"><span class="helia-env-label">Definition.</span> <span class="helia-title">Kleene Star in Dependent Lambek Calculus</span>&nbsp;<a class="helia-slug" href="kleene-star.html">kleene-star</a></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-env" data-entry="kleene-star" data-kind="definition" data-label="Definition" data-numbered="true">
+<p>For a grammar <span class="helia-math helia-math-inline helia-mathml"><math><mi>𝐴</mi></math></span>, the Kleene star <span class="helia-math helia-math-inline helia-mathml"><math><msup><mi>𝐴</mi><mo>∗</mo></msup></math></span> is defined as a least-fixed point,</p>
+<div class="helia-math helia-math-display helia-mathml"><math display="block"><mi>𝜇</mi><mi>𝑥</mi><mi>.</mi><mi>𝜖</mi><mo>⊕</mo><mrow><mo stretchy="false">(</mo><mrow><mi>𝐴</mi><mo lspace="0.2222222222222222em" rspace="0.2222222222222222em">⊗</mo><mi>𝑥</mi></mrow><mo stretchy="false">)</mo></mrow></math></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="star-continuity" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="star-continuity"><span class="helia-env-label">Definition.</span> <span class="helia-title">Star Continuity</span>&nbsp;<a class="helia-slug" href="star-continuity.html">star-continuity</a></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-env" data-entry="star-continuity" data-kind="definition" data-label="Definition" data-numbered="true">
+<p>A Kleene Algebra is <em>star continuous</em> if for all <span class="helia-math helia-math-inline helia-mathml"><math><mi>𝑥</mi><mo>,</mo><mi>𝑦</mi><mo>,</mo><mi>𝑧</mi></math></span></p>
+<div class="helia-math helia-math-display helia-mathml"><math display="block"><munder><mo lspace="0em" rspace="0.16666666666666666em">sup</mo><mrow><mi>𝑛</mi><mo lspace="0em" rspace="0em">≥</mo><mn>0</mn></mrow></munder><mi>𝑥</mi><msup><mi>𝑦</mi><mi>𝑛</mi></msup><mi>𝑧</mi><mo>=</mo><mi>𝑥</mi><msup><mi>𝑦</mi><mo>∗</mo></msup><mi>𝑧</mi></math></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="star-continuity-in-dependent-lambek" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="star-continuity-in-dependent-lambek"><span class="helia-env-label">Definition.</span> <span class="helia-title">Star Continuity in Dependent Lambek Calculus</span>&nbsp;<a class="helia-slug" href="star-continuity-in-dependent-lambek.html">star-continuity-in-dependent-lambek</a></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-env" data-entry="star-continuity-in-dependent-lambek" data-kind="definition" data-label="Definition" data-numbered="true">
+<p>For a grammar <span class="helia-math helia-math-inline helia-mathml"><math><mi>𝐴</mi></math></span>, the <a class="helia-entry-link" href="kleene-star.html" data-entry="kleene-star">Kleene star</a> <span class="helia-math helia-math-inline helia-mathml"><math><msup><mi>𝐴</mi><mo>∗</mo></msup></math></span> is isomorphic to an indexed coproduct.</p>
+<div class="helia-math helia-math-display helia-mathml"><math display="block"><msup><mi>𝐴</mi><mo>∗</mo></msup><mo>≅</mo><munder><mo form="prefix" lspace="0em">⨁</mo><mrow><mi>𝑛</mi><mo rspace="0em">:</mo><mi>ℕ</mi></mrow></munder><msup><mi>𝐴</mi><mrow><mo form="infix" lspace="0em" rspace="0em">⊗</mo><mi>𝑛</mi></mrow></msup></math></div>
+<p>That is, we may view the parses of <span class="helia-math helia-math-inline helia-mathml"><math><msup><mi>𝐴</mi><mo>∗</mo></msup></math></span> like a linear list comprising parses of <span class="helia-math helia-math-inline helia-mathml"><math><mi>𝐴</mi></math></span> concatenated together. Further, for each of these lists we may know the precise length.</p>
+<p>When viewing Dependent Lambek Calculus as a model of Kleene algebra, this is precisely the statement that <a class="helia-entry-link" href="star-continuity.html" data-entry="star-continuity">star continuity</a> holds.</p>
+</div>
+</div>
+</details>
+</section>
+</div>
+</details>
+</section>
+</div>
+<div class="helia-tag-group">
+<section class="helia-heading-section" data-level="1">
+<details open>
+<summary class="helia-heading-summary"><h2 class="helia-heading">References (22)</h2>
+</summary>
+<div class="helia-heading-body">
+<section class="helia-transclusion" data-entry="lu-2026-a" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="lu-2026-a"><span class="helia-title">A Fast Quantitative Analyzer for NetKAT</span>&nbsp;<a class="helia-slug" href="lu-2026-a.html">lu-2026-a</a><span class="helia-byline"><span class="helia-entry-link" data-entry="arxiv">arXiv</span> · 2026</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="lu-2026-a" data-kind="reference">
+<div class="helia-abstract">When designing a network, engineers must navigate trade-offs (e.g., one topology offers more aggregate bandwidth, another lower latency or better resilience) that demand reasoning about quantitative properties. We present a fast analyzer for quantitative network properties based on weighted NetKAT (wNetKAT), a domain-specific language that provides a semantic foundation for quantitative reasoning by modeling network behavior using weights drawn from a semiring. At the core of our development is the design of a symbolic data structure – weighted symbolic packet programs (wSPPs) – that compactly represent the semantics of weighted policies, for which a direct implementation would be intractable. We show how to compute all policy constructs symbolically; unsurprisingly, the crux is Kleene star, for which we design a tailored algorithm. We further develop trace-carrying Pareto semirings, which compute multi-objective frontiers together with the network paths that realize them. We formalize the development in Lean and provide an optimized Rust implementation. Being parametric on a semiring, our implementation covers both classical and quantitative analyses: we show that it is competitive with KATch, a heavily optimized Boolean-reachability verifier, and orders of magnitude faster than McNetKAT and Storm on probabilistic analyses. A case study comparing Fat-tree and Jellyfish data-center topologies shows the framework supports multi-objective design-time analysis.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/2607.14420">arXiv</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="suarezacevedo-2026-weighted" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="suarezacevedo-2026-weighted"><span class="helia-title">Weighted NetKAT: A Programming Language for Quantitative Network Verification</span>&nbsp;<a class="helia-slug" href="suarezacevedo-2026-weighted.html">suarezacevedo-2026-weighted</a><span class="helia-byline"><span class="helia-entry-link" data-entry="pldi">PLDI</span> · 2026</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="suarezacevedo-2026-weighted" data-kind="reference">
+<div class="helia-abstract">We introduce weighted NetKAT, a domain-specific language for modeling and verifying quantitative quantitative network properties. The language is parametric on a semiring , enabling the treatment of a wide range of quantities in a uniform way. We provide a denotational semantics and an equivalent operational semantics, the latter based on a novel model of weighted NetKAT automata ( WNKA ) capturing the stateful behavior of our language. With WNKA , we obtain a class of generic decision procedures for reasoning about quantitative safety and reachability in a fully automatic way, even in the presence of possibly unbounded iteration. We demonstrate the applicability of our framework in a case study using Internet2’s Abilene network as the underlying topology.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="pdf-url"><a class="helia-link helia-external" href="https://dl.acm.org/doi/pdf/10.1145/3808318">PDF</a></span> · <span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/3808318">DOI</a></span> · <span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/2604.13987">arXiv</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/journals/pacmpl/AcevedoFBBFS26">pldb</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="zhang-2026-outrunning" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="zhang-2026-outrunning"><span class="helia-title">Outrunning Big KATs: Efficient Decision Procedures for Variants of GKAT</span>&nbsp;<a class="helia-slug" href="zhang-2026-outrunning.html">zhang-2026-outrunning</a><span class="helia-byline"><span class="helia-entry-link" data-entry="esop">ESOP</span> · 2026</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="zhang-2026-outrunning" data-kind="reference">
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="pdf-url"><a class="helia-link helia-external" href="https://arxiv.org/pdf/2601.09986">PDF</a></span> · <span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-032-22723-2_14">DOI</a></span> · <span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/2601.09986">arXiv</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/conf/esop/ZhangFJVSG26">pldb</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="kappe-2025-kleene" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="kappe-2025-kleene"><span class="helia-title">Kleene Algebra</span>&nbsp;<a class="helia-slug" href="kappe-2025-kleene.html">kappe-2025-kleene</a><span class="helia-byline"><span class="helia-entry-link" data-entry="arxiv">arXiv</span> · 2025</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="kappe-2025-kleene" data-kind="reference">
+<div class="helia-abstract">This booklet serves as an introduction to Kleene Algebra (KA), a set of laws that can be used to study general equivalences between programs. It discusses how general programs can be modeled using regular expressions, how those expressions correspond to automata, and how this correspondence can be exploited to obtain the central result of KA, namely that an equivalence of regular expressions is true if and only if it can be proved using the laws of KA. Each chapter closes with a set of exercises to further build intuition and understanding, and there is an optional chapter that develops automata theory through the lens of coalgebra.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/2511.11264">arXiv</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="jacobs-2025-stackat" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="jacobs-2025-stackat"><span class="helia-title">StacKAT: Infinite State Network Verification</span>&nbsp;<a class="helia-slug" href="jacobs-2025-stackat.html">jacobs-2025-stackat</a><span class="helia-byline"><span class="helia-entry-link" data-entry="pldi">PLDI</span> · 2025</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="jacobs-2025-stackat" data-kind="reference">
+<div class="helia-abstract">We develop StacKAT, a network verification language featuring loops, finite state variables, nondeterminism, and—most importantly—access to a stack with accompanying push and pop operations. By viewing the variables and stack as the (parsed) headers and (to-be-parsed) contents of a network packet, StacKAT can express a wide range of network behaviors including parsing, source routing, and telemetry. These behaviors are difficult or impossible to model using existing languages like NetKAT . We develop a decision procedure for StacKAT program equivalence, based on finite automata. This decision procedure provides the theoretical basis for verifying network-wide properties and is able to provide counterexamples for inequivalent programs. Finally, we provide an axiomatization of StacKAT equivalence and establish its completeness.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="pdf-url"><a class="helia-link helia-external" href="https://dl.acm.org/doi/pdf/10.1145/3729257">PDF</a></span> · <span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/3729257">DOI</a></span> · <span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/2506.13383">arXiv</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/journals/pacmpl/JacobsFKKSSW25">pldb</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="moeller-2025-active" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="moeller-2025-active"><span class="helia-title">Active Learning of Symbolic NetKAT Automata</span>&nbsp;<a class="helia-slug" href="moeller-2025-active.html">moeller-2025-active</a><span class="helia-byline"><span class="helia-entry-link" data-entry="pldi">PLDI</span> · 2025</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="moeller-2025-active" data-kind="reference">
+<div class="helia-abstract">NetKAT is a domain-specific programming language and logic that has been successfully used to specify and verify the behavior of packet-switched networks. This paper develops techniques for automatically learning NetKAT models of unknown networks using active learning. Prior work has explored active learning for a wide range of automata (e.g., deterministic, register, Büchi, timed etc.) and also developed applications, such as validating implementations of network protocols. We present algorithms for learning different types of NetKAT automata, including symbolic automata proposed in recent work. We prove the soundness of these algorithms, build a prototype implementation, and evaluate it on a standard benchmark. Our results highlight the applicability of symbolic NetKAT learning for realistic network configurations and topologies.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="pdf-url"><a class="helia-link helia-external" href="https://dl.acm.org/doi/pdf/10.1145/3729295">PDF</a></span> · <span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/3729295">DOI</a></span> · <span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/2504.13794">arXiv</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/journals/pacmpl/MoellerFLFS25">pldb</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="zhang-2025-cf" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="zhang-2025-cf"><span class="helia-title">CF-GKAT: Efficient Validation of Control-Flow Transformations</span>&nbsp;<a class="helia-slug" href="zhang-2025-cf.html">zhang-2025-cf</a><span class="helia-byline"><span class="helia-entry-link" data-entry="popl">POPL</span> · 2025</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="zhang-2025-cf" data-kind="reference">
+<div class="helia-abstract">Guarded Kleene Algebra with Tests (GKAT) provides a sound and complete framework to reason about trace equivalence between simple imperative programs. However, there are still several notable limitations. First, GKAT is completely agnostic with respect to the meaning of primitives, to keep equivalence decidable. Second, GKAT excludes non-local control flow such as goto, break , and return . To overcome these limitations, we introduce Control-Flow GKAT (CF-GKAT) , a system that allows reasoning about programs that include non-local control flow as well as hardcoded values. CF-GKAT is able to soundly and completely verify trace equivalence of a larger class of programs, while preserving the nearly-linear efficiency of GKAT. This makes CF-GKAT suitable for the verification of control-flow manipulating procedures, such as decompilation and goto-elimination. To demonstrate CF-GKAT’s abilities, we validated the output of several highly non-trivial program transformations, such as Erosa and Hendren’s goto -elimination procedure and the output of Ghidra decompiler. CF-GKAT opens up the application of Kleene Algebra to a wider set of challenges, and provides an important verification tool that can be applied to the field of decompilation and control-flow transformation.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="pdf-url"><a class="helia-link helia-external" href="https://arxiv.org/pdf/2411.13220">PDF</a></span> · <span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/3704857">DOI</a></span> · <span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/2411.13220">arXiv</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/journals/pacmpl/ZhangKNN25">pldb</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="azevedodeamorim-2025-kleene" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="azevedodeamorim-2025-kleene"><span class="helia-title">Kleene Algebra with Commutativity Conditions Is Undecidable</span>&nbsp;<a class="helia-slug" href="azevedodeamorim-2025-kleene.html">azevedodeamorim-2025-kleene</a><span class="helia-byline"><span class="helia-entry-link" data-entry="csl">CSL</span> · 2025</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="azevedodeamorim-2025-kleene" data-kind="reference">
+<div class="helia-abstract">We prove that the equational theory of Kleene algebra with commutativity conditions on primitives (or atomic terms) is undecidable, thereby settling a longstanding open question in the theory of Kleene algebra. While this question has also been recently solved independently by Kuznetsov, our results hold even for weaker theories that do not support the induction axioms of Kleene algebra.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.4230/lipics.csl.2025.36">DOI</a></span> · <span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/2411.15979">arXiv</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="vankoevering-2025-weighted" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="vankoevering-2025-weighted"><span class="helia-title">Weighted GKAT: Completeness and Complexity</span>&nbsp;<a class="helia-slug" href="vankoevering-2025-weighted.html">vankoevering-2025-weighted</a><span class="helia-byline"><span class="helia-entry-link" data-entry="icalp">ICALP</span> · 2025</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="vankoevering-2025-weighted" data-kind="reference">
+<div class="helia-abstract">We propose Weighted Guarded Kleene Algebra with Tests (wGKAT), an uninterpreted weighted programming language equipped with branching, conditionals, and loops. We provide an operational semantics for wGKAT using a variant of weighted automata and introduce a sound and complete axiomatization. We also provide a polynomial time decision procedure for bisimulation equivalence.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.4230/lipics.icalp.2025.172">DOI</a></span> · <span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/2504.20385">arXiv</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="zhang-2024-domain" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="zhang-2024-domain"><span class="helia-title">Domain Reasoning in TopKAT</span>&nbsp;<a class="helia-slug" href="zhang-2024-domain.html">zhang-2024-domain</a><span class="helia-byline"><span class="helia-entry-link" data-entry="icalp">ICALP</span> · 2024</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="zhang-2024-domain" data-kind="reference">
+<div class="helia-abstract">TopKAT is the algebraic theory of Kleene algebra with tests (KAT) extended with a top element. Compared to KAT, one pleasant feature of TopKAT is that, in relational models, the top element allows us to express the domain and codomain of a relation. This enables several applications in program logics, such as proving under-approximate specifications or reachability properties of imperative programs. However, while TopKAT inherits many pleasant features of KATs, such as having a decidable equational theory, it is incomplete with respect to relational models. In other words, there are properties that hold true of all relational TopKATs but cannot be proved with the axioms of TopKAT. This issue is potentially worrisome for program-logic applications, in which relational models play a key role. In this paper, we further investigate the completeness properties of TopKAT with respect to relational models. We show that TopKAT is complete with respect to (co)domain comparison of KAT terms, but incomplete when comparing the (co)domain of arbitrary TopKAT terms. Since the encoding of under-approximate specifications in TopKAT hinges on this type of formula, the aforementioned incompleteness results have a limited impact when using TopKAT to reason about such specifications.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.4230/lipics.icalp.2024.157">DOI</a></span> · <span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/2404.18417">arXiv</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="zhang-2022-on" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="zhang-2022-on"><span class="helia-title">On incorrectness logic and Kleene algebra with top and tests</span>&nbsp;<a class="helia-slug" href="zhang-2022-on.html">zhang-2022-on</a><span class="helia-byline"><span class="helia-entry-link" data-entry="popl">POPL</span> · 2022</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="zhang-2022-on" data-kind="reference">
+<div class="helia-abstract">Kleene algebra with tests (KAT) is a foundational equational framework for reasoning about programs, which has found applications in program transformations, networking and compiler optimizations, among many other areas. In his seminal work, Kozen proved that KAT subsumes propositional Hoare logic, showing that one can reason about the (partial) correctness of while programs by means of the equational theory of KAT. In this work, we investigate the support that KAT provides for reasoning about incorrectness, instead, as embodied by O’Hearn’s recently proposed incorrectness logic. We show that KAT cannot directly express incorrectness logic. The main reason for this limitation can be traced to the fact that KAT cannot express explicitly the notion of codomain, which is essential to express incorrectness triples. To address this issue, we study Kleene Algebra with Top and Tests (TopKAT), an extension of KAT with a top element. We show that TopKAT is powerful enough to express a codomain operation, to express incorrectness triples, and to prove all the rules of incorrectness logic sound. This shows that one can reason about the incorrectness of while-like programs by means of the equational theory of TopKAT.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="pdf-url"><a class="helia-link helia-external" href="https://dl.acm.org/doi/pdf/10.1145/3498690">PDF</a></span> · <span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/3498690">DOI</a></span> · <span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/2108.07707">arXiv</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/journals/pacmpl/ZhangAG22">pldb</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="smolka-2019-guarded" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="smolka-2019-guarded"><span class="helia-title">Guarded Kleene algebra with tests: verification of uninterpreted programs in nearly linear time</span>&nbsp;<a class="helia-slug" href="smolka-2019-guarded.html">smolka-2019-guarded</a><span class="helia-byline"><span class="helia-entry-link" data-entry="popl">POPL</span> · 2020</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="smolka-2019-guarded" data-kind="reference">
+<div class="helia-abstract">Guarded Kleene Algebra with Tests (GKAT) is a variation on Kleene Algebra with Tests (KAT) that arises by restricting the union (+) and iteration (*) operations from KAT to predicate-guarded versions. We develop the (co)algebraic theory of GKAT and show how it can be efficiently used to reason about imperative programs. In contrast to KAT, whose equational theory is PSPACE-complete, we show that the equational theory of GKAT is (almost) linear time. We also provide a full Kleene theorem and prove completeness for an analogue of Salomaa’s axiomatization of Kleene Algebra.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="pdf-url"><a class="helia-link helia-external" href="https://dl.acm.org/doi/pdf/10.1145/3371129">PDF</a></span> · <span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/3371129">DOI</a></span> · <span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/1907.05920">arXiv</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/journals/pacmpl/SmolkaFHKKS20">pldb</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="foster-2016-probabilistic" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="foster-2016-probabilistic"><span class="helia-title">Probabilistic NetKAT</span>&nbsp;<a class="helia-slug" href="foster-2016-probabilistic.html">foster-2016-probabilistic</a><span class="helia-byline"><span class="helia-entry-link" data-entry="esop">ESOP</span> · 2016</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="foster-2016-probabilistic" data-kind="reference">
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="pdf-url"><a class="helia-link helia-external" href="http://hdl.handle.net/2066/143761">PDF</a></span> · <span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-662-49498-1_12">DOI</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/conf/esop/FosterKMR016">pldb</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="anderson2014netkat" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="anderson2014netkat"><span class="helia-title">NetKAT: Semantic foundations for networks</span>&nbsp;<a class="helia-slug" href="anderson2014netkat.html">anderson2014netkat</a><span class="helia-byline"><span class="helia-entry-link" data-entry="popl">POPL</span> · 2014</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="anderson2014netkat" data-kind="reference">
+<div class="helia-abstract">Recent years have seen growing interest in high-level languages for programming networks. But the design of these languages has been largely ad hoc, driven more by the needs of applications and the capabilities of network hardware than by foundational principles. The lack of a semantic foundation has left language designers with little guidance in determining how to incorporate new features, and programmers without a means to reason precisely about their code. This paper presents NetKAT, a new network programming language that is based on a solid mathematical foundation and comes equipped with a sound and complete equational theory. We describe the design of NetKAT, including primitives for filtering, modifying, and transmitting packets; union and sequential composition operators; and a Kleene star operator that iterates programs. We show that NetKAT is an instance of a canonical and well-studied mathematical structure called a Kleene algebra with tests (KAT) and prove that its equational theory is sound and complete with respect to its denotational semantics. Finally, we present practical applications of the equational theory including syntactic techniques for checking reachability, proving non-interference properties that ensure isolation between programs, and establishing the correctness of compilation algorithms.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="pdf-url"><a class="helia-link helia-external" href="https://dl.acm.org/doi/pdf/10.1145/2535838.2535862">PDF</a></span> · <span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/2535838.2535862">DOI</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/conf/popl/AndersonFGJKSW14">pldb</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="hoare2009concurrent" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="hoare2009concurrent"><span class="helia-title">Concurrent Kleene Algebra</span>&nbsp;<a class="helia-slug" href="hoare2009concurrent.html">hoare2009concurrent</a><span class="helia-byline"><span class="helia-entry-link" data-entry="concur">CONCUR</span> · 2009</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="hoare2009concurrent" data-kind="reference">
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-642-04081-8_27">DOI</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="angus2001kleene" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="angus2001kleene"><span class="helia-title">Kleene algebra with tests and program schematology</span>&nbsp;<a class="helia-slug" href="angus2001kleene.html">angus2001kleene</a><span class="helia-byline">2001</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="angus2001kleene" data-kind="reference">
+<div class="helia-abstract">The theory of flowchart schemes has a rich history going back to Ianov (1960); see Manna (1974) for an elementary exposition. A central question in the theory of program schemes is scheme equivalence. Manna presents several examples of equivalence proofs that work by simplifying the schemes using various combinatorial transformation rules. In this paper we present a purely algebraic approach to this problem using Kleene algebra with tests (KAT). Instead of transforming schemes directly using combinatorial graph manipulation, we regard them as a certain kind of automaton on abstract traces. We prove a generalization of Kleene’s theorem and use it to construct equivalent expressions in the language of KAT. We can then give a purely equational proof of the equivalence of the resulting expressions. We prove soundness of the method and give a detailed example of its use.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="url"><a class="helia-link helia-external" href="https://hdl.handle.net/1813/5831">Web</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="kozen2000certification" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="kozen2000certification"><span class="helia-title">Certification of Compiler Optimizations Using Kleene Algebra with Tests</span>&nbsp;<a class="helia-slug" href="kozen2000certification.html">kozen2000certification</a><span class="helia-byline">Computational Logic — CL 2000 · 2000</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="kozen2000certification" data-kind="reference">
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1007/3-540-44957-4_38">DOI</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="kozen1997kleene" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="kozen1997kleene"><span class="helia-title">Kleene algebra with tests</span>&nbsp;<a class="helia-slug" href="kozen1997kleene.html">kozen1997kleene</a><span class="helia-byline"><span class="helia-entry-link" data-entry="toplas">TOPLAS</span> · 1997</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="kozen1997kleene" data-kind="reference">
+<div class="helia-abstract">We introduce Kleene algebra with tests, an equational system for manipulating programs. We give a purely equational proof, using Kleene algebra with tests and commutativity conditions, of the following classical result: every while program can be simulated by a while program with at most one while loop. The proof illustrates the use of Kleene algebra with tests and commutativity conditions in program equivalence proofs.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="pdf-url"><a class="helia-link helia-external" href="https://dl.acm.org/doi/pdf/10.1145/256167.256195">PDF</a></span> · <span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/256167.256195">DOI</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/journals/toplas/Kozen97">pldb</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="KOZEN1994366" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="KOZEN1994366"><span class="helia-title">A Completeness Theorem for Kleene Algebras and the Algebra of Regular Events</span>&nbsp;<a class="helia-slug" href="KOZEN1994366.html">KOZEN1994366</a><span class="helia-byline"><span class="helia-entry-link" data-entry="iandc">I&amp;C</span> · 1994</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="KOZEN1994366" data-kind="reference">
+<div class="helia-abstract">We give a finitary axiomatization of the algebra of regular events involving only equations and equational implications. Unlike Salomaa′s axiomatizations, the axiomatization given here is sound for all interpretations over Kleene algebras.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1006/inco.1994.1037">DOI</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="kozen1994action" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="kozen1994action"><span class="helia-title">On action algebras</span>&nbsp;<a class="helia-slug" href="kozen1994action.html">kozen1994action</a><span class="helia-byline"><span class="helia-entry-link" data-entry="logic-and-information-flow">Logic and Information Flow</span> · 1994</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="kozen1994action" data-kind="reference">
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.7551/mitpress/4286.003.0007">DOI</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="leis_towards_1992" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="leis_towards_1992"><span class="helia-title">Towards Kleene Algebra with recursion</span>&nbsp;<a class="helia-slug" href="leis_towards_1992.html">leis_towards_1992</a><span class="helia-byline"><span class="helia-entry-link" data-entry="csl">CSL</span> · 1992</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="leis_towards_1992" data-kind="reference">
+<div class="helia-abstract">We extend Kozen’s theory KA of Kleene Algebra to axiomatize parts of the equational theory of context-free languages, using a least fixed-point operator μ instead of Kleene’s iteration operator*.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1007/bfb0023771">DOI</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="prattActionLogicPure1991" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="prattActionLogicPure1991"><span class="helia-title">Action logic and pure induction</span>&nbsp;<a class="helia-slug" href="prattActionLogicPure1991.html">prattActionLogicPure1991</a><span class="helia-byline">Logics in AI · 1991</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="prattActionLogicPure1991" data-kind="reference">
+<div class="helia-abstract">In Floyd-Hoare logic, programs are dynamic while assertions are static (hold at states). In action logic the two notions become one, with programs viewed as on-the-fly assertions whose truth is evaluated along intervals instead of at states. Action logic is an equational theory ACT conservatively extending the equational theory REG of regular expressions with operations preimplication a→b (had a then b) and postimplication b←a (b if-ever a). Unlike REG, ACT is finitely based, makes a∗ reflexive transitive closure, and has an equivalent Hilbert system. The crucial axiom is that of pure induction, (a→a)∗ = a→a.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1007/bfb0018436">DOI</a></span></div>
+</div>
+</div>
+</details>
+</section>
+</div>
+</details>
+</section>
+</div>
+</article>
+<div class="helia-identity"><span class="helia-id">tag-kleene-algebra</span> <span class="helia-kind">tag</span></div>
+</div>
+</body>
+</html>

@@ -1,0 +1,1 @@
+heliaSearchData("d/atkey-2009-parameterised",{"id":"atkey-2009-parameterised","title":"Parameterised notions of computation","kind":"reference","tags":["effects"],"authors":["Robert Atkey"],"venue":["JFP","Journal of Functional Programming"],"date":null,"url":"atkey-2009-parameterised.html","headings":[],"body":""});

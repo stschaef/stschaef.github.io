@@ -1,0 +1,1 @@
+heliaSearchData("d/yale-nus-college",{"id":"yale-nus-college","title":"Yale-NUS College","kind":"institution","tags":[],"authors":[],"venue":[],"date":null,"url":"yale-nus-college.html","headings":[],"body":""});

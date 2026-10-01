@@ -1,0 +1,1 @@
+heliaSearchData("d/spencerwhitman",{"id":"spencerwhitman","title":"Spencer Whitman","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"spencerwhitman.html","headings":[],"body":""});

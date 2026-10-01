@@ -1,0 +1,1 @@
+heliaSearchData("d/normanearlsteenrod",{"id":"normanearlsteenrod","title":"Norman Earl Steenrod","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"normanearlsteenrod.html","headings":[],"body":""});

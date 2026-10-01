@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>Scatterbrain: Unifying Sparse and Low-rank Attention Approximation</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Ctext y=%22.9em%22 font-size=%2290%22%3E%F0%9F%8C%BB%3C/text%3E%3C/svg%3E">
+<meta name="generator" content="helia">
+<link rel="alternate" type="application/atom+xml" title="Steven Schaefer" href="feed.xml">
+<link rel="alternate" type="application/feed+json" title="Steven Schaefer" href="feed.json">
+<script src="helia/theme-version.js"></script>
+<script src="theme/folio-early.js"></script>
+<link rel="stylesheet" href="helia/theme.css">
+<link rel="stylesheet" href="helia/highlight.css">
+<link rel="stylesheet" href="helia/search.css">
+<link rel="stylesheet" href="theme/katex.css">
+<link rel="stylesheet" href="theme/recipe.css">
+<link rel="stylesheet" href="theme/site.css">
+<link rel="stylesheet" href="theme/folio.css">
+<script defer src="helia/runtime.js"></script>
+<script defer src="helia/search.js"></script>
+<script defer src="theme/glyphcraft.js"></script>
+<script defer src="theme/glyphart.js"></script>
+<script defer src="theme/glyphgen.js"></script>
+<script defer src="theme/ornament.js"></script>
+<script defer src="theme/folio.js"></script>
+<script defer src="theme/portrait.js"></script>
+<script type="application/json" id="helia-widgets">{"helia-cite-formats":"widgets/helia-cite-formats-a3294ac7.js"}</script>
+<link rel="modulepreload" href="widgets/helia-cite-formats-a3294ac7.js">
+<script type="module" src="widgets/runtime.js"></script>
+</head>
+<body>
+<nav class="helia-topbar"><a class="helia-home" href="home.html">Steven Schaefer</a><ul class="helia-nav-links"><li><a href="stevenschaefer.html">About Me</a></li><li><a href="research.html">Research</a></li><li><a href="new.html">New</a></li></ul><button type="button" class="helia-search-button" aria-label="Search (/ or Ctrl+K)" aria-haspopup="dialog"><span class="helia-search-icon">⌕</span><span class="helia-search-label">Search</span><kbd class="helia-search-key">/</kbd></button></nav>
+<div class="helia-page" data-kind="reference">
+<article class="helia-article">
+<header class="helia-header" data-entry="chen-2021-scatterbrain" data-kind="reference">
+<h2 class="helia-heading"><span class="helia-taxon">Reference.</span> Scatterbrain: Unifying Sparse and Low-rank Attention Approximation</h2>
+<div class="helia-meta"><span class="helia-author"><a class="helia-entry-link" href="beidichen.html" data-entry="beidichen">Beidi Chen</a>, <a class="helia-entry-link" href="tridao.html" data-entry="tridao">Tri Dao</a>, <a class="helia-entry-link" href="ericwinsor.html" data-entry="ericwinsor">Eric Winsor</a>, <a class="helia-entry-link" href="zhaosong.html" data-entry="zhaosong">Zhao Song</a>, <a class="helia-entry-link" href="atrirudra.html" data-entry="atrirudra">Atri Rudra</a>, <a class="helia-entry-link" href="christopherre.html" data-entry="christopherre">Christopher Ré</a></span> · <span class="helia-byline"><a class="helia-entry-link" href="neurips.html" data-entry="neurips">NeurIPS</a> · 2021</span> · <span class="helia-tags"><span class="helia-tag" data-tag="machine-learning"><a class="helia-entry-link" href="tag-machine-learning.html" data-entry="tag-machine-learning">machine-learning</a></span></span> · <span class="helia-entry-links"><span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/2110.15343">arXiv</a></span></span></div>
+</header>
+<div class="helia-body">
+<div class="helia-abstract">Recent advances in efficient Transformers have exploited either the sparsity or low-rank properties of attention matrices to reduce the computational and memory bottlenecks of modeling long sequences. However, it is still challenging to balance the trade-off between model quality and efficiency to perform a one-size-fits-all approximation for different tasks. To better understand this trade-off, we observe that sparse and low-rank approximations excel in different regimes, determined by the softmax temperature in attention, and sparse + low-rank can outperform each individually. Inspired by the classical robust-PCA algorithm for sparse and low-rank decomposition, we propose Scatterbrain, a novel way to unify sparse (via locality sensitive hashing) and low-rank (via kernel feature map) attention for accurate and efficient approximation. The estimation is unbiased with provably low error. We empirically show that Scatterbrain can achieve 2.1x lower error than baselines when serving as a drop-in replacement in BigGAN image generation and pre-trained T2T-ViT. On a pre-trained T2T Vision transformer, even without fine-tuning, Scatterbrain can reduce 98% of attention memory at the cost of only 1% drop in accuracy. We demonstrate Scatterbrain for end-to-end training with up to 4 points better perplexity and 5 points better average accuracy than sparse or low-rank efficient transformers on language modeling and long-range-arena tasks.</div>
+</div>
+<div class="helia-cite helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><h3 class="helia-heading">Cite</h3>
+</summary>
+<div class="helia-group-body">
+<div class="helia-widget" data-widget="helia-cite-formats" data-props="{&quot;key&quot;:&quot;chen-2021-scatterbrain&quot;,&quot;bibtex&quot;:&quot;@inproceedings{chen-2021-scatterbrain,\n  author = {Beidi Chen and Tri Dao and Eric Winsor and Zhao Song and Atri Rudra and Christopher Ré},\n  title = {Scatterbrain: Unifying Sparse and Low-rank Attention Approximation},\n  booktitle = {Advances in Neural Information Processing Systems 34},\n  year = {2021},\n  eprint = {2110.15343},\n  archiveprefix = {arXiv}\n}&quot;,&quot;bib-file&quot;:&quot;chen-2021-scatterbrain.bib&quot;,&quot;hayagriva&quot;:&quot;chen-2021-scatterbrain:\n  type: article\n  title: &#39;Scatterbrain: Unifying Sparse and Low-rank Attention Approximation&#39;\n  author:\n  - Chen, Beidi\n  - Dao, Tri\n  - Winsor, Eric\n  - Song, Zhao\n  - Rudra, Atri\n  - Ré, Christopher\n  date: 2021\n  serial-number:\n    arxiv: &#39;2110.15343&#39;\n  parent:\n    type: proceedings\n    title: Advances in Neural Information Processing Systems 34\n&quot;,&quot;yml-file&quot;:&quot;chen-2021-scatterbrain.yml&quot;}"><div class="helia-cite-key" data-copy="@chen-2021-scatterbrain" data-copy-label="citation key"><span class="helia-bib-key">Cite as</span> <code class="helia-raw-inline">@chen-2021-scatterbrain</code> (helia, typst) · <code class="helia-raw-inline">\cite{chen-2021-scatterbrain}</code> (LaTeX)</div>
+<div class="helia-cite-format helia-collapsible" data-format="bibtex" data-copy="true" data-copy-label="BibTeX">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">BibTeX</span></summary>
+<div class="helia-group-body">
+<details class="helia-code" open><summary class="helia-code-summary"><span class="helia-code-lang">bibtex</span> · <span class="helia-code-lines">8 lines</span></summary><pre class="helia-raw"><code class="language-bibtex"><span class="hl-text hl-bibtex"><span class="hl-meta hl-entry hl-braces hl-bibtex"><span class="hl-keyword hl-other hl-entry-type hl-bibtex"><span class="hl-punctuation hl-definition hl-keyword hl-bibtex">@</span>inproceedings</span><span class="hl-punctuation hl-section hl-entry hl-begin hl-bibtex">{</span><span class="hl-entity hl-name hl-type hl-entry-key hl-bibtex">chen-2021-scatterbrain</span>,
+  <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">author</span> <span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span> <span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>Beidi Chen and Tri Dao and Eric Winsor and Zhao Song and Atri Rudra and Christopher Ré<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>,
+  <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">title</span> <span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span> <span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>Scatterbrain: Unifying Sparse and Low-rank Attention Approximation<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>,
+  <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">booktitle</span> <span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span> <span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>Advances in Neural Information Processing Systems 34<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>,
+  <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">year</span> <span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span> <span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>2021<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>,
+  <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">eprint</span> <span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span> <span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>2110.15343<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>,
+  <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">archiveprefix</span> <span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span> <span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>arXiv<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span>
+</span><span class="hl-punctuation hl-section hl-entry hl-end hl-bibtex">}</span></span></span></code></pre></details>
+</div>
+</details>
+</div>
+<div class="helia-cite-format helia-collapsible" data-format="hayagriva" data-copy="true" data-copy-label="hayagriva YAML">
+<details>
+<summary class="helia-group-summary"><span class="helia-group-title">hayagriva YAML (typst)</span></summary>
+<div class="helia-group-body">
+<details class="helia-code" open><summary class="helia-code-summary"><span class="helia-code-lang">yaml</span> · <span class="helia-code-lines">16 lines</span></summary><pre class="helia-raw"><code class="language-yaml"><span class="hl-source hl-yaml"><span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">chen-2021-scatterbrain</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">type</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">article</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">title</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-quoted hl-single hl-yaml"><span class="hl-punctuation hl-definition hl-string hl-begin hl-yaml">&#39;</span>Scatterbrain: Unifying Sparse and Low-rank Attention Approximation<span class="hl-punctuation hl-definition hl-string hl-end hl-yaml">&#39;</span></span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">author</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Chen, Beidi</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Dao, Tri</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Winsor, Eric</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Song, Zhao</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Rudra, Atri</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Ré, Christopher</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">date</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-constant hl-numeric hl-integer hl-decimal hl-yaml">2021</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">serial-number</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">arxiv</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-quoted hl-single hl-yaml"><span class="hl-punctuation hl-definition hl-string hl-begin hl-yaml">&#39;</span>2110.15343<span class="hl-punctuation hl-definition hl-string hl-end hl-yaml">&#39;</span></span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">parent</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">type</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">proceedings</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">title</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Advances in Neural Information Processing Systems 34</span>
+</span></code></pre></details>
+</div>
+</details>
+</div>
+<div class="helia-cite-files">Download: <a class="helia-link" href="chen-2021-scatterbrain.bib">chen-2021-scatterbrain.bib</a> · <a class="helia-link" href="chen-2021-scatterbrain.yml">chen-2021-scatterbrain.yml</a></div>
+</div>
+</div>
+</details>
+</div>
+<div class="helia-reference-cites helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">Cites 68 works (0 here)</span></summary>
+<div class="helia-group-body">
+<div class="helia-reference-cites-away helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">External (68)</span></summary>
+<div class="helia-group-body">
+<ul>
+<li><a class="helia-link helia-external" href="https://doi.org/10.65215/2q58a426">Attention Is All You Need</a> (2025)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.57702/zp44cu3g">Learning Multiple Layers of Features from Tiny Images</a> (2024)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3530811">Efficient Transformers: A Survey</a> (2022)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1162/tacl_a_00353">Efficient Content-Based Sparse Attention with Routing Transformers</a> (2021)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3442188.3445922">On the Dangers of Stochastic Parrots</a> (2021)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1109/iccv48922.2021.00060">Tokens-to-Token ViT: Training Vision Transformers from Scratch on ImageNet</a> (2021)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1609/aaai.v35i16.17664">Nyströmformer: A Nyström-based Algorithm for Approximating Self-Attention</a> (2021)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1109/slt48900.2021.9383581">Simplified Self-Attention for Transformer-Based end-to-end Speech Recognition</a> (2021)</li>
+<li>MONGOOSE: A Learnable LSH Framework for Efficient Neural Network Training (2021)</li>
+<li><a class="helia-link helia-external" href="https://arxiv.org/abs/2107.02192">Long-Short Transformer: Efficient Transformers for Language and Vision</a> (2021)</li>
+<li><a class="helia-link helia-external" href="https://arxiv.org/abs/2106.01540">Luna: Linear Unified Nested Attention</a> (2021)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-030-58452-8_13">End-to-End Object Detection with Transformers</a> (2020)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1109/sc41405.2020.00021">Sparse GPU Kernels for Deep Learning</a> (2020)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1109/cvpr42600.2020.01204">Butterfly Transform: An Efficient FFT Based Neural Architecture Design</a> (2020)</li>
+<li><a class="helia-link helia-external" href="https://arxiv.org/abs/1903.03129">SLIDE : In Defense of Smart Algorithms over Hardware Acceleration for Large-Scale Deep Learning Systems</a> (2020)</li>
+<li><a class="helia-link helia-external" href="https://arxiv.org/abs/2005.14165">Language Models are Few-Shot Learners</a> (2020)</li>
+<li><a class="helia-link helia-external" href="https://arxiv.org/abs/2004.05150">Longformer: The Long-Document Transformer</a> (2020)</li>
+<li><a class="helia-link helia-external" href="https://arxiv.org/abs/2006.04768">Conv-Linformer: Boosting Linformer's Performance with Convolution in Small-Scale Settings</a> (2020)</li>
+<li><a class="helia-link helia-external" href="https://arxiv.org/abs/2001.04451">Reformer: The Efficient Transformer</a> (2020)</li>
+<li><a class="helia-link helia-external" href="https://arxiv.org/abs/2006.16236">Transformers are RNNs: Fast Autoregressive Transformers with Linear Attention</a> (2020)</li>
+<li><a class="helia-link helia-external" href="https://arxiv.org/abs/2008.02217">Hopfield Networks is All You Need</a> (2020)</li>
+<li><a class="helia-link helia-external" href="https://arxiv.org/abs/2012.14966">Kaleidoscope: An Efficient, Learnable Representation For All Structured Linear Maps</a> (2020)</li>
+<li><a class="helia-link helia-external" href="https://arxiv.org/abs/2007.01230">Climbing the WOL: Training for Cheaper Inference</a> (2020)</li>
+<li><a class="helia-link helia-external" href="https://arxiv.org/abs/2010.11929">An Image is Worth 16x16 Words: Transformers for Image Recognition at Scale</a> (2020)</li>
+<li><a class="helia-link helia-external" href="https://arxiv.org/abs/2011.04006">Long Range Arena: A Benchmark for Efficient Transformers</a> (2020)</li>
+<li><a class="helia-link helia-external" href="https://arxiv.org/abs/2009.14794">Rethinking Attention with Performers</a> (2020)</li>
+<li><a class="helia-link helia-external" href="https://arxiv.org/abs/2012.11346">Sub-Linear Memory: How to Make Performers SLiM</a> (2020)</li>
+<li><a class="helia-link helia-external" href="https://arxiv.org/abs/2012.15843">A Tale of Two Efficient and Informative Negative Sampling Distributions</a> (2020)</li>
+<li><a class="helia-link helia-external" href="https://arxiv.org/abs/2010.05315">SMYRF: Efficient attention using asymmetric clustering</a> (2020)</li>
+<li>HiPPO: Recurrent memory with optimal polynomial projections (2020)</li>
+<li>Compressive transformers for long-range sequence modelling (2020)</li>
+<li>Big Bird: Transformers for longer sequences (2020)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.18653/v1/n19-1423">BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding</a> (2019)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.18653/v1/p19-1032">Adaptive Attention Span in Transformers</a> (2019)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1137/18m1183480">Why Are Big Data Matrices Approximately Low Rank?</a> (2019)</li>
+<li><a class="helia-link helia-external" href="https://arxiv.org/abs/1903.05895">Learning Fast Algorithms for Linear Transforms Using Butterfly Factorizations</a> (2019)</li>
+<li>Fast and Accurate Stochastic Gradient Estimation (2019)</li>
+<li><a class="helia-link helia-external" href="https://arxiv.org/abs/1909.11942">ALBERT: A Lite BERT for Self-supervised Learning of Language\n Representations</a> (2019)</li>
+<li><a class="helia-link helia-external" href="https://arxiv.org/abs/1906.08237">XLNet: Generalized Autoregressive Pretraining for Language Understanding</a> (2019)</li>
+<li><a class="helia-link helia-external" href="https://arxiv.org/abs/1904.10509">Generating Long Sequences with Sparse Transformers</a> (2019)</li>
+<li><a class="helia-link helia-external" href="https://arxiv.org/abs/1901.10430">Pay Less Attention with Lightweight and Dynamic Convolutions</a> (2019)</li>
+<li><a class="helia-link helia-external" href="https://arxiv.org/abs/1901.08544">Learning Space Partitions for Nearest Neighbor Search</a> (2019)</li>
+<li><a class="helia-link helia-external" href="https://arxiv.org/abs/1901.02860">Transformer-XL: Attentive language models beyond a fixed-length context</a> (2019)</li>
+<li><a class="helia-link helia-external" href="https://arxiv.org/abs/1910.10683">Exploring the limits of transfer learning with a unified text-to-text transformer</a> (2019)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.18653/v1/w18-5446">GLUE: A Multi-Task Benchmark and Analysis Platform for Natural Language Understanding</a> (2018)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.18653/v1/n18-4013">ListOps: A Diagnostic Dataset for Latent Tree Learning</a> (2018)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1214/18-aoas1163">Unique entity estimation with application to the Syrian conflict</a> (2018)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1137/1.9781611975031.69">A Two-pronged Progress in Structured Dense Matrix Vector Multiplication</a> (2018)</li>
+<li>Densified Winner Take All (WTA) Hashing for Sparse Datasets (2018)</li>
+<li><a class="helia-link helia-external" href="https://arxiv.org/abs/1805.08315">Learning long-range spatial dependencies with horizontal gated-recurrent units</a> (2018)</li>
+<li>Learning compressed transforms with low displacement rank (2018)</li>
+<li><a class="helia-link helia-external" href="https://arxiv.org/abs/1711.09224">GPU kernels for block-sparse weights</a> (2017)</li>
+<li><a class="helia-link helia-external" href="https://arxiv.org/abs/1609.07843">Pointer Sentinel Mixture Models</a> (2016)</li>
+<li><a class="helia-link helia-external" href="https://arxiv.org/abs/1509.02897">Practical and Optimal LSH for Angular Distance</a> (2015)</li>
+<li><a class="helia-link helia-external" href="https://arxiv.org/abs/1510.01722">Structured Transforms for Small-Footprint Deep Learning</a> (2015)</li>
+<li><a class="helia-link helia-external" href="https://arxiv.org/abs/1405.5869">Asymmetric LSH (ALSH) for Sublinear Time Maximum Inner Product Search (MIPS)</a> (2014)</li>
+<li><a class="helia-link helia-external" href="https://arxiv.org/abs/1411.1134">Global Convergence of Stochastic Gradient Descent for Some Non-convex\n Matrix Problems</a> (2014)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/s10579-012-9211-2">The ACL anthology network corpus</a> (2013)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/1970392.1970395">Robust principal component analysis?</a> (2011)</li>
+<li>Learning word vectors for sentiment analysis (2011)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1109/cvpr.2009.5206848">ImageNet: A large-scale hierarchical image database</a> (2009)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/s10208-009-9045-5">Exact Matrix Completion via Convex Optimization</a> (2009)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.5555/1953048.2185803">A Simpler Approach to Matrix Completion</a> (2009)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.5301/jbm.2008.2127">Bravais-Pearson and Spearman correlation coefficients: meaning, test of hypothesis and confidence interval</a> (2002)</li>
+<li>Similarity Search in High Dimensions via Hashing (1999)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/276698.276876">Approximate nearest neighbors: towards removing the curse of dimensionality</a> (1998)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1177/875647939000600106">Interpretation of the Correlation Coefficient: A Basic Review</a> (1990)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1037/h0071325">Analysis of a complex of statistical variables into principal components</a> (1933)</li>
+</ul>
+</div>
+</details>
+</div>
+</div>
+</details>
+</div>
+</article>
+<div class="helia-identity"><span class="helia-id">chen-2021-scatterbrain</span> <span class="helia-kind">reference</span> <span class="helia-path">entries/refs/chen-2021-scatterbrain/chen-2021-scatterbrain.hel</span></div>
+</div>
+</body>
+</html>

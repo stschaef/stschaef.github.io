@@ -1,0 +1,1 @@
+heliaSearchData("d/capucci-2023-diegetic",{"id":"capucci-2023-diegetic","title":"Diegetic Representation of Feedback in Open Games","kind":"reference","tags":["open-games"],"authors":["Matteo Capucci"],"venue":["EPTCS","Electronic Proceedings in Theoretical Computer Science"],"date":null,"url":"capucci-2023-diegetic.html","headings":[],"body":""});

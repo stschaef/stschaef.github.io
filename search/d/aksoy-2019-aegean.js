@@ -1,0 +1,1 @@
+heliaSearchData("d/aksoy-2019-aegean",{"id":"aksoy-2019-aegean","title":"Aegean: replication beyond the client-server model","kind":"reference","tags":["distributed-systems"],"authors":["Manos Kapritsos","Remzi Can Aksoy"],"venue":["SOSP","Symposium on Operating Systems Principles"],"date":null,"url":"aksoy-2019-aegean.html","headings":[],"body":""});

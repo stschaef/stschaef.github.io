@@ -1,0 +1,1 @@
+heliaSearchData("d/claudioluzzatti",{"id":"claudioluzzatti","title":"Claudio Luzzatti","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"claudioluzzatti.html","headings":[],"body":""});

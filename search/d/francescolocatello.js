@@ -1,0 +1,1 @@
+heliaSearchData("d/francescolocatello",{"id":"francescolocatello","title":"Francesco Locatello","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"francescolocatello.html","headings":[],"body":""});

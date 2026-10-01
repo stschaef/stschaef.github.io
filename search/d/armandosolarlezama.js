@@ -1,0 +1,1 @@
+heliaSearchData("d/armandosolarlezama",{"id":"armandosolarlezama","title":"Armando Solar-Lezama","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"armandosolarlezama.html","headings":[],"body":""});

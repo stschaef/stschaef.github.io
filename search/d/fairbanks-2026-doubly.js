@@ -1,0 +1,1 @@
+heliaSearchData("d/fairbanks-2026-doubly",{"id":"fairbanks-2026-doubly","title":"Doubly Weak Double Categories","kind":"reference","tags":["category-theory"],"authors":["Aaron David Fairbanks","Michael Shulman"],"venue":["ACS","Applied Categorical Structures"],"date":null,"url":"fairbanks-2026-doubly.html","headings":[],"body":""});

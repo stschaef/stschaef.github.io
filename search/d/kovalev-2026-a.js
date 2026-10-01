@@ -1,0 +1,1 @@
+heliaSearchData("d/kovalev-2026-a",{"id":"kovalev-2026-a","title":"A dependently-typed calculus of event telicity and culminativity","kind":"reference","tags":["categorial-grammar"],"authors":["Carlo Angiuli","Pavel Kovalev"],"venue":["MSCS","Mathematical Structures in Computer Science"],"date":null,"url":"kovalev-2026-a.html","headings":[],"body":""});

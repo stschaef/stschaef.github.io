@@ -1,0 +1,1 @@
+heliaSearchData("d/clarke-2025-the",{"id":"clarke-2025-the","title":"The free bifibration on a functor","kind":"reference","tags":["category-theory"],"authors":["Bryce Clarke","Gabriel Scherer","Noam Zeilberger"],"venue":["arXiv"],"date":null,"url":"clarke-2025-the.html","headings":[],"body":""});

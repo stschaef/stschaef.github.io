@@ -1,0 +1,1 @@
+heliaSearchData("d/apical-intelligence",{"id":"apical-intelligence","title":"Apical Intelligence","kind":"institution","tags":[],"authors":[],"venue":[],"date":null,"url":"apical-intelligence.html","headings":[],"body":""});

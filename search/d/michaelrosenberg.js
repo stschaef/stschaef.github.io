@@ -1,0 +1,1 @@
+heliaSearchData("d/michaelrosenberg",{"id":"michaelrosenberg","title":"Michael Rosenberg","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"michaelrosenberg.html","headings":[],"body":""});

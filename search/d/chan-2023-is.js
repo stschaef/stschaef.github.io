@@ -1,0 +1,1 @@
+heliaSearchData("d/chan-2023-is",{"id":"chan-2023-is","title":"Is sized typing for Coq practical?","kind":"reference","tags":["type-theory"],"authors":["Jonathan Chan","William J. Bowman","Yufeng Li"],"venue":["JFP","Journal of Functional Programming"],"date":null,"url":"chan-2023-is.html","headings":[],"body":""});

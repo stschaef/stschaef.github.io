@@ -1,0 +1,1 @@
+heliaSearchData("d/dunfield-2021-bidirectional",{"id":"dunfield-2021-bidirectional","title":"Bidirectional Typing","kind":"reference","tags":["bidirectional-typing"],"authors":["Jana Dunfield","Neel Krishnaswami"],"venue":["ACM Computing Surveys"],"date":null,"url":"dunfield-2021-bidirectional.html","headings":[],"body":""});

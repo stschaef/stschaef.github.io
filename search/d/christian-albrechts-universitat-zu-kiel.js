@@ -1,0 +1,1 @@
+heliaSearchData("d/christian-albrechts-universitat-zu-kiel",{"id":"christian-albrechts-universitat-zu-kiel","title":"Christian-Albrechts-Universität zu Kiel","kind":"institution","tags":[],"authors":[],"venue":[],"date":null,"url":"christian-albrechts-universitat-zu-kiel.html","headings":[],"body":""});

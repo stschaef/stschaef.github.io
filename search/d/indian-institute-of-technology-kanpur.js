@@ -1,0 +1,1 @@
+heliaSearchData("d/indian-institute-of-technology-kanpur",{"id":"indian-institute-of-technology-kanpur","title":"Indian Institute of Technology Kanpur","kind":"institution","tags":[],"authors":[],"venue":[],"date":null,"url":"indian-institute-of-technology-kanpur.html","headings":[],"body":""});

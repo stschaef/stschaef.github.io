@@ -1,0 +1,1 @@
+heliaSearchData("d/anthonykarelseda",{"id":"anthonykarelseda","title":"Anthony Karel Seda","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"anthonykarelseda.html","headings":[],"body":""});

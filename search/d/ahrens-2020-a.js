@@ -1,0 +1,1 @@
+heliaSearchData("d/ahrens-2020-a",{"id":"ahrens-2020-a","title":"A Higher Structure Identity Principle","kind":"reference","tags":["homotopy-type-theory"],"authors":["Benedikt Ahrens","Dimitris Tsementzis","Michael Shulman","Paige Randall North"],"venue":["LICS","Symposium on Logic in Computer Science"],"date":null,"url":"ahrens-2020-a.html","headings":[],"body":""});

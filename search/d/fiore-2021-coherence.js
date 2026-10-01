@@ -1,0 +1,1 @@
+heliaSearchData("d/fiore-2021-coherence",{"id":"fiore-2021-coherence","title":"Coherence for bicategorical cartesian closed structure","kind":"reference","tags":["category-theory"],"authors":["Marcelo P. Fiore","Philip Saville"],"venue":["MSCS","Mathematical Structures in Computer Science"],"date":null,"url":"fiore-2021-coherence.html","headings":[],"body":""});

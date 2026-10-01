@@ -1,0 +1,1 @@
+heliaSearchData("d/ringer-2018-adapting",{"id":"ringer-2018-adapting","title":"Adapting proof automation to adapt proofs","kind":"reference","tags":["proof-engineering"],"authors":["Dan Grossman","John Leo","Nathaniel Yazdani","Talia Ringer"],"venue":["CPP","Certified Programs and Proofs"],"date":null,"url":"ringer-2018-adapting.html","headings":[],"body":""});

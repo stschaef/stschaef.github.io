@@ -1,0 +1,1 @@
+heliaSearchData("d/kimballgermane",{"id":"kimballgermane","title":"Kimball Germane","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"kimballgermane.html","headings":[],"body":""});

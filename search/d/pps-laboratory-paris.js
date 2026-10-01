@@ -1,0 +1,1 @@
+heliaSearchData("d/pps-laboratory-paris",{"id":"pps-laboratory-paris","title":"PPS laboratory, Paris","kind":"institution","tags":[],"authors":[],"venue":[],"date":null,"url":"pps-laboratory-paris.html","headings":[],"body":""});

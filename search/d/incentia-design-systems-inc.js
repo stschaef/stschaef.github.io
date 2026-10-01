@@ -1,0 +1,1 @@
+heliaSearchData("d/incentia-design-systems-inc",{"id":"incentia-design-systems-inc","title":"Incentia Design Systems, Inc","kind":"institution","tags":[],"authors":[],"venue":[],"date":null,"url":"incentia-design-systems-inc.html","headings":[],"body":""});

@@ -1,0 +1,1 @@
+heliaSearchData("d/irvingezrasegal",{"id":"irvingezrasegal","title":"Irving Ezra Segal","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"irvingezrasegal.html","headings":[],"body":""});

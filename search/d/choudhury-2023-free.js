@@ -1,0 +1,1 @@
+heliaSearchData("d/choudhury-2023-free",{"id":"choudhury-2023-free","title":"Free Commutative Monoids in Homotopy Type Theory","kind":"reference","tags":["homotopy-type-theory"],"authors":["Marcelo P. Fiore","Vikraman Choudhury"],"venue":["MFPS","Mathematical Foundations of Programming Semantics"],"date":null,"url":"choudhury-2023-free.html","headings":[],"body":""});

@@ -1,0 +1,1 @@
+heliaSearchData("d/zhang-2021-elegant",{"id":"zhang-2021-elegant","title":"Elegant elaboration with function invocation","kind":"reference","tags":["type-theory"],"authors":["Tesla Zhang"],"venue":["arXiv"],"date":null,"url":"zhang-2021-elegant.html","headings":[],"body":""});

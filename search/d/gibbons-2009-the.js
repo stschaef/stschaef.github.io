@@ -1,0 +1,1 @@
+heliaSearchData("d/gibbons-2009-the",{"id":"gibbons-2009-the","title":"The essence of the Iterator pattern","kind":"reference","tags":["generic-programming"],"authors":["Bruno C. d. S. Oliveira","Jeremy Gibbons"],"venue":["JFP","Journal of Functional Programming"],"date":null,"url":"gibbons-2009-the.html","headings":[],"body":""});

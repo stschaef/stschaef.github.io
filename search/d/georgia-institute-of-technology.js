@@ -1,0 +1,1 @@
+heliaSearchData("d/georgia-institute-of-technology",{"id":"georgia-institute-of-technology","title":"Georgia Institute of Technology","kind":"institution","tags":[],"authors":[],"venue":[],"date":null,"url":"georgia-institute-of-technology.html","headings":[],"body":""});

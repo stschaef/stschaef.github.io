@@ -1,0 +1,1 @@
+heliaSearchData("d/atkey-2014-from",{"id":"atkey-2014-from","title":"From parametricity to conservation laws, via Noether’s theorem","kind":"reference","tags":["parametricity"],"authors":["Robert Atkey"],"venue":["POPL","Symposium on Principles of Programming Languages"],"date":null,"url":"atkey-2014-from.html","headings":[],"body":""});

@@ -1,0 +1,1 @@
+heliaSearchData("d/eigilfjeldgrenrischel",{"id":"eigilfjeldgrenrischel","title":"Eigil Fjeldgren Rischel","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"eigilfjeldgrenrischel.html","headings":[],"body":""});

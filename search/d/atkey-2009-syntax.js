@@ -1,0 +1,1 @@
+heliaSearchData("d/atkey-2009-syntax",{"id":"atkey-2009-syntax","title":"Syntax for Free: Representing Syntax with Binding Using Parametricity","kind":"reference","tags":["abstract-syntax","parametricity"],"authors":["Robert Atkey"],"venue":["TLCA","Typed Lambda Calculi and Applications"],"date":null,"url":"atkey-2009-syntax.html","headings":[],"body":""});

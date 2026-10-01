@@ -1,0 +1,1 @@
+heliaSearchData("d/mcbride-2008-clowns",{"id":"mcbride-2008-clowns","title":"Clowns to the left of me, jokers to the right (pearl): dissecting data structures","kind":"reference","tags":["generic-programming"],"authors":["Conor McBride"],"venue":["POPL","Symposium on Principles of Programming Languages"],"date":null,"url":"mcbride-2008-clowns.html","headings":[],"body":""});

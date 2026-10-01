@@ -1,0 +1,1 @@
+heliaSearchData("d/adrianfrancalanza",{"id":"adrianfrancalanza","title":"Adrian Francalanza","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"adrianfrancalanza.html","headings":[],"body":""});

@@ -1,0 +1,1 @@
+heliaSearchData("d/barnard-college",{"id":"barnard-college","title":"Barnard College","kind":"institution","tags":[],"authors":[],"venue":[],"date":null,"url":"barnard-college.html","headings":[],"body":""});

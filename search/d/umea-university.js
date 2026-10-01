@@ -1,0 +1,1 @@
+heliaSearchData("d/umea-university",{"id":"umea-university","title":"Umeå University","kind":"institution","tags":[],"authors":[],"venue":[],"date":null,"url":"umea-university.html","headings":[],"body":""});

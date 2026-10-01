@@ -1,0 +1,1 @@
+heliaSearchData("d/tag-grobner-bases",{"id":"tag-grobner-bases","title":"grobner-bases","kind":"tag","tags":[],"authors":[],"venue":[],"date":null,"url":"tag-grobner-bases.html","headings":[],"body":""});

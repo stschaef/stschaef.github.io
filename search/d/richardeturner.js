@@ -1,0 +1,1 @@
+heliaSearchData("d/richardeturner",{"id":"richardeturner","title":"Richard E. Turner","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"richardeturner.html","headings":[],"body":""});

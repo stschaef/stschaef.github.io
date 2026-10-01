@@ -1,0 +1,1 @@
+heliaSearchData("d/kiev-state-university",{"id":"kiev-state-university","title":"Kiev State University","kind":"institution","tags":[],"authors":[],"venue":[],"date":null,"url":"kiev-state-university.html","headings":[],"body":""});

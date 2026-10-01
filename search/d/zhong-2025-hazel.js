@@ -1,0 +1,1 @@
+heliaSearchData("d/zhong-2025-hazel",{"id":"zhong-2025-hazel","title":"Hazel Deriver: A Live Editor for Constructing Rule-Based Derivations","kind":"reference","tags":["live-programming"],"authors":["Cyrus Omar","Zhiyao Zhong"],"venue":["VL/HCC","Symposium on Visual Languages and Human-Centric Computing"],"date":null,"url":"zhong-2025-hazel.html","headings":[],"body":""});

@@ -1,0 +1,1 @@
+heliaSearchData("d/vakar-2019-a",{"id":"vakar-2019-a","title":"A domain theory for statistical probabilistic programming","kind":"reference","tags":["denotational-semantics","probabilistic"],"authors":["Matthijs Vákár","Ohad Kammar","Sam Staton"],"venue":["POPL","Symposium on Principles of Programming Languages"],"date":null,"url":"vakar-2019-a.html","headings":[],"body":""});

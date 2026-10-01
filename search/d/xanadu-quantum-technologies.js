@@ -1,0 +1,1 @@
+heliaSearchData("d/xanadu-quantum-technologies",{"id":"xanadu-quantum-technologies","title":"Xanadu Quantum Technologies","kind":"institution","tags":[],"authors":[],"venue":[],"date":null,"url":"xanadu-quantum-technologies.html","headings":[],"body":""});

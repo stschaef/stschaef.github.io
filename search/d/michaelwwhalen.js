@@ -1,0 +1,1 @@
+heliaSearchData("d/michaelwwhalen",{"id":"michaelwwhalen","title":"Michael W. Whalen","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"michaelwwhalen.html","headings":[],"body":""});

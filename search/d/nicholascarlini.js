@@ -1,0 +1,1 @@
+heliaSearchData("d/nicholascarlini",{"id":"nicholascarlini","title":"Nicholas Carlini","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"nicholascarlini.html","headings":[],"body":""});

@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>Siloz: Leveraging DRAM Isolation Domains to Prevent Inter-VM Rowhammer</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Ctext y=%22.9em%22 font-size=%2290%22%3E%F0%9F%8C%BB%3C/text%3E%3C/svg%3E">
+<meta name="generator" content="helia">
+<link rel="alternate" type="application/atom+xml" title="Steven Schaefer" href="feed.xml">
+<link rel="alternate" type="application/feed+json" title="Steven Schaefer" href="feed.json">
+<script src="helia/theme-version.js"></script>
+<script src="theme/folio-early.js"></script>
+<link rel="stylesheet" href="helia/theme.css">
+<link rel="stylesheet" href="helia/highlight.css">
+<link rel="stylesheet" href="helia/search.css">
+<link rel="stylesheet" href="theme/katex.css">
+<link rel="stylesheet" href="theme/recipe.css">
+<link rel="stylesheet" href="theme/site.css">
+<link rel="stylesheet" href="theme/folio.css">
+<script defer src="helia/runtime.js"></script>
+<script defer src="helia/search.js"></script>
+<script defer src="theme/glyphcraft.js"></script>
+<script defer src="theme/glyphart.js"></script>
+<script defer src="theme/glyphgen.js"></script>
+<script defer src="theme/ornament.js"></script>
+<script defer src="theme/folio.js"></script>
+<script defer src="theme/portrait.js"></script>
+<script type="application/json" id="helia-widgets">{"helia-cite-formats":"widgets/helia-cite-formats-a3294ac7.js"}</script>
+<link rel="modulepreload" href="widgets/helia-cite-formats-a3294ac7.js">
+<script type="module" src="widgets/runtime.js"></script>
+</head>
+<body>
+<nav class="helia-topbar"><a class="helia-home" href="home.html">Steven Schaefer</a><ul class="helia-nav-links"><li><a href="stevenschaefer.html">About Me</a></li><li><a href="research.html">Research</a></li><li><a href="new.html">New</a></li></ul><button type="button" class="helia-search-button" aria-label="Search (/ or Ctrl+K)" aria-haspopup="dialog"><span class="helia-search-icon">⌕</span><span class="helia-search-label">Search</span><kbd class="helia-search-key">/</kbd></button></nav>
+<div class="helia-page" data-kind="reference">
+<article class="helia-article">
+<header class="helia-header" data-entry="loughlin-2023-siloz" data-kind="reference">
+<h2 class="helia-heading"><span class="helia-taxon">Reference.</span> Siloz: Leveraging DRAM Isolation Domains to Prevent Inter-VM Rowhammer</h2>
+<div class="helia-meta"><span class="helia-author"><a class="helia-entry-link" href="kevinloughlin.html" data-entry="kevinloughlin">Kevin Loughlin</a>, <a class="helia-entry-link" href="jonahrosenblum.html" data-entry="jonahrosenblum">Jonah Rosenblum</a>, <a class="helia-entry-link" href="stefansaroiu.html" data-entry="stefansaroiu">Stefan Saroiu</a>, <a class="helia-entry-link" href="alecwolman.html" data-entry="alecwolman">Alec Wolman</a>, <a class="helia-entry-link" href="dimitriosskarlatos.html" data-entry="dimitriosskarlatos">Dimitrios Skarlatos</a>, <a class="helia-entry-link" href="bariskasikci.html" data-entry="bariskasikci">Baris Kasikci</a></span> · <span class="helia-byline"><a class="helia-entry-link" href="sosp.html" data-entry="sosp">SOSP</a> · 2023</span> · <span class="helia-tags"><span class="helia-tag" data-tag="security"><a class="helia-entry-link" href="tag-security.html" data-entry="tag-security">security</a></span></span> · <span class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/3600006.3613143">DOI</a></span></span></div>
+</header>
+<div class="helia-body">
+</div>
+<div class="helia-cite helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><h3 class="helia-heading">Cite</h3>
+</summary>
+<div class="helia-group-body">
+<div class="helia-widget" data-widget="helia-cite-formats" data-props="{&quot;key&quot;:&quot;loughlin-2023-siloz&quot;,&quot;bibtex&quot;:&quot;@inproceedings{loughlin-2023-siloz, series={SOSP ’23}, title={Siloz: Leveraging DRAM Isolation Domains to Prevent Inter-VM Rowhammer}, url={http://dx.doi.org/10.1145/3600006.3613143}, DOI={10.1145/3600006.3613143}, booktitle={Proceedings of the 29th Symposium on Operating Systems Principles}, publisher={ACM}, author={Loughlin, Kevin and Rosenblum, Jonah and Saroiu, Stefan and Wolman, Alec and Skarlatos, Dimitrios and Kasikci, Baris}, year={2023}, month=Oct, pages={417–433}, collection={SOSP ’23} }&quot;,&quot;bib-file&quot;:&quot;loughlin-2023-siloz.bib&quot;,&quot;hayagriva&quot;:&quot;loughlin-2023-siloz:\n  type: article\n  title: &#39;Siloz: Leveraging DRAM Isolation Domains to Prevent Inter-VM Rowhammer&#39;\n  author:\n  - Loughlin, Kevin\n  - Rosenblum, Jonah\n  - Saroiu, Stefan\n  - Wolman, Alec\n  - Skarlatos, Dimitrios\n  - Kasikci, Baris\n  date: 2023-10\n  page-range: 417-433\n  url: http://dx.doi.org/10.1145/3600006.3613143\n  serial-number:\n    doi: 10.1145/3600006.3613143\n  parent:\n    type: proceedings\n    title: Proceedings of the 29th Symposium on Operating Systems Principles\n    publisher: ACM\n    parent:\n      type: proceedings\n      title: SOSP ’23\n&quot;,&quot;yml-file&quot;:&quot;loughlin-2023-siloz.yml&quot;}"><div class="helia-cite-key" data-copy="@loughlin-2023-siloz" data-copy-label="citation key"><span class="helia-bib-key">Cite as</span> <code class="helia-raw-inline">@loughlin-2023-siloz</code> (helia, typst) · <code class="helia-raw-inline">\cite{loughlin-2023-siloz}</code> (LaTeX)</div>
+<div class="helia-cite-format helia-collapsible" data-format="bibtex" data-copy="true" data-copy-label="BibTeX">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">BibTeX</span></summary>
+<div class="helia-group-body">
+<details class="helia-code" open><summary class="helia-code-summary"><span class="helia-code-lang">bibtex</span> · <span class="helia-code-lines">1 line</span></summary><pre class="helia-raw"><code class="language-bibtex"><span class="hl-text hl-bibtex"><span class="hl-meta hl-entry hl-braces hl-bibtex"><span class="hl-keyword hl-other hl-entry-type hl-bibtex"><span class="hl-punctuation hl-definition hl-keyword hl-bibtex">@</span>inproceedings</span><span class="hl-punctuation hl-section hl-entry hl-begin hl-bibtex">{</span><span class="hl-entity hl-name hl-type hl-entry-key hl-bibtex">loughlin-2023-siloz</span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">series</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>SOSP ’23<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">title</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>Siloz: Leveraging DRAM Isolation Domains to Prevent Inter-VM Rowhammer<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">url</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>http://dx.doi.org/10.1145/3600006.3613143<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">DOI</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>10.1145/3600006.3613143<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">booktitle</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>Proceedings of the 29th Symposium on Operating Systems Principles<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">publisher</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>ACM<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">author</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>Loughlin, Kevin and Rosenblum, Jonah and Saroiu, Stefan and Wolman, Alec and Skarlatos, Dimitrios and Kasikci, Baris<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">year</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>2023<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">month</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span>Oct</span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">pages</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>417–433<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">collection</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>SOSP ’23<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span> </span><span class="hl-punctuation hl-section hl-entry hl-end hl-bibtex">}</span></span></span></code></pre></details>
+</div>
+</details>
+</div>
+<div class="helia-cite-format helia-collapsible" data-format="hayagriva" data-copy="true" data-copy-label="hayagriva YAML">
+<details>
+<summary class="helia-group-summary"><span class="helia-group-title">hayagriva YAML (typst)</span></summary>
+<div class="helia-group-body">
+<details class="helia-code" open><summary class="helia-code-summary"><span class="helia-code-lang">yaml</span> · <span class="helia-code-lines">22 lines</span></summary><pre class="helia-raw"><code class="language-yaml"><span class="hl-source hl-yaml"><span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">loughlin-2023-siloz</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">type</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">article</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">title</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-quoted hl-single hl-yaml"><span class="hl-punctuation hl-definition hl-string hl-begin hl-yaml">&#39;</span>Siloz: Leveraging DRAM Isolation Domains to Prevent Inter-VM Rowhammer<span class="hl-punctuation hl-definition hl-string hl-end hl-yaml">&#39;</span></span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">author</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Loughlin, Kevin</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Rosenblum, Jonah</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Saroiu, Stefan</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Wolman, Alec</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Skarlatos, Dimitrios</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Kasikci, Baris</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">date</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">2023-10</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">page-range</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">417-433</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">url</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">http://dx.doi.org/10.1145/3600006.3613143</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">serial-number</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">doi</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">10.1145/3600006.3613143</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">parent</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">type</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">proceedings</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">title</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Proceedings of the 29th Symposium on Operating Systems Principles</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">publisher</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">ACM</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">parent</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span>
+      <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">type</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">proceedings</span>
+      <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">title</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">SOSP ’23</span>
+</span></code></pre></details>
+</div>
+</details>
+</div>
+<div class="helia-cite-files">Download: <a class="helia-link" href="loughlin-2023-siloz.bib">loughlin-2023-siloz.bib</a> · <a class="helia-link" href="loughlin-2023-siloz.yml">loughlin-2023-siloz.yml</a></div>
+</div>
+</div>
+</details>
+</div>
+<div class="helia-reference-cites helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">Cites 171 works (0 here)</span></summary>
+<div class="helia-group-body">
+<div class="helia-reference-cites-away helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">External (171)</span></summary>
+<div class="helia-group-body">
+<ul>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1109/hpca56546.2023.10071066">A Systematic Study of DDR4 DRAM Faults in the Field</a> (2023)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3652597">Intel TDX Demystified: A Top-Down Approach</a> (2023)</li>
+<li>Copy-on-Flip: Hardening ECC Memory Against Rowhammer Attacks (2023)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.48550/arxiv.2302.03591">DSAC: Low-Cost Rowhammer Mitigation using In-Dram Stochastic and Approximate Counting Algorithm</a> (2023)</li>
+<li>DDR5 Registering Clock Driver Definition (DDR5RCD02) (2023)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1109/tcad.2022.3206729">Machine learning-based rowhammer mitigation</a> (2023)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1109/sp46215.2023.10179390">CSI:Rowhammer – Cryptographic Security and Integrity against Rowhammer</a> (2023)</li>
+<li>A 1.1 V 16Gb DDR5 DRAM with Probabilistic-Aggressor Tracking, Refresh-Management Functionality, Per-Row Hammer Tracking, a Multi-Step Precharge, and Core-Bias Modulation for Security and Reliability Enhancement (2023)</li>
+<li>Pond: CXL-Based Memory Pooling Systems for Cloud Platforms (2023)</li>
+<li>Siloz Source Code. github.com/efeslab/siloz (2023)</li>
+<li>RowPress: Amplifying Read Disturbance in Modern DRAM Chips (2023)</li>
+<li>Hyrax: Fail-in-Place Server Operation in Cloud Platforms (2023)</li>
+<li>High Performance Computing VM Sizes (2023)</li>
+<li>X-ray: Discovering DRAM Internal Structure and Error Characteristics by Issuing Memory Commands (2023)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1109/dsn-s58398.2023.00042">An Experimental Analysis of RowHammer in HBM2 DRAM Chips</a> (2023)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1109/dsn58367.2023.00022">PT-Guard: Integrity-Protected Page Tables to Defend Against Breakthrough Rowhammer Attacks</a> (2023)</li>
+<li>Linux Source Code (2023)</li>
+<li>SHADOW: Preventing Row Hammer in DRAM with Intra-Subarray Row Shuffling (2023)</li>
+<li>Scalable and Secure Row-Swap: Efficient and Safe Row Hammer Mitigation in Memory Systems (2023)</li>
+<li>Contiguitas: The Pursuit of Physical Memory Contiguity in Datacenters (2023)</li>
+<li>DNN-Defender: An in-DRAM Deep Neural Network Defense Mechanism for Adversarial Weight Attack (2023)</li>
+<li>BLASTER: Characterizing the Blast Radius of Rowhammer (2023)</li>
+<li>NeuroPots: Realtime Proactive Defense against Bit-Flip Attacks in Neural Networks (2023)</li>
+<li>REGA: Scalable Rowhammer Mitigation with Refresh-Generating Activations (2023)</li>
+<li>HammerScope: Observing DRAM Power Consumption Using Rowhammer (2022)</li>
+<li>DAGguise: Mitigating Memory Timing Side Channels (2022)</li>
+<li>The Memory API. qemu.readthedocs.io/en/latest/devel/memory.html (2022)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3548606.3560673">When Frodo Flips: End-to-End Key Recovery on FrodoKEM via Rowhammer</a> (2022)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1109/hpca53966.2022.00035">SafeGuard: Reducing the Security Risk from Row-Hammer via Low-Cost Integrity Protection</a> (2022)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1109/dsn58367.2023.00016">SecDDR: Enabling Low-Cost Secure Memories by Protecting the DDR Interface</a> (2022)</li>
+<li>Intel Trust Domain Extensions (Intel TDX) (2022)</li>
+<li>Introduction to Memory Bandwidth Allocation. intel.com/content/www/us/en/developer/articles/technical/introduction-to-memory-bandwidth-allocation.html (2022)</li>
+<li>SKX EDAC Linux Driver. github.com/torvalds/linux/blob/master/drivers/edac/skx_base.c (2022)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1109/sp46214.2022.9833772">Blacksmith: Scalable Rowhammering in the Frequency Domain</a> (2022)</li>
+<li>NUMA Memory Policy. kernel.org/doc/html/latest/admin-guide/mm/numa_memory_policy.html (2022)</li>
+<li>Half-Double: Hammering From the Next Row Over (2022)</li>
+<li>Software-Defined Memory Controllers: An Idea Whose Time Has Come (2022)</li>
+<li>MOESI-prime: Preventing Coherence-Induced Hammering in Commodity Workloads (2022)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1109/sp46214.2022.9833664">ProTRR: Principled yet Optimal In-DRAM Target Row Refresh</a> (2022)</li>
+<li>Jolt: Recovering TLS Signing Keys via Rowhammer Faults (2022)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3566097.3568350">Fundamentally Understanding and Solving RowHammer</a> (2022)</li>
+<li>The Price of Secrecy: How Hiding Internal DRAM Topologies Hurts Rowhammer Defenses (2022)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1109/micro56248.2022.00022">AQUA: Scalable Rowhammer Mitigation by Quarantining Aggressor Rows at Runtime</a> (2022)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3503222.3507720">Parallel virtualized memory translation with nested elastic cuckoo page tables</a> (2022)</li>
+<li>SpecHammer: Combining Spectre and Rowhammer for New Speculative Attacks (2022)</li>
+<li>Understanding RowHammer Under Reduced Wordline Voltage: An Experimental Study Using Real DRAM Devices (2022)</li>
+<li>HiRA: Hidden Row Activation for Reducing Refresh Latency of Off-the-Shelf DRAM Chips (2022)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-031-10989-8_48">Mitigating Targeted Bit-Flip Attacks via Data Augmentation: An Empirical Study</a> (2022)</li>
+<li>A case for self-managing DRAM chips: improving performance, efficiency, reliability, and security via autonomous in-DRAM maintenance operations (2022)</li>
+<li>Hydra: Enabling Low-Overhead Mitigation of Row-Hammer at Ultra-Low Thresholds via Hybrid Tracking (2022)</li>
+<li>Randomized Row-Swap: Mitigating Row Hammer by Breaking Spatial Correlation Between Aggressor and Victim Rows (2022)</li>
+<li>NUMA Aware Page Table's Page Allocation (2022)</li>
+<li>Using NUMA Systems with ESXi (2022)</li>
+<li>TMO: Transparent Memory Offloading in Datacenters (2022)</li>
+<li>SoftTRR: Protect Page Tables against Rowhammer Attacks using Software-only Target Row Refresh (2022)</li>
+<li>Panopticon: A Complete In-DRAM Rowhammer Mitigation (2021)</li>
+<li>Uncovering In-DRAM RowHammer Protection Mechanisms: A New Methodology, Custom RowHammer Patterns, and Implications (2021)</li>
+<li>Mithril: Cooperative Row Hammer Protection on Commodity DRAM Leveraging Managed Refresh (2021)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3458336.3465295">Stop! Hammer time: rethinking our approach to rowhammer mitigations</a> (2021)</li>
+<li>Authentication of Sub-NUMA Clustering Effect on Intel Skylake for Memory Latency and Bandwidth (2021)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3466752.3480069">A Deeper Look into RowHammer’s Sensitivities: Experimental Analysis of Real DRAM Chips and Implications on Future Attacks and Defenses</a> (2021)</li>
+<li>Paratick: Reducing Timer Overhead in Virtual Machines (2021)</li>
+<li><a class="helia-link helia-external" href="https://arxiv.org/abs/2106.07084">Security Analysis of the Silver Bullet Technique for RowHammer Prevention</a> (2021)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1109/hpca51647.2021.00037">BlockHammer: Preventing RowHammer at Low Cost by Blacklisting Rapidly-Accessed DRAM Rows</a> (2021)</li>
+<li>SMASH: Synchronized Many-sided Rowhammer Attacks from JavaScript (2021)</li>
+<li>5 Years of Cgroup v2: The Future of Linux Resource Control (2021)</li>
+<li>Intel Memory Latency Checker v3.9a (2021)</li>
+<li>Can "Micro VM" Become the Next Generation Computing Platform?: Performance Comparison Between Light Weight Virtual Machine, Container, and Traditional Virtual Machine (2021)</li>
+<li>Firecracker: Lightweight Virtualization for Serverless Applications (2020)</li>
+<li>AMD Secure Encrypted Virtualization (SEV) (2020)</li>
+<li>Are We Susceptible to Rowhammer? An End-to-End Methodology for Cloud Providers (2020)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1109/sp40000.2020.00090">TRRespass: Exploiting the Many Sides of Target Row Refresh</a> (2020)</li>
+<li>Rethinking Isolation Mechanisms for Datacenter Multitenancy (2020)</li>
+<li>Architecture Specification: Intel Trust Domain Extensions (Intel TDX) Module (2020)</li>
+<li>Double Data Rate 5 (DDR5) SDRAM Standard (2020)</li>
+<li>Revisiting RowHammer: An Experimental Analysis of Modern DRAM Devices and Mitigation Techniques (2020)</li>
+<li>RAMBleed: Reading Bits in Memory Without Accessing Them (2020)</li>
+<li>Nethammer: Inducing Rowhammer Faults Through Network Requests (2020)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1109/micro50266.2020.00014">Graphene: Strong yet Lightweight Row Hammer Protection</a> (2020)</li>
+<li>Stratus: Clouds with Microarchitectural Resource Management (2020)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1109/micro50266.2020.00036">FIGARO: Improving System Performance via Fine-Grained In-DRAM Data Relocation and Caching</a> (2020)</li>
+<li>PThammer: Cross-User-Kernel-Boundary Rowhammer Through Implicit Accesses (2020)</li>
+<li>RIP-RH: Preventing Rowhammer-Based Inter-Process Attacks (2019)</li>
+<li>Deep Learning Based Diagnostics for Rowhammer Protection of DRAM Chips (2019)</li>
+<li>Exploiting Correcting Codes: On the Effectiveness of ECC Memory Against Rowhammer Attacks (2019)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3309697.3331482">Demystifying Complex Workload-DRAM Interactions: An Experimental Study</a> (2019)</li>
+<li>Crow: A Low-Cost Substrate for Improving Dram Performance, Energy Efficiency, and Reliability (2019)</li>
+<li>DDR4 Registering Clock Driver Definition (DDR4RCD02) (2019)</li>
+<li>Pinpoint Rowhammer: Suppressing Unwanted Bit Flips on Rowhammer Attacks (2019)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1109/tc.2019.2907248">An Effective DRAM Address Remapping for Mitigating Rowhammer Errors</a> (2019)</li>
+<li>Exploiting OS-Level Memory Offlining for DRAM Power Management (2019)</li>
+<li>Detecting Malicious Attacks Exploiting Hardware Vulnerabilities Using Performance Counters (2019)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.2514/6.2019-0502">Challenges Using Linux as a Real-Time Operating System</a> (2019)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3297858.3304039">Protecting Page Tables from RowHammer Attacks using Monotonic Pointers in DRAM True-Cells</a> (2019)</li>
+<li>MRLoc: Mitigating Rowhammering Based on Memory Locality (2019)</li>
+<li>TWiCe: Preventing Row-Hammering by Exploiting Time Window Counters (2019)</li>
+<li>Virtual Machine Memory Allocation and Placement on Azure Stack (2019)</li>
+<li>Towards Understanding Application Performance and System Behavior with the Full Dynticks Feature (2018)</li>
+<li>SPEC CPU2017: Next-Generation Compute Benchmark (2018)</li>
+<li>Another Flip in the Wall of Rowhammer Defenses (2018)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1109/iccd.2018.00051">Solar-DRAM: Reducing DRAM Access Latency by Exploiting the Variation in Local Bitlines</a> (2018)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1109/hpca.2019.00011">D-RaNGe: Using Commodity DRAM Devices to Generate True Random Numbers with Low Latency and High Throughput</a> (2018)</li>
+<li>DAWG: A Defense Against Cache Timing Attacks in Speculative Execution Processors (2018)</li>
+<li>ZebRAM: Comprehensive and Compatible Software Protection Against Rowhammer Attacks (2018)</li>
+<li>ERUCA: Efficient DRAM Resource Utilization and Resource Conflict Avoidance for Memory System Parallelism (2018)</li>
+<li>Address Hashing in Intel Processors (2018)</li>
+<li>Mitigating Wordline Crosstalk Using Adaptive Trees of Counters (2018)</li>
+<li>Defeating Software Mitigations Against Rowhammer: A Surgical Precision Hammer (2018)</li>
+<li>GuardION: Practical Mitigation of DMA-based Rowhammer Attacks on ARM (2018)</li>
+<li>Multiple Physical Mappings: Dynamic DRAM Channel Sharing and Partitioning (2017)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3152701.3152709">SGX-Bomb: Locking Down the Processor via Rowhammer Attack</a> (2017)</li>
+<li>The RowHammer Problem and Other Issues We May Face as Memory Becomes Denser (2017)</li>
+<li>Mitigating Bitline Crosstalk Noise in DRAM Memories (2017)</li>
+<li>Deep Dive on Amazon EC2 (2017)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1109/hpca.2017.36">Camouflage: Memory Traffic Shaping to Mitigate Timing Attacks</a> (2017)</li>
+<li>CAn't Touch This: Software-only Mitigation against Rowhammer Attacks targeting Kernel Memory (2017)</li>
+<li>Low Power Double Data Rate 4 (LPDDR4) SDRAM Standard (JESD209-4B) (2017)</li>
+<li>PARSEC 3.0: A Multicore Benchmark Suite with Network Stacks and SPLASH-2X (2017)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1109/hpca.2016.7446095">Low-Cost Inter-Linked Subarrays (LISA): Enabling fast inter-subarray data movement in DRAM</a> (2016)</li>
+<li>Intel SGX Explained (2016)</li>
+<li>DRAM Row-Hammer Attack Reduction Using Dummy Cells (2016)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1109/test.2016.7805832">A built-in self-repair scheme for DRAMs with spare rows, columns, and bits</a> (2016)</li>
+<li>AMD memory encryption (2016)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1109/tvlsi.2016.2606499">Hardware-Efficient Built-In Redundancy Analysis for Memory with Various Spares</a> (2016)</li>
+<li>A New Approach for Rowhammer Attacks (2016)</li>
+<li>Improving Bank-Level Parallelism for Irregular Applications (2016)</li>
+<li>Drammer: Deterministic Rowhammer Attacks on Mobile Platforms (2016)</li>
+<li>One Bit Flips, One Cloud Flops: Cross-VM Row Hammer Attacks and Privilege Escalation (2016)</li>
+<li>ANVIL: Software-Based Protection Against Next-Generation Rowhammer Attacks (2016)</li>
+<li>A Survey of Repair Analysis Algorithms for Memories (2016)</li>
+<li>Rowhammer.js: A Remote Software-Induced Fault Attack in Javascript (2016)</li>
+<li>Hyper-V Virtual NUMA Overview (2016)</li>
+<li>DRAMA: Exploiting DRAM Addressing for Cross-CPU Attacks (2016)</li>
+<li>Flip Feng Shui: Hammering a Needle in the Software Stack (2016)</li>
+<li>Row Hammer Refresh Command (2015)</li>
+<li>Armor: A RunTime Memory Hot-Row Detector (2015)</li>
+<li>Systematic Reverse Engineering of Cache Slice Selection in Intel Processors (2015)</li>
+<li>Improving DRAM Latency with Dynamic Asymmetric Subarray (2015)</li>
+<li>Exploiting the DRAM Rowhammer Bug to Gain Kernel Privileges (2015)</li>
+<li>Avoiding Information Leakage in the Memory Controller with Fixed Service Policies (2015)</li>
+<li>Xen on NUMA Machines (2015)</li>
+<li>Mapping the Intel Last-Level Cache (2015)</li>
+<li>Improving Memory Error Handling Using Linux (2014)</li>
+<li>Double Data Rate 4 (DDR4) SDRAM Standard (2014)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/2678373.2665726">Flipping bits in memory without accessing them: an experimental study of DRAM disturbance errors</a> (2014)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1109/hpca.2014.6835934">Timing channel protection for a shared memory controller</a> (2014)</li>
+<li>Improving DRAM Performance by Parallelizing Refreshes with Accesses (2014)</li>
+<li>Tiered-Latency DRAM: A Low Latency and Low Cost DRAM Architecture (2013)</li>
+<li>Memory Scaling: A Systems Architecture Perspective (2013)</li>
+<li>Package org.apache.hadoop.examples.terasort (2013)</li>
+<li>Reducing Memory Access Latency with Asymmetric DRAM Bank Organizations (2013)</li>
+<li>Status of Linux Dynticks (2013)</li>
+<li>Advanced Configuration and Power Interface specification (2013)</li>
+<li>A Case for Exploiting Subarray-Level Parallelism (SALP) in DRAM (2012)</li>
+<li>Memcached design on high performance RDMA capable interconnects (2011)</li>
+<li>Benchmarking Cloud Serving Systems with YCSB (2010)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1016/j.jpdc.2012.01.020">High performance network virtualization with SR-IOV</a> (2010)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1109/isqed.2009.4810274">Architecture design exploration of three-dimensional (3D) integrated DRAM</a> (2009)</li>
+<li>The PARSEC Benchmark Suite: Characterization and Architectural Implications (2008)</li>
+<li>Virtio: Towards a De-Facto Standard for Virtual I/O Devices (2008)</li>
+<li>Memory Performance Attacks: Denial of Memory Service in Multi-Core Systems (2007)</li>
+<li>Getting Maximum Mileage out of Tickless (2007)</li>
+<li>KVM: The Linux Virtual Machine Monitor (2007)</li>
+<li>QEMU, a fast and portable dynamic translator (2005)</li>
+<li>Monitoring Virtual Memory with vmstat (2005)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1109/mc.2005.163">Intel virtualization technology</a> (2005)</li>
+<li>Kernel Korner: CPU Affinity (2003)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1109/9780470544426">DRAM circuit design</a> (2000)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/360128.360134">A permutation-based page interleaving scheme to reduce row-buffer conflicts and exploit data locality</a> (2000)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1109/hpca.1999.744334">Impulse: building a smarter memory controller</a> (1999)</li>
+<li>Reduce CPU performance spikes (Red Hat Enterprise Linux for Real Time 7 tuning guide, §2.14)</li>
+</ul>
+</div>
+</details>
+</div>
+</div>
+</details>
+</div>
+</article>
+<div class="helia-identity"><span class="helia-id">loughlin-2023-siloz</span> <span class="helia-kind">reference</span> <span class="helia-path">entries/refs/loughlin-2023-siloz/loughlin-2023-siloz.hel</span></div>
+</div>
+</body>
+</html>

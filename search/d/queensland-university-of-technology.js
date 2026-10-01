@@ -1,0 +1,1 @@
+heliaSearchData("d/queensland-university-of-technology",{"id":"queensland-university-of-technology","title":"Queensland University of Technology","kind":"institution","tags":[],"authors":[],"venue":[],"date":null,"url":"queensland-university-of-technology.html","headings":[],"body":""});

@@ -1,0 +1,1 @@
+heliaSearchData("d/earth-life-science-institute",{"id":"earth-life-science-institute","title":"Earth-Life Science Institute","kind":"institution","tags":[],"authors":[],"venue":[],"date":null,"url":"earth-life-science-institute.html","headings":[],"body":""});

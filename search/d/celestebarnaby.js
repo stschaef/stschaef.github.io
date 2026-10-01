@@ -1,0 +1,1 @@
+heliaSearchData("d/celestebarnaby",{"id":"celestebarnaby","title":"Celeste Barnaby","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"celestebarnaby.html","headings":[],"body":""});

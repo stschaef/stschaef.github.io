@@ -1,0 +1,1 @@
+heliaSearchData("d/atkey-2017-observed",{"id":"atkey-2017-observed","title":"Observed Communication Semantics for Classical Processes","kind":"reference","tags":["linear-logic","session-types"],"authors":["Robert Atkey"],"venue":["ESOP","European Symposium on Programming"],"date":null,"url":"atkey-2017-observed.html","headings":[],"body":""});

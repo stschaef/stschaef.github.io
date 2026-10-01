@@ -1,0 +1,1 @@
+heliaSearchData("d/smith-2023-state",{"id":"smith-2023-state","title":"State of the Practice for Lattice Boltzmann Method Software","kind":"reference","tags":[],"authors":["Jacques Carette","Peter Michalski","Spencer Smith","Zahra Keshavarz-Motamed"],"venue":["Archives of Computational Methods in Engineering"],"date":null,"url":"smith-2023-state.html","headings":[],"body":""});

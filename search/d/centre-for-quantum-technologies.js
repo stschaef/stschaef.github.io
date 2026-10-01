@@ -1,0 +1,1 @@
+heliaSearchData("d/centre-for-quantum-technologies",{"id":"centre-for-quantum-technologies","title":"Centre for Quantum Technologies","kind":"institution","tags":[],"authors":[],"venue":[],"date":null,"url":"centre-for-quantum-technologies.html","headings":[],"body":""});

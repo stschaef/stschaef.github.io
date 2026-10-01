@@ -1,0 +1,1 @@
+heliaSearchData("d/carlerasmussen",{"id":"carlerasmussen","title":"Carl E. Rasmussen","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"carlerasmussen.html","headings":[],"body":""});

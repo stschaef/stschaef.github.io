@@ -1,0 +1,1 @@
+heliaSearchData("d/philipjohnsonfreyd",{"id":"philipjohnsonfreyd","title":"Philip Johnson-Freyd","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"philipjohnsonfreyd.html","headings":[],"body":""});

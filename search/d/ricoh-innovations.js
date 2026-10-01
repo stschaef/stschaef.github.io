@@ -1,0 +1,1 @@
+heliaSearchData("d/ricoh-innovations",{"id":"ricoh-innovations","title":"Ricoh Innovations","kind":"institution","tags":[],"authors":[],"venue":[],"date":null,"url":"ricoh-innovations.html","headings":[],"body":""});

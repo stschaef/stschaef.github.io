@@ -1,0 +1,1 @@
+heliaSearchData("d/universitat-innsbruck",{"id":"universitat-innsbruck","title":"Universität Innsbruck","kind":"institution","tags":[],"authors":[],"venue":[],"date":null,"url":"universitat-innsbruck.html","headings":[],"body":""});

@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>Linear Effects, Exceptions, and Resource Safety: A Curry-Howard Correspondence for Destructors</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Ctext y=%22.9em%22 font-size=%2290%22%3E%F0%9F%8C%BB%3C/text%3E%3C/svg%3E">
+<meta name="generator" content="helia">
+<link rel="alternate" type="application/atom+xml" title="Steven Schaefer" href="feed.xml">
+<link rel="alternate" type="application/feed+json" title="Steven Schaefer" href="feed.json">
+<script src="helia/theme-version.js"></script>
+<script src="theme/folio-early.js"></script>
+<link rel="stylesheet" href="helia/theme.css">
+<link rel="stylesheet" href="helia/highlight.css">
+<link rel="stylesheet" href="helia/search.css">
+<link rel="stylesheet" href="theme/katex.css">
+<link rel="stylesheet" href="theme/recipe.css">
+<link rel="stylesheet" href="theme/site.css">
+<link rel="stylesheet" href="theme/folio.css">
+<script defer src="helia/runtime.js"></script>
+<script defer src="helia/search.js"></script>
+<script defer src="theme/glyphcraft.js"></script>
+<script defer src="theme/glyphart.js"></script>
+<script defer src="theme/glyphgen.js"></script>
+<script defer src="theme/ornament.js"></script>
+<script defer src="theme/folio.js"></script>
+<script defer src="theme/portrait.js"></script>
+<script type="application/json" id="helia-widgets">{"helia-cite-formats":"widgets/helia-cite-formats-a3294ac7.js"}</script>
+<link rel="modulepreload" href="widgets/helia-cite-formats-a3294ac7.js">
+<script type="module" src="widgets/runtime.js"></script>
+</head>
+<body>
+<nav class="helia-topbar"><a class="helia-home" href="home.html">Steven Schaefer</a><ul class="helia-nav-links"><li><a href="stevenschaefer.html">About Me</a></li><li><a href="research.html">Research</a></li><li><a href="new.html">New</a></li></ul><button type="button" class="helia-search-button" aria-label="Search (/ or Ctrl+K)" aria-haspopup="dialog"><span class="helia-search-icon">⌕</span><span class="helia-search-label">Search</span><kbd class="helia-search-key">/</kbd></button></nav>
+<div class="helia-page" data-kind="reference">
+<article class="helia-article">
+<header class="helia-header" data-entry="congard-2026-linear" data-kind="reference">
+<h2 class="helia-heading"><span class="helia-taxon">Reference.</span> Linear Effects, Exceptions, and Resource Safety: A Curry-Howard Correspondence for Destructors</h2>
+<div class="helia-meta"><span class="helia-author"><a class="helia-entry-link" href="sidneycongard.html" data-entry="sidneycongard">Sidney Congard</a>, <a class="helia-entry-link" href="guillaumemunchmaccagnoni.html" data-entry="guillaumemunchmaccagnoni">Guillaume Munch-Maccagnoni</a>, <a class="helia-entry-link" href="remidouence.html" data-entry="remidouence">Rémi Douence</a></span> · <span class="helia-byline"><a class="helia-entry-link" href="esop.html" data-entry="esop">ESOP</a> · 2026</span> · <span class="helia-tags"><span class="helia-tag" data-tag="linear-logic"><a class="helia-entry-link" href="tag-linear-logic.html" data-entry="tag-linear-logic">linear-logic</a></span> <span class="helia-tag" data-tag="effects"><a class="helia-entry-link" href="tag-effects.html" data-entry="tag-effects">effects</a></span></span> · <span class="helia-entry-links"><span class="helia-entry-link" data-field="pdf-url"><a class="helia-link helia-external" href="https://arxiv.org/pdf/2510.23517">PDF</a></span> · <span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-032-22720-1_8">DOI</a></span> · <span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/2510.23517">arXiv</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/conf/esop/CongardMD26">pldb</a></span></span></div>
+</header>
+<div class="helia-body">
+<div class="helia-abstract">We analyse the problem of combining linearity, effects, and exceptions, in abstract models of programming languages, as the issue of providing some kind of strength for a monad <span class="helia-math helia-math-inline helia-mathml"><math><mi>𝑇</mi><mrow><mo stretchy="false">(</mo><mrow><mo>−</mo><mo>⊕</mo><mi>𝐸</mi></mrow><mo stretchy="false">)</mo></mrow></math></span> in a linear setting. We consider in particular for T the allocation monad, which we introduce to model and study resource-safety properties. We apply these results to a series of two linear effectful calculi for which we establish their resource-safety properties. The first calculus is a linear (optionally ordered) call-by-push-value language with two allocation effects <span class="helia-math helia-math-inline helia-mathml"><math><mtext>𝐧𝐞𝐰</mtext></math></span> and <span class="helia-math helia-math-inline helia-mathml"><math><mtext>𝐝𝐞𝐥𝐞𝐭𝐞</mtext></math></span>. The resource-safety properties follow from the linear and ordered character of the typing rules. We then integrate exceptions with linearity and effects by adjoining default destruction actions to types, as inspired by C++/Rust destructors. We see destructors as objects <span class="helia-math helia-math-inline helia-mathml"><math><mi>𝛿</mi><mo lspace="0.2777777777777778em" rspace="0.2777777777777778em">:</mo><mi>𝐴</mi><mo stretchy="false">→</mo><mi>𝑇</mi><mi>𝐼</mi></math></span> in the slice category over <span class="helia-math helia-math-inline helia-mathml"><math><mi>𝑇</mi><mi>𝐼</mi></math></span>. This construction gives rise to a second calculus, the resource call-by-push-value, featuring exceptions and destructors, and whose weakening and exchange rules perform side-effects. It is therefore affine at the level of types but ordered at the level of derivations. As in C++ and Rust, a “move” operation—the side-effecting exchange rule—is necessary for releasing resources in random order, as opposed to LIFO order.</div>
+</div>
+<div class="helia-cite helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><h3 class="helia-heading">Cite</h3>
+</summary>
+<div class="helia-group-body">
+<div class="helia-widget" data-widget="helia-cite-formats" data-props="{&quot;key&quot;:&quot;congard-2026-linear&quot;,&quot;bibtex&quot;:&quot;@inbook{congard-2026-linear, title={Linear Effects, Exceptions, and Resource Safety: A Curry-Howard Correspondence for Destructors}, ISBN={9783032227201}, ISSN={1611-3349}, url={http://dx.doi.org/10.1007/978-3-032-22720-1_8}, DOI={10.1007/978-3-032-22720-1_8}, booktitle={Programming Languages and Systems}, publisher={Springer Nature Switzerland}, author={Congard, Sidney and Munch-Maccagnoni, Guillaume and Douence, Rémi}, year={2026}, pages={190–219} }&quot;,&quot;bib-file&quot;:&quot;congard-2026-linear.bib&quot;,&quot;hayagriva&quot;:&quot;congard-2026-linear:\n  type: chapter\n  title: &#39;Linear Effects, Exceptions, and Resource Safety: A Curry-Howard Correspondence for Destructors&#39;\n  author:\n  - Congard, Sidney\n  - Munch-Maccagnoni, Guillaume\n  - Douence, Rémi\n  date: 2026\n  page-range: 190-219\n  url: http://dx.doi.org/10.1007/978-3-032-22720-1_8\n  serial-number:\n    doi: 10.1007/978-3-032-22720-1_8\n    isbn: &#39;9783032227201&#39;\n    issn: 1611-3349\n  parent:\n    type: book\n    title: Programming Languages and Systems\n    publisher: Springer Nature Switzerland\n&quot;,&quot;yml-file&quot;:&quot;congard-2026-linear.yml&quot;}"><div class="helia-cite-key" data-copy="@congard-2026-linear" data-copy-label="citation key"><span class="helia-bib-key">Cite as</span> <code class="helia-raw-inline">@congard-2026-linear</code> (helia, typst) · <code class="helia-raw-inline">\cite{congard-2026-linear}</code> (LaTeX)</div>
+<div class="helia-cite-format helia-collapsible" data-format="bibtex" data-copy="true" data-copy-label="BibTeX">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">BibTeX</span></summary>
+<div class="helia-group-body">
+<details class="helia-code" open><summary class="helia-code-summary"><span class="helia-code-lang">bibtex</span> · <span class="helia-code-lines">1 line</span></summary><pre class="helia-raw"><code class="language-bibtex"><span class="hl-text hl-bibtex"><span class="hl-meta hl-entry hl-braces hl-bibtex"><span class="hl-keyword hl-other hl-entry-type hl-bibtex"><span class="hl-punctuation hl-definition hl-keyword hl-bibtex">@</span>inbook</span><span class="hl-punctuation hl-section hl-entry hl-begin hl-bibtex">{</span><span class="hl-entity hl-name hl-type hl-entry-key hl-bibtex">congard-2026-linear</span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">title</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>Linear Effects, Exceptions, and Resource Safety: A Curry-Howard Correspondence for Destructors<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">ISBN</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>9783032227201<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">ISSN</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>1611-3349<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">url</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>http://dx.doi.org/10.1007/978-3-032-22720-1_8<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">DOI</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>10.1007/978-3-032-22720-1_8<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">booktitle</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>Programming Languages and Systems<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">publisher</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>Springer Nature Switzerland<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">author</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>Congard, Sidney and Munch-Maccagnoni, Guillaume and Douence, Rémi<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">year</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>2026<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">pages</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>190–219<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span> </span><span class="hl-punctuation hl-section hl-entry hl-end hl-bibtex">}</span></span></span></code></pre></details>
+</div>
+</details>
+</div>
+<div class="helia-cite-format helia-collapsible" data-format="hayagriva" data-copy="true" data-copy-label="hayagriva YAML">
+<details>
+<summary class="helia-group-summary"><span class="helia-group-title">hayagriva YAML (typst)</span></summary>
+<div class="helia-group-body">
+<details class="helia-code" open><summary class="helia-code-summary"><span class="helia-code-lang">yaml</span> · <span class="helia-code-lines">18 lines</span></summary><pre class="helia-raw"><code class="language-yaml"><span class="hl-source hl-yaml"><span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">congard-2026-linear</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">type</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">chapter</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">title</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-quoted hl-single hl-yaml"><span class="hl-punctuation hl-definition hl-string hl-begin hl-yaml">&#39;</span>Linear Effects, Exceptions, and Resource Safety: A Curry-Howard Correspondence for Destructors<span class="hl-punctuation hl-definition hl-string hl-end hl-yaml">&#39;</span></span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">author</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Congard, Sidney</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Munch-Maccagnoni, Guillaume</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Douence, Rémi</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">date</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-constant hl-numeric hl-integer hl-decimal hl-yaml">2026</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">page-range</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">190-219</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">url</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">http://dx.doi.org/10.1007/978-3-032-22720-1_8</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">serial-number</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">doi</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">10.1007/978-3-032-22720-1_8</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">isbn</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-quoted hl-single hl-yaml"><span class="hl-punctuation hl-definition hl-string hl-begin hl-yaml">&#39;</span>9783032227201<span class="hl-punctuation hl-definition hl-string hl-end hl-yaml">&#39;</span></span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">issn</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">1611-3349</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">parent</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">type</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">book</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">title</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Programming Languages and Systems</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">publisher</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Springer Nature Switzerland</span>
+</span></code></pre></details>
+</div>
+</details>
+</div>
+<div class="helia-cite-files">Download: <a class="helia-link" href="congard-2026-linear.bib">congard-2026-linear.bib</a> · <a class="helia-link" href="congard-2026-linear.yml">congard-2026-linear.yml</a></div>
+</div>
+</div>
+</details>
+</div>
+<div class="helia-reference-cites helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">Cites 58 works (3 here)</span></summary>
+<div class="helia-group-body">
+<div class="helia-reference-cites-here helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">With notes (3)</span></summary>
+<div class="helia-group-body">
+<section class="helia-transclusion" data-entry="munchmaccagnoni-2018-resource" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="munchmaccagnoni-2018-resource"><span class="helia-title">Resource Polymorphism</span>&nbsp;<a class="helia-slug" href="munchmaccagnoni-2018-resource.html">munchmaccagnoni-2018-resource</a><span class="helia-byline"><span class="helia-entry-link" data-entry="arxiv">arXiv</span> · 2018</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="munchmaccagnoni-2018-resource" data-kind="reference">
+<div class="helia-abstract">We present a resource-management model for ML-style programming languages, designed to be compatible with the OCaml philosophy and runtime model. This is a proposal to extend the OCaml language with destructors, move semantics, and resource polymorphism, to improve its safety, efficiency, interoperability, and expressiveness. It builds on the ownership-and-borrowing models of systems programming languages (Cyclone, C++11, Rust) and on linear types in functional programming (Linear Lisp, Clean, Alms). It continues a synthesis of resources from systems programming and resources in linear logic initiated by Baker. It is a combination of many known and some new ideas. On the novel side, it highlights the good mathematical structure of Stroustrup’s “Resource acquisition is initialisation” (RAII) idiom for resource management based on destructors, a notion sometimes confused with finalizers, and builds on it a notion of resource polymorphism, inspired by polarisation in proof theory, that mixes C++‘s RAII and a tracing garbage collector (GC). The proposal targets a new spot in the design space, with an automatic and predictable resource-management model, at the same time based on lightweight and expressive language abstractions. It is backwards-compatible: current code is expected to run with the same performance, the new abstractions fully combine with the current ones, and it supports a resource-polymorphic extension of libraries. It does so with only a few additions to the runtime, and it integrates with the current GC implementation. It is also compatible with the upcoming multicore extension, and suggests that the Rust model for eliminating data-races applies. Interesting questions arise for a safe and practical type system, many of which have already been thoroughly investigated in the languages and prototypes Cyclone, Rust, and Alms.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/1803.02796">arXiv</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="curien-2016-a" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="curien-2016-a"><span class="helia-title">A theory of effects and resources: adjunction models and polarised calculi</span>&nbsp;<a class="helia-slug" href="curien-2016-a.html">curien-2016-a</a><span class="helia-byline"><span class="helia-entry-link" data-entry="popl">POPL</span> · 2016</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="curien-2016-a" data-kind="reference">
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/2837614.2837652">DOI</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/conf/popl/CurienFM16">pldb</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="girard_linear_1987" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="girard_linear_1987"><span class="helia-title">Linear logic</span>&nbsp;<a class="helia-slug" href="girard_linear_1987.html">girard_linear_1987</a><span class="helia-byline"><span class="helia-entry-link" data-entry="tcs">TCS</span> · 1987</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="girard_linear_1987" data-kind="reference">
+<div class="helia-abstract">The familiar connective of negation is broken into two operations: linear negation which is the purely negative part of negation and the modality “of course” which has the meaning of a reaffirmation. Following this basic discovery, a completely new approach to the whole area between constructive logics and programmation is initiated.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1016/0304-3975(87)90045-4">DOI</a></span></div>
+</div>
+</div>
+</details>
+</section>
+</div>
+</details>
+</div>
+<div class="helia-reference-cites-away helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">External (55)</span></summary>
+<div class="helia-group-body">
+<ul>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-031-17244-1_6">Creusot: A Foundry for the Deductive Verification of Rust Programs</a> (2022)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3547647">Aeneas: Rust verification by functional translation</a> (2022)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3341714">Quantitative program reasoning with graded modal types</a> (2019)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.23638/lmcs-14(4:14)2018">Affine Sessions</a> (2018)</li>
+<li>A resource modality for RAII (abstract) (2018)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3158093">Linear Haskell: practical linearity in a higher-order polymorphic language</a> (2017)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3158154">RustBelt: securing the foundations of the Rust programming language</a> (2017)</li>
+<li>Retrofitting Linear Types (in submission) (2017)</li>
+<li>Note on models of polarised intuitionistic logic (Tech. rep.) (2017)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3009837.3009898">Contextual isomorphisms</a> (2016)</li>
+<li><a class="helia-link helia-external" href="https://arxiv.org/abs/1701.04919">Linear Exponential Comonads without Symmetry</a> (2016)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.4204/eptcs.176.4">Type Classes for Lightweight Substructural Types</a> (2015)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.2168/lmcs-10(1:17)2014">Linear usage of state</a> (2014)</li>
+<li>Practical Programming with Substructural Types (PhD thesis) (2012)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/2048066.2048115">A theory of substructural types and control</a> (2011)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/1926385.1926436">Practical affine types</a> (2011)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1109/lics.2009.8">Substructural Operational Semantics as Ordered Logic Programming</a> (2009)</li>
+<li>Categorical semantics of linear logic (Panoramas et Syntheses 27) (2009)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-540-78499-9_7">A Linear-non-Linear Model for a Computational Call-by-Value Lambda Calculus (Extended Abstract)</a> (2008)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/11693024_2">Linear Regions Are All You Need</a> (2006)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1016/j.scico.2006.02.003">Safe manual memory management in Cyclone</a> (2006)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-540-24754-8_17">Semantics of Linear Continuation-Passing in Call-by-Name</a> (2004)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.7551/mitpress/1104.003.0003">Substructural Type Systems</a> (2004)</li>
+<li>Call-By-Push-Value: A Functional/Imperative Synthesis (2004)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1016/s0022-4049(02)00248-7">From subfactors to categories and topology II: The quantum double of tensor categories and subfactors</a> (2003)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/512529.512563">Region-based memory management in cyclone</a> (2002)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/3-540-45788-7_10">Linearly Used Effects: Monadic and CPS Transformations into the Linear Lambda Calculus</a> (2002)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/3-540-45931-6_24">Notions of Computation Determine Monads</a> (2002)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1016/s0304-3975(00)00340-6">Premonoidal categories as categories with algebraic structure</a> (2002)</li>
+<li>A Proposal to Add Move Semantics Support to the C++ Language (2002)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1017/s0956796801004099">Exceptional syntax</a> (2001)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/3-540-44716-4_4">Proving Syntactic Properties of Exceptions in an Ordered Logical Framework</a> (2001)</li>
+<li>Linearly used continuations (2001)</li>
+<li>Ordered Linear Logic and Applications (PhD thesis) (2001)</li>
+<li>A Type System for Bounded Space and Functional In-Place Update (2000)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1016/s1571-0661(04)80078-1">Direct Models of the Computational Lambda-calculus</a> (1999)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/3-540-48959-2_17">Call-by-Push-Value: A Subsuming Paradigm</a> (1999)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1017/s0960129597002375">Premonoidal categories and notions of computation</a> (1997)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1006/inco.1996.2613">Region-Based Memory Management</a> (1997)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1017/s0960129500001055">! and ? – Storage as tensorial strength</a> (1996)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/199818.199860">“Use-once” variables and linear objects</a> (1995)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1016/s1571-0661(04)00022-2">Call-by-name, Call-by-value, Call-by-need, and the Linear Lambda Calculus</a> (1995)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/181993.181999">Linear logic and permutation stacks—the Forth shall be first</a> (1994)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/3-540-58201-0_80">A model of intuitionistic affine logic from stable domain theory</a> (1994)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/174675.178047">Representing monads</a> (1994)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/154766.155375">A history of C++</a> (1993)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/142137.142162">Lively linear Lisp</a> (1992)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/143165.143174">Linear continuations</a> (1992)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1016/0890-5401(91)90052-4">Notions of computation and monads</a> (1991)</li>
+<li>Exception Handling for C++ (1990)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1109/lics.1989.39155">Computational lambda-calculus and monads</a> (1989)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1016/0304-3975(88)90100-4">The linear abstract machine</a> (1988)</li>
+<li>On closed categories of functors (1970)</li>
+<li>Categorical models of linear logic revisited (preprint)</li>
+<li>Parametric monads and enriched adjunctions (draft)</li>
+</ul>
+</div>
+</details>
+</div>
+</div>
+</details>
+</div>
+</article>
+<div class="helia-identity"><span class="helia-id">congard-2026-linear</span> <span class="helia-kind">reference</span> <span class="helia-path">entries/refs/congard-2026-linear/congard-2026-linear.hel</span></div>
+</div>
+</body>
+</html>

@@ -1,0 +1,1 @@
+heliaSearchData("d/tallinn-university-of-technology",{"id":"tallinn-university-of-technology","title":"Tallinn University of Technology","kind":"institution","tags":[],"authors":[],"venue":[],"date":null,"url":"tallinn-university-of-technology.html","headings":[],"body":""});

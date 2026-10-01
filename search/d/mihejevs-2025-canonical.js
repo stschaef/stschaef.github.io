@@ -1,0 +1,1 @@
+heliaSearchData("d/mihejevs-2025-canonical",{"id":"mihejevs-2025-canonical","title":"Canonical bidirectional typechecking","kind":"reference","tags":["bidirectional-typing","focusing"],"authors":["Jules Hedges","Zanzi Mihejevs"],"venue":["arXiv"],"date":null,"url":"mihejevs-2025-canonical.html","headings":[],"body":""});

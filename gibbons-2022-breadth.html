@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>Breadth-First Traversal via Staging</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Ctext y=%22.9em%22 font-size=%2290%22%3E%F0%9F%8C%BB%3C/text%3E%3C/svg%3E">
+<meta name="generator" content="helia">
+<link rel="alternate" type="application/atom+xml" title="Steven Schaefer" href="feed.xml">
+<link rel="alternate" type="application/feed+json" title="Steven Schaefer" href="feed.json">
+<script src="helia/theme-version.js"></script>
+<script src="theme/folio-early.js"></script>
+<link rel="stylesheet" href="helia/theme.css">
+<link rel="stylesheet" href="helia/highlight.css">
+<link rel="stylesheet" href="helia/search.css">
+<link rel="stylesheet" href="theme/katex.css">
+<link rel="stylesheet" href="theme/recipe.css">
+<link rel="stylesheet" href="theme/site.css">
+<link rel="stylesheet" href="theme/folio.css">
+<script defer src="helia/runtime.js"></script>
+<script defer src="helia/search.js"></script>
+<script defer src="theme/glyphcraft.js"></script>
+<script defer src="theme/glyphart.js"></script>
+<script defer src="theme/glyphgen.js"></script>
+<script defer src="theme/ornament.js"></script>
+<script defer src="theme/folio.js"></script>
+<script defer src="theme/portrait.js"></script>
+<script type="application/json" id="helia-widgets">{"helia-cite-formats":"widgets/helia-cite-formats-a3294ac7.js"}</script>
+<link rel="modulepreload" href="widgets/helia-cite-formats-a3294ac7.js">
+<script type="module" src="widgets/runtime.js"></script>
+</head>
+<body>
+<nav class="helia-topbar"><a class="helia-home" href="home.html">Steven Schaefer</a><ul class="helia-nav-links"><li><a href="stevenschaefer.html">About Me</a></li><li><a href="research.html">Research</a></li><li><a href="new.html">New</a></li></ul><button type="button" class="helia-search-button" aria-label="Search (/ or Ctrl+K)" aria-haspopup="dialog"><span class="helia-search-icon">⌕</span><span class="helia-search-label">Search</span><kbd class="helia-search-key">/</kbd></button></nav>
+<div class="helia-page" data-kind="reference">
+<article class="helia-article">
+<header class="helia-header" data-entry="gibbons-2022-breadth" data-kind="reference">
+<h2 class="helia-heading"><span class="helia-taxon">Reference.</span> Breadth-First Traversal via Staging</h2>
+<div class="helia-meta"><span class="helia-author"><a class="helia-entry-link" href="jeremygibbons.html" data-entry="jeremygibbons">Jeremy Gibbons</a>, <a class="helia-entry-link" href="donnachaoisinkidney.html" data-entry="donnachaoisinkidney">Donnacha Oisín Kidney</a>, <a class="helia-entry-link" href="tomschrijvers.html" data-entry="tomschrijvers">Tom Schrijvers</a>, <a class="helia-entry-link" href="nicolaswu.html" data-entry="nicolaswu">Nicolas Wu</a></span> · <span class="helia-byline"><a class="helia-entry-link" href="mpc.html" data-entry="mpc">MPC</a> · 2022</span> · <span class="helia-tags"><span class="helia-tag" data-tag="program-calculation"><a class="helia-entry-link" href="tag-program-calculation.html" data-entry="tag-program-calculation">program-calculation</a></span></span> · <span class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-031-16912-0_1">DOI</a></span></span></div>
+</header>
+<div class="helia-body">
+</div>
+<div class="helia-cite helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><h3 class="helia-heading">Cite</h3>
+</summary>
+<div class="helia-group-body">
+<div class="helia-widget" data-widget="helia-cite-formats" data-props="{&quot;key&quot;:&quot;gibbons-2022-breadth&quot;,&quot;bibtex&quot;:&quot;@inbook{gibbons-2022-breadth, title={Breadth-First Traversal via Staging}, ISBN={9783031169120}, ISSN={1611-3349}, url={http://dx.doi.org/10.1007/978-3-031-16912-0_1}, DOI={10.1007/978-3-031-16912-0_1}, booktitle={Mathematics of Program Construction}, publisher={Springer International Publishing}, author={Gibbons, Jeremy and Kidney, Donnacha Oisín and Schrijvers, Tom and Wu, Nicolas}, year={2022}, pages={1–33} }&quot;,&quot;bib-file&quot;:&quot;gibbons-2022-breadth.bib&quot;,&quot;hayagriva&quot;:&quot;gibbons-2022-breadth:\n  type: chapter\n  title: Breadth-First Traversal via Staging\n  author:\n  - Gibbons, Jeremy\n  - Kidney, Donnacha Oisín\n  - Schrijvers, Tom\n  - Wu, Nicolas\n  date: 2022\n  page-range: 1-33\n  url: http://dx.doi.org/10.1007/978-3-031-16912-0_1\n  serial-number:\n    doi: 10.1007/978-3-031-16912-0_1\n    isbn: &#39;9783031169120&#39;\n    issn: 1611-3349\n  parent:\n    type: book\n    title: Mathematics of Program Construction\n    publisher: Springer International Publishing\n&quot;,&quot;yml-file&quot;:&quot;gibbons-2022-breadth.yml&quot;}"><div class="helia-cite-key" data-copy="@gibbons-2022-breadth" data-copy-label="citation key"><span class="helia-bib-key">Cite as</span> <code class="helia-raw-inline">@gibbons-2022-breadth</code> (helia, typst) · <code class="helia-raw-inline">\cite{gibbons-2022-breadth}</code> (LaTeX)</div>
+<div class="helia-cite-format helia-collapsible" data-format="bibtex" data-copy="true" data-copy-label="BibTeX">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">BibTeX</span></summary>
+<div class="helia-group-body">
+<details class="helia-code" open><summary class="helia-code-summary"><span class="helia-code-lang">bibtex</span> · <span class="helia-code-lines">1 line</span></summary><pre class="helia-raw"><code class="language-bibtex"><span class="hl-text hl-bibtex"><span class="hl-meta hl-entry hl-braces hl-bibtex"><span class="hl-keyword hl-other hl-entry-type hl-bibtex"><span class="hl-punctuation hl-definition hl-keyword hl-bibtex">@</span>inbook</span><span class="hl-punctuation hl-section hl-entry hl-begin hl-bibtex">{</span><span class="hl-entity hl-name hl-type hl-entry-key hl-bibtex">gibbons-2022-breadth</span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">title</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>Breadth-First Traversal via Staging<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">ISBN</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>9783031169120<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">ISSN</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>1611-3349<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">url</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>http://dx.doi.org/10.1007/978-3-031-16912-0_1<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">DOI</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>10.1007/978-3-031-16912-0_1<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">booktitle</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>Mathematics of Program Construction<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">publisher</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>Springer International Publishing<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">author</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>Gibbons, Jeremy and Kidney, Donnacha Oisín and Schrijvers, Tom and Wu, Nicolas<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">year</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>2022<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">pages</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>1–33<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span> </span><span class="hl-punctuation hl-section hl-entry hl-end hl-bibtex">}</span></span></span></code></pre></details>
+</div>
+</details>
+</div>
+<div class="helia-cite-format helia-collapsible" data-format="hayagriva" data-copy="true" data-copy-label="hayagriva YAML">
+<details>
+<summary class="helia-group-summary"><span class="helia-group-title">hayagriva YAML (typst)</span></summary>
+<div class="helia-group-body">
+<details class="helia-code" open><summary class="helia-code-summary"><span class="helia-code-lang">yaml</span> · <span class="helia-code-lines">19 lines</span></summary><pre class="helia-raw"><code class="language-yaml"><span class="hl-source hl-yaml"><span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">gibbons-2022-breadth</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">type</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">chapter</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">title</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Breadth-First Traversal via Staging</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">author</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Gibbons, Jeremy</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Kidney, Donnacha Oisín</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Schrijvers, Tom</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Wu, Nicolas</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">date</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-constant hl-numeric hl-integer hl-decimal hl-yaml">2022</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">page-range</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">1-33</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">url</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">http://dx.doi.org/10.1007/978-3-031-16912-0_1</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">serial-number</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">doi</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">10.1007/978-3-031-16912-0_1</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">isbn</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-quoted hl-single hl-yaml"><span class="hl-punctuation hl-definition hl-string hl-begin hl-yaml">&#39;</span>9783031169120<span class="hl-punctuation hl-definition hl-string hl-end hl-yaml">&#39;</span></span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">issn</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">1611-3349</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">parent</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">type</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">book</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">title</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Mathematics of Program Construction</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">publisher</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Springer International Publishing</span>
+</span></code></pre></details>
+</div>
+</details>
+</div>
+<div class="helia-cite-files">Download: <a class="helia-link" href="gibbons-2022-breadth.bib">gibbons-2022-breadth.bib</a> · <a class="helia-link" href="gibbons-2022-breadth.yml">gibbons-2022-breadth.yml</a></div>
+</div>
+</div>
+</details>
+</div>
+<div class="helia-reference-cited-by helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">Cited by (2)</span></summary>
+<div class="helia-group-body">
+<section class="helia-transclusion" data-entry="yang-2026-modular" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="yang-2026-modular"><span class="helia-title">Modular models of monoids with operations by lifting functors along fibrations</span>&nbsp;<a class="helia-slug" href="yang-2026-modular.html">yang-2026-modular</a><span class="helia-byline"><span class="helia-entry-link" data-entry="jfp">JFP</span> · 2026</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="yang-2026-modular" data-kind="reference">
+<div class="helia-abstract">Inspired by Plotkin and Power’s algebraic treatment of computational effects and the principle of notions of computations as monoids, we propose a categorical framework for equational theories and models of monoids equipped with operations. This framework generalises Plotkin and Power’s algebraic treatment of effectful operations taking or returning values as input or output to operations that may take or return computations as input or output. Additionally, to give semantic models of computational effects in a modular way, we introduce a formal theory of modular constructions of algebraic structures based on the framework of lifting functors along fibrations.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="pdf-url"><a class="helia-link helia-external" href="https://jfp.episciences.org/en/articles/17958/download">PDF</a></span> · <span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.46298/jfp.17958">DOI</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/journals/jfp/YangW26">pldb</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="yang-2023-modular" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="yang-2023-modular"><span class="helia-title">Modular Models of Monoids with Operations</span>&nbsp;<a class="helia-slug" href="yang-2023-modular.html">yang-2023-modular</a><span class="helia-byline"><span class="helia-entry-link" data-entry="icfp">ICFP</span> · 2023</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="yang-2023-modular" data-kind="reference">
+<div class="helia-abstract">Inspired by algebraic effects and the principle of notions of computations as monoids, we study a categorical framework for equational theories and models of monoids equipped with operations. The framework covers not only algebraic operations but also scoped and variable-binding operations. Appealingly, in this framework both theories and models can be modularly composed. Technically, a general monoid-theory correspondence is shown, saying that the category of theories of algebraic operations is equivalent to the category of monoids. Moreover, more complex forms of operations can be coreflected into algebraic operations, in a way that preserves initial algebras. On models, we introduce modular models of a theory, which can interpret abstract syntax in the presence of other operations. We show constructions of modular models (i) from monoid transformers, (ii) from free algebras, (iii) by composition, and (iv) in symmetric monoidal categories.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="pdf-url"><a class="helia-link helia-external" href="https://dl.acm.org/doi/pdf/10.1145/3607850">PDF</a></span> · <span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/3607850">DOI</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/journals/pacmpl/YangW23">pldb</a></span></div>
+</div>
+</div>
+</details>
+</section>
+</div>
+</details>
+</div>
+<div class="helia-reference-cites helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">Cites 19 works (1 here)</span></summary>
+<div class="helia-group-body">
+<div class="helia-reference-cites-here helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">With notes (1)</span></summary>
+<div class="helia-group-body">
+<section class="helia-transclusion" data-entry="gibbons-2009-the" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="gibbons-2009-the"><span class="helia-title">The essence of the Iterator pattern</span>&nbsp;<a class="helia-slug" href="gibbons-2009-the.html">gibbons-2009-the</a><span class="helia-byline"><span class="helia-entry-link" data-entry="jfp">JFP</span> · 2009</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="gibbons-2009-the" data-kind="reference">
+<div class="helia-abstract">The Iterator pattern gives a clean interface for element-by-element access to a collection, independent of the collection’s shape. Imperative iterations using the pattern have two simultaneous aspects: mapping and accumulating . Various existing functional models of iteration capture one or other of these aspects, but not both simultaneously. We argue that C. McBride and R. Paterson’s applicative functors (Applicative programming with effects, J. Funct. Program. , 18 (1): 1–13, 2008), and in particular the corresponding traverse operator, do exactly this, and therefore capture the essence of the Iterator pattern. Moreover, they do so in a way that nicely supports modular programming. We present some axioms for traversal, discuss modularity concerns and illustrate with a simple example, the wordcount problem.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="pdf-url"><a class="helia-link helia-external" href="https://www.cambridge.org/core/services/aop-cambridge-core/content/view/3FC26EB2A63E6A2B29E07B9F0D5C5BCD/S0956796809007291a.pdf/div-class-title-the-essence-of-the-span-class-sc-iterator-span-pattern-div.pdf">PDF</a></span> · <span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1017/s0956796809007291">DOI</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/journals/jfp/GibbonsO09">pldb</a></span></div>
+</div>
+</div>
+</details>
+</section>
+</div>
+</details>
+</div>
+<div class="helia-reference-cites-away helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">External (18)</span></summary>
+<div class="helia-group-body">
+<ul>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3473577">Algebras for weighted search</a> (2021)</li>
+<li>Functions and newtype wrappers for traversing Trees: rampion/tree-traversals (2019)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1016/j.scico.2017.09.007">A unified view of monadic and applicative non-determinism</a> (2018)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1017/s0956796817000132">Notions of computation as monoids</a> (2017)</li>
+<li>Breadth-first traversal (blog post, Patterns in Functional Programming) (2015)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.4204/eptcs.153.2">Free Applicative Functors</a> (2014)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/2503778.2503781">Understanding idiomatic traversals backwards and forwards</a> (2013)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/2620678.2620687">Circularity and Lambda Abstraction: From Bird to Pettorossi and Back</a> (2013)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.4204/eptcs.76.5">An Investigation of the Laws of Traversals</a> (2012)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-642-31113-0_15">Constructing Applicative Functors</a> (2012)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-540-25935-0_3">A Gentle Introduction to Multi-stage Programming</a> (2004)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/351240.351253">Breadth-first numbering: Lessons from a small exercise in algorithm design</a> (2000)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/289423.289455">The under-appreciated unfold</a> (1998)</li>
+<li>Linear-time breadth-first tree algorithms: An exercise in the arithmetic of folds and zips (1993)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.3233/fi-1989-12407">The Lambda Abstraction Strategy for Program Derivation</a> (1989)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/bfb0014981">Higher order generalization in program derivation</a> (1987)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/bf00264249">Using circular programs to eliminate multiple traversals of data</a> (1984)</li>
+<li>Code for "Breadth-First Traversal Via Staging"</li>
+</ul>
+</div>
+</details>
+</div>
+</div>
+</details>
+</div>
+</article>
+<div class="helia-identity"><span class="helia-id">gibbons-2022-breadth</span> <span class="helia-kind">reference</span> <span class="helia-path">entries/refs/gibbons-2022-breadth/gibbons-2022-breadth.hel</span></div>
+</div>
+</body>
+</html>

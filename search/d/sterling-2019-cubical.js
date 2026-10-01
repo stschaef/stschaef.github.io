@@ -1,0 +1,1 @@
+heliaSearchData("d/sterling-2019-cubical",{"id":"sterling-2019-cubical","title":"Cubical Syntax for Reflection-Free Extensional Equality","kind":"reference","tags":["cubical"],"authors":["Carlo Angiuli","Daniel Gratzer","Jon Sterling"],"venue":["FSCD","Formal Structures for Computation and Deduction"],"date":null,"url":"sterling-2019-cubical.html","headings":[],"body":""});

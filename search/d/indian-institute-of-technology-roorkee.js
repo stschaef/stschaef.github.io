@@ -1,0 +1,1 @@
+heliaSearchData("d/indian-institute-of-technology-roorkee",{"id":"indian-institute-of-technology-roorkee","title":"Indian Institute of Technology Roorkee","kind":"institution","tags":[],"authors":[],"venue":[],"date":null,"url":"indian-institute-of-technology-roorkee.html","headings":[],"body":""});

@@ -1,0 +1,1 @@
+heliaSearchData("d/colorado-school-of-mines",{"id":"colorado-school-of-mines","title":"Colorado School of Mines","kind":"institution","tags":[],"authors":[],"venue":[],"date":null,"url":"colorado-school-of-mines.html","headings":[],"body":""});

@@ -1,0 +1,1 @@
+heliaSearchData("d/capucci-2024-on",{"id":"capucci-2024-on","title":"On Quantifiers for Quantitative Reasoning","kind":"reference","tags":[],"authors":["Matteo Capucci"],"venue":["arXiv"],"date":null,"url":"capucci-2024-on.html","headings":[],"body":""});

@@ -1,0 +1,1 @@
+heliaSearchData("d/andrealattuada",{"id":"andrealattuada","title":"Andrea Lattuada","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"andrealattuada.html","headings":[],"body":""});

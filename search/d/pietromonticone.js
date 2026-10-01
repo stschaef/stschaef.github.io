@@ -1,0 +1,1 @@
+heliaSearchData("d/pietromonticone",{"id":"pietromonticone","title":"Pietro Monticone","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"pietromonticone.html","headings":[],"body":""});

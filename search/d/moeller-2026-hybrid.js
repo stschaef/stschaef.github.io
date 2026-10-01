@@ -1,0 +1,1 @@
+heliaSearchData("d/moeller-2026-hybrid",{"id":"moeller-2026-hybrid","title":"Hybrid Systems as Coalgebras: Lyapunov Morphisms for Zeno Stability","kind":"reference","tags":["coalgebra","dynamical-systems"],"authors":["Aaron D. Ames","Joe Moeller"],"venue":["arXiv"],"date":null,"url":"moeller-2026-hybrid.html","headings":[],"body":""});

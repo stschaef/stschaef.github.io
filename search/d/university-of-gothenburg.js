@@ -1,0 +1,1 @@
+heliaSearchData("d/university-of-gothenburg",{"id":"university-of-gothenburg","title":"University of Gothenburg","kind":"institution","tags":[],"authors":[],"venue":[],"date":null,"url":"university-of-gothenburg.html","headings":[],"body":""});

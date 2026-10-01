@@ -1,0 +1,1 @@
+heliaSearchData("d/bohdanbkhomtchouk",{"id":"bohdanbkhomtchouk","title":"Bohdan B Khomtchouk","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"bohdanbkhomtchouk.html","headings":[],"body":""});

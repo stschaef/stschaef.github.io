@@ -1,0 +1,1 @@
+heliaSearchData("d/angiuli-2017-computational",{"id":"angiuli-2017-computational","title":"Computational higher-dimensional type theory","kind":"reference","tags":["cubical"],"authors":["Carlo Angiuli","Robert Harper","Todd Wilson"],"venue":["POPL","Symposium on Principles of Programming Languages"],"date":null,"url":"angiuli-2017-computational.html","headings":[],"body":""});

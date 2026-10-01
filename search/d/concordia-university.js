@@ -1,0 +1,1 @@
+heliaSearchData("d/concordia-university",{"id":"concordia-university","title":"Concordia University","kind":"institution","tags":[],"authors":[],"venue":[],"date":null,"url":"concordia-university.html","headings":[],"body":""});

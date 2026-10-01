@@ -1,0 +1,1 @@
+heliaSearchData("d/gomez-2023-spike",{"id":"gomez-2023-spike","title":"Spike Solutions to the Supercritical Fractional Gierer–Meinhardt System","kind":"reference","tags":[],"authors":["Daniel Gomez","Jun-Cheng Wei","Markus de Medeiros","Wen Yang"],"venue":["Journal of Nonlinear Science"],"date":null,"url":"gomez-2023-spike.html","headings":[],"body":""});

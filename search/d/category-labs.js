@@ -1,0 +1,1 @@
+heliaSearchData("d/category-labs",{"id":"category-labs","title":"Category Labs","kind":"institution","tags":[],"authors":[],"venue":[],"date":null,"url":"category-labs.html","headings":[],"body":""});

@@ -1,0 +1,1 @@
+heliaSearchData("d/rwth-aachen-university",{"id":"rwth-aachen-university","title":"RWTH Aachen University","kind":"institution","tags":[],"authors":[],"venue":[],"date":null,"url":"rwth-aachen-university.html","headings":[],"body":""});

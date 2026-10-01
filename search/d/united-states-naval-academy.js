@@ -1,0 +1,1 @@
+heliaSearchData("d/united-states-naval-academy",{"id":"united-states-naval-academy","title":"United States Naval Academy","kind":"institution","tags":[],"authors":[],"venue":[],"date":null,"url":"united-states-naval-academy.html","headings":[],"body":""});

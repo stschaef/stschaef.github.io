@@ -1,0 +1,1 @@
+heliaSearchData("d/mellies-2017-an",{"id":"mellies-2017-an","title":"An Isbell duality theorem for type refinement systems","kind":"reference","tags":["category-theory","refinement-types"],"authors":["Noam Zeilberger","Paul-André Melliès"],"venue":["MSCS","Mathematical Structures in Computer Science"],"date":null,"url":"mellies-2017-an.html","headings":[],"body":""});

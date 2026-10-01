@@ -1,0 +1,1 @@
+heliaSearchData("d/redwood-research",{"id":"redwood-research","title":"Redwood Research","kind":"institution","tags":[],"authors":[],"venue":[],"date":null,"url":"redwood-research.html","headings":[],"body":""});

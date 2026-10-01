@@ -1,0 +1,1 @@
+heliaSearchData("d/tag-logic-programming",{"id":"tag-logic-programming","title":"logic-programming","kind":"tag","tags":[],"authors":[],"venue":[],"date":null,"url":"tag-logic-programming.html","headings":[],"body":""});

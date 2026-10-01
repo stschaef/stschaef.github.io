@@ -1,0 +1,1 @@
+heliaSearchData("d/desa-2023-intuitionistic",{"id":"desa-2023-intuitionistic","title":"Intuitionistic Metric Temporal Logic","kind":"reference","tags":[],"authors":["Bernardo Toninho","Frank Pfenning","Luiz De Sá"],"venue":["PPDP","Principles and Practice of Declarative Programming"],"date":null,"url":"desa-2023-intuitionistic.html","headings":[],"body":""});

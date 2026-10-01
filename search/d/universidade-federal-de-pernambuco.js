@@ -1,0 +1,1 @@
+heliaSearchData("d/universidade-federal-de-pernambuco",{"id":"universidade-federal-de-pernambuco","title":"Universidade Federal de Pernambuco","kind":"institution","tags":[],"authors":[],"venue":[],"date":null,"url":"universidade-federal-de-pernambuco.html","headings":[],"body":""});

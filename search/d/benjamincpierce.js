@@ -1,0 +1,1 @@
+heliaSearchData("d/benjamincpierce",{"id":"benjamincpierce","title":"Benjamin C. Pierce","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"benjamincpierce.html","headings":[],"body":""});

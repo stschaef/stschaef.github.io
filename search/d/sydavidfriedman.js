@@ -1,0 +1,1 @@
+heliaSearchData("d/sydavidfriedman",{"id":"sydavidfriedman","title":"Sy David Friedman","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"sydavidfriedman.html","headings":[],"body":""});

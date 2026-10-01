@@ -1,0 +1,1 @@
+heliaSearchData("d/zeilberger-2016-linear",{"id":"zeilberger-2016-linear","title":"Linear lambda terms as invariants of rooted trivalent maps","kind":"reference","tags":["linear-logic"],"authors":["Noam Zeilberger"],"venue":["JFP","Journal of Functional Programming"],"date":null,"url":"zeilberger-2016-linear.html","headings":[],"body":""});

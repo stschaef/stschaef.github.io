@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>Continuation-Passing Style, Defunctionalization, Accumulations, and Associativity</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Ctext y=%22.9em%22 font-size=%2290%22%3E%F0%9F%8C%BB%3C/text%3E%3C/svg%3E">
+<meta name="generator" content="helia">
+<link rel="alternate" type="application/atom+xml" title="Steven Schaefer" href="feed.xml">
+<link rel="alternate" type="application/feed+json" title="Steven Schaefer" href="feed.json">
+<script src="helia/theme-version.js"></script>
+<script src="theme/folio-early.js"></script>
+<link rel="stylesheet" href="helia/theme.css">
+<link rel="stylesheet" href="helia/highlight.css">
+<link rel="stylesheet" href="helia/search.css">
+<link rel="stylesheet" href="theme/katex.css">
+<link rel="stylesheet" href="theme/recipe.css">
+<link rel="stylesheet" href="theme/site.css">
+<link rel="stylesheet" href="theme/folio.css">
+<script defer src="helia/runtime.js"></script>
+<script defer src="helia/search.js"></script>
+<script defer src="theme/glyphcraft.js"></script>
+<script defer src="theme/glyphart.js"></script>
+<script defer src="theme/glyphgen.js"></script>
+<script defer src="theme/ornament.js"></script>
+<script defer src="theme/folio.js"></script>
+<script defer src="theme/portrait.js"></script>
+<script type="application/json" id="helia-widgets">{"helia-cite-formats":"widgets/helia-cite-formats-a3294ac7.js"}</script>
+<link rel="modulepreload" href="widgets/helia-cite-formats-a3294ac7.js">
+<script type="module" src="widgets/runtime.js"></script>
+</head>
+<body>
+<nav class="helia-topbar"><a class="helia-home" href="home.html">Steven Schaefer</a><ul class="helia-nav-links"><li><a href="stevenschaefer.html">About Me</a></li><li><a href="research.html">Research</a></li><li><a href="new.html">New</a></li></ul><button type="button" class="helia-search-button" aria-label="Search (/ or Ctrl+K)" aria-haspopup="dialog"><span class="helia-search-icon">⌕</span><span class="helia-search-label">Search</span><kbd class="helia-search-key">/</kbd></button></nav>
+<div class="helia-page" data-kind="reference">
+<article class="helia-article">
+<header class="helia-header" data-entry="gibbons-2021-continuation" data-kind="reference">
+<h2 class="helia-heading"><span class="helia-taxon">Reference.</span> Continuation-Passing Style, Defunctionalization, Accumulations, and Associativity</h2>
+<div class="helia-meta"><span class="helia-author"><a class="helia-entry-link" href="jeremygibbons.html" data-entry="jeremygibbons">Jeremy Gibbons</a></span> · <span class="helia-byline"><a class="helia-entry-link" href="programming.html" data-entry="programming">Programming</a> · 2021</span> · <span class="helia-tags"><span class="helia-tag" data-tag="program-calculation"><a class="helia-entry-link" href="tag-program-calculation.html" data-entry="tag-program-calculation">program-calculation</a></span></span> · <span class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.22152/programming-journal.org/2022/6/7">DOI</a></span></span></div>
+</header>
+<div class="helia-body">
+</div>
+<div class="helia-cite helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><h3 class="helia-heading">Cite</h3>
+</summary>
+<div class="helia-group-body">
+<div class="helia-widget" data-widget="helia-cite-formats" data-props="{&quot;key&quot;:&quot;gibbons-2021-continuation&quot;,&quot;bibtex&quot;:&quot;@article{gibbons-2021-continuation, title={Continuation-Passing Style, Defunctionalization, Accumulations, and Associativity}, volume={6}, ISSN={2473-7321}, url={http://dx.doi.org/10.22152/programming-journal.org/2022/6/7}, DOI={10.22152/programming-journal.org/2022/6/7}, number={2}, journal={The Art, Science, and Engineering of Programming}, publisher={Aspect-Oriented Software Association (AOSA)}, author={Gibbons, Jeremy}, year={2021}, month=Nov }&quot;,&quot;bib-file&quot;:&quot;gibbons-2021-continuation.bib&quot;,&quot;hayagriva&quot;:&quot;gibbons-2021-continuation:\n  type: article\n  title: Continuation-Passing Style, Defunctionalization, Accumulations, and Associativity\n  author: Gibbons, Jeremy\n  date: 2021-11\n  url: http://dx.doi.org/10.22152/programming-journal.org/2022/6/7\n  serial-number:\n    doi: 10.22152/programming-journal.org/2022/6/7\n    issn: 2473-7321\n  parent:\n    type: periodical\n    title: The Art, Science, and Engineering of Programming\n    publisher: Aspect-Oriented Software Association (AOSA)\n    issue: 2\n    volume: 6\n&quot;,&quot;yml-file&quot;:&quot;gibbons-2021-continuation.yml&quot;}"><div class="helia-cite-key" data-copy="@gibbons-2021-continuation" data-copy-label="citation key"><span class="helia-bib-key">Cite as</span> <code class="helia-raw-inline">@gibbons-2021-continuation</code> (helia, typst) · <code class="helia-raw-inline">\cite{gibbons-2021-continuation}</code> (LaTeX)</div>
+<div class="helia-cite-format helia-collapsible" data-format="bibtex" data-copy="true" data-copy-label="BibTeX">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">BibTeX</span></summary>
+<div class="helia-group-body">
+<details class="helia-code" open><summary class="helia-code-summary"><span class="helia-code-lang">bibtex</span> · <span class="helia-code-lines">1 line</span></summary><pre class="helia-raw"><code class="language-bibtex"><span class="hl-text hl-bibtex"><span class="hl-meta hl-entry hl-braces hl-bibtex"><span class="hl-keyword hl-other hl-entry-type hl-bibtex"><span class="hl-punctuation hl-definition hl-keyword hl-bibtex">@</span>article</span><span class="hl-punctuation hl-section hl-entry hl-begin hl-bibtex">{</span><span class="hl-entity hl-name hl-type hl-entry-key hl-bibtex">gibbons-2021-continuation</span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">title</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>Continuation-Passing Style, Defunctionalization, Accumulations, and Associativity<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">volume</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>6<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">ISSN</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>2473-7321<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">url</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>http://dx.doi.org/10.22152/programming-journal.org/2022/6/7<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">DOI</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>10.22152/programming-journal.org/2022/6/7<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">number</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>2<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">journal</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>The Art, Science, and Engineering of Programming<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">publisher</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>Aspect-Oriented Software Association (AOSA)<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">author</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>Gibbons, Jeremy<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">year</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>2021<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">month</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span>Nov </span><span class="hl-punctuation hl-section hl-entry hl-end hl-bibtex">}</span></span></span></code></pre></details>
+</div>
+</details>
+</div>
+<div class="helia-cite-format helia-collapsible" data-format="hayagriva" data-copy="true" data-copy-label="hayagriva YAML">
+<details>
+<summary class="helia-group-summary"><span class="helia-group-title">hayagriva YAML (typst)</span></summary>
+<div class="helia-group-body">
+<details class="helia-code" open><summary class="helia-code-summary"><span class="helia-code-lang">yaml</span> · <span class="helia-code-lines">15 lines</span></summary><pre class="helia-raw"><code class="language-yaml"><span class="hl-source hl-yaml"><span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">gibbons-2021-continuation</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">type</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">article</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">title</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Continuation-Passing Style, Defunctionalization, Accumulations, and Associativity</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">author</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Gibbons, Jeremy</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">date</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">2021-11</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">url</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">http://dx.doi.org/10.22152/programming-journal.org/2022/6/7</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">serial-number</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">doi</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">10.22152/programming-journal.org/2022/6/7</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">issn</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">2473-7321</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">parent</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">type</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">periodical</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">title</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">The Art, Science, and Engineering of Programming</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">publisher</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Aspect-Oriented Software Association (AOSA)</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">issue</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-constant hl-numeric hl-integer hl-decimal hl-yaml">2</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">volume</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-constant hl-numeric hl-integer hl-decimal hl-yaml">6</span>
+</span></code></pre></details>
+</div>
+</details>
+</div>
+<div class="helia-cite-files">Download: <a class="helia-link" href="gibbons-2021-continuation.bib">gibbons-2021-continuation.bib</a> · <a class="helia-link" href="gibbons-2021-continuation.yml">gibbons-2021-continuation.yml</a></div>
+</div>
+</div>
+</details>
+</div>
+<div class="helia-reference-cites helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">Cites 31 works (0 here)</span></summary>
+<div class="helia-group-body">
+<div class="helia-reference-cites-away helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">External (31)</span></summary>
+<div class="helia-group-body">
+<ul>
+<li><a class="helia-link helia-external" href="https://doi.org/10.5281/zenodo.5599955">Continuation-Passing Style, Defunctionalization, Accumulations, and Associativity (accompanying Idris code)</a> (2021)</li>
+<li>It's as easy as 1, 2, 3 (2021)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1017/s0956796820000209">Calculating correct compilers II: Return of the register machines</a> (2020)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3236950.3236965">An Internalist Approach to Correct-by-Construction Compilers</a> (2018)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1017/s0956796817000120">Compiling a 50-year journey*</a> (2017)</li>
+<li>Thinking Functionally With Haskell (2016)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1017/s0956796815000180">Calculating correct compilers</a> (2015)</li>
+<li>Ornamental Algebras, Algebraic Ornaments (2014)</li>
+<li>She’s cutting and pasting it: Higgledy piggledy programming (2012)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/1411203.1411206">Defunctionalized interpreters for programming languages</a> (2008)</li>
+<li>Clowns to the Left of me, Jokers to the Right Dissecting Data Structures (2006)</li>
+<li>A type-correct, stack-safe, provably correct, expression compiler (2006)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1016/j.tcs.2005.06.008">A functional correspondence between monadic evaluators and abstract machines for languages with computational effects</a> (2005)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-540-27764-4_12">Compiling Exceptions Correctly</a> (2004)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1016/j.ipl.2004.02.012">A functional correspondence between call-by-need evaluators and lazy abstract machines</a> (2004)</li>
+<li>What is an operad? (2004)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.7146/brics.v10i14.21784">From Interpreter to Compiler and Virtual Machine: A Functional Derivation</a> (2003)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/888251.888254">A functional correspondence between evaluators and abstract machines</a> (2003)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/773184.773202">Defunctionalization at work</a> (2001)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1017/s0956796897002864">The Zipper</a> (1997)</li>
+<li>Introduction to functional programming (1988)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1016/0141-9331(88)90094-4">Elements of Functional Languages</a> (1988)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1016/0020-0190(86)90059-1">A Novel Representation of Lists and its Application to the Function "reverse"</a> (1986)</li>
+<li>To mock a mockingbird and other logic puzzles : including an amazing adventure in combinatory logic (1985)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/1780.1781">The promotion and accumulation strategies in transformational programming</a> (1984)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/357172.357179">Deriving Target Code as a Representation of Continuation Semantics</a> (1982)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/322169.322183">Continuation-Based Program Transformation Strategies</a> (1980)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/321992.321996">A Transformation System for Developing Recursive Programs</a> (1977)</li>
+<li>A First Order Theory of Data and Programs (1977)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/800194.805852">Definitional Interpreters for Higher-Order Programming Languages</a> (1972)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1090/psapm/019/0242403">Correctness of a compiler for arithmetic expressions</a> (1966)</li>
+</ul>
+</div>
+</details>
+</div>
+</div>
+</details>
+</div>
+</article>
+<div class="helia-identity"><span class="helia-id">gibbons-2021-continuation</span> <span class="helia-kind">reference</span> <span class="helia-path">entries/refs/gibbons-2021-continuation/gibbons-2021-continuation.hel</span></div>
+</div>
+</body>
+</html>

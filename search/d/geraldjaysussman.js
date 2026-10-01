@@ -1,0 +1,1 @@
+heliaSearchData("d/geraldjaysussman",{"id":"geraldjaysussman","title":"Gerald Jay Sussman","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"geraldjaysussman.html","headings":[],"body":""});

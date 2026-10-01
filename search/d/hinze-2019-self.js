@@ -1,0 +1,1 @@
+heliaSearchData("d/hinze-2019-self",{"id":"hinze-2019-self","title":"Self-certifying Railroad Diagrams: Or: How to Teach Nondeterministic Finite Automata","kind":"reference","tags":["parsing"],"authors":["Ralf Hinze"],"venue":["MPC","Mathematics of Program Construction"],"date":null,"url":"hinze-2019-self.html","headings":[],"body":""});

@@ -1,0 +1,1 @@
+heliaSearchData("d/merck-and-co-inc-west-point",{"id":"merck-and-co-inc-west-point","title":"Merck and Co Inc West Point","kind":"institution","tags":[],"authors":[],"venue":[],"date":null,"url":"merck-and-co-inc-west-point.html","headings":[],"body":""});

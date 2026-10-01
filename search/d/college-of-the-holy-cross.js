@@ -1,0 +1,1 @@
+heliaSearchData("d/college-of-the-holy-cross",{"id":"college-of-the-holy-cross","title":"College of the Holy Cross","kind":"institution","tags":[],"authors":[],"venue":[],"date":null,"url":"college-of-the-holy-cross.html","headings":[],"body":""});

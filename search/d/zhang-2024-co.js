@@ -1,0 +1,1 @@
+heliaSearchData("d/zhang-2024-co",{"id":"zhang-2024-co","title":"(Co)condition hits the Path","kind":"reference","tags":["cubical","higher-inductive-types"],"authors":["Tesla Zhang","Valery Isaev"],"venue":["arXiv"],"date":null,"url":"zhang-2024-co.html","headings":[],"body":""});

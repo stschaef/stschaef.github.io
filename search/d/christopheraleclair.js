@@ -1,0 +1,1 @@
+heliaSearchData("d/christopheraleclair",{"id":"christopheraleclair","title":"Christopher A. LeClair","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"christopheraleclair.html","headings":[],"body":""});

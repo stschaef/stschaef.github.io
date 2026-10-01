@@ -1,0 +1,1 @@
+heliaSearchData("d/tag-inductive-invariants",{"id":"tag-inductive-invariants","title":"inductive-invariants","kind":"tag","tags":[],"authors":[],"venue":[],"date":null,"url":"tag-inductive-invariants.html","headings":[],"body":""});

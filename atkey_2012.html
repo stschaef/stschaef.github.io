@@ -7,6 +7,8 @@
 <title>The semantics of parsing with semantic actions</title>
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Ctext y=%22.9em%22 font-size=%2290%22%3E%F0%9F%8C%BB%3C/text%3E%3C/svg%3E">
 <meta name="generator" content="helia">
+<link rel="alternate" type="application/atom+xml" title="Steven Schaefer" href="feed.xml">
+<link rel="alternate" type="application/feed+json" title="Steven Schaefer" href="feed.json">
 <script src="helia/theme-version.js"></script>
 <script src="theme/folio-early.js"></script>
 <link rel="stylesheet" href="helia/theme.css">
@@ -34,7 +36,7 @@
 <article class="helia-article">
 <header class="helia-header" data-entry="atkey_2012" data-kind="reference">
 <h2 class="helia-heading"><span class="helia-taxon">Reference.</span> The semantics of parsing with semantic actions</h2>
-<div class="helia-meta"><span class="helia-author"><a class="helia-entry-link" href="robertatkey.html" data-entry="robertatkey">Robert Atkey</a></span> · <span class="helia-byline"><a class="helia-entry-link" href="lics.html" data-entry="lics">LICS</a> · 2012</span> · <span class="helia-tags"><span class="helia-tag" data-tag="parsing"><span class="helia-entry-link helia-unavailable">parsing</span></span></span> · <span class="helia-entry-links"><span class="helia-entry-link" data-field="url"><a class="helia-link helia-external" href="https://bentnib.org/semantic-actions.pdf">Web</a></span></span></div>
+<div class="helia-meta"><span class="helia-author"><a class="helia-entry-link" href="robertatkey.html" data-entry="robertatkey">Robert Atkey</a></span> · <span class="helia-byline"><a class="helia-entry-link" href="lics.html" data-entry="lics">LICS</a> · 2012</span> · <span class="helia-tags"><span class="helia-tag" data-tag="parsing"><a class="helia-entry-link" href="tag-parsing.html" data-entry="tag-parsing">parsing</a></span></span> · <span class="helia-entry-links"><span class="helia-entry-link" data-field="url"><a class="helia-link helia-external" href="https://bentnib.org/semantic-actions.pdf">Web</a></span></span></div>
 </header>
 <div class="helia-body">
 <div class="helia-abstract">The recovery of structure from flat sequences of input data is a problem that almost all programs need to solve. Computer Science has developed a wide array of declarative languages for describing the structure of languages, usually based on the context-free grammar formalism, and there exist parser generators that produce efficient parsers for these descriptions. However, when faced with a problem involving parsing, most programmers opt for ad-hoc hand-coded solutions, or use parser combinator libraries to construct parsing functions. This paper develops a hybrid approach, treating grammars as collections of active right-hand sides, indexed by a set of non-terminals. Active right-hand sides are built using the standard monadic parser combinators and allow the consumed input to affect the language being parsed, thus allowing for the precise description of the realistic languages that arise in programming. We carefully investigate the semantics of grammars with active right-hand sides, not just from the point of view of language acceptance but also in terms of the generation of parse results. Ambiguous grammars may generate exponentially, or even infinitely, many parse results and these must be efficiently represented using Shared Packed Parse Forests (SPPFs). A particular feature of our approach is the use of Reynolds-style parametricity to ensure that the language that grammars describe cannot be affected by the representation of parse results.</div>
@@ -83,12 +85,23 @@
 </div>
 <div class="helia-reference-cites helia-collapsible">
 <details open>
-<summary class="helia-group-summary"><span class="helia-group-title">Cites 18 works (1 here)</span></summary>
+<summary class="helia-group-summary"><span class="helia-group-title">Cites 18 works (2 here)</span></summary>
 <div class="helia-group-body">
 <div class="helia-reference-cites-here helia-collapsible">
 <details open>
-<summary class="helia-group-summary"><span class="helia-group-title">With notes (1)</span></summary>
+<summary class="helia-group-summary"><span class="helia-group-title">With notes (2)</span></summary>
 <div class="helia-group-body">
+<section class="helia-transclusion" data-entry="mcbride-2008-applicative" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="mcbride-2008-applicative"><span class="helia-title">Applicative programming with effects</span>&nbsp;<a class="helia-slug" href="mcbride-2008-applicative.html">mcbride-2008-applicative</a><span class="helia-byline"><span class="helia-entry-link" data-entry="jfp">JFP</span> · 2008</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="mcbride-2008-applicative" data-kind="reference">
+<div class="helia-abstract">In this article, we introduce Applicative functors – an abstract characterisation of an applicative style of effectful programming, weaker than Monads and hence more widespread. Indeed, it is the ubiquity of this programming pattern that drew us to the abstraction. We retrace our steps in this article, introducing the applicative pattern by diverse examples, then abstracting it to define the Applicative type class and introducing a bracket notation that interprets the normal application syntax in the idiom of an Applicative functor. Furthermore, we develop the properties of applicative functors and the generic operations they support. We close by identifying the categorical structure of applicative functors and examining their relationship both with Monads and with Arrow.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="pdf-url"><a class="helia-link helia-external" href="https://www.cambridge.org/core/services/aop-cambridge-core/content/view/C80616ACD5687ABDC86D2B341E83D298/S0956796807006326a.pdf/div-class-title-applicative-programming-with-effects-div.pdf">PDF</a></span> · <span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1017/s0956796807006326">DOI</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/journals/jfp/McbrideP08">pldb</a></span></div>
+</div>
+</div>
+</details>
+</section>
 <section class="helia-transclusion" data-entry="Earley1970" data-depth="1">
 <details>
 <summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="Earley1970"><span class="helia-title">An efficient context-free parsing algorithm</span>&nbsp;<a class="helia-slug" href="Earley1970.html">Earley1970</a><span class="helia-byline"><span class="helia-entry-link" data-entry="cacm">CACM</span> · 1970</span></h2></summary>
@@ -105,7 +118,7 @@
 </div>
 <div class="helia-reference-cites-away helia-collapsible">
 <details open>
-<summary class="helia-group-summary"><span class="helia-group-title">External (17)</span></summary>
+<summary class="helia-group-summary"><span class="helia-group-title">External (16)</span></summary>
 <div class="helia-group-body">
 <ul>
 <li>A New Method for Dependent Parsing (2011)</li>
@@ -113,7 +126,6 @@
 <li>Semantics and algorithms for data-dependent grammars (2010)</li>
 <li>Recognition is not Parsing – SPPF-style parsing from cubic recognisers (2010)</li>
 <li>Parser combinators for ambiguous left-recursive grammars (2008)</li>
-<li>Applicative programming with effects (2008)</li>
 <li>SPPF-Style Parsing from Earley Recognisers (2008)</li>
 <li>Combinator parsing: A short tutorial (2008)</li>
 <li>Parsing expression grammars: a recognition-based syntactic foundation (2004)</li>

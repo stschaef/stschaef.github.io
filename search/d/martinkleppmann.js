@@ -1,0 +1,1 @@
+heliaSearchData("d/martinkleppmann",{"id":"martinkleppmann","title":"Martin Kleppmann","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"martinkleppmann.html","headings":[],"body":""});

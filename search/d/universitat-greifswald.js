@@ -1,0 +1,1 @@
+heliaSearchData("d/universitat-greifswald",{"id":"universitat-greifswald","title":"Universität Greifswald","kind":"institution","tags":[],"authors":[],"venue":[],"date":null,"url":"universitat-greifswald.html","headings":[],"body":""});

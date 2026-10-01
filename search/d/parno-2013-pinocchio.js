@@ -1,0 +1,1 @@
+heliaSearchData("d/parno-2013-pinocchio",{"id":"parno-2013-pinocchio","title":"Pinocchio: Nearly Practical Verifiable Computation","kind":"reference","tags":["security"],"authors":["Bryan Parno","C. Gentry","Jon Howell","M. Raykova"],"venue":["IEEE S&P","IEEE Symposium on Security and Privacy"],"date":null,"url":"parno-2013-pinocchio.html","headings":[],"body":""});

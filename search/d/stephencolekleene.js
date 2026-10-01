@@ -1,0 +1,1 @@
+heliaSearchData("d/stephencolekleene",{"id":"stephencolekleene","title":"Stephen Cole Kleene","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"stephencolekleene.html","headings":[],"body":""});

@@ -1,0 +1,1 @@
+heliaSearchData("d/luizcarlospinheirodiaspereira",{"id":"luizcarlospinheirodiaspereira","title":"Luiz Carlos Pinheiro Dias Pereira","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"luizcarlospinheirodiaspereira.html","headings":[],"body":""});

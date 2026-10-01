@@ -1,0 +1,1 @@
+heliaSearchData("d/microsoft-montreal",{"id":"microsoft-montreal","title":"Microsoft Montreal","kind":"institution","tags":[],"authors":[],"venue":[],"date":null,"url":"microsoft-montreal.html","headings":[],"body":""});

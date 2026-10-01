@@ -1,0 +1,1 @@
+heliaSearchData("d/university-of-california-davis",{"id":"university-of-california-davis","title":"University of California, Davis","kind":"institution","tags":[],"authors":[],"venue":[],"date":null,"url":"university-of-california-davis.html","headings":[],"body":""});

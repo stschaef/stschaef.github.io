@@ -1,0 +1,1 @@
+heliaSearchData("d/cho-2024-a",{"id":"cho-2024-a","title":"A Framework for Debugging Automated Program Verification Proofs via Proof Actions","kind":"reference","tags":["proof-engineering"],"authors":["Bryan Parno","Chanhee Cho","Jay Bosamiya","Yi Zhou"],"venue":["CAV","Computer Aided Verification"],"date":null,"url":"cho-2024-a.html","headings":[],"body":""});

@@ -1,0 +1,1 @@
+heliaSearchData("d/andrewlampinen",{"id":"andrewlampinen","title":"Andrew Lampinen","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"andrewlampinen.html","headings":[],"body":""});

@@ -1,0 +1,1 @@
+heliaSearchData("d/samtobinhochstadt",{"id":"samtobinhochstadt","title":"Sam Tobin-Hochstadt","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"samtobinhochstadt.html","headings":[],"body":""});

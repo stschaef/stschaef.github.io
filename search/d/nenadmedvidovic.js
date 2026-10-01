@@ -1,0 +1,1 @@
+heliaSearchData("d/nenadmedvidovic",{"id":"nenadmedvidovic","title":"Nenad Medvidović","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"nenadmedvidovic.html","headings":[],"body":""});

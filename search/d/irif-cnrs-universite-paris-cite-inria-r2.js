@@ -1,0 +1,1 @@
+heliaSearchData("d/irif-cnrs-universite-paris-cite-inria-r2",{"id":"irif-cnrs-universite-paris-cite-inria-r2","title":"IRIF (CNRS / Université Paris Cité), Inria πr2","kind":"institution","tags":[],"authors":[],"venue":[],"date":null,"url":"irif-cnrs-universite-paris-cite-inria-r2.html","headings":[],"body":""});

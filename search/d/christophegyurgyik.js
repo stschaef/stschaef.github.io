@@ -1,0 +1,1 @@
+heliaSearchData("d/christophegyurgyik",{"id":"christophegyurgyik","title":"Christophe Gyurgyik","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"christophegyurgyik.html","headings":[],"body":""});

@@ -1,0 +1,1 @@
+heliaSearchData("d/tag-parametricity",{"id":"tag-parametricity","title":"parametricity","kind":"tag","tags":[],"authors":[],"venue":[],"date":null,"url":"tag-parametricity.html","headings":[],"body":""});

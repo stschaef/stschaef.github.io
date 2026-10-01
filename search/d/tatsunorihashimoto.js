@@ -1,0 +1,1 @@
+heliaSearchData("d/tatsunorihashimoto",{"id":"tatsunorihashimoto","title":"Tatsunori Hashimoto","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"tatsunorihashimoto.html","headings":[],"body":""});

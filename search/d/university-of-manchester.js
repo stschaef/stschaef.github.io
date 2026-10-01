@@ -1,0 +1,1 @@
+heliaSearchData("d/university-of-manchester",{"id":"university-of-manchester","title":"University of Manchester","kind":"institution","tags":[],"authors":[],"venue":[],"date":null,"url":"university-of-manchester.html","headings":[],"body":""});

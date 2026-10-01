@@ -1,0 +1,1 @@
+heliaSearchData("d/arntzenius-2016-datafun",{"id":"arntzenius-2016-datafun","title":"Datafun: a functional Datalog","kind":"reference","tags":["logic-programming"],"authors":["Michael Arntzenius","Neel Krishnaswami"],"venue":["ICFP","International Conference on Functional Programming"],"date":null,"url":"arntzenius-2016-datafun.html","headings":[],"body":""});

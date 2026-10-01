@@ -1,0 +1,1 @@
+heliaSearchData("d/charles-university",{"id":"charles-university","title":"Charles University","kind":"institution","tags":[],"authors":[],"venue":[],"date":null,"url":"charles-university.html","headings":[],"body":""});

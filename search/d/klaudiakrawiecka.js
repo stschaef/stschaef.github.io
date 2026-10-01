@@ -1,0 +1,1 @@
+heliaSearchData("d/klaudiakrawiecka",{"id":"klaudiakrawiecka","title":"Klaudia Krawiecka","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"klaudiakrawiecka.html","headings":[],"body":""});

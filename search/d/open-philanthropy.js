@@ -1,0 +1,1 @@
+heliaSearchData("d/open-philanthropy",{"id":"open-philanthropy","title":"Open Philanthropy","kind":"institution","tags":[],"authors":[],"venue":[],"date":null,"url":"open-philanthropy.html","headings":[],"body":""});

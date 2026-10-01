@@ -1,0 +1,1 @@
+heliaSearchData("d/atkey-2015-interleaving",{"id":"atkey-2015-interleaving","title":"Interleaving data and effects","kind":"reference","tags":["effects"],"authors":["Patricia Johann","Robert Atkey"],"venue":["JFP","Journal of Functional Programming"],"date":null,"url":"atkey-2015-interleaving.html","headings":[],"body":""});

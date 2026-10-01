@@ -1,0 +1,1 @@
+heliaSearchData("d/ruslansalakhutdinov",{"id":"ruslansalakhutdinov","title":"Ruslan Salakhutdinov","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"ruslansalakhutdinov.html","headings":[],"body":""});

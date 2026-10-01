@@ -1,0 +1,1 @@
+heliaSearchData("d/university-of-glasgow",{"id":"university-of-glasgow","title":"University of Glasgow","kind":"institution","tags":[],"authors":[],"venue":[],"date":null,"url":"university-of-glasgow.html","headings":[],"body":""});

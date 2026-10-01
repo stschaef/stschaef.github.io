@@ -1,0 +1,1 @@
+heliaSearchData("d/hinze-2012-kan",{"id":"hinze-2012-kan","title":"Kan Extensions for Program Optimisation Or: Art and Dan Explain an Old Trick","kind":"reference","tags":["program-calculation"],"authors":["Ralf Hinze"],"venue":["MPC","Mathematics of Program Construction"],"date":null,"url":"hinze-2012-kan.html","headings":[],"body":""});

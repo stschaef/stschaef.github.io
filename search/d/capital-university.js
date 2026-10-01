@@ -1,0 +1,1 @@
+heliaSearchData("d/capital-university",{"id":"capital-university","title":"Capital University","kind":"institution","tags":[],"authors":[],"venue":[],"date":null,"url":"capital-university.html","headings":[],"body":""});

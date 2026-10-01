@@ -1,0 +1,1 @@
+heliaSearchData("d/bird-2020-algorithm",{"id":"bird-2020-algorithm","title":"Algorithm Design with Haskell","kind":"reference","tags":["program-calculation"],"authors":["Jeremy Gibbons","Richard Bird"],"venue":[],"date":null,"url":"bird-2020-algorithm.html","headings":[],"body":""});

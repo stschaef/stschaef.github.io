@@ -1,0 +1,1 @@
+heliaSearchData("d/tag-bidirectional-typing",{"id":"tag-bidirectional-typing","title":"bidirectional-typing","kind":"tag","tags":[],"authors":[],"venue":[],"date":null,"url":"tag-bidirectional-typing.html","headings":[],"body":""});

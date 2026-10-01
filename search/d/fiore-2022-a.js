@@ -1,0 +1,1 @@
+heliaSearchData("d/fiore-2022-a",{"id":"fiore-2022-a","title":"A Combinatorial Approach to Higher-Order Structure for Polynomial Functors","kind":"reference","tags":["polynomial-functors"],"authors":["Hugo Paquet","Marcelo P. Fiore","Zeinab Galal"],"venue":["FSCD","Formal Structures for Computation and Deduction"],"date":null,"url":"fiore-2022-a.html","headings":[],"body":""});

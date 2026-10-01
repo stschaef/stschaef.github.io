@@ -1,0 +1,1 @@
+heliaSearchData("d/mcmaster-university",{"id":"mcmaster-university","title":"McMaster University","kind":"institution","tags":[],"authors":[],"venue":[],"date":null,"url":"mcmaster-university.html","headings":[],"body":""});

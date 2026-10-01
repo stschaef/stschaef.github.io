@@ -1,0 +1,1 @@
+heliaSearchData("d/lim-2017-ply",{"id":"lim-2017-ply","title":"Ply: Visual Regression Pruning for Web Design Source Inspection","kind":"reference","tags":["human-computer-interaction"],"authors":["Sarah Lim"],"venue":["CHI","Conference on Human Factors in Computing Systems"],"date":null,"url":"lim-2017-ply.html","headings":[],"body":""});

@@ -1,0 +1,1 @@
+heliaSearchData("d/roshal-2026-ordered",{"id":"roshal-2026-ordered","title":"Ordered Adjoint Logic","kind":"reference","tags":["substructural"],"authors":["Frank Pfenning","Sophia Roshal"],"venue":[],"date":null,"url":"roshal-2026-ordered.html","headings":[],"body":""});

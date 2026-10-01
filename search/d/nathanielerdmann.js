@@ -1,0 +1,1 @@
+heliaSearchData("d/nathanielerdmann",{"id":"nathanielerdmann","title":"Nathaniel Erdmann","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"nathanielerdmann.html","headings":[],"body":""});

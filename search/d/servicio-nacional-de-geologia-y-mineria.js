@@ -1,0 +1,1 @@
+heliaSearchData("d/servicio-nacional-de-geologia-y-mineria",{"id":"servicio-nacional-de-geologia-y-mineria","title":"Servicio Nacional de Geologia y Mineria","kind":"institution","tags":[],"authors":[],"venue":[],"date":null,"url":"servicio-nacional-de-geologia-y-mineria.html","headings":[],"body":""});

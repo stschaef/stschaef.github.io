@@ -1,0 +1,1 @@
+heliaSearchData("d/matthewahammer",{"id":"matthewahammer","title":"Matthew A. Hammer","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"matthewahammer.html","headings":[],"body":""});

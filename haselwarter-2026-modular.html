@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>Modular Verification of Differential Privacy in Probabilistic Higher-Order Separation Logic</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Ctext y=%22.9em%22 font-size=%2290%22%3E%F0%9F%8C%BB%3C/text%3E%3C/svg%3E">
+<meta name="generator" content="helia">
+<link rel="alternate" type="application/atom+xml" title="Steven Schaefer" href="feed.xml">
+<link rel="alternate" type="application/feed+json" title="Steven Schaefer" href="feed.json">
+<script src="helia/theme-version.js"></script>
+<script src="theme/folio-early.js"></script>
+<link rel="stylesheet" href="helia/theme.css">
+<link rel="stylesheet" href="helia/highlight.css">
+<link rel="stylesheet" href="helia/search.css">
+<link rel="stylesheet" href="theme/katex.css">
+<link rel="stylesheet" href="theme/recipe.css">
+<link rel="stylesheet" href="theme/site.css">
+<link rel="stylesheet" href="theme/folio.css">
+<script defer src="helia/runtime.js"></script>
+<script defer src="helia/search.js"></script>
+<script defer src="theme/glyphcraft.js"></script>
+<script defer src="theme/glyphart.js"></script>
+<script defer src="theme/glyphgen.js"></script>
+<script defer src="theme/ornament.js"></script>
+<script defer src="theme/folio.js"></script>
+<script defer src="theme/portrait.js"></script>
+<script type="application/json" id="helia-widgets">{"helia-cite-formats":"widgets/helia-cite-formats-a3294ac7.js"}</script>
+<link rel="modulepreload" href="widgets/helia-cite-formats-a3294ac7.js">
+<script type="module" src="widgets/runtime.js"></script>
+</head>
+<body>
+<nav class="helia-topbar"><a class="helia-home" href="home.html">Steven Schaefer</a><ul class="helia-nav-links"><li><a href="stevenschaefer.html">About Me</a></li><li><a href="research.html">Research</a></li><li><a href="new.html">New</a></li></ul><button type="button" class="helia-search-button" aria-label="Search (/ or Ctrl+K)" aria-haspopup="dialog"><span class="helia-search-icon">⌕</span><span class="helia-search-label">Search</span><kbd class="helia-search-key">/</kbd></button></nav>
+<div class="helia-page" data-kind="reference">
+<article class="helia-article">
+<header class="helia-header" data-entry="haselwarter-2026-modular" data-kind="reference">
+<h2 class="helia-heading"><span class="helia-taxon">Reference.</span> Modular Verification of Differential Privacy in Probabilistic Higher-Order Separation Logic</h2>
+<div class="helia-meta"><span class="helia-author"><a class="helia-entry-link" href="philippghaselwarter.html" data-entry="philippghaselwarter">Philipp G. Haselwarter</a>, <a class="helia-entry-link" href="alejandroaguirre.html" data-entry="alejandroaguirre">Alejandro Aguirre</a>, <a class="helia-entry-link" href="simonoddershedegregersen.html" data-entry="simonoddershedegregersen">Simon Oddershede Gregersen</a>, <a class="helia-entry-link" href="kwingheili.html" data-entry="kwingheili">Kwing Hei Li</a>, <a class="helia-entry-link" href="josephtassarotti.html" data-entry="josephtassarotti">Joseph Tassarotti</a>, <a class="helia-entry-link" href="larsbirkedal.html" data-entry="larsbirkedal">Lars Birkedal</a></span> · <span class="helia-byline"><a class="helia-entry-link" href="pldi.html" data-entry="pldi">PLDI</a> · 2026</span> · <span class="helia-tags"><span class="helia-tag" data-tag="separation-logic"><a class="helia-entry-link" href="tag-separation-logic.html" data-entry="tag-separation-logic">separation-logic</a></span> <span class="helia-tag" data-tag="probabilistic"><a class="helia-entry-link" href="tag-probabilistic.html" data-entry="tag-probabilistic">probabilistic</a></span></span> · <span class="helia-entry-links"><span class="helia-entry-link" data-field="pdf-url"><a class="helia-link helia-external" href="https://arxiv.org/pdf/2604.12713">PDF</a></span> · <span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/3808311">DOI</a></span> · <span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/2604.12713">arXiv</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/journals/pacmpl/HaselwarterAGLT26">pldb</a></span></span></div>
+</header>
+<div class="helia-body">
+<div class="helia-abstract">Differential privacy is the standard method for privacy-preserving data analysis. The importance of having strong guarantees on the reliability of implementations of differentially private algorithms is widely recognized and has sparked fruitful research on formal methods. However, the design patterns and language features used in modern DP libraries as well as the classes of guarantees that the library designers wish to establish often fall outside of the scope of previous verification approaches. We introduce a program logic suitable for verifying differentially private implementations written in complex, general-purpose programming languages. Our logic has first-class support for reasoning about privacy budgets as a separation logic resource. The expressiveness of the logic and the target language allow our approach to handle common programming patterns used in the implementation of libraries for differential privacy, such as privacy filters and caching. While previous work has focused on developing guarantees for programs written in domain-specific languages or for privacy mechanisms in isolation, our logic can reason modularly about primitives, higher-order combinators, and interactive algorithms. We demonstrate the applicability of our approach by implementing a verified library of differential privacy mechanisms, including an online version of the Sparse Vector Technique, as well as a privacy filter inspired by the popular Python library OpenDP, which crucially relies on our ability to handle the combination of randomization, local state, and higher-order functions. We demonstrate that our specifications are general and reusable by instantiating them to verify clients of our library. All of our results have been foundationally verified in the Rocq Prover.</div>
+</div>
+<div class="helia-cite helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><h3 class="helia-heading">Cite</h3>
+</summary>
+<div class="helia-group-body">
+<div class="helia-widget" data-widget="helia-cite-formats" data-props="{&quot;key&quot;:&quot;haselwarter-2026-modular&quot;,&quot;bibtex&quot;:&quot;@article{haselwarter-2026-modular, title={Modular Verification of Differential Privacy in Probabilistic Higher-Order Separation Logic}, volume={10}, ISSN={2475-1421}, url={http://dx.doi.org/10.1145/3808311}, DOI={10.1145/3808311}, number={PLDI}, journal={Proceedings of the ACM on Programming Languages}, publisher={Association for Computing Machinery (ACM)}, author={Haselwarter, Philipp G. and Aguirre, Alejandro and Gregersen, Simon Oddershede and Li, Kwing Hei and Tassarotti, Joseph and Birkedal, Lars}, year={2026}, month=June, pages={1610–1634} }&quot;,&quot;bib-file&quot;:&quot;haselwarter-2026-modular.bib&quot;,&quot;hayagriva&quot;:&quot;haselwarter-2026-modular:\n  type: article\n  title: Modular Verification of Differential Privacy in Probabilistic Higher-Order Separation Logic\n  author:\n  - Haselwarter, Philipp G.\n  - Aguirre, Alejandro\n  - Gregersen, Simon Oddershede\n  - Li, Kwing Hei\n  - Tassarotti, Joseph\n  - Birkedal, Lars\n  date: 2026-06\n  page-range: 1610-1634\n  serial-number:\n    doi: 10.1145/3808311\n  parent:\n    type: periodical\n    title: Proceedings of the ACM on Programming Languages\n    publisher: Association for Computing Machinery (ACM)\n    issue: PLDI\n    volume: 10\n&quot;,&quot;yml-file&quot;:&quot;haselwarter-2026-modular.yml&quot;}"><div class="helia-cite-key" data-copy="@haselwarter-2026-modular" data-copy-label="citation key"><span class="helia-bib-key">Cite as</span> <code class="helia-raw-inline">@haselwarter-2026-modular</code> (helia, typst) · <code class="helia-raw-inline">\cite{haselwarter-2026-modular}</code> (LaTeX)</div>
+<div class="helia-cite-format helia-collapsible" data-format="bibtex" data-copy="true" data-copy-label="BibTeX">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">BibTeX</span></summary>
+<div class="helia-group-body">
+<details class="helia-code" open><summary class="helia-code-summary"><span class="helia-code-lang">bibtex</span> · <span class="helia-code-lines">1 line</span></summary><pre class="helia-raw"><code class="language-bibtex"><span class="hl-text hl-bibtex"><span class="hl-meta hl-entry hl-braces hl-bibtex"><span class="hl-keyword hl-other hl-entry-type hl-bibtex"><span class="hl-punctuation hl-definition hl-keyword hl-bibtex">@</span>article</span><span class="hl-punctuation hl-section hl-entry hl-begin hl-bibtex">{</span><span class="hl-entity hl-name hl-type hl-entry-key hl-bibtex">haselwarter-2026-modular</span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">title</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>Modular Verification of Differential Privacy in Probabilistic Higher-Order Separation Logic<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">volume</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>10<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">ISSN</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>2475-1421<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">url</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>http://dx.doi.org/10.1145/3808311<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">DOI</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>10.1145/3808311<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">number</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>PLDI<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">journal</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>Proceedings of the ACM on Programming Languages<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">publisher</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>Association for Computing Machinery (ACM)<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">author</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>Haselwarter, Philipp G. and Aguirre, Alejandro and Gregersen, Simon Oddershede and Li, Kwing Hei and Tassarotti, Joseph and Birkedal, Lars<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">year</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>2026<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">month</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span>June</span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">pages</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>1610–1634<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span> </span><span class="hl-punctuation hl-section hl-entry hl-end hl-bibtex">}</span></span></span></code></pre></details>
+</div>
+</details>
+</div>
+<div class="helia-cite-format helia-collapsible" data-format="hayagriva" data-copy="true" data-copy-label="hayagriva YAML">
+<details>
+<summary class="helia-group-summary"><span class="helia-group-title">hayagriva YAML (typst)</span></summary>
+<div class="helia-group-body">
+<details class="helia-code" open><summary class="helia-code-summary"><span class="helia-code-lang">yaml</span> · <span class="helia-code-lines">20 lines</span></summary><pre class="helia-raw"><code class="language-yaml"><span class="hl-source hl-yaml"><span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">haselwarter-2026-modular</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">type</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">article</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">title</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Modular Verification of Differential Privacy in Probabilistic Higher-Order Separation Logic</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">author</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Haselwarter, Philipp G.</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Aguirre, Alejandro</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Gregersen, Simon Oddershede</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Li, Kwing Hei</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Tassarotti, Joseph</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Birkedal, Lars</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">date</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">2026-06</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">page-range</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">1610-1634</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">serial-number</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">doi</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">10.1145/3808311</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">parent</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">type</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">periodical</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">title</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Proceedings of the ACM on Programming Languages</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">publisher</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Association for Computing Machinery (ACM)</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">issue</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">PLDI</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">volume</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-constant hl-numeric hl-integer hl-decimal hl-yaml">10</span>
+</span></code></pre></details>
+</div>
+</details>
+</div>
+<div class="helia-cite-files">Download: <a class="helia-link" href="haselwarter-2026-modular.bib">haselwarter-2026-modular.bib</a> · <a class="helia-link" href="haselwarter-2026-modular.yml">haselwarter-2026-modular.yml</a></div>
+</div>
+</div>
+</details>
+</div>
+<div class="helia-reference-cites helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">Cites 51 works (5 here)</span></summary>
+<div class="helia-group-body">
+<div class="helia-reference-cites-here helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">With notes (5)</span></summary>
+<div class="helia-group-body">
+<section class="helia-transclusion" data-entry="demedeiros-2025-verified" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="demedeiros-2025-verified"><span class="helia-title">Verified Foundations for Differential Privacy</span>&nbsp;<a class="helia-slug" href="demedeiros-2025-verified.html">demedeiros-2025-verified</a><span class="helia-byline"><span class="helia-entry-link" data-entry="pldi">PLDI</span> · 2025</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="demedeiros-2025-verified" data-kind="reference">
+<div class="helia-abstract">Differential privacy (DP) has become the gold standard for privacy-preserving data analysis, but implementing it correctly has proven challenging. Prior work has focused on verifying DP at a high level, assuming either that the foundations are correct or that a perfect source of random noise is available. However, the underlying theory of differential privacy can be very complex and subtle. Flaws in basic mechanisms and random number generation have been a critical source of vulnerabilities in real-world DP systems. In this paper, we present SampCert, the first comprehensive, mechanized foundation for executable implementations of differential privacy. SampCert is written in Lean with over 12,000 lines of proof. It offers a generic and extensible notion of DP, a framework for constructing and composing DP mechanisms, and formally verified implementations of Laplace and Gaussian sampling algorithms. SampCert provides (1) a mechanized foundation for developing the next generation of differentially private algorithms, and (2) mechanically verified primitives that can be deployed in production systems. Indeed, SampCert’s verified algorithms power the DP offerings of Amazon Web Services, demonstrating its real-world impact. SampCert’s key innovations include: (1) A generic DP foundation that can be instantiated for various DP definitions (e.g., pure, concentrated, Rényi DP); (2) formally verified discrete Laplace and Gaussian sampling algorithms that avoid the pitfalls of floating-point implementations; and (3) a simple probability monad and novel proof techniques that streamline the formalization. To enable proving complex correctness properties of DP and random number generation, SampCert makes heavy use of Lean’s extensive Mathlib library, leveraging theorems in Fourier analysis, measure and probability theory, number theory, and topology.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="pdf-url"><a class="helia-link helia-external" href="https://dl.acm.org/doi/pdf/10.1145/3729294">PDF</a></span> · <span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/3729294">DOI</a></span> · <span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/2412.01671">arXiv</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/journals/pacmpl/MedeirosNLKRZJTAT25">pldb</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="haselwarter-2024-tachis" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="haselwarter-2024-tachis"><span class="helia-title">Tachis: Higher-Order Separation Logic with Credits for Expected Costs</span>&nbsp;<a class="helia-slug" href="haselwarter-2024-tachis.html">haselwarter-2024-tachis</a><span class="helia-byline"><span class="helia-entry-link" data-entry="oopsla">OOPSLA</span> · 2024</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="haselwarter-2024-tachis" data-kind="reference">
+<div class="helia-abstract">We present Tachis, a higher-order separation logic to reason about the expected cost of probabilistic programs. Inspired by the uses of time credits for reasoning about the running time of deterministic programs, we introduce a novel notion of probabilistic cost credit. Probabilistic cost credits are a separation logic resource that can be used to pay for the cost of operations in programs, and that can be distributed across all possible branches of sampling instructions according to their weight, thus enabling us to reason about expected cost. The representation of cost credits as separation logic resources gives Tachis a great deal of flexibility and expressivity. In particular, it permits reasoning about amortized expected cost by storing excess credits as potential into data structures to pay for future operations. Tachis further supports a range of cost models, including running time and entropy usage. We showcase the versatility of this approach by applying our techniques to prove upper bounds on the expected cost of a variety of probabilistic algorithms and data structures, including randomized quicksort, hash tables, and meldable heaps. All of our results have been mechanized using Coq, Iris, and the Coquelicot real analysis library.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/3689753">DOI</a></span> · <span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/2405.20083">arXiv</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/journals/pacmpl/HaselwarterLMG024">pldb</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="aguirre-2024-error" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="aguirre-2024-error"><span class="helia-title">Error Credits: Resourceful Reasoning about Error Bounds for Higher-Order Probabilistic Programs</span>&nbsp;<a class="helia-slug" href="aguirre-2024-error.html">aguirre-2024-error</a><span class="helia-byline"><span class="helia-entry-link" data-entry="icfp">ICFP</span> · 2024</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="aguirre-2024-error" data-kind="reference">
+<div class="helia-abstract">Probabilistic programs often trade accuracy for efficiency, and thus may, with a small probability, return an incorrect result. It is important to obtain precise bounds for the probability of these errors, but existing verification approaches have limitations that lead to error probability bounds that are excessively coarse, or only apply to first-order programs. In this paper we present Eris, a higher-order separation logic for proving error probability bounds for probabilistic programs written in an expressive higher-order language. Our key novelty is the introduction of error credits , a separation logic resource that tracks an upper bound on the probability that a program returns an erroneous result. By representing error bounds as a resource, we recover the benefits of separation logic, including compositionality, modularity, and dependency between errors and program terms, allowing for more precise specifications. Moreover, we enable novel reasoning principles such as expectation-preserving error composition, amortized error reasoning, and error induction. We illustrate the advantages of our approach by proving amortized error bounds on a range of examples, including collision probabilities in hash functions, which allow us to write more modular specifications for data structures that use them as clients. We also use our logic to prove correctness and almost-sure termination of rejection sampling algorithms. All of our results have been mechanized in the Coq proof assistant using the Iris separation logic framework and the Coquelicot real analysis library.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/3674635">DOI</a></span> · <span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/2404.14223">arXiv</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/journals/pacmpl/0001HMLGTB24">pldb</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="frumin_krebbers_birkedal_reloc_2021" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="frumin_krebbers_birkedal_reloc_2021"><span class="helia-title">ReLoC Reloaded: A Mechanized Relational Logic for Fine-Grained Concurrency and Logical Atomicity</span>&nbsp;<a class="helia-slug" href="frumin_krebbers_birkedal_reloc_2021.html">frumin_krebbers_birkedal_reloc_2021</a><span class="helia-byline"><span class="helia-entry-link" data-entry="lmcs">LMCS</span> · 2021</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="frumin_krebbers_birkedal_reloc_2021" data-kind="reference">
+<div class="helia-abstract">We present a new version of ReLoC: a relational separation logic for proving refinements of programs with higher-order state, fine-grained concurrency, polymorphism and recursive types. The core of ReLoC is its refinement judgment <span class="helia-math helia-math-inline helia-mathml"><math><mi>𝑒</mi><mo>≾</mo><mrow><mi>𝑒</mi><mo lspace="0em" rspace="0em">′</mo></mrow><mo lspace="0.2777777777777778em" rspace="0.2777777777777778em">:</mo><mi>𝜏</mi></math></span>, which states that a program <span class="helia-math helia-math-inline helia-mathml"><math><mi>𝑒</mi></math></span> refines a program <span class="helia-math helia-math-inline helia-mathml"><math><mrow><mi>𝑒</mi><mo lspace="0em" rspace="0em">′</mo></mrow></math></span> at type <span class="helia-math helia-math-inline helia-mathml"><math><mi>𝜏</mi></math></span>. ReLoC provides type-directed structural rules and symbolic execution rules in separation-logic style for manipulating the judgment, whereas in prior work on refinements for languages with higher-order state and concurrency, such proofs were carried out by unfolding the judgment into its definition in the model. ReLoC’s abstract proof rules make it simpler to carry out refinement proofs, and enable us to generalize the notion of logically atomic specifications to the relational case, which we call logically atomic relational specifications. We build ReLoC on top of the Iris framework for separation logic in Coq, allowing us to leverage features of Iris to prove soundness of ReLoC, and to carry out refinement proofs in ReLoC. We implement tactics for interactive proofs in ReLoC, allowing us to mechanize several case studies in Coq, and thereby demonstrate the practicality of ReLoC. ReLoC Reloaded extends ReLoC (LICS’18) with various technical improvements, a new Coq mechanization, and support for Iris’s prophecy variables. The latter allows us to carry out refinement proofs that involve reasoning about the program’s future. We also expand ReLoC’s notion of logically atomic relational specifications with a new flavor based on the HOCAP pattern by Svendsen et al.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.46298/lmcs-17(3:9)2021">DOI</a></span> · <span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/2006.13635">arXiv</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="jung_etal_iris_ground_up_2018" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="jung_etal_iris_ground_up_2018"><span class="helia-title">Iris from the ground up: A modular foundation for higher-order concurrent separation logic</span>&nbsp;<a class="helia-slug" href="jung_etal_iris_ground_up_2018.html">jung_etal_iris_ground_up_2018</a><span class="helia-byline"><span class="helia-entry-link" data-entry="jfp">JFP</span> · 2018</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="jung_etal_iris_ground_up_2018" data-kind="reference">
+<div class="helia-abstract">Iris is a framework for higher-order concurrent separation logic, which has been implemented in the Coq proof assistant and deployed very effectively in a wide variety of verification projects. Iris was designed with the express goal of simplifying and consolidating the foundations of modern separation logics, but it has evolved over time, and the design and semantic foundations of Iris itself have yet to be fully written down and explained together properly in one place. Here, we attempt to fill this gap, presenting a reasonably complete picture of the latest version of Iris (version 3.1), from first principles and in one coherent narrative.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="pdf-url"><a class="helia-link helia-external" href="https://www.cambridge.org/core/services/aop-cambridge-core/content/view/26301B518CE2C52796BFA12B8BAB5B5F/S0956796818000151a.pdf/div-class-title-iris-from-the-ground-up-a-modular-foundation-for-higher-order-concurrent-separation-logic-div.pdf">PDF</a></span> · <span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1017/s0956796818000151">DOI</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/journals/jfp/JungKJBBD18">pldb</a></span></div>
+</div>
+</div>
+</details>
+</section>
+</div>
+</details>
+</div>
+<div class="helia-reference-cites-away helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">External (46)</span></summary>
+<div class="helia-group-body">
+<ul>
+<li><a class="helia-link helia-external" href="https://doi.org/10.5281/zenodo.19089094">Modular Verification of Differential Privacy in Probabilistic Higher-Order Separation Logic - Artifact</a> (2026)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3704894">Bluebell: An Alliance of Relational Lifting and Independence for Probabilistic Reasoning</a> (2025)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3704877">Approximate Relational Reasoning for Higher-Order Probabilistic Programs</a> (2025)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3704899">Sound and Complete Proof Rules for Probabilistic Termination</a> (2025)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3703595.3705875">Formalization of Differential Privacy in Isabelle/HOL</a> (2025)</li>
+<li>Hands-on Differential Privacy: Introduction to the Theory and Practice Using OpenDP (first edition ed.) (2024)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3674632">Almost-Sure Termination by Guarded Refinement</a> (2024)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3632868">Asynchronous Probabilistic Couplings in Higher-Order Separation Logic</a> (2024)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3689726">Sensitivity by Parametricity</a> (2024)</li>
+<li><a class="helia-link helia-external" href="https://arxiv.org/abs/2406.00884">An Iris for Expected Cost Analysis</a> (2024)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3600006.3613174">Turbo: Effective Caching in Differentially-Private Databases</a> (2023)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3589207">Contextual Linear Types for Differential Privacy</a> (2023)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3563313">Solo: a lightweight static analysis for differential privacy</a> (2022)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.14778/3574245.3574246">Cache Me If You Can: Accuracy-Aware Inference Engine for Differentially Private Data Exploration</a> (2022)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3473598">Higher-order probabilistic adversarial computations: categorical semantics and program logics</a> (2021)</li>
+<li>Programming Differential Privacy (2021)</li>
+<li>The Discrete Gaussian for Differential Privacy (2020)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1017/9781108770750.008">Termination Analysis of Probabilistic Programs with Martingales</a> (2020)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1109/sp40000.2020.00086">A Programming Framework for Differential Privacy with Accuracy Concentration Bounds</a> (2020)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.14778/3342263.3342274">PrivateSQL: A Differentially Private SQL Query Engine</a> (2019)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3360598">Duet: an expressive higher-order language and linear type system for statically enforcing differential privacy</a> (2019)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1109/lics.2019.8785668">Approximate Span Liftings: Compositional Semantics for Relaxations of Differential Privacy</a> (2019)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3341697">Fuzzi: a three-level logic for differential privacy</a> (2019)</li>
+<li>Probabilistic Relational Reasoning via Metrics (2019)</li>
+<li>Privacy amplification by subsampling: tight analyses via couplings and divergences (2018)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3158146">Synthesizing coupling proofs of differential privacy</a> (2017)</li>
+<li><a class="helia-link helia-external" href="https://arxiv.org/abs/1710.09951">Probabilistic Couplings for Probabilistic Reasoning</a> (2017)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.14778/3055330.3055331">Understanding the Sparse Vector Technique for Differential Privacy</a> (2017)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3110254">A framework for adaptive differential privacy</a> (2017)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3009837.3009884">LightDP: towards automating differential privacy proofs</a> (2017)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/2976749.2978318">Deep Learning with Differential Privacy</a> (2016)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/2976749.2978391">Advanced Probabilistic Couplings for Differential Privacy</a> (2016)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/2933575.2934554">Proving Differential Privacy via Probabilistic Couplings</a> (2016)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1016/j.entcs.2016.09.043">Approximate Relational Hoare Logic for Continuous Random Samplings</a> (2016)</li>
+<li>Privacy Odometers and Filters: Pay-as-you-Go Composition (2016)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-662-48899-7_27">Relational Reasoning via Probabilistic Coupling</a> (2015)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/2676726.2677000">Higher-Order Approximate Relational Refinement Types for Mechanism Design and Differential Privacy</a> (2015)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1561/0400000042">The Algorithmic Foundations of Differential Privacy</a> (2014)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/2429069.2429113">Linear dependent types for differential privacy</a> (2013)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1109/icde.2013.6544900">Query optimization for differentially private data management systems</a> (2013)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/2103621.2103670">Probabilistic relational reasoning for differential privacy</a> (2012)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1137/09076828x">Universally Utility-maximizing Privacy Mechanisms</a> (2012)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/2382196.2382264">On significance of the least significant bits for differential privacy</a> (2012)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/1863543.1863568">Distance makes the types grow stronger: a calculus for differential privacy</a> (2010)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/11681878_14">Calibrating Noise to Sensitivity in Private Data Analysis</a> (2006)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1016/j.jspi.2004.08.014">A discrete analogue of the Laplace distribution</a> (2006)</li>
+</ul>
+</div>
+</details>
+</div>
+</div>
+</details>
+</div>
+<footer class="helia-footer">
+<div class="helia-related helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><h3 class="helia-heading">Related</h3>
+</summary>
+<div class="helia-group-body">
+<ul>
+<li><a class="helia-entry-link" href="li-2023-lilac.html" data-entry="li-2023-lilac">Lilac: A Modal Separation Logic for Conditional Probability</a> <span class="helia-related-tags"><a class="helia-entry-link" href="tag-probabilistic.html" data-entry="tag-probabilistic">#probabilistic</a> <a class="helia-entry-link" href="tag-separation-logic.html" data-entry="tag-separation-logic">#separation-logic</a></span></li>
+<li><a class="helia-entry-link" href="li-2024-a.html" data-entry="li-2024-a">A Nominal Approach to Probabilistic Separation Logic</a> <span class="helia-related-tags"><a class="helia-entry-link" href="tag-probabilistic.html" data-entry="tag-probabilistic">#probabilistic</a> <a class="helia-entry-link" href="tag-separation-logic.html" data-entry="tag-separation-logic">#separation-logic</a></span></li>
+<li><a class="helia-entry-link" href="li-2025-modular.html" data-entry="li-2025-modular">Modular Reasoning about Error Bounds for Concurrent Probabilistic Programs</a> <span class="helia-related-tags"><a class="helia-entry-link" href="tag-probabilistic.html" data-entry="tag-probabilistic">#probabilistic</a> <a class="helia-entry-link" href="tag-separation-logic.html" data-entry="tag-separation-logic">#separation-logic</a></span></li>
+<li><a class="helia-entry-link" href="li-2026-contextual.html" data-entry="li-2026-contextual">Contextual Refinement of Higher-Order Concurrent Probabilistic Programs</a> <span class="helia-related-tags"><a class="helia-entry-link" href="tag-probabilistic.html" data-entry="tag-probabilistic">#probabilistic</a> <a class="helia-entry-link" href="tag-separation-logic.html" data-entry="tag-separation-logic">#separation-logic</a></span></li>
+<li><a class="helia-entry-link" href="marionneau-2026-modular.html" data-entry="marionneau-2026-modular">Modular Specifications and Implementations of Random Samplers in Higher-Order Separation Logic</a> <span class="helia-related-tags"><a class="helia-entry-link" href="tag-probabilistic.html" data-entry="tag-probabilistic">#probabilistic</a> <a class="helia-entry-link" href="tag-separation-logic.html" data-entry="tag-separation-logic">#separation-logic</a></span></li>
+</ul>
+</div>
+</details>
+</div>
+</footer>
+</article>
+<div class="helia-identity"><span class="helia-id">haselwarter-2026-modular</span> <span class="helia-kind">reference</span> <span class="helia-path">entries/refs/haselwarter-2026-modular/haselwarter-2026-modular.hel</span></div>
+</div>
+</body>
+</html>

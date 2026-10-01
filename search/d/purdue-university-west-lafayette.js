@@ -1,0 +1,1 @@
+heliaSearchData("d/purdue-university-west-lafayette",{"id":"purdue-university-west-lafayette","title":"Purdue University West Lafayette","kind":"institution","tags":[],"authors":[],"venue":[],"date":null,"url":"purdue-university-west-lafayette.html","headings":[],"body":""});

@@ -1,0 +1,1 @@
+heliaSearchData("d/jeannin-2013-language",{"id":"jeannin-2013-language","title":"Language Constructs for Non-Well-Founded Computation","kind":"reference","tags":["coalgebra"],"authors":["Alexandra Silva","Dexter Kozen","Jean-Baptiste Jeannin"],"venue":["ESOP","European Symposium on Programming"],"date":null,"url":"jeannin-2013-language.html","headings":[],"body":""});

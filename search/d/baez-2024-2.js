@@ -1,0 +1,1 @@
+heliaSearchData("d/baez-2024-2",{"id":"baez-2024-2","title":"2-Rig Extensions and the Splitting Principle","kind":"reference","tags":["category-theory"],"authors":["Joe Moeller","John C. Baez","Todd Trimble"],"venue":["arXiv"],"date":null,"url":"baez-2024-2.html","headings":[],"body":""});

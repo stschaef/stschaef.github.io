@@ -7,6 +7,8 @@
 <title>Deterministic regular languages</title>
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Ctext y=%22.9em%22 font-size=%2290%22%3E%F0%9F%8C%BB%3C/text%3E%3C/svg%3E">
 <meta name="generator" content="helia">
+<link rel="alternate" type="application/atom+xml" title="Steven Schaefer" href="feed.xml">
+<link rel="alternate" type="application/feed+json" title="Steven Schaefer" href="feed.json">
 <script src="helia/theme-version.js"></script>
 <script src="theme/folio-early.js"></script>
 <link rel="stylesheet" href="helia/theme.css">
@@ -34,7 +36,7 @@
 <article class="helia-article">
 <header class="helia-header" data-entry="bruggemannkleinwood" data-kind="reference">
 <h2 class="helia-heading"><span class="helia-taxon">Reference.</span> Deterministic regular languages</h2>
-<div class="helia-meta"><span class="helia-author"><a class="helia-entry-link" href="annebruggemannklein.html" data-entry="annebruggemannklein">Anne Bruggemann-Klein</a>, <a class="helia-entry-link" href="derickwood.html" data-entry="derickwood">Derick Wood</a></span> · <span class="helia-byline"><a class="helia-entry-link" href="stacs.html" data-entry="stacs">STACS</a> · 1992</span> · <span class="helia-tags"><span class="helia-tag" data-tag="parsing"><span class="helia-entry-link helia-unavailable">parsing</span></span></span> · <span class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1007/3-540-55210-3_182">DOI</a></span></span></div>
+<div class="helia-meta"><span class="helia-author"><a class="helia-entry-link" href="annebruggemannklein.html" data-entry="annebruggemannklein">Anne Bruggemann-Klein</a>, <a class="helia-entry-link" href="derickwood.html" data-entry="derickwood">Derick Wood</a></span> · <span class="helia-byline"><a class="helia-entry-link" href="stacs.html" data-entry="stacs">STACS</a> · 1992</span> · <span class="helia-tags"><span class="helia-tag" data-tag="parsing"><a class="helia-entry-link" href="tag-parsing.html" data-entry="tag-parsing">parsing</a></span></span> · <span class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1007/3-540-55210-3_182">DOI</a></span></span></div>
 </header>
 <div class="helia-body">
 <div class="helia-abstract">The ISO standard for Standard Generalized Markup Language (SGML) provides a syntactic meta-language for the definition of textual markup systems. In the standard the right hand sides of productions are called content models and they are based on regular expressions. The allowable regular expressions are those that are “unambiguous” as defined by the standard. Unfortunately, the standard’s use of the term “unambiguous” does not correspond to the two well known notions, since not all regular languages are denoted by “unambiguous” expressions. Furthermore, the standard’s definition of “unambiguous” is somewhat vague. Therefore, we provide a precise definition of “unambiguous expressions” and rename them deterministic regular expressions to avoid any confusion. A regular expression E is deterministic if the canonical <span class="helia-math helia-math-inline helia-mathml"><math><mi>𝜀</mi></math></span>-free finite automaton <span class="helia-math helia-math-inline helia-mathml"><math><msub><mi>𝑀</mi><mi>𝐸</mi></msub></math></span> recognizing L(E) is deterministic. A regular language is deterministic if there is a deterministic expression that denotes it. We give a Kleene-like theorem for deterministic regular languages and we characterize them in terms of the structural properties of the minimal deterministic automata recognizing them. The latter result enables us to decide if a given regular expression denotes a deterministic regular language and, if so, to construct an equivalent deterministic expression.</div>
@@ -101,15 +103,26 @@ and Jantzen, Matthias<span class="hl-punctuation hl-definition hl-string hl-end 
 </div>
 <div class="helia-reference-cited-by helia-collapsible">
 <details open>
-<summary class="helia-group-summary"><span class="helia-group-title">Cited by (2)</span></summary>
+<summary class="helia-group-summary"><span class="helia-group-title">Cited by (3)</span></summary>
 <div class="helia-group-body">
+<section class="helia-transclusion" data-entry="yallop-2023-flap" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="yallop-2023-flap"><span class="helia-title">flap: A Deterministic Parser with Fused Lexing</span>&nbsp;<a class="helia-slug" href="yallop-2023-flap.html">yallop-2023-flap</a><span class="helia-byline"><span class="helia-entry-link" data-entry="pldi">PLDI</span> · 2023</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="yallop-2023-flap" data-kind="reference">
+<div class="helia-abstract">Lexers and parsers are typically defined separately and connected by a token stream. This separate definition is important for modularity and reduces the potential for parsing ambiguity. However, materializing tokens as data structures and case-switching on tokens comes with a cost. We show how to fuse separately-defined lexers and parsers, drastically improving performance without compromising modularity or increasing ambiguity. We propose a deterministic variant of Greibach Normal Form that ensures deterministic parsing with a single token of lookahead and makes fusion strikingly simple, and prove that normalizing context free expressions into the deterministic normal form is semantics-preserving. Our staged parser combinator library, flap, provides a standard interface, but generates specialized token-free code that runs two to six times faster than ocamlyacc on a range of benchmarks.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="pdf-url"><a class="helia-link helia-external" href="https://dl.acm.org/doi/pdf/10.1145/3591269">PDF</a></span> · <span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/3591269">DOI</a></span> · <span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/2304.05276">arXiv</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/journals/pacmpl/YallopXK23">pldb</a></span></div>
+</div>
+</div>
+</details>
+</section>
 <section class="helia-transclusion" data-entry="EdelmannZippy2020" data-depth="1">
 <details>
 <summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="EdelmannZippy2020"><span class="helia-title">Zippy LL(1) parsing with derivatives</span>&nbsp;<a class="helia-slug" href="EdelmannZippy2020.html">EdelmannZippy2020</a><span class="helia-byline"><span class="helia-entry-link" data-entry="pldi">PLDI</span> · 2020</span></h2></summary>
 <div class="helia-transclusion-body">
 <div class="helia-reference" data-entry="EdelmannZippy2020" data-kind="reference">
 <div class="helia-abstract">In this paper, we present an efficient, functional, and formally verified parsing algorithm for LL(1) context-free expressions based on the concept of derivatives of formal languages. Parsing with derivatives is an elegant parsing technique, which, in the general case, suffers from cubic worst-case time complexity and slow performance in practice. We specialise the parsing with derivatives algorithm to LL(1) context-free expressions, where alternatives can be chosen given a single token of lookahead. We formalise the notion of LL(1) expressions and show how to efficiently check the LL(1) property. Next, we present a novel linear-time parsing with derivatives algorithm for LL(1) expressions operating on a zipper-inspired data structure. We prove the algorithm correct in Coq and present an implementation as a part of Scallion, a parser combinators framework in Scala with enumeration and pretty printing capabilities.</div>
-<div class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/3385412.3385992">DOI</a></span></div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/3385412.3385992">DOI</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/conf/pldi/EdelmannHK20">pldb</a></span></div>
 </div>
 </div>
 </details>
@@ -120,7 +133,7 @@ and Jantzen, Matthias<span class="hl-punctuation hl-definition hl-string hl-end 
 <div class="helia-transclusion-body">
 <div class="helia-reference" data-entry="krishnaswami_typed_2019" data-kind="reference">
 <div class="helia-abstract">In this paper, we recall the definition of the context-free expressions (or µ-regular expressions), an algebraic presentation of the context-free languages. Then, we define a core type system for the context-free expressions which gives a compositional criterion for identifying those context-free expressions which can be parsed unambiguously by predictive algorithms in the style of recursive descent or LL(1). Next, we show how these typed grammar expressions can be used to derive a parser combinator library which both guarantees linear-time parsing with no backtracking and single-token lookahead, and which respects the natural denotational semantics of context-free expressions. Finally, we show how to exploit the type information to write a staged version of this library, which produces dramatic increases in performance, even outperforming code generated by the standard parser generator tool ocamlyacc.</div>
-<div class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/3314221.3314625">DOI</a></span></div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/3314221.3314625">DOI</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/conf/pldi/KrishnaswamiY19">pldb</a></span></div>
 </div>
 </div>
 </details>

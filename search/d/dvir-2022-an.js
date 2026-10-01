@@ -1,0 +1,1 @@
+heliaSearchData("d/dvir-2022-an",{"id":"dvir-2022-an","title":"An Algebraic Theory for Shared-State Concurrency","kind":"reference","tags":["concurrency","effects"],"authors":["Ohad Kammar","Ori Lahav","Yotam Dvir"],"venue":["APLAS","Asian Symposium on Programming Languages and Systems"],"date":null,"url":"dvir-2022-an.html","headings":[],"body":""});

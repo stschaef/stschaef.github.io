@@ -1,0 +1,1 @@
+heliaSearchData("d/munchmaccagnoni-2009-focalisation",{"id":"munchmaccagnoni-2009-focalisation","title":"Focalisation and Classical Realisability","kind":"reference","tags":["focusing"],"authors":["Guillaume Munch-Maccagnoni"],"venue":["CSL","Computer Science Logic (EACSL Annual Conference)"],"date":null,"url":"munchmaccagnoni-2009-focalisation.html","headings":[],"body":""});

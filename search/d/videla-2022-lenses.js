@@ -1,0 +1,1 @@
+heliaSearchData("d/videla-2022-lenses",{"id":"videla-2022-lenses","title":"Lenses for Composable Servers","kind":"reference","tags":["lenses"],"authors":["Andre Videla","Matteo Capucci"],"venue":["arXiv"],"date":null,"url":"videla-2022-lenses.html","headings":[],"body":""});

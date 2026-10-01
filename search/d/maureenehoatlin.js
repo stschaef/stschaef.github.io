@@ -1,0 +1,1 @@
+heliaSearchData("d/maureenehoatlin",{"id":"maureenehoatlin","title":"Maureen E Hoatlin","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"maureenehoatlin.html","headings":[],"body":""});

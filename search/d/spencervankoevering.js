@@ -1,0 +1,1 @@
+heliaSearchData("d/spencervankoevering",{"id":"spencervankoevering","title":"Spencer Van Koevering","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"spencervankoevering.html","headings":[],"body":""});

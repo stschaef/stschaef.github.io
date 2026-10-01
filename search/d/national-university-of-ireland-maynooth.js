@@ -1,0 +1,1 @@
+heliaSearchData("d/national-university-of-ireland-maynooth",{"id":"national-university-of-ireland-maynooth","title":"National University of Ireland, Maynooth","kind":"institution","tags":[],"authors":[],"venue":[],"date":null,"url":"national-university-of-ireland-maynooth.html","headings":[],"body":""});

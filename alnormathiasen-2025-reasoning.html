@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>Reasoning about Weak Isolation Levels in Separation Logic</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Ctext y=%22.9em%22 font-size=%2290%22%3E%F0%9F%8C%BB%3C/text%3E%3C/svg%3E">
+<meta name="generator" content="helia">
+<link rel="alternate" type="application/atom+xml" title="Steven Schaefer" href="feed.xml">
+<link rel="alternate" type="application/feed+json" title="Steven Schaefer" href="feed.json">
+<script src="helia/theme-version.js"></script>
+<script src="theme/folio-early.js"></script>
+<link rel="stylesheet" href="helia/theme.css">
+<link rel="stylesheet" href="helia/highlight.css">
+<link rel="stylesheet" href="helia/search.css">
+<link rel="stylesheet" href="theme/katex.css">
+<link rel="stylesheet" href="theme/recipe.css">
+<link rel="stylesheet" href="theme/site.css">
+<link rel="stylesheet" href="theme/folio.css">
+<script defer src="helia/runtime.js"></script>
+<script defer src="helia/search.js"></script>
+<script defer src="theme/glyphcraft.js"></script>
+<script defer src="theme/glyphart.js"></script>
+<script defer src="theme/glyphgen.js"></script>
+<script defer src="theme/ornament.js"></script>
+<script defer src="theme/folio.js"></script>
+<script defer src="theme/portrait.js"></script>
+<script type="application/json" id="helia-widgets">{"helia-cite-formats":"widgets/helia-cite-formats-a3294ac7.js"}</script>
+<link rel="modulepreload" href="widgets/helia-cite-formats-a3294ac7.js">
+<script type="module" src="widgets/runtime.js"></script>
+</head>
+<body>
+<nav class="helia-topbar"><a class="helia-home" href="home.html">Steven Schaefer</a><ul class="helia-nav-links"><li><a href="stevenschaefer.html">About Me</a></li><li><a href="research.html">Research</a></li><li><a href="new.html">New</a></li></ul><button type="button" class="helia-search-button" aria-label="Search (/ or Ctrl+K)" aria-haspopup="dialog"><span class="helia-search-icon">⌕</span><span class="helia-search-label">Search</span><kbd class="helia-search-key">/</kbd></button></nav>
+<div class="helia-page" data-kind="reference">
+<article class="helia-article">
+<header class="helia-header" data-entry="alnormathiasen-2025-reasoning" data-kind="reference">
+<h2 class="helia-heading"><span class="helia-taxon">Reference.</span> Reasoning about Weak Isolation Levels in Separation Logic</h2>
+<div class="helia-meta"><span class="helia-author"><a class="helia-entry-link" href="andersalnormathiasen.html" data-entry="andersalnormathiasen">Anders Alnor Mathiasen</a>, <a class="helia-entry-link" href="leongondelman.html" data-entry="leongondelman">Léon Gondelman</a>, <a class="helia-entry-link" href="leonducruet.html" data-entry="leonducruet">Léon Ducruet</a>, <a class="helia-entry-link" href="amintimany.html" data-entry="amintimany">Amin Timany</a>, <a class="helia-entry-link" href="larsbirkedal.html" data-entry="larsbirkedal">Lars Birkedal</a></span> · <span class="helia-byline"><a class="helia-entry-link" href="icfp.html" data-entry="icfp">ICFP</a> · 2025</span> · <span class="helia-tags"><span class="helia-tag" data-tag="separation-logic"><a class="helia-entry-link" href="tag-separation-logic.html" data-entry="tag-separation-logic">separation-logic</a></span> <span class="helia-tag" data-tag="concurrency"><a class="helia-entry-link" href="tag-concurrency.html" data-entry="tag-concurrency">concurrency</a></span></span> · <span class="helia-entry-links"><span class="helia-entry-link" data-field="pdf-url"><a class="helia-link helia-external" href="https://dl.acm.org/doi/pdf/10.1145/3747515">PDF</a></span> · <span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/3747515">DOI</a></span> · <span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/2501.14421">arXiv</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/journals/pacmpl/MathiasenGDTB25">pldb</a></span></span></div>
+</header>
+<div class="helia-body">
+<div class="helia-abstract">Consistency guarantees among concurrently executing transactions in local- and distributed systems, commonly referred to as isolation levels, have been formalized in a number of models. Thus far, no model can reason about executable implementations of databases or local transaction libraries providing weak isolation levels. Weak isolation levels are characterized by being highly concurrent and, unlike their stronger counter part serializability, they are not equivalent to the consistency guarantees provided by a transaction library implemented using a global lock. Industrial-strength databases almost exclusively implement weak isolation levels as their default level. This calls for formalism as numerous bugs violating isolation have been detected in these databases. In this paper, we formalize three weak isolation levels in separation logic, namely read uncommitted, read committed, and snapshot isolation. We define modular separation logic specifications that are independent of the underlying transaction library implementation. Historically, isolation levels have been specified using examples of executions between concurrent transactions that are not allowed to occur, and we demonstrate that our specifications correctly prohibit such examples. To show that our specifications are realizable, we formally verify that an executable implementation of a key-value database running the multi-version concurrency control algorithm from the original snapshot isolation paper satisfies our specification of snapshot isolation. Moreover, we prove implications between the specifications—snapshot isolation implies read committed and read committed implies read uncommitted—and thus the verification effort of the database serves as proof that all of our specifications are realizable. All results are mechanized in the Rocq proof assistant on top of the Iris separation logic framework.</div>
+</div>
+<div class="helia-cite helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><h3 class="helia-heading">Cite</h3>
+</summary>
+<div class="helia-group-body">
+<div class="helia-widget" data-widget="helia-cite-formats" data-props="{&quot;key&quot;:&quot;alnormathiasen-2025-reasoning&quot;,&quot;bibtex&quot;:&quot;@article{alnormathiasen-2025-reasoning, title={Reasoning about Weak Isolation Levels in Separation Logic}, volume={9}, ISSN={2475-1421}, url={http://dx.doi.org/10.1145/3747515}, DOI={10.1145/3747515}, number={ICFP}, journal={Proceedings of the ACM on Programming Languages}, publisher={Association for Computing Machinery (ACM)}, author={Alnor Mathiasen, Anders and Gondelman, Léon and Ducruet, Léon and Timany, Amin and Birkedal, Lars}, year={2025}, month=Aug, pages={306–340} }&quot;,&quot;bib-file&quot;:&quot;alnormathiasen-2025-reasoning.bib&quot;,&quot;hayagriva&quot;:&quot;alnormathiasen-2025-reasoning:\n  type: article\n  title: Reasoning about Weak Isolation Levels in Separation Logic\n  author:\n  - Alnor Mathiasen, Anders\n  - Gondelman, Léon\n  - Ducruet, Léon\n  - Timany, Amin\n  - Birkedal, Lars\n  date: 2025-08\n  page-range: 306-340\n  url: http://dx.doi.org/10.1145/3747515\n  serial-number:\n    doi: 10.1145/3747515\n    issn: 2475-1421\n  parent:\n    type: periodical\n    title: Proceedings of the ACM on Programming Languages\n    publisher: Association for Computing Machinery (ACM)\n    issue: ICFP\n    volume: 9\n&quot;,&quot;yml-file&quot;:&quot;alnormathiasen-2025-reasoning.yml&quot;}"><div class="helia-cite-key" data-copy="@alnormathiasen-2025-reasoning" data-copy-label="citation key"><span class="helia-bib-key">Cite as</span> <code class="helia-raw-inline">@alnormathiasen-2025-reasoning</code> (helia, typst) · <code class="helia-raw-inline">\cite{alnormathiasen-2025-reasoning}</code> (LaTeX)</div>
+<div class="helia-cite-format helia-collapsible" data-format="bibtex" data-copy="true" data-copy-label="BibTeX">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">BibTeX</span></summary>
+<div class="helia-group-body">
+<details class="helia-code" open><summary class="helia-code-summary"><span class="helia-code-lang">bibtex</span> · <span class="helia-code-lines">1 line</span></summary><pre class="helia-raw"><code class="language-bibtex"><span class="hl-text hl-bibtex"><span class="hl-meta hl-entry hl-braces hl-bibtex"><span class="hl-keyword hl-other hl-entry-type hl-bibtex"><span class="hl-punctuation hl-definition hl-keyword hl-bibtex">@</span>article</span><span class="hl-punctuation hl-section hl-entry hl-begin hl-bibtex">{</span><span class="hl-entity hl-name hl-type hl-entry-key hl-bibtex">alnormathiasen-2025-reasoning</span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">title</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>Reasoning about Weak Isolation Levels in Separation Logic<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">volume</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>9<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">ISSN</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>2475-1421<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">url</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>http://dx.doi.org/10.1145/3747515<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">DOI</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>10.1145/3747515<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">number</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>ICFP<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">journal</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>Proceedings of the ACM on Programming Languages<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">publisher</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>Association for Computing Machinery (ACM)<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">author</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>Alnor Mathiasen, Anders and Gondelman, Léon and Ducruet, Léon and Timany, Amin and Birkedal, Lars<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">year</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>2025<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">month</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span>Aug</span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">pages</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>306–340<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span> </span><span class="hl-punctuation hl-section hl-entry hl-end hl-bibtex">}</span></span></span></code></pre></details>
+</div>
+</details>
+</div>
+<div class="helia-cite-format helia-collapsible" data-format="hayagriva" data-copy="true" data-copy-label="hayagriva YAML">
+<details>
+<summary class="helia-group-summary"><span class="helia-group-title">hayagriva YAML (typst)</span></summary>
+<div class="helia-group-body">
+<details class="helia-code" open><summary class="helia-code-summary"><span class="helia-code-lang">yaml</span> · <span class="helia-code-lines">21 lines</span></summary><pre class="helia-raw"><code class="language-yaml"><span class="hl-source hl-yaml"><span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">alnormathiasen-2025-reasoning</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">type</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">article</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">title</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Reasoning about Weak Isolation Levels in Separation Logic</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">author</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Alnor Mathiasen, Anders</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Gondelman, Léon</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Ducruet, Léon</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Timany, Amin</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Birkedal, Lars</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">date</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">2025-08</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">page-range</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">306-340</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">url</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">http://dx.doi.org/10.1145/3747515</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">serial-number</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">doi</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">10.1145/3747515</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">issn</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">2475-1421</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">parent</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">type</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">periodical</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">title</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Proceedings of the ACM on Programming Languages</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">publisher</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Association for Computing Machinery (ACM)</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">issue</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">ICFP</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">volume</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-constant hl-numeric hl-integer hl-decimal hl-yaml">9</span>
+</span></code></pre></details>
+</div>
+</details>
+</div>
+<div class="helia-cite-files">Download: <a class="helia-link" href="alnormathiasen-2025-reasoning.bib">alnormathiasen-2025-reasoning.bib</a> · <a class="helia-link" href="alnormathiasen-2025-reasoning.yml">alnormathiasen-2025-reasoning.yml</a></div>
+</div>
+</div>
+</details>
+</div>
+<div class="helia-reference-cited-by helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">Cited by (1)</span></summary>
+<div class="helia-group-body">
+<section class="helia-transclusion" data-entry="mathiasen-2026-verifying" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="mathiasen-2026-verifying"><span class="helia-title">Verifying Isolation Levels of Database Implementations for Free Using Separation Logic</span>&nbsp;<a class="helia-slug" href="mathiasen-2026-verifying.html">mathiasen-2026-verifying</a><span class="helia-byline"><span class="helia-entry-link" data-entry="arxiv">arXiv</span> · 2026</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="mathiasen-2026-verifying" data-kind="reference">
+<div class="helia-abstract">Modern databases are highly concurrent and provide transactions as a mean of grouping several database operations into atomically applied units. Database vendors and software engineers use isolation levels to describe the consistency guarantees of transactions. The popular isolation levels give weak guarantees, with intricate semantics, to optimize performance of applications. The problem of assuring that database implementations actually implement the isolation level guarantees that application developers build their systems upon has received a great deal of attention from the testing community. But until now, there exists no method for formally verifying that a database implementation actually implements the isolation level that database vendors says it provides. In this paper, we present a method for verifying that a database implements an isolation level: we derive isolation levels directly, as formalized in transactional consistency models by the database community, from the structure of separation logic specifications. By doing so, we consider all program executions that a database and arbitrary clients of the database could produce. The result is a so-called free theorem meaning that any database implementation, whose operations are verified against a specific set of separation logic specifications, actually implements its isolation level. As all proofs in this paper are mechanized in the Rocq proof assistant and build upon a detailed semantic model of program execution, we believe this contribution raises the bar for the achievable robustness of databases.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/2607.15877">arXiv</a></span></div>
+</div>
+</div>
+</details>
+</section>
+</div>
+</details>
+</div>
+<div class="helia-reference-cites helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">Cites 46 works (7 here)</span></summary>
+<div class="helia-group-body">
+<div class="helia-reference-cites-here helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">With notes (7)</span></summary>
+<div class="helia-group-body">
+<section class="helia-transclusion" data-entry="timany-2024-trillium" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="timany-2024-trillium"><span class="helia-title">Trillium: Higher-Order Concurrent and Distributed Separation Logic for Intensional Refinement</span>&nbsp;<a class="helia-slug" href="timany-2024-trillium.html">timany-2024-trillium</a><span class="helia-byline"><span class="helia-entry-link" data-entry="popl">POPL</span> · 2024</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="timany-2024-trillium" data-kind="reference">
+<div class="helia-abstract">Expressive state-of-the-art separation logics rely on step-indexing to model semantically complex features and to support modular reasoning about imperative higher-order concurrent and distributed programs. Stepindexing comes, however, with an inherent cost: it restricts the adequacy theorem of program logics to a fairly simple class of safety properties. In this paper, we explore if and how intensional refinement is a viable methodology for strengthening higher-order concurrent (and distributed) separation logic to prove non-trivial safety and liveness properties. Specifically, we introduce Trillium, a language-agnostic separation logic framework for showing intensional refinement relations between traces of a program and a model. We instantiate Trillium with a concurrent language and develop Fairis, a concurrent separation logic, that we use to show liveness properties of concurrent programs under fair scheduling assumptions through a fair liveness-preserving refinement of a model. We also instantiate Trillium with a distributed language and obtain an extension of Aneris, a distributed separation logic, which we use to show refinement relations between distributed systems and TLA + models.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="pdf-url"><a class="helia-link helia-external" href="https://dl.acm.org/doi/pdf/10.1145/3632851">PDF</a></span> · <span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/3632851">DOI</a></span> · <span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/2109.07863">arXiv</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/journals/pacmpl/TimanyGSHGNB24">pldb</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="sharmaGroveSeparationLogicLibrary2023" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="sharmaGroveSeparationLogicLibrary2023"><span class="helia-title">Grove: A Separation-Logic Library for Verifying Distributed Systems</span>&nbsp;<a class="helia-slug" href="sharmaGroveSeparationLogicLibrary2023.html">sharmaGroveSeparationLogicLibrary2023</a><span class="helia-byline"><span class="helia-entry-link" data-entry="sosp">SOSP</span> · 2023</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="sharmaGroveSeparationLogicLibrary2023" data-kind="reference">
+<div class="helia-abstract">Grove is a concurrent separation logic library for verifying distributed systems. Grove is the first to handle time-based leases, including their interaction with reconfiguration, crash recovery, thread-level concurrency, and unreliable networks. This paper uses Grove to verify several distributed system components written in Go, including vKV, a realistic distributed multi-threaded key-value store. vKV supports reconfiguration, primary/backup replication, and crash recovery, and uses leases to execute read-only requests on any replica. vKV achieves high performance (67–73% of Redis on a single core), scales with more cores and more backup replicas (achieving about 2× the throughput when going from 1 to 3 servers), and can safely execute reads while reconfiguring.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/3600006.3613172">DOI</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="gondelman-2023-verifying" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="gondelman-2023-verifying"><span class="helia-title">Verifying Reliable Network Components in a Distributed Separation Logic with Dependent Separation Protocols</span>&nbsp;<a class="helia-slug" href="gondelman-2023-verifying.html">gondelman-2023-verifying</a><span class="helia-byline"><span class="helia-entry-link" data-entry="icfp">ICFP</span> · 2023</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="gondelman-2023-verifying" data-kind="reference">
+<div class="helia-abstract">We present a foundationally verified implementation of a reliable communication library for asynchronous client-server communication, and a stack of formally verified components on top thereof. Our library is implemented in an OCaml-like language on top of UDP and features characteristic traits of existing protocols, such as a simple handshaking protocol, bidirectional channels, and retransmission/acknowledgement mechanisms. We verify the library in the Aneris distributed separation logic using a novel proof pattern—dubbed the session escrow pattern—based on the existing escrow proof pattern and the so-called dependent separation protocols, which hitherto have only been used in a non-distributed concurrent setting. We demonstrate how our specification of the reliable communication library simplifies formal reasoning about applications, such as a remote procedure call library, which we in turn use to verify a lazily replicated key-value store with leader-followers and clients thereof. Our development is highly modular—each component is verified relative to specifications of the components it uses (not the implementation). All our results are formalized in the Coq proof assistant.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="pdf-url"><a class="helia-link helia-external" href="https://dl.acm.org/doi/pdf/10.1145/3607859">PDF</a></span> · <span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/3607859">DOI</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/journals/pacmpl/GondelmanHPTB23">pldb</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="nieto-2023-modular" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="nieto-2023-modular"><span class="helia-title">Modular Verification of State-Based CRDTs in Separation Logic</span>&nbsp;<a class="helia-slug" href="nieto-2023-modular.html">nieto-2023-modular</a><span class="helia-byline"><span class="helia-entry-link" data-entry="ecoop">ECOOP</span> · 2023</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="nieto-2023-modular" data-kind="reference">
+<div class="helia-abstract">Conflict-free Replicated Datatypes (CRDTs) are a class of distributed data structures that are highly-available and weakly consistent. The CRDT taxonomy is further divided into two subclasses: state-based and operation-based (op-based). Recent prior work showed how to use separation logic to verify convergence and functional correctness of op-based CRDTs while (a) verifying implementations (as opposed to high-level protocols), (b) giving high level specifications that abstract from low-level implementation details, and (c) providing specifications that are modular (i.e. allow client code to use the CRDT like an abstract data type). We extend this separation logic approach to verification of CRDTs to handle state-based CRDTs, while respecting the desiderata (a)-(c). The key idea is to track the state of a CRDT as a function of the set of operations that produced that state. Using the observation that state-based CRDTs are automatically causally-consistent, we obtain CRDT specifications that are agnostic to whether a CRDT is state- or op-based. When taken together with prior work, our technique thus provides a unified approach to specification and verification of op- and state-based CRDTs. We have tested our approach by verifying StateLib, a library for building state-based CRDTs. Using StateLib, we have further verified convergence and functional correctness of multiple example CRDTs from the literature. Our proofs are written in the Aneris distributed separation logic and are mechanized in Coq.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="pdf-url"><a class="helia-link helia-external" href="https://arxiv.org/pdf/1604.08080">PDF</a></span> · <span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.4230/lipics.ecoop.2023.22">DOI</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/conf/ecoop/NietoDGTB23">pldb</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="jung_etal_iris_ground_up_2018" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="jung_etal_iris_ground_up_2018"><span class="helia-title">Iris from the ground up: A modular foundation for higher-order concurrent separation logic</span>&nbsp;<a class="helia-slug" href="jung_etal_iris_ground_up_2018.html">jung_etal_iris_ground_up_2018</a><span class="helia-byline"><span class="helia-entry-link" data-entry="jfp">JFP</span> · 2018</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="jung_etal_iris_ground_up_2018" data-kind="reference">
+<div class="helia-abstract">Iris is a framework for higher-order concurrent separation logic, which has been implemented in the Coq proof assistant and deployed very effectively in a wide variety of verification projects. Iris was designed with the express goal of simplifying and consolidating the foundations of modern separation logics, but it has evolved over time, and the design and semantic foundations of Iris itself have yet to be fully written down and explained together properly in one place. Here, we attempt to fill this gap, presenting a reasonably complete picture of the latest version of Iris (version 3.1), from first principles and in one coherent narrative.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="pdf-url"><a class="helia-link helia-external" href="https://www.cambridge.org/core/services/aop-cambridge-core/content/view/26301B518CE2C52796BFA12B8BAB5B5F/S0956796818000151a.pdf/div-class-title-iris-from-the-ground-up-a-modular-foundation-for-higher-order-concurrent-separation-logic-div.pdf">PDF</a></span> · <span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1017/s0956796818000151">DOI</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/journals/jfp/JungKJBBD18">pldb</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="jung_higher-order_2016" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="jung_higher-order_2016"><span class="helia-title">Higher-order ghost state</span>&nbsp;<a class="helia-slug" href="jung_higher-order_2016.html">jung_higher-order_2016</a><span class="helia-byline"><span class="helia-entry-link" data-entry="icfp">ICFP</span> · 2016</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="jung_higher-order_2016" data-kind="reference">
+<div class="helia-abstract">The development of concurrent separation logic (CSL) has sparked a long line of work on modular verification of sophisticated concurrent programs. Two of the most important features supported by several existing extensions to CSL are higher-order quantification and custom ghost state. However, none of the logics that support both of these features reap the full potential of their combination. In particular, none of them provide general support for a feature we dub “higher-order ghost state”: the ability to store arbitrary higher-order separation-logic predicates in ghost variables. In this paper, we propose higher-order ghost state as a interesting and useful extension to CSL, which we formalize in the framework of Jung et al.‘s recently developed Iris logic. To justify its soundness, we develop a novel algebraic structure called CMRAs (“cameras”), which can be thought of as “step-indexed partial commutative monoids”. Finally, we show that Iris proofs utilizing higher-order ghost state can be effectively formalized in Coq, and discuss the challenges we faced in formalizing them.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="pdf-url"><a class="helia-link helia-external" href="https://hdl.handle.net/21.11116/0000-0008-EAF5-C">PDF</a></span> · <span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/2951913.2951943">DOI</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/conf/icfp/0002KBD16">pldb</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="jung-2015-iris" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="jung-2015-iris"><span class="helia-title">Iris: Monoids and Invariants as an Orthogonal Basis for Concurrent Reasoning</span>&nbsp;<a class="helia-slug" href="jung-2015-iris.html">jung-2015-iris</a><span class="helia-byline"><span class="helia-entry-link" data-entry="popl">POPL</span> · 2015</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="jung-2015-iris" data-kind="reference">
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="pdf-url"><a class="helia-link helia-external" href="https://dl.acm.org/doi/pdf/10.1145/2676726.2676980">PDF</a></span> · <span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/2676726.2676980">DOI</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/conf/popl/JungSSSTBD15">pldb</a></span></div>
+</div>
+</div>
+</details>
+</section>
+</div>
+</details>
+</div>
+<div class="helia-reference-cites-away helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">External (39)</span></summary>
+<div class="helia-group-body">
+<ul>
+<li>Microsoft SQL Server documentation: Snapshot isolation (2025)</li>
+<li>Oracle TimesTen documentation: Transaction isolation (2025)</li>
+<li>PostgreSQL documentation: Read committed isolation (2025)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3689742">Plume: Efficient and Complete Black-Box Checking of Weak Isolation Levels</a> (2024)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3591243">Dynamic Partial Order Reduction for Checking Correctness against Transaction Isolation Levels</a> (2023)</li>
+<li>Verifying vMVCC, a high-performance transaction library using multi-version concurrency control (2023)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3582302.3582304">Concurrency control for database theorists</a> (2023)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3552326.3567492">Viper: A Fast Snapshot Isolation Checker</a> (2023)</li>
+<li>16th USENIX Symposium on Operating Systems Design and Implementation (OSDI 22) (2022)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3527324">C4: verified transactional objects</a> (2022)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3563351">Modular verification of op-based CRDTs in separation logic</a> (2022)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3473586">Theorems for free from separation logic specifications</a> (2021)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3485546">MonkeyDB: effectively testing correctness under weak isolation levels</a> (2021)</li>
+<li>15th USENIX Symposium on Operating Systems Design and Implementation (OSDI 21) (2021)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3434323">Distributed causal memory: modular specification and verification in higher-order distributed separation logic</a> (2021)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-030-67220-1_4">Automated Validation of State-Based Client-Centric Isolation with TLA$$^+$$</a> (2021)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-030-44914-8_13">Aneris: A Mechanised Logic for Modular Reasoning about Distributed Systems</a> (2020)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3341301.3359632">Verifying concurrent, crash-safe systems with Perennial</a> (2019)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-030-11245-5_1">On the Semantics of Snapshot Isolation</a> (2019)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.25560/83255">Parametric operational semantics for consistency models</a> (2019)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3152396">Analysing Snapshot Isolation</a> (2018)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3087801.3087802">Seeing is Believing</a> (2017)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.4230/lipics.ecoop.2017.17">Strong Logic for Weak Memory: Reasoning About Release-Acquire Consistency in Iris</a> (2017)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3158115">Alone together: compositional reasoning and inference for weak isolation</a> (2017)</li>
+<li>Lecture Notes on Iris: Higher-Order Concurrent Separation Logic (2017)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.4230/lipics.concur.2015.58">A Framework for Transactional Consistency Models with Atomic Visibility</a> (2015)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/2660193.2660243">GPS</a> (2014)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/2491245">Spanner: Google's Globally Distributed Database</a> (2013)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/2509136.2509532">Relaxed separation logic</a> (2013)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-642-28869-2_4">Eventually Consistent Transactions</a> (2012)</li>
+<li>Lazy Database Replication with Snapshot Isolation (2006)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1109/icde.2000.839388">Generalized isolation level definitions</a> (2002)</li>
+<li>Weak Consistency: A Generalized Theory and Optimistic Implementations for Distributed Transactions (PhD thesis/tech report) (1999)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/568271.223785">A critique of ANSI SQL isolation levels</a> (1995)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/3-540-57318-6_25">Hybrid systems in TLA+</a> (1993)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/38713.38742">Sagas</a> (1987)</li>
+<li>Crash Recovery in a Distributed Data Storage System (1981)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/322154.322158">The serializability of concurrent database updates</a> (1979)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.5281/zenodo.15626657">10.5281/zenodo.15626657</a></li>
+</ul>
+</div>
+</details>
+</div>
+</div>
+</details>
+</div>
+<footer class="helia-footer">
+<div class="helia-related helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><h3 class="helia-heading">Related</h3>
+</summary>
+<div class="helia-group-body">
+<ul>
+<li><a class="helia-entry-link" href="frumin_krebbers_birkedal_reloc_2021.html" data-entry="frumin_krebbers_birkedal_reloc_2021">ReLoC Reloaded: A Mechanized Relational Logic for Fine-Grained Concurrency and Logical Atomicity</a> <span class="helia-related-tags"><a class="helia-entry-link" href="tag-concurrency.html" data-entry="tag-concurrency">#concurrency</a> <a class="helia-entry-link" href="tag-separation-logic.html" data-entry="tag-separation-logic">#separation-logic</a></span></li>
+<li><a class="helia-entry-link" href="gaher_etal_simuliris_2022.html" data-entry="gaher_etal_simuliris_2022">Simuliris: A Separation Logic Framework for Verifying Concurrent Program Optimizations</a> <span class="helia-related-tags"><a class="helia-entry-link" href="tag-concurrency.html" data-entry="tag-concurrency">#concurrency</a> <a class="helia-entry-link" href="tag-separation-logic.html" data-entry="tag-separation-logic">#separation-logic</a></span></li>
+<li><a class="helia-entry-link" href="hance-2023-leaf.html" data-entry="hance-2023-leaf">Leaf: Modularity for Temporary Sharing in Separation Logic</a> <span class="helia-related-tags"><a class="helia-entry-link" href="tag-concurrency.html" data-entry="tag-concurrency">#concurrency</a> <a class="helia-entry-link" href="tag-separation-logic.html" data-entry="tag-separation-logic">#separation-logic</a></span></li>
+<li><a class="helia-entry-link" href="li-2025-modular.html" data-entry="li-2025-modular">Modular Reasoning about Error Bounds for Concurrent Probabilistic Programs</a> <span class="helia-related-tags"><a class="helia-entry-link" href="tag-concurrency.html" data-entry="tag-concurrency">#concurrency</a> <a class="helia-entry-link" href="tag-separation-logic.html" data-entry="tag-separation-logic">#separation-logic</a></span></li>
+<li><a class="helia-entry-link" href="li-2026-contextual.html" data-entry="li-2026-contextual">Contextual Refinement of Higher-Order Concurrent Probabilistic Programs</a> <span class="helia-related-tags"><a class="helia-entry-link" href="tag-concurrency.html" data-entry="tag-concurrency">#concurrency</a> <a class="helia-entry-link" href="tag-separation-logic.html" data-entry="tag-separation-logic">#separation-logic</a></span></li>
+<li><a class="helia-entry-link" href="namakonov-2026-lawyer.html" data-entry="namakonov-2026-lawyer">Lawyer: Modular Obligations-Based Liveness Reasoning in Higher-Order Impredicative Concurrent Separation Logic</a> <span class="helia-related-tags"><a class="helia-entry-link" href="tag-concurrency.html" data-entry="tag-concurrency">#concurrency</a> <a class="helia-entry-link" href="tag-separation-logic.html" data-entry="tag-separation-logic">#separation-logic</a></span></li>
+<li><a class="helia-entry-link" href="namakonov-2026-verifying.html" data-entry="namakonov-2026-verifying">Verifying Wait-Freedom for Concurrent Higher-Order Programs</a> <span class="helia-related-tags"><a class="helia-entry-link" href="tag-concurrency.html" data-entry="tag-concurrency">#concurrency</a> <a class="helia-entry-link" href="tag-separation-logic.html" data-entry="tag-separation-logic">#separation-logic</a></span></li>
+<li><a class="helia-entry-link" href="tassarotti_jung_harper_2017.html" data-entry="tassarotti_jung_harper_2017">A Higher-Order Logic for Concurrent Termination-Preserving Refinement</a> <span class="helia-related-tags"><a class="helia-entry-link" href="tag-concurrency.html" data-entry="tag-concurrency">#concurrency</a> <a class="helia-entry-link" href="tag-separation-logic.html" data-entry="tag-separation-logic">#separation-logic</a></span></li>
+</ul>
+</div>
+</details>
+</div>
+</footer>
+</article>
+<div class="helia-identity"><span class="helia-id">alnormathiasen-2025-reasoning</span> <span class="helia-kind">reference</span> <span class="helia-path">entries/refs/alnormathiasen-2025-reasoning/alnormathiasen-2025-reasoning.hel</span></div>
+</div>
+</body>
+</html>

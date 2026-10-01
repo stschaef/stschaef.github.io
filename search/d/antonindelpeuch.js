@@ -1,0 +1,1 @@
+heliaSearchData("d/antonindelpeuch",{"id":"antonindelpeuch","title":"Antonin Delpeuch","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"antonindelpeuch.html","headings":[],"body":""});

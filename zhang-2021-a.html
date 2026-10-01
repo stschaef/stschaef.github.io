@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>A simpler encoding of indexed types</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Ctext y=%22.9em%22 font-size=%2290%22%3E%F0%9F%8C%BB%3C/text%3E%3C/svg%3E">
+<meta name="generator" content="helia">
+<link rel="alternate" type="application/atom+xml" title="Steven Schaefer" href="feed.xml">
+<link rel="alternate" type="application/feed+json" title="Steven Schaefer" href="feed.json">
+<script src="helia/theme-version.js"></script>
+<script src="theme/folio-early.js"></script>
+<link rel="stylesheet" href="helia/theme.css">
+<link rel="stylesheet" href="helia/highlight.css">
+<link rel="stylesheet" href="helia/search.css">
+<link rel="stylesheet" href="theme/katex.css">
+<link rel="stylesheet" href="theme/recipe.css">
+<link rel="stylesheet" href="theme/site.css">
+<link rel="stylesheet" href="theme/folio.css">
+<script defer src="helia/runtime.js"></script>
+<script defer src="helia/search.js"></script>
+<script defer src="theme/glyphcraft.js"></script>
+<script defer src="theme/glyphart.js"></script>
+<script defer src="theme/glyphgen.js"></script>
+<script defer src="theme/ornament.js"></script>
+<script defer src="theme/folio.js"></script>
+<script defer src="theme/portrait.js"></script>
+<script type="application/json" id="helia-widgets">{"helia-cite-formats":"widgets/helia-cite-formats-a3294ac7.js"}</script>
+<link rel="modulepreload" href="widgets/helia-cite-formats-a3294ac7.js">
+<script type="module" src="widgets/runtime.js"></script>
+</head>
+<body>
+<nav class="helia-topbar"><a class="helia-home" href="home.html">Steven Schaefer</a><ul class="helia-nav-links"><li><a href="stevenschaefer.html">About Me</a></li><li><a href="research.html">Research</a></li><li><a href="new.html">New</a></li></ul><button type="button" class="helia-search-button" aria-label="Search (/ or Ctrl+K)" aria-haspopup="dialog"><span class="helia-search-icon">⌕</span><span class="helia-search-label">Search</span><kbd class="helia-search-key">/</kbd></button></nav>
+<div class="helia-page" data-kind="reference">
+<article class="helia-article">
+<header class="helia-header" data-entry="zhang-2021-a" data-kind="reference">
+<h2 class="helia-heading"><span class="helia-taxon">Reference.</span> A simpler encoding of indexed types</h2>
+<div class="helia-meta"><span class="helia-author"><a class="helia-entry-link" href="teslazhang.html" data-entry="teslazhang">Tesla Zhang</a></span> · <span class="helia-byline"><a class="helia-entry-link" href="tyde.html" data-entry="tyde">TyDe</a> · 2021</span> · <span class="helia-tags"><span class="helia-tag" data-tag="type-theory"><a class="helia-entry-link" href="tag-type-theory.html" data-entry="tag-type-theory">type-theory</a></span></span> · <span class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/3471875.3472991">DOI</a></span> · <span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/2103.15408">arXiv</a></span></span></div>
+</header>
+<div class="helia-body">
+<div class="helia-abstract">In functional programming languages, generalized algebraic data types (GADTs) are very useful as the unnecessary pattern matching over them can be ruled out by the failure of unification of type arguments. In dependent type systems, this is usually called indexed types and it’s particularly useful as the identity type is a special case of it. However, pattern matching over indexed types is very complicated as it requires term unification in general. We study a simplified version of indexed types (called simpler indexed types) where we explicitly specify the selection process of constructors, and we discuss its expressiveness, limitations, and properties.</div>
+</div>
+<div class="helia-cite helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><h3 class="helia-heading">Cite</h3>
+</summary>
+<div class="helia-group-body">
+<div class="helia-widget" data-widget="helia-cite-formats" data-props="{&quot;key&quot;:&quot;zhang-2021-a&quot;,&quot;bibtex&quot;:&quot;@inproceedings{zhang-2021-a,\n  author = {Tesla Zhang},\n  title = {A simpler encoding of indexed types},\n  booktitle = {Proceedings of the 6th ACM SIGPLAN International Workshop on Type-Driven Development},\n  publisher = {ACM},\n  year = {2021},\n  month = {8},\n  pages = {14--22},\n  doi = {10.1145/3471875.3472991}\n}&quot;,&quot;bib-file&quot;:&quot;zhang-2021-a.bib&quot;,&quot;hayagriva&quot;:&quot;zhang-2021-a:\n  type: article\n  title: A simpler encoding of indexed types\n  author: Zhang, Tesla\n  date: 2021-08\n  page-range: 14-22\n  serial-number:\n    doi: 10.1145/3471875.3472991\n  parent:\n    type: proceedings\n    title: Proceedings of the 6th ACM SIGPLAN International Workshop on Type-Driven Development\n    publisher: ACM\n&quot;,&quot;yml-file&quot;:&quot;zhang-2021-a.yml&quot;}"><div class="helia-cite-key" data-copy="@zhang-2021-a" data-copy-label="citation key"><span class="helia-bib-key">Cite as</span> <code class="helia-raw-inline">@zhang-2021-a</code> (helia, typst) · <code class="helia-raw-inline">\cite{zhang-2021-a}</code> (LaTeX)</div>
+<div class="helia-cite-format helia-collapsible" data-format="bibtex" data-copy="true" data-copy-label="BibTeX">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">BibTeX</span></summary>
+<div class="helia-group-body">
+<details class="helia-code" open><summary class="helia-code-summary"><span class="helia-code-lang">bibtex</span> · <span class="helia-code-lines">10 lines</span></summary><pre class="helia-raw"><code class="language-bibtex"><span class="hl-text hl-bibtex"><span class="hl-meta hl-entry hl-braces hl-bibtex"><span class="hl-keyword hl-other hl-entry-type hl-bibtex"><span class="hl-punctuation hl-definition hl-keyword hl-bibtex">@</span>inproceedings</span><span class="hl-punctuation hl-section hl-entry hl-begin hl-bibtex">{</span><span class="hl-entity hl-name hl-type hl-entry-key hl-bibtex">zhang-2021-a</span>,
+  <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">author</span> <span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span> <span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>Tesla Zhang<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>,
+  <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">title</span> <span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span> <span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>A simpler encoding of indexed types<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>,
+  <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">booktitle</span> <span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span> <span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>Proceedings of the 6th ACM SIGPLAN International Workshop on Type-Driven Development<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>,
+  <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">publisher</span> <span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span> <span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>ACM<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>,
+  <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">year</span> <span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span> <span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>2021<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>,
+  <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">month</span> <span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span> <span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>8<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>,
+  <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">pages</span> <span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span> <span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>14--22<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>,
+  <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">doi</span> <span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span> <span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>10.1145/3471875.3472991<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span>
+</span><span class="hl-punctuation hl-section hl-entry hl-end hl-bibtex">}</span></span></span></code></pre></details>
+</div>
+</details>
+</div>
+<div class="helia-cite-format helia-collapsible" data-format="hayagriva" data-copy="true" data-copy-label="hayagriva YAML">
+<details>
+<summary class="helia-group-summary"><span class="helia-group-title">hayagriva YAML (typst)</span></summary>
+<div class="helia-group-body">
+<details class="helia-code" open><summary class="helia-code-summary"><span class="helia-code-lang">yaml</span> · <span class="helia-code-lines">12 lines</span></summary><pre class="helia-raw"><code class="language-yaml"><span class="hl-source hl-yaml"><span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">zhang-2021-a</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">type</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">article</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">title</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">A simpler encoding of indexed types</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">author</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Zhang, Tesla</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">date</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">2021-08</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">page-range</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">14-22</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">serial-number</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">doi</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">10.1145/3471875.3472991</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">parent</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">type</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">proceedings</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">title</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Proceedings of the 6th ACM SIGPLAN International Workshop on Type-Driven Development</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">publisher</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">ACM</span>
+</span></code></pre></details>
+</div>
+</details>
+</div>
+<div class="helia-cite-files">Download: <a class="helia-link" href="zhang-2021-a.bib">zhang-2021-a.bib</a> · <a class="helia-link" href="zhang-2021-a.yml">zhang-2021-a.yml</a></div>
+</div>
+</div>
+</details>
+</div>
+<div class="helia-reference-cited-by helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">Cited by (3)</span></summary>
+<div class="helia-group-body">
+<section class="helia-transclusion" data-entry="zhang-2024-co" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="zhang-2024-co"><span class="helia-title">(Co)condition hits the Path</span>&nbsp;<a class="helia-slug" href="zhang-2024-co.html">zhang-2024-co</a><span class="helia-byline"><span class="helia-entry-link" data-entry="arxiv">arXiv</span> · 2024</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="zhang-2024-co" data-kind="reference">
+<div class="helia-abstract">We propose an enhancement to inductive types and records in a dependent type theory, namely (co)conditions. With a primitive interval type, conditions generalize the cubical syntax of higher inductive types in homotopy type theory, while coconditions generalize the cubical path type. (Co)conditions are also useful without an interval type. The duality between conditions and coconditions is presented in an interesting way: The elimination principles of inductive types with conditions can be internalized with records with coconditions and vice versa. However, we do not develop the metatheory of conditions and coconditions in this paper. Instead, we only present the type checking.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/2405.12994">arXiv</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="zhang-2023-two" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="zhang-2023-two"><span class="helia-title">Two tricks to trivialize higher-indexed families</span>&nbsp;<a class="helia-slug" href="zhang-2023-two.html">zhang-2023-two</a><span class="helia-byline"><span class="helia-entry-link" data-entry="arxiv">arXiv</span> · 2023</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="zhang-2023-two" data-kind="reference">
+<div class="helia-abstract">The conventional general syntax of indexed families in dependent type theories follow the style of “constructors returning a special case”, as in Agda, Lean, Idris, Coq, and probably many other systems. Fording is a method to encode indexed families of this style with index-free inductive types and an identity type. There is another trick that merges interleaved higher inductive-inductive types into a single big family of types. It makes use of a small universe as the index to distinguish the original types. In this paper, we show that these two methods can trivialize some very fancy-looking indexed families with higher inductive indices (which we refer to as higher indexed families).</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/2309.14187">arXiv</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="zhang-2021-elegant" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="zhang-2021-elegant"><span class="helia-title">Elegant elaboration with function invocation</span>&nbsp;<a class="helia-slug" href="zhang-2021-elegant.html">zhang-2021-elegant</a><span class="helia-byline"><span class="helia-entry-link" data-entry="arxiv">arXiv</span> · 2021</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="zhang-2021-elegant" data-kind="reference">
+<div class="helia-abstract">We present an elegant design of the core language in a dependently-typed lambda calculus with <span class="helia-math helia-math-inline helia-mathml"><math><mi>𝛿</mi></math></span>-reduction and an elaboration algorithm.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/2105.14840">arXiv</a></span></div>
+</div>
+</div>
+</details>
+</section>
+</div>
+</details>
+</div>
+<div class="helia-reference-cites helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">Cites 31 works (3 here)</span></summary>
+<div class="helia-group-body">
+<div class="helia-reference-cites-here helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">With notes (3)</span></summary>
+<div class="helia-group-body">
+<section class="helia-transclusion" data-entry="VezzosiMortbergAbel2019" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="VezzosiMortbergAbel2019"><span class="helia-title">Cubical Agda: A Dependently Typed Programming Language with Univalence and Higher Inductive Types</span>&nbsp;<a class="helia-slug" href="VezzosiMortbergAbel2019.html">VezzosiMortbergAbel2019</a><span class="helia-byline"><span class="helia-entry-link" data-entry="icfp">ICFP</span> · 2019</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="VezzosiMortbergAbel2019" data-kind="reference">
+<div class="helia-abstract">Proof assistants based on dependent type theory provide expressive languages for both programming and proving within the same system. However, all of the major implementations lack powerful extensionality principles for reasoning about equality, such as function and propositional extensionality. These principles are typically added axiomatically which disrupts the constructive properties of these systems. Cubical type theory provides a solution by giving computational meaning to Homotopy Type Theory and Univalent Foundations, in particular to the univalence axiom and higher inductive types. This paper describes an extension of the dependently typed functional programming language Agda with cubical primitives, making it into a full-blown proof assistant with native support for univalence and a general schema of higher inductive types. These new primitives make function and propositional extensionality as well as quotient types directly definable with computational content. Additionally, thanks also to copatterns, bisimilarity is equivalent to equality for coinductive types. This extends Agda with support for a wide range of extensionality principles, without sacrificing type checking and constructivity.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="pdf-url"><a class="helia-link helia-external" href="https://dl.acm.org/doi/pdf/10.1145/3341691">PDF</a></span> · <span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/3341691">DOI</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/journals/pacmpl/VezzosiM019">pldb</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="allais-2017-type" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="allais-2017-type"><span class="helia-title">Type-and-scope safe programs and their proofs</span>&nbsp;<a class="helia-slug" href="allais-2017-type.html">allais-2017-type</a><span class="helia-byline"><span class="helia-entry-link" data-entry="cpp">CPP</span> · 2017</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="allais-2017-type" data-kind="reference">
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="pdf-url"><a class="helia-link helia-external" href="https://strathprints.strath.ac.uk/59447/1/Allais_etal_CPP_2017_Type_and_scope_safe_programs.pdf">PDF</a></span> · <span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/3018610.3018613">DOI</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/conf/cpp/Allais0MM17">pldb</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="hottbook" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="hottbook"><span class="helia-title">Homotopy Type Theory: Univalent Foundations of Mathematics</span>&nbsp;<a class="helia-slug" href="hottbook.html">hottbook</a><span class="helia-byline"><span class="helia-entry-link" data-entry="arxiv">arXiv</span> · 2013</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="hottbook" data-kind="reference">
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="url"><a class="helia-link helia-external" href="https://homotopytypetheory.org/book">Web</a></span> · <span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/1308.0729">arXiv</a></span></div>
+</div>
+</div>
+</details>
+</section>
+</div>
+</details>
+</div>
+<div class="helia-reference-cites-away helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">External (28)</span></summary>
+<div class="helia-group-body">
+<ul>
+<li>The Aya Proof Assistant (software) (2021)</li>
+<li>Cubical Agda: A Dependently Typed Programming Language with Univalence and Higher Inductive Types (preprint) (2020)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3290314">Higher inductive types in cubical computational type theory</a> (2019)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3236770">Elaborating Dependent (Co)Pattern Matching</a> (2018)</li>
+<li>History of the notation for substitution (MathOverflow) (2018)</li>
+<li>Vectors are records, too (2018)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/2951913.2951917">Unifiers as equivalences: proof-relevant unification of dependently typed data</a> (2016)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1017/s0956796816000307">Programming with ornaments</a> (2016)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.4230/lipics.types.2015.5">Cubical Type Theory: A Constructive Interpretation of the Univalence Axiom</a> (2015)</li>
+<li>The Arend Proof Assistant (software) (2015)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-642-54833-8_6">Overlapping and Order-Independent Patterns</a> (2014)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/2628136.2628139">Pattern matching without K</a> (2014)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1017/s0956796814000069">Transporting functions across ornaments</a> (2014)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1017/s095679681300018x">Idris, a general-purpose dependently typed programming language: Design and implementation</a> (2013)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/1863543.1863547">The gentle art of levitation</a> (2010)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-642-15205-4_35">Inductive-Inductive Definitions</a> (2010)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/1481861.1481862">Dependently typed programming in Agda</a> (2009)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1016/j.entcs.2007.11.012">Meta-programming With Built-in Type Equality</a> (2008)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/1159803.1159811">Simple unification-based type inference for GADTs</a> (2006)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/11780274_27">Eliminating Dependent Pattern Matching</a> (2006)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-540-24849-1_8">Inductive Families Need Not Store Their Indices</a> (2004)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/604131.604150">Guarded recursive datatype constructors</a> (2003)</li>
+<li>First-Class Phantom Types (2003)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.2307/2586554">A general formulation of simultaneous inductive-recursive definitions in type theory</a> (2000)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1016/s0304-3975(97)00062-5">Indexed types</a> (1997)</li>
+<li>Silly Type Families (draft) (1994)</li>
+<li>Pattern matching with dependent types (1992)</li>
+<li>An intuitionistic theory of types: predicative part (1975)</li>
+</ul>
+</div>
+</details>
+</div>
+</div>
+</details>
+</div>
+</article>
+<div class="helia-identity"><span class="helia-id">zhang-2021-a</span> <span class="helia-kind">reference</span> <span class="helia-path">entries/refs/zhang-2021-a/zhang-2021-a.hel</span></div>
+</div>
+</body>
+</html>

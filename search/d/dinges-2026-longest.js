@@ -1,0 +1,1 @@
+heliaSearchData("d/dinges-2026-longest",{"id":"dinges-2026-longest","title":"Longest r-chain: thinning by grouping","kind":"reference","tags":["program-calculation"],"authors":["Alexander Dinges","Ralf Hinze"],"venue":["JFP","Journal of Functional Programming"],"date":null,"url":"dinges-2026-longest.html","headings":[],"body":""});

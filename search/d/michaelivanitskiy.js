@@ -1,0 +1,1 @@
+heliaSearchData("d/michaelivanitskiy",{"id":"michaelivanitskiy","title":"Michael Ivanitskiy","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"michaelivanitskiy.html","headings":[],"body":""});

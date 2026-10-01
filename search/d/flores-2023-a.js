@@ -1,0 +1,1 @@
+heliaSearchData("d/flores-2023-a",{"id":"flores-2023-a","title":"A Formalization of Operads in Coq","kind":"reference","tags":[],"authors":["Angelo Taranto","Eric Bond","Yakir Forman","Zachary Flores"],"venue":["arXiv"],"date":null,"url":"flores-2023-a.html","headings":[],"body":""});

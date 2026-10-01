@@ -1,0 +1,1 @@
+heliaSearchData("d/devesascampos-2020-classical",{"id":"devesascampos-2020-classical","title":"Classical logic with Mendler induction","kind":"reference","tags":[],"authors":["Marcelo P. Fiore","Marco Devesas Campos"],"venue":["Journal of Logic and Computation"],"date":null,"url":"devesascampos-2020-classical.html","headings":[],"body":""});

@@ -1,0 +1,1 @@
+heliaSearchData("d/bar-ilan-university",{"id":"bar-ilan-university","title":"Bar-Ilan University","kind":"institution","tags":[],"authors":[],"venue":[],"date":null,"url":"bar-ilan-university.html","headings":[],"body":""});

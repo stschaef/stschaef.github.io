@@ -1,0 +1,1 @@
+heliaSearchData("d/paris-sud-university",{"id":"paris-sud-university","title":"Paris-Sud University","kind":"institution","tags":[],"authors":[],"venue":[],"date":null,"url":"paris-sud-university.html","headings":[],"body":""});

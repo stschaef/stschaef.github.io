@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>RustViz: Interactively Visualizing Ownership and Borrowing</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Ctext y=%22.9em%22 font-size=%2290%22%3E%F0%9F%8C%BB%3C/text%3E%3C/svg%3E">
+<meta name="generator" content="helia">
+<link rel="alternate" type="application/atom+xml" title="Steven Schaefer" href="feed.xml">
+<link rel="alternate" type="application/feed+json" title="Steven Schaefer" href="feed.json">
+<script src="helia/theme-version.js"></script>
+<script src="theme/folio-early.js"></script>
+<link rel="stylesheet" href="helia/theme.css">
+<link rel="stylesheet" href="helia/highlight.css">
+<link rel="stylesheet" href="helia/search.css">
+<link rel="stylesheet" href="theme/katex.css">
+<link rel="stylesheet" href="theme/recipe.css">
+<link rel="stylesheet" href="theme/site.css">
+<link rel="stylesheet" href="theme/folio.css">
+<script defer src="helia/runtime.js"></script>
+<script defer src="helia/search.js"></script>
+<script defer src="theme/glyphcraft.js"></script>
+<script defer src="theme/glyphart.js"></script>
+<script defer src="theme/glyphgen.js"></script>
+<script defer src="theme/ornament.js"></script>
+<script defer src="theme/folio.js"></script>
+<script defer src="theme/portrait.js"></script>
+<script type="application/json" id="helia-widgets">{"helia-cite-formats":"widgets/helia-cite-formats-a3294ac7.js"}</script>
+<link rel="modulepreload" href="widgets/helia-cite-formats-a3294ac7.js">
+<script type="module" src="widgets/runtime.js"></script>
+</head>
+<body>
+<nav class="helia-topbar"><a class="helia-home" href="home.html">Steven Schaefer</a><ul class="helia-nav-links"><li><a href="stevenschaefer.html">About Me</a></li><li><a href="research.html">Research</a></li><li><a href="new.html">New</a></li></ul><button type="button" class="helia-search-button" aria-label="Search (/ or Ctrl+K)" aria-haspopup="dialog"><span class="helia-search-icon">⌕</span><span class="helia-search-label">Search</span><kbd class="helia-search-key">/</kbd></button></nav>
+<div class="helia-page" data-kind="reference">
+<article class="helia-article">
+<header class="helia-header" data-entry="almeida-2022-rustviz" data-kind="reference">
+<h2 class="helia-heading"><span class="helia-taxon">Reference.</span> RustViz: Interactively Visualizing Ownership and Borrowing</h2>
+<div class="helia-meta"><span class="helia-author"><a class="helia-entry-link" href="marceloalmeida.html" data-entry="marceloalmeida">Marcelo Almeida</a>, <a class="helia-entry-link" href="grantcole.html" data-entry="grantcole">Grant Cole</a>, <a class="helia-entry-link" href="kedu.html" data-entry="kedu">Ke Du</a>, <a class="helia-entry-link" href="gongmingluo.html" data-entry="gongmingluo">Gongming Luo</a>, <a class="helia-entry-link" href="shulinpan.html" data-entry="shulinpan">Shulin Pan</a>, <a class="helia-entry-link" href="yupan.html" data-entry="yupan">Yu Pan</a>, <a class="helia-entry-link" href="kaiqiu.html" data-entry="kaiqiu">Kai Qiu</a>, <a class="helia-entry-link" href="vishnureddy.html" data-entry="vishnureddy">Vishnu Reddy</a>, <a class="helia-entry-link" href="haochenzhang.html" data-entry="haochenzhang">Haochen Zhang</a>, <a class="helia-entry-link" href="yingyingzhu.html" data-entry="yingyingzhu">Yingying Zhu</a>, <a class="helia-entry-link" href="cyrusomar.html" data-entry="cyrusomar">Cyrus Omar</a></span> · <span class="helia-byline"><a class="helia-entry-link" href="vlhcc.html" data-entry="vlhcc">VL/HCC</a> · 2022</span> · <span class="helia-tags"><span class="helia-tag" data-tag="ownership"><a class="helia-entry-link" href="tag-ownership.html" data-entry="tag-ownership">ownership</a></span> <span class="helia-tag" data-tag="human-computer-interaction"><a class="helia-entry-link" href="tag-human-computer-interaction.html" data-entry="tag-human-computer-interaction">human-computer-interaction</a></span></span> · <span class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1109/vl/hcc53370.2022.9833121">DOI</a></span></span></div>
+</header>
+<div class="helia-body">
+</div>
+<div class="helia-cite helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><h3 class="helia-heading">Cite</h3>
+</summary>
+<div class="helia-group-body">
+<div class="helia-widget" data-widget="helia-cite-formats" data-props="{&quot;key&quot;:&quot;almeida-2022-rustviz&quot;,&quot;bibtex&quot;:&quot;@inproceedings{almeida-2022-rustviz, title={RustViz: Interactively Visualizing Ownership and Borrowing}, url={http://dx.doi.org/10.1109/vl/hcc53370.2022.9833121}, DOI={10.1109/vl/hcc53370.2022.9833121}, booktitle={2022 IEEE Symposium on Visual Languages and Human-Centric Computing (VL/HCC)}, publisher={IEEE}, author={Almeida, Marcelo and Cole, Grant and Du, Ke and Luo, Gongming and Pan, Shulin and Pan, Yu and Qiu, Kai and Reddy, Vishnu and Zhang, Haochen and Zhu, Yingying and Omar, Cyrus}, year={2022}, month=Sept, pages={1–10} }&quot;,&quot;bib-file&quot;:&quot;almeida-2022-rustviz.bib&quot;,&quot;hayagriva&quot;:&quot;almeida-2022-rustviz:\n  type: article\n  title: &#39;RustViz: Interactively Visualizing Ownership and Borrowing&#39;\n  author:\n  - Almeida, Marcelo\n  - Cole, Grant\n  - Du, Ke\n  - Luo, Gongming\n  - Pan, Shulin\n  - Pan, Yu\n  - Qiu, Kai\n  - Reddy, Vishnu\n  - Zhang, Haochen\n  - Zhu, Yingying\n  - Omar, Cyrus\n  date: 2022-09\n  page-range: 1-10\n  serial-number:\n    doi: 10.1109/vl/hcc53370.2022.9833121\n  parent:\n    type: proceedings\n    title: 2022 IEEE Symposium on Visual Languages and Human-Centric Computing (VL/HCC)\n    publisher: IEEE\n&quot;,&quot;yml-file&quot;:&quot;almeida-2022-rustviz.yml&quot;}"><div class="helia-cite-key" data-copy="@almeida-2022-rustviz" data-copy-label="citation key"><span class="helia-bib-key">Cite as</span> <code class="helia-raw-inline">@almeida-2022-rustviz</code> (helia, typst) · <code class="helia-raw-inline">\cite{almeida-2022-rustviz}</code> (LaTeX)</div>
+<div class="helia-cite-format helia-collapsible" data-format="bibtex" data-copy="true" data-copy-label="BibTeX">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">BibTeX</span></summary>
+<div class="helia-group-body">
+<details class="helia-code" open><summary class="helia-code-summary"><span class="helia-code-lang">bibtex</span> · <span class="helia-code-lines">1 line</span></summary><pre class="helia-raw"><code class="language-bibtex"><span class="hl-text hl-bibtex"><span class="hl-meta hl-entry hl-braces hl-bibtex"><span class="hl-keyword hl-other hl-entry-type hl-bibtex"><span class="hl-punctuation hl-definition hl-keyword hl-bibtex">@</span>inproceedings</span><span class="hl-punctuation hl-section hl-entry hl-begin hl-bibtex">{</span><span class="hl-entity hl-name hl-type hl-entry-key hl-bibtex">almeida-2022-rustviz</span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">title</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>RustViz: Interactively Visualizing Ownership and Borrowing<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">url</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>http://dx.doi.org/10.1109/vl/hcc53370.2022.9833121<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">DOI</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>10.1109/vl/hcc53370.2022.9833121<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">booktitle</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>2022 IEEE Symposium on Visual Languages and Human-Centric Computing (VL/HCC)<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">publisher</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>IEEE<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">author</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>Almeida, Marcelo and Cole, Grant and Du, Ke and Luo, Gongming and Pan, Shulin and Pan, Yu and Qiu, Kai and Reddy, Vishnu and Zhang, Haochen and Zhu, Yingying and Omar, Cyrus<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">year</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>2022<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">month</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span>Sept</span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">pages</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>1–10<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span> </span><span class="hl-punctuation hl-section hl-entry hl-end hl-bibtex">}</span></span></span></code></pre></details>
+</div>
+</details>
+</div>
+<div class="helia-cite-format helia-collapsible" data-format="hayagriva" data-copy="true" data-copy-label="hayagriva YAML">
+<details>
+<summary class="helia-group-summary"><span class="helia-group-title">hayagriva YAML (typst)</span></summary>
+<div class="helia-group-body">
+<details class="helia-code" open><summary class="helia-code-summary"><span class="helia-code-lang">yaml</span> · <span class="helia-code-lines">23 lines</span></summary><pre class="helia-raw"><code class="language-yaml"><span class="hl-source hl-yaml"><span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">almeida-2022-rustviz</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">type</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">article</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">title</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-quoted hl-single hl-yaml"><span class="hl-punctuation hl-definition hl-string hl-begin hl-yaml">&#39;</span>RustViz: Interactively Visualizing Ownership and Borrowing<span class="hl-punctuation hl-definition hl-string hl-end hl-yaml">&#39;</span></span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">author</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Almeida, Marcelo</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Cole, Grant</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Du, Ke</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Luo, Gongming</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Pan, Shulin</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Pan, Yu</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Qiu, Kai</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Reddy, Vishnu</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Zhang, Haochen</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Zhu, Yingying</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Omar, Cyrus</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">date</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">2022-09</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">page-range</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">1-10</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">serial-number</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">doi</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">10.1109/vl/hcc53370.2022.9833121</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">parent</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">type</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">proceedings</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">title</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">2022 IEEE Symposium on Visual Languages and Human-Centric Computing (VL/HCC)</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">publisher</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">IEEE</span>
+</span></code></pre></details>
+</div>
+</details>
+</div>
+<div class="helia-cite-files">Download: <a class="helia-link" href="almeida-2022-rustviz.bib">almeida-2022-rustviz.bib</a> · <a class="helia-link" href="almeida-2022-rustviz.yml">almeida-2022-rustviz.yml</a></div>
+</div>
+</div>
+</details>
+</div>
+<div class="helia-reference-cites helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">Cites 41 works (0 here)</span></summary>
+<div class="helia-group-body">
+<div class="helia-reference-cites-away helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">External (41)</span></summary>
+<div class="helia-group-body">
+<ul>
+<li><a class="helia-link helia-external" href="https://arxiv.org/abs/2301.02308">The usability of advanced type systems: Rust as a case study</a> (2022)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3519939.3523445">Modular information flow through ownership</a> (2022)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3510003.3510107">Garbage collection makes rust easier to use</a> (2022)</li>
+<li>Benefits and drawbacks of adopting a secure programming language: Rust as a case study (2021)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3411764.3445257">The Role of Working Memory in Program Tracing</a> (2021)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1109/vl/hcc51201.2021.9576431">SQLVis: Visual Query Representations for Supporting SQL Learners</a> (2021)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3418295">Safe systems programming in Rust</a> (2021)</li>
+<li>The usability of ownership (2020)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3377811.3380352">Here we go again: why is it difficult for developers to learn another programming language?</a> (2020)</li>
+<li>Why Discord is switching from Go to Rust (2020)</li>
+<li>Rewriting the heart of our sync engine (2020)</li>
+<li>Stack overflow developer survey (2020)</li>
+<li>Borrow visualizer for the Rust language service (2019)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.4230/oasics.plateau.2018.5">Identifying barriers to adoption for Rust through online discourse</a> (2019)</li>
+<li>Simple explanation of complex lifetime errors in Rust (2019)</li>
+<li>Rust lifetime visualization ideas (2019)</li>
+<li>A proactive approach to more secure code (2019)</li>
+<li>AWS' sponsorship of the Rust project (2019)</li>
+<li>How we made firewall rules (2019)</li>
+<li>Building the Azure IoT edge security daemon in Rust (2019)</li>
+<li>Visualization of lifetime constraints in Rust (2018)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.2312/cgvc.20181211">Towards a survey of interactive visualization for education</a> (2018)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3160489.3160492">Intelligent tutoring systems for programming education</a> (2018)</li>
+<li>The Rust Programming Language (Klabnik &amp; Nichols; cited in arXiv v1 only) (2018)</li>
+<li>Graphical depiction of ownership and borrowing in Rust (2017)</li>
+<li>Shipping Rust in Firefox (2016)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/2663171.2663188">The rust language</a> (2014)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-642-36946-9_3">Ownership Types: A Survey</a> (2013)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/2445196.2445368">Online Python Tutor: embeddable web-based program visualization for CS education</a> (2013)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-642-41582-1_12">An Embedded Type Debugger</a> (2013)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/2490822">A Review of Generic Program Visualization Systems for Introductory Programming Education</a> (2013)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1109/tvcg.2010.110">Visualization of the Static Aspects of Software: A Survey</a> (2010)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/1538234.1538236">A Survey of Successful Evaluations of Program Visualization and Algorithm Animation Systems</a> (2009)</li>
+<li>TypeTool: A type inference visualization tool (2004)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1006/jvlc.2002.0238">Scalable Visualizations of Object-Oriented Systems with Ownership Trees</a> (2002)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/507635.507659">Compositional explanation of types and algorithmic debugging of type errors</a> (2001)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/331795.331801">CUPV—a visualization tool for generated parsers</a> (2000)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1109/vl.2000.874383">Visualising the structure of object-oriented systems</a> (2000)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1109/tools.2000.891370">Scalable visualisations with ownership trees</a> (2000)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1006/ijhc.1994.1038">Mental models and computer programming</a> (1994)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1016/b978-0-444-70536-5.50007-5">Mental Models in Human-Computer Interaction</a> (1988)</li>
+</ul>
+</div>
+</details>
+</div>
+</div>
+</details>
+</div>
+</article>
+<div class="helia-identity"><span class="helia-id">almeida-2022-rustviz</span> <span class="helia-kind">reference</span> <span class="helia-path">entries/refs/almeida-2022-rustviz/almeida-2022-rustviz.hel</span></div>
+</div>
+</body>
+</html>

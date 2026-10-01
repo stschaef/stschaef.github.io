@@ -1,0 +1,1 @@
+heliaSearchData("d/hinze-2023-introducing",{"id":"hinze-2023-introducing","title":"Introducing String Diagrams: The Art of Category Theory","kind":"reference","tags":["category-theory","string-diagrams"],"authors":["Dan Marsden","Ralf Hinze"],"venue":[],"date":null,"url":"hinze-2023-introducing.html","headings":[],"body":""});

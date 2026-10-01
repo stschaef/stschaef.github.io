@@ -1,0 +1,1 @@
+heliaSearchData("d/chesterjfgould",{"id":"chesterjfgould","title":"Chester J. F. Gould","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"chesterjfgould.html","headings":[],"body":""});

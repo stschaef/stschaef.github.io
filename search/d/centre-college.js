@@ -1,0 +1,1 @@
+heliaSearchData("d/centre-college",{"id":"centre-college","title":"Centre College","kind":"institution","tags":[],"authors":[],"venue":[],"date":null,"url":"centre-college.html","headings":[],"body":""});

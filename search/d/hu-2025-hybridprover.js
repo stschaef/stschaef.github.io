@@ -1,0 +1,1 @@
+heliaSearchData("d/hu-2025-hybridprover",{"id":"hu-2025-hybridprover","title":"HybridProver: Augmenting Theorem Proving with LLM-Driven Proof Synthesis and Refinement","kind":"reference","tags":["proof-engineering"],"authors":["Jianyu Zhang","Jilin Hu","Talia Ringer","Yongwang Zhao"],"venue":["arXiv"],"date":null,"url":"hu-2025-hybridprover.html","headings":[],"body":""});

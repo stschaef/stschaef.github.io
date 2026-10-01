@@ -1,0 +1,1 @@
+heliaSearchData("d/shriramkrishnamurthi",{"id":"shriramkrishnamurthi","title":"Shriram Krishnamurthi","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"shriramkrishnamurthi.html","headings":[],"body":""});

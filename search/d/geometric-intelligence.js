@@ -1,0 +1,1 @@
+heliaSearchData("d/geometric-intelligence",{"id":"geometric-intelligence","title":"Geometric Intelligence","kind":"institution","tags":[],"authors":[],"venue":[],"date":null,"url":"geometric-intelligence.html","headings":[],"body":""});

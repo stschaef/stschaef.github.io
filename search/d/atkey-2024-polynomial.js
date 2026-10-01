@@ -1,0 +1,1 @@
+heliaSearchData("d/atkey-2024-polynomial",{"id":"atkey-2024-polynomial","title":"Polynomial Time and Dependent Types","kind":"reference","tags":["complexity","type-theory"],"authors":["Robert Atkey"],"venue":["POPL","Symposium on Principles of Programming Languages"],"date":null,"url":"atkey-2024-polynomial.html","headings":[],"body":""});

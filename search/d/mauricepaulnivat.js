@@ -1,0 +1,1 @@
+heliaSearchData("d/mauricepaulnivat",{"id":"mauricepaulnivat","title":"Maurice Paul Nivat","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"mauricepaulnivat.html","headings":[],"body":""});

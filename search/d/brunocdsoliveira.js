@@ -1,0 +1,1 @@
+heliaSearchData("d/brunocdsoliveira",{"id":"brunocdsoliveira","title":"Bruno C. d. S. Oliveira","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"brunocdsoliveira.html","headings":[],"body":""});

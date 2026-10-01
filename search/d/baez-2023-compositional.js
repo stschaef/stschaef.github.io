@@ -1,0 +1,1 @@
+heliaSearchData("d/baez-2023-compositional",{"id":"baez-2023-compositional","title":"Compositional thermostatics","kind":"reference","tags":[],"authors":["Joe Moeller","John C. Baez","Owen Lynch"],"venue":["Journal of Mathematical Physics"],"date":null,"url":"baez-2023-compositional.html","headings":[],"body":""});

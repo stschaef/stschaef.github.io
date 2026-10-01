@@ -1,0 +1,1 @@
+heliaSearchData("d/andrewbrooketaylor",{"id":"andrewbrooketaylor","title":"Andrew Brooke-Taylor","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"andrewbrooketaylor.html","headings":[],"body":""});

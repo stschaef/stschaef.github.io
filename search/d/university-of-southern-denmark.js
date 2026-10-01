@@ -1,0 +1,1 @@
+heliaSearchData("d/university-of-southern-denmark",{"id":"university-of-southern-denmark","title":"University of Southern Denmark","kind":"institution","tags":[],"authors":[],"venue":[],"date":null,"url":"university-of-southern-denmark.html","headings":[],"body":""});

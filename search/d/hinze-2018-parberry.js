@@ -1,0 +1,1 @@
+heliaSearchData("d/hinze-2018-parberry",{"id":"hinze-2018-parberry","title":"Parberry’s pairwise sorting network revealed","kind":"reference","tags":["program-calculation"],"authors":["Clare Martin","Ralf Hinze"],"venue":["JFP","Journal of Functional Programming"],"date":null,"url":"hinze-2018-parberry.html","headings":[],"body":""});

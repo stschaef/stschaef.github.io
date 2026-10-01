@@ -1,0 +1,1 @@
+heliaSearchData("d/mcbride-2022-expressive",{"id":"mcbride-2022-expressive","title":"EXPRESSIVE TYPE SYSTEMS FOR METROLOGY","kind":"reference","tags":["dimension-types"],"authors":["Conor McBride","Fredrik Nordvall Forsberg","Georgi Nakov"],"venue":[],"date":null,"url":"mcbride-2022-expressive.html","headings":[],"body":""});

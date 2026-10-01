@@ -1,0 +1,1 @@
+heliaSearchData("d/zeilberger-2008-focusing",{"id":"zeilberger-2008-focusing","title":"Focusing and higher-order abstract syntax","kind":"reference","tags":["abstract-syntax","focusing"],"authors":["Noam Zeilberger"],"venue":["POPL","Symposium on Principles of Programming Languages"],"date":null,"url":"zeilberger-2008-focusing.html","headings":[],"body":""});

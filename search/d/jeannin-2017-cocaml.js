@@ -1,0 +1,1 @@
+heliaSearchData("d/jeannin-2017-cocaml",{"id":"jeannin-2017-cocaml","title":"CoCaml: Functional Programming with Regular Coinductive Types","kind":"reference","tags":["coalgebra"],"authors":["Alexandra Silva","Dexter Kozen","Jean-Baptiste Jeannin"],"venue":["Fundamenta Informaticae"],"date":null,"url":"jeannin-2017-cocaml.html","headings":[],"body":""});

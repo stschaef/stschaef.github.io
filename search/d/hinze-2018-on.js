@@ -1,0 +1,1 @@
+heliaSearchData("d/hinze-2018-on",{"id":"hinze-2018-on","title":"On constructing 2-3 trees","kind":"reference","tags":["program-calculation"],"authors":["Ralf Hinze"],"venue":["JFP","Journal of Functional Programming"],"date":null,"url":"hinze-2018-on.html","headings":[],"body":""});

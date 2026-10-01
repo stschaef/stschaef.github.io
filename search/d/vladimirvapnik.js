@@ -1,0 +1,1 @@
+heliaSearchData("d/vladimirvapnik",{"id":"vladimirvapnik","title":"Vladimir Vapnik","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"vladimirvapnik.html","headings":[],"body":""});

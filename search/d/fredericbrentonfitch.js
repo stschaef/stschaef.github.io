@@ -1,0 +1,1 @@
+heliaSearchData("d/fredericbrentonfitch",{"id":"fredericbrentonfitch","title":"Frederic Brenton Fitch","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"fredericbrentonfitch.html","headings":[],"body":""});

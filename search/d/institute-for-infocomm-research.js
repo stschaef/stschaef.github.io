@@ -1,0 +1,1 @@
+heliaSearchData("d/institute-for-infocomm-research",{"id":"institute-for-infocomm-research","title":"Institute for Infocomm Research","kind":"institution","tags":[],"authors":[],"venue":[],"date":null,"url":"institute-for-infocomm-research.html","headings":[],"body":""});

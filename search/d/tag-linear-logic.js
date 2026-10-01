@@ -1,0 +1,1 @@
+heliaSearchData("d/tag-linear-logic",{"id":"tag-linear-logic","title":"linear-logic","kind":"tag","tags":[],"authors":[],"venue":[],"date":null,"url":"tag-linear-logic.html","headings":[],"body":""});

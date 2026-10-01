@@ -1,0 +1,1 @@
+heliaSearchData("d/kavvos-2023-under",{"id":"kavvos-2023-under","title":"UNDER LOCK AND KEY: A PROOF SYSTEM FOR A MULTIMODAL LOGIC","kind":"reference","tags":["modal-type-theory"],"authors":["Daniel Gratzer","G. A. Kavvos"],"venue":["BSL","The Bulletin of Symbolic Logic"],"date":null,"url":"kavvos-2023-under.html","headings":[],"body":""});

@@ -1,0 +1,1 @@
+heliaSearchData("d/tag-logical-relations",{"id":"tag-logical-relations","title":"logical-relations","kind":"tag","tags":[],"authors":[],"venue":[],"date":null,"url":"tag-logical-relations.html","headings":[],"body":""});

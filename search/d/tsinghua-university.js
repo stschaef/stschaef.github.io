@@ -1,0 +1,1 @@
+heliaSearchData("d/tsinghua-university",{"id":"tsinghua-university","title":"Tsinghua University","kind":"institution","tags":[],"authors":[],"venue":[],"date":null,"url":"tsinghua-university.html","headings":[],"body":""});

@@ -1,0 +1,1 @@
+heliaSearchData("d/enguehard-2026-what",{"id":"enguehard-2026-what","title":"Qu’est-ce que la science informatique non faite?","kind":"reference","tags":[],"authors":["Alberto Naibo","Chantal Enguehard","Guillaume Munch-Maccagnoni"],"venue":["Philosophia Scientiæ"],"date":null,"url":"enguehard-2026-what.html","headings":[],"body":""});

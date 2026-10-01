@@ -1,0 +1,1 @@
+heliaSearchData("d/mariajoseramirezquintana",{"id":"mariajoseramirezquintana","title":"Maria Jose Ramírez Quintana","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"mariajoseramirezquintana.html","headings":[],"body":""});

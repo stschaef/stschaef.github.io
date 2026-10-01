@@ -1,0 +1,1 @@
+heliaSearchData("d/satishnarayanasamy",{"id":"satishnarayanasamy","title":"Satish Narayanasamy","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"satishnarayanasamy.html","headings":[],"body":""});

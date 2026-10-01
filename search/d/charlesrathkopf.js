@@ -1,0 +1,1 @@
+heliaSearchData("d/charlesrathkopf",{"id":"charlesrathkopf","title":"Charles Rathkopf","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"charlesrathkopf.html","headings":[],"body":""});

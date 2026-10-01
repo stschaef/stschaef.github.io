@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>Performal: Formal Verification of Latency Properties for Distributed Systems</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Ctext y=%22.9em%22 font-size=%2290%22%3E%F0%9F%8C%BB%3C/text%3E%3C/svg%3E">
+<meta name="generator" content="helia">
+<link rel="alternate" type="application/atom+xml" title="Steven Schaefer" href="feed.xml">
+<link rel="alternate" type="application/feed+json" title="Steven Schaefer" href="feed.json">
+<script src="helia/theme-version.js"></script>
+<script src="theme/folio-early.js"></script>
+<link rel="stylesheet" href="helia/theme.css">
+<link rel="stylesheet" href="helia/highlight.css">
+<link rel="stylesheet" href="helia/search.css">
+<link rel="stylesheet" href="theme/katex.css">
+<link rel="stylesheet" href="theme/recipe.css">
+<link rel="stylesheet" href="theme/site.css">
+<link rel="stylesheet" href="theme/folio.css">
+<script defer src="helia/runtime.js"></script>
+<script defer src="helia/search.js"></script>
+<script defer src="theme/glyphcraft.js"></script>
+<script defer src="theme/glyphart.js"></script>
+<script defer src="theme/glyphgen.js"></script>
+<script defer src="theme/ornament.js"></script>
+<script defer src="theme/folio.js"></script>
+<script defer src="theme/portrait.js"></script>
+<script type="application/json" id="helia-widgets">{"helia-cite-formats":"widgets/helia-cite-formats-a3294ac7.js"}</script>
+<link rel="modulepreload" href="widgets/helia-cite-formats-a3294ac7.js">
+<script type="module" src="widgets/runtime.js"></script>
+</head>
+<body>
+<nav class="helia-topbar"><a class="helia-home" href="home.html">Steven Schaefer</a><ul class="helia-nav-links"><li><a href="stevenschaefer.html">About Me</a></li><li><a href="research.html">Research</a></li><li><a href="new.html">New</a></li></ul><button type="button" class="helia-search-button" aria-label="Search (/ or Ctrl+K)" aria-haspopup="dialog"><span class="helia-search-icon">⌕</span><span class="helia-search-label">Search</span><kbd class="helia-search-key">/</kbd></button></nav>
+<div class="helia-page" data-kind="reference">
+<article class="helia-article">
+<header class="helia-header" data-entry="zhang-2023-performal" data-kind="reference">
+<h2 class="helia-heading"><span class="helia-taxon">Reference.</span> Performal: Formal Verification of Latency Properties for Distributed Systems</h2>
+<div class="helia-meta"><span class="helia-author"><a class="helia-entry-link" href="tonynudazhang.html" data-entry="tonynudazhang">Tony Nuda Zhang</a>, <a class="helia-entry-link" href="upamanyusharma.html" data-entry="upamanyusharma">Upamanyu Sharma</a>, <a class="helia-entry-link" href="manoskapritsos.html" data-entry="manoskapritsos">Manos Kapritsos</a></span> · <span class="helia-byline"><a class="helia-entry-link" href="pldi.html" data-entry="pldi">PLDI</a> · 2023</span> · <span class="helia-tags"><span class="helia-tag" data-tag="distributed-systems"><a class="helia-entry-link" href="tag-distributed-systems.html" data-entry="tag-distributed-systems">distributed-systems</a></span></span> · <span class="helia-entry-links"><span class="helia-entry-link" data-field="pdf-url"><a class="helia-link helia-external" href="https://dl.acm.org/doi/pdf/10.1145/3591235">PDF</a></span> · <span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/3591235">DOI</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/journals/pacmpl/ZhangSK23">pldb</a></span></span></div>
+</header>
+<div class="helia-body">
+<div class="helia-abstract">Understanding and debugging the performance of distributed systems is a notoriously hard task, but a critical one. Traditional techniques like logging, tracing, and benchmarking represent a best-effort way to find performance bugs, but they either require a full deployment to be effective or can only find bugs after they manifest. Even with such techniques in place, real deployments often exhibit performance bugs that cause unwanted behavior. In this paper, we present Performal, a novel methodology that leverages the recent advances in formal verification to provide rigorous latency guarantees for real, complex distributed systems. The task is not an easy one: it requires carefully decoupling the formal proofs from the execution environment, formally defining latency properties, and proving them on real, distributed implementations. We used Performal to prove rigorous upper bounds for the latency of three applications: a distributed lock, ZooKeeper and a MultiPaxos-based State Machine Replication system. Our experimental evaluation shows that these bounds are a good proxy for the behavior of the deployed system and can be used to identify performance bugs in real-world systems.</div>
+</div>
+<div class="helia-cite helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><h3 class="helia-heading">Cite</h3>
+</summary>
+<div class="helia-group-body">
+<div class="helia-widget" data-widget="helia-cite-formats" data-props="{&quot;key&quot;:&quot;zhang-2023-performal&quot;,&quot;bibtex&quot;:&quot;@article{zhang-2023-performal, title={Performal: Formal Verification of Latency Properties for Distributed Systems}, volume={7}, ISSN={2475-1421}, url={http://dx.doi.org/10.1145/3591235}, DOI={10.1145/3591235}, number={PLDI}, journal={Proceedings of the ACM on Programming Languages}, publisher={Association for Computing Machinery (ACM)}, author={Zhang, Tony Nuda and Sharma, Upamanyu and Kapritsos, Manos}, year={2023}, month=June, pages={368–393} }&quot;,&quot;bib-file&quot;:&quot;zhang-2023-performal.bib&quot;,&quot;hayagriva&quot;:&quot;zhang-2023-performal:\n  type: article\n  title: &#39;Performal: Formal Verification of Latency Properties for Distributed Systems&#39;\n  author:\n  - Zhang, Tony Nuda\n  - Sharma, Upamanyu\n  - Kapritsos, Manos\n  date: 2023-06\n  page-range: 368-393\n  serial-number:\n    doi: 10.1145/3591235\n  parent:\n    type: periodical\n    title: Proceedings of the ACM on Programming Languages\n    publisher: Association for Computing Machinery (ACM)\n    issue: PLDI\n    volume: 7\n&quot;,&quot;yml-file&quot;:&quot;zhang-2023-performal.yml&quot;}"><div class="helia-cite-key" data-copy="@zhang-2023-performal" data-copy-label="citation key"><span class="helia-bib-key">Cite as</span> <code class="helia-raw-inline">@zhang-2023-performal</code> (helia, typst) · <code class="helia-raw-inline">\cite{zhang-2023-performal}</code> (LaTeX)</div>
+<div class="helia-cite-format helia-collapsible" data-format="bibtex" data-copy="true" data-copy-label="BibTeX">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">BibTeX</span></summary>
+<div class="helia-group-body">
+<details class="helia-code" open><summary class="helia-code-summary"><span class="helia-code-lang">bibtex</span> · <span class="helia-code-lines">1 line</span></summary><pre class="helia-raw"><code class="language-bibtex"><span class="hl-text hl-bibtex"><span class="hl-meta hl-entry hl-braces hl-bibtex"><span class="hl-keyword hl-other hl-entry-type hl-bibtex"><span class="hl-punctuation hl-definition hl-keyword hl-bibtex">@</span>article</span><span class="hl-punctuation hl-section hl-entry hl-begin hl-bibtex">{</span><span class="hl-entity hl-name hl-type hl-entry-key hl-bibtex">zhang-2023-performal</span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">title</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>Performal: Formal Verification of Latency Properties for Distributed Systems<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">volume</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>7<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">ISSN</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>2475-1421<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">url</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>http://dx.doi.org/10.1145/3591235<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">DOI</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>10.1145/3591235<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">number</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>PLDI<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">journal</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>Proceedings of the ACM on Programming Languages<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">publisher</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>Association for Computing Machinery (ACM)<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">author</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>Zhang, Tony Nuda and Sharma, Upamanyu and Kapritsos, Manos<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">year</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>2023<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">month</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span>June</span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">pages</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>368–393<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span> </span><span class="hl-punctuation hl-section hl-entry hl-end hl-bibtex">}</span></span></span></code></pre></details>
+</div>
+</details>
+</div>
+<div class="helia-cite-format helia-collapsible" data-format="hayagriva" data-copy="true" data-copy-label="hayagriva YAML">
+<details>
+<summary class="helia-group-summary"><span class="helia-group-title">hayagriva YAML (typst)</span></summary>
+<div class="helia-group-body">
+<details class="helia-code" open><summary class="helia-code-summary"><span class="helia-code-lang">yaml</span> · <span class="helia-code-lines">17 lines</span></summary><pre class="helia-raw"><code class="language-yaml"><span class="hl-source hl-yaml"><span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">zhang-2023-performal</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">type</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">article</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">title</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-quoted hl-single hl-yaml"><span class="hl-punctuation hl-definition hl-string hl-begin hl-yaml">&#39;</span>Performal: Formal Verification of Latency Properties for Distributed Systems<span class="hl-punctuation hl-definition hl-string hl-end hl-yaml">&#39;</span></span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">author</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Zhang, Tony Nuda</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Sharma, Upamanyu</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Kapritsos, Manos</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">date</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">2023-06</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">page-range</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">368-393</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">serial-number</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">doi</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">10.1145/3591235</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">parent</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">type</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">periodical</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">title</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Proceedings of the ACM on Programming Languages</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">publisher</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Association for Computing Machinery (ACM)</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">issue</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">PLDI</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">volume</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-constant hl-numeric hl-integer hl-decimal hl-yaml">7</span>
+</span></code></pre></details>
+</div>
+</details>
+</div>
+<div class="helia-cite-files">Download: <a class="helia-link" href="zhang-2023-performal.bib">zhang-2023-performal.bib</a> · <a class="helia-link" href="zhang-2023-performal.yml">zhang-2023-performal.yml</a></div>
+</div>
+</div>
+</details>
+</div>
+<div class="helia-reference-cites helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">Cites 84 works (5 here)</span></summary>
+<div class="helia-group-body">
+<div class="helia-reference-cites-here helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">With notes (5)</span></summary>
+<div class="helia-group-body">
+<section class="helia-transclusion" data-entry="hanceFindingInvariantsDistributed" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="hanceFindingInvariantsDistributed"><span class="helia-title">Finding Invariants of Distributed Systems: It’s a Small (Enough) World After All</span>&nbsp;<a class="helia-slug" href="hanceFindingInvariantsDistributed.html">hanceFindingInvariantsDistributed</a><span class="helia-byline"><span class="helia-entry-link" data-entry="nsdi">NSDI</span> · 2021</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="hanceFindingInvariantsDistributed" data-kind="reference">
+<div class="helia-abstract">Today’s distributed systems are increasingly complex, leading to subtle bugs that are difficult to detect with standard testing methods. Formal verification can provably rule out such bugs, but historically it has been excessively labor intensive. For distributed systems, recent work shows that, given a correct inductive invariant, nearly all other proof work can be automated; however, the construction of such invariants is still a difficult manual task. In this paper, we demonstrate a new methodology for automating the construction of inductive invariants, given as input a (formal) description of the distributed system and a desired safety condition. Our system performs an exhaustive search within a given space of candidate invariants in order to find and verify inductive invariants which suffice to prove the safety condition. Central to our ability to search efficiently is our algorithm’s ability to learn from counterexamples whenever a candidate fails to be invariant, allowing us to check the remaining candidates more efficiently. We hypothesize that many distributed systems, even complex ones, may have concise invariants that make this approach practical, and in support of this, we show that our system is able to identify and verify inductive invariants for the Paxos protocol, which proved too complex for previous work.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="url"><a class="helia-link helia-external" href="https://www.usenix.org/conference/nsdi21/presentation/hance">Web</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="yaoDistAIDataDrivenAutomated" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="yaoDistAIDataDrivenAutomated"><span class="helia-title">DistAI: Data-Driven Automated Invariant Learning for Distributed Protocols</span>&nbsp;<a class="helia-slug" href="yaoDistAIDataDrivenAutomated.html">yaoDistAIDataDrivenAutomated</a><span class="helia-byline"><span class="helia-entry-link" data-entry="osdi">OSDI</span> · 2021</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="yaoDistAIDataDrivenAutomated" data-kind="reference">
+<div class="helia-abstract">Distributed systems are notoriously hard to implement correctly due to non-determinism. Finding the inductive invariant of the distributed protocol is a critical step in verifying the correctness of distributed systems, but takes a long time to do even for simple protocols. We present DistAI, a data-driven automated system for learning inductive invariants for distributed protocols. DistAI generates data by simulating the distributed protocol at different instance sizes and recording states as samples. Based on the observation that invariants are often concise in practice, DistAI starts with small invariant formulas and enumerates all strongest possible invariants that hold for all samples. It then feeds those invariants and the desired safety properties to an SMT solver to check if the conjunction of the invariants and the safety properties is inductive. Starting with small invariant formulas and strongest possible invariants avoids large SMT queries, improving SMT solver performance. Because DistAI starts with the strongest possible invariants, if the SMT solver fails, DistAI does not need to discard failed invariants, but knows to monotonically weaken them and try again with the solver, repeating the process until it eventually succeeds. We prove that DistAI is guaranteed to find the ∃-free inductive invariant that proves the desired safety properties in finite time, if one exists. Our evaluation shows that DistAI successfully verifies 13 common distributed protocols automatically and outperforms alternative methods both in the number of protocols it verifies and the speed at which it does so, in some cases by more than two orders of magnitude.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="url"><a class="helia-link helia-external" href="https://www.usenix.org/conference/osdi21/presentation/yao">Web</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="maI4IncrementalInference2019" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="maI4IncrementalInference2019"><span class="helia-title">I4: Incremental inference of inductive invariants for verification of distributed protocols</span>&nbsp;<a class="helia-slug" href="maI4IncrementalInference2019.html">maI4IncrementalInference2019</a><span class="helia-byline"><span class="helia-entry-link" data-entry="sosp">SOSP</span> · 2019</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="maI4IncrementalInference2019" data-kind="reference">
+<div class="helia-abstract">Designing and implementing distributed systems correctly is a very challenging task. Recently, formal verification has been successfully used to prove the correctness of distributed systems. At the heart of formal verification lies a computerchecked proof with an inductive invariant. Finding this inductive invariant, however, is the most difficult part of the proof. Alas, current proof techniques require inductive invariants to be found manually—and painstakingly—by the developer. In this paper, we present a new approach, Incremental Inference of Inductive Invariants (I4), to automatically generate inductive invariants for distributed protocols. The essence of our idea is simple: the inductive invariant of a finite instance of the protocol can be used to infer a general inductive invariant for the infinite distributed protocol. In I4, we create a finite instance of the protocol; use a model checking tool to automatically derive the inductive invariant for this finite instance; and generalize this invariant to an inductive invariant for the infinite protocol. Our experiments show that I4 can prove the correctness of several distributed protocols like Chord, 2PC and Transaction Chains with little to no human effort.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/3341301.3359651">DOI</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="padonIvySafetyVerification" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="padonIvySafetyVerification"><span class="helia-title">Ivy: Safety verification by interactive generalization</span>&nbsp;<a class="helia-slug" href="padonIvySafetyVerification.html">padonIvySafetyVerification</a><span class="helia-byline"><span class="helia-entry-link" data-entry="pldi">PLDI</span> · 2016</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="padonIvySafetyVerification" data-kind="reference">
+<div class="helia-abstract">Despite several decades of research, the problem of formal verification of infinite-state systems has resisted effective automation. We describe a system — Ivy — for interactively verifying safety of infinite-state systems. Ivy’s key principle is that whenever verification fails, Ivy graphically displays a concrete counterexample to induction. The user then interactively guides generalization from this counterexample. This process continues until an inductive invariant is found. Ivy searches for universally quantified invariants, and uses a restricted modeling language. This ensures that all verification conditions can be checked algorithmically. All user interactions are performed using graphical models, easing the user’s task. We describe our initial experience with verifying several distributed protocols.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="pdf-url"><a class="helia-link helia-external" href="https://dl.acm.org/doi/pdf/10.1145/2908080.2908118">PDF</a></span> · <span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/2908080.2908118">DOI</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/conf/pldi/PadonMPSS16">pldb</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="hawblitzel-2015-ironfleet" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="hawblitzel-2015-ironfleet"><span class="helia-title">IronFleet: proving practical distributed systems correct</span>&nbsp;<a class="helia-slug" href="hawblitzel-2015-ironfleet.html">hawblitzel-2015-ironfleet</a><span class="helia-byline"><span class="helia-entry-link" data-entry="sosp">SOSP</span> · 2015</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="hawblitzel-2015-ironfleet" data-kind="reference">
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/2815400.2815428">DOI</a></span></div>
+</div>
+</div>
+</details>
+</section>
+</div>
+</details>
+</div>
+<div class="helia-reference-cites-away helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">External (79)</span></summary>
+<div class="helia-group-body">
+<ul>
+<li><a class="helia-link helia-external" href="https://doi.org/10.5281/zenodo.7812534">Artifact for Performal: Formal Verification of Latency Properties for Distributed Systems</a> (2023)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3486169">For a Few Dollars More: Verified Fine-Grained Algorithm Analysis Down to LLVM</a> (2022)</li>
+<li>Performance Interfaces for Network Functions (2022)</li>
+<li>ORION and the Three Rights: Sizing, Bundling, and Prewarming for Serverless DAGs (2022)</li>
+<li>DuoAI: Fast, Automated Inference of Inductive Invariants for Verifying Distributed Protocols (2022)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3544216.3544271">Aequitas: Admission Control for Performance-Critical RPCs in Datacenters</a> (2022)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3360582">DProf: distributed profiler with strong guarantees</a> (2019)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3341301.3359632">Verifying concurrent, crash-safe systems with Perennial</a> (2019)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-030-25543-5_23">Inferring Inductive Invariants from Phase Structures</a> (2019)</li>
+<li>Performance Contracts for Software Network Functions (2019)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3341301.3359641">Scaling symbolic evaluation for automated verification of systems code with Serval</a> (2019)</li>
+<li>Zeno: Diagnosing Performance Problems with Temporal Provenance (2019)</li>
+<li>Amazon Found Every 100ms of Latency Cost them 1% in Sales (blog) (2019)</li>
+<li>Combining Source and Target Level Cost Analyses for OCaml Programs (2019)</li>
+<li>Verifying concurrent software using movers in CSPEC (2018)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-319-89884-1_19">A Fistful of Dollars: Formalizing Asymptotic Complexity Claims via Deductive Program Verification</a> (2018)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3267809.3267841">Weighted Sampling of Execution Traces</a> (2018)</li>
+<li>Distributed Network Monitoring and Debugging with SwitchPointer (2018)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3267809.3267839">Debugging Distributed Systems with Why-Across-Time Provenance</a> (2018)</li>
+<li>Proving confidentiality in a file system using DiskSec (2018)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/s10817-017-9431-7">Verifying the Correctness and Amortized Complexity of a Union-Find Implementation in Separation Logic with Time Credits</a> (2017)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3068608">IronFleet: proving safety and liveness of practical distributed systems</a> (2017)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3208104">Pivot Tracing: Dynamic Causal Monitoring for Distributed Systems</a> (2017)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1016/j.scico.2017.05.001">A Coq Library for Internal Verification of Running-Times</a> (2017)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3132747.3132748">Hyperkernel: Push-Button Verification of an OS Kernel</a> (2017)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/s11241-017-9286-3">High-assurance timing analysis for a high-assurance real-time operating system</a> (2017)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3127479.3132245">WorkloadCompactor: Reducing Datacenter Cost While Providing Tail Latency SLO Guarantees</a> (2017)</li>
+<li>The state of online retail performance (Akamai press release) (2017)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3009837.3009842">Towards automatic resource bound analysis for OCaml</a> (2016)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/2837614.2837622">Chapar: certified causally consistent distributed key-value stores</a> (2016)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/2987550.2987585">SNC-Meister: Admitting More Tenants with Tail Latency SLOs</a> (2016)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/2737924.2737955">Compositional certified resource bounds</a> (2015)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/2815400.2815402">Using Crash Hoare logic for certifying the FSCQ file system</a> (2015)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/2785956.2787496">Pingmesh: A Large-Scale System for Data Center Network Latency Measurement and Analysis</a> (2015)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/2785956.2787479">Silo: Predictable Message Latency in the Cloud</a> (2015)</li>
+<li>Towards Pre-Deployment Detection of Performance Failures in Cloud Distributed Systems (2015)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/2737924.2737958">Verdi: a framework for implementing and formally verifying distributed systems</a> (2015)</li>
+<li>DynamoDB service disruption summary (AWS message 5467D2) (2015)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/2670979.2670986">What Bugs Live in the Cloud? A Study of 3000+ Issues in Cloud Systems</a> (2014)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.4230/oasics.wcet.2013.64">Upper-bounding Program Execution Time with Extreme Value Theory</a> (2013)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-642-39611-3_2">Verifying Real-Time Software Is Not Reasonable (Today)</a> (2013)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/2382553.2382555">Fay: Extensible Distributed Tracing from Kernels to Clusters</a> (2012)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-642-31424-7_64">Resource Aware ML</a> (2012)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/2213836.2213945">Amazon DynamoDB: a seamlessly scalable non-relational database service</a> (2012)</li>
+<li>ZOOKEEPER-1465 (Apache Jira issue) (2012)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1109/rtss.2011.38">Timing Analysis of a Protected Operating System Kernel</a> (2011)</li>
+<li>Hybrid measurement-based WCET analysis at the source level using object-level traces (2010)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/1807128.1807152">Benchmarking cloud serving systems with YCSB</a> (2010)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/1755952.1755967">Timed I/O automata</a> (2010)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-642-11957-6_16">Amortized Resource Analysis with Polynomial Potential</a> (2010)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/1882291.1882297">Finding latent performance bugs in systems implementations</a> (2010)</li>
+<li>Dapper, a Large-Scale Distributed Systems Tracing Infrastructure (2010)</li>
+<li>ZooKeeper: Wait-Free Coordination for Internet-Scale Systems (2010)</li>
+<li>Statistical-based WCET estimation and validation (2009)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/1555815.1555800">End-to-end performance forecasting</a> (2009)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1016/j.scico.2007.01.014">Chronos: A timing analyzer for embedded software</a> (2007)</li>
+<li>Execution-time profiles (2007)</li>
+<li>Measurements or static analysis or both? (2007)</li>
+<li>X-Trace: A Pervasive Network Tracing Framework (2007)</li>
+<li>Using Magpie for request extraction and workload modelling (2004)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/974044.974059">Early performance testing of distributed software applications</a> (2004)</li>
+<li>pwcet: A tool for probabilistic worst-case execution time analysis of real-time systems (2003)</li>
+<li>Paxos Made Simple (2001)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1109/90.842141">A hierarchical fair service curve algorithm for link-sharing, real-time, and priority services</a> (2000)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1109/90.803382">SCED: a generalized scheduling policy for guaranteeing quality-of-service</a> (1999)</li>
+<li>Timed Automata (CAV 1999) (1999)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/279227.279229">The part-time parliament</a> (1998)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/bfb0030679">Revisiting the Paxos algorithm</a> (1997)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1006/inco.1995.1041">A Process Algebra for Timed Systems</a> (1995)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-0-387-34878-0_18">Automatic verification of real-time communicating systems by constraint-solving</a> (1995)</li>
+<li>A theory of timed automata (1994)</li>
+<li>Fischer's protocol in timed process algebra (1994)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1006/inco.1993.1024">Model-checking in dense real-time</a> (1993)</li>
+<li>An overview and synthesis on timed process algebras (1992)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1109/32.75415">Modeling and verification of time dependent systems using time Petri nets</a> (1991)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1109/18.61109">A calculus for network delay. I. Network elements in isolation</a> (1991)</li>
+<li>Analysis of asynchronous concurrent systems by timed Petri nets (1973)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/355604.361591">The humble programmer</a> (1972)</li>
+<li>Rules for Ordering Uncertain Prospects (1969)</li>
+</ul>
+</div>
+</details>
+</div>
+</div>
+</details>
+</div>
+</article>
+<div class="helia-identity"><span class="helia-id">zhang-2023-performal</span> <span class="helia-kind">reference</span> <span class="helia-path">entries/refs/zhang-2023-performal/zhang-2023-performal.hel</span></div>
+</div>
+</body>
+</html>

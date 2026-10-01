@@ -1,0 +1,1 @@
+heliaSearchData("d/johnvogelguttag",{"id":"johnvogelguttag","title":"John Vogel Guttag","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"johnvogelguttag.html","headings":[],"body":""});

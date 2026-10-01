@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>Context-Dependent Effects in Guarded Interaction Trees</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Ctext y=%22.9em%22 font-size=%2290%22%3E%F0%9F%8C%BB%3C/text%3E%3C/svg%3E">
+<meta name="generator" content="helia">
+<link rel="alternate" type="application/atom+xml" title="Steven Schaefer" href="feed.xml">
+<link rel="alternate" type="application/feed+json" title="Steven Schaefer" href="feed.json">
+<script src="helia/theme-version.js"></script>
+<script src="theme/folio-early.js"></script>
+<link rel="stylesheet" href="helia/theme.css">
+<link rel="stylesheet" href="helia/highlight.css">
+<link rel="stylesheet" href="helia/search.css">
+<link rel="stylesheet" href="theme/katex.css">
+<link rel="stylesheet" href="theme/recipe.css">
+<link rel="stylesheet" href="theme/site.css">
+<link rel="stylesheet" href="theme/folio.css">
+<script defer src="helia/runtime.js"></script>
+<script defer src="helia/search.js"></script>
+<script defer src="theme/glyphcraft.js"></script>
+<script defer src="theme/glyphart.js"></script>
+<script defer src="theme/glyphgen.js"></script>
+<script defer src="theme/ornament.js"></script>
+<script defer src="theme/folio.js"></script>
+<script defer src="theme/portrait.js"></script>
+<script type="application/json" id="helia-widgets">{"helia-cite-formats":"widgets/helia-cite-formats-a3294ac7.js"}</script>
+<link rel="modulepreload" href="widgets/helia-cite-formats-a3294ac7.js">
+<script type="module" src="widgets/runtime.js"></script>
+</head>
+<body>
+<nav class="helia-topbar"><a class="helia-home" href="home.html">Steven Schaefer</a><ul class="helia-nav-links"><li><a href="stevenschaefer.html">About Me</a></li><li><a href="research.html">Research</a></li><li><a href="new.html">New</a></li></ul><button type="button" class="helia-search-button" aria-label="Search (/ or Ctrl+K)" aria-haspopup="dialog"><span class="helia-search-icon">⌕</span><span class="helia-search-label">Search</span><kbd class="helia-search-key">/</kbd></button></nav>
+<div class="helia-page" data-kind="reference">
+<article class="helia-article">
+<header class="helia-header" data-entry="stepanenko-2025-contextx" data-kind="reference">
+<h2 class="helia-heading"><span class="helia-taxon">Reference.</span> Context-Dependent Effects in Guarded Interaction Trees</h2>
+<div class="helia-meta"><span class="helia-author"><a class="helia-entry-link" href="sergeistepanenko.html" data-entry="sergeistepanenko">Sergei Stepanenko</a>, <a class="helia-entry-link" href="emmanardino.html" data-entry="emmanardino">Emma Nardino</a>, <a class="helia-entry-link" href="danfrumin.html" data-entry="danfrumin">Dan Frumin</a>, <a class="helia-entry-link" href="amintimany.html" data-entry="amintimany">Amin Timany</a>, <a class="helia-entry-link" href="larsbirkedal.html" data-entry="larsbirkedal">Lars Birkedal</a></span> · <span class="helia-byline"><a class="helia-entry-link" href="esop.html" data-entry="esop">ESOP</a> · 2025</span> · <span class="helia-tags"><span class="helia-tag" data-tag="effects"><a class="helia-entry-link" href="tag-effects.html" data-entry="tag-effects">effects</a></span> <span class="helia-tag" data-tag="guarded-domain-theory"><a class="helia-entry-link" href="tag-guarded-domain-theory.html" data-entry="tag-guarded-domain-theory">guarded-domain-theory</a></span> <span class="helia-tag" data-tag="guarded-recursion"><a class="helia-entry-link" href="tag-guarded-recursion.html" data-entry="tag-guarded-recursion">guarded-recursion</a></span></span> · <span class="helia-entry-links"><span class="helia-entry-link" data-field="pdf-url"><a class="helia-link helia-external" href="https://link.springer.com/content/pdf/10.1007/978-3-031-91121-7_12.pdf">PDF</a></span> · <span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-031-91121-7_12">DOI</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/conf/esop/StepanenkoNFTB25">pldb</a></span></span></div>
+</header>
+<div class="helia-body">
+<div class="helia-abstract">Guarded Interaction Trees are a structure and a fully formalized framework for representing higher-order computations with higher-order effects in Coq. We present an extension of Guarded Interaction Trees to support formal reasoning about context-dependent effects. That is, effects whose behaviors depend on the evaluation context, e.g., call/cc, shift, and reset. Using and reasoning about such effects is challenging since certain compositionality principles no longer hold in the presence of such effects. For example, the so-called “bind rule” in modern program logics (which allows one to reason modularly about a term inside a context) is no longer valid. The goal of our extension is to support representation and reasoning about context-dependent effects in the most painless way possible. To that end, our extension is conservative: the reasoning principles (and the Coq implementation) for context-independent effects remain the same. We show that our implementation of context-dependent effects is viable and powerful. We use it to give direct-style denotational semantics for higher-order programming languages with call/cc and with delimited continuations. We extend the program logic for Guarded Interaction Trees to account for context-dependent effects, and we use the program logic to prove that the denotational semantics is adequate with respect to the operational semantics. This is achieved by constructing logical relations between syntax and semantics inside the program logic. Additionally, we retain the ability to combine multiple effects in a modular way, which we demonstrate by showing type soundness for safe interoperability of a programming language with delimited continuations and a programming language with higher-order store.</div>
+</div>
+<div class="helia-cite helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><h3 class="helia-heading">Cite</h3>
+</summary>
+<div class="helia-group-body">
+<div class="helia-widget" data-widget="helia-cite-formats" data-props="{&quot;key&quot;:&quot;stepanenko-2025-contextx&quot;,&quot;bibtex&quot;:&quot;@inbook{stepanenko-2025-contextx, title={Context-Dependent Effects in Guarded Interaction Trees}, ISBN={9783031911217}, ISSN={1611-3349}, url={http://dx.doi.org/10.1007/978-3-031-91121-7_12}, DOI={10.1007/978-3-031-91121-7_12}, booktitle={Programming Languages and Systems}, publisher={Springer Nature Switzerland}, author={Stepanenko, Sergei and Nardino, Emma and Frumin, Dan and Timany, Amin and Birkedal, Lars}, year={2025}, pages={286–313} }&quot;,&quot;bib-file&quot;:&quot;stepanenko-2025-contextx.bib&quot;,&quot;hayagriva&quot;:&quot;stepanenko-2025-contextx:\n  type: chapter\n  title: Context-Dependent Effects in Guarded Interaction Trees\n  author:\n  - Stepanenko, Sergei\n  - Nardino, Emma\n  - Frumin, Dan\n  - Timany, Amin\n  - Birkedal, Lars\n  date: 2025\n  page-range: 286-313\n  url: http://dx.doi.org/10.1007/978-3-031-91121-7_12\n  serial-number:\n    doi: 10.1007/978-3-031-91121-7_12\n    isbn: &#39;9783031911217&#39;\n    issn: 1611-3349\n  parent:\n    type: book\n    title: Programming Languages and Systems\n    publisher: Springer Nature Switzerland\n&quot;,&quot;yml-file&quot;:&quot;stepanenko-2025-contextx.yml&quot;}"><div class="helia-cite-key" data-copy="@stepanenko-2025-contextx" data-copy-label="citation key"><span class="helia-bib-key">Cite as</span> <code class="helia-raw-inline">@stepanenko-2025-contextx</code> (helia, typst) · <code class="helia-raw-inline">\cite{stepanenko-2025-contextx}</code> (LaTeX)</div>
+<div class="helia-cite-format helia-collapsible" data-format="bibtex" data-copy="true" data-copy-label="BibTeX">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">BibTeX</span></summary>
+<div class="helia-group-body">
+<details class="helia-code" open><summary class="helia-code-summary"><span class="helia-code-lang">bibtex</span> · <span class="helia-code-lines">1 line</span></summary><pre class="helia-raw"><code class="language-bibtex"><span class="hl-text hl-bibtex"><span class="hl-meta hl-entry hl-braces hl-bibtex"><span class="hl-keyword hl-other hl-entry-type hl-bibtex"><span class="hl-punctuation hl-definition hl-keyword hl-bibtex">@</span>inbook</span><span class="hl-punctuation hl-section hl-entry hl-begin hl-bibtex">{</span><span class="hl-entity hl-name hl-type hl-entry-key hl-bibtex">stepanenko-2025-contextx</span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">title</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>Context-Dependent Effects in Guarded Interaction Trees<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">ISBN</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>9783031911217<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">ISSN</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>1611-3349<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">url</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>http://dx.doi.org/10.1007/978-3-031-91121-7_12<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">DOI</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>10.1007/978-3-031-91121-7_12<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">booktitle</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>Programming Languages and Systems<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">publisher</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>Springer Nature Switzerland<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">author</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>Stepanenko, Sergei and Nardino, Emma and Frumin, Dan and Timany, Amin and Birkedal, Lars<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">year</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>2025<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">pages</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>286–313<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span> </span><span class="hl-punctuation hl-section hl-entry hl-end hl-bibtex">}</span></span></span></code></pre></details>
+</div>
+</details>
+</div>
+<div class="helia-cite-format helia-collapsible" data-format="hayagriva" data-copy="true" data-copy-label="hayagriva YAML">
+<details>
+<summary class="helia-group-summary"><span class="helia-group-title">hayagriva YAML (typst)</span></summary>
+<div class="helia-group-body">
+<details class="helia-code" open><summary class="helia-code-summary"><span class="helia-code-lang">yaml</span> · <span class="helia-code-lines">20 lines</span></summary><pre class="helia-raw"><code class="language-yaml"><span class="hl-source hl-yaml"><span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">stepanenko-2025-contextx</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">type</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">chapter</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">title</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Context-Dependent Effects in Guarded Interaction Trees</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">author</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Stepanenko, Sergei</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Nardino, Emma</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Frumin, Dan</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Timany, Amin</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Birkedal, Lars</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">date</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-constant hl-numeric hl-integer hl-decimal hl-yaml">2025</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">page-range</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">286-313</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">url</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">http://dx.doi.org/10.1007/978-3-031-91121-7_12</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">serial-number</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">doi</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">10.1007/978-3-031-91121-7_12</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">isbn</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-quoted hl-single hl-yaml"><span class="hl-punctuation hl-definition hl-string hl-begin hl-yaml">&#39;</span>9783031911217<span class="hl-punctuation hl-definition hl-string hl-end hl-yaml">&#39;</span></span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">issn</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">1611-3349</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">parent</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">type</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">book</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">title</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Programming Languages and Systems</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">publisher</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Springer Nature Switzerland</span>
+</span></code></pre></details>
+</div>
+</details>
+</div>
+<div class="helia-cite-files">Download: <a class="helia-link" href="stepanenko-2025-contextx.bib">stepanenko-2025-contextx.bib</a> · <a class="helia-link" href="stepanenko-2025-contextx.yml">stepanenko-2025-contextx.yml</a></div>
+</div>
+</div>
+</details>
+</div>
+<div class="helia-reference-cited-by helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">Cited by (1)</span></summary>
+<div class="helia-group-body">
+<section class="helia-transclusion" data-entry="stepanenko-2025-context" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="stepanenko-2025-context"><span class="helia-title">Context-Dependent Effects and Concurrency in Guarded Interaction Trees</span>&nbsp;<a class="helia-slug" href="stepanenko-2025-context.html">stepanenko-2025-context</a><span class="helia-byline"><span class="helia-entry-link" data-entry="arxiv">arXiv</span> · 2025</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="stepanenko-2025-context" data-kind="reference">
+<div class="helia-abstract">Guarded Interaction Trees are a structure and a fully formalized framework for representing higher-order computations with higher-order effects in Rocq. We present an extension of Guarded Interaction Trees to support formal reasoning about context-dependent effects. That is, effects whose behaviors depend on the evaluation context, e.g., call/cc, shift and reset. Using and reasoning about such effects is challenging since certain compositionality principles no longer hold in the presence of such effects. For example, the so-called “bind rule” in modern program logics is no longer valid. The goal of our extension is to support representation and reasoning about context-dependent effects in the most painless way possible. To that end, our extension is conservative: the reasoning principles for context-independent effects remain the same. We use it to give direct-style denotational semantics for higher-order programming languages with call/cc and with delimited continuations. We extend the program logic for Guarded Interaction Trees to account for context-dependent effects, and we use the program logic to prove that the denotational semantics is adequate with respect to the operational semantics. Additionally, we retain the ability to combine multiple effects in a modular way, which we demonstrate by showing type soundness for safe interoperability of a programming language with delimited continuations and a programming language with higher-order store. Furthermore, as another contribution, in addition to context-dependent effects, we show how to extend Guarded Interaction Trees with preemptive concurrency. To support implementation and verification of concurrent data structures and algorithms in the presence of preemptive concurrency one requires atomic state modification operations, e.g., compare-and-exchange.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/2512.11577">arXiv</a></span></div>
+</div>
+</div>
+</details>
+</section>
+</div>
+</details>
+</div>
+<div class="helia-reference-cites helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">Cites 36 works (6 here)</span></summary>
+<div class="helia-group-body">
+<div class="helia-reference-cites-here helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">With notes (6)</span></summary>
+<div class="helia-group-body">
+<section class="helia-transclusion" data-entry="timany-2024-a" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="timany-2024-a"><span class="helia-title">A Logical Approach to Type Soundness</span>&nbsp;<a class="helia-slug" href="timany-2024-a.html">timany-2024-a</a><span class="helia-byline"><span class="helia-entry-link" data-entry="jacm">JACM</span> · 2024</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="timany-2024-a" data-kind="reference">
+<div class="helia-abstract">Type soundness, which asserts that “well-typed programs cannot go wrong,” is widely viewed as the canonical theorem one must prove to establish that a type system is doing its job. It is commonly proved using the so-called syntactic approach (also known as progress and preservation ), which has had a huge impact on the study and teaching of programming language foundations. Unfortunately, syntactic type soundness is a rather weak theorem. It only applies to programs that are well typed in their entirety and thus tells us nothing about the many programs written in “safe” languages that make use of “unsafe” language features. Even worse, it tells us nothing about whether type systems achieve one of their main goals: enforcement of data abstraction. One can easily define a language that enjoys syntactic type soundness and yet fails to support even the most basic modular reasoning principles for abstraction mechanisms like closures, objects, and abstract data types. Given these concerns, we argue that programming languages researchers should no longer be satisfied with proving syntactic type soundness and should instead start proving semantic type soundness , a more useful theorem that captures more accurately what type systems are actually good for. Semantic type soundness is an old idea—Milner’s original account of type soundness from 1978 was semantic—but it fell out of favor in the 1990s due to limitations and complexities of denotational models. In the succeeding decades, thanks to a series of technical advances—notably, step-indexed Kripke logical relations constructed over operational semantics and higher-order concurrent separation logic as consolidated in the Iris framework in Coq—we can now build (machine-checked) semantic soundness proofs at a much higher level of abstraction than was previously possible. The resulting “logical” approach to semantic type soundness has already been employed to great effect in a number of recent papers, but those papers typically (a) concern advanced problem scenarios that complicate the presentation, (b) assume significant prior knowledge of the reader, and (c) suppress many details of the proofs. Here, we aim to provide a gentler, more pedagogically motivated introduction to logical type soundness, targeted at a broader audience that may or may not be familiar with logical relations and Iris. As a bonus, we also show how logical type soundness proofs can easily be generalized to establish an even stronger relational property— representation independence —for realistic type systems.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/3676954">DOI</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="frumin-2024-modular" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="frumin-2024-modular"><span class="helia-title">Modular Denotational Semantics for Effects with Guarded Interaction Trees</span>&nbsp;<a class="helia-slug" href="frumin-2024-modular.html">frumin-2024-modular</a><span class="helia-byline"><span class="helia-entry-link" data-entry="popl">POPL</span> · 2024</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="frumin-2024-modular" data-kind="reference">
+<div class="helia-abstract">We present guarded interaction trees — a structure and a fully formalized framework for representing higherorder computations with higher-order effects in Coq, inspired by domain theory and the recently proposed interaction trees. We also present an accompanying separation logic for reasoning about guarded interaction trees. To demonstrate that guarded interaction trees provide a convenient domain for interpreting higher-order languages with effects, we define an interpretation of a PCF-like language with effects and show that this interpretation is sound and computationally adequate; we prove the latter using a logical relation defined using the separation logic. Guarded interaction trees also allow us to combine different effects and reason about them modularly. To illustrate this point, we give a modular proof of type soundness of cross-language interactions for safe interoperability of different higher-order languages with different effects. All results in the paper are formalized in Coq using the Iris logic over guarded type theory.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="pdf-url"><a class="helia-link helia-external" href="https://dl.acm.org/doi/pdf/10.1145/3632854">PDF</a></span> · <span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/3632854">DOI</a></span> · <span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/2307.08514">arXiv</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/journals/pacmpl/FruminTB24">pldb</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="timany-2024-the" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="timany-2024-the"><span class="helia-title">The Logical Essence of Well-Bracketed Control Flow</span>&nbsp;<a class="helia-slug" href="timany-2024-the.html">timany-2024-the</a><span class="helia-byline"><span class="helia-entry-link" data-entry="popl">POPL</span> · 2024</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="timany-2024-the" data-kind="reference">
+<div class="helia-abstract">A program is said to be well-bracketed if every called function must return before its caller can resume execution. This is often the case. Well-bracketedness has been captured semantically as a condition on strategies in fully abstract games models and multiple prior works have studied well-bracketedness by showing correctness/security properties of programs where such properties depend on the well-bracketed nature of control flow. The latter category of prior works have all used involved relational models with explicit state-transition systems capturing the relevant parts of the control flow of the program. In this paper we present the first Hoare-style program logic based on separation logic for reasoning about well-bracketedness and use it to show correctness of well-bracketed programs both directly and also through defining unary and binary logical relations models based on this program logic. All results presented in this paper are formalized on top of the Iris framework and mechanized in the Coq proof assistant.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="pdf-url"><a class="helia-link helia-external" href="https://dl.acm.org/doi/pdf/10.1145/3632862">PDF</a></span> · <span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/3632862">DOI</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/journals/pacmpl/TimanyGB24">pldb</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="jung_etal_iris_ground_up_2018" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="jung_etal_iris_ground_up_2018"><span class="helia-title">Iris from the ground up: A modular foundation for higher-order concurrent separation logic</span>&nbsp;<a class="helia-slug" href="jung_etal_iris_ground_up_2018.html">jung_etal_iris_ground_up_2018</a><span class="helia-byline"><span class="helia-entry-link" data-entry="jfp">JFP</span> · 2018</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="jung_etal_iris_ground_up_2018" data-kind="reference">
+<div class="helia-abstract">Iris is a framework for higher-order concurrent separation logic, which has been implemented in the Coq proof assistant and deployed very effectively in a wide variety of verification projects. Iris was designed with the express goal of simplifying and consolidating the foundations of modern separation logics, but it has evolved over time, and the design and semantic foundations of Iris itself have yet to be fully written down and explained together properly in one place. Here, we attempt to fill this gap, presenting a reasonably complete picture of the latest version of Iris (version 3.1), from first principles and in one coherent narrative.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="pdf-url"><a class="helia-link helia-external" href="https://www.cambridge.org/core/services/aop-cambridge-core/content/view/26301B518CE2C52796BFA12B8BAB5B5F/S0956796818000151a.pdf/div-class-title-iris-from-the-ground-up-a-modular-foundation-for-higher-order-concurrent-separation-logic-div.pdf">PDF</a></span> · <span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1017/s0956796818000151">DOI</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/journals/jfp/JungKJBBD18">pldb</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="krebbers-2017-interactive" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="krebbers-2017-interactive"><span class="helia-title">Interactive proofs in higher-order concurrent separation logic</span>&nbsp;<a class="helia-slug" href="krebbers-2017-interactive.html">krebbers-2017-interactive</a><span class="helia-byline"><span class="helia-entry-link" data-entry="popl">POPL</span> · 2017</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="krebbers-2017-interactive" data-kind="reference">
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="pdf-url"><a class="helia-link helia-external" href="https://dl.acm.org/doi/pdf/10.1145/3009837.3009855">PDF</a></span> · <span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/3009837.3009855">DOI</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/conf/popl/KrebbersTB17">pldb</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="birkedalFirstStepsSGDT2012" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="birkedalFirstStepsSGDT2012"><span class="helia-title">First steps in synthetic guarded domain theory: step-indexing in the topos of trees</span>&nbsp;<a class="helia-slug" href="birkedalFirstStepsSGDT2012.html">birkedalFirstStepsSGDT2012</a><span class="helia-byline"><span class="helia-entry-link" data-entry="lmcs">LMCS</span> · 2012</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="birkedalFirstStepsSGDT2012" data-kind="reference">
+<div class="helia-abstract">We present the topos S of trees as a model of guarded recursion. We study the internal dependently-typed higher-order logic of S and show that S models two modal operators, on predicates and types, which serve as guards in recursive definitions of terms, predicates, and types. In particular, we show how to solve recursive type equations involving dependent types. We propose that the internal logic of S provides the right setting for the synthetic construction of abstract versions of step-indexed models of programming languages and program logics. As an example, we show how to construct a model of a programming language with higher-order store and recursive types entirely inside the internal logic of S. Moreover, we give an axiomatic categorical treatment of models of synthetic guarded domain theory and prove that, for any complete Heyting algebra A with a well-founded basis, the topos of sheaves over A forms a model of synthetic guarded domain theory, generalizing the results for S.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.2168/lmcs-8(4:1)2012">DOI</a></span></div>
+</div>
+</div>
+</details>
+</section>
+</div>
+</details>
+</div>
+<div class="helia-reference-cites-away helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">External (30)</span></summary>
+<div class="helia-group-body">
+<ul>
+<li><a class="helia-link helia-external" href="https://doi.org/10.5281/zenodo.14623650">Context-dependent effects in guarded interaction trees (artifact)</a> (2025)</li>
+<li>The Iris Project website and Coq development (2025)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3571255">Hefty Algebras: Modular Elaboration of Higher-Order Algebraic Effects</a> (2023)</li>
+<li>Semantics for Noninterference with Interaction Trees (2023)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-030-89051-3_11">Latent Effects for Reusable Language Components</a> (2021)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3434314">A separation logic for effect handlers</a> (2021)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3473572">Modular, compositional, and executable formal semantics for LLVM IR</a> (2021)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.4230/lipics.itp.2021.32">Verifying an HTTP Key-Value Server with Interaction Trees and VST</a> (2021)</li>
+<li>Delimited continuation primops (GHC proposal 0313) (2021)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3290319">Abstracting algebraic effects</a> (2019)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3293880.3294106">From C to interaction trees: specifying, verifying, and testing a networked server</a> (2019)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3341709">Mechanized relational verification of concurrent programs with continuations</a> (2019)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3371119">Interaction trees: representing recursive and impure programs in Coq</a> (2019)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3122975.3122977">Structured asynchrony with algebraic effects</a> (2017)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1016/j.jlamp.2014.02.001">Programming with algebraic effects and handlers</a> (2014)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.4204/eptcs.153.8">Koka: Programming with Row Polymorphic Effect Types</a> (2014)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/2633357.2633358">Effect handlers in scope</a> (2014)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.2168/lmcs-9(4:23)2013">Handling Algebraic Effects</a> (2013)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/2034574.2034786">Subtyping delimited continuations</a> (2011)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/1599410.1599446">Context-based proofs of termination for typed delimited-control operators</a> (2009)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-540-76637-7_16">Polymorphic Delimited Continuations</a> (2007)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1017/s0956796807006259">A monadic framework for delimited continuations</a> (2007)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-540-73228-0_17">A Substructural Type System for Delimited Continuations</a> (2007)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.2168/lmcs-1(2:5)2005">An Operational Foundation for Delimited Continuations in the CPS Hierarchy</a> (2005)</li>
+<li>Logical relations for call-by-value delimited continuations (2005)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.7551/mitpress/1104.003.0011">Typed Operational Reasoning</a> (2004)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/3-540-57887-0_99">Extensible denotational language specifications</a> (1994)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/99583.99611">Models of continuations without continuations</a> (1991)</li>
+<li>A functional abstraction of typed contexts (1989)</li>
+<li>Control operators, the SECD-machine, and the λ-calculus (1986)</li>
+</ul>
+</div>
+</details>
+</div>
+</div>
+</details>
+</div>
+<footer class="helia-footer">
+<div class="helia-related helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><h3 class="helia-heading">Related</h3>
+</summary>
+<div class="helia-group-body">
+<ul>
+<li><a class="helia-entry-link" href="aagaard-2023-a.html" data-entry="aagaard-2023-a">A denotationally-based program logic for higher-order store</a> <span class="helia-related-tags"><a class="helia-entry-link" href="tag-guarded-domain-theory.html" data-entry="tag-guarded-domain-theory">#guarded-domain-theory</a> <a class="helia-entry-link" href="tag-guarded-recursion.html" data-entry="tag-guarded-recursion">#guarded-recursion</a></span></li>
+<li><a class="helia-entry-link" href="atkey-2013-productive.html" data-entry="atkey-2013-productive">Productive coprogramming with guarded recursion</a> <span class="helia-related-tags"><a class="helia-entry-link" href="tag-guarded-domain-theory.html" data-entry="tag-guarded-domain-theory">#guarded-domain-theory</a> <a class="helia-entry-link" href="tag-guarded-recursion.html" data-entry="tag-guarded-recursion">#guarded-recursion</a></span></li>
+<li><a class="helia-entry-link" href="basold_2019.html" data-entry="basold_2019">Coinduction in flow: the later modality in fibrations</a> <span class="helia-related-tags"><a class="helia-entry-link" href="tag-guarded-domain-theory.html" data-entry="tag-guarded-domain-theory">#guarded-domain-theory</a> <a class="helia-entry-link" href="tag-guarded-recursion.html" data-entry="tag-guarded-recursion">#guarded-recursion</a></span></li>
+<li><a class="helia-entry-link" href="birkedal-2018-guarded.html" data-entry="birkedal-2018-guarded">Guarded Cubical Type Theory</a> <span class="helia-related-tags"><a class="helia-entry-link" href="tag-guarded-domain-theory.html" data-entry="tag-guarded-domain-theory">#guarded-domain-theory</a> <a class="helia-entry-link" href="tag-guarded-recursion.html" data-entry="tag-guarded-recursion">#guarded-recursion</a></span></li>
+<li><a class="helia-entry-link" href="giovannini_ding_new_2025.html" data-entry="giovannini_ding_new_2025">Denotational Semantics of Gradual Typing using Synthetic Guarded Domain Theory</a> <span class="helia-related-tags"><a class="helia-entry-link" href="tag-guarded-domain-theory.html" data-entry="tag-guarded-domain-theory">#guarded-domain-theory</a> <a class="helia-entry-link" href="tag-guarded-recursion.html" data-entry="tag-guarded-recursion">#guarded-recursion</a></span></li>
+<li><a class="helia-entry-link" href="gratzer-2022-a.html" data-entry="gratzer-2022-a">A Stratified Approach to Löb Induction</a> <span class="helia-related-tags"><a class="helia-entry-link" href="tag-guarded-domain-theory.html" data-entry="tag-guarded-domain-theory">#guarded-domain-theory</a> <a class="helia-entry-link" href="tag-guarded-recursion.html" data-entry="tag-guarded-recursion">#guarded-recursion</a></span></li>
+<li><a class="helia-entry-link" href="gratzer-2025-a.html" data-entry="gratzer-2025-a">A Modal Deconstruction of Löb Induction</a> <span class="helia-related-tags"><a class="helia-entry-link" href="tag-guarded-domain-theory.html" data-entry="tag-guarded-domain-theory">#guarded-domain-theory</a> <a class="helia-entry-link" href="tag-guarded-recursion.html" data-entry="tag-guarded-recursion">#guarded-recursion</a></span></li>
+<li><a class="helia-entry-link" href="palombi_sterling_2023.html" data-entry="palombi_sterling_2023">Classifying topoi in synthetic guarded domain theory: the universal property of multi-clock guarded recursion</a> <span class="helia-related-tags"><a class="helia-entry-link" href="tag-guarded-domain-theory.html" data-entry="tag-guarded-domain-theory">#guarded-domain-theory</a> <a class="helia-entry-link" href="tag-guarded-recursion.html" data-entry="tag-guarded-recursion">#guarded-recursion</a></span></li>
+<li><a class="helia-entry-link" href="stassen-2025-modelling.html" data-entry="stassen-2025-modelling">Modelling Recursion and Probabilistic Choice in Guarded Type Theory</a> <span class="helia-related-tags"><a class="helia-entry-link" href="tag-guarded-domain-theory.html" data-entry="tag-guarded-domain-theory">#guarded-domain-theory</a> <a class="helia-entry-link" href="tag-guarded-recursion.html" data-entry="tag-guarded-recursion">#guarded-recursion</a></span></li>
+<li><a class="helia-entry-link" href="stepanenko-2025-solving.html" data-entry="stepanenko-2025-solving">Solving Guarded Domain Equations in Presheaves over Ordinals and Mechanizing It</a> <span class="helia-related-tags"><a class="helia-entry-link" href="tag-guarded-domain-theory.html" data-entry="tag-guarded-domain-theory">#guarded-domain-theory</a> <a class="helia-entry-link" href="tag-guarded-recursion.html" data-entry="tag-guarded-recursion">#guarded-recursion</a></span></li>
+<li><a class="helia-entry-link" href="sterling-2024-towards.html" data-entry="sterling-2024-towards">Towards Univalent Reference Types: The Impact of Univalence on Denotational Semantics</a> <span class="helia-related-tags"><a class="helia-entry-link" href="tag-guarded-domain-theory.html" data-entry="tag-guarded-domain-theory">#guarded-domain-theory</a> <a class="helia-entry-link" href="tag-guarded-recursion.html" data-entry="tag-guarded-recursion">#guarded-recursion</a></span></li>
+</ul>
+</div>
+</details>
+</div>
+</footer>
+</article>
+<div class="helia-identity"><span class="helia-id">stepanenko-2025-contextx</span> <span class="helia-kind">reference</span> <span class="helia-path">entries/refs/stepanenko-2025-contextx/stepanenko-2025-contextx.hel</span></div>
+</div>
+</body>
+</html>

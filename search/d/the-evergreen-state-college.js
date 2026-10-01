@@ -1,0 +1,1 @@
+heliaSearchData("d/the-evergreen-state-college",{"id":"the-evergreen-state-college","title":"The Evergreen State College","kind":"institution","tags":[],"authors":[],"venue":[],"date":null,"url":"the-evergreen-state-college.html","headings":[],"body":""});

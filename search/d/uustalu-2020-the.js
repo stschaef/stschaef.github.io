@@ -1,0 +1,1 @@
+heliaSearchData("d/uustalu-2020-the",{"id":"uustalu-2020-the","title":"The Sequent Calculus of Skew Monoidal Categories","kind":"reference","tags":["category-theory"],"authors":["Niccolò Veltri","Noam Zeilberger","Tarmo Uustalu"],"venue":[],"date":null,"url":"uustalu-2020-the.html","headings":[],"body":""});

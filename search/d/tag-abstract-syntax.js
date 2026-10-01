@@ -1,0 +1,1 @@
+heliaSearchData("d/tag-abstract-syntax",{"id":"tag-abstract-syntax","title":"abstract-syntax","kind":"tag","tags":[],"authors":[],"venue":[],"date":null,"url":"tag-abstract-syntax.html","headings":[],"body":""});

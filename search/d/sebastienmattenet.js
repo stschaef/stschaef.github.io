@@ -1,0 +1,1 @@
+heliaSearchData("d/sebastienmattenet",{"id":"sebastienmattenet","title":"Sébastien Mattenet","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"sebastienmattenet.html","headings":[],"body":""});

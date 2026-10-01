@@ -1,0 +1,1 @@
+heliaSearchData("d/nathanielyazdani",{"id":"nathanielyazdani","title":"Nathaniel Yazdani","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"nathanielyazdani.html","headings":[],"body":""});

@@ -1,0 +1,1 @@
+heliaSearchData("d/viktorwinschel",{"id":"viktorwinschel","title":"Viktor Winschel","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"viktorwinschel.html","headings":[],"body":""});

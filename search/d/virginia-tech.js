@@ -1,0 +1,1 @@
+heliaSearchData("d/virginia-tech",{"id":"virginia-tech","title":"Virginia Tech","kind":"institution","tags":[],"authors":[],"venue":[],"date":null,"url":"virginia-tech.html","headings":[],"body":""});

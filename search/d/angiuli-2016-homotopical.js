@@ -1,0 +1,1 @@
+heliaSearchData("d/angiuli-2016-homotopical",{"id":"angiuli-2016-homotopical","title":"Homotopical patch theory","kind":"reference","tags":["homotopy-type-theory"],"authors":["Carlo Angiuli","Daniel R. Licata","Edward Morehouse","Robert Harper"],"venue":["JFP","Journal of Functional Programming"],"date":null,"url":"angiuli-2016-homotopical.html","headings":[],"body":""});

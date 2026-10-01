@@ -1,0 +1,1 @@
+heliaSearchData("d/university-of-south-carolina",{"id":"university-of-south-carolina","title":"University of South Carolina","kind":"institution","tags":[],"authors":[],"venue":[],"date":null,"url":"university-of-south-carolina.html","headings":[],"body":""});

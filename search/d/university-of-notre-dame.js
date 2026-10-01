@@ -1,0 +1,1 @@
+heliaSearchData("d/university-of-notre-dame",{"id":"university-of-notre-dame","title":"University of Notre Dame","kind":"institution","tags":[],"authors":[],"venue":[],"date":null,"url":"university-of-notre-dame.html","headings":[],"body":""});

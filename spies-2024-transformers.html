@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>Transformers Use Causal World Models in Maze-Solving Tasks</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Ctext y=%22.9em%22 font-size=%2290%22%3E%F0%9F%8C%BB%3C/text%3E%3C/svg%3E">
+<meta name="generator" content="helia">
+<link rel="alternate" type="application/atom+xml" title="Steven Schaefer" href="feed.xml">
+<link rel="alternate" type="application/feed+json" title="Steven Schaefer" href="feed.json">
+<script src="helia/theme-version.js"></script>
+<script src="theme/folio-early.js"></script>
+<link rel="stylesheet" href="helia/theme.css">
+<link rel="stylesheet" href="helia/highlight.css">
+<link rel="stylesheet" href="helia/search.css">
+<link rel="stylesheet" href="theme/katex.css">
+<link rel="stylesheet" href="theme/recipe.css">
+<link rel="stylesheet" href="theme/site.css">
+<link rel="stylesheet" href="theme/folio.css">
+<script defer src="helia/runtime.js"></script>
+<script defer src="helia/search.js"></script>
+<script defer src="theme/glyphcraft.js"></script>
+<script defer src="theme/glyphart.js"></script>
+<script defer src="theme/glyphgen.js"></script>
+<script defer src="theme/ornament.js"></script>
+<script defer src="theme/folio.js"></script>
+<script defer src="theme/portrait.js"></script>
+<script type="application/json" id="helia-widgets">{"helia-cite-formats":"widgets/helia-cite-formats-a3294ac7.js"}</script>
+<link rel="modulepreload" href="widgets/helia-cite-formats-a3294ac7.js">
+<script type="module" src="widgets/runtime.js"></script>
+</head>
+<body>
+<nav class="helia-topbar"><a class="helia-home" href="home.html">Steven Schaefer</a><ul class="helia-nav-links"><li><a href="stevenschaefer.html">About Me</a></li><li><a href="research.html">Research</a></li><li><a href="new.html">New</a></li></ul><button type="button" class="helia-search-button" aria-label="Search (/ or Ctrl+K)" aria-haspopup="dialog"><span class="helia-search-icon">⌕</span><span class="helia-search-label">Search</span><kbd class="helia-search-key">/</kbd></button></nav>
+<div class="helia-page" data-kind="reference">
+<article class="helia-article">
+<header class="helia-header" data-entry="spies-2024-transformers" data-kind="reference">
+<h2 class="helia-heading"><span class="helia-taxon">Reference.</span> Transformers Use Causal World Models in Maze-Solving Tasks</h2>
+<div class="helia-meta"><span class="helia-author"><a class="helia-entry-link" href="alexanderfspies.html" data-entry="alexanderfspies">Alexander F. Spies</a>, <a class="helia-entry-link" href="williamedwards.html" data-entry="williamedwards">William Edwards</a>, <a class="helia-entry-link" href="michaelivanitskiy.html" data-entry="michaelivanitskiy">Michael Ivanitskiy</a>, <a class="helia-entry-link" href="adriansskapars.html" data-entry="adriansskapars">Adrians Skapars</a>, <a class="helia-entry-link" href="tilmanrauker.html" data-entry="tilmanrauker">Tilman Räuker</a>, <a class="helia-entry-link" href="katsumiinoue.html" data-entry="katsumiinoue">Katsumi Inoue</a>, <a class="helia-entry-link" href="alessandrarusso.html" data-entry="alessandrarusso">Alessandra Russo</a>, <a class="helia-entry-link" href="murrayshanahan.html" data-entry="murrayshanahan">Murray Shanahan</a></span> · <span class="helia-byline"><a class="helia-entry-link" href="arxiv.html" data-entry="arxiv">arXiv</a> · 2024</span> · <span class="helia-tags"><span class="helia-tag" data-tag="machine-learning"><a class="helia-entry-link" href="tag-machine-learning.html" data-entry="tag-machine-learning">machine-learning</a></span></span> · <span class="helia-entry-links"><span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/2412.11867">arXiv</a></span></span></div>
+</header>
+<div class="helia-body">
+<div class="helia-abstract">Recent studies in interpretability have explored the inner workings of transformer models trained on tasks across various domains, often discovering that these networks naturally develop highly structured representations. When such representations comprehensively reflect the task domain’s structure, they are commonly referred to as “World Models” (WMs). In this work, we identify WMs in transformers trained on maze-solving tasks. By using Sparse Autoencoders (SAEs) and analyzing attention patterns, we examine the construction of WMs and demonstrate consistency between SAE feature-based and circuit-based analyses. By subsequently intervening on isolated features to confirm their causal role, we find that it is easier to activate features than to suppress them. Furthermore, we find that models can reason about mazes involving more simultaneously active features than they encountered during training; however, when these same mazes (with greater numbers of connections) are provided to models via input tokens instead, the models fail. Finally, we demonstrate that positional encoding schemes appear to influence how World Models are structured within the model’s residual stream.</div>
+</div>
+<div class="helia-cite helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><h3 class="helia-heading">Cite</h3>
+</summary>
+<div class="helia-group-body">
+<div class="helia-widget" data-widget="helia-cite-formats" data-props="{&quot;key&quot;:&quot;spies-2024-transformers&quot;,&quot;bibtex&quot;:&quot;@misc{spies-2024-transformers,\n  author = {Alexander F. Spies and William Edwards and Michael Ivanitskiy and Adrians Skapars and Tilman Räuker and Katsumi Inoue and Alessandra Russo and Murray Shanahan},\n  title = {Transformers Use Causal World Models in Maze-Solving Tasks},\n  year = {2024},\n  month = {12},\n  eprint = {2412.11867},\n  archiveprefix = {arXiv}\n}&quot;,&quot;bib-file&quot;:&quot;spies-2024-transformers.bib&quot;,&quot;hayagriva&quot;:&quot;spies-2024-transformers:\n  type: misc\n  title: Transformers Use Causal World Models in Maze-Solving Tasks\n  author:\n  - Spies, Alexander F.\n  - Edwards, William\n  - Ivanitskiy, Michael\n  - Skapars, Adrians\n  - Räuker, Tilman\n  - Inoue, Katsumi\n  - Russo, Alessandra\n  - Shanahan, Murray\n  date: 2024-12\n  serial-number:\n    arxiv: &#39;2412.11867&#39;\n&quot;,&quot;yml-file&quot;:&quot;spies-2024-transformers.yml&quot;}"><div class="helia-cite-key" data-copy="@spies-2024-transformers" data-copy-label="citation key"><span class="helia-bib-key">Cite as</span> <code class="helia-raw-inline">@spies-2024-transformers</code> (helia, typst) · <code class="helia-raw-inline">\cite{spies-2024-transformers}</code> (LaTeX)</div>
+<div class="helia-cite-format helia-collapsible" data-format="bibtex" data-copy="true" data-copy-label="BibTeX">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">BibTeX</span></summary>
+<div class="helia-group-body">
+<details class="helia-code" open><summary class="helia-code-summary"><span class="helia-code-lang">bibtex</span> · <span class="helia-code-lines">8 lines</span></summary><pre class="helia-raw"><code class="language-bibtex"><span class="hl-text hl-bibtex"><span class="hl-meta hl-entry hl-braces hl-bibtex"><span class="hl-keyword hl-other hl-entry-type hl-bibtex"><span class="hl-punctuation hl-definition hl-keyword hl-bibtex">@</span>misc</span><span class="hl-punctuation hl-section hl-entry hl-begin hl-bibtex">{</span><span class="hl-entity hl-name hl-type hl-entry-key hl-bibtex">spies-2024-transformers</span>,
+  <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">author</span> <span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span> <span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>Alexander F. Spies and William Edwards and Michael Ivanitskiy and Adrians Skapars and Tilman Räuker and Katsumi Inoue and Alessandra Russo and Murray Shanahan<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>,
+  <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">title</span> <span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span> <span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>Transformers Use Causal World Models in Maze-Solving Tasks<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>,
+  <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">year</span> <span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span> <span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>2024<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>,
+  <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">month</span> <span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span> <span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>12<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>,
+  <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">eprint</span> <span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span> <span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>2412.11867<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>,
+  <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">archiveprefix</span> <span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span> <span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>arXiv<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span>
+</span><span class="hl-punctuation hl-section hl-entry hl-end hl-bibtex">}</span></span></span></code></pre></details>
+</div>
+</details>
+</div>
+<div class="helia-cite-format helia-collapsible" data-format="hayagriva" data-copy="true" data-copy-label="hayagriva YAML">
+<details>
+<summary class="helia-group-summary"><span class="helia-group-title">hayagriva YAML (typst)</span></summary>
+<div class="helia-group-body">
+<details class="helia-code" open><summary class="helia-code-summary"><span class="helia-code-lang">yaml</span> · <span class="helia-code-lines">15 lines</span></summary><pre class="helia-raw"><code class="language-yaml"><span class="hl-source hl-yaml"><span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">spies-2024-transformers</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">type</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">misc</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">title</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Transformers Use Causal World Models in Maze-Solving Tasks</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">author</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Spies, Alexander F.</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Edwards, William</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Ivanitskiy, Michael</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Skapars, Adrians</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Räuker, Tilman</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Inoue, Katsumi</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Russo, Alessandra</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Shanahan, Murray</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">date</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">2024-12</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">serial-number</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">arxiv</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-quoted hl-single hl-yaml"><span class="hl-punctuation hl-definition hl-string hl-begin hl-yaml">&#39;</span>2412.11867<span class="hl-punctuation hl-definition hl-string hl-end hl-yaml">&#39;</span></span>
+</span></code></pre></details>
+</div>
+</details>
+</div>
+<div class="helia-cite-files">Download: <a class="helia-link" href="spies-2024-transformers.bib">spies-2024-transformers.bib</a> · <a class="helia-link" href="spies-2024-transformers.yml">spies-2024-transformers.yml</a></div>
+</div>
+</div>
+</details>
+</div>
+<div class="helia-reference-cited-by helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">Cited by (1)</span></summary>
+<div class="helia-group-body">
+<section class="helia-transclusion" data-entry="ivanitskiy-2025-maze" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="ivanitskiy-2025-maze"><span class="helia-title">maze-dataset: Maze Generation with Algorithmic Variety and Representational Flexibility</span>&nbsp;<a class="helia-slug" href="ivanitskiy-2025-maze.html">ivanitskiy-2025-maze</a><span class="helia-byline"><span class="helia-entry-link" data-entry="joss">JOSS</span> · 2025</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="ivanitskiy-2025-maze" data-kind="reference">
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.21105/joss.08633">DOI</a></span></div>
+</div>
+</div>
+</details>
+</section>
+</div>
+</details>
+</div>
+<div class="helia-reference-cites helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">Cites 28 works (1 here)</span></summary>
+<div class="helia-group-body">
+<div class="helia-reference-cites-here helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">With notes (1)</span></summary>
+<div class="helia-group-body">
+<section class="helia-transclusion" data-entry="ivanitskiy-2023-a" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="ivanitskiy-2023-a"><span class="helia-title">A Configurable Library for Generating and Manipulating Maze Datasets</span>&nbsp;<a class="helia-slug" href="ivanitskiy-2023-a.html">ivanitskiy-2023-a</a><span class="helia-byline"><span class="helia-entry-link" data-entry="arxiv">arXiv</span> · 2023</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="ivanitskiy-2023-a" data-kind="reference">
+<div class="helia-abstract">Understanding how machine learning models respond to distributional shifts is a key research challenge. Mazes serve as an excellent testbed due to varied generation algorithms offering a nuanced platform to simulate both subtle and pronounced distributional shifts. To enable systematic investigations of model behavior on out-of-distribution data, we present <span class="helia-math helia-math-inline helia-mathml"><math><mtext>𝚖𝚊𝚣𝚎-𝚍𝚊𝚝𝚊𝚜𝚎𝚝</mtext></math></span>, a comprehensive library for generating, processing, and visualizing datasets consisting of maze-solving tasks. With this library, researchers can easily create datasets, having extensive control over the generation algorithm used, the parameters fed to the algorithm of choice, and the filters that generated mazes must satisfy. Furthermore, it supports multiple output formats, including rasterized and text-based, catering to convolutional neural networks and autoregressive transformer models. These formats, along with tools for visualizing and converting between them, ensure versatility and adaptability in research applications.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/2309.10498">arXiv</a></span></div>
+</div>
+</div>
+</details>
+</section>
+</div>
+</details>
+</div>
+<div class="helia-reference-cites-away helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">External (27)</span></summary>
+<div class="helia-group-body">
+<ul>
+<li><a class="helia-link helia-external" href="https://doi.org/10.48550/arxiv.2408.00113">Measuring Progress in Dictionary Learning for Language Model Interpretability with Board Game Models</a> (2024)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.48550/arxiv.2406.00877">Evidence of Learned Look-Ahead in a Chess-Playing Neural Network</a> (2024)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.48550/arxiv.2405.03207">A Philosophical Introduction to Language Models - Part II: The Way Forward</a> (2024)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.48550/arxiv.2403.15498">Emergent World Models and Latent Variable Estimation in Chess-Playing Language Models</a> (2024)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.48550/arxiv.2402.12201">Dictionary Learning Improves Patch-Free Circuit Discovery in Mechanistic Interpretability: A Case Study on Othello-GPT</a> (2024)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.48550/arxiv.2402.11917">A Mechanistic Analysis of a Transformer Trained on a Symbolic Multi-Step Reasoning Task</a> (2024)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.18653/v1/2023.conll-1.37">Future Lens: Anticipating Subsequent Tokens from a Single Hidden State</a> (2023)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.48550/arxiv.2309.15129">Evaluating Cognitive Maps and Planning in Large Language Models with CogEval</a> (2023)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.48550/arxiv.2309.08600">Sparse Autoencoders Find Highly Interpretable Features in Language Models</a> (2023)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.48550/arxiv.2307.09458">Does Circuit Analysis Interpretability Scale? Evidence from Multiple Choice Capabilities in Chinchilla</a> (2023)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.48550/arxiv.2303.08112">Eliciting Latent Predictions from Transformers with the Tuned Lens</a> (2023)</li>
+<li>Linearly Structured World Representations in Maze-Solving Transformers (2023)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.48550/arxiv.2210.13382">Emergent World Representations: Exploring a Sequence Model Trained on a Synthetic Task</a> (2022)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.48550/arxiv.2209.10652">Toy Models of Superposition</a> (2022)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1109/satml54575.2023.00039">Toward Transparent AI: A Survey on Interpreting the Inner Structures of Deep Neural Networks</a> (2022)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.48550/arxiv.2207.07512">Sparse Relational Reasoning with Object-Centric Representations</a> (2022)</li>
+<li><a class="helia-link helia-external" href="https://arxiv.org/abs/2209.11895">In-context Learning and Induction Heads</a> (2022)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1073/pnas.2206625119">Acquisition of chess knowledge in AlphaZero</a> (2021)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1016/j.neucom.2023.127063">RoFormer: Enhanced Transformer with Rotary Position Embedding</a> (2021)</li>
+<li>A mathematical framework for transformer circuits (2021)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1073/pnas.1907367117">Emergent linguistic structure in artificial neural networks trained by self-supervision</a> (2020)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.18653/v1/n19-1419">A Structural Probe for Finding Syntax in Word Representations</a> (2019)</li>
+<li><a class="helia-link helia-external" href="https://arxiv.org/abs/1706.03762">Attention is All you Need</a> (2017)</li>
+<li><a class="helia-link helia-external" href="https://arxiv.org/abs/1610.01644">Understanding intermediate layers using linear classifier probes</a> (2016)</li>
+<li>Actually, othello-gpt has a linear emergent world representation</li>
+<li>Anthropic circuits Updates - January</li>
+<li>Towards monosemanticity: Decomposing language models with dictionary learning</li>
+</ul>
+</div>
+</details>
+</div>
+</div>
+</details>
+</div>
+</article>
+<div class="helia-identity"><span class="helia-id">spies-2024-transformers</span> <span class="helia-kind">reference</span> <span class="helia-path">entries/refs/spies-2024-transformers/spies-2024-transformers.hel</span></div>
+</div>
+</body>
+</html>

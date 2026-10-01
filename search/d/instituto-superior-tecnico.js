@@ -1,0 +1,1 @@
+heliaSearchData("d/instituto-superior-tecnico",{"id":"instituto-superior-tecnico","title":"Instituto Superior Técnico","kind":"institution","tags":[],"authors":[],"venue":[],"date":null,"url":"instituto-superior-tecnico.html","headings":[],"body":""});

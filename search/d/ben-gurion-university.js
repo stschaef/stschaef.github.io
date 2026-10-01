@@ -1,0 +1,1 @@
+heliaSearchData("d/ben-gurion-university",{"id":"ben-gurion-university","title":"Ben-Gurion University","kind":"institution","tags":[],"authors":[],"venue":[],"date":null,"url":"ben-gurion-university.html","headings":[],"body":""});

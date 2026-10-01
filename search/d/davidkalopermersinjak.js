@@ -1,0 +1,1 @@
+heliaSearchData("d/davidkalopermersinjak",{"id":"davidkalopermersinjak","title":"David Kaloper-Meršinjak","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"davidkalopermersinjak.html","headings":[],"body":""});

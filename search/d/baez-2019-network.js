@@ -1,0 +1,1 @@
+heliaSearchData("d/baez-2019-network",{"id":"baez-2019-network","title":"Network Models from Petri Nets with Catalysts","kind":"reference","tags":["petri-nets"],"authors":["Joe Moeller","John C. Baez","John Foley"],"venue":["Compositionality"],"date":null,"url":"baez-2019-network.html","headings":[],"body":""});

@@ -1,0 +1,1 @@
+heliaSearchData("d/carette-2022-retrodictive",{"id":"carette-2022-retrodictive","title":"Retrodictive Quantum Computing","kind":"reference","tags":["quantum"],"authors":["Amr Sabry","Gerardo Ortiz","Jacques Carette"],"venue":["arXiv"],"date":null,"url":"carette-2022-retrodictive.html","headings":[],"body":""});

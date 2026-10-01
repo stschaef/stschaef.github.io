@@ -1,0 +1,1 @@
+heliaSearchData("d/state-university-of-new-york",{"id":"state-university-of-new-york","title":"State University of New York","kind":"institution","tags":[],"authors":[],"venue":[],"date":null,"url":"state-university-of-new-york.html","headings":[],"body":""});

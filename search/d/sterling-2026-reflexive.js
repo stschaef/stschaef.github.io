@@ -1,0 +1,1 @@
+heliaSearchData("d/sterling-2026-reflexive",{"id":"sterling-2026-reflexive","title":"Reflexive graph lenses in univalent foundations","kind":"reference","tags":["homotopy-type-theory"],"authors":["Jon Sterling"],"venue":["MSCS","Mathematical Structures in Computer Science"],"date":null,"url":"sterling-2026-reflexive.html","headings":[],"body":""});

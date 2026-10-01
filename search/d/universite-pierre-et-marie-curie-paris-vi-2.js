@@ -1,0 +1,1 @@
+heliaSearchData("d/universite-pierre-et-marie-curie-paris-vi-2",{"id":"universite-pierre-et-marie-curie-paris-vi-2","title":"Université Pierre-et-Marie-Curie - Paris VI","kind":"institution","tags":[],"authors":[],"venue":[],"date":null,"url":"universite-pierre-et-marie-curie-paris-vi-2.html","headings":[],"body":""});

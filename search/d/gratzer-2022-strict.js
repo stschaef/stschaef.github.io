@@ -1,0 +1,1 @@
+heliaSearchData("d/gratzer-2022-strict",{"id":"gratzer-2022-strict","title":"Strict universes for Grothendieck topoi","kind":"reference","tags":["category-theory"],"authors":["Daniel Gratzer","Jon Sterling","Michael Shulman"],"venue":["arXiv"],"date":null,"url":"gratzer-2022-strict.html","headings":[],"body":""});

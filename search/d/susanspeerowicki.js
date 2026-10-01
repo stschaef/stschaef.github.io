@@ -1,0 +1,1 @@
+heliaSearchData("d/susanspeerowicki",{"id":"susanspeerowicki","title":"Susan Speer Owicki","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"susanspeerowicki.html","headings":[],"body":""});

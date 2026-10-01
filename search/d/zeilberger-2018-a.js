@@ -1,0 +1,1 @@
+heliaSearchData("d/zeilberger-2018-a",{"id":"zeilberger-2018-a","title":"A theory of linear typings as flows on 3-valent graphs","kind":"reference","tags":["linear-logic"],"authors":["Noam Zeilberger"],"venue":["LICS","Symposium on Logic in Computer Science"],"date":null,"url":"zeilberger-2018-a.html","headings":[],"body":""});

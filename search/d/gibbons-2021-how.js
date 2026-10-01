@@ -1,0 +1,1 @@
+heliaSearchData("d/gibbons-2021-how",{"id":"gibbons-2021-how","title":"How to design co-programs","kind":"reference","tags":["program-calculation"],"authors":["Jeremy Gibbons"],"venue":["JFP","Journal of Functional Programming"],"date":null,"url":"gibbons-2021-how.html","headings":[],"body":""});

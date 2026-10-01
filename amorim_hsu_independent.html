@@ -7,6 +7,8 @@
 <title>Separated and Shared Effects in Higher-Order Languages</title>
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Ctext y=%22.9em%22 font-size=%2290%22%3E%F0%9F%8C%BB%3C/text%3E%3C/svg%3E">
 <meta name="generator" content="helia">
+<link rel="alternate" type="application/atom+xml" title="Steven Schaefer" href="feed.xml">
+<link rel="alternate" type="application/feed+json" title="Steven Schaefer" href="feed.json">
 <script src="helia/theme-version.js"></script>
 <script src="theme/folio-early.js"></script>
 <link rel="stylesheet" href="helia/theme.css">
@@ -34,7 +36,7 @@
 <article class="helia-article">
 <header class="helia-header" data-entry="amorim_hsu_independent" data-kind="reference">
 <h2 class="helia-heading"><span class="helia-taxon">Reference.</span> Separated and Shared Effects in Higher-Order Languages</h2>
-<div class="helia-meta"><span class="helia-author"><a class="helia-entry-link" href="pedrohaamorim.html" data-entry="pedrohaamorim">Pedro H. Azevedo de Amorim</a>, <a class="helia-entry-link" href="justinhsu.html" data-entry="justinhsu">Justin Hsu</a></span> · <span class="helia-byline">2025</span> · <span class="helia-tags"><span class="helia-tag" data-tag="effects"><span class="helia-entry-link helia-unavailable">effects</span></span> <span class="helia-tag" data-tag="separation-logic"><span class="helia-entry-link helia-unavailable">separation-logic</span></span> <span class="helia-tag" data-tag="preprint">preprint</span></span> · <span class="helia-entry-links"><span class="helia-entry-link" data-field="url"><a class="helia-link helia-external" href="https://pedrohaa.github.io/papers/independent.pdf">Web</a></span></span></div>
+<div class="helia-meta"><span class="helia-author"><a class="helia-entry-link" href="pedrohaamorim.html" data-entry="pedrohaamorim">Pedro H. Azevedo de Amorim</a>, <a class="helia-entry-link" href="justinhsu.html" data-entry="justinhsu">Justin Hsu</a></span> · <span class="helia-byline">2025</span> · <span class="helia-tags"><span class="helia-tag" data-tag="effects"><a class="helia-entry-link" href="tag-effects.html" data-entry="tag-effects">effects</a></span> <span class="helia-tag" data-tag="separation-logic"><a class="helia-entry-link" href="tag-separation-logic.html" data-entry="tag-separation-logic">separation-logic</a></span> <span class="helia-tag" data-tag="preprint"><a class="helia-entry-link" href="tag-preprint.html" data-entry="tag-preprint">preprint</a></span></span> · <span class="helia-entry-links"><span class="helia-entry-link" data-field="url"><a class="helia-link helia-external" href="https://pedrohaa.github.io/papers/independent.pdf">Web</a></span></span></div>
 </header>
 <div class="helia-body">
 <div class="helia-abstract">Effectful programs interact in ways that go beyond simple input-output, making compositional reasoning challenging. Existing work has shown that when such programs are “separate”, i.e., when programs do not interfere with each other, it can be easier to reason about them. While reasoning about separated resources has been well-studied, there has been little work on reasoning about separated effects, especially for functional, higher-order programming languages. We propose two higher-order languages that can reason about sharing and separation in effectful programs. Our first language <span class="helia-math helia-math-inline helia-mathml"><math><msub><mi>𝜆</mi><mtext>INI</mtext></msub></math></span> has a linear type system and probabilistic semantics, where the two product types capture independent and possibly-dependent pairs. Our second language <span class="helia-math helia-math-inline helia-mathml"><math><msubsup><mi>𝜆</mi><mtext>INI</mtext><mn>2</mn></msubsup></math></span> is two-level, stratified language, inspired by Benton’s linear-non-linear (LNL) calculus. We motivate this language with a probabilistic model, but we also provide a general categorical semantics and exhibit a range of concrete models beyond probabilistic programming. We prove soundness theorems for all of our languages; our general soundness theorem for our categorical models of <span class="helia-math helia-math-inline helia-mathml"><math><msubsup><mi>𝜆</mi><mtext>INI</mtext><mn>2</mn></msubsup></math></span> uses a categorical gluing construction.</div>
@@ -81,12 +83,23 @@
 </div>
 <div class="helia-reference-cites helia-collapsible">
 <details open>
-<summary class="helia-group-summary"><span class="helia-group-title">Cites 42 works (4 here)</span></summary>
+<summary class="helia-group-summary"><span class="helia-group-title">Cites 42 works (5 here)</span></summary>
 <div class="helia-group-body">
 <div class="helia-reference-cites-here helia-collapsible">
 <details open>
-<summary class="helia-group-summary"><span class="helia-group-title">With notes (4)</span></summary>
+<summary class="helia-group-summary"><span class="helia-group-title">With notes (5)</span></summary>
 <div class="helia-group-body">
+<section class="helia-transclusion" data-entry="li-2023-lilac" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="li-2023-lilac"><span class="helia-title">Lilac: A Modal Separation Logic for Conditional Probability</span>&nbsp;<a class="helia-slug" href="li-2023-lilac.html">li-2023-lilac</a><span class="helia-byline"><span class="helia-entry-link" data-entry="pldi">PLDI</span> · 2023</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="li-2023-lilac" data-kind="reference">
+<div class="helia-abstract">We present Lilac, a separation logic for reasoning about probabilistic programs where separating conjunction captures probabilistic independence. Inspired by an analogy with mutable state where sampling corresponds to dynamic allocation, we show how probability spaces over a fixed, ambient sample space appear to be the natural analogue of heap fragments, and present a new combining operation on them such that probability spaces behave like heaps and measurability of random variables behaves like ownership. This combining operation forms the basis for our model of separation, and produces a logic with many pleasant properties. In particular, Lilac has a frame rule identical to the ordinary one, and naturally accommodates advanced features like continuous random variables and reasoning about quantitative properties of programs. Then we propose a new modality based on disintegration theory for reasoning about conditional probability. We show how the resulting modal logic validates examples from prior work, and give a formal verification of an intricate weighted sampling algorithm whose correctness depends crucially on conditional independence structure.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="pdf-url"><a class="helia-link helia-external" href="https://dl.acm.org/doi/pdf/10.1145/3591226">PDF</a></span> · <span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/3591226">DOI</a></span> · <span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/2304.01339">arXiv</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/journals/pacmpl/Li0H23">pldb</a></span></div>
+</div>
+</div>
+</details>
+</section>
 <section class="helia-transclusion" data-entry="amorim_2023_fossacs" data-depth="1">
 <details>
 <summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="amorim_2023_fossacs"><span class="helia-title">A Higher-Order Language for Markov Kernels and Linear Operators</span>&nbsp;<a class="helia-slug" href="amorim_2023_fossacs.html">amorim_2023_fossacs</a><span class="helia-byline"><span class="helia-entry-link" data-entry="fossacs">FoSSaCS</span> · 2023</span></h2></summary>
@@ -139,10 +152,9 @@
 </div>
 <div class="helia-reference-cites-away helia-collapsible">
 <details open>
-<summary class="helia-group-summary"><span class="helia-group-title">External (38)</span></summary>
+<summary class="helia-group-summary"><span class="helia-group-title">External (37)</span></summary>
 <div class="helia-group-body">
 <ul>
-<li>Lilac: a Modal Separation Logic for Conditional Probability (2023)</li>
 <li>Classical Linear Logic in Perfect Banach Spaces (2022)</li>
 <li>A separation logic for negative dependence (2022)</li>
 <li>Pirouette: higher-order typed functional choreographies (2022)</li>
@@ -194,7 +206,8 @@
 </summary>
 <div class="helia-group-body">
 <ul>
-<li><a class="helia-entry-link" href="amorim_effcost.html" data-entry="amorim_effcost">The Compositional Essence of Effectful Cost Analyses: Categorical Foundations and Fibered Logical Relations</a> <span class="helia-related-count">· 2 shared tags</span></li>
+<li><a class="helia-entry-link" href="amorim_effcost.html" data-entry="amorim_effcost">The Compositional Essence of Effectful Cost Analyses: Categorical Foundations and Fibered Logical Relations</a> <span class="helia-related-tags"><a class="helia-entry-link" href="tag-preprint.html" data-entry="tag-preprint">#preprint</a> <a class="helia-entry-link" href="tag-effects.html" data-entry="tag-effects">#effects</a></span></li>
+<li><a class="helia-entry-link" href="legoupil-2026-iris.html" data-entry="legoupil-2026-iris">Iris-WasmFX: Modular Reasoning for Wasm Stack Switching</a> <span class="helia-related-tags"><a class="helia-entry-link" href="tag-effects.html" data-entry="tag-effects">#effects</a> <a class="helia-entry-link" href="tag-separation-logic.html" data-entry="tag-separation-logic">#separation-logic</a></span></li>
 </ul>
 </div>
 </details>

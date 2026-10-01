@@ -1,0 +1,1 @@
+heliaSearchData("d/jeffreysfoster",{"id":"jeffreysfoster","title":"Jeffrey S. Foster","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"jeffreysfoster.html","headings":[],"body":""});

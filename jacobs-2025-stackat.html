@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>StacKAT: Infinite State Network Verification</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Ctext y=%22.9em%22 font-size=%2290%22%3E%F0%9F%8C%BB%3C/text%3E%3C/svg%3E">
+<meta name="generator" content="helia">
+<link rel="alternate" type="application/atom+xml" title="Steven Schaefer" href="feed.xml">
+<link rel="alternate" type="application/feed+json" title="Steven Schaefer" href="feed.json">
+<script src="helia/theme-version.js"></script>
+<script src="theme/folio-early.js"></script>
+<link rel="stylesheet" href="helia/theme.css">
+<link rel="stylesheet" href="helia/highlight.css">
+<link rel="stylesheet" href="helia/search.css">
+<link rel="stylesheet" href="theme/katex.css">
+<link rel="stylesheet" href="theme/recipe.css">
+<link rel="stylesheet" href="theme/site.css">
+<link rel="stylesheet" href="theme/folio.css">
+<script defer src="helia/runtime.js"></script>
+<script defer src="helia/search.js"></script>
+<script defer src="theme/glyphcraft.js"></script>
+<script defer src="theme/glyphart.js"></script>
+<script defer src="theme/glyphgen.js"></script>
+<script defer src="theme/ornament.js"></script>
+<script defer src="theme/folio.js"></script>
+<script defer src="theme/portrait.js"></script>
+<script type="application/json" id="helia-widgets">{"helia-cite-formats":"widgets/helia-cite-formats-a3294ac7.js"}</script>
+<link rel="modulepreload" href="widgets/helia-cite-formats-a3294ac7.js">
+<script type="module" src="widgets/runtime.js"></script>
+</head>
+<body>
+<nav class="helia-topbar"><a class="helia-home" href="home.html">Steven Schaefer</a><ul class="helia-nav-links"><li><a href="stevenschaefer.html">About Me</a></li><li><a href="research.html">Research</a></li><li><a href="new.html">New</a></li></ul><button type="button" class="helia-search-button" aria-label="Search (/ or Ctrl+K)" aria-haspopup="dialog"><span class="helia-search-icon">⌕</span><span class="helia-search-label">Search</span><kbd class="helia-search-key">/</kbd></button></nav>
+<div class="helia-page" data-kind="reference">
+<article class="helia-article">
+<header class="helia-header" data-entry="jacobs-2025-stackat" data-kind="reference">
+<h2 class="helia-heading"><span class="helia-taxon">Reference.</span> StacKAT: Infinite State Network Verification</h2>
+<div class="helia-meta"><span class="helia-author"><a class="helia-entry-link" href="julesjacobs.html" data-entry="julesjacobs">Jules Jacobs</a>, <a class="helia-entry-link" href="natefoster.html" data-entry="natefoster">Nate Foster</a>, <a class="helia-entry-link" href="tobiaskappe.html" data-entry="tobiaskappe">Tobias Kappé</a>, <a class="helia-entry-link" href="dexterkozen.html" data-entry="dexterkozen">Dexter Kozen</a>, <a class="helia-entry-link" href="lilysaada.html" data-entry="lilysaada">Lily Saada</a>, <a class="helia-entry-link" href="alexandrasilva.html" data-entry="alexandrasilva">Alexandra Silva</a>, <a class="helia-entry-link" href="janawagemaker.html" data-entry="janawagemaker">Jana Wagemaker</a></span> · <span class="helia-byline"><a class="helia-entry-link" href="pldi.html" data-entry="pldi">PLDI</a> · 2025</span> · <span class="helia-tags"><span class="helia-tag" data-tag="kleene-algebra"><a class="helia-entry-link" href="tag-kleene-algebra.html" data-entry="tag-kleene-algebra">kleene-algebra</a></span></span> · <span class="helia-entry-links"><span class="helia-entry-link" data-field="pdf-url"><a class="helia-link helia-external" href="https://dl.acm.org/doi/pdf/10.1145/3729257">PDF</a></span> · <span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/3729257">DOI</a></span> · <span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/2506.13383">arXiv</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/journals/pacmpl/JacobsFKKSSW25">pldb</a></span></span></div>
+</header>
+<div class="helia-body">
+<div class="helia-abstract">We develop StacKAT, a network verification language featuring loops, finite state variables, nondeterminism, and—most importantly—access to a stack with accompanying push and pop operations. By viewing the variables and stack as the (parsed) headers and (to-be-parsed) contents of a network packet, StacKAT can express a wide range of network behaviors including parsing, source routing, and telemetry. These behaviors are difficult or impossible to model using existing languages like NetKAT . We develop a decision procedure for StacKAT program equivalence, based on finite automata. This decision procedure provides the theoretical basis for verifying network-wide properties and is able to provide counterexamples for inequivalent programs. Finally, we provide an axiomatization of StacKAT equivalence and establish its completeness.</div>
+</div>
+<div class="helia-cite helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><h3 class="helia-heading">Cite</h3>
+</summary>
+<div class="helia-group-body">
+<div class="helia-widget" data-widget="helia-cite-formats" data-props="{&quot;key&quot;:&quot;jacobs-2025-stackat&quot;,&quot;bibtex&quot;:&quot;@article{jacobs-2025-stackat, title={StacKAT: Infinite State Network Verification}, volume={9}, ISSN={2475-1421}, url={http://dx.doi.org/10.1145/3729257}, DOI={10.1145/3729257}, number={PLDI}, journal={Proceedings of the ACM on Programming Languages}, publisher={Association for Computing Machinery (ACM)}, author={Jacobs, Jules and Foster, Nate and Kappé, Tobias and Kozen, Dexter and Saada, Lily and Silva, Alexandra and Wagemaker, Jana}, year={2025}, month=June, pages={277–300} }&quot;,&quot;bib-file&quot;:&quot;jacobs-2025-stackat.bib&quot;,&quot;hayagriva&quot;:&quot;jacobs-2025-stackat:\n  type: article\n  title: &#39;StacKAT: Infinite State Network Verification&#39;\n  author:\n  - Jacobs, Jules\n  - Foster, Nate\n  - Kappé, Tobias\n  - Kozen, Dexter\n  - Saada, Lily\n  - Silva, Alexandra\n  - Wagemaker, Jana\n  date: 2025-06\n  page-range: 277-300\n  serial-number:\n    doi: 10.1145/3729257\n  parent:\n    type: periodical\n    title: Proceedings of the ACM on Programming Languages\n    publisher: Association for Computing Machinery (ACM)\n    issue: PLDI\n    volume: 9\n&quot;,&quot;yml-file&quot;:&quot;jacobs-2025-stackat.yml&quot;}"><div class="helia-cite-key" data-copy="@jacobs-2025-stackat" data-copy-label="citation key"><span class="helia-bib-key">Cite as</span> <code class="helia-raw-inline">@jacobs-2025-stackat</code> (helia, typst) · <code class="helia-raw-inline">\cite{jacobs-2025-stackat}</code> (LaTeX)</div>
+<div class="helia-cite-format helia-collapsible" data-format="bibtex" data-copy="true" data-copy-label="BibTeX">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">BibTeX</span></summary>
+<div class="helia-group-body">
+<details class="helia-code" open><summary class="helia-code-summary"><span class="helia-code-lang">bibtex</span> · <span class="helia-code-lines">1 line</span></summary><pre class="helia-raw"><code class="language-bibtex"><span class="hl-text hl-bibtex"><span class="hl-meta hl-entry hl-braces hl-bibtex"><span class="hl-keyword hl-other hl-entry-type hl-bibtex"><span class="hl-punctuation hl-definition hl-keyword hl-bibtex">@</span>article</span><span class="hl-punctuation hl-section hl-entry hl-begin hl-bibtex">{</span><span class="hl-entity hl-name hl-type hl-entry-key hl-bibtex">jacobs-2025-stackat</span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">title</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>StacKAT: Infinite State Network Verification<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">volume</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>9<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">ISSN</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>2475-1421<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">url</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>http://dx.doi.org/10.1145/3729257<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">DOI</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>10.1145/3729257<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">number</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>PLDI<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">journal</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>Proceedings of the ACM on Programming Languages<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">publisher</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>Association for Computing Machinery (ACM)<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">author</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>Jacobs, Jules and Foster, Nate and Kappé, Tobias and Kozen, Dexter and Saada, Lily and Silva, Alexandra and Wagemaker, Jana<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">year</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>2025<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">month</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span>June</span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">pages</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>277–300<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span> </span><span class="hl-punctuation hl-section hl-entry hl-end hl-bibtex">}</span></span></span></code></pre></details>
+</div>
+</details>
+</div>
+<div class="helia-cite-format helia-collapsible" data-format="hayagriva" data-copy="true" data-copy-label="hayagriva YAML">
+<details>
+<summary class="helia-group-summary"><span class="helia-group-title">hayagriva YAML (typst)</span></summary>
+<div class="helia-group-body">
+<details class="helia-code" open><summary class="helia-code-summary"><span class="helia-code-lang">yaml</span> · <span class="helia-code-lines">21 lines</span></summary><pre class="helia-raw"><code class="language-yaml"><span class="hl-source hl-yaml"><span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">jacobs-2025-stackat</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">type</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">article</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">title</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-quoted hl-single hl-yaml"><span class="hl-punctuation hl-definition hl-string hl-begin hl-yaml">&#39;</span>StacKAT: Infinite State Network Verification<span class="hl-punctuation hl-definition hl-string hl-end hl-yaml">&#39;</span></span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">author</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Jacobs, Jules</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Foster, Nate</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Kappé, Tobias</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Kozen, Dexter</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Saada, Lily</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Silva, Alexandra</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Wagemaker, Jana</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">date</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">2025-06</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">page-range</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">277-300</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">serial-number</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">doi</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">10.1145/3729257</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">parent</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">type</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">periodical</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">title</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Proceedings of the ACM on Programming Languages</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">publisher</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Association for Computing Machinery (ACM)</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">issue</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">PLDI</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">volume</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-constant hl-numeric hl-integer hl-decimal hl-yaml">9</span>
+</span></code></pre></details>
+</div>
+</details>
+</div>
+<div class="helia-cite-files">Download: <a class="helia-link" href="jacobs-2025-stackat.bib">jacobs-2025-stackat.bib</a> · <a class="helia-link" href="jacobs-2025-stackat.yml">jacobs-2025-stackat.yml</a></div>
+</div>
+</div>
+</details>
+</div>
+<div class="helia-reference-cites helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">Cites 45 works (3 here)</span></summary>
+<div class="helia-group-body">
+<div class="helia-reference-cites-here helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">With notes (3)</span></summary>
+<div class="helia-group-body">
+<section class="helia-transclusion" data-entry="anderson2014netkat" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="anderson2014netkat"><span class="helia-title">NetKAT: Semantic foundations for networks</span>&nbsp;<a class="helia-slug" href="anderson2014netkat.html">anderson2014netkat</a><span class="helia-byline"><span class="helia-entry-link" data-entry="popl">POPL</span> · 2014</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="anderson2014netkat" data-kind="reference">
+<div class="helia-abstract">Recent years have seen growing interest in high-level languages for programming networks. But the design of these languages has been largely ad hoc, driven more by the needs of applications and the capabilities of network hardware than by foundational principles. The lack of a semantic foundation has left language designers with little guidance in determining how to incorporate new features, and programmers without a means to reason precisely about their code. This paper presents NetKAT, a new network programming language that is based on a solid mathematical foundation and comes equipped with a sound and complete equational theory. We describe the design of NetKAT, including primitives for filtering, modifying, and transmitting packets; union and sequential composition operators; and a Kleene star operator that iterates programs. We show that NetKAT is an instance of a canonical and well-studied mathematical structure called a Kleene algebra with tests (KAT) and prove that its equational theory is sound and complete with respect to its denotational semantics. Finally, we present practical applications of the equational theory including syntactic techniques for checking reachability, proving non-interference properties that ensure isolation between programs, and establishing the correctness of compilation algorithms.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="pdf-url"><a class="helia-link helia-external" href="https://dl.acm.org/doi/pdf/10.1145/2535838.2535862">PDF</a></span> · <span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/2535838.2535862">DOI</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/conf/popl/AndersonFGJKSW14">pldb</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="KOZEN1994366" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="KOZEN1994366"><span class="helia-title">A Completeness Theorem for Kleene Algebras and the Algebra of Regular Events</span>&nbsp;<a class="helia-slug" href="KOZEN1994366.html">KOZEN1994366</a><span class="helia-byline"><span class="helia-entry-link" data-entry="iandc">I&amp;C</span> · 1994</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="KOZEN1994366" data-kind="reference">
+<div class="helia-abstract">We give a finitary axiomatization of the algebra of regular events involving only equations and equational implications. Unlike Salomaa′s axiomatizations, the axiomatization given here is sound for all interpretations over Kleene algebras.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1006/inco.1994.1037">DOI</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="brzozowskiDerivativesRegularExpressions1964" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="brzozowskiDerivativesRegularExpressions1964"><span class="helia-title">Derivatives of Regular Expressions</span>&nbsp;<a class="helia-slug" href="brzozowskiDerivativesRegularExpressions1964.html">brzozowskiDerivativesRegularExpressions1964</a><span class="helia-byline"><span class="helia-entry-link" data-entry="jacm">JACM</span> · 1964</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="brzozowskiDerivativesRegularExpressions1964" data-kind="reference">
+<div class="helia-abstract">Kleene’s regular expressions, which can be used for describing sequential circuits, were defined using three operators (union, concatenation and iterate) on sets of sequences. Word descriptions of problems can be more easily put in the regular expression language if the language is enriched by the inclusion of other logical operations. However, in the problem of converting the regular expression description to a state diagram, the existing methods either cannot handle expressions with additional operators, or are made quite complicated by the presence of such operators.In this paper the notion of a derivative of a regular expression is introduced and the properties of derivatives are discussed. This leads, in a very natural way, to the construction of a state diagram from a regular expression containing any number of logical operators.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/321239.321249">DOI</a></span></div>
+</div>
+</div>
+</details>
+</section>
+</div>
+</details>
+</div>
+<div class="helia-reference-cites-away helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">External (42)</span></summary>
+<div class="helia-group-body">
+<ul>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3656454">KATch: A Fast Symbolic Verifier for NetKAT</a> (2024)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3822593">Model Checking Probabilistic Operator Precedence Automata</a> (2024)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3608443">A Model Checker for Operator Precedence Languages</a> (2023)</li>
+<li>Katra: Realtime Verification for Multilayer Networks (2022)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-030-88885-5_12">Faster Pushdown Reachability Analysis with Applications in Network Verification</a> (2021)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3498673">The decidability and complexity of interleaved bidirected Dyck reachability</a> (2021)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3386367.3431308">AalWiNes: a fast and quantitative what-if analysis tool for MPLS networks</a> (2020)</li>
+<li>APKeep: Realtime Verification for Real Networks (2020)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-030-17127-8_12">Kleene Algebra with Hypotheses</a> (2019)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3281411.3281432">P-Rex: fast verification of MPLS networks with multiple link failures</a> (2018)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1016/j.cosrev.2017.12.001">Generalizing input-driven languages: Theoretical and practical benefits</a> (2017)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1137/140978818">Operator Precedence Languages: Their Automata-Theoretic and Logic Characterization</a> (2015)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/2784731.2784761">A fast compiler for NetKAT</a> (2015)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/2656877.2656890">P4: programming protocol-independent packet processors</a> (2013)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-642-40313-2_22">Semilinearity and Context-Freeness of Languages Accepted by Valence Automata</a> (2013)</li>
+<li>Kleene Coalgebra (PhD thesis) (2010)</li>
+<li>Introduction to Automata Theory, Languages, and Computation (3rd Edition) (2006)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/11734673_15">Verification of Pushdown Systems Using Omega Algebra with Domain</a> (2005)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/1007352.1007390">Visibly pushdown languages</a> (2004)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1016/j.scico.2005.02.009">Weighted pushdown systems and their application to interprocedural dataflow analysis</a> (2003)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/3-540-45711-9_1">Balanced Grammars and Their Languages</a> (2002)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/3-540-45465-9_4">L(A) = L(B)? Decidability Results from Complete Formal Systems</a> (2002)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1016/s0304-3975(02)00027-0">L(A)=L(B)? A simplified decidability proof</a> (2002)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/360204.360208">Type-base flow analysis: from polymorphic subtyping to CFL-reachability</a> (2001)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/3-540-63141-0_10">Reachability Analysis of Pushdown Automata: Application to Model-Checking</a> (1997)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1016/s1571-0661(05)80426-8">A direct symbolic approach to model checking pushdown systems</a> (1997)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1016/s0950-5849(98)00093-7">Program analysis via graph reachability</a> (1997)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/3-540-63165-8_221">The Equivalence Problem for Deterministic Pushdown Automata is Decidable</a> (1997)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1016/0304-3975(95)00182-4">Partial Derivatives of Regular Expressions and Finite Automaton Constructions</a> (1996)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/3-540-61042-1_35">Kleene Algebra with Tests and Commutativity Conditions</a> (1996)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/222124.222146">Demand interprocedural dataflow analysis</a> (1995)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/199448.199462">Precise interprocedural dataflow analysis via graph reachability</a> (1995)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/193173.195287">Speeding up slicing</a> (1994)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/1024853.1024855">Source routing in computer networks</a> (1977)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1016/s0022-0000(75)80005-5">Deterministic One-Counter Automata</a> (1973)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1109/swat.1972.29">The Equivalence Problem for Regular Expressions with Squaring Requires Exponential Space</a> (1972)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/321406.321411">Parenthesis Grammars</a> (1967)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/321172.321179">Syntactic Analysis and Operator Precedence</a> (1963)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/2676726.2677011">10.1145/2676726.2677011</a></li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.46298/lmcs-20(2:8)2024">10.46298/lmcs-20(2:8)2024</a></li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/3-540-44898-5_11">10.1007/3-540-44898-5_11</a></li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1016/0304-3975(96)00072-2">10.1016/0304-3975(96)00072-2</a></li>
+</ul>
+</div>
+</details>
+</div>
+</div>
+</details>
+</div>
+</article>
+<div class="helia-identity"><span class="helia-id">jacobs-2025-stackat</span> <span class="helia-kind">reference</span> <span class="helia-path">entries/refs/jacobs-2025-stackat/jacobs-2025-stackat.hel</span></div>
+</div>
+</body>
+</html>

@@ -1,0 +1,1 @@
+heliaSearchData("d/stephenarthurcook",{"id":"stephenarthurcook","title":"Stephen Arthur Cook","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"stephenarthurcook.html","headings":[],"body":""});

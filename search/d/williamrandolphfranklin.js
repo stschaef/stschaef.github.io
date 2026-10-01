@@ -1,0 +1,1 @@
+heliaSearchData("d/williamrandolphfranklin",{"id":"williamrandolphfranklin","title":"William Randolph Franklin","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"williamrandolphfranklin.html","headings":[],"body":""});

@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>Elaboration in Dependent Type Theory</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Ctext y=%22.9em%22 font-size=%2290%22%3E%F0%9F%8C%BB%3C/text%3E%3C/svg%3E">
+<meta name="generator" content="helia">
+<link rel="alternate" type="application/atom+xml" title="Steven Schaefer" href="feed.xml">
+<link rel="alternate" type="application/feed+json" title="Steven Schaefer" href="feed.json">
+<script src="helia/theme-version.js"></script>
+<script src="theme/folio-early.js"></script>
+<link rel="stylesheet" href="helia/theme.css">
+<link rel="stylesheet" href="helia/highlight.css">
+<link rel="stylesheet" href="helia/search.css">
+<link rel="stylesheet" href="theme/katex.css">
+<link rel="stylesheet" href="theme/recipe.css">
+<link rel="stylesheet" href="theme/site.css">
+<link rel="stylesheet" href="theme/folio.css">
+<script defer src="helia/runtime.js"></script>
+<script defer src="helia/search.js"></script>
+<script defer src="theme/glyphcraft.js"></script>
+<script defer src="theme/glyphart.js"></script>
+<script defer src="theme/glyphgen.js"></script>
+<script defer src="theme/ornament.js"></script>
+<script defer src="theme/folio.js"></script>
+<script defer src="theme/portrait.js"></script>
+<script type="application/json" id="helia-widgets">{"helia-cite-formats":"widgets/helia-cite-formats-a3294ac7.js"}</script>
+<link rel="modulepreload" href="widgets/helia-cite-formats-a3294ac7.js">
+<script type="module" src="widgets/runtime.js"></script>
+</head>
+<body>
+<nav class="helia-topbar"><a class="helia-home" href="home.html">Steven Schaefer</a><ul class="helia-nav-links"><li><a href="stevenschaefer.html">About Me</a></li><li><a href="research.html">Research</a></li><li><a href="new.html">New</a></li></ul><button type="button" class="helia-search-button" aria-label="Search (/ or Ctrl+K)" aria-haspopup="dialog"><span class="helia-search-icon">⌕</span><span class="helia-search-label">Search</span><kbd class="helia-search-key">/</kbd></button></nav>
+<div class="helia-page" data-kind="reference">
+<article class="helia-article">
+<header class="helia-header" data-entry="moura-2015-elaboration" data-kind="reference">
+<h2 class="helia-heading"><span class="helia-taxon">Reference.</span> Elaboration in Dependent Type Theory</h2>
+<div class="helia-meta"><span class="helia-author"><a class="helia-entry-link" href="leonardodemoura.html" data-entry="leonardodemoura">Leonardo de Moura</a>, <a class="helia-entry-link" href="jeremyavigad.html" data-entry="jeremyavigad">Jeremy Avigad</a>, <a class="helia-entry-link" href="soonhokong.html" data-entry="soonhokong">Soonho Kong</a>, <a class="helia-entry-link" href="codyroux.html" data-entry="codyroux">Cody Roux</a></span> · <span class="helia-byline"><a class="helia-entry-link" href="arxiv.html" data-entry="arxiv">arXiv</a> · 2015</span> · <span class="helia-tags"><span class="helia-tag" data-tag="type-theory"><a class="helia-entry-link" href="tag-type-theory.html" data-entry="tag-type-theory">type-theory</a></span></span> · <span class="helia-entry-links"><span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/1505.04324">arXiv</a></span></span></div>
+</header>
+<div class="helia-body">
+<div class="helia-abstract">To be usable in practice, interactive theorem provers need to provide convenient and efficient means of writing expressions, definitions, and proofs. This involves inferring information that is often left implicit in an ordinary mathematical text, and resolving ambiguities in mathematical expressions. We refer to the process of passing from a quasi-formal and partially-specified expression to a completely precise formal one as elaboration. We describe an elaboration algorithm for dependent type theory that has been implemented in the Lean theorem prover. Lean’s elaborator supports higher-order unification, type class inference, ad hoc overloading, insertion of coercions, the use of tactics, and the computational reduction of terms. The interactions between these components are subtle and complex, and the elaboration algorithm has been carefully designed to balance efficiency and usability. We describe the central design goals, and the means by which they are achieved.</div>
+</div>
+<div class="helia-cite helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><h3 class="helia-heading">Cite</h3>
+</summary>
+<div class="helia-group-body">
+<div class="helia-widget" data-widget="helia-cite-formats" data-props="{&quot;key&quot;:&quot;moura-2015-elaboration&quot;,&quot;bibtex&quot;:&quot;@misc{moura-2015-elaboration,\n  author = {Leonardo de Moura and Jeremy Avigad and Soonho Kong and Cody Roux},\n  title = {Elaboration in Dependent Type Theory},\n  year = {2015},\n  month = {5},\n  eprint = {1505.04324},\n  archiveprefix = {arXiv}\n}&quot;,&quot;bib-file&quot;:&quot;moura-2015-elaboration.bib&quot;,&quot;hayagriva&quot;:&quot;moura-2015-elaboration:\n  type: misc\n  title: Elaboration in Dependent Type Theory\n  author:\n  - name: Moura\n    given-name: Leonardo\n    prefix: de\n  - Avigad, Jeremy\n  - Kong, Soonho\n  - Roux, Cody\n  date: 2015-05\n  serial-number:\n    arxiv: &#39;1505.04324&#39;\n&quot;,&quot;yml-file&quot;:&quot;moura-2015-elaboration.yml&quot;}"><div class="helia-cite-key" data-copy="@moura-2015-elaboration" data-copy-label="citation key"><span class="helia-bib-key">Cite as</span> <code class="helia-raw-inline">@moura-2015-elaboration</code> (helia, typst) · <code class="helia-raw-inline">\cite{moura-2015-elaboration}</code> (LaTeX)</div>
+<div class="helia-cite-format helia-collapsible" data-format="bibtex" data-copy="true" data-copy-label="BibTeX">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">BibTeX</span></summary>
+<div class="helia-group-body">
+<details class="helia-code" open><summary class="helia-code-summary"><span class="helia-code-lang">bibtex</span> · <span class="helia-code-lines">8 lines</span></summary><pre class="helia-raw"><code class="language-bibtex"><span class="hl-text hl-bibtex"><span class="hl-meta hl-entry hl-braces hl-bibtex"><span class="hl-keyword hl-other hl-entry-type hl-bibtex"><span class="hl-punctuation hl-definition hl-keyword hl-bibtex">@</span>misc</span><span class="hl-punctuation hl-section hl-entry hl-begin hl-bibtex">{</span><span class="hl-entity hl-name hl-type hl-entry-key hl-bibtex">moura-2015-elaboration</span>,
+  <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">author</span> <span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span> <span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>Leonardo de Moura and Jeremy Avigad and Soonho Kong and Cody Roux<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>,
+  <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">title</span> <span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span> <span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>Elaboration in Dependent Type Theory<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>,
+  <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">year</span> <span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span> <span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>2015<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>,
+  <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">month</span> <span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span> <span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>5<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>,
+  <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">eprint</span> <span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span> <span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>1505.04324<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>,
+  <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">archiveprefix</span> <span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span> <span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>arXiv<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span>
+</span><span class="hl-punctuation hl-section hl-entry hl-end hl-bibtex">}</span></span></span></code></pre></details>
+</div>
+</details>
+</div>
+<div class="helia-cite-format helia-collapsible" data-format="hayagriva" data-copy="true" data-copy-label="hayagriva YAML">
+<details>
+<summary class="helia-group-summary"><span class="helia-group-title">hayagriva YAML (typst)</span></summary>
+<div class="helia-group-body">
+<details class="helia-code" open><summary class="helia-code-summary"><span class="helia-code-lang">yaml</span> · <span class="helia-code-lines">13 lines</span></summary><pre class="helia-raw"><code class="language-yaml"><span class="hl-source hl-yaml"><span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">moura-2015-elaboration</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">type</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">misc</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">title</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Elaboration in Dependent Type Theory</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">author</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">name</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Moura</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">given-name</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Leonardo</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">prefix</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">de</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Avigad, Jeremy</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Kong, Soonho</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Roux, Cody</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">date</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">2015-05</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">serial-number</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">arxiv</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-quoted hl-single hl-yaml"><span class="hl-punctuation hl-definition hl-string hl-begin hl-yaml">&#39;</span>1505.04324<span class="hl-punctuation hl-definition hl-string hl-end hl-yaml">&#39;</span></span>
+</span></code></pre></details>
+</div>
+</details>
+</div>
+<div class="helia-cite-files">Download: <a class="helia-link" href="moura-2015-elaboration.bib">moura-2015-elaboration.bib</a> · <a class="helia-link" href="moura-2015-elaboration.yml">moura-2015-elaboration.yml</a></div>
+</div>
+</div>
+</details>
+</div>
+<div class="helia-reference-cited-by helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">Cited by (1)</span></summary>
+<div class="helia-group-body">
+<section class="helia-transclusion" data-entry="zhang-2021-elegant" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="zhang-2021-elegant"><span class="helia-title">Elegant elaboration with function invocation</span>&nbsp;<a class="helia-slug" href="zhang-2021-elegant.html">zhang-2021-elegant</a><span class="helia-byline"><span class="helia-entry-link" data-entry="arxiv">arXiv</span> · 2021</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="zhang-2021-elegant" data-kind="reference">
+<div class="helia-abstract">We present an elegant design of the core language in a dependently-typed lambda calculus with <span class="helia-math helia-math-inline helia-mathml"><math><mi>𝛿</mi></math></span>-reduction and an elaboration algorithm.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/2105.14840">arXiv</a></span></div>
+</div>
+</div>
+</details>
+</section>
+</div>
+</details>
+</div>
+<div class="helia-reference-cites helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">Cites 35 works (1 here)</span></summary>
+<div class="helia-group-body">
+<div class="helia-reference-cites-here helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">With notes (1)</span></summary>
+<div class="helia-group-body">
+<section class="helia-transclusion" data-entry="hottbook" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="hottbook"><span class="helia-title">Homotopy Type Theory: Univalent Foundations of Mathematics</span>&nbsp;<a class="helia-slug" href="hottbook.html">hottbook</a><span class="helia-byline"><span class="helia-entry-link" data-entry="arxiv">arXiv</span> · 2013</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="hottbook" data-kind="reference">
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="url"><a class="helia-link helia-external" href="https://homotopytypetheory.org/book">Web</a></span> · <span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/1308.0729">arXiv</a></span></div>
+</div>
+</div>
+</details>
+</section>
+</div>
+</details>
+</div>
+<div class="helia-reference-cites-away helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">External (34)</span></summary>
+<div class="helia-group-body">
+<ul>
+<li>Theorem Proving in Lean (2016)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/2854065.2854076">Constructing the propositional truncation using non-recursive HITs</a> (2015)</li>
+<li>The Lean Theorem Prover (2015)</li>
+<li>Formalization of non-abelian topology for homotopy type theory (2015)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-319-08970-6_18">Experience Implementing a Performant Category-Theory Library in Coq</a> (2014)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-642-39634-2_5">Canonical Structures for the Working Coq User</a> (2013)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1017/s095679681300018x">Idris, a general-purpose dependently typed programming language: design and implementation</a> (2013)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-642-25318-8_10">Extending Hindley-Milner Type Inference with Coercive Structural Subtyping</a> (2011)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-642-22438-6_7">The Matita Interactive Theorem Prover</a> (2011)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-642-21691-6_5">Higher-Order Dynamic Pattern Unification for Dependent Types and Records</a> (2011)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1017/s0960129511000119">Type classes for mathematics in type theory†</a> (2011)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-642-03359-9_8">Hints in Unification</a> (2009)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-642-03359-9_6">A Brief Overview of Agda - A Functional Language with Dependent Types</a> (2009)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-642-03359-9_23">Packaging Mathematical Structures</a> (2009)</li>
+<li>Programming in Higher-Order Logic (2009)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-540-71067-7_23">First-Class Type Classes</a> (2008)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1016/s1574-6526(06)x8001-x">Handbook of Constraint Programming</a> (2006)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/1017472.1017477">Functional pearl: i am not a number–i am a free variable</a> (2004)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-540-24849-1_3">Locales and Locale Expressions in Isabelle/Isar</a> (2003)</li>
+<li>Using Axiomatic Type Classes in Isabelle (2000)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/263699.263742">Typing algorithm in type theory with inheritance</a> (1997)</li>
+<li>The Coq proof assistant reference manual: version 6.1 (1997)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/227699.227700">Type classes in Haskell</a> (1994)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/bf01211308">Inductive families</a> (1994)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/bfb0037116">Inductive Definitions in the system Coq - Rules and Properties</a> (1993)</li>
+<li>Investigations into intensional type theory (1993)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1109/lics.1989.39193">ECC, an extended calculus of constructions</a> (1989)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1016/0890-5401(88)90005-3">The Calculus of Constructions</a> (1988)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1016/0304-3975(81)90040-2">The Undecidability of the Second-Order Unification Problem</a> (1981)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1016/0022-0000(78)90014-4">A Theory of Type Polymorphism in Programming</a> (1978)</li>
+<li>A unification algorithm for typed λ-calculus (1975)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1093/oso/9780198501275.003.0010">An intuitionistic theory of types</a> (1972)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1090/s0002-9947-1969-0253905-6">The Principal Type-Scheme of an Object in Combinatory Logic</a> (1969)</li>
+<li>A predictable unification algorithm for Coq featuring universe polymorphism and overloading</li>
+</ul>
+</div>
+</details>
+</div>
+</div>
+</details>
+</div>
+</article>
+<div class="helia-identity"><span class="helia-id">moura-2015-elaboration</span> <span class="helia-kind">reference</span> <span class="helia-path">entries/refs/moura-2015-elaboration/moura-2015-elaboration.hel</span></div>
+</div>
+</body>
+</html>

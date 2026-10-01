@@ -1,0 +1,1 @@
+heliaSearchData("d/vanderbilt-university",{"id":"vanderbilt-university","title":"Vanderbilt University","kind":"institution","tags":[],"authors":[],"venue":[],"date":null,"url":"vanderbilt-university.html","headings":[],"body":""});

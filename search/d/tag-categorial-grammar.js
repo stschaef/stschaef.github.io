@@ -1,0 +1,1 @@
+heliaSearchData("d/tag-categorial-grammar",{"id":"tag-categorial-grammar","title":"categorial-grammar","kind":"tag","tags":[],"authors":[],"venue":[],"date":null,"url":"tag-categorial-grammar.html","headings":[],"body":""});

@@ -1,0 +1,1 @@
+heliaSearchData("d/baltieri-2025-a",{"id":"baltieri-2025-a","title":"A Bayesian Interpretation of the Internal Model Principle","kind":"reference","tags":["dynamical-systems"],"authors":["Manuel Baltieri","Martin Biehl","Matteo Capucci","Nathaniel Virgo"],"venue":["arXiv"],"date":null,"url":"baltieri-2025-a.html","headings":[],"body":""});

@@ -1,1 +1,1 @@
-heliaSearchData("d/stevenschaefer",{"id":"stevenschaefer","title":"Steven Schaefer","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"stevenschaefer.html","headings":[],"body":""});
+heliaSearchData("d/stevenschaefer",{"id":"stevenschaefer","title":"Steven Schaefer","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"stevenschaefer.html","headings":[],"body":"Outside of research, I like to bake, garden, climb, play chess and play Tetris. Please send me a challenge in either (or anything else for that matter)."});

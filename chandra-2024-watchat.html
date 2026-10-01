@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>WatChat: Explaining perplexing programs by debugging mental models</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Ctext y=%22.9em%22 font-size=%2290%22%3E%F0%9F%8C%BB%3C/text%3E%3C/svg%3E">
+<meta name="generator" content="helia">
+<link rel="alternate" type="application/atom+xml" title="Steven Schaefer" href="feed.xml">
+<link rel="alternate" type="application/feed+json" title="Steven Schaefer" href="feed.json">
+<script src="helia/theme-version.js"></script>
+<script src="theme/folio-early.js"></script>
+<link rel="stylesheet" href="helia/theme.css">
+<link rel="stylesheet" href="helia/highlight.css">
+<link rel="stylesheet" href="helia/search.css">
+<link rel="stylesheet" href="theme/katex.css">
+<link rel="stylesheet" href="theme/recipe.css">
+<link rel="stylesheet" href="theme/site.css">
+<link rel="stylesheet" href="theme/folio.css">
+<script defer src="helia/runtime.js"></script>
+<script defer src="helia/search.js"></script>
+<script defer src="theme/glyphcraft.js"></script>
+<script defer src="theme/glyphart.js"></script>
+<script defer src="theme/glyphgen.js"></script>
+<script defer src="theme/ornament.js"></script>
+<script defer src="theme/folio.js"></script>
+<script defer src="theme/portrait.js"></script>
+<script type="application/json" id="helia-widgets">{"helia-cite-formats":"widgets/helia-cite-formats-a3294ac7.js"}</script>
+<link rel="modulepreload" href="widgets/helia-cite-formats-a3294ac7.js">
+<script type="module" src="widgets/runtime.js"></script>
+</head>
+<body>
+<nav class="helia-topbar"><a class="helia-home" href="home.html">Steven Schaefer</a><ul class="helia-nav-links"><li><a href="stevenschaefer.html">About Me</a></li><li><a href="research.html">Research</a></li><li><a href="new.html">New</a></li></ul><button type="button" class="helia-search-button" aria-label="Search (/ or Ctrl+K)" aria-haspopup="dialog"><span class="helia-search-icon">⌕</span><span class="helia-search-label">Search</span><kbd class="helia-search-key">/</kbd></button></nav>
+<div class="helia-page" data-kind="reference">
+<article class="helia-article">
+<header class="helia-header" data-entry="chandra-2024-watchat" data-kind="reference">
+<h2 class="helia-heading"><span class="helia-taxon">Reference.</span> WatChat: Explaining perplexing programs by debugging mental models</h2>
+<div class="helia-meta"><span class="helia-author"><a class="helia-entry-link" href="kartikchandra.html" data-entry="kartikchandra">Kartik Chandra</a>, <a class="helia-entry-link" href="katherinemcollins.html" data-entry="katherinemcollins">Katherine M. Collins</a>, <a class="helia-entry-link" href="willcrichton.html" data-entry="willcrichton">Will Crichton</a>, <a class="helia-entry-link" href="tonychen.html" data-entry="tonychen">Tony Chen</a>, <a class="helia-entry-link" href="tzumaoli.html" data-entry="tzumaoli">Tzu-Mao Li</a>, <a class="helia-entry-link" href="adrianweller.html" data-entry="adrianweller">Adrian Weller</a>, <a class="helia-entry-link" href="rachitnigam.html" data-entry="rachitnigam">Rachit Nigam</a>, <a class="helia-entry-link" href="joshuatenenbaum.html" data-entry="joshuatenenbaum">Joshua Tenenbaum</a>, <a class="helia-entry-link" href="jonathanragankelley.html" data-entry="jonathanragankelley">Jonathan Ragan-Kelley</a></span> · <span class="helia-byline"><a class="helia-entry-link" href="arxiv.html" data-entry="arxiv">arXiv</a> · 2024</span> · <span class="helia-tags"><span class="helia-tag" data-tag="human-computer-interaction"><a class="helia-entry-link" href="tag-human-computer-interaction.html" data-entry="tag-human-computer-interaction">human-computer-interaction</a></span></span> · <span class="helia-entry-links"><span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/2403.05334">arXiv</a></span></span></div>
+</header>
+<div class="helia-body">
+<div class="helia-abstract">Often, a good explanation for a program’s unexpected behavior is a bug in the programmer’s code. But sometimes, an even better explanation is a bug in the programmer’s mental model of the language or API they are using. Instead of merely debugging our current code (“giving the programmer a fish”), what if our tools could directly debug our mental models (“teaching the programmer to fish”)? In this paper, we apply recent ideas from computational cognitive science to offer a principled framework for doing exactly that. Given a “why?” question about a program, we automatically infer potential misconceptions about the language/API that might cause the user to be surprised by the program’s behavior – and then analyze those misconceptions to provide explanations of the program’s behavior. Our key idea is to formally represent misconceptions as counterfactual (erroneous) semantics for the language/API, which can be inferred and debugged using program synthesis techniques. We demonstrate our framework, WatChat, by building systems for explanation in two domains: JavaScript type coercion, and the Git version control system. We evaluate WatChatJS and WatChatGit by comparing their outputs to experimentally-collected human-written explanations in these two domains: we show that WatChat’s explanations exhibit key features of human-written explanation, unlike those of a state-of-the-art language model.</div>
+</div>
+<div class="helia-cite helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><h3 class="helia-heading">Cite</h3>
+</summary>
+<div class="helia-group-body">
+<div class="helia-widget" data-widget="helia-cite-formats" data-props="{&quot;key&quot;:&quot;chandra-2024-watchat&quot;,&quot;bibtex&quot;:&quot;@misc{chandra-2024-watchat,\n  author = {Kartik Chandra and Katherine M. Collins and Will Crichton and Tony Chen and Tzu-Mao Li and Adrian Weller and Rachit Nigam and Joshua Tenenbaum and Jonathan Ragan-Kelley},\n  title = {WatChat: Explaining perplexing programs by debugging mental models},\n  year = {2024},\n  month = {3},\n  eprint = {2403.05334},\n  archiveprefix = {arXiv}\n}&quot;,&quot;bib-file&quot;:&quot;chandra-2024-watchat.bib&quot;,&quot;hayagriva&quot;:&quot;chandra-2024-watchat:\n  type: misc\n  title: &#39;WatChat: Explaining perplexing programs by debugging mental models&#39;\n  author:\n  - Chandra, Kartik\n  - Collins, Katherine M.\n  - Crichton, Will\n  - Chen, Tony\n  - Li, Tzu-Mao\n  - Weller, Adrian\n  - Nigam, Rachit\n  - Tenenbaum, Joshua\n  - Ragan-Kelley, Jonathan\n  date: 2024-03\n  serial-number:\n    arxiv: &#39;2403.05334&#39;\n&quot;,&quot;yml-file&quot;:&quot;chandra-2024-watchat.yml&quot;}"><div class="helia-cite-key" data-copy="@chandra-2024-watchat" data-copy-label="citation key"><span class="helia-bib-key">Cite as</span> <code class="helia-raw-inline">@chandra-2024-watchat</code> (helia, typst) · <code class="helia-raw-inline">\cite{chandra-2024-watchat}</code> (LaTeX)</div>
+<div class="helia-cite-format helia-collapsible" data-format="bibtex" data-copy="true" data-copy-label="BibTeX">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">BibTeX</span></summary>
+<div class="helia-group-body">
+<details class="helia-code" open><summary class="helia-code-summary"><span class="helia-code-lang">bibtex</span> · <span class="helia-code-lines">8 lines</span></summary><pre class="helia-raw"><code class="language-bibtex"><span class="hl-text hl-bibtex"><span class="hl-meta hl-entry hl-braces hl-bibtex"><span class="hl-keyword hl-other hl-entry-type hl-bibtex"><span class="hl-punctuation hl-definition hl-keyword hl-bibtex">@</span>misc</span><span class="hl-punctuation hl-section hl-entry hl-begin hl-bibtex">{</span><span class="hl-entity hl-name hl-type hl-entry-key hl-bibtex">chandra-2024-watchat</span>,
+  <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">author</span> <span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span> <span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>Kartik Chandra and Katherine M. Collins and Will Crichton and Tony Chen and Tzu-Mao Li and Adrian Weller and Rachit Nigam and Joshua Tenenbaum and Jonathan Ragan-Kelley<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>,
+  <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">title</span> <span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span> <span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>WatChat: Explaining perplexing programs by debugging mental models<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>,
+  <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">year</span> <span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span> <span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>2024<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>,
+  <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">month</span> <span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span> <span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>3<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>,
+  <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">eprint</span> <span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span> <span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>2403.05334<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>,
+  <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">archiveprefix</span> <span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span> <span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>arXiv<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span>
+</span><span class="hl-punctuation hl-section hl-entry hl-end hl-bibtex">}</span></span></span></code></pre></details>
+</div>
+</details>
+</div>
+<div class="helia-cite-format helia-collapsible" data-format="hayagriva" data-copy="true" data-copy-label="hayagriva YAML">
+<details>
+<summary class="helia-group-summary"><span class="helia-group-title">hayagriva YAML (typst)</span></summary>
+<div class="helia-group-body">
+<details class="helia-code" open><summary class="helia-code-summary"><span class="helia-code-lang">yaml</span> · <span class="helia-code-lines">16 lines</span></summary><pre class="helia-raw"><code class="language-yaml"><span class="hl-source hl-yaml"><span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">chandra-2024-watchat</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">type</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">misc</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">title</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-quoted hl-single hl-yaml"><span class="hl-punctuation hl-definition hl-string hl-begin hl-yaml">&#39;</span>WatChat: Explaining perplexing programs by debugging mental models<span class="hl-punctuation hl-definition hl-string hl-end hl-yaml">&#39;</span></span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">author</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Chandra, Kartik</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Collins, Katherine M.</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Crichton, Will</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Chen, Tony</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Li, Tzu-Mao</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Weller, Adrian</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Nigam, Rachit</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Tenenbaum, Joshua</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Ragan-Kelley, Jonathan</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">date</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">2024-03</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">serial-number</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">arxiv</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-quoted hl-single hl-yaml"><span class="hl-punctuation hl-definition hl-string hl-begin hl-yaml">&#39;</span>2403.05334<span class="hl-punctuation hl-definition hl-string hl-end hl-yaml">&#39;</span></span>
+</span></code></pre></details>
+</div>
+</details>
+</div>
+<div class="helia-cite-files">Download: <a class="helia-link" href="chandra-2024-watchat.bib">chandra-2024-watchat.bib</a> · <a class="helia-link" href="chandra-2024-watchat.yml">chandra-2024-watchat.yml</a></div>
+</div>
+</div>
+</details>
+</div>
+<div class="helia-reference-cites helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">Cites 79 works (0 here)</span></summary>
+<div class="helia-group-body">
+<div class="helia-reference-cites-away helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">External (79)</span></summary>
+<div class="helia-group-body">
+<ul>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3613905.3637140">Designing and Evaluating Explanations for a Predictive Health Dashboard: A User-Centred Case Study</a> (2024)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3649823">Identifying and Correcting Programming Language Behavior Misconceptions</a> (2024)</li>
+<li>Cooperative Explanation as Rational Communication (2024)</li>
+<li><a class="helia-link helia-external" href="https://arxiv.org/abs/2303.08774">GPT-4 technical report</a> (2024)</li>
+<li>HELM: A holistic framework for evaluating foundation models (2024)</li>
+<li>LMSys chatbot arena leaderboard (2024)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3622841">A Grounded Conceptual Model for Ownership Types in Rust</a> (2023)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1073/pnas.2318124121">Evaluating language models for mathematics through interactions</a> (2023)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.48550/arxiv.2305.17195">Inferring the Future by Imagining the Past</a> (2023)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3610206">Selective Explanations: Leveraging Human Input to Align Explainable AI</a> (2023)</li>
+<li>ECMAScript 2024 language specification (2023)</li>
+<li>git branches: intuition &amp; reality (2023)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3494518">Do Developers Really Know How to Use Git Commands? A Large-scale Study Using Stack Overflow</a> (2022)</li>
+<li>Left to the Reader: Abstracting Solutions in Mathematical Reasoning (2022)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1016/j.artint.2021.103507">"That's (not) the output I expected!" On the role of end user expectations in creating explanations of AI systems</a> (2021)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.24251/hicss.2021.872">A Behavioral Approach to Understanding the Git Experience</a> (2021)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3324884.3416632">JISET: JavaScript IR-based Semantics Extraction Toolchain</a> (2020)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.31234/osf.io/x5mqc">Inference from explanation</a> (2020)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.31234/osf.io/eahjd">Violations of expectation trigger infants to search for explanations</a> (2020)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1037/xge0000670">Expectations affect physical causation judgments</a> (2019)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3301275.3302313">To explain or not to explain: the effects of personal characteristics when explaining music recommendations</a> (2019)</li>
+<li>Designing Explanation Interfaces for Transparency and Beyond (2019)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1109/vlhcc.2018.8506508">It's Like Python But: Towards Supporting Transfer of Programming Language Knowledge</a> (2018)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3173574.3173838">Automatic Diagnosis of Students' Misconceptions in K-8 Mathematics</a> (2018)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3106237.3106272">The power of "why" and "why not": enriching scenario exploration with provenance</a> (2017)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3158150">Bonsai: synthesis-based reasoning for type systems</a> (2017)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1561/2500000010">Program Synthesis</a> (2017)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1016/j.artint.2018.07.007">Explanation in Artificial Intelligence: Insights from the Social Sciences</a> (2017)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1109/icse.2017.59">Do Developers Read Compiler Error Messages?</a> (2017)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.24963/ijcai.2017/23">Plan Explanations as Model Reconciliation: Moving Beyond Explanation as Soliloquy</a> (2017)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.4230/lipics.snapl.2017.2">Domain-Specific Symbolic Compilation</a> (2017)</li>
+<li>Fast Krippendorff: Fast computation of Krippendorff’s alpha agreement measure (2017)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/2983990.2984018">Purposes, concepts, misfits, and a redesign of git</a> (2016)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1111/cogs.12290">Faster Teaching via POMDP Planning</a> (2016)</li>
+<li>Type Directives in Elm (2016)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1109/vlhcc.2015.7356972">Tutorons: Generating context-relevant, on-demand explanations and demonstrations of online code</a> (2015)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1111/cogs.12157">Inferring Learners' Knowledge From Their Actions</a> (2015)</li>
+<li>Compiler errors for humans (2015)</li>
+<li>Git (xkcd 1597) (2015)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/2594291.2594340">A lightweight symbolic virtual machine for solver-aided host languages</a> (2014)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-319-13206-8_9">Challenges and Confusions in Learning Version Control with Git</a> (2014)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-1-4842-0076-6">Pro Git (2nd edition)</a> (2014)</li>
+<li>A case of computational thinking: The subtle effect of hidden dependencies on the user experience of version control (2014)</li>
+<li>How to debug small programs (2014)</li>
+<li>How to create a minimal, reproducible example (2014)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/2509578.2509586">Growing solver-aided languages with rosette</a> (2013)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/2509578.2509584">What's wrong with git?: a conceptual design analysis</a> (2013)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/s11257-011-9118-4">Explaining the user experience of recommender systems</a> (2012)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/2491956.2462195">Automated feedback generation for introductory programming assignments</a> (2012)</li>
+<li>Answer to stack overflow question: “What is the explanation for these bizarre JavaScript behaviours mentioned in the ‘Wat’ talk for CodeMash 2012?” (2012)</li>
+<li>Stack overflow question: In javascript, why is "0" equal to false, but when tested by 'if' it is not false by itself? (2011)</li>
+<li>Depth: An Account of Scientific Explanation (2011)</li>
+<li>Stack overflow question: why is [1,2] + [3,4] = "1,23,4" in javascript? (2011)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/1824760.1824761">Extracting and answering why and why not questions about Java program output</a> (2010)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-642-14107-2_7">The Essence of JavaScript</a> (2010)</li>
+<li>Stack overflow question: why does (0 &lt; 5 &lt; 3) return true? (2010)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/1518701.1518942">Finding causes of program output with the Java Whyline</a> (2009)</li>
+<li>Stack overflow question: why does isnan(" ") (string with spaces) equal false? (2009)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-540-78800-3_24">Z3: An Efficient SMT Solver</a> (2008)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/1352322.1352147">The mystery of "b := (b = false)"</a> (2008)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/1368088.1368130">Debugging reinvented: asking and answering why and why not questions about program behavior</a> (2008)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1016/j.cognition.2006.03.004">From mere coincidences to meaningful discoveries</a> (2007)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1063/1.2508680">Are They All Created Equal? A Comparison of Different Concept Inventory Development Methodologies</a> (2007)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1016/j.tics.2006.08.004">The structure and function of explanations</a> (2006)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/985692.985712">Designing the whyline: a debugging interface for asking questions about program behavior</a> (2004)</li>
+<li>Content Analysis: An Introduction to Its Methodology (2004)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1080/14792772143000067">Goal-based Explanations of Actions and Outcomes</a> (2002)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/502034.502041">Bugs as deviant behavior: a general approach to inferring errors in systems code</a> (2001)</li>
+<li>Expert Blind Spot : When Content Knowledge Eclipses Pedagogical Content Knowledge (2001)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1080/135467896394447">Mental Models and Causal Explanation: Judgements of Probable Cause and Explanatory Relevance</a> (1996)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1207/s15327809jls0402_2">Cognitive Tutors: Lessons Learned</a> (1995)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1017/cbo9780511530128">Abductive inference : computation, philosophy, technology</a> (1994)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1119/1.2343497">Force concept inventory</a> (1992)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1017/s1358246100005130">Contrastive Explanation</a> (1990)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1037/0033-2909.107.1.65">Conversational processes and causal explanation</a> (1990)</li>
+<li>Mind Bugs: The Origins of Procedural Misconceptions (1990)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1207/s15516709cog0401_4">Mental Models in Cognitive Science</a> (1980)</li>
+<li>Logic and conversation (1975)</li>
+<li>The Nature of Explanation (1967)</li>
+</ul>
+</div>
+</details>
+</div>
+</div>
+</details>
+</div>
+</article>
+<div class="helia-identity"><span class="helia-id">chandra-2024-watchat</span> <span class="helia-kind">reference</span> <span class="helia-path">entries/refs/chandra-2024-watchat/chandra-2024-watchat.hel</span></div>
+</div>
+</body>
+</html>

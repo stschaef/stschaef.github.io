@@ -1,0 +1,1 @@
+heliaSearchData("d/universite-nice-sophia-antipolis",{"id":"universite-nice-sophia-antipolis","title":"Université Nice Sophia Antipolis","kind":"institution","tags":[],"authors":[],"venue":[],"date":null,"url":"universite-nice-sophia-antipolis.html","headings":[],"body":""});

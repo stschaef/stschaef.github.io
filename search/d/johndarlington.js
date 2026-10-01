@@ -1,0 +1,1 @@
+heliaSearchData("d/johndarlington",{"id":"johndarlington","title":"John Darlington","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"johndarlington.html","headings":[],"body":""});

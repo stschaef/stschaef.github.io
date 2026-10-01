@@ -1,0 +1,1 @@
+heliaSearchData("d/stites-2025-multi",{"id":"stites-2025-multi","title":"Multi-Language Probabilistic Programming","kind":"reference","tags":["probabilistic"],"authors":["John Li","Sam Stites","Steven Holtzen"],"venue":["OOPSLA","Conference on Object-Oriented Programming, Systems, Languages, and Applications"],"date":null,"url":"stites-2025-multi.html","headings":[],"body":""});

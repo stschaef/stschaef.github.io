@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>AlphaVerus: Bootstrapping Formally Verified Code Generation through Self-Improving Translation and Treefinement</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Ctext y=%22.9em%22 font-size=%2290%22%3E%F0%9F%8C%BB%3C/text%3E%3C/svg%3E">
+<meta name="generator" content="helia">
+<link rel="alternate" type="application/atom+xml" title="Steven Schaefer" href="feed.xml">
+<link rel="alternate" type="application/feed+json" title="Steven Schaefer" href="feed.json">
+<script src="helia/theme-version.js"></script>
+<script src="theme/folio-early.js"></script>
+<link rel="stylesheet" href="helia/theme.css">
+<link rel="stylesheet" href="helia/highlight.css">
+<link rel="stylesheet" href="helia/search.css">
+<link rel="stylesheet" href="theme/katex.css">
+<link rel="stylesheet" href="theme/recipe.css">
+<link rel="stylesheet" href="theme/site.css">
+<link rel="stylesheet" href="theme/folio.css">
+<script defer src="helia/runtime.js"></script>
+<script defer src="helia/search.js"></script>
+<script defer src="theme/glyphcraft.js"></script>
+<script defer src="theme/glyphart.js"></script>
+<script defer src="theme/glyphgen.js"></script>
+<script defer src="theme/ornament.js"></script>
+<script defer src="theme/folio.js"></script>
+<script defer src="theme/portrait.js"></script>
+<script type="application/json" id="helia-widgets">{"helia-cite-formats":"widgets/helia-cite-formats-a3294ac7.js"}</script>
+<link rel="modulepreload" href="widgets/helia-cite-formats-a3294ac7.js">
+<script type="module" src="widgets/runtime.js"></script>
+</head>
+<body>
+<nav class="helia-topbar"><a class="helia-home" href="home.html">Steven Schaefer</a><ul class="helia-nav-links"><li><a href="stevenschaefer.html">About Me</a></li><li><a href="research.html">Research</a></li><li><a href="new.html">New</a></li></ul><button type="button" class="helia-search-button" aria-label="Search (/ or Ctrl+K)" aria-haspopup="dialog"><span class="helia-search-icon">⌕</span><span class="helia-search-label">Search</span><kbd class="helia-search-key">/</kbd></button></nav>
+<div class="helia-page" data-kind="reference">
+<article class="helia-article">
+<header class="helia-header" data-entry="aggarwal-2024-alphaverus" data-kind="reference">
+<h2 class="helia-heading"><span class="helia-taxon">Reference.</span> AlphaVerus: Bootstrapping Formally Verified Code Generation through Self-Improving Translation and Treefinement</h2>
+<div class="helia-meta"><span class="helia-author"><a class="helia-entry-link" href="pranjalaggarwal.html" data-entry="pranjalaggarwal">Pranjal Aggarwal</a>, <a class="helia-entry-link" href="bryanparno.html" data-entry="bryanparno">Bryan Parno</a>, <a class="helia-entry-link" href="seanwelleck.html" data-entry="seanwelleck">Sean Welleck</a></span> · <span class="helia-byline"><a class="helia-entry-link" href="icml.html" data-entry="icml">ICML</a> · 2024</span> · <span class="helia-tags"><span class="helia-tag" data-tag="proof-engineering"><a class="helia-entry-link" href="tag-proof-engineering.html" data-entry="tag-proof-engineering">proof-engineering</a></span></span> · <span class="helia-entry-links"><span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/2412.06176">arXiv</a></span></span></div>
+</header>
+<div class="helia-body">
+<div class="helia-abstract">Automated code generation with large language models has gained significant traction, but there remains no guarantee on the correctness of generated code. We aim to use formal verification to provide mathematical guarantees that the generated code is correct. However, generating formally verified code with LLMs is hindered by the scarcity of training data and the complexity of formal proofs. To tackle this challenge, we introduce AlphaVerus, a self-improving framework that bootstraps formally verified code generation by iteratively translating programs from a higher-resource language and leveraging feedback from a verifier. AlphaVerus operates in three phases: exploration of candidate translations, Treefinement – a novel tree search algorithm for program refinement using verifier feedback, and filtering misaligned specifications and programs to prevent reward hacking. Through this iterative process, AlphaVerus enables a LLaMA-3.1-70B model to generate verified code without human intervention or model finetuning. AlphaVerus shows an ability to generate formally verified solutions for HumanEval and MBPP, laying the groundwork for truly trustworthy code-generation agents.</div>
+</div>
+<div class="helia-cite helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><h3 class="helia-heading">Cite</h3>
+</summary>
+<div class="helia-group-body">
+<div class="helia-widget" data-widget="helia-cite-formats" data-props="{&quot;key&quot;:&quot;aggarwal-2024-alphaverus&quot;,&quot;bibtex&quot;:&quot;@misc{aggarwal-2024-alphaverus,\n  author = {Pranjal Aggarwal and Bryan Parno and Sean Welleck},\n  title = {AlphaVerus: Bootstrapping Formally Verified Code Generation through Self-Improving Translation and Treefinement},\n  year = {2024},\n  month = {12},\n  eprint = {2412.06176},\n  archiveprefix = {arXiv}\n}&quot;,&quot;bib-file&quot;:&quot;aggarwal-2024-alphaverus.bib&quot;,&quot;hayagriva&quot;:&quot;aggarwal-2024-alphaverus:\n  type: misc\n  title: &#39;AlphaVerus: Bootstrapping Formally Verified Code Generation through Self-Improving Translation and Treefinement&#39;\n  author:\n  - Aggarwal, Pranjal\n  - Parno, Bryan\n  - Welleck, Sean\n  date: 2024-12\n  serial-number:\n    arxiv: &#39;2412.06176&#39;\n&quot;,&quot;yml-file&quot;:&quot;aggarwal-2024-alphaverus.yml&quot;}"><div class="helia-cite-key" data-copy="@aggarwal-2024-alphaverus" data-copy-label="citation key"><span class="helia-bib-key">Cite as</span> <code class="helia-raw-inline">@aggarwal-2024-alphaverus</code> (helia, typst) · <code class="helia-raw-inline">\cite{aggarwal-2024-alphaverus}</code> (LaTeX)</div>
+<div class="helia-cite-format helia-collapsible" data-format="bibtex" data-copy="true" data-copy-label="BibTeX">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">BibTeX</span></summary>
+<div class="helia-group-body">
+<details class="helia-code" open><summary class="helia-code-summary"><span class="helia-code-lang">bibtex</span> · <span class="helia-code-lines">8 lines</span></summary><pre class="helia-raw"><code class="language-bibtex"><span class="hl-text hl-bibtex"><span class="hl-meta hl-entry hl-braces hl-bibtex"><span class="hl-keyword hl-other hl-entry-type hl-bibtex"><span class="hl-punctuation hl-definition hl-keyword hl-bibtex">@</span>misc</span><span class="hl-punctuation hl-section hl-entry hl-begin hl-bibtex">{</span><span class="hl-entity hl-name hl-type hl-entry-key hl-bibtex">aggarwal-2024-alphaverus</span>,
+  <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">author</span> <span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span> <span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>Pranjal Aggarwal and Bryan Parno and Sean Welleck<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>,
+  <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">title</span> <span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span> <span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>AlphaVerus: Bootstrapping Formally Verified Code Generation through Self-Improving Translation and Treefinement<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>,
+  <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">year</span> <span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span> <span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>2024<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>,
+  <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">month</span> <span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span> <span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>12<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>,
+  <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">eprint</span> <span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span> <span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>2412.06176<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>,
+  <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">archiveprefix</span> <span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span> <span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>arXiv<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span>
+</span><span class="hl-punctuation hl-section hl-entry hl-end hl-bibtex">}</span></span></span></code></pre></details>
+</div>
+</details>
+</div>
+<div class="helia-cite-format helia-collapsible" data-format="hayagriva" data-copy="true" data-copy-label="hayagriva YAML">
+<details>
+<summary class="helia-group-summary"><span class="helia-group-title">hayagriva YAML (typst)</span></summary>
+<div class="helia-group-body">
+<details class="helia-code" open><summary class="helia-code-summary"><span class="helia-code-lang">yaml</span> · <span class="helia-code-lines">10 lines</span></summary><pre class="helia-raw"><code class="language-yaml"><span class="hl-source hl-yaml"><span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">aggarwal-2024-alphaverus</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">type</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">misc</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">title</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-quoted hl-single hl-yaml"><span class="hl-punctuation hl-definition hl-string hl-begin hl-yaml">&#39;</span>AlphaVerus: Bootstrapping Formally Verified Code Generation through Self-Improving Translation and Treefinement<span class="hl-punctuation hl-definition hl-string hl-end hl-yaml">&#39;</span></span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">author</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Aggarwal, Pranjal</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Parno, Bryan</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Welleck, Sean</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">date</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">2024-12</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">serial-number</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">arxiv</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-quoted hl-single hl-yaml"><span class="hl-punctuation hl-definition hl-string hl-begin hl-yaml">&#39;</span>2412.06176<span class="hl-punctuation hl-definition hl-string hl-end hl-yaml">&#39;</span></span>
+</span></code></pre></details>
+</div>
+</details>
+</div>
+<div class="helia-cite-files">Download: <a class="helia-link" href="aggarwal-2024-alphaverus.bib">aggarwal-2024-alphaverus.bib</a> · <a class="helia-link" href="aggarwal-2024-alphaverus.yml">aggarwal-2024-alphaverus.yml</a></div>
+</div>
+</div>
+</details>
+</div>
+<div class="helia-reference-cites helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">Cites 61 works (2 here)</span></summary>
+<div class="helia-group-body">
+<div class="helia-reference-cites-here helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">With notes (2)</span></summary>
+<div class="helia-group-body">
+<section class="helia-transclusion" data-entry="first-2023-baldur" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="first-2023-baldur"><span class="helia-title">Baldur: Whole-Proof Generation and Repair with Large Language Models</span>&nbsp;<a class="helia-slug" href="first-2023-baldur.html">first-2023-baldur</a><span class="helia-byline"><span class="helia-entry-link" data-entry="fse">ESEC/FSE</span> · 2023</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="first-2023-baldur" data-kind="reference">
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="pdf-url"><a class="helia-link helia-external" href="https://dl.acm.org/doi/pdf/10.1145/3611643.3616243">PDF</a></span> · <span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/3611643.3616243">DOI</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/conf/sigsoft/FirstRRB23">pldb</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="lattuada-2023-verus" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="lattuada-2023-verus"><span class="helia-title">Verus: Verifying Rust Programs using Linear Ghost Types</span>&nbsp;<a class="helia-slug" href="lattuada-2023-verus.html">lattuada-2023-verus</a><span class="helia-byline"><span class="helia-entry-link" data-entry="oopsla">OOPSLA</span> · 2023</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="lattuada-2023-verus" data-kind="reference">
+<div class="helia-abstract">The Rust programming language provides a powerful type system that checks linearity and borrowing, allowing code to safely manipulate memory without garbage collection and making Rust ideal for developing low-level, high-assurance systems. For such systems, formal verification can be useful to prove functional correctness properties beyond type safety. This paper presents Verus, an SMT-based tool for formally verifying Rust programs. With Verus, programmers express proofs and specifications using the Rust language, allowing proofs to take advantage of Rust’s linear types and borrow checking. We show how this allows proofs to manipulate linearly typed permissions that let Rust code safely manipulate memory, pointers, and concurrent resources. Verus organizes proofs and specifications using a novel mode system that distinguishes specifications, which are not checked for linearity and borrowing, from executable code and proofs, which are checked for linearity and borrowing. We formalize Verus’ linearity, borrowing, and modes in a small lambda calculus, for which we prove type safety and termination of specifications and proofs. We demonstrate Verus on a series of examples, including pointer-manipulating code (an xor-based doubly linked list), code with interior mutability, and concurrent code.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="pdf-url"><a class="helia-link helia-external" href="https://dl.acm.org/doi/pdf/10.1145/3586037">PDF</a></span> · <span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/3586037">DOI</a></span> · <span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/2303.05491">arXiv</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/journals/pacmpl/LattuadaHCBSZHPH23">pldb</a></span></div>
+</div>
+</div>
+</details>
+</section>
+</div>
+</details>
+</div>
+<div class="helia-reference-cites-away helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">External (59)</span></summary>
+<div class="helia-group-body">
+<ul>
+<li><a class="helia-link helia-external" href="https://doi.org/10.48550/arxiv.2410.15756">Automated Proof Generation for Rust Code via Self-Evolution</a> (2024)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3763174">AutoVerus: Automated Proof Generation for Rust Code</a> (2024)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.48550/arxiv.2408.03314">Scaling LLM Test-Time Compute Optimally can be More Effective than Scaling Model Parameters</a> (2024)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.48550/arxiv.2407.10040">Lean-STaR: Learning to Interleave Thinking and Proving</a> (2024)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.48550/arxiv.2406.16838">From Decoding to Meta-Generation: Inference-time Algorithms for Large Language Models</a> (2024)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.48550/arxiv.2406.11915">miniCodeProps: a Minimal Benchmark for Proving Code Properties</a> (2024)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.48550/arxiv.2406.10162">Sycophancy to Subterfuge: Investigating Reward-Tampering in Large Language Models</a> (2024)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1162/tacl_a_00713">When Can LLMs Actually Correct Their Own Mistakes? A Critical Survey of Self-Correction of LLMs</a> (2024)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1109/icse55347.2025.00002">Towards Neural Synthesis for SMT-Assisted Proof-Oriented Programming</a> (2024)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.48550/arxiv.2404.09939">A Survey on Deep Learning for Theorem Proving</a> (2024)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.48550/arxiv.2403.09472">Easy-to-Hard Generalization: Scalable Alignment Beyond Human Supervision</a> (2024)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3643763">Towards AI-Assisted Synthesis of Verified Dafny Methods</a> (2024)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.48550/arxiv.2402.00689">Occasionally Secure: A Comparative Analysis of Code Generation Assistants</a> (2024)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.48550/arxiv.2408.00724">An Empirical Analysis of Compute-Optimal Inference for Problem-Solving with Language Models</a> (2024)</li>
+<li><a class="helia-link helia-external" href="https://arxiv.org/abs/2406.08467">DafnyBench: A Benchmark for Formal Software Verification</a> (2024)</li>
+<li>HumanEval-Verus: Hand-written examples of verified Verus code derived from HumanEval (2024)</li>
+<li><a class="helia-link helia-external" href="https://arxiv.org/abs/2402.06457">V-STaR: Training Verifiers for Self-Taught Reasoners</a> (2024)</li>
+<li><a class="helia-link helia-external" href="https://arxiv.org/abs/2308.12950">Code Llama: Open Foundation Models for Code</a> (2024)</li>
+<li>Qwen2.5: A Party of Foundation Models (blog) (2024)</li>
+<li><a class="helia-link helia-external" href="https://arxiv.org/abs/2408.02666">Self-Taught Evaluators</a> (2024)</li>
+<li><a class="helia-link helia-external" href="https://arxiv.org/abs/2312.07104">SGLang: Efficient Execution of Structured Language Model Programs</a> (2024)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.48550/arxiv.2310.17807">Clover: Closed-Loop Verifiable Code Generation</a> (2023)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.48550/arxiv.2310.06770">SWE-bench: Can Language Models Resolve Real-World GitHub Issues?</a> (2023)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1609/aaai.v38i19.30185">Can LLM Replace Stack Overflow? A Study on Robustness and Reliability of Large Language Model Code Generation</a> (2023)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.48550/arxiv.2308.01825">Scaling Relationship on Learning Mathematical Reasoning with Large Language Models</a> (2023)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.48550/arxiv.2307.13528">FacTool: Factuality Detection in Generative AI - A Tool Augmented Framework for Multi-Task and Multi-Domain Scenarios</a> (2023)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.48550/arxiv.2305.11738">CRITIC: Large Language Models Can Self-Correct with Tool-Interactive Critiquing</a> (2023)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.18653/v1/2023.emnlp-main.761">Let's Sample Step by Step: Adaptive-Consistency for Efficient Reasoning and Coding with LLMs</a> (2023)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.48550/arxiv.2305.10601">Tree of Thoughts: Deliberate Problem Solving with Large Language Models</a> (2023)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.48550/arxiv.2305.08844">RL4F: Generating Natural Language Feedback with Reinforcement Learning for Repairing Model Outputs</a> (2023)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.48550/arxiv.2305.04087">Self-Edit: Fault-Aware Code Editor for Code Generation</a> (2023)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.52202/075280-0943">Is Your Code Generated by ChatGPT Really Correct? Rigorous Evaluation of Large Language Models for Code Generation</a> (2023)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.48550/arxiv.2304.05128">Teaching Large Language Models to Self-Debug</a> (2023)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.48550/arxiv.2303.17651">Self-Refine: Iterative Refinement with Self-Feedback</a> (2023)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1109/msr59073.2023.00082">Large Language Models and Simple, Stupid Bugs</a> (2023)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.48550/arxiv.2302.12813">Check Your Facts and Try Again: Improving Large Language Models with External Knowledge and Automated Feedback</a> (2023)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1126/science.adg4246">Understanding the limits of AI coding</a> (2023)</li>
+<li><a class="helia-link helia-external" href="https://arxiv.org/abs/2305.06161">StarCoder: may the source be with you!</a> (2023)</li>
+<li><a class="helia-link helia-external" href="https://arxiv.org/abs/2302.04761">Toolformer: Language Models Can Teach Themselves to Use Tools</a> (2023)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.48550/arxiv.2212.10535">A Survey of Deep Learning for Mathematical Reasoning</a> (2022)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3576915.3623157">Do Users Write More Insecure Code with AI Assistants?</a> (2022)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.48550/arxiv.2211.00053">Generating Sequences by Learning to Self-Correct</a> (2022)</li>
+<li><a class="helia-link helia-external" href="https://arxiv.org/abs/2203.11171">Self-Consistency Improves Chain of Thought Reasoning in Language Models</a> (2022)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1126/science.abq1158">Competition-level code generation with AlphaCode</a> (2022)</li>
+<li><a class="helia-link helia-external" href="https://arxiv.org/abs/2202.01344">Formal Mathematics Statement Curriculum Learning</a> (2022)</li>
+<li><a class="helia-link helia-external" href="https://arxiv.org/abs/2201.03544">The Effects of Reward Misspecification: Mapping and Mitigating Misaligned Models</a> (2022)</li>
+<li><a class="helia-link helia-external" href="https://arxiv.org/abs/2203.14465">STaR: Bootstrapping Reasoning With Reasoning</a> (2022)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3610721">Asleep at the Keyboard? Assessing the Security of GitHub Copilot’s Code Contributions</a> (2021)</li>
+<li><a class="helia-link helia-external" href="https://arxiv.org/abs/2108.07732">Program Synthesis with Large Language Models</a> (2021)</li>
+<li><a class="helia-link helia-external" href="https://arxiv.org/abs/2107.03374">Evaluating Large Language Models Trained on Code</a> (2021)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3428299">TacTok: semantics-aware proof synthesis</a> (2020)</li>
+<li><a class="helia-link helia-external" href="https://arxiv.org/abs/2009.03393">Generative Language Modeling for Automated Theorem Proving</a> (2020)</li>
+<li>The Coq Proof Assistant (2020)</li>
+<li><a class="helia-link helia-external" href="https://arxiv.org/abs/1805.07563">Reinforcement Learning of Theorem Proving</a> (2018)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/2837614.2837655">Dependent types and multi-monadic effects in F*</a> (2016)</li>
+<li>ProverBot 9000 : Neural Networks for Proof Assistance (2016)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-642-17511-4_20">Dafny: An Automatic Program Verifier for Functional Correctness</a> (2010)</li>
+<li>Crafting Papers on Machine Learning (2000)</li>
+<li>Lean theorem prover</li>
+</ul>
+</div>
+</details>
+</div>
+</div>
+</details>
+</div>
+</article>
+<div class="helia-identity"><span class="helia-id">aggarwal-2024-alphaverus</span> <span class="helia-kind">reference</span> <span class="helia-path">entries/refs/aggarwal-2024-alphaverus/aggarwal-2024-alphaverus.hel</span></div>
+</div>
+</body>
+</html>

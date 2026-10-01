@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>An Axiomatic Basis for Computer Programming on Relaxed Hardware Architectures: The AxSL Logics</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Ctext y=%22.9em%22 font-size=%2290%22%3E%F0%9F%8C%BB%3C/text%3E%3C/svg%3E">
+<meta name="generator" content="helia">
+<link rel="alternate" type="application/atom+xml" title="Steven Schaefer" href="feed.xml">
+<link rel="alternate" type="application/feed+json" title="Steven Schaefer" href="feed.json">
+<script src="helia/theme-version.js"></script>
+<script src="theme/folio-early.js"></script>
+<link rel="stylesheet" href="helia/theme.css">
+<link rel="stylesheet" href="helia/highlight.css">
+<link rel="stylesheet" href="helia/search.css">
+<link rel="stylesheet" href="theme/katex.css">
+<link rel="stylesheet" href="theme/recipe.css">
+<link rel="stylesheet" href="theme/site.css">
+<link rel="stylesheet" href="theme/folio.css">
+<script defer src="helia/runtime.js"></script>
+<script defer src="helia/search.js"></script>
+<script defer src="theme/glyphcraft.js"></script>
+<script defer src="theme/glyphart.js"></script>
+<script defer src="theme/glyphgen.js"></script>
+<script defer src="theme/ornament.js"></script>
+<script defer src="theme/folio.js"></script>
+<script defer src="theme/portrait.js"></script>
+<script type="application/json" id="helia-widgets">{"helia-cite-formats":"widgets/helia-cite-formats-a3294ac7.js"}</script>
+<link rel="modulepreload" href="widgets/helia-cite-formats-a3294ac7.js">
+<script type="module" src="widgets/runtime.js"></script>
+</head>
+<body>
+<nav class="helia-topbar"><a class="helia-home" href="home.html">Steven Schaefer</a><ul class="helia-nav-links"><li><a href="stevenschaefer.html">About Me</a></li><li><a href="research.html">Research</a></li><li><a href="new.html">New</a></li></ul><button type="button" class="helia-search-button" aria-label="Search (/ or Ctrl+K)" aria-haspopup="dialog"><span class="helia-search-icon">⌕</span><span class="helia-search-label">Search</span><kbd class="helia-search-key">/</kbd></button></nav>
+<div class="helia-page" data-kind="reference">
+<article class="helia-article">
+<header class="helia-header" data-entry="liu-2026-an" data-kind="reference">
+<h2 class="helia-heading"><span class="helia-taxon">Reference.</span> An Axiomatic Basis for Computer Programming on Relaxed Hardware Architectures: The AxSL Logics</h2>
+<div class="helia-meta"><span class="helia-author"><a class="helia-entry-link" href="zongyuanliu.html" data-entry="zongyuanliu">Zongyuan Liu</a>, <a class="helia-entry-link" href="angushammond.html" data-entry="angushammond">Angus Hammond</a>, <a class="helia-entry-link" href="thibautperami.html" data-entry="thibautperami">Thibaut Pérami</a>, <a class="helia-entry-link" href="petersewell.html" data-entry="petersewell">Peter Sewell</a>, <a class="helia-entry-link" href="larsbirkedal.html" data-entry="larsbirkedal">Lars Birkedal</a>, <a class="helia-entry-link" href="jeanpichonpharabod.html" data-entry="jeanpichonpharabod">Jean Pichon-Pharabod</a></span> · <span class="helia-byline"><a class="helia-entry-link" href="toplas.html" data-entry="toplas">TOPLAS</a> · 2026</span> · <span class="helia-tags"><span class="helia-tag" data-tag="concurrency"><a class="helia-entry-link" href="tag-concurrency.html" data-entry="tag-concurrency">concurrency</a></span> <span class="helia-tag" data-tag="hardware"><a class="helia-entry-link" href="tag-hardware.html" data-entry="tag-hardware">hardware</a></span></span> · <span class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/3786762">DOI</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/journals/toplas/LiuHPSBP26">pldb</a></span></span></div>
+</header>
+<div class="helia-body">
+<div class="helia-abstract">Very relaxed concurrency memory models, like those of the Arm-A, RISC-V and IBM Power hardware architectures, underpin much of computing but break a fundamental intuition about programs, namely that syntactic program order and the reads-from relation always both induce order in the execution. Instead, out-of-order execution is allowed except where prevented by certain pairwise dependencies, barriers, or other synchronisation. This means that there is no notion of the ‘current’ state of the program, making it challenging to design (and prove sound) syntax-directed, modular reasoning methods like Hoare logics, as usable resources cannot implicitly flow from one program point to the next. We present AxSL, a family of separation logics for relaxed hardware memory models, and instantiate it on sequential consistency and on the Arm-A memory model. The Arm-A instance captures the fine-grained reasoning underpinning the low-overhead synchronisation idioms used by high-performance systems code. We mechanise AxSL in the Iris separation logic framework, illustrate it on key examples, and prove it sound with respect to the axiomatic memory model of Arm-A. By instantiating AxSL on different memory models, we demonstrate the generality of our approach, and show that it is largely generic in the axiomatic model and in the instruction-set semantics, offering a potential way forward for compositional reasoning for other models, and for the combination of production concurrency models and full-scale ISAs.</div>
+</div>
+<div class="helia-cite helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><h3 class="helia-heading">Cite</h3>
+</summary>
+<div class="helia-group-body">
+<div class="helia-widget" data-widget="helia-cite-formats" data-props="{&quot;key&quot;:&quot;liu-2026-an&quot;,&quot;bibtex&quot;:&quot;@article{liu-2026-an, title={An Axiomatic Basis for Computer Programming on Relaxed Hardware Architectures: The AxSL Logics}, volume={48}, ISSN={1558-4593}, url={http://dx.doi.org/10.1145/3786762}, DOI={10.1145/3786762}, number={1}, journal={ACM Transactions on Programming Languages and Systems}, publisher={Association for Computing Machinery (ACM)}, author={Liu, Zongyuan and Hammond, Angus and Pérami, Thibaut and Sewell, Peter and Birkedal, Lars and Pichon-Pharabod, Jean}, year={2026}, month=Mar, pages={1–66} }&quot;,&quot;bib-file&quot;:&quot;liu-2026-an.bib&quot;,&quot;hayagriva&quot;:&quot;liu-2026-an:\n  type: article\n  title: &#39;An Axiomatic Basis for Computer Programming on Relaxed Hardware Architectures: The AxSL Logics&#39;\n  author:\n  - Liu, Zongyuan\n  - Hammond, Angus\n  - Pérami, Thibaut\n  - Sewell, Peter\n  - Birkedal, Lars\n  - Pichon-Pharabod, Jean\n  date: 2026-03\n  page-range: 1-66\n  url: http://dx.doi.org/10.1145/3786762\n  serial-number:\n    doi: 10.1145/3786762\n    issn: 1558-4593\n  parent:\n    type: periodical\n    title: ACM Transactions on Programming Languages and Systems\n    publisher: Association for Computing Machinery (ACM)\n    issue: 1\n    volume: 48\n&quot;,&quot;yml-file&quot;:&quot;liu-2026-an.yml&quot;}"><div class="helia-cite-key" data-copy="@liu-2026-an" data-copy-label="citation key"><span class="helia-bib-key">Cite as</span> <code class="helia-raw-inline">@liu-2026-an</code> (helia, typst) · <code class="helia-raw-inline">\cite{liu-2026-an}</code> (LaTeX)</div>
+<div class="helia-cite-format helia-collapsible" data-format="bibtex" data-copy="true" data-copy-label="BibTeX">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">BibTeX</span></summary>
+<div class="helia-group-body">
+<details class="helia-code" open><summary class="helia-code-summary"><span class="helia-code-lang">bibtex</span> · <span class="helia-code-lines">1 line</span></summary><pre class="helia-raw"><code class="language-bibtex"><span class="hl-text hl-bibtex"><span class="hl-meta hl-entry hl-braces hl-bibtex"><span class="hl-keyword hl-other hl-entry-type hl-bibtex"><span class="hl-punctuation hl-definition hl-keyword hl-bibtex">@</span>article</span><span class="hl-punctuation hl-section hl-entry hl-begin hl-bibtex">{</span><span class="hl-entity hl-name hl-type hl-entry-key hl-bibtex">liu-2026-an</span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">title</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>An Axiomatic Basis for Computer Programming on Relaxed Hardware Architectures: The AxSL Logics<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">volume</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>48<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">ISSN</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>1558-4593<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">url</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>http://dx.doi.org/10.1145/3786762<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">DOI</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>10.1145/3786762<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">number</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>1<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">journal</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>ACM Transactions on Programming Languages and Systems<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">publisher</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>Association for Computing Machinery (ACM)<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">author</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>Liu, Zongyuan and Hammond, Angus and Pérami, Thibaut and Sewell, Peter and Birkedal, Lars and Pichon-Pharabod, Jean<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">year</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>2026<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">month</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span>Mar</span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">pages</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>1–66<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span> </span><span class="hl-punctuation hl-section hl-entry hl-end hl-bibtex">}</span></span></span></code></pre></details>
+</div>
+</details>
+</div>
+<div class="helia-cite-format helia-collapsible" data-format="hayagriva" data-copy="true" data-copy-label="hayagriva YAML">
+<details>
+<summary class="helia-group-summary"><span class="helia-group-title">hayagriva YAML (typst)</span></summary>
+<div class="helia-group-body">
+<details class="helia-code" open><summary class="helia-code-summary"><span class="helia-code-lang">yaml</span> · <span class="helia-code-lines">22 lines</span></summary><pre class="helia-raw"><code class="language-yaml"><span class="hl-source hl-yaml"><span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">liu-2026-an</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">type</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">article</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">title</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-quoted hl-single hl-yaml"><span class="hl-punctuation hl-definition hl-string hl-begin hl-yaml">&#39;</span>An Axiomatic Basis for Computer Programming on Relaxed Hardware Architectures: The AxSL Logics<span class="hl-punctuation hl-definition hl-string hl-end hl-yaml">&#39;</span></span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">author</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Liu, Zongyuan</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Hammond, Angus</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Pérami, Thibaut</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Sewell, Peter</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Birkedal, Lars</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Pichon-Pharabod, Jean</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">date</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">2026-03</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">page-range</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">1-66</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">url</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">http://dx.doi.org/10.1145/3786762</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">serial-number</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">doi</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">10.1145/3786762</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">issn</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">1558-4593</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">parent</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">type</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">periodical</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">title</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">ACM Transactions on Programming Languages and Systems</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">publisher</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Association for Computing Machinery (ACM)</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">issue</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-constant hl-numeric hl-integer hl-decimal hl-yaml">1</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">volume</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-constant hl-numeric hl-integer hl-decimal hl-yaml">48</span>
+</span></code></pre></details>
+</div>
+</details>
+</div>
+<div class="helia-cite-files">Download: <a class="helia-link" href="liu-2026-an.bib">liu-2026-an.bib</a> · <a class="helia-link" href="liu-2026-an.yml">liu-2026-an.yml</a></div>
+</div>
+</div>
+</details>
+</div>
+<div class="helia-reference-cites helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">Cites 102 works (7 here)</span></summary>
+<div class="helia-group-body">
+<div class="helia-reference-cites-here helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">With notes (7)</span></summary>
+<div class="helia-group-body">
+<section class="helia-transclusion" data-entry="simner-2025-precise" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="simner-2025-precise"><span class="helia-title">Precise exceptions in relaxed architectures</span>&nbsp;<a class="helia-slug" href="simner-2025-precise.html">simner-2025-precise</a><span class="helia-byline"><span class="helia-entry-link" data-entry="isca">ISCA</span> · 2025</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="simner-2025-precise" data-kind="reference">
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/3695053.3731102">DOI</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="timany-2024-trillium" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="timany-2024-trillium"><span class="helia-title">Trillium: Higher-Order Concurrent and Distributed Separation Logic for Intensional Refinement</span>&nbsp;<a class="helia-slug" href="timany-2024-trillium.html">timany-2024-trillium</a><span class="helia-byline"><span class="helia-entry-link" data-entry="popl">POPL</span> · 2024</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="timany-2024-trillium" data-kind="reference">
+<div class="helia-abstract">Expressive state-of-the-art separation logics rely on step-indexing to model semantically complex features and to support modular reasoning about imperative higher-order concurrent and distributed programs. Stepindexing comes, however, with an inherent cost: it restricts the adequacy theorem of program logics to a fairly simple class of safety properties. In this paper, we explore if and how intensional refinement is a viable methodology for strengthening higher-order concurrent (and distributed) separation logic to prove non-trivial safety and liveness properties. Specifically, we introduce Trillium, a language-agnostic separation logic framework for showing intensional refinement relations between traces of a program and a model. We instantiate Trillium with a concurrent language and develop Fairis, a concurrent separation logic, that we use to show liveness properties of concurrent programs under fair scheduling assumptions through a fair liveness-preserving refinement of a model. We also instantiate Trillium with a distributed language and obtain an extension of Aneris, a distributed separation logic, which we use to show refinement relations between distributed systems and TLA + models.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="pdf-url"><a class="helia-link helia-external" href="https://dl.acm.org/doi/pdf/10.1145/3632851">PDF</a></span> · <span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/3632851">DOI</a></span> · <span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/2109.07863">arXiv</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/journals/pacmpl/TimanyGSHGNB24">pldb</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="gaher_etal_simuliris_2022" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="gaher_etal_simuliris_2022"><span class="helia-title">Simuliris: A Separation Logic Framework for Verifying Concurrent Program Optimizations</span>&nbsp;<a class="helia-slug" href="gaher_etal_simuliris_2022.html">gaher_etal_simuliris_2022</a><span class="helia-byline"><span class="helia-entry-link" data-entry="popl">POPL</span> · 2022</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="gaher_etal_simuliris_2022" data-kind="reference">
+<div class="helia-abstract">
+<p>Today’s compilers employ a variety of non-trivial optimizations to achieve good performance. One key trick compilers use to justify transformations of concurrent programs is to assume that the source program has no data races: if it does, they cause the program to have undefined behavior (UB) and give the compiler free rein. However, verifying correctness of optimizations that exploit this assumption is a non-trivial problem. In particular, prior work either has not proven that such optimizations preserve program termination (particularly non-obvious when considering optimizations that move instructions out of loop bodies), or has treated all synchronization operations as external functions (losing the ability to reorder instructions around them).</p>
+<p>In this work we present Simuliris, the first simulation technique to establish termination preservation (under a fair scheduler) for a range of concurrent program transformations that exploit UB in the source language. Simuliris is based on the idea of using ownership to reason modularly about the assumptions the compiler makes about programs with well-defined behavior. This brings the benefits of concurrent separation logics to the space of verifying program transformations: we can combine powerful reasoning techniques such as framing and coinduction to perform thread-local proofs of non-trivial concurrent program optimizations. Simuliris is built on a (non-step-indexed) variant of the Coq-based Iris framework, and is thus not tied to a particular language. In addition to demonstrating the effectiveness of Simuliris on standard compiler optimizations involving data race UB, we also instantiate it with Jung et al.’s Stacked Borrows semantics for Rust and generalize their proofs of interesting type-based aliasing optimizations to account for concurrency.</p>
+</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="pdf-url"><a class="helia-link helia-external" href="https://dl.acm.org/doi/pdf/10.1145/3498689">PDF</a></span> · <span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/3498689">DOI</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/journals/pacmpl/GaherSSJDKKD22">pldb</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="spies-2021-transfinitex" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="spies-2021-transfinitex"><span class="helia-title">Transfinite Iris: resolving an existential dilemma of step-indexed separation logic</span>&nbsp;<a class="helia-slug" href="spies-2021-transfinitex.html">spies-2021-transfinitex</a><span class="helia-byline"><span class="helia-entry-link" data-entry="pldi">PLDI</span> · 2021</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="spies-2021-transfinitex" data-kind="reference">
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="pdf-url"><a class="helia-link helia-external" href="https://dl.acm.org/doi/pdf/10.1145/3453483.3454031">PDF</a></span> · <span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/3453483.3454031">DOI</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/conf/pldi/SpiesGGTKDB21">pldb</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="jung_etal_iris_ground_up_2018" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="jung_etal_iris_ground_up_2018"><span class="helia-title">Iris from the ground up: A modular foundation for higher-order concurrent separation logic</span>&nbsp;<a class="helia-slug" href="jung_etal_iris_ground_up_2018.html">jung_etal_iris_ground_up_2018</a><span class="helia-byline"><span class="helia-entry-link" data-entry="jfp">JFP</span> · 2018</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="jung_etal_iris_ground_up_2018" data-kind="reference">
+<div class="helia-abstract">Iris is a framework for higher-order concurrent separation logic, which has been implemented in the Coq proof assistant and deployed very effectively in a wide variety of verification projects. Iris was designed with the express goal of simplifying and consolidating the foundations of modern separation logics, but it has evolved over time, and the design and semantic foundations of Iris itself have yet to be fully written down and explained together properly in one place. Here, we attempt to fill this gap, presenting a reasonably complete picture of the latest version of Iris (version 3.1), from first principles and in one coherent narrative.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="pdf-url"><a class="helia-link helia-external" href="https://www.cambridge.org/core/services/aop-cambridge-core/content/view/26301B518CE2C52796BFA12B8BAB5B5F/S0956796818000151a.pdf/div-class-title-iris-from-the-ground-up-a-modular-foundation-for-higher-order-concurrent-separation-logic-div.pdf">PDF</a></span> · <span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1017/s0956796818000151">DOI</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/journals/jfp/JungKJBBD18">pldb</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="jung-2015-iris" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="jung-2015-iris"><span class="helia-title">Iris: Monoids and Invariants as an Orthogonal Basis for Concurrent Reasoning</span>&nbsp;<a class="helia-slug" href="jung-2015-iris.html">jung-2015-iris</a><span class="helia-byline"><span class="helia-entry-link" data-entry="popl">POPL</span> · 2015</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="jung-2015-iris" data-kind="reference">
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="pdf-url"><a class="helia-link helia-external" href="https://dl.acm.org/doi/pdf/10.1145/2676726.2676980">PDF</a></span> · <span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/2676726.2676980">DOI</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/conf/popl/JungSSSTBD15">pldb</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="reynolds_separation_2002" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="reynolds_separation_2002"><span class="helia-title">Separation logic: A logic for shared mutable data structures</span>&nbsp;<a class="helia-slug" href="reynolds_separation_2002.html">reynolds_separation_2002</a><span class="helia-byline"><span class="helia-entry-link" data-entry="lics">LICS</span> · 2002</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="reynolds_separation_2002" data-kind="reference">
+<div class="helia-abstract">In joint work with Peter O’Hearn and others, based on early ideas of Burstall, we have developed an extension of Hoare logic that permits reasoning about low-level imperative programs that use shared mutable data structure. The simple imperative programming language is extended with commands (not expressions) for accessing and modifying shared structures, and for explicit allocation and deallocation of storage. Assertions are extended by introducing a “separating conjunction” that asserts that its subformulas hold for disjoint parts of the heap, and a closely related “separating implication”. Coupled with the inductive definition of predicates on abstract data structures, this extension permits the concise and flexible description of structures with controlled sharing. In this paper, we survey the current development of this program logic, including extensions that permit unrestricted address arithmetic, dynamically allocated arrays, and recursive procedures. We also discuss promising future directions.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1109/lics.2002.1029817">DOI</a></span></div>
+</div>
+</div>
+</details>
+</section>
+</div>
+</details>
+</div>
+<div class="helia-reference-cites-away helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">External (95)</span></summary>
+<div class="helia-group-body">
+<ul>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3776650">ArchSem: Reusable Rigorous Semantics of Relaxed Architectures</a> (2026)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1109/mm.2024.3422668">Puss in Boots: Formalizing Arm’s Virtual Memory System Architecture</a> (2024)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3632863">An Axiomatic Basis for Computer Programming on the Relaxed Arm-A Architecture: The AxSL Logic</a> (2024)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-031-57267-8_8">Specifying and Verifying Persistent Libraries</a> (2024)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-031-37706-8_11">Rely-Guarantee Reasoning for Causally Consistent Shared Memory</a> (2023)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3591279">VMSL: A Separation Logic for Mechanised Robust Safety of Virtual Machines Communicating above FF-A</a> (2023)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3622820">Spirea: A Mechanized Concurrent Separation Logic for Weak Persistent Memory</a> (2023)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3580285">Mechanised Operational Reasoning for C11 Programs with Relaxed Dependencies</a> (2023)</li>
+<li>ARM architecture reference manual (for A-profile architecture) (2023)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-030-99336-8_9">View-Based Owicki–Gries Reasoning for Persistent x86-TSO</a> (2022)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3519939.3523718">Sequential reasoning for optimizing compilers under weak memory concurrency</a> (2022)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3519939.3523451">Compass: strong and compositional library specifications in relaxed memory separation logic</a> (2022)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3519939.3523434">Islaris: verification of machine code against authoritative ISA semantics</a> (2022)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-030-99336-8_6">Relaxed virtual memory in Armv8-A</a> (2022)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3458926">Armed Cats</a> (2021)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-030-81685-8_14">Isla: Integrating Full-Scale ISA Semantics and Axiomatic Concurrency Models</a> (2021)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/s10817-021-09610-2">Integrating Owicki–Gries for C11-Style Memory Models into Isabelle/HOL</a> (2021)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3453483.3454065">Integration verification across software and hardware for a simple embedded system</a> (2021)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3477132.3483560">Formal Verification of a Multiprocessor Hypervisor on Arm Relaxed Memory Hardware</a> (2021)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-030-90870-6_13">Owicki-Gries Reasoning for C11 Programs with Relaxed Dependencies</a> (2021)</li>
+<li>Program logic for weak memory concurrency (2021)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.4230/lipics.ecoop.2020.11">Owicki-Gries reasoning for C11 RAR</a> (2020)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3385412.3386010">Promising 2.0: global optimizations in relaxed memory concurrency</a> (2020)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3408978">Cosmo: a concurrent separation logic for multicore OCaml</a> (2020)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-030-44914-8_22">Modular Relaxed Dependencies in Weak Memory Concurrency</a> (2020)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3428219">Persistent Owicki-Gries reasoning: a program logic for reasoning about persistent programs on Intel-x86</a> (2020)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-030-44914-8_23">ARMv8-A System Semantics: Instruction Fetch in Relaxed Architectures</a> (2020)</li>
+<li>Linux-kernel memory model (P0124R7) (2020)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3290383">Grounding thin-air reads with event structures</a> (2019)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3371102">RustBelt meets relaxed memory</a> (2019)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3314221.3314624">Promising-ARM/RISC-V: a simpler and faster operational concurrency model</a> (2019)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3371119">Interaction trees: representing recursive and impure programs in Coq</a> (2019)</li>
+<li>The RISC-V instruction set manual volume I: unprivileged ISA, document version 20191213 (2019)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3173162.3177156">Frightening Small Children and Disconcerting Grown-ups: Concurrency in the Linux Kernel</a> (2018)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3293883.3295702">Verifying C11 programs operationally</a> (2018)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.17863/cam.39379">The semantics of multicopy atomic ARMv8 and RISC-V</a> (2018)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-319-89960-2_11">Automating Deductive Verification for Weak-Memory Programs</a> (2018)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-319-89884-1_13">A Separation Logic for a Promising Semantics</a> (2018)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3009837.3009883">Ogre and Pythia: an invariance proof method for weak consistency models</a> (2017)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-662-54434-1_17">Tackling Real-Life Relaxed Concurrency with FSL++</a> (2017)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3009837.3009839">Mixed-size concurrency: ARM, POWER, C/C++11, and SC</a> (2017)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.4230/lipics.ecoop.2017.17">Strong logic for weak memory: reasoning about release-acquire consistency in Iris</a> (2017)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3009837.3009850">A promising semantics for relaxed-memory concurrency</a> (2017)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3062341.3062352">Repairing sequential consistency in C/C++11</a> (2017)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3158107">Simplifying ARM concurrency: multicopy-atomic axiomatic and operational models for ARMv8</a> (2017)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/2984450.2984457">Concurrent separation logic</a> (2016)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1109/pdp.2016.103">Reasoning about Fences and Relaxed Atomics</a> (2016)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/2933575.2934536">On Thin Air Reads Towards an Event Structures Model of Relaxed Memory</a> (2016)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/2837614.2837616">A concurrency semantics for relaxed atomics that permits optimisation and avoids thin-air executions</a> (2016)</li>
+<li>The ARMv8 application level memory model (2016)</li>
+<li><a class="helia-link helia-external" href="https://arxiv.org/abs/1611.01507">Counterexamples and proof loophole for the C/C++ to POWER and ARMv7 trailing-sync compiler mappings</a> (2016)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-662-46669-8_12">The Problem of Programming Language Concurrency Semantics</a> (2015)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/2676726.2676984">A Calculus for Relaxed Memory</a> (2015)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-662-49122-5_20">A Program Logic for C11 Memory Fences</a> (2015)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/2830772.2830775">An integrated concurrency and core-ISA architectural envelope definition, and test oracle, for IBM POWER multiprocessors</a> (2015)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-662-47666-6_25">Owicki-Gries Reasoning for Weak Memory Models</a> (2015)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-662-46669-8_30">A Separation Logic for Fictional Sequential Consistency</a> (2015)</li>
+<li><a class="helia-link helia-external" href="https://arxiv.org/abs/1512.01416">New lace and arsenic: adventures in weak memory with a program logic</a> (2015)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-642-54833-8_9">Impredicative Concurrent Abstract Predicates</a> (2014)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/2660193.2660243">GPS: navigating weak memory with ghosts, protocols, and separation</a> (2014)</li>
+<li>Verifying TSO programs (Report CW660) (2014)</li>
+<li>Program logic for local reasoning in TSO (2014)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/2627752">Herding Cats</a> (2013)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/2429069.2429104">Views: compositional reasoning for concurrent programs</a> (2013)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/2429069.2429105">High-level separation logic for low-level code</a> (2013)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/2509136.2509532">Relaxed separation logic: a program logic for C11 concurrency</a> (2013)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-642-37036-6_12">Ribbon Proofs for Separation Logic</a> (2013)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/2103656.2103717">Clarifying and compiling C/C++ concurrency: from C++11 to POWER</a> (2012)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/2254064.2254102">Synchronising C/C++ and POWER</a> (2012)</li>
+<li>Weak-memory local reasoning (dissertation draft) (2012)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/1926385.1926394">Mathematizing C++ concurrency</a> (2011)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/1993498.1993520">Understanding POWER multiprocessors</a> (2011)</li>
+<li>Programming languages—C++ (ISO/IEC 14882:2011) (2011)</li>
+<li>A proposal for weak-memory local reasoning (2011)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-642-14295-6_25">Fences in Weak Memory Models</a> (2010)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-642-14107-2_24">Concurrent Abstract Predicates</a> (2010)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-642-15057-9_4">A Rely-Guarantee Proof System for x86-TSO</a> (2010)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-642-03359-9_27">A Better x86 Memory Model: x86-TSO</a> (2009)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/1480881.1480929">The semantics of x86-CC multiprocessor machine code</a> (2009)</li>
+<li>Formal verification of machine-code programs (2009)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/1375581.1375591">Foundations of the C++ concurrency memory model</a> (2008)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1109/fmcad.2008.ecp.24">Machine-Code Verification for Multiple Architectures - An Application of Decompilation into Logic</a> (2008)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/1189736.1189737">Specifying memory consistency of write buffer multiprocessors</a> (2007)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-540-75698-9_18">Hoare Logic for ARM Machine Code</a> (2007)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-540-71209-1_44">Hoare Logic for Realistically Modelled Machine Code</a> (2007)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/3-540-44802-0_1">Local Reasoning about Programs that Alter Data Structures</a> (2001)</li>
+<li>Memory consistency models for shared-memory multiprocessors (1995)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1109/icpp.1993.15">A Characterization of Scalable Shared Memories</a> (1993)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1109/mahc.1984.10017">An Early Program Proof by Alan Turing</a> (1984)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1109/tse.1977.229904">Proving the Correctness of Multiprocess Programs</a> (1977)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/bf00268134">An axiomatic proof technique for parallel programs I</a> (1976)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/363235.363259">An axiomatic basis for computer programming</a> (1969)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1090/psapm/019/0235771">Assigning meanings to programs</a> (1967)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/bf01966091">Proof of algorithms by general snapshots</a> (1966)</li>
+<li>Checking a large routine (1949)</li>
+</ul>
+</div>
+</details>
+</div>
+</div>
+</details>
+</div>
+</article>
+<div class="helia-identity"><span class="helia-id">liu-2026-an</span> <span class="helia-kind">reference</span> <span class="helia-path">entries/refs/liu-2026-an/liu-2026-an.hel</span></div>
+</div>
+</body>
+</html>

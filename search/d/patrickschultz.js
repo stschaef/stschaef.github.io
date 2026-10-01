@@ -1,0 +1,1 @@
+heliaSearchData("d/patrickschultz",{"id":"patrickschultz","title":"Patrick Schultz","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"patrickschultz.html","headings":[],"body":""});

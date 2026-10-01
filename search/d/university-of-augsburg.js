@@ -1,0 +1,1 @@
+heliaSearchData("d/university-of-augsburg",{"id":"university-of-augsburg","title":"University of Augsburg","kind":"institution","tags":[],"authors":[],"venue":[],"date":null,"url":"university-of-augsburg.html","headings":[],"body":""});

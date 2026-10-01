@@ -1,0 +1,1 @@
+heliaSearchData("d/universite-de-rennes",{"id":"universite-de-rennes","title":"Université de Rennes","kind":"institution","tags":[],"authors":[],"venue":[],"date":null,"url":"universite-de-rennes.html","headings":[],"body":""});

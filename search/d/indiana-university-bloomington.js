@@ -1,0 +1,1 @@
+heliaSearchData("d/indiana-university-bloomington",{"id":"indiana-university-bloomington","title":"Indiana University Bloomington","kind":"institution","tags":[],"authors":[],"venue":[],"date":null,"url":"indiana-university-bloomington.html","headings":[],"body":""});

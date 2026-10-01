@@ -1,0 +1,1 @@
+heliaSearchData("d/scripps-research-institute",{"id":"scripps-research-institute","title":"Scripps Research Institute","kind":"institution","tags":[],"authors":[],"venue":[],"date":null,"url":"scripps-research-institute.html","headings":[],"body":""});

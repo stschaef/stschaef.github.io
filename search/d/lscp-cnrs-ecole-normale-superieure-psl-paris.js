@@ -1,0 +1,1 @@
+heliaSearchData("d/lscp-cnrs-ecole-normale-superieure-psl-paris",{"id":"lscp-cnrs-ecole-normale-superieure-psl-paris","title":"LSCP (CNRS / École Normale Supérieure, PSL), Paris","kind":"institution","tags":[],"authors":[],"venue":[],"date":null,"url":"lscp-cnrs-ecole-normale-superieure-psl-paris.html","headings":[],"body":""});

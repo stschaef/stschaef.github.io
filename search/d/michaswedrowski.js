@@ -1,0 +1,1 @@
+heliaSearchData("d/michaswedrowski",{"id":"michaswedrowski","title":"Michał Swędrowski","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"michaswedrowski.html","headings":[],"body":""});

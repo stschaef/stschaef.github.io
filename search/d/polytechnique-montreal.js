@@ -1,0 +1,1 @@
+heliaSearchData("d/polytechnique-montreal",{"id":"polytechnique-montreal","title":"Polytechnique Montréal","kind":"institution","tags":[],"authors":[],"venue":[],"date":null,"url":"polytechnique-montreal.html","headings":[],"body":""});

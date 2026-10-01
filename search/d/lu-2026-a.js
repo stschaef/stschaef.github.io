@@ -1,0 +1,1 @@
+heliaSearchData("d/lu-2026-a",{"id":"lu-2026-a","title":"A Fast Quantitative Analyzer for NetKAT","kind":"reference","tags":["kleene-algebra"],"authors":["Alexandra Silva","Kevin Batz","Mark Moeller","Nate Foster","Oliver Bøving","Qiancheng Fu","Thomas Lu","Tiago Ferreira"],"venue":["arXiv"],"date":null,"url":"lu-2026-a.html","headings":[],"body":""});

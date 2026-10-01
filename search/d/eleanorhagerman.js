@@ -1,0 +1,1 @@
+heliaSearchData("d/eleanorhagerman",{"id":"eleanorhagerman","title":"Eleanor Hagerman","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"eleanorhagerman.html","headings":[],"body":""});

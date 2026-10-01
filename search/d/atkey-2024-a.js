@@ -1,0 +1,1 @@
+heliaSearchData("d/atkey-2024-a",{"id":"atkey-2024-a","title":"A Semantic Proof of Generalised Cut Elimination for Deep Inference","kind":"reference","tags":["linear-logic"],"authors":["Robert Atkey","Wen Kokke"],"venue":["ENTCS","Electronic Notes in Theoretical Computer Science (now ENTICS)"],"date":null,"url":"atkey-2024-a.html","headings":[],"body":""});

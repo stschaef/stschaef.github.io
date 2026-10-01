@@ -1,0 +1,1 @@
+heliaSearchData("d/jasminblanchette",{"id":"jasminblanchette","title":"Jasmin Blanchette","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"jasminblanchette.html","headings":[],"body":""});

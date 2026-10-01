@@ -1,1 +1,1 @@
-heliaSearchData("t/sw",{"swap":[696,2],"swept":[91,1],"swimming":[92,1],"sword":[898,1]});
+heliaSearchData("t/sw",{"swan":[1894,128,1624,32],"swap":[2825,2],"swarat":[3519,128],"swaratchaudhuri":[3519,32],"swaroop":[3433,32,87,128],"swaroopmishra":[3520,32],"swarthmore":[3521,160],"swasey":[947,128,1082,32],"swedrowski":[2546,128,887,32],"swept":[357,1],"swierstra":[180,32,336,32,3667,128],"swiftly":[3522,160],"swimming":[358,1],"switch":[1724,160],"switching":[2208,128,842,128],"sword":[3665,1]});

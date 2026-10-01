@@ -1,0 +1,1 @@
+heliaSearchData("d/ranaldclouston",{"id":"ranaldclouston","title":"Ranald Clouston","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"ranaldclouston.html","headings":[],"body":""});

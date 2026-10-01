@@ -1,0 +1,1 @@
+heliaSearchData("d/fiore-2025-an",{"id":"fiore-2025-an","title":"An axiomatics and a combinatorial model of creation/annihilation operators","kind":"reference","tags":["category-theory"],"authors":["Marcelo P. Fiore"],"venue":["MSCS","Mathematical Structures in Computer Science"],"date":null,"url":"fiore-2025-an.html","headings":[],"body":""});

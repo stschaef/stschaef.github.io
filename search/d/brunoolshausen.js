@@ -1,0 +1,1 @@
+heliaSearchData("d/brunoolshausen",{"id":"brunoolshausen","title":"Bruno Olshausen","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"brunoolshausen.html","headings":[],"body":""});

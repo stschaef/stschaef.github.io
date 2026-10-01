@@ -1,0 +1,1 @@
+heliaSearchData("d/yale-university",{"id":"yale-university","title":"Yale University","kind":"institution","tags":[],"authors":[],"venue":[],"date":null,"url":"yale-university.html","headings":[],"body":""});

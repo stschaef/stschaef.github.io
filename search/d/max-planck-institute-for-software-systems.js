@@ -1,0 +1,1 @@
+heliaSearchData("d/max-planck-institute-for-software-systems",{"id":"max-planck-institute-for-software-systems","title":"Max Planck Institute for Software Systems","kind":"institution","tags":[],"authors":[],"venue":[],"date":null,"url":"max-planck-institute-for-software-systems.html","headings":[],"body":""});

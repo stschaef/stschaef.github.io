@@ -1,0 +1,1 @@
+heliaSearchData("d/anandraotadipatri",{"id":"anandraotadipatri","title":"Anand Rao Tadipatri","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"anandraotadipatri.html","headings":[],"body":""});

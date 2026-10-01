@@ -1,0 +1,1 @@
+heliaSearchData("d/ulrikbuchholtz",{"id":"ulrikbuchholtz","title":"Ulrik Buchholtz","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"ulrikbuchholtz.html","headings":[],"body":""});

@@ -1,0 +1,1 @@
+heliaSearchData("d/karlsruhe-institute-of-technology",{"id":"karlsruhe-institute-of-technology","title":"Karlsruhe Institute of Technology","kind":"institution","tags":[],"authors":[],"venue":[],"date":null,"url":"karlsruhe-institute-of-technology.html","headings":[],"body":""});

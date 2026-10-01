@@ -1,0 +1,1 @@
+heliaSearchData("d/tag-category-theory",{"id":"tag-category-theory","title":"category-theory","kind":"tag","tags":[],"authors":[],"venue":[],"date":null,"url":"tag-category-theory.html","headings":[],"body":""});

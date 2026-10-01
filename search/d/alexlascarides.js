@@ -1,0 +1,1 @@
+heliaSearchData("d/alexlascarides",{"id":"alexlascarides","title":"Alex Lascarides","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"alexlascarides.html","headings":[],"body":""});

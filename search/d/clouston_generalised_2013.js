@@ -1,1 +1,1 @@
-heliaSearchData("d/clouston_generalised_2013",{"id":"clouston_generalised_2013","title":"Generalised Name Abstraction for Nominal Sets","kind":"note","tags":[],"authors":[],"venue":[],"date":null,"url":"clouston_generalised_2013.html","headings":[],"body":""});
+heliaSearchData("d/clouston_generalised_2013",{"id":"clouston_generalised_2013","title":"Generalised Name Abstraction for Nominal Sets","kind":"reference","tags":[],"authors":["Richard Clouston"],"venue":[],"date":null,"url":"clouston_generalised_2013.html","headings":[],"body":""});

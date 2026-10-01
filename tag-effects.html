@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>effects</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Ctext y=%22.9em%22 font-size=%2290%22%3E%F0%9F%8C%BB%3C/text%3E%3C/svg%3E">
+<meta name="generator" content="helia">
+<link rel="alternate" type="application/atom+xml" title="Steven Schaefer" href="feed.xml">
+<link rel="alternate" type="application/feed+json" title="Steven Schaefer" href="feed.json">
+<script src="helia/theme-version.js"></script>
+<script src="theme/folio-early.js"></script>
+<link rel="stylesheet" href="helia/theme.css">
+<link rel="stylesheet" href="helia/highlight.css">
+<link rel="stylesheet" href="helia/search.css">
+<link rel="stylesheet" href="theme/katex.css">
+<link rel="stylesheet" href="theme/recipe.css">
+<link rel="stylesheet" href="theme/site.css">
+<link rel="stylesheet" href="theme/folio.css">
+<script defer src="helia/runtime.js"></script>
+<script defer src="helia/search.js"></script>
+<script defer src="theme/glyphcraft.js"></script>
+<script defer src="theme/glyphart.js"></script>
+<script defer src="theme/glyphgen.js"></script>
+<script defer src="theme/ornament.js"></script>
+<script defer src="theme/folio.js"></script>
+<script defer src="theme/portrait.js"></script>
+</head>
+<body>
+<nav class="helia-topbar"><a class="helia-home" href="home.html">Steven Schaefer</a><ul class="helia-nav-links"><li><a href="stevenschaefer.html">About Me</a></li><li><a href="research.html">Research</a></li><li><a href="new.html">New</a></li></ul><button type="button" class="helia-search-button" aria-label="Search (/ or Ctrl+K)" aria-haspopup="dialog"><span class="helia-search-icon">⌕</span><span class="helia-search-label">Search</span><kbd class="helia-search-key">/</kbd></button></nav>
+<div class="helia-page" data-kind="tag">
+<article class="helia-article">
+<header class="helia-header" data-entry="tag-effects" data-kind="tag">
+<h2 class="helia-heading"><span class="helia-taxon">Tag.</span> effects</h2>
+<div class="helia-meta"><span class="helia-byline"><span class="helia-tag-name">effects</span></span></div>
+</header>
+<div class="helia-body">
+</div>
+<div class="helia-tag-group">
+<section class="helia-heading-section" data-level="1">
+<details open>
+<summary class="helia-heading-summary"><h2 class="helia-heading">References (41)</h2>
+</summary>
+<div class="helia-heading-body">
+<section class="helia-transclusion" data-entry="mathiasen-2026-yarrow" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="mathiasen-2026-yarrow"><span class="helia-title">Yarrow: Reconciling Effect Handlers and Region-Based Memory Management</span>&nbsp;<a class="helia-slug" href="mathiasen-2026-yarrow.html">mathiasen-2026-yarrow</a><span class="helia-byline"><span class="helia-entry-link" data-entry="arxiv">arXiv</span> · 2026</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="mathiasen-2026-yarrow" data-kind="reference">
+<div class="helia-abstract">We present a new ML-like programming language Yarrow with algebraic effects and region-based memory management. Reconciling these programming language features into one language is challenging: the non-local control flow of algebraic effects break the stack discipline of function calls and returns that region-based memory management relies on, and multi-shot effect handlers break the invariant that regions can be exited at most once. We present a program logic, called Yarrow Logic (YL), that supports safe and modular reasoning about regions in the presence of one-shot and multi-shot effect handlers. We prove the logic sound w.r.t. the operational semantics of Yarrow which is inspired by the runtime of OCaml but refined for regions. We use YL to prove correctness of a number of case studies with algebraic effects, including checkpointing, asynchronous computation and a LIFO data structure implementation. Since all memory locations used in these case studies are allocated in regions, these case studies avoid using the less efficient garbage collected heap memory. We have formalized Yarrow’s operational semantics, the Yarrow program logic, and all our case studies using the Iris separation logic framework on top of the Rocq Prover.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/2607.15876">arXiv</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="legoupil-2026-iris" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="legoupil-2026-iris"><span class="helia-title">Iris-WasmFX: Modular Reasoning for Wasm Stack Switching</span>&nbsp;<a class="helia-slug" href="legoupil-2026-iris.html">legoupil-2026-iris</a><span class="helia-byline"><span class="helia-entry-link" data-entry="pldi">PLDI</span> · 2026</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="legoupil-2026-iris" data-kind="reference">
+<div class="helia-abstract">WasmFX is a proposed extension of Wasm, a low-level portable bytecode, with primitives for explicitly manipulating execution stacks as continuations. By exposing an interface of effect handlers, WasmFX enables non-local control flow features to be compiled in a modular way: one handcrafts a library that directly implements such features in WasmFX, and compilation then merely calls into the library. Alas, code involving non-local control flow is notoriously challenging, and so this proposal raises the questions of the soundness of the language extension, and of the correctness of such handcrafted libraries. In this paper, we first describe WasmFXCert, a mechanisation of WasmFX in Rocq, and prove the expected type soundness result. We then develop Iris-WasmFX, a program logic to reason about Wasm programs that use effect handlers, and illustrate its application to two key use cases of effect handlers: a coroutine library, and a generator. Together, these validate the design of WasmFX, and provide a modular framework for verifying future effect-based libraries.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="pdf-url"><a class="helia-link helia-external" href="https://www.research.ed.ac.uk/files/681211499/LegoupilEtalPACMPL2026Iris-WasmFX.pdf">PDF</a></span> · <span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/3808271">DOI</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/journals/pacmpl/LegoupilPBLP26">pldb</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="mangel-2026-syntax" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="mangel-2026-syntax"><span class="helia-title">Syntax and semantics of focalisation with relative monads and comonads</span>&nbsp;<a class="helia-slug" href="mangel-2026-syntax.html">mangel-2026-syntax</a><span class="helia-byline"><span class="helia-entry-link" data-entry="arxiv">arXiv</span> · 2026</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="mangel-2026-syntax" data-kind="reference">
+<div class="helia-abstract">The logical principles of focalisation and polarisation can be used to design well-behaved term syntaxes for sequent calculus, which play a role as meta-languages for describing effectful computation. On the semantics side, this corresponds to an axiomatic and polarised notion of model of computation stated in terms of adjunctions over non-associative categories. In this paper, we study the special and delicate cases of resource and effect modalities in a general intuitionistic and linear setting: an exponential comonad <span class="helia-math helia-math-inline helia-mathml"><math><mo form="postfix">!</mo></math></span> (refining <span class="helia-math helia-math-inline helia-mathml"><math><mi>□</mi></math></span>) and a strong monad <span class="helia-math helia-math-inline helia-mathml"><math><mo lspace="0em" rspace="0em">◊</mo></math></span>. The starting point of our contribution is noticing that the completeness for a polarised syntax for <span class="helia-math helia-math-inline helia-mathml"><math><mo form="postfix">!</mo></math></span> and <span class="helia-math helia-math-inline helia-mathml"><math><mo lspace="0em" rspace="0em">◊</mo></math></span> with respect to (co)monads in linear call-by-push-value models can be achieved if we move to relative (co)monads: more precisely, comonads relative to <span class="helia-math helia-math-inline helia-mathml"><math><mo lspace="0em" rspace="0em" stretchy="false">↓</mo></math></span> (the positive shift functor) for <span class="helia-math helia-math-inline helia-mathml"><math><mo form="postfix">!</mo></math></span> and monads relative to <span class="helia-math helia-math-inline helia-mathml"><math><mo lspace="0em" rspace="0em" stretchy="false">↑</mo></math></span> (the negative shift functor) for <span class="helia-math helia-math-inline helia-mathml"><math><mo lspace="0em" rspace="0em">◊</mo></math></span>. These specialisations of the concept of relative (co)monad to call-by-push-value adjunctions recently appeared. Yet the syntax we present arose from proof-theoretic consideration, without the link with relative (co)monads being noticed at the time. Our first remark is thus that (co)monads relative to a call-by-push-value adjunction have been motivated previously from a proof-theoretic perspective in the context of focalisation, which also provides a meta-language for these concepts in an effectful setting. We carry out the study of these modalities from the axiomatic, non-associative point of view. We recall the notion of adjunction over non-associative categories, and establish correspondence results between this notion of adjunction and that of relative adjunction. This correspondence is then extended to linear-non-linear and strong versions of adjunctions as needed to model <span class="helia-math helia-math-inline helia-mathml"><math><mo form="postfix">!</mo></math></span> and <span class="helia-math helia-math-inline helia-mathml"><math><mo lspace="0em" rspace="0em">◊</mo></math></span>.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/2606.14652">arXiv</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="yang-2026-modular" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="yang-2026-modular"><span class="helia-title">Modular models of monoids with operations by lifting functors along fibrations</span>&nbsp;<a class="helia-slug" href="yang-2026-modular.html">yang-2026-modular</a><span class="helia-byline"><span class="helia-entry-link" data-entry="jfp">JFP</span> · 2026</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="yang-2026-modular" data-kind="reference">
+<div class="helia-abstract">Inspired by Plotkin and Power’s algebraic treatment of computational effects and the principle of notions of computations as monoids, we propose a categorical framework for equational theories and models of monoids equipped with operations. This framework generalises Plotkin and Power’s algebraic treatment of effectful operations taking or returning values as input or output to operations that may take or return computations as input or output. Additionally, to give semantic models of computational effects in a modular way, we introduce a formal theory of modular constructions of algebraic structures based on the framework of lifting functors along fibrations.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="pdf-url"><a class="helia-link helia-external" href="https://jfp.episciences.org/en/articles/17958/download">PDF</a></span> · <span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.46298/jfp.17958">DOI</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/journals/jfp/YangW26">pldb</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="kammar-2026-an" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="kammar-2026-an"><span class="helia-title">An Equational Axiomatization of Dynamic Threads via Algebraic Effects: Presheaves on Finite Relations, Labelled Posets, and Parameterized Algebraic Theories</span>&nbsp;<a class="helia-slug" href="kammar-2026-an.html">kammar-2026-an</a><span class="helia-byline"><span class="helia-entry-link" data-entry="popl">POPL</span> · 2026</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="kammar-2026-an" data-kind="reference">
+<div class="helia-abstract">We use the theory of algebraic effects to give a complete equational axiomatization for dynamic threads. Our method is based on parameterized algebraic theories, which give a concrete syntax for strong monads on functor categories, and are a convenient framework for names and binding. Our programs are built from the key primitives ‘fork’ and ‘wait’. ‘Fork’ creates a child thread and passes its name (thread ID) to the parent thread. ‘Wait’ allows us to wait for given child threads to finish. We provide a parameterized algebraic theory built from fork and wait, together with basic atomic actions and laws such as associativity of ‘fork’. Our equational axiomatization is complete in two senses. First, for closed expressions, it completely captures equality of labelled posets (pomsets), an established model of concurrency: model complete. Second, any two open expressions are provably equal if they are equal under all closing substitutions: syntactically complete. The benefit of algebraic effects is that the semantic analysis can focus on the algebraic operations of fork and wait. We then extend the analysis to a simple concurrent programming language by giving operational and denotational semantics. The denotational semantics is built using the methods of parameterized algebraic theories and we show that it is sound, adequate, and fully abstract at first order for labelled-poset observations.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/3776706">DOI</a></span> · <span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/2602.05850">arXiv</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/journals/pacmpl/KammarLLMS26">pldb</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="mangel-2026-classical" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="mangel-2026-classical"><span class="helia-title">Classical Notions of Computation and the Hasegawa-Thielecke Theorem</span>&nbsp;<a class="helia-slug" href="mangel-2026-classical.html">mangel-2026-classical</a><span class="helia-byline"><span class="helia-entry-link" data-entry="popl">POPL</span> · 2026</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="mangel-2026-classical" data-kind="reference">
+<div class="helia-abstract">In the spirit of the Curry-Howard correspondence between proofs and programs, we define and study a syntax and semantics for classical logic equipped with a computationally involutive negation, using a polarised effect calculus, the linear classical L -calculus. A main challenge in designing a denotational semantics for the calculus is to accommodate both call-by-value and call-by-name evaluation strategies, which leads to a failure of associativity of composition. In order to tackle this issue, we define a notion of adjunction between graph morphisms on non-associative categories, which we use to formulate polarized and non-associative notions of symmetric monoidal closed duploid and of dialogue duploid. We show that they provide a direct style counterpart to adjunction models: linear effect adjunctions for the (linear) call-by-push-value calculus and dialogue chiralities for linear continuations, respectively. In particular, we show that the syntax of the linear classical L -calculus can be interpreted in any dialogue duploid, and that it defines in fact a syntactic dialogue duploid. As an application, we establish, by semantic as well as syntactic means, the Hasegawa-Thielecke theorem, which states that the notions of central map and of thunkable map coincide in any dialogue duploid (in particular, for any double negation monad on a symmetric monoidal category).</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="pdf-url"><a class="helia-link helia-external" href="https://dl.acm.org/doi/pdf/10.1145/3776715">PDF</a></span> · <span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/3776715">DOI</a></span> · <span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/2502.13033">arXiv</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/journals/pacmpl/MangelMM26">pldb</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="yang-2026-handling" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="yang-2026-handling"><span class="helia-title">Handling Higher-Order Effectful Operations with Judgemental Monadic Laws</span>&nbsp;<a class="helia-slug" href="yang-2026-handling.html">yang-2026-handling</a><span class="helia-byline"><span class="helia-entry-link" data-entry="popl">POPL</span> · 2026</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="yang-2026-handling" data-kind="reference">
+<div class="helia-abstract">This paper studies the design of programming languages with handlers of higher-order effectful operations - effectful operations that may take in computations as arguments or return computations as output. We present and analyse a core calculus with higher-kinded impredicative polymorphism, handlers of higher-order effectful operations, and optionally general recursion. The distinctive design choice of this calculus is that handlers are carried by lawless raw monads, while the computation judgements still satisfy the monadic laws judgementally. We present the calculus with a logical framework and give denotational models of the calculus using realizability semantics. We prove closed-term canonicity and parametricity for the recursion-free fragment of the language using synthetic Tait computability and a novel form of the ⊤⊤-lifting technique.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="pdf-url"><a class="helia-link helia-external" href="https://dl.acm.org/doi/pdf/10.1145/3776678">PDF</a></span> · <span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/3776678">DOI</a></span> · <span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/2511.05739">arXiv</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/journals/pacmpl/YangW26">pldb</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="congard-2026-linear" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="congard-2026-linear"><span class="helia-title">Linear Effects, Exceptions, and Resource Safety: A Curry-Howard Correspondence for Destructors</span>&nbsp;<a class="helia-slug" href="congard-2026-linear.html">congard-2026-linear</a><span class="helia-byline"><span class="helia-entry-link" data-entry="esop">ESOP</span> · 2026</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="congard-2026-linear" data-kind="reference">
+<div class="helia-abstract">We analyse the problem of combining linearity, effects, and exceptions, in abstract models of programming languages, as the issue of providing some kind of strength for a monad <span class="helia-math helia-math-inline helia-mathml"><math><mi>𝑇</mi><mrow><mo stretchy="false">(</mo><mrow><mo>−</mo><mo>⊕</mo><mi>𝐸</mi></mrow><mo stretchy="false">)</mo></mrow></math></span> in a linear setting. We consider in particular for T the allocation monad, which we introduce to model and study resource-safety properties. We apply these results to a series of two linear effectful calculi for which we establish their resource-safety properties. The first calculus is a linear (optionally ordered) call-by-push-value language with two allocation effects <span class="helia-math helia-math-inline helia-mathml"><math><mtext>𝐧𝐞𝐰</mtext></math></span> and <span class="helia-math helia-math-inline helia-mathml"><math><mtext>𝐝𝐞𝐥𝐞𝐭𝐞</mtext></math></span>. The resource-safety properties follow from the linear and ordered character of the typing rules. We then integrate exceptions with linearity and effects by adjoining default destruction actions to types, as inspired by C++/Rust destructors. We see destructors as objects <span class="helia-math helia-math-inline helia-mathml"><math><mi>𝛿</mi><mo lspace="0.2777777777777778em" rspace="0.2777777777777778em">:</mo><mi>𝐴</mi><mo stretchy="false">→</mo><mi>𝑇</mi><mi>𝐼</mi></math></span> in the slice category over <span class="helia-math helia-math-inline helia-mathml"><math><mi>𝑇</mi><mi>𝐼</mi></math></span>. This construction gives rise to a second calculus, the resource call-by-push-value, featuring exceptions and destructors, and whose weakening and exchange rules perform side-effects. It is therefore affine at the level of types but ordered at the level of derivations. As in C++ and Rust, a “move” operation—the side-effecting exchange rule—is necessary for releasing resources in random order, as opposed to LIFO order.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="pdf-url"><a class="helia-link helia-external" href="https://arxiv.org/pdf/2510.23517">PDF</a></span> · <span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-032-22720-1_8">DOI</a></span> · <span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/2510.23517">arXiv</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/conf/esop/CongardMD26">pldb</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="stepanenko-2025-context" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="stepanenko-2025-context"><span class="helia-title">Context-Dependent Effects and Concurrency in Guarded Interaction Trees</span>&nbsp;<a class="helia-slug" href="stepanenko-2025-context.html">stepanenko-2025-context</a><span class="helia-byline"><span class="helia-entry-link" data-entry="arxiv">arXiv</span> · 2025</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="stepanenko-2025-context" data-kind="reference">
+<div class="helia-abstract">Guarded Interaction Trees are a structure and a fully formalized framework for representing higher-order computations with higher-order effects in Rocq. We present an extension of Guarded Interaction Trees to support formal reasoning about context-dependent effects. That is, effects whose behaviors depend on the evaluation context, e.g., call/cc, shift and reset. Using and reasoning about such effects is challenging since certain compositionality principles no longer hold in the presence of such effects. For example, the so-called “bind rule” in modern program logics is no longer valid. The goal of our extension is to support representation and reasoning about context-dependent effects in the most painless way possible. To that end, our extension is conservative: the reasoning principles for context-independent effects remain the same. We use it to give direct-style denotational semantics for higher-order programming languages with call/cc and with delimited continuations. We extend the program logic for Guarded Interaction Trees to account for context-dependent effects, and we use the program logic to prove that the denotational semantics is adequate with respect to the operational semantics. Additionally, we retain the ability to combine multiple effects in a modular way, which we demonstrate by showing type soundness for safe interoperability of a programming language with delimited continuations and a programming language with higher-order store. Furthermore, as another contribution, in addition to context-dependent effects, we show how to extend Guarded Interaction Trees with preemptive concurrency. To support implementation and verification of concurrent data structures and algorithms in the presence of preemptive concurrency one requires atomic state modification operations, e.g., compare-and-exchange.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/2512.11577">arXiv</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="matache-2025-scoped" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="matache-2025-scoped"><span class="helia-title">Scoped Effects, Scoped Operations, and Parameterized Algebraic Theories</span>&nbsp;<a class="helia-slug" href="matache-2025-scoped.html">matache-2025-scoped</a><span class="helia-byline"><span class="helia-entry-link" data-entry="toplas">TOPLAS</span> · 2025</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="matache-2025-scoped" data-kind="reference">
+<div class="helia-abstract">Notions of computation can be modeled by monads. Algebraic effects offer a characterization of monads in terms of algebraic operations and equational axioms, where operations are basic programming features, such as reading or updating the state, and axioms specify observably equivalent expressions. However, many useful programming features depend on additional mechanisms such as delimited scopes or dynamically allocated resources. Such mechanisms can be supported via extensions to algebraic effects including scoped effects and parameterized algebraic theories . We present a fresh perspective on scoped effects by translation into a variation of parameterized algebraic theories. The translation enables a new approach to equational reasoning for scoped effects and gives rise to an alternative characterization of monads in terms of generators and equations involving both scoped and algebraic operations. We demonstrate the power of our approach by way of equational characterizations of several known models of scoped effects.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="pdf-url"><a class="helia-link helia-external" href="https://dl.acm.org/doi/pdf/10.1145/3731678">PDF</a></span> · <span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/3731678">DOI</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/journals/toplas/MatacheLMSWY25">pldb</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="amorim_effcost" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="amorim_effcost"><span class="helia-title">The Compositional Essence of Effectful Cost Analyses: Categorical Foundations and Fibered Logical Relations</span>&nbsp;<a class="helia-slug" href="amorim_effcost.html">amorim_effcost</a><span class="helia-byline">2025</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="amorim_effcost" data-kind="reference">
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="url"><a class="helia-link helia-external" href="https://pedrohaa.github.io/papers/effcost.pdf">Web</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="amorim_hsu_independent" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="amorim_hsu_independent"><span class="helia-title">Separated and Shared Effects in Higher-Order Languages</span>&nbsp;<a class="helia-slug" href="amorim_hsu_independent.html">amorim_hsu_independent</a><span class="helia-byline">2025</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="amorim_hsu_independent" data-kind="reference">
+<div class="helia-abstract">Effectful programs interact in ways that go beyond simple input-output, making compositional reasoning challenging. Existing work has shown that when such programs are “separate”, i.e., when programs do not interfere with each other, it can be easier to reason about them. While reasoning about separated resources has been well-studied, there has been little work on reasoning about separated effects, especially for functional, higher-order programming languages. We propose two higher-order languages that can reason about sharing and separation in effectful programs. Our first language <span class="helia-math helia-math-inline helia-mathml"><math><msub><mi>𝜆</mi><mtext>INI</mtext></msub></math></span> has a linear type system and probabilistic semantics, where the two product types capture independent and possibly-dependent pairs. Our second language <span class="helia-math helia-math-inline helia-mathml"><math><msubsup><mi>𝜆</mi><mtext>INI</mtext><mn>2</mn></msubsup></math></span> is two-level, stratified language, inspired by Benton’s linear-non-linear (LNL) calculus. We motivate this language with a probabilistic model, but we also provide a general categorical semantics and exhibit a range of concrete models beyond probabilistic programming. We prove soundness theorems for all of our languages; our general soundness theorem for our categorical models of <span class="helia-math helia-math-inline helia-mathml"><math><msubsup><mi>𝜆</mi><mtext>INI</mtext><mn>2</mn></msubsup></math></span> uses a categorical gluing construction.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="url"><a class="helia-link helia-external" href="https://pedrohaa.github.io/papers/independent.pdf">Web</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="dvir-2025-two" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="dvir-2025-two"><span class="helia-title">Two-sorted algebraic decompositions of Brookes’s shared-state denotational semantics</span>&nbsp;<a class="helia-slug" href="dvir-2025-two.html">dvir-2025-two</a><span class="helia-byline"><span class="helia-entry-link" data-entry="fossacs">FoSSaCS</span> · 2025</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="dvir-2025-two" data-kind="reference">
+<div class="helia-abstract">We define a two sorted equational theory of algebraic effects that models concurrent shared state with preemptive interleaving, recovering Brookes’s seminal 1996 trace-based model precisely. The decomposition allows us to analyse Brookes’s model algebraically in terms of separate but interacting components. The multiple sorts partition terms into layers. We use two sorts: a “hold” sort for layers that disallow interleaving of environment memory accesses, analogous to holding a global lock on the memory; and a “cede” sort for the opposite. The algebraic signature comprises of independent interlocking components: two new operators that switch between these sorts, delimiting the atomic layers, thought of as acquiring and releasing the global lock; non-deterministic choice; and state-accessing operators. The axioms similarly divide cleanly: the delimiters behave as a closure pair; all operators are strict, and distribute over non-empty non-deterministic choice; and non-deterministic global state obeys Plotkin and Power’s presentation of global state. Our representation theorem expresses the free algebras over a two-sorted family of variables as sets of traces with suitable closure conditions. When the held sort has no variables, we recover Brookes’s trace semantics. We define several other single-and two-sorted theories to elucidate the connection to Brookes’s model via translation embeddings and equivalences.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-031-90897-2_18">DOI</a></span> · <span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/2501.15104">arXiv</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="jiang_xue_new_2025" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="jiang_xue_new_2025"><span class="helia-title">Notions of Stack-manipulating Computation and Relative Monads</span>&nbsp;<a class="helia-slug" href="jiang_xue_new_2025.html">jiang_xue_new_2025</a><span class="helia-byline"><span class="helia-entry-link" data-entry="oopsla">OOPSLA</span> · 2025</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="jiang_xue_new_2025" data-kind="reference">
+<div class="helia-abstract">
+<p>Monads provide a simple and concise interface to user-defined computational effects in functional programming languages. This enables equational reasoning about effects, abstraction over monadic interfaces and the development of monad transformer stacks to allow for multiple effects. Compiler implementors and assembly code programmers similarly virtualize effects, and would benefit from similar abstractions if possible. However, the implementation details of effects seem disconnected from the high-level monad interface: at this lower level much of the design is in the layout of the runtime stack, which is not accessible in a high-level programming language.</p>
+<p>We demonstrate that the monadic interface can be faithfully adapted from high-level functional programming to a lower level setting with explicit stack manipulation. We use a polymorphic call-by-push-value (CBPV) calculus as a setting that captures the essence of stack-manipulation, with a type system that allows programs to define domain-specific stack structures. Within this setting, we show that the existing category-theoretic notion of a relative monad can be used to model the stack-based implementation of computational effects. To demonstrate generality, we adapt a variety of standard monads to relative monads. Additionally, we show that stack-manipulating programs can benefit from a generalization of do-notation we call “monadic blocks” that allow all CBPV code to be reinterpreted to work with an arbitrary relative monad. As an application, we show that all relative monads extend automatically to relative monad transformers, a process which is not automatic for monads in pure languages.</p>
+</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="pdf-url"><a class="helia-link helia-external" href="https://dl.acm.org/doi/pdf/10.1145/3720434">PDF</a></span> · <span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/3720434">DOI</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/journals/pacmpl/JiangXN25">pldb</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="stepanenko-2025-contextx" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="stepanenko-2025-contextx"><span class="helia-title">Context-Dependent Effects in Guarded Interaction Trees</span>&nbsp;<a class="helia-slug" href="stepanenko-2025-contextx.html">stepanenko-2025-contextx</a><span class="helia-byline"><span class="helia-entry-link" data-entry="esop">ESOP</span> · 2025</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="stepanenko-2025-contextx" data-kind="reference">
+<div class="helia-abstract">Guarded Interaction Trees are a structure and a fully formalized framework for representing higher-order computations with higher-order effects in Coq. We present an extension of Guarded Interaction Trees to support formal reasoning about context-dependent effects. That is, effects whose behaviors depend on the evaluation context, e.g., call/cc, shift, and reset. Using and reasoning about such effects is challenging since certain compositionality principles no longer hold in the presence of such effects. For example, the so-called “bind rule” in modern program logics (which allows one to reason modularly about a term inside a context) is no longer valid. The goal of our extension is to support representation and reasoning about context-dependent effects in the most painless way possible. To that end, our extension is conservative: the reasoning principles (and the Coq implementation) for context-independent effects remain the same. We show that our implementation of context-dependent effects is viable and powerful. We use it to give direct-style denotational semantics for higher-order programming languages with call/cc and with delimited continuations. We extend the program logic for Guarded Interaction Trees to account for context-dependent effects, and we use the program logic to prove that the denotational semantics is adequate with respect to the operational semantics. This is achieved by constructing logical relations between syntax and semantics inside the program logic. Additionally, we retain the ability to combine multiple effects in a modular way, which we demonstrate by showing type soundness for safe interoperability of a programming language with delimited continuations and a programming language with higher-order store.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="pdf-url"><a class="helia-link helia-external" href="https://link.springer.com/content/pdf/10.1007/978-3-031-91121-7_12.pdf">PDF</a></span> · <span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-031-91121-7_12">DOI</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/conf/esop/StepanenkoNFTB25">pldb</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="frumin-2024-modular" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="frumin-2024-modular"><span class="helia-title">Modular Denotational Semantics for Effects with Guarded Interaction Trees</span>&nbsp;<a class="helia-slug" href="frumin-2024-modular.html">frumin-2024-modular</a><span class="helia-byline"><span class="helia-entry-link" data-entry="popl">POPL</span> · 2024</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="frumin-2024-modular" data-kind="reference">
+<div class="helia-abstract">We present guarded interaction trees — a structure and a fully formalized framework for representing higherorder computations with higher-order effects in Coq, inspired by domain theory and the recently proposed interaction trees. We also present an accompanying separation logic for reasoning about guarded interaction trees. To demonstrate that guarded interaction trees provide a convenient domain for interpreting higher-order languages with effects, we define an interpretation of a PCF-like language with effects and show that this interpretation is sound and computationally adequate; we prove the latter using a logical relation defined using the separation logic. Guarded interaction trees also allow us to combine different effects and reason about them modularly. To illustrate this point, we give a modular proof of type soundness of cross-language interactions for safe interoperability of different higher-order languages with different effects. All results in the paper are formalized in Coq using the Iris logic over guarded type theory.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="pdf-url"><a class="helia-link helia-external" href="https://dl.acm.org/doi/pdf/10.1145/3632854">PDF</a></span> · <span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/3632854">DOI</a></span> · <span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/2307.08514">arXiv</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/journals/pacmpl/FruminTB24">pldb</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="grodin-2024-decalf" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="grodin-2024-decalf"><span class="helia-title">Decalf: A Directed, Effectful Cost-Aware Logical Framework</span>&nbsp;<a class="helia-slug" href="grodin-2024-decalf.html">grodin-2024-decalf</a><span class="helia-byline"><span class="helia-entry-link" data-entry="popl">POPL</span> · 2024</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="grodin-2024-decalf" data-kind="reference">
+<div class="helia-abstract">We present decalf , a d irected, e ffectful c ost- a ware l ogical f ramework for studying quantitative aspects of functional programs with effects. Like calf , the language is based on a formal phase distinction between the extension and the intension of a program, its pure behavior as distinct from its cost measured by an effectful step-counting primitive. The type theory ensures that the behavior is unaffected by the cost accounting. Unlike calf , the present language takes account of effects , such as probabilistic choice and mutable state. This extension requires a reformulation of calf ’s approach to cost accounting: rather than rely on a “separable” notion of cost, here a cost bound is simply another program . To make this formal, we equip every type with an intrinsic preorder, relaxing the precise cost accounting intrinsic to a program to a looser but nevertheless informative estimate. For example, the cost bound of a probabilistic program is itself a probabilistic program that specifies the distribution of costs. This approach serves as a streamlined alternative to the standard method of isolating a cost recurrence and readily extends to higher-order, effectful programs. The development proceeds by first introducing the decalf type system, which is based on an intrinsic ordering among terms that restricts in the extensional phase to extensional equality, but in the intensional phase reflects an approximation of the cost of a program of interest. This formulation is then applied to a number of illustrative examples, including pure and effectful sorting algorithms, simple probabilistic programs, and higher-order functions. Finally, we justify decalf via a model in the topos of augmented simplicial sets.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="pdf-url"><a class="helia-link helia-external" href="https://dl.acm.org/doi/pdf/10.1145/3632852">PDF</a></span> · <span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/3632852">DOI</a></span> · <span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/2307.05938">arXiv</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/journals/pacmpl/GrodinNSH24">pldb</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="kidney-2024-algebraic" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="kidney-2024-algebraic"><span class="helia-title">Algebraic Effects Meet Hoare Logic in Cubical Agda</span>&nbsp;<a class="helia-slug" href="kidney-2024-algebraic.html">kidney-2024-algebraic</a><span class="helia-byline"><span class="helia-entry-link" data-entry="popl">POPL</span> · 2024</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="kidney-2024-algebraic" data-kind="reference">
+<div class="helia-abstract">This paper presents a novel formalisation of algebraic effects with equations in Cubical Agda. Unlike previous work in the literature that employed setoids to deal with equations, the library presented here uses quotient types to faithfully encode the type of terms quotiented by laws. Apart from tools for equational reasoning, the library also provides an effect-generic Hoare logic for algebraic effects, which enables reasoning about effectful programs in terms of their pre- and post-conditions. A particularly novel aspect is that equational reasoning and Hoare-style reasoning are related by an elimination principle of Hoare logic.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="pdf-url"><a class="helia-link helia-external" href="https://dl.acm.org/doi/pdf/10.1145/3632898">PDF</a></span> · <span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/3632898">DOI</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/journals/pacmpl/KidneyYW24">pldb</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="lindley-2024-scoped" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="lindley-2024-scoped"><span class="helia-title">Scoped Effects as Parameterized Algebraic Theories</span>&nbsp;<a class="helia-slug" href="lindley-2024-scoped.html">lindley-2024-scoped</a><span class="helia-byline"><span class="helia-entry-link" data-entry="esop">ESOP</span> · 2024</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="lindley-2024-scoped" data-kind="reference">
+<div class="helia-abstract">Notions of computation can be modelled by monads. Algebraic effects offer a characterization of monads in terms of algebraic operations and equational axioms, where operations are basic programming features, such as reading or updating the state, and axioms specify observably equivalent expressions. However, many useful programming features depend on additional mechanisms such as delimited scopes or dynamically allocated resources. Such mechanisms can be supported via extensions to algebraic effects including scoped effects and parameterized algebraic theories . We present a fresh perspective on scoped effects by translation into a variation of parameterized algebraic theories. The translation enables a new approach to equational reasoning for scoped effects and gives rise to an alternative characterization of monads in terms of generators and equations involving both scoped and algebraic operations. We demonstrate the power of our fresh perspective by way of equational characterizations of several known models of scoped effects.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="pdf-url"><a class="helia-link helia-external" href="https://link.springer.com/content/pdf/10.1007/978-3-031-57262-3_1.pdf">PDF</a></span> · <span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-031-57262-3_1">DOI</a></span> · <span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/2402.03103">arXiv</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/conf/esop/LindleyMMSWY24">pldb</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="yang-2023-modular" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="yang-2023-modular"><span class="helia-title">Modular Models of Monoids with Operations</span>&nbsp;<a class="helia-slug" href="yang-2023-modular.html">yang-2023-modular</a><span class="helia-byline"><span class="helia-entry-link" data-entry="icfp">ICFP</span> · 2023</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="yang-2023-modular" data-kind="reference">
+<div class="helia-abstract">Inspired by algebraic effects and the principle of notions of computations as monoids, we study a categorical framework for equational theories and models of monoids equipped with operations. The framework covers not only algebraic operations but also scoped and variable-binding operations. Appealingly, in this framework both theories and models can be modularly composed. Technically, a general monoid-theory correspondence is shown, saying that the category of theories of algebraic operations is equivalent to the category of monoids. Moreover, more complex forms of operations can be coreflected into algebraic operations, in a way that preserves initial algebras. On models, we introduce modular models of a theory, which can interpret abstract syntax in the presence of other operations. We show constructions of modular models (i) from monoid transformers, (ii) from free algebras, (iii) by composition, and (iv) in symmetric monoidal categories.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="pdf-url"><a class="helia-link helia-external" href="https://dl.acm.org/doi/pdf/10.1145/3607850">PDF</a></span> · <span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/3607850">DOI</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/journals/pacmpl/YangW23">pldb</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="new_giovannini_licata_2023" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="new_giovannini_licata_2023"><span class="helia-title">Gradual Typing for Effect Handlers</span>&nbsp;<a class="helia-slug" href="new_giovannini_licata_2023.html">new_giovannini_licata_2023</a><span class="helia-byline"><span class="helia-entry-link" data-entry="oopsla">OOPSLA</span> · 2023</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="new_giovannini_licata_2023" data-kind="reference">
+<div class="helia-abstract">
+<p>We present a gradually typed language, GrEff, with effects and handlers that supports migration from unchecked to checked effect typing. This serves as a simple model of the integration of an effect typing discipline with an existing effectful typed language that does not track fine-grained effect information. Our language supports a simple module system to model the programming model of gradual migration from unchecked to checked effect typing in the style of Typed Racket.</p>
+<p>The surface language GrEff is given semantics by elaboration to a core language Core GrEff. We equip Core GrEff with an inequational theory for reasoning about the semantic error ordering and desired program equivalences for programming with effects and handlers. We derive an operational semantics for the language from the equations provable in the theory. We then show that the theory is sound by constructing an operational logical relations model to prove the graduality theorem. This extends prior work on embedding-projection pair models of gradual typing to handle effect typing and subtyping.</p>
+</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="pdf-url"><a class="helia-link helia-external" href="https://dl.acm.org/doi/pdf/10.1145/3622860">PDF</a></span> · <span class="helia-entry-link" data-field="url"><a class="helia-link helia-external" href="https://maxsnew.com/docs/greff-extended.pdf">Web</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/journals/pacmpl/NewGL23">pldb</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="kammar-2022-fully" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="kammar-2022-fully"><span class="helia-title">Fully abstract models for effectful λ-calculi via category-theoretic logical relations</span>&nbsp;<a class="helia-slug" href="kammar-2022-fully.html">kammar-2022-fully</a><span class="helia-byline"><span class="helia-entry-link" data-entry="popl">POPL</span> · 2022</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="kammar-2022-fully" data-kind="reference">
+<div class="helia-abstract">We present a construction which, under suitable assumptions, takes a model of Moggi’s computational λ-calculus with sum types, effect operations and primitives, and yields a model that is adequate and fully abstract. The construction, which uses the theory of fibrations, categorical glueing, ⊤⊤-lifting, and ⊤⊤-closure, takes inspiration from O’Hearn &amp; Riecke’s fully abstract model for PCF. Our construction can be applied in the category of sets and functions, as well as the category of diffeological spaces and smooth maps and the category of quasi-Borel spaces, which have been studied as semantics for differentiable and probabilistic programming.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="pdf-url"><a class="helia-link helia-external" href="https://dl.acm.org/doi/pdf/10.1145/3498705">PDF</a></span> · <span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/3498705">DOI</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/journals/pacmpl/KammarKS22">pldb</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="dvir-2022-an" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="dvir-2022-an"><span class="helia-title">An Algebraic Theory for Shared-State Concurrency</span>&nbsp;<a class="helia-slug" href="dvir-2022-an.html">dvir-2022-an</a><span class="helia-byline"><span class="helia-entry-link" data-entry="aplas">APLAS</span> · 2022</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="dvir-2022-an" data-kind="reference">
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-031-21037-2_1">DOI</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/conf/aplas/DvirKL22">pldb</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="hartmann-2022-algorithm" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="hartmann-2022-algorithm"><span class="helia-title">Algorithm Design with the Selection Monad</span>&nbsp;<a class="helia-slug" href="hartmann-2022-algorithm.html">hartmann-2022-algorithm</a><span class="helia-byline">Trends in Functional Programming · 2022</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="hartmann-2022-algorithm" data-kind="reference">
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-031-21314-4_7">DOI</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="yang-2022-structured" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="yang-2022-structured"><span class="helia-title">Structured Handling of Scoped Effects</span>&nbsp;<a class="helia-slug" href="yang-2022-structured.html">yang-2022-structured</a><span class="helia-byline"><span class="helia-entry-link" data-entry="esop">ESOP</span> · 2022</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="yang-2022-structured" data-kind="reference">
+<div class="helia-abstract">Algebraic effects offer a versatile framework that covers a wide variety of effects. However, the family of operations that delimit scopes are not algebraic and are usually modelled as handlers, thus preventing them from being used freely in conjunction with algebraic operations. Although proposals for scoped operations exist, they are either ad-hoc and unprincipled, or too inconvenient for practical programming. This paper provides the best of both worlds: a theoretically-founded model of scoped effects that is convenient for implementation and reasoning. Our new model is based on an adjunction between a locally finitely presentable category and a category of functorial algebras . Using comparison functors between adjunctions, we show that our new model, an existing indexed model, and a third approach that simulates scoped operations in terms of algebraic ones have equal expressivity for handling scoped operations. We consider our new model to be the sweet spot between ease of implementation and structuredness. Additionally, our approach automatically induces fusion laws of handlers of scoped effects, which are useful for reasoning and optimisation.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="pdf-url"><a class="helia-link helia-external" href="https://link.springer.com/content/pdf/10.1007/978-3-030-99336-8_17.pdf">PDF</a></span> · <span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-030-99336-8_17">DOI</a></span> · <span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/2201.10287">arXiv</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/conf/esop/YangPWBS22">pldb</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="yang-2021-reasoning" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="yang-2021-reasoning"><span class="helia-title">Reasoning about effect interaction by fusion</span>&nbsp;<a class="helia-slug" href="yang-2021-reasoning.html">yang-2021-reasoning</a><span class="helia-byline"><span class="helia-entry-link" data-entry="icfp">ICFP</span> · 2021</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="yang-2021-reasoning" data-kind="reference">
+<div class="helia-abstract">Effect handlers can be composed by applying them sequentially, each handling some operations and leaving other operations uninterpreted in the syntax tree. However, the semantics of composed handlers can be subtle—it is well known that different orders of composing handlers can lead to drastically different semantics. Determining the correct order of composition is a non-trivial task. To alleviate this problem, this paper presents a systematic way of deriving sufficient conditions on handlers for their composite to correctly handle combinations, such as the sum and the tensor, of the effect theories separately handled. These conditions are solely characterised by the clauses for relevant operations of the handlers, and are derived by fusing two handlers into one using a form of fold/build fusion and continuation-passing style transformation. As case studies, the technique is applied to commutative and distributive interaction of handlers to obtain a series of results about the interaction of common handlers: (a) equations respected by each handler are preserved after handler composition; (b) handling mutable state before any handler gives rise to a semantics in which state operations are commutative with any operations from the latter handler; (c) handling the writer effect and mutable state in either order gives rise to a correct handler of the commutative combination of these two theories.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="pdf-url"><a class="helia-link helia-external" href="https://dl.acm.org/doi/pdf/10.1145/3473578">PDF</a></span> · <span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/3473578">DOI</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/journals/pacmpl/YangW21">pldb</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="choudhury-2020-recovering" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="choudhury-2020-recovering"><span class="helia-title">Recovering purity with comonads and capabilities</span>&nbsp;<a class="helia-slug" href="choudhury-2020-recovering.html">choudhury-2020-recovering</a><span class="helia-byline"><span class="helia-entry-link" data-entry="icfp">ICFP</span> · 2020</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="choudhury-2020-recovering" data-kind="reference">
+<div class="helia-abstract">In this paper, we take a pervasively effectful (in the style of ML) typed lambda calculus, and show how to extend it to permit capturing pure expressions with types. Our key observation is that, just as the pure simply-typed lambda calculus can be extended to support effects with a monadic type discipline, an impure typed lambda calculus can be extended to support purity with a comonadic type discipline. We establish the correctness of our type system via a simple denotational model, which we call the capability space model. Our model formalises the intuition common to systems programmers that the ability to perform effects should be controlled via access to a permission or capability, and that a program is capability-safe if it performs no effects that it does not have a runtime capability for. We then identify the axiomatic categorical structure that the capability space model validates, and use these axioms to give a categorical semantics for our comonadic type system. We then give an equational theory (substitution and the call-by-value β and η laws) for the imperative lambda calculus, and show its soundness relative to this semantics. Finally, we give a translation of the pure simply-typed lambda calculus into our comonadic imperative calculus, and show that any two terms which are βη-equal in the STLC are equal in the equational theory of the comonadic calculus, establishing that pure programs can be mapped in an equation-preserving way into our imperative calculus.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="pdf-url"><a class="helia-link helia-external" href="https://dl.acm.org/doi/pdf/10.1145/3408993">PDF</a></span> · <span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/3408993">DOI</a></span> · <span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/1907.07283">arXiv</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/journals/pacmpl/ChoudhuryK20">pldb</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="convent-2020-doo" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="convent-2020-doo"><span class="helia-title">Doo bee doo bee doo</span>&nbsp;<a class="helia-slug" href="convent-2020-doo.html">convent-2020-doo</a><span class="helia-byline"><span class="helia-entry-link" data-entry="jfp">JFP</span> · 2020</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="convent-2020-doo" data-kind="reference">
+<div class="helia-abstract">We explore the design and implementation of Frank, a strict functional programming language with a bidirectional effect type system designed from the ground up around a novel variant of Plotkin and Pretnar’s effect handler abstraction. Effect handlers provide an abstraction for modular effectful programming: a handler acts as an interpreter for a collection of commands whose interfaces are statically tracked by the type system. However, Frank eliminates the need for an additional effect handling construct by generalising the basic mechanism of functional abstraction itself. A function is but the special case of a Frank operator that interprets no commands. Moreover, Frank’s operators can be multihandlers which simultaneously interpret commands from several sources at once, without disturbing the direct style of functional programming with values. Effect typing in Frank employs a novel form of effect polymorphism which avoids mentioning effect variables in source code. This is achieved by propagating an ambient ability inwards, rather than accumulating unions of potential effects outwards. With the ambient ability describing the effects that are available at a certain point in the code, it can become necessary to reconfigure access to the ambient ability. A primary goal is to be able to encapsulate internal effects, eliminating a phenomenon we call effect pollution . Moreover, it is sometimes desirable to rewire the effect flow between effectful library components. We propose adaptors as a means for supporting both effect encapsulation and more general rewiring. Programming with effects and handlers is in its infancy. We contribute an exploration of future possibilities, particularly in combination with other forms of rich type systems.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="pdf-url"><a class="helia-link helia-external" href="https://www.cambridge.org/core/services/aop-cambridge-core/content/view/DEC5F8FDABF7DE3088270E07392320DD/S0956796820000039a.pdf/div-class-title-doo-bee-doo-bee-doo-div.pdf">PDF</a></span> · <span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1017/s0956796820000039">DOI</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/journals/jfp/ConventLMM20">pldb</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="hillerstrom-2020-effect" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="hillerstrom-2020-effect"><span class="helia-title">Effect handlers via generalised continuations</span>&nbsp;<a class="helia-slug" href="hillerstrom-2020-effect.html">hillerstrom-2020-effect</a><span class="helia-byline"><span class="helia-entry-link" data-entry="jfp">JFP</span> · 2020</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="hillerstrom-2020-effect" data-kind="reference">
+<div class="helia-abstract">Plotkin and Pretnar’s effect handlers offer a versatile abstraction for modular programming with user-defined effects. This paper focuses on foundations for implementing effect handlers, for the three different kinds of effect handlers that have been proposed in the literature: deep, shallow, and parameterised. Traditional deep handlers are defined by folds over computation trees and are the original construct proposed by Plotkin and Pretnar. Shallow handlers are defined by case splits (rather than folds) over computation trees. Parameterised handlers are deep handlers extended with a state value that is threaded through the folds over computation trees. We formulate the extensions both directly and via encodings in terms of deep handlers and illustrate how the direct implementations avoid the generation of unnecessary closures. We give two distinct foundational implementations of all the kinds of handlers we consider: a continuation-passing style (CPS) transformation and a CEK-style abstract machine. In both cases, the key ingredient is a generalisation of the notion of continuation to accommodate stacks of effect handlers. We obtain our CPS translation through a series of refinements as follows. We begin with a first-order CPS translation into untyped lambda calculus which manages a stack of continuations and handlers as a curried sequence of arguments. We then refine the initial CPS translation by uncurrying it to yield a properly tail-recursive translation and then moving towards more and more intensional representations of continuations in order to support different kinds of effect handlers. Finally, we make the translation higher order in order to contract administrative redexes at translation time. Our abstract machine design then uses the same generalised continuation representation as the CPS translation. We have implemented both the abstract machine and the CPS transformation (plus extensions) as backends for the Links web programming language.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="pdf-url"><a class="helia-link helia-external" href="https://www.cambridge.org/core/services/aop-cambridge-core/content/view/DF590482FEE2F6888CD68B4B446E31D5/S0956796820000040a.pdf/div-class-title-effect-handlers-via-generalised-continuations-div.pdf">PDF</a></span> · <span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1017/s0956796820000040">DOI</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/journals/jfp/HillerstromLA20">pldb</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="maillard-2019-dijkstra" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="maillard-2019-dijkstra"><span class="helia-title">Dijkstra monads for all</span>&nbsp;<a class="helia-slug" href="maillard-2019-dijkstra.html">maillard-2019-dijkstra</a><span class="helia-byline"><span class="helia-entry-link" data-entry="icfp">ICFP</span> · 2019</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="maillard-2019-dijkstra" data-kind="reference">
+<div class="helia-abstract">This paper proposes a general semantic framework for verifying programs with arbitrary monadic side-effects using Dijkstra monads, which we define as monad-like structures indexed by a specification monad. We prove that any monad morphism between a computational monad and a specification monad gives rise to a Dijkstra monad, which provides great flexibility for obtaining Dijkstra monads tailored to the verification task at hand. We moreover show that a large variety of specification monads can be obtained by applying monad transformers to various base specification monads, including predicate transformers and Hoare-style pre- and postconditions. For defining correct monad transformers, we propose a language inspired by Moggi’s monadic metalanguage that is parameterized by a dependent type theory. We also develop a notion of algebraic operations for Dijkstra monads, and start to investigate two ways of also accommodating effect handlers. We implement our framework in both Coq and F*, and illustrate that it supports a wide variety of verification styles for effects such as exceptions, nondeterminism, state, input-output, and general recursion.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="pdf-url"><a class="helia-link helia-external" href="https://dl.acm.org/doi/pdf/10.1145/3341708">PDF</a></span> · <span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/3341708">DOI</a></span> · <span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/1903.01237">arXiv</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/journals/pacmpl/MaillardAAMHRT19">pldb</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="forster-2019-on" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="forster-2019-on"><span class="helia-title">On the expressive power of user-defined effects: Effect handlers, monadic reflection, delimited control</span>&nbsp;<a class="helia-slug" href="forster-2019-on.html">forster-2019-on</a><span class="helia-byline"><span class="helia-entry-link" data-entry="jfp">JFP</span> · 2019</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="forster-2019-on" data-kind="reference">
+<div class="helia-abstract">We compare the expressive power of three programming abstractions for user-defined computational effects: Plotkin and Pretnar’s effect handlers, Filinski’s monadic reflection, and delimited control. This comparison allows a precise discussion about the relative expressiveness of each programming abstraction. It also demonstrates the sensitivity of the relative expressiveness of user-defined effects to seemingly orthogonal language features. We present three calculi, one per abstraction, extending Levy’s call-by-push-value. For each calculus, we present syntax, operational semantics, a natural type-and-effect system, and, for effect handlers and monadic reflection, a set-theoretic denotational semantics. We establish their basic metatheoretic properties: safety, termination, and, where applicable, soundness and adequacy. Using Felleisen’s notion of a macro translation, we show that these abstractions can macro express each other, and show which translations preserve typeability. We use the adequate finitary set-theoretic denotational semantics for the monadic calculus to show that effect handlers cannot be macro expressed while preserving typeability either by monadic reflection or by delimited control. Our argument fails with simple changes to the type system such as polymorphism and inductive types. We supplement our development with a mechanised Abella formalisation.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="pdf-url"><a class="helia-link helia-external" href="https://www.cambridge.org/core/services/aop-cambridge-core/content/view/3FFAA9AD05B58A1467E411F80EE4E076/S0956796819000121a.pdf/div-class-title-on-the-expressive-power-of-user-defined-effects-effect-handlers-monadic-reflection-delimited-control-div.pdf">PDF</a></span> · <span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1017/s0956796819000121">DOI</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/journals/jfp/0002KLP19">pldb</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="timany-2017-a" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="timany-2017-a"><span class="helia-title">A logical relation for monadic encapsulation of state: proving contextual equivalences in the presence of runST</span>&nbsp;<a class="helia-slug" href="timany-2017-a.html">timany-2017-a</a><span class="helia-byline"><span class="helia-entry-link" data-entry="popl">POPL</span> · 2018</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="timany-2017-a" data-kind="reference">
+<div class="helia-abstract">We present a logical relations model of a higher-order functional programming language with impredicative polymorphism, recursive types, and a Haskell-style ST monad type with runST. We use our logical relations model to show that runST provides proper encapsulation of state, by showing that effectful computations encapsulated by runST are heap independent. Furthermore, we show that contextual refinements and equivalences that are expected to hold for pure computations do indeed hold in the presence of runST. This is the first time such relational results have been proven for a language with monadic encapsulation of state. We have formalized all the technical development and results in Coq.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="pdf-url"><a class="helia-link helia-external" href="https://dl.acm.org/doi/pdf/10.1145/3158152?download=true">PDF</a></span> · <span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/3158152">DOI</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/journals/pacmpl/TimanySKB18">pldb</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="lindley-2017-do" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="lindley-2017-do"><span class="helia-title">Do be do be do</span>&nbsp;<a class="helia-slug" href="lindley-2017-do.html">lindley-2017-do</a><span class="helia-byline"><span class="helia-entry-link" data-entry="popl">POPL</span> · 2017</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="lindley-2017-do" data-kind="reference">
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="pdf-url"><a class="helia-link helia-external" href="https://strathprints.strath.ac.uk/59470/1/Lindley_etal_POPL_2017_do_be_do_be_do.pdf">PDF</a></span> · <span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/3009837.3009897">DOI</a></span> · <span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/1611.09259">arXiv</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/conf/popl/LindleyMM17">pldb</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="hillerstrom-2017-continuation" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="hillerstrom-2017-continuation"><span class="helia-title">Continuation Passing Style for Effect Handlers</span>&nbsp;<a class="helia-slug" href="hillerstrom-2017-continuation.html">hillerstrom-2017-continuation</a><span class="helia-byline"><span class="helia-entry-link" data-entry="fscd">FSCD</span> · 2017</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="hillerstrom-2017-continuation" data-kind="reference">
+<div class="helia-abstract">
+<p>We present Continuation Passing Style (CPS) translations for Plotkin and Pretnar’s effect handlers with Hillerström and Lindley’s row-typed fine-grain call-by-value calculus of effect handlers as the source language. CPS translations of handlers are interesting theoretically, to explain the semantics of handlers, and also offer a practical implementation technique that does not require special support in the target language’s runtime.</p>
+<p>We begin with a first-order CPS translation into untyped lambda calculus which manages a stack of continuations and handlers as a curried sequence of arguments. We then refine the initial CPS translation first by uncurrying it to yield a properly tail-recursive translation and second by making it higher-order in order to contract administrative redexes at translation time. We prove that the higher-order CPS translation simulates effect handler reduction. We have implemented the higher-order CPS translation as a JavaScript backend for the Links programming language.</p>
+</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.4230/lipics.fscd.2017.18">DOI</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="curien-2016-a" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="curien-2016-a"><span class="helia-title">A theory of effects and resources: adjunction models and polarised calculi</span>&nbsp;<a class="helia-slug" href="curien-2016-a.html">curien-2016-a</a><span class="helia-byline"><span class="helia-entry-link" data-entry="popl">POPL</span> · 2016</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="curien-2016-a" data-kind="reference">
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/2837614.2837652">DOI</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/conf/popl/CurienFM16">pldb</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="atkey-2015-interleaving" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="atkey-2015-interleaving"><span class="helia-title">Interleaving data and effects</span>&nbsp;<a class="helia-slug" href="atkey-2015-interleaving.html">atkey-2015-interleaving</a><span class="helia-byline"><span class="helia-entry-link" data-entry="jfp">JFP</span> · 2015</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="atkey-2015-interleaving" data-kind="reference">
+<div class="helia-abstract">The study of programming with and reasoning about inductive datatypes such as lists and trees has benefited from the simple categorical principle of initial algebras. In initial algebra semantics, each inductive datatype is represented by an initial f -algebra for an appropriate functor f . The initial algebra principle then supports the straightforward derivation of definitional principles and proof principles for these datatypes. This technique has been expanded to a whole methodology of structured functional programming, often called origami programming. In this article we show how to extend initial algebra semantics from pure inductive datatypes to inductive datatypes interleaved with computational effects. Inductive datatypes interleaved with effects arise naturally in many computational settings. For example, incrementally reading characters from a file generates a list of characters interleaved with input/output actions, and lazily constructed infinite values can be represented by pure data interleaved with the possibility of non-terminating computation. Straightforward application of initial algebra techniques to effectful datatypes leads either to unsound conclusions if we ignore the possibility of effects, or to unnecessarily complicated reasoning because the pure and effectful concerns must be considered simultaneously. We show how pure and effectful concerns can be separated using the abstraction of initial f -and- m -algebras, where the functor f describes the pure part of a datatype and the monad m describes the interleaved effects. Because initial f -and- m -algebras are the analogue for the effectful setting of initial f -algebras, they support the extension of the standard definitional and proof principles to the effectful setting. Initial f -and- m -algebras are originally due to Filinski and Støvring, who studied them in the category Cpo. They were subsequently generalised to arbitrary categories by Atkey, Ghani, Jacobs, and Johann in a FoSSaCS 2012 paper. In this article we aim to introduce the general concept of initial f -and- m -algebras to a general functional programming audience.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="pdf-url"><a class="helia-link helia-external" href="https://www.cambridge.org/core/services/aop-cambridge-core/content/view/FCDD7EDCF7E7A9484C59A13B53F75742/S0956796815000209a.pdf/div-class-title-interleaving-data-and-effects-div.pdf">PDF</a></span> · <span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1017/s0956796815000209">DOI</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/journals/jfp/AtkeyJ15">pldb</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="kammar-2013-handlers" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="kammar-2013-handlers"><span class="helia-title">Handlers in action</span>&nbsp;<a class="helia-slug" href="kammar-2013-handlers.html">kammar-2013-handlers</a><span class="helia-byline"><span class="helia-entry-link" data-entry="icfp">ICFP</span> · 2013</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="kammar-2013-handlers" data-kind="reference">
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="pdf-url"><a class="helia-link helia-external" href="https://dl.acm.org/doi/pdf/10.1145/2500365.2500590">PDF</a></span> · <span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/2500365.2500590">DOI</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/conf/icfp/KammarLO13">pldb</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="kammar-2012-algebraic" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="kammar-2012-algebraic"><span class="helia-title">Algebraic foundations for effect-dependent optimisations</span>&nbsp;<a class="helia-slug" href="kammar-2012-algebraic.html">kammar-2012-algebraic</a><span class="helia-byline"><span class="helia-entry-link" data-entry="popl">POPL</span> · 2012</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="kammar-2012-algebraic" data-kind="reference">
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="pdf-url"><a class="helia-link helia-external" href="https://dl.acm.org/doi/pdf/10.1145/2103656.2103698">PDF</a></span> · <span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/2103656.2103698">DOI</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/conf/popl/KammarP12">pldb</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="gibbons-2011-just" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="gibbons-2011-just"><span class="helia-title">Just do it: simple monadic equational reasoning</span>&nbsp;<a class="helia-slug" href="gibbons-2011-just.html">gibbons-2011-just</a><span class="helia-byline"><span class="helia-entry-link" data-entry="icfp">ICFP</span> · 2011</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="gibbons-2011-just" data-kind="reference">
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="pdf-url"><a class="helia-link helia-external" href="https://dl.acm.org/doi/pdf/10.1145/2034773.2034777">PDF</a></span> · <span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/2034773.2034777">DOI</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/conf/icfp/GibbonsH11">pldb</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="atkey-2009-parameterised" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="atkey-2009-parameterised"><span class="helia-title">Parameterised notions of computation</span>&nbsp;<a class="helia-slug" href="atkey-2009-parameterised.html">atkey-2009-parameterised</a><span class="helia-byline"><span class="helia-entry-link" data-entry="jfp">JFP</span> · 2009</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="atkey-2009-parameterised" data-kind="reference">
+<div class="helia-abstract">Moggi’s Computational Monads and Power et al .‘s equivalent notion of Freyd category have captured a large range of computational effects present in programming languages. Examples include non-termination, non-determinism, exceptions, continuations, side effects and input/output. We present generalisations of both computational monads and Freyd categories, which we call parameterised monads and parameterised Freyd categories, that also capture computational effects with parameters. Examples of such are composable continuations, side effects where the type of the state varies and input/output where the range of inputs and outputs varies. By considering structured parameterisation also, we extend the range of effects to cover separated side effects and multiple independent streams of I/O. We also present two typed λ-calculi that soundly and completely model our categorical definitions – with and without symmetric monoidal parameterisation – and act as prototypical languages with parameterised effects.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="pdf-url"><a class="helia-link helia-external" href="https://www.cambridge.org/core/services/aop-cambridge-core/content/view/82CE5F0583C3390BBBD305830255FAA0/S095679680900728Xa.pdf/div-class-title-parameterised-notions-of-computation-div.pdf">PDF</a></span> · <span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1017/s095679680900728x">DOI</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/journals/jfp/Atkey09">pldb</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="mcbride-2008-applicative" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="mcbride-2008-applicative"><span class="helia-title">Applicative programming with effects</span>&nbsp;<a class="helia-slug" href="mcbride-2008-applicative.html">mcbride-2008-applicative</a><span class="helia-byline"><span class="helia-entry-link" data-entry="jfp">JFP</span> · 2008</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="mcbride-2008-applicative" data-kind="reference">
+<div class="helia-abstract">In this article, we introduce Applicative functors – an abstract characterisation of an applicative style of effectful programming, weaker than Monads and hence more widespread. Indeed, it is the ubiquity of this programming pattern that drew us to the abstraction. We retrace our steps in this article, introducing the applicative pattern by diverse examples, then abstracting it to define the Applicative type class and introducing a bracket notation that interprets the normal application syntax in the idiom of an Applicative functor. Furthermore, we develop the properties of applicative functors and the generic operations they support. We close by identifying the categorical structure of applicative functors and examining their relationship both with Monads and with Arrow.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="pdf-url"><a class="helia-link helia-external" href="https://www.cambridge.org/core/services/aop-cambridge-core/content/view/C80616ACD5687ABDC86D2B341E83D298/S0956796807006326a.pdf/div-class-title-applicative-programming-with-effects-div.pdf">PDF</a></span> · <span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1017/s0956796807006326">DOI</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/journals/jfp/McbrideP08">pldb</a></span></div>
+</div>
+</div>
+</details>
+</section>
+</div>
+</details>
+</section>
+</div>
+</article>
+<div class="helia-identity"><span class="helia-id">tag-effects</span> <span class="helia-kind">tag</span></div>
+</div>
+</body>
+</html>

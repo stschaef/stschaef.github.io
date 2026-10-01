@@ -1,0 +1,1 @@
+heliaSearchData("d/juliencourtiel",{"id":"juliencourtiel","title":"Julien Courtiel","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"juliencourtiel.html","headings":[],"body":""});

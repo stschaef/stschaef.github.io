@@ -1,0 +1,1 @@
+heliaSearchData("d/sprint-advanced-technology-lab",{"id":"sprint-advanced-technology-lab","title":"Sprint Advanced Technology Lab","kind":"institution","tags":[],"authors":[],"venue":[],"date":null,"url":"sprint-advanced-technology-lab.html","headings":[],"body":""});

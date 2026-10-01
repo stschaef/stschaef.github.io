@@ -1,0 +1,1 @@
+heliaSearchData("d/louisphilippemorency",{"id":"louisphilippemorency","title":"Louis-Philippe Morency","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"louisphilippemorency.html","headings":[],"body":""});

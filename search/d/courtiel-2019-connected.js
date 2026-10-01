@@ -1,0 +1,1 @@
+heliaSearchData("d/courtiel-2019-connected",{"id":"courtiel-2019-connected","title":"Connected Chord Diagrams and Bridgeless Maps","kind":"reference","tags":[],"authors":["Julien Courtiel","Karen Yeats","Noam Zeilberger"],"venue":["The Electronic Journal of Combinatorics"],"date":null,"url":"courtiel-2019-connected.html","headings":[],"body":""});

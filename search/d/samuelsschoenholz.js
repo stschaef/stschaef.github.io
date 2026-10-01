@@ -1,0 +1,1 @@
+heliaSearchData("d/samuelsschoenholz",{"id":"samuelsschoenholz","title":"Samuel S. Schoenholz","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"samuelsschoenholz.html","headings":[],"body":""});

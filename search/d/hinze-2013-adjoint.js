@@ -1,0 +1,1 @@
+heliaSearchData("d/hinze-2013-adjoint",{"id":"hinze-2013-adjoint","title":"Adjoint folds and unfolds—An extended study","kind":"reference","tags":["program-calculation"],"authors":["Ralf Hinze"],"venue":["SCP","Science of Computer Programming"],"date":null,"url":"hinze-2013-adjoint.html","headings":[],"body":""});

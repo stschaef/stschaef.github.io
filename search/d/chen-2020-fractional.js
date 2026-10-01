@@ -1,0 +1,1 @@
+heliaSearchData("d/chen-2020-fractional",{"id":"chen-2020-fractional","title":"Fractional Types: Expressive and Safe Space Management for Ancilla Bits","kind":"reference","tags":["quantum"],"authors":["Amr Sabry","Chao-Hong Chen","Jacques Carette","Vikraman Choudhury"],"venue":["RC","Reversible Computation"],"date":null,"url":"chen-2020-fractional.html","headings":[],"body":""});

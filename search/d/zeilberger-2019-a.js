@@ -1,0 +1,1 @@
+heliaSearchData("d/zeilberger-2019-a",{"id":"zeilberger-2019-a","title":"A sequent calculus for a semi-associative law","kind":"reference","tags":["lambek"],"authors":["Noam Zeilberger"],"venue":["LMCS","Logical Methods in Computer Science"],"date":null,"url":"zeilberger-2019-a.html","headings":[],"body":""});

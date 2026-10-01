@@ -1,0 +1,1 @@
+heliaSearchData("d/philips-research",{"id":"philips-research","title":"Philips Research","kind":"institution","tags":[],"authors":[],"venue":[],"date":null,"url":"philips-research.html","headings":[],"body":""});

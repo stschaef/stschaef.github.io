@@ -1,0 +1,1 @@
+heliaSearchData("d/courtneyashcraft",{"id":"courtneyashcraft","title":"Courtney Ashcraft","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"courtneyashcraft.html","headings":[],"body":""});

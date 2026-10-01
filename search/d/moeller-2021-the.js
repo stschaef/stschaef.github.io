@@ -1,0 +1,1 @@
+heliaSearchData("d/moeller-2021-the",{"id":"moeller-2021-the","title":"The Grothendieck Construction in Categorical Network Theory","kind":"reference","tags":["category-theory"],"authors":["Joe Moeller"],"venue":["arXiv"],"date":null,"url":"moeller-2021-the.html","headings":[],"body":""});

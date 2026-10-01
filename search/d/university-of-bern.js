@@ -1,0 +1,1 @@
+heliaSearchData("d/university-of-bern",{"id":"university-of-bern","title":"University of Bern","kind":"institution","tags":[],"authors":[],"venue":[],"date":null,"url":"university-of-bern.html","headings":[],"body":""});

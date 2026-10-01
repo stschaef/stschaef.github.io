@@ -1,0 +1,1 @@
+heliaSearchData("d/gratzer-2024-directed",{"id":"gratzer-2024-directed","title":"Directed univalence in simplicial homotopy type theory","kind":"reference","tags":["homotopy-type-theory"],"authors":["Daniel Gratzer","Jonathan Weinberger","Ulrik Buchholtz"],"venue":["arXiv"],"date":null,"url":"gratzer-2024-directed.html","headings":[],"body":""});

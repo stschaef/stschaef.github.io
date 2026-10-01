@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>Finite-Choice Logic Programming</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Ctext y=%22.9em%22 font-size=%2290%22%3E%F0%9F%8C%BB%3C/text%3E%3C/svg%3E">
+<meta name="generator" content="helia">
+<link rel="alternate" type="application/atom+xml" title="Steven Schaefer" href="feed.xml">
+<link rel="alternate" type="application/feed+json" title="Steven Schaefer" href="feed.json">
+<script src="helia/theme-version.js"></script>
+<script src="theme/folio-early.js"></script>
+<link rel="stylesheet" href="helia/theme.css">
+<link rel="stylesheet" href="helia/highlight.css">
+<link rel="stylesheet" href="helia/search.css">
+<link rel="stylesheet" href="theme/katex.css">
+<link rel="stylesheet" href="theme/recipe.css">
+<link rel="stylesheet" href="theme/site.css">
+<link rel="stylesheet" href="theme/folio.css">
+<script defer src="helia/runtime.js"></script>
+<script defer src="helia/search.js"></script>
+<script defer src="theme/glyphcraft.js"></script>
+<script defer src="theme/glyphart.js"></script>
+<script defer src="theme/glyphgen.js"></script>
+<script defer src="theme/ornament.js"></script>
+<script defer src="theme/folio.js"></script>
+<script defer src="theme/portrait.js"></script>
+<script type="application/json" id="helia-widgets">{"helia-cite-formats":"widgets/helia-cite-formats-a3294ac7.js"}</script>
+<link rel="modulepreload" href="widgets/helia-cite-formats-a3294ac7.js">
+<script type="module" src="widgets/runtime.js"></script>
+</head>
+<body>
+<nav class="helia-topbar"><a class="helia-home" href="home.html">Steven Schaefer</a><ul class="helia-nav-links"><li><a href="stevenschaefer.html">About Me</a></li><li><a href="research.html">Research</a></li><li><a href="new.html">New</a></li></ul><button type="button" class="helia-search-button" aria-label="Search (/ or Ctrl+K)" aria-haspopup="dialog"><span class="helia-search-icon">⌕</span><span class="helia-search-label">Search</span><kbd class="helia-search-key">/</kbd></button></nav>
+<div class="helia-page" data-kind="reference">
+<article class="helia-article">
+<header class="helia-header" data-entry="martens-2025-finite" data-kind="reference">
+<h2 class="helia-heading"><span class="helia-taxon">Reference.</span> Finite-Choice Logic Programming</h2>
+<div class="helia-meta"><span class="helia-author"><a class="helia-entry-link" href="chrismartens.html" data-entry="chrismartens">Chris Martens</a>, <a class="helia-entry-link" href="robertjsimmons.html" data-entry="robertjsimmons">Robert J. Simmons</a>, <a class="helia-entry-link" href="michaelarntzenius.html" data-entry="michaelarntzenius">Michael Arntzenius</a></span> · <span class="helia-byline"><a class="helia-entry-link" href="popl.html" data-entry="popl">POPL</a> · 2025</span> · <span class="helia-tags"><span class="helia-tag" data-tag="logic-programming"><a class="helia-entry-link" href="tag-logic-programming.html" data-entry="tag-logic-programming">logic-programming</a></span></span> · <span class="helia-entry-links"><span class="helia-entry-link" data-field="pdf-url"><a class="helia-link helia-external" href="https://arxiv.org/pdf/2405.19040">PDF</a></span> · <span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/3704849">DOI</a></span> · <span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/2405.19040">arXiv</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/journals/pacmpl/MartensSA25">pldb</a></span></span></div>
+</header>
+<div class="helia-body">
+<div class="helia-abstract">Logic programming, as exemplified by datalog, defines the meaning of a program as its unique smallest model: the deductive closure of its inference rules. However, many problems call for an enumeration of models that vary along some set of choices while maintaining structural and logical constraints—there is no single canonical model. The notion of stable models for logic programs with negation has successfully captured programmer intuition about the set of valid solutions for such problems, giving rise to a family of programming languages and associated solvers known as answer set programming. Unfortunately, the definition of a stable model is frustratingly indirect, especially in the presence of rules containing free variables. We propose a new formalism, finite-choice logic programming, that uses choice, not negation, to admit multiple solutions. Finite-choice logic programming contains all the expressive power of the stable model semantics, gives meaning to a new and useful class of programs, and enjoys a least-fixed-point interpretation over a novel domain. We present an algorithm for exploring the solution space and prove it correct with respect to our semantics. Our implementation, the Dusa logic programming language, has performance that compares favorably with state-of-the-art answer set solvers and exhibits more predictable scaling with problem size.</div>
+</div>
+<div class="helia-cite helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><h3 class="helia-heading">Cite</h3>
+</summary>
+<div class="helia-group-body">
+<div class="helia-widget" data-widget="helia-cite-formats" data-props="{&quot;key&quot;:&quot;martens-2025-finite&quot;,&quot;bibtex&quot;:&quot;@article{martens-2025-finite, title={Finite-Choice Logic Programming}, volume={9}, ISSN={2475-1421}, url={http://dx.doi.org/10.1145/3704849}, DOI={10.1145/3704849}, number={POPL}, journal={Proceedings of the ACM on Programming Languages}, publisher={Association for Computing Machinery (ACM)}, author={Martens, Chris and Simmons, Robert J. and Arntzenius, Michael}, year={2025}, month=Jan, pages={362–390} }&quot;,&quot;bib-file&quot;:&quot;martens-2025-finite.bib&quot;,&quot;hayagriva&quot;:&quot;martens-2025-finite:\n  type: article\n  title: Finite-Choice Logic Programming\n  author:\n  - Martens, Chris\n  - Simmons, Robert J.\n  - Arntzenius, Michael\n  date: 2025-01\n  page-range: 362-390\n  url: http://dx.doi.org/10.1145/3704849\n  serial-number:\n    doi: 10.1145/3704849\n    issn: 2475-1421\n  parent:\n    type: periodical\n    title: Proceedings of the ACM on Programming Languages\n    publisher: Association for Computing Machinery (ACM)\n    issue: POPL\n    volume: 9\n&quot;,&quot;yml-file&quot;:&quot;martens-2025-finite.yml&quot;}"><div class="helia-cite-key" data-copy="@martens-2025-finite" data-copy-label="citation key"><span class="helia-bib-key">Cite as</span> <code class="helia-raw-inline">@martens-2025-finite</code> (helia, typst) · <code class="helia-raw-inline">\cite{martens-2025-finite}</code> (LaTeX)</div>
+<div class="helia-cite-format helia-collapsible" data-format="bibtex" data-copy="true" data-copy-label="BibTeX">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">BibTeX</span></summary>
+<div class="helia-group-body">
+<details class="helia-code" open><summary class="helia-code-summary"><span class="helia-code-lang">bibtex</span> · <span class="helia-code-lines">1 line</span></summary><pre class="helia-raw"><code class="language-bibtex"><span class="hl-text hl-bibtex"><span class="hl-meta hl-entry hl-braces hl-bibtex"><span class="hl-keyword hl-other hl-entry-type hl-bibtex"><span class="hl-punctuation hl-definition hl-keyword hl-bibtex">@</span>article</span><span class="hl-punctuation hl-section hl-entry hl-begin hl-bibtex">{</span><span class="hl-entity hl-name hl-type hl-entry-key hl-bibtex">martens-2025-finite</span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">title</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>Finite-Choice Logic Programming<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">volume</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>9<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">ISSN</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>2475-1421<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">url</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>http://dx.doi.org/10.1145/3704849<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">DOI</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>10.1145/3704849<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">number</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>POPL<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">journal</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>Proceedings of the ACM on Programming Languages<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">publisher</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>Association for Computing Machinery (ACM)<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">author</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>Martens, Chris and Simmons, Robert J. and Arntzenius, Michael<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">year</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>2025<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">month</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span>Jan</span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">pages</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>362–390<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span> </span><span class="hl-punctuation hl-section hl-entry hl-end hl-bibtex">}</span></span></span></code></pre></details>
+</div>
+</details>
+</div>
+<div class="helia-cite-format helia-collapsible" data-format="hayagriva" data-copy="true" data-copy-label="hayagriva YAML">
+<details>
+<summary class="helia-group-summary"><span class="helia-group-title">hayagriva YAML (typst)</span></summary>
+<div class="helia-group-body">
+<details class="helia-code" open><summary class="helia-code-summary"><span class="helia-code-lang">yaml</span> · <span class="helia-code-lines">19 lines</span></summary><pre class="helia-raw"><code class="language-yaml"><span class="hl-source hl-yaml"><span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">martens-2025-finite</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">type</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">article</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">title</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Finite-Choice Logic Programming</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">author</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Martens, Chris</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Simmons, Robert J.</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Arntzenius, Michael</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">date</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">2025-01</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">page-range</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">362-390</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">url</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">http://dx.doi.org/10.1145/3704849</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">serial-number</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">doi</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">10.1145/3704849</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">issn</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">2475-1421</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">parent</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">type</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">periodical</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">title</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Proceedings of the ACM on Programming Languages</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">publisher</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Association for Computing Machinery (ACM)</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">issue</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">POPL</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">volume</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-constant hl-numeric hl-integer hl-decimal hl-yaml">9</span>
+</span></code></pre></details>
+</div>
+</details>
+</div>
+<div class="helia-cite-files">Download: <a class="helia-link" href="martens-2025-finite.bib">martens-2025-finite.bib</a> · <a class="helia-link" href="martens-2025-finite.yml">martens-2025-finite.yml</a></div>
+</div>
+</div>
+</details>
+</div>
+<div class="helia-reference-cited-by helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">Cited by (1)</span></summary>
+<div class="helia-group-body">
+<section class="helia-transclusion" data-entry="erdem-2026-counterchoice" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="erdem-2026-counterchoice"><span class="helia-title">CounterChoice: Counterpoint Composition in Dusa with a Firmus Foundation</span>&nbsp;<a class="helia-slug" href="erdem-2026-counterchoice.html">erdem-2026-counterchoice</a><span class="helia-byline"><span class="helia-entry-link" data-entry="farm">FARM</span> · 2026</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="erdem-2026-counterchoice" data-kind="reference">
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/3830435.3830952">DOI</a></span></div>
+</div>
+</div>
+</details>
+</section>
+</div>
+</details>
+</div>
+<div class="helia-reference-cites helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">Cites 71 works (1 here)</span></summary>
+<div class="helia-group-body">
+<div class="helia-reference-cites-here helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">With notes (1)</span></summary>
+<div class="helia-group-body">
+<section class="helia-transclusion" data-entry="dabral-2022-exploring" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="dabral-2022-exploring"><span class="helia-title">Exploring Consequences of Privacy Policies with Narrative Generation via Answer Set Programming</span>&nbsp;<a class="helia-slug" href="dabral-2022-exploring.html">dabral-2022-exploring</a><span class="helia-byline"><span class="helia-entry-link" data-entry="arxiv">arXiv</span> · 2022</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="dabral-2022-exploring" data-kind="reference">
+<div class="helia-abstract">Informed consent has become increasingly salient for data privacy and its regulation. Entities from governments to for-profit companies have addressed concerns about data privacy with policies that enumerate the conditions for personal data storage and transfer. However, increased enumeration of and transparency in data privacy policies has not improved end-users’ comprehension of how their data might be used: not only are privacy policies written in legal language that users may struggle to understand, but elements of these policies may compose in such a way that the consequences of the policy are not immediately apparent. We present a framework that uses Answer Set Programming (ASP) – a type of logic programming – to formalize privacy policies. Privacy policies thus become constraints on a narrative planning space, allowing end-users to forward-simulate possible consequences of the policy in terms of actors having roles and taking actions in a domain. We demonstrate through the example of the Health Insurance Portability and Accountability Act (HIPAA) how to use the system in various ways, including asking questions about possibilities and identifying which clauses of the law are broken by a given sequence of events.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/2212.06719">arXiv</a></span></div>
+</div>
+</div>
+</details>
+</section>
+</div>
+</details>
+</div>
+<div class="helia-reference-cites-away helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">External (70)</span></summary>
+<div class="helia-group-body">
+<ul>
+<li><a class="helia-link helia-external" href="https://doi.org/10.5281/zenodo.13930788">Dusa benchmarking datasets</a> (2024)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.5281/zenodo.13983457">Dusa implementation, examples, and benchmarking</a> (2024)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1613/jair.1.14091">Domain-specific heuristics in answer set programming: a declarative non-monotonic approach</a> (2023)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1162/tacl_a_00588">Time-and-Space-Efficient Weighted Deduction</a> (2023)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-031-31476-6_7">Answer Set Programming Made Easy</a> (2023)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3607842">Reflecting on Random Generation</a> (2023)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3591239">Better Together: Unifying Datalog and Equality Saturation</a> (2023)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3563291">Parsing randomness</a> (2022)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3519939.3523707">Computing correctly with inductive relations</a> (2022)</li>
+<li>Automating defeasible reasoning in law with answer set programming (2022)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-030-89051-3_10">The Choice Construct in the Souffle Language</a> (2021)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1609/aiide.v16i1.7406">Generating Explorable Narrative Spaces with Answer Set Programming</a> (2020)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3414080.3414096">Non-monotonic Spatial Reasoning for Safety Analysis in Construction</a> (2020)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3428193">Fixpoints for the masses: programming with first-class Datalog constraints</a> (2020)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1609/aiide.v14i1.13026">CatSAT: A Practical, Embedded, SAT Language for Runtime PCG</a> (2018)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1609/aiide.v14i1.13013">Gemini: Bidirectional Generation and Analysis of Games via ASP</a> (2018)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1017/s1471068418000054">Multi-shot ASP solving with clingo</a> (2017)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3158133">Generating good generators for inductive relations</a> (2017)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1201/9781315156378">Procedural Generation in Game Design</a> (2017)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-319-61660-5_17">Blending Lazy-Grounding and CDNL Search for Answer-Set Solving</a> (2017)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1017/s1471068416000569">ASPeRiX, a first-order forward chaining approach for answer set computing</a> (2017)</li>
+<li>Benchmark results (Alpha ASP solver) (2017)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1609/aimag.v37i3.2672">Grounding and Solving in Answer Set Programming</a> (2016)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-319-42716-4">Procedural Content Generation in Games</a> (2016)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/2723372.2742796">Design and Implementation of the LogicBlox System</a> (2015)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1109/ceec.2015.7332726">Procedural level generation with answer set programming for general Video Game playing</a> (2015)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-662-46669-8_33">Type Targeted Testing</a> (2014)</li>
+<li>A logical approach to building dungeons: Answer set programming for hierarchical procedural content generation in roguelike games (2014)</li>
+<li>Basic modeling in ASP and more via the n-Queens puzzle (2014)</li>
+<li>Quantifying over play: Constraining undesirable solutions in puzzle design (2013)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/2391229.2391230">Logic and lattices for distributed programming</a> (2012)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1016/j.artint.2012.04.001">Conflict-driven answer set solving: From theory to practice</a> (2012)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-642-33353-8_38">OMiGA: an open minded grounding on-the-fly answer set solver</a> (2012)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/1988042.1988046">QuickCheck: a lightweight tool for random testing of Haskell programs</a> (2011)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1109/tciaig.2011.2149523">Generating Missions and Spaces for Adaptable Play Experiences</a> (2011)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1109/vlhcc.2011.6070391">#ifdef confirmed harmful: Promoting understandable software variation</a> (2011)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1109/tciaig.2011.2158545">Answer Set Programming for Procedural Content Generation: A Design Space Approach</a> (2011)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.3233/aic-2011-0491">Potassco: The Potsdam Answer Set Solving Collection</a> (2011)</li>
+<li>A map generation speedrun with answer set programming (2011)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-642-24206-9_16">Dedalus: Datalog in Time and Space</a> (2010)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.3233/fi-2009-180">GASP: Answer Set Programming with Lazy Grounding</a> (2009)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-540-89982-2_15">Answer Set Programming without Unstratified Negation</a> (2008)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-540-70583-3_28">Linear Logical Algorithms</a> (2008)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1016/j.entcs.2008.12.071">Sound and Complete SLD-Resolution for Bilattice-Based Annotated Logic Programs</a> (2006)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.3115/1220575.1220611">Compiling Comp Ling: practical weighted dynamic programming and the Dyna language</a> (2005)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-540-28630-1_17">Staged Configuration Using Feature Models</a> (2004)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/3-540-36208-8_2">Generative Programming</a> (2002)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1006/jcss.1999.1699">Semantics and Expressive Power of Nondeterministic Constructs in Deductive Databases</a> (2001)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1017/s1471068401001090">Greedy algorithms in Datalog</a> (2001)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1016/s0004-3702(02)00187-x">Extending and implementing the stable model semantics</a> (2000)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/581771.581774">On the complexity analysis of static analyses</a> (1999)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/261124.261126">Disjunctive datalog</a> (1997)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1006/inco.1997.2630">Disjunctive Stable Models: Unfounded Sets, Fixpoint Semantics, and Computation</a> (1997)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.7551/mitpress/4298.003.0069">A Statistical Learning Method for Logic Programs with Distribution Semantics</a> (1995)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1016/0743-1066(93)90031-b">The Family of Stable Models</a> (1993)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1016/0743-1066(92)90007-p">Theory of Generalized Annotated Logic Programming and its Applications</a> (1992)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/137097.137852">Monotonic aggregation in deductive databases</a> (1992)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1016/0743-1066(91)90014-g">Bilattices and the Semantics of Logic Programming</a> (1991)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1016/0168-0072(91)90068-w">Uniform Proofs as a Foundation for Logic Programming</a> (1991)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/bf03037171">Stable semantics for disjunctive programs</a> (1991)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/116825.116838">The well-founded semantics for general logic programs</a> (1991)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/298514.298572">Stable models and non-determinism in logic programs with negation</a> (1990)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1016/b978-1-4832-1313-2.50038-x">Non-Deterministic Choice in Datalog</a> (1988)</li>
+<li>The stable model semantics for logic programming (1988)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/bfb0012801">Domains for Denotational Semantics</a> (1982)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/3-540-10003-2_82">A Theory of Nondeterminism</a> (1980)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-1-4684-3384-5_11">Negation as Failure</a> (1978)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1137/0205035">A Powerdomain Construction</a> (1976)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/3-540-07854-1_226">Powerdomains</a> (1976)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.2140/pjm.1955.5.285">A LATTICE-THEORETICAL FIXPOINT THEOREM AND ITS APPLICATIONS</a> (1955)</li>
+</ul>
+</div>
+</details>
+</div>
+</div>
+</details>
+</div>
+</article>
+<div class="helia-identity"><span class="helia-id">martens-2025-finite</span> <span class="helia-kind">reference</span> <span class="helia-path">entries/refs/martens-2025-finite/martens-2025-finite.hel</span></div>
+</div>
+</body>
+</html>

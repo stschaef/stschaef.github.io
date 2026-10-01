@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>Implicit Polarized F: local type inference for impredicativity</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Ctext y=%22.9em%22 font-size=%2290%22%3E%F0%9F%8C%BB%3C/text%3E%3C/svg%3E">
+<meta name="generator" content="helia">
+<link rel="alternate" type="application/atom+xml" title="Steven Schaefer" href="feed.xml">
+<link rel="alternate" type="application/feed+json" title="Steven Schaefer" href="feed.json">
+<script src="helia/theme-version.js"></script>
+<script src="theme/folio-early.js"></script>
+<link rel="stylesheet" href="helia/theme.css">
+<link rel="stylesheet" href="helia/highlight.css">
+<link rel="stylesheet" href="helia/search.css">
+<link rel="stylesheet" href="theme/katex.css">
+<link rel="stylesheet" href="theme/recipe.css">
+<link rel="stylesheet" href="theme/site.css">
+<link rel="stylesheet" href="theme/folio.css">
+<script defer src="helia/runtime.js"></script>
+<script defer src="helia/search.js"></script>
+<script defer src="theme/glyphcraft.js"></script>
+<script defer src="theme/glyphart.js"></script>
+<script defer src="theme/glyphgen.js"></script>
+<script defer src="theme/ornament.js"></script>
+<script defer src="theme/folio.js"></script>
+<script defer src="theme/portrait.js"></script>
+<script type="application/json" id="helia-widgets">{"helia-cite-formats":"widgets/helia-cite-formats-a3294ac7.js"}</script>
+<link rel="modulepreload" href="widgets/helia-cite-formats-a3294ac7.js">
+<script type="module" src="widgets/runtime.js"></script>
+</head>
+<body>
+<nav class="helia-topbar"><a class="helia-home" href="home.html">Steven Schaefer</a><ul class="helia-nav-links"><li><a href="stevenschaefer.html">About Me</a></li><li><a href="research.html">Research</a></li><li><a href="new.html">New</a></li></ul><button type="button" class="helia-search-button" aria-label="Search (/ or Ctrl+K)" aria-haspopup="dialog"><span class="helia-search-icon">⌕</span><span class="helia-search-label">Search</span><kbd class="helia-search-key">/</kbd></button></nav>
+<div class="helia-page" data-kind="reference">
+<article class="helia-article">
+<header class="helia-header" data-entry="mercer-2022-implicit" data-kind="reference">
+<h2 class="helia-heading"><span class="helia-taxon">Reference.</span> Implicit Polarized F: local type inference for impredicativity</h2>
+<div class="helia-meta"><span class="helia-author"><a class="helia-entry-link" href="henrymercer.html" data-entry="henrymercer">Henry Mercer</a>, <a class="helia-entry-link" href="cameronramsay.html" data-entry="cameronramsay">Cameron Ramsay</a>, <a class="helia-entry-link" href="neelkrishnaswami.html" data-entry="neelkrishnaswami">Neel Krishnaswami</a></span> · <span class="helia-byline"><a class="helia-entry-link" href="arxiv.html" data-entry="arxiv">arXiv</a> · 2022</span> · <span class="helia-tags"><span class="helia-tag" data-tag="bidirectional-typing"><a class="helia-entry-link" href="tag-bidirectional-typing.html" data-entry="tag-bidirectional-typing">bidirectional-typing</a></span> <span class="helia-tag" data-tag="focusing"><a class="helia-entry-link" href="tag-focusing.html" data-entry="tag-focusing">focusing</a></span></span> · <span class="helia-entry-links"><span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/2203.01835">arXiv</a></span></span></div>
+</header>
+<div class="helia-body">
+<div class="helia-abstract">System F, the polymorphic lambda calculus, features the principle of impredicativity: polymorphic types may be (explicitly) instantiated at other types, enabling many powerful idioms such as Church encoding and data abstraction. Unfortunately, type applications need to be implicit for a language to be human-usable, and the problem of inferring all type applications in System F is undecidable. As a result, language designers have historically avoided impredicative type inference. We reformulate System F in terms of call-by-push-value, and study type inference for it. Surprisingly, this new perspective yields a novel type inference algorithm which is extremely simple to implement (not even requiring unification), infers many types, and has a simple declarative specification. Furthermore, our approach offers type theoretic explanations of how many of the heuristics used in existing algorithms for impredicative polymorphism arise.</div>
+</div>
+<div class="helia-cite helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><h3 class="helia-heading">Cite</h3>
+</summary>
+<div class="helia-group-body">
+<div class="helia-widget" data-widget="helia-cite-formats" data-props="{&quot;key&quot;:&quot;mercer-2022-implicit&quot;,&quot;bibtex&quot;:&quot;@misc{mercer-2022-implicit,\n  author = {Henry Mercer and Cameron Ramsay and Krishnaswami, Neelakantan R.},\n  title = {Implicit Polarized F: local type inference for impredicativity},\n  year = {2022},\n  month = {3},\n  eprint = {2203.01835},\n  archiveprefix = {arXiv}\n}&quot;,&quot;bib-file&quot;:&quot;mercer-2022-implicit.bib&quot;,&quot;hayagriva&quot;:&quot;mercer-2022-implicit:\n  type: misc\n  title: &#39;Implicit Polarized F: local type inference for impredicativity&#39;\n  author:\n  - Mercer, Henry\n  - Ramsay, Cameron\n  - Krishnaswami, Neelakantan R.\n  date: 2022-03\n  serial-number:\n    arxiv: &#39;2203.01835&#39;\n&quot;,&quot;yml-file&quot;:&quot;mercer-2022-implicit.yml&quot;}"><div class="helia-cite-key" data-copy="@mercer-2022-implicit" data-copy-label="citation key"><span class="helia-bib-key">Cite as</span> <code class="helia-raw-inline">@mercer-2022-implicit</code> (helia, typst) · <code class="helia-raw-inline">\cite{mercer-2022-implicit}</code> (LaTeX)</div>
+<div class="helia-cite-format helia-collapsible" data-format="bibtex" data-copy="true" data-copy-label="BibTeX">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">BibTeX</span></summary>
+<div class="helia-group-body">
+<details class="helia-code" open><summary class="helia-code-summary"><span class="helia-code-lang">bibtex</span> · <span class="helia-code-lines">8 lines</span></summary><pre class="helia-raw"><code class="language-bibtex"><span class="hl-text hl-bibtex"><span class="hl-meta hl-entry hl-braces hl-bibtex"><span class="hl-keyword hl-other hl-entry-type hl-bibtex"><span class="hl-punctuation hl-definition hl-keyword hl-bibtex">@</span>misc</span><span class="hl-punctuation hl-section hl-entry hl-begin hl-bibtex">{</span><span class="hl-entity hl-name hl-type hl-entry-key hl-bibtex">mercer-2022-implicit</span>,
+  <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">author</span> <span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span> <span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>Henry Mercer and Cameron Ramsay and Krishnaswami, Neelakantan R.<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>,
+  <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">title</span> <span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span> <span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>Implicit Polarized F: local type inference for impredicativity<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>,
+  <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">year</span> <span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span> <span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>2022<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>,
+  <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">month</span> <span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span> <span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>3<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>,
+  <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">eprint</span> <span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span> <span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>2203.01835<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>,
+  <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">archiveprefix</span> <span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span> <span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>arXiv<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span>
+</span><span class="hl-punctuation hl-section hl-entry hl-end hl-bibtex">}</span></span></span></code></pre></details>
+</div>
+</details>
+</div>
+<div class="helia-cite-format helia-collapsible" data-format="hayagriva" data-copy="true" data-copy-label="hayagriva YAML">
+<details>
+<summary class="helia-group-summary"><span class="helia-group-title">hayagriva YAML (typst)</span></summary>
+<div class="helia-group-body">
+<details class="helia-code" open><summary class="helia-code-summary"><span class="helia-code-lang">yaml</span> · <span class="helia-code-lines">10 lines</span></summary><pre class="helia-raw"><code class="language-yaml"><span class="hl-source hl-yaml"><span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">mercer-2022-implicit</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">type</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">misc</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">title</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-quoted hl-single hl-yaml"><span class="hl-punctuation hl-definition hl-string hl-begin hl-yaml">&#39;</span>Implicit Polarized F: local type inference for impredicativity<span class="hl-punctuation hl-definition hl-string hl-end hl-yaml">&#39;</span></span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">author</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Mercer, Henry</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Ramsay, Cameron</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Krishnaswami, Neelakantan R.</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">date</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">2022-03</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">serial-number</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">arxiv</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-quoted hl-single hl-yaml"><span class="hl-punctuation hl-definition hl-string hl-begin hl-yaml">&#39;</span>2203.01835<span class="hl-punctuation hl-definition hl-string hl-end hl-yaml">&#39;</span></span>
+</span></code></pre></details>
+</div>
+</details>
+</div>
+<div class="helia-cite-files">Download: <a class="helia-link" href="mercer-2022-implicit.bib">mercer-2022-implicit.bib</a> · <a class="helia-link" href="mercer-2022-implicit.yml">mercer-2022-implicit.yml</a></div>
+</div>
+</div>
+</details>
+</div>
+<div class="helia-reference-cited-by helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">Cited by (1)</span></summary>
+<div class="helia-group-body">
+<section class="helia-transclusion" data-entry="mihejevs-2025-canonical" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="mihejevs-2025-canonical"><span class="helia-title">Canonical bidirectional typechecking</span>&nbsp;<a class="helia-slug" href="mihejevs-2025-canonical.html">mihejevs-2025-canonical</a><span class="helia-byline"><span class="helia-entry-link" data-entry="arxiv">arXiv</span> · 2025</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="mihejevs-2025-canonical" data-kind="reference">
+<div class="helia-abstract">We demonstrate that the checkable/synthesisable split in bidirectional typechecking coincides with existing dualities in polarised System L, also known as polarised <span class="helia-math helia-math-inline helia-mathml"><math><mi>𝜇</mi><mover accent="true"><mi>𝜇</mi><mo>˜</mo></mover></math></span>-calculus. Specifically, positive terms and negative coterms are checkable, and negative terms and positive coterms are synthesisable. This combines a standard formulation of bidirectional typechecking with Zeilberger’s ‘cocontextual’ variant. We extend this to ordinary ‘cartesian’ System L using Mc Bride’s co-de Bruijn formulation of scopes, and show that both can be combined in a linear-nonlinear style, where linear types are positive and cartesian types are negative. This yields a remarkable 3-way coincidence between the shifts of polarised System L, LNL calculi, and bidirectional calculi.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/2512.07511">arXiv</a></span></div>
+</div>
+</div>
+</details>
+</section>
+</div>
+</details>
+</div>
+<div class="helia-reference-cites helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">Cites 25 works (1 here)</span></summary>
+<div class="helia-group-body">
+<div class="helia-reference-cites-here helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">With notes (1)</span></summary>
+<div class="helia-group-body">
+<section class="helia-transclusion" data-entry="dunfield-2013-complete" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="dunfield-2013-complete"><span class="helia-title">Complete and easy bidirectional typechecking for higher-rank polymorphism</span>&nbsp;<a class="helia-slug" href="dunfield-2013-complete.html">dunfield-2013-complete</a><span class="helia-byline"><span class="helia-entry-link" data-entry="icfp">ICFP</span> · 2013</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="dunfield-2013-complete" data-kind="reference">
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="pdf-url"><a class="helia-link helia-external" href="https://dl.acm.org/doi/pdf/10.1145/2500365.2500582">PDF</a></span> · <span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/2500365.2500582">DOI</a></span> · <span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/1306.6032">arXiv</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/conf/icfp/DunfieldK13">pldb</a></span></div>
+</div>
+</div>
+</details>
+</section>
+</div>
+</details>
+</div>
+<div class="helia-reference-cites-away helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">External (24)</span></summary>
+<div class="helia-group-body">
+<ul>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3408971">A quick look at impredicativity</a> (2020)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3192366.3192389">Guarded impredicative polymorphism</a> (2018)</li>
+<li>A dissection of L (2014)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/1480881.1480891">Flexible types: robust type inference for first-class polymorphism</a> (2009)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/1411203.1411245">HMF: simple type inference for first-class polymorphism</a> (2008)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/1411203.1411246">FPH: first-class polymorphism for Haskell</a> (2008)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/1411203.1411216">From ML to MLF: graphic type constraints with efficient type inference</a> (2008)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/1190315.1190324">System F with type equality coercions</a> (2007)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1017/s0956796806006034">Practical type inference for arbitrary-rank types</a> (2007)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/s10990-006-0480-6">Call-by-push-value: Decomposing call-by-value and call-by-name</a> (2006)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/1159803.1159838">Boxy types: inference for higher-rank types and impredicativity</a> (2006)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1093/logcom/13.5.639">A Linear Spine Calculus</a> (2003)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/944705.944709">MLF: raising ML to the power of system F</a> (2003)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/360204.360207">Colored local type inference</a> (2001)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/345099.345100">Local type inference</a> (2000)</li>
+<li>Polymorphic subtyping without distributivity (1998)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1109/lics.1996.561306">The subtyping problem for second-order types is undecidable</a> (1996)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/237721.237729">Putting type annotations to work</a> (1996)</li>
+<li>An implementation of F&lt;: (1993)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/99370.99404">Theorems for free!</a> (1989)</li>
+<li>Types, Abstraction and Parametric Polymorphism (1983)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1016/0022-0000(78)90014-4">A Theory of Type Polymorphism in Programming</a> (1978)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/3-540-06859-7_148">Towards a theory of type structure</a> (1974)</li>
+<li>Une extension de l'interprétation de Gödel à l'analyse, et son application à l'élimination des coupures dans l'analyse et la théorie des types (1971)</li>
+</ul>
+</div>
+</details>
+</div>
+</div>
+</details>
+</div>
+</article>
+<div class="helia-identity"><span class="helia-id">mercer-2022-implicit</span> <span class="helia-kind">reference</span> <span class="helia-path">entries/refs/mercer-2022-implicit/mercer-2022-implicit.hel</span></div>
+</div>
+</body>
+</html>

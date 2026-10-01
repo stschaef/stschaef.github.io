@@ -1,0 +1,1 @@
+heliaSearchData("d/university-of-mannheim",{"id":"university-of-mannheim","title":"University of Mannheim","kind":"institution","tags":[],"authors":[],"venue":[],"date":null,"url":"university-of-mannheim.html","headings":[],"body":""});

@@ -1,0 +1,1 @@
+heliaSearchData("d/jacksonkernion",{"id":"jacksonkernion","title":"Jackson Kernion","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"jacksonkernion.html","headings":[],"body":""});

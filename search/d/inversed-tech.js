@@ -1,0 +1,1 @@
+heliaSearchData("d/inversed-tech",{"id":"inversed-tech","title":"Inversed Tech","kind":"institution","tags":[],"authors":[],"venue":[],"date":null,"url":"inversed-tech.html","headings":[],"body":""});

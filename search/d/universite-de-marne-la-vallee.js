@@ -1,0 +1,1 @@
+heliaSearchData("d/universite-de-marne-la-vallee",{"id":"universite-de-marne-la-vallee","title":"Université de Marne-la-Vallée","kind":"institution","tags":[],"authors":[],"venue":[],"date":null,"url":"universite-de-marne-la-vallee.html","headings":[],"body":""});

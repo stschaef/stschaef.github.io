@@ -1,0 +1,1 @@
+heliaSearchData("d/geoffreyirving",{"id":"geoffreyirving","title":"Geoffrey Irving","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"geoffreyirving.html","headings":[],"body":""});

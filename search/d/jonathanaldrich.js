@@ -1,0 +1,1 @@
+heliaSearchData("d/jonathanaldrich",{"id":"jonathanaldrich","title":"Jonathan Aldrich","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"jonathanaldrich.html","headings":[],"body":""});

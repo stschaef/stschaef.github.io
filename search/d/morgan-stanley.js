@@ -1,0 +1,1 @@
+heliaSearchData("d/morgan-stanley",{"id":"morgan-stanley","title":"Morgan Stanley","kind":"institution","tags":[],"authors":[],"venue":[],"date":null,"url":"morgan-stanley.html","headings":[],"body":""});

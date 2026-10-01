@@ -1,0 +1,1 @@
+heliaSearchData("d/instituto-de-novas-tecnologias",{"id":"instituto-de-novas-tecnologias","title":"Instituto de Novas Tecnologias","kind":"institution","tags":[],"authors":[],"venue":[],"date":null,"url":"instituto-de-novas-tecnologias.html","headings":[],"body":""});

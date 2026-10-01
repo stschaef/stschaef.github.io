@@ -1,0 +1,1 @@
+heliaSearchData("d/tag-separation-logic",{"id":"tag-separation-logic","title":"separation-logic","kind":"tag","tags":[],"authors":[],"venue":[],"date":null,"url":"tag-separation-logic.html","headings":[],"body":""});

@@ -1,0 +1,1 @@
+heliaSearchData("d/eth-bereich-hochschulen",{"id":"eth-bereich-hochschulen","title":"ETH-Bereich Hochschulen","kind":"institution","tags":[],"authors":[],"venue":[],"date":null,"url":"eth-bereich-hochschulen.html","headings":[],"body":""});

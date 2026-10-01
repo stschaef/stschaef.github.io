@@ -1,0 +1,1 @@
+heliaSearchData("d/carette-2024-how",{"id":"carette-2024-how","title":"How to Bake a Quantum Π","kind":"reference","tags":["quantum"],"authors":["Amr Sabry","Chris Heunen","Jacques Carette","Robin Kaarsgaard"],"venue":["ICFP","International Conference on Functional Programming"],"date":null,"url":"carette-2024-how.html","headings":[],"body":""});

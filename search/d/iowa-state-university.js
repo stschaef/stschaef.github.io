@@ -1,0 +1,1 @@
+heliaSearchData("d/iowa-state-university",{"id":"iowa-state-university","title":"Iowa State University","kind":"institution","tags":[],"authors":[],"venue":[],"date":null,"url":"iowa-state-university.html","headings":[],"body":""});

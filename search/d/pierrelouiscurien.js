@@ -1,0 +1,1 @@
+heliaSearchData("d/pierrelouiscurien",{"id":"pierrelouiscurien","title":"Pierre-Louis Curien","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"pierrelouiscurien.html","headings":[],"body":""});

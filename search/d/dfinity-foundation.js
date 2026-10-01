@@ -1,0 +1,1 @@
+heliaSearchData("d/dfinity-foundation",{"id":"dfinity-foundation","title":"DFINITY Foundation","kind":"institution","tags":[],"authors":[],"venue":[],"date":null,"url":"dfinity-foundation.html","headings":[],"body":""});

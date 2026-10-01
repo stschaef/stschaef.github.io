@@ -1,0 +1,1 @@
+heliaSearchData("d/jacobgoldberger",{"id":"jacobgoldberger","title":"Jacob Goldberger","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"jacobgoldberger.html","headings":[],"body":""});

@@ -1,0 +1,1 @@
+heliaSearchData("d/chalmers-university-of-technology",{"id":"chalmers-university-of-technology","title":"Chalmers University of Technology","kind":"institution","tags":[],"authors":[],"venue":[],"date":null,"url":"chalmers-university-of-technology.html","headings":[],"body":""});

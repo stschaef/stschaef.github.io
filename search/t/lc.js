@@ -1,1 +1,1 @@
-heliaSearchData("t/lc",{"lcte":[550,160]});
+heliaSearchData("t/lc",{"lcte":[2203,160,1876,32]});

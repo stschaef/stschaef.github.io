@@ -1,0 +1,1 @@
+heliaSearchData("d/university-of-nice",{"id":"university-of-nice","title":"University of Nice","kind":"institution","tags":[],"authors":[],"venue":[],"date":null,"url":"university-of-nice.html","headings":[],"body":""});

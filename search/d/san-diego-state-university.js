@@ -1,0 +1,1 @@
+heliaSearchData("d/san-diego-state-university",{"id":"san-diego-state-university","title":"San Diego State University","kind":"institution","tags":[],"authors":[],"venue":[],"date":null,"url":"san-diego-state-university.html","headings":[],"body":""});

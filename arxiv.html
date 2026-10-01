@@ -7,6 +7,8 @@
 <title>arXiv</title>
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Ctext y=%22.9em%22 font-size=%2290%22%3E%F0%9F%8C%BB%3C/text%3E%3C/svg%3E">
 <meta name="generator" content="helia">
+<link rel="alternate" type="application/atom+xml" title="Steven Schaefer" href="feed.xml">
+<link rel="alternate" type="application/feed+json" title="Steven Schaefer" href="feed.json">
 <script src="helia/theme-version.js"></script>
 <script src="theme/folio-early.js"></script>
 <link rel="stylesheet" href="helia/theme.css">
@@ -41,13 +43,200 @@
 <summary class="helia-heading-summary"><h2 class="helia-heading">2026</h2>
 </summary>
 <div class="helia-heading-body">
+<section class="helia-transclusion" data-entry="fu-2026-revisiting" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="fu-2026-revisiting"><span class="helia-title">Revisiting Soundness for Occurrence Typing, Semantically</span>&nbsp;<a class="helia-slug" href="fu-2026-revisiting.html">fu-2026-revisiting</a><span class="helia-byline"><span class="helia-entry-link" data-entry="arxiv">arXiv</span> · 2026</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="fu-2026-revisiting" data-kind="reference">
+<div class="helia-abstract">Over the past two decades, numerous systems have brought some of the benefits of dependent typing to a wide variety of new programming languages, often by restricting which terms can appear inside types. Such techniques are known as refinement types, occurrence typing, liquid types, and path dependent types, among others. However, the restrictions adopted by these systems often break the substitution property, because they explicitly disallow the ability to substitute arbitrary terms for variables inside types. This leads to significant complexity in the design and metatheory of these systems, increasing the possibility of significant errors. We consider a specific line of work on occurrence typing, namely, the calculus underlying Typed Racket due to Tobin-Hochstadt and Felleisen 2010. We show that the fundamental challenge of substitution into types resulted in multiple flaws in the formalism and the syntactic type soundness theorem of this work. These flaws are replicated in several other papers building on this work, and also surface as a soundness bug in Typed Racket itself. We identify and repair these problems, revising the core calculus of Typed Racket and giving a <em>semantic type soundness</em> proof using step-indexed logical relations, formalized in Lean. We argue that this approach is simpler than it may seem, and easily scales to handle the complexity of the occurrence typing in Typed Racket.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/2609.16299">arXiv</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="wu-2026-type" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="wu-2026-type"><span class="helia-title">Type-Directed Discretization of Probabilistic Programs (Extended Version)</span>&nbsp;<a class="helia-slug" href="wu-2026-type.html">wu-2026-type</a><span class="helia-byline"><span class="helia-entry-link" data-entry="arxiv">arXiv</span> · 2026</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="wu-2026-type" data-kind="reference">
+<div class="helia-abstract">We study exact discretization as a semantics-preserving transformation for recursive, higher-order probabilistic programs with continuous distributions. We target programs where continuous values are compared against finitely many constants, so exact inference reduces to a discrete problem. Our central technical contribution is a non-local, type-directed analysis that infers where continuous values can be partitioned into finitely many observationally relevant regions, then rewrites sampling and comparison behavior over those regions. We call this transformation Slice. Because this construction is global and type-directed, correctness requires reasoning beyond the local syntax: we formalize the transformation and prove soundness for boolean queries using a coupling-style logical relations argument over operational semantics. As an application, transformed programs can be executed by discrete engines such as Dice, Roulette, and Storm. Our empirical evaluation shows two complementary strengths of Slice when paired with discrete backends: it enables exact inference for challenging continuous programs that lie beyond the reach of previous exact systems, and, on benchmarks where direct comparison is possible, it is competitive with state-of-the-art exact inference systems for continuous programs.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/3839534">DOI</a></span> · <span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/2608.16093">arXiv</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="chen-2026-oblivious" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="chen-2026-oblivious"><span class="helia-title">Oblivious Probabilistic Outcome Logic: Verifying Probabilistic Programs with an Oblivious Adversary</span>&nbsp;<a class="helia-slug" href="chen-2026-oblivious.html">chen-2026-oblivious</a><span class="helia-byline"><span class="helia-entry-link" data-entry="arxiv">arXiv</span> · 2026</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="chen-2026-oblivious" data-kind="reference">
+<div class="helia-abstract">In the context of probabilistic programs, an oblivious adversary resolves nondeterminism without seeing the outcomes of random draws. Obliviousness is a common assumption in online algorithms and distributed protocols, but the complex interaction between random draws and adversarial choices makes it challenging to reason about correctness. While there has been significant progress toward reasoning about programs that combine randomization with nondeterminism, most of the work has focused on the adaptive model, whose omniscient view of program state is too powerful to establish correctness for certain classes of programs. We introduce Oblivious Probabilistic Outcome Logic (opOL), a new logic for reasoning about probabilistic programs with nondeterminism controlled by an oblivious adversary. Building on Outcome Logic and Probabilistic Separation Logic, opOL models adversarial choice as a resource and uses probabilistic independence to ensure that random outcomes are hidden from the adversary. The opOL proof system provides expressive and compositional rules for case analysis on both random and nondeterministic outcomes, and for proving almost-sure termination. Expressivity is tested through several case studies, including a paging algorithm and a leader election protocol. The opOL metatheory and case studies are mechanized in Lean 4.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/2607.16533">arXiv</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="lu-2026-a" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="lu-2026-a"><span class="helia-title">A Fast Quantitative Analyzer for NetKAT</span>&nbsp;<a class="helia-slug" href="lu-2026-a.html">lu-2026-a</a><span class="helia-byline"><span class="helia-entry-link" data-entry="arxiv">arXiv</span> · 2026</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="lu-2026-a" data-kind="reference">
+<div class="helia-abstract">When designing a network, engineers must navigate trade-offs (e.g., one topology offers more aggregate bandwidth, another lower latency or better resilience) that demand reasoning about quantitative properties. We present a fast analyzer for quantitative network properties based on weighted NetKAT (wNetKAT), a domain-specific language that provides a semantic foundation for quantitative reasoning by modeling network behavior using weights drawn from a semiring. At the core of our development is the design of a symbolic data structure – weighted symbolic packet programs (wSPPs) – that compactly represent the semantics of weighted policies, for which a direct implementation would be intractable. We show how to compute all policy constructs symbolically; unsurprisingly, the crux is Kleene star, for which we design a tailored algorithm. We further develop trace-carrying Pareto semirings, which compute multi-objective frontiers together with the network paths that realize them. We formalize the development in Lean and provide an optimized Rust implementation. Being parametric on a semiring, our implementation covers both classical and quantitative analyses: we show that it is competitive with KATch, a heavily optimized Boolean-reachability verifier, and orders of magnitude faster than McNetKAT and Storm on probabilistic analyses. A case study comparing Fat-tree and Jellyfish data-center topologies shows the framework supports multi-objective design-time analysis.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/2607.14420">arXiv</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="mathiasen-2026-verifying" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="mathiasen-2026-verifying"><span class="helia-title">Verifying Isolation Levels of Database Implementations for Free Using Separation Logic</span>&nbsp;<a class="helia-slug" href="mathiasen-2026-verifying.html">mathiasen-2026-verifying</a><span class="helia-byline"><span class="helia-entry-link" data-entry="arxiv">arXiv</span> · 2026</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="mathiasen-2026-verifying" data-kind="reference">
+<div class="helia-abstract">Modern databases are highly concurrent and provide transactions as a mean of grouping several database operations into atomically applied units. Database vendors and software engineers use isolation levels to describe the consistency guarantees of transactions. The popular isolation levels give weak guarantees, with intricate semantics, to optimize performance of applications. The problem of assuring that database implementations actually implement the isolation level guarantees that application developers build their systems upon has received a great deal of attention from the testing community. But until now, there exists no method for formally verifying that a database implementation actually implements the isolation level that database vendors says it provides. In this paper, we present a method for verifying that a database implements an isolation level: we derive isolation levels directly, as formalized in transactional consistency models by the database community, from the structure of separation logic specifications. By doing so, we consider all program executions that a database and arbitrary clients of the database could produce. The result is a so-called free theorem meaning that any database implementation, whose operations are verified against a specific set of separation logic specifications, actually implements its isolation level. As all proofs in this paper are mechanized in the Rocq proof assistant and build upon a detailed semantic model of program execution, we believe this contribution raises the bar for the achievable robustness of databases.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/2607.15877">arXiv</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="mathiasen-2026-yarrow" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="mathiasen-2026-yarrow"><span class="helia-title">Yarrow: Reconciling Effect Handlers and Region-Based Memory Management</span>&nbsp;<a class="helia-slug" href="mathiasen-2026-yarrow.html">mathiasen-2026-yarrow</a><span class="helia-byline"><span class="helia-entry-link" data-entry="arxiv">arXiv</span> · 2026</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="mathiasen-2026-yarrow" data-kind="reference">
+<div class="helia-abstract">We present a new ML-like programming language Yarrow with algebraic effects and region-based memory management. Reconciling these programming language features into one language is challenging: the non-local control flow of algebraic effects break the stack discipline of function calls and returns that region-based memory management relies on, and multi-shot effect handlers break the invariant that regions can be exited at most once. We present a program logic, called Yarrow Logic (YL), that supports safe and modular reasoning about regions in the presence of one-shot and multi-shot effect handlers. We prove the logic sound w.r.t. the operational semantics of Yarrow which is inspired by the runtime of OCaml but refined for regions. We use YL to prove correctness of a number of case studies with algebraic effects, including checkpointing, asynchronous computation and a LIFO data structure implementation. Since all memory locations used in these case studies are allocated in regions, these case studies avoid using the less efficient garbage collected heap memory. We have formalized Yarrow’s operational semantics, the Yarrow program logic, and all our case studies using the Iris separation logic framework on top of the Rocq Prover.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/2607.15876">arXiv</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="mangel-2026-syntax" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="mangel-2026-syntax"><span class="helia-title">Syntax and semantics of focalisation with relative monads and comonads</span>&nbsp;<a class="helia-slug" href="mangel-2026-syntax.html">mangel-2026-syntax</a><span class="helia-byline"><span class="helia-entry-link" data-entry="arxiv">arXiv</span> · 2026</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="mangel-2026-syntax" data-kind="reference">
+<div class="helia-abstract">The logical principles of focalisation and polarisation can be used to design well-behaved term syntaxes for sequent calculus, which play a role as meta-languages for describing effectful computation. On the semantics side, this corresponds to an axiomatic and polarised notion of model of computation stated in terms of adjunctions over non-associative categories. In this paper, we study the special and delicate cases of resource and effect modalities in a general intuitionistic and linear setting: an exponential comonad <span class="helia-math helia-math-inline helia-mathml"><math><mo form="postfix">!</mo></math></span> (refining <span class="helia-math helia-math-inline helia-mathml"><math><mi>□</mi></math></span>) and a strong monad <span class="helia-math helia-math-inline helia-mathml"><math><mo lspace="0em" rspace="0em">◊</mo></math></span>. The starting point of our contribution is noticing that the completeness for a polarised syntax for <span class="helia-math helia-math-inline helia-mathml"><math><mo form="postfix">!</mo></math></span> and <span class="helia-math helia-math-inline helia-mathml"><math><mo lspace="0em" rspace="0em">◊</mo></math></span> with respect to (co)monads in linear call-by-push-value models can be achieved if we move to relative (co)monads: more precisely, comonads relative to <span class="helia-math helia-math-inline helia-mathml"><math><mo lspace="0em" rspace="0em" stretchy="false">↓</mo></math></span> (the positive shift functor) for <span class="helia-math helia-math-inline helia-mathml"><math><mo form="postfix">!</mo></math></span> and monads relative to <span class="helia-math helia-math-inline helia-mathml"><math><mo lspace="0em" rspace="0em" stretchy="false">↑</mo></math></span> (the negative shift functor) for <span class="helia-math helia-math-inline helia-mathml"><math><mo lspace="0em" rspace="0em">◊</mo></math></span>. These specialisations of the concept of relative (co)monad to call-by-push-value adjunctions recently appeared. Yet the syntax we present arose from proof-theoretic consideration, without the link with relative (co)monads being noticed at the time. Our first remark is thus that (co)monads relative to a call-by-push-value adjunction have been motivated previously from a proof-theoretic perspective in the context of focalisation, which also provides a meta-language for these concepts in an effectful setting. We carry out the study of these modalities from the axiomatic, non-associative point of view. We recall the notion of adjunction over non-associative categories, and establish correspondence results between this notion of adjunction and that of relative adjunction. This correspondence is then extended to linear-non-linear and strong versions of adjunctions as needed to model <span class="helia-math helia-math-inline helia-mathml"><math><mo form="postfix">!</mo></math></span> and <span class="helia-math helia-math-inline helia-mathml"><math><mo lspace="0em" rspace="0em">◊</mo></math></span>.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/2606.14652">arXiv</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="aberle-2026-compositional" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="aberle-2026-compositional"><span class="helia-title">Compositional Program Verification with Polynomial Functors in Dependent Type Theory</span>&nbsp;<a class="helia-slug" href="aberle-2026-compositional.html">aberle-2026-compositional</a><span class="helia-byline"><span class="helia-entry-link" data-entry="arxiv">arXiv</span> · 2026</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="aberle-2026-compositional" data-kind="reference">
+<div class="helia-abstract">We present a framework for compositional program verification based on polynomial functors in dependent type theory. In this framework, polynomial functors serve as program interfaces, Kleisli morphisms for the free monad monad serve as implementations, and dependent polynomials encode pre/postcondition specifications. We show that implementations and their verifications compose via wiring diagrams, and that Mealy machines provide a compositional coalgebraic operational semantics. We identify the abstract categorical structure underlying this compositionality as a monoidal functor from specifications to interfaces with a compatible monoidal natural transformation of lax monoidal presheaves; this opens the door to generalizations to other categories, monoidal products, etc., including settings for concurrency and relational verification, which we sketch. As a proof-of-concept, the entire framework has been formalized in Agda.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/2604.01303">arXiv</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="amorim-2026-a" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="amorim-2026-a"><span class="helia-title">A Framework for Coalgebraic Reward-Sensitive Bisimulation (Extended Version)</span>&nbsp;<a class="helia-slug" href="amorim-2026-a.html">amorim-2026-a</a><span class="helia-byline"><span class="helia-entry-link" data-entry="arxiv">arXiv</span> · 2026</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="amorim-2026-a" data-kind="reference">
+<div class="helia-abstract">In this paper we present a framework for modelling <em>reward-sensitive bisimulations</em>, that is, bisimulations that account for quantitative differences such as accumulated rewards. To capture both qualitative and quantitative aspects uniformly, we consider two interacting notions of bisimulation: a graded variant that tracks bounded reward differences, and an ungraded one that abstracts from them. Our characterization of these notions is done in the fibrational and coalgebraic approach to (bi)simulation initiated by Hermida and Jacobs. To formally relate the graded and ungraded notions, we deploy categorical gluing, a standard technique in categorical logic. Furthermore, we show that this construction interacts well with standard coalgebra concepts, such as final coalgebras, and that it yields a unified characterization in terms of combined notions of bisimulations under mild assumptions. In order to demonstrate the versatility of our approach, we show how it encompasses various bisimulation notions for different kinds of systems, including relation-based bisimulations for automata with rewards and metric-based notions of bisimulations for labelled Markov processes.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/2604.01103">arXiv</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="moeller-2026-hybrid" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="moeller-2026-hybrid"><span class="helia-title">Hybrid Systems as Coalgebras: Lyapunov Morphisms for Zeno Stability</span>&nbsp;<a class="helia-slug" href="moeller-2026-hybrid.html">moeller-2026-hybrid</a><span class="helia-byline"><span class="helia-entry-link" data-entry="arxiv">arXiv</span> · 2026</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="moeller-2026-hybrid" data-kind="reference">
+<div class="helia-abstract">Hybrid dynamical systems exhibit a diverse array of stability phenomena, each currently addressed by separate Lyapunov-like results. We show that these results are all instances of a single theorem: a Lyapunov function is a morphism from a hybrid system into a simple stable target system <span class="helia-math helia-math-inline helia-mathml"><math><mi>𝜎</mi></math></span>, and different stability notions such as Lyapunov stability, asymptotic stability, exponential stability, and Zeno stability correspond to different choices of <span class="helia-math helia-math-inline helia-mathml"><math><mi>𝜎</mi></math></span>. This unification is achieved by expressing hybrid systems as coalgebras of an endofunctor <span class="helia-math helia-math-inline helia-mathml"><math><mi>ℋ︀</mi></math></span> on a category <span class="helia-math helia-math-inline helia-mathml"><math><mtext>𝖢𝗁𝖺𝗋𝗍</mtext></math></span> that naturally blends continuous and discrete dynamics. Instantiating a general categorical Lyapunov theorem for coalgebras to this setting results in new Lypaunov-like conditions for the stability of Zeno equilibria and the existence of Zeno behavior in hybrid systems.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/2604.05255">arXiv</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="dziemian-2026-how" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="dziemian-2026-how"><span class="helia-title">How Vulnerable Are AI Agents to Indirect Prompt Injections? Insights from a Large-Scale Public Competition</span>&nbsp;<a class="helia-slug" href="dziemian-2026-how.html">dziemian-2026-how</a><span class="helia-byline"><span class="helia-entry-link" data-entry="arxiv">arXiv</span> · 2026</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="dziemian-2026-how" data-kind="reference">
+<div class="helia-abstract">LLM based agents are increasingly deployed in high stakes settings where they process external data sources such as emails, documents, and code repositories. This creates exposure to indirect prompt injection attacks, where adversarial instructions embedded in external content manipulate agent behavior without user awareness. A critical but underexplored dimension of this threat is concealment: since users tend to observe only an agent’s final response, an attack can conceal its existence by presenting no clue of compromise in the final user facing response while successfully executing harmful actions. This leaves users unaware of the manipulation and likely to accept harmful outcomes as legitimate. We present findings from a large scale public red teaming competition evaluating this dual objective across three agent settings: tool calling, coding, and computer use. The competition attracted 464 participants who submitted 272000 attack attempts against 13 frontier models, yielding 8648 successful attacks across 41 scenarios. All models proved vulnerable, with attack success rates ranging from 0.5% (Claude Opus 4.5) to 8.5% (Gemini 2.5 Pro). We identify universal attack strategies that transfer across 21 of 41 behaviors and multiple model families, suggesting fundamental weaknesses in instruction following architectures. Capability and robustness showed weak correlation, with Gemini 2.5 Pro exhibiting both high capability and high vulnerability. To address benchmark saturation and obsoleteness, we will endeavor to deliver quarterly updates through continued red teaming competitions. We open source the competition environment for use in evaluations, along with 95 successful attacks against Qwen that did not transfer to any closed source model. We share model-specific attack data with respective frontier labs and the full dataset with the UK AISI and US CAISI to support robustness research.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/2603.15714">arXiv</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="davies-2026-boundary" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="davies-2026-boundary"><span class="helia-title">Boundary Point Jailbreaking of Black-Box LLMs</span>&nbsp;<a class="helia-slug" href="davies-2026-boundary.html">davies-2026-boundary</a><span class="helia-byline"><span class="helia-entry-link" data-entry="arxiv">arXiv</span> · 2026</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="davies-2026-boundary" data-kind="reference">
+<div class="helia-abstract">Frontier LLMs are safeguarded against attempts to extract harmful information via adversarial prompts known as “jailbreaks”. Recently, defenders have developed classifier-based systems that have survived thousands of hours of human red teaming. We introduce Boundary Point Jailbreaking (BPJ), a new class of automated jailbreak attacks that evade the strongest industry-deployed safeguards. Unlike previous attacks that rely on white/grey-box assumptions (such as classifier scores or gradients) or libraries of existing jailbreaks, BPJ is fully black-box and uses only a single bit of information per query: whether or not the classifier flags the interaction. To achieve this, BPJ addresses the core difficulty in optimising attacks against robust real-world defences: evaluating whether a proposed modification to an attack is an improvement. Instead of directly trying to learn an attack for a target harmful string, BPJ converts the string into a curriculum of intermediate attack targets and then actively selects evaluation points that best detect small changes in attack strength (“boundary points”). We believe BPJ is the first fully automated attack algorithm that succeeds in developing universal jailbreaks against Constitutional Classifiers, as well as the first automated attack algorithm that succeeds against GPT-5′s input classifier without relying on human attack seeds. BPJ is difficult to defend against in individual interactions but incurs many flags during optimisation, suggesting that effective defence requires supplementing single-interaction methods with batch-level monitoring.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/2602.15001">arXiv</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="speight-2026-impredicativity" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="speight-2026-impredicativity"><span class="helia-title">Impredicativity in Linear Dependent Type Theory</span>&nbsp;<a class="helia-slug" href="speight-2026-impredicativity.html">speight-2026-impredicativity</a><span class="helia-byline"><span class="helia-entry-link" data-entry="arxiv">arXiv</span> · 2026</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="speight-2026-impredicativity" data-kind="reference">
+<div class="helia-abstract">We construct a realizability model of linear dependent type theory from a linear combinatory algebra. Our model motivates a number of additions to the type theory. In particular, we add a universe with two decoding operations: one takes codes to cartesian types and the other takes codes to linear types. The universe is impredicative in the sense that it is closed under both large cartesian dependent products and large linear dependent products. We also add a rule for injectivity of the modality turning linear terms into cartesian terms. With all of the additions, we are able to encode (linear) inductive types. As a case study, we consider the type of lists over a linear type, and demonstrate that our encoding has the relevant uniqueness principle. The construction of the realizability model is fully formalized in the proof assistant Rocq.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/2602.08846">arXiv</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="caspar-2026-s4" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="caspar-2026-s4"><span class="helia-title">S4 modal sequent calculus as intermediate logic and intermediate language</span>&nbsp;<a class="helia-slug" href="caspar-2026-s4.html">caspar-2026-s4</a><span class="helia-byline"><span class="helia-entry-link" data-entry="arxiv">arXiv</span> · 2026</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="caspar-2026-s4" data-kind="reference">
+<div class="helia-abstract">In this short paper, we advocate for the idea that continuation-based intermediate languages correspond to intermediate logics. The goal of intermediate languages is to serve as a basis for compiler intermediate representations, allowing to represent expressive program transformations for optimisation and compilation, while preserving the properties that make programs compilable efficiently in the first place, such as the “stackability” of continuations. Intermediate logics are logics between intuitionistic and classical logic in terms of provability. Second-class continuations used in CPS-based intermediate languages correspond to a classical modal logic S4 with the added restriction that implications may only return modal types. This indeed corresponds to an intermediate logic, owing to the Gödel-McKinsey-Tarski theorem which states the intuitionistic nature of the modal fragment of S4. We introduce a three-kinded polarised sequent calculus for S4, together with an operational machine model that separates a heap from a stack. With this model we study a stackability property for the modal fragment of S4.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/2601.08071">arXiv</a></span></div>
+</div>
+</div>
+</details>
+</section>
 <section class="helia-transclusion" data-entry="alexandruIntrinsicallyCorrectAlgorithms2025-preprint" data-depth="1">
 <details>
 <summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="alexandruIntrinsicallyCorrectAlgorithms2025-preprint"><span class="helia-title">Intrinsically Correct Algorithms and Recursive Coalgebras</span>&nbsp;<a class="helia-slug" href="alexandruIntrinsicallyCorrectAlgorithms2025-preprint.html">alexandruIntrinsicallyCorrectAlgorithms2025-preprint</a><span class="helia-byline"><span class="helia-entry-link" data-entry="arxiv">arXiv</span> · 2026</span></h2></summary>
 <div class="helia-transclusion-body">
 <div class="helia-reference" data-entry="alexandruIntrinsicallyCorrectAlgorithms2025-preprint" data-kind="reference">
 <div class="helia-abstract">Recursive coalgebras provide an elegant categorical tool for modelling recursive algorithms and analysing their termination and correctness. By considering coalgebras over categories of suitably indexed families, the correctness of the corresponding algorithms follows intrinsically just from the type of the computed maps. However, proving recursivity of the underlying coalgebras is non-trivial, and proofs are typically ad hoc. This layer of complexity impedes the formalization of coalgebraically defined recursive algorithms in proof assistants. We introduce a framework for constructing coalgebras which are intrinsically recursive in the sense that the type of the coalgebra guarantees recursivity from the outset. Our approach is based on the novel concept of a well-founded functor on a category of families indexed by a well-founded relation. We show as our main result that every coalgebra for a well-founded functor is recursive, and demonstrate that well-known techniques for proving recursivity and termination such as ranking functions are subsumed by this abstract setup. We present a number of case studies, including Quicksort, the Euclidian algorithm, and CYK parsing. Both the main theoretical result and selected case studies have been formalized in Cubical Agda.</div>
-<div class="helia-entry-links"><span class="helia-entry-link" data-field="url"><a class="helia-link helia-external" href="https://arxiv.org/abs/2512.10748">Web</a></span> · <span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/2512.10748">arXiv</a></span></div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="pdf-url"><a class="helia-link helia-external" href="https://arxiv.org/pdf/2512.10748">PDF</a></span> · <span class="helia-entry-link" data-field="url"><a class="helia-link helia-external" href="https://arxiv.org/abs/2512.10748">Web</a></span> · <span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/2512.10748">arXiv</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/journals/pacmpl/AlexandruUW26">pldb</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="capucci-2026-adequate" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="capucci-2026-adequate"><span class="helia-title">Adequate Losses via Quantitative Linear Logic</span>&nbsp;<a class="helia-slug" href="capucci-2026-adequate.html">capucci-2026-adequate</a><span class="helia-byline"><span class="helia-entry-link" data-entry="arxiv">arXiv</span> · 2026</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="capucci-2026-adequate" data-kind="reference">
+<div class="helia-abstract">As neural components are increasingly embedded in existing symbolic software – including safety-critical systems – the question arises of how to specify and enforce the safety of the newly introduced neural parts. Unlike traditional logical specifications, these must be amenable not only to the standard Boolean interpretation, but also to training and optimisation. The latter calls for a quantitative interpretation of the logical syntax, subject to further requirements such as smoothness and differentiability. Moreover, the qualitative and quantitative sides of the logic must share a unifying proof-theoretic and categorical semantics. Finally, the new logic should link cleanly to the substructural and program logics that underpin the verification of existing symbolic programs. In this paper, we present a logic that ticks all of these boxes. We introduce a family of calculi, pQLL, indexed by a hardness degree <span class="helia-math helia-math-inline helia-mathml"><math><mi>𝑝</mi></math></span>, prove a cut-elimination theorem for them, and establish completeness with respect to enriched residuated ‘soft’ lattices. At <span class="helia-math helia-math-inline helia-mathml"><math><mi>𝑝</mi><mo>=</mo><mi>∞</mi></math></span>, pQLL reduces to multiplicative additive linear logic (MALL), and provability in pQLL converges to provability in MALL as <span class="helia-math helia-math-inline helia-mathml"><math><mi>𝑝</mi><mo stretchy="false">→</mo><mi>∞</mi></math></span>. We express optimisation objectives in the syntax of this logic and prove the quantitative adequacy of neuro-symbolic loss functions – a result that has eluded the neuro-symbolic machine learning community for nearly a decade.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.48550/arxiv.2605.13348">DOI</a></span> · <span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/2605.13348">arXiv</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="capucci-2026-compositionality" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="capucci-2026-compositionality"><span class="helia-title">Compositionality of Lyapunov functions via assume-guarantee reasoning</span>&nbsp;<a class="helia-slug" href="capucci-2026-compositionality.html">capucci-2026-compositionality</a><span class="helia-byline"><span class="helia-entry-link" data-entry="arxiv">arXiv</span> · 2026</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="capucci-2026-compositionality" data-kind="reference">
+<div class="helia-abstract">Assume-guarantee reasoning is a technique for compositional model checking in which system specifications are checked under certain assumptions on system parameters or inputs, and provide guarantees on observations of system state. We present a categorical framework for assume-guarantee reasoning for safety problems by viewing systems as lenses, following our earlier work on the compositionality of generalized Moore machines. Generalized Moore machines include ordinary Moore machines, partially observable Markov (decision) processes, and systems of parameterized ODEs (control systems); our framework gives assume-guarantee reasoning specially adapted to each of these cases. In particular, we give a novel formulation of assume-guarantee reasoning for (local) input-to-state stability ((L)ISS) Lyapunov functions on systems of parameterized ODEs. Our framework is categorically natural and straightforwardly compositional. A flavor of generalized Moore machine is determined by a tangency: a fibration with a section. We show that symmetric monoidal loose right modules of assume-guarantee certified generalized Moore machines over symmetric monoidal double categories of certified wiring diagrams can be constructed 2-functorially from fibrations internal to the 2-category of tangencies.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.48550/arxiv.2604.03017">DOI</a></span> · <span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/2604.03017">arXiv</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="flinkow-2026-quantitative" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="flinkow-2026-quantitative"><span class="helia-title">Quantitative Linear Logic for Neuro-Symbolic Learning and Verification</span>&nbsp;<a class="helia-slug" href="flinkow-2026-quantitative.html">flinkow-2026-quantitative</a><span class="helia-byline"><span class="helia-entry-link" data-entry="arxiv">arXiv</span> · 2026</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="flinkow-2026-quantitative" data-kind="reference">
+<div class="helia-abstract">Differentiable Logics are deployed in neuro-symbolic learning tasks as a way of embedding logical constraints in the training objective of neural networks. A differentiable logic consists of a syntax to write logical properties and a semantics to interpret them as real-valued functions to be folded in the loss function. A defining trade-off of the field is that between logical properties of the connectives, and analytic concerns for the semantics, with both aspects being relevant in applications. At one extreme we find fuzzy logics, that have well-established algebraic and proof-theoretic foundations, and at the other ad-hoc differentiable logics like Fischer’s DL2, conceived for deep learning applications. However, no satisfactory foundation has emerged yet. We propose a resolution to this long-standing tension via a novel logic, Quantitative Linear Logic (QLL), with foundational ambitions. Our design is driven by naturality – the idea that, since logical constraints are translated to losses, the semantics of the connectives should be pertinent operations used in ML practice (that is, sum and log-sum-exp) on additive quantities (like logits). We then judge the result on two aspects: logical adequacy – that they satisfy most of the standard logical laws of Linear Logic; and empirical effectiveness – test-time performance (as measured by adversarial attacks) is well-correlated to the actual verification of the logical constraints (as measured by off-the-shelf neural network verifiers), which makes QLL stand out among SoTA techniques.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.48550/arxiv.2605.13845">DOI</a></span> · <span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/2605.13845">arXiv</a></span></div>
 </div>
 </div>
 </details>
@@ -72,13 +261,200 @@
 <summary class="helia-heading-summary"><h2 class="helia-heading">2025</h2>
 </summary>
 <div class="helia-heading-body">
-<section class="helia-transclusion" data-entry="li_etal_2025" data-depth="1">
+<section class="helia-transclusion" data-entry="mihejevs-2025-canonical" data-depth="1">
 <details>
-<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="li_etal_2025"><span class="helia-title">Mechanizing Synthetic Tait Computability in Istari</span>&nbsp;<a class="helia-slug" href="li_etal_2025.html">li_etal_2025</a><span class="helia-byline"><span class="helia-entry-link" data-entry="arxiv">arXiv</span> · 2025</span></h2></summary>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="mihejevs-2025-canonical"><span class="helia-title">Canonical bidirectional typechecking</span>&nbsp;<a class="helia-slug" href="mihejevs-2025-canonical.html">mihejevs-2025-canonical</a><span class="helia-byline"><span class="helia-entry-link" data-entry="arxiv">arXiv</span> · 2025</span></h2></summary>
 <div class="helia-transclusion-body">
-<div class="helia-reference" data-entry="li_etal_2025" data-kind="reference">
-<div class="helia-abstract">Categorical gluing is a powerful technique for proving meta-theorems of type theories such as canonicity and normalization. Synthetic Tait Computability (STC) provides an abstract treatment of the complex gluing models by internalizing the gluing category into a modal dependent type theory with a phase distinction. This work presents a mechanization of STC in the Istari proof assistant. Istari is a Martin-Löf-style extensional type theory with equality reflection, which avoids much of the explicit transport reasoning typically found in intensional proof assistants. This work develops a reusable library for synthetic phase distinction, including modalities, extension types, and strict glue types, and applies it to two case studies: (1) a canonicity model for dependent type theory with dependent products and booleans with large elimination, and (2) a Kripke canonicity model for the cost-aware logical framework. Our results demonstrate that the core STC constructions can be formalized essentially verbatim in Istari, preserving the elegance of the on-paper arguments while ensuring machine-checked correctness.</div>
-<div class="helia-entry-links"><span class="helia-entry-link" data-field="url"><a class="helia-link helia-external" href="https://arxiv.org/abs/2509.11418">Web</a></span> · <span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/2509.11418">arXiv</a></span></div>
+<div class="helia-reference" data-entry="mihejevs-2025-canonical" data-kind="reference">
+<div class="helia-abstract">We demonstrate that the checkable/synthesisable split in bidirectional typechecking coincides with existing dualities in polarised System L, also known as polarised <span class="helia-math helia-math-inline helia-mathml"><math><mi>𝜇</mi><mover accent="true"><mi>𝜇</mi><mo>˜</mo></mover></math></span>-calculus. Specifically, positive terms and negative coterms are checkable, and negative terms and positive coterms are synthesisable. This combines a standard formulation of bidirectional typechecking with Zeilberger’s ‘cocontextual’ variant. We extend this to ordinary ‘cartesian’ System L using Mc Bride’s co-de Bruijn formulation of scopes, and show that both can be combined in a linear-nonlinear style, where linear types are positive and cartesian types are negative. This yields a remarkable 3-way coincidence between the shifts of polarised System L, LNL calculi, and bidirectional calculi.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/2512.07511">arXiv</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="stepanenko-2025-context" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="stepanenko-2025-context"><span class="helia-title">Context-Dependent Effects and Concurrency in Guarded Interaction Trees</span>&nbsp;<a class="helia-slug" href="stepanenko-2025-context.html">stepanenko-2025-context</a><span class="helia-byline"><span class="helia-entry-link" data-entry="arxiv">arXiv</span> · 2025</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="stepanenko-2025-context" data-kind="reference">
+<div class="helia-abstract">Guarded Interaction Trees are a structure and a fully formalized framework for representing higher-order computations with higher-order effects in Rocq. We present an extension of Guarded Interaction Trees to support formal reasoning about context-dependent effects. That is, effects whose behaviors depend on the evaluation context, e.g., call/cc, shift and reset. Using and reasoning about such effects is challenging since certain compositionality principles no longer hold in the presence of such effects. For example, the so-called “bind rule” in modern program logics is no longer valid. The goal of our extension is to support representation and reasoning about context-dependent effects in the most painless way possible. To that end, our extension is conservative: the reasoning principles for context-independent effects remain the same. We use it to give direct-style denotational semantics for higher-order programming languages with call/cc and with delimited continuations. We extend the program logic for Guarded Interaction Trees to account for context-dependent effects, and we use the program logic to prove that the denotational semantics is adequate with respect to the operational semantics. Additionally, we retain the ability to combine multiple effects in a modular way, which we demonstrate by showing type soundness for safe interoperability of a programming language with delimited continuations and a programming language with higher-order store. Furthermore, as another contribution, in addition to context-dependent effects, we show how to extend Guarded Interaction Trees with preemptive concurrency. To support implementation and verification of concurrent data structures and algorithms in the presence of preemptive concurrency one requires atomic state modification operations, e.g., compare-and-exchange.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/2512.11577">arXiv</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="clarke-2025-the" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="clarke-2025-the"><span class="helia-title">The free bifibration on a functor</span>&nbsp;<a class="helia-slug" href="clarke-2025-the.html">clarke-2025-the</a><span class="helia-byline"><span class="helia-entry-link" data-entry="arxiv">arXiv</span> · 2025</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="clarke-2025-the" data-kind="reference">
+<div class="helia-abstract">We consider the problem of constructing the free bifibration generated by a functor of categories <span class="helia-math helia-math-inline helia-mathml"><math><mi>𝑝</mi><mo lspace="0.2777777777777778em" rspace="0.2777777777777778em">:</mo><mi>𝐷</mi><mo stretchy="false">→</mo><mi>𝐶</mi></math></span>. This problem was previously considered by Lamarche, and is closely related to the problem, considered by Dawson, Paré, and Pronk, of “freely adjoining adjoints” to a category. We develop a proof-theoretic approach to the problem, beginning with a construction of the free bifibration <span class="helia-math helia-math-inline helia-mathml"><math><msub><mi mathvariant="normal">Λ</mi><mi>𝑝</mi></msub><mo lspace="0.2777777777777778em" rspace="0.2777777777777778em">:</mo><mi>𝐵</mi><mi>𝑖</mi><mi>𝑓</mi><mi>𝑖</mi><mi>𝑏</mi><mrow><mo stretchy="false">(</mo><mi>𝑝</mi><mo stretchy="false">)</mo></mrow><mo stretchy="false">→</mo><mi>𝐶</mi></math></span> in which objects of <span class="helia-math helia-math-inline helia-mathml"><math><mi>𝐵</mi><mi>𝑖</mi><mi>𝑓</mi><mi>𝑖</mi><mi>𝑏</mi><mrow><mo stretchy="false">(</mo><mi>𝑝</mi><mo stretchy="false">)</mo></mrow></math></span> are formulas of a primitive “bifibrational logic”, and arrows are derivations in a cut-free sequent calculus modulo a notion of permutation equivalence. We show that instantiating the construction to the identity functor generates a _zigzag double category_ <span class="helia-math helia-math-inline helia-mathml"><math><mi>ℤ</mi><mrow><mo stretchy="false">(</mo><mi>𝐶</mi><mo stretchy="false">)</mo></mrow></math></span>, which is also the free double category with companions and conjoints (or fibrant double category) on <span class="helia-math helia-math-inline helia-mathml"><math><mi>𝐶</mi></math></span>. The approach adapts smoothly to the more general task of building <span class="helia-math helia-math-inline helia-mathml"><math><mrow><mo stretchy="false">(</mo><mrow><mi>𝑃</mi><mo>,</mo><mi>𝑁</mi></mrow><mo stretchy="false">)</mo></mrow></math></span>-fibrations, where one only asks for pushforwards along arrows in <span class="helia-math helia-math-inline helia-mathml"><math><mi>𝑃</mi></math></span> and pullbacks along arrows in <span class="helia-math helia-math-inline helia-mathml"><math><mi>𝑁</mi></math></span> for some subsets of arrows; this encompasses Kock and Joyal’s notion of _ambifibration_ when <span class="helia-math helia-math-inline helia-mathml"><math><mrow><mo stretchy="false">(</mo><mrow><mi>𝑃</mi><mo>,</mo><mi>𝑁</mi></mrow><mo stretchy="false">)</mo></mrow></math></span> form a factorization system. We establish a series of progressively stronger normal forms, guided by ideas of _focusing_ from proof theory, and obtain a canonicity result under assumption that the base category is factorization preordered relative to <span class="helia-math helia-math-inline helia-mathml"><math><mi>𝑃</mi></math></span> and <span class="helia-math helia-math-inline helia-mathml"><math><mi>𝑁</mi></math></span>. This canonicity result allows us to decide the word problem and to enumerate relative homsets without duplicates. Finally, we describe several examples of a combinatorial nature, including a category of plane trees generated as a free bifibration over <span class="helia-math helia-math-inline helia-mathml"><math><mi>𝜔</mi></math></span>, and a category of increasing forests generated as a free ambifibration over <span class="helia-math helia-math-inline helia-mathml"><math><mi mathvariant="normal">Δ</mi></math></span>, which contains the lattices of noncrossing partitions as quotients of its fibers by the Beck-Chevalley condition for bicartesian squares.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/2511.07314">arXiv</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="kappe-2025-kleene" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="kappe-2025-kleene"><span class="helia-title">Kleene Algebra</span>&nbsp;<a class="helia-slug" href="kappe-2025-kleene.html">kappe-2025-kleene</a><span class="helia-byline"><span class="helia-entry-link" data-entry="arxiv">arXiv</span> · 2025</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="kappe-2025-kleene" data-kind="reference">
+<div class="helia-abstract">This booklet serves as an introduction to Kleene Algebra (KA), a set of laws that can be used to study general equivalences between programs. It discusses how general programs can be modeled using regular expressions, how those expressions correspond to automata, and how this correspondence can be exploited to obtain the central result of KA, namely that an equivalence of regular expressions is true if and only if it can be proved using the laws of KA. Each chapter closes with a set of exercises to further build intuition and understanding, and there is an optional chapter that develops automata theory through the lens of coalgebra.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/2511.11264">arXiv</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="zhang-2025-mechanizing" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="zhang-2025-mechanizing"><span class="helia-title">Mechanizing a Proof-Relevant Logical Relation for Timed Message-Passing Protocols</span>&nbsp;<a class="helia-slug" href="zhang-2025-mechanizing.html">zhang-2025-mechanizing</a><span class="helia-byline"><span class="helia-entry-link" data-entry="arxiv">arXiv</span> · 2025</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="zhang-2025-mechanizing" data-kind="reference">
+<div class="helia-abstract">Semantic typing has become a powerful tool for program verification, applying the technique of logical relations as not only a proof method, but also a device for prescribing program behavior. In recent work, Yao et al. scaled semantic typing to the verification of timed message-passing protocols, which are prevalent in, e.g., IoT and real-time systems applications. The appeal of semantic typing in this context is precisely because of its ability to support typed and untyped program components alike – including physical objects – which caters to the heterogeneity of these applications. Another demand inherent to these applications is timing: constraining the time or time window within which a message exchange must happen. Yao et al. equipped their logical relation not only with temporal predicates, but also with computable trajectories, to supply the evidence that an inhabitant can step from one time point to another one. While Yao et al. provide the formalization for such a verification tool, it lacks a mechanization. Mechanizing the system would not only provide a machine proof for it, but also facilitate scalability for future extensions and applications. This paper tackles the challenge of mechanizing the resulting proof-relevant logical relation in a proof assistant. allowing trajectories to be interleaved, partitioned, and concatenated, while the intended equality on trajectories is the equality of their graphs when seen as processes indexed by time. Unfortunately, proof assistants based on intensional type theory only have modest support for such equations, forcing a prolific use of transports. This paper reports on the process of mechanizing Yao et al.‘s results, comprising the logical relation, the algebra of computable trajectories with supporting lemmas, and the fundamental theorem of the logical relation, in the Rocq theorem prover.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/2511.19521">arXiv</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="chan-2025-internalizing" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="chan-2025-internalizing"><span class="helia-title">Internalizing Extensions in Lattices of Type Theories</span>&nbsp;<a class="helia-slug" href="chan-2025-internalizing.html">chan-2025-internalizing</a><span class="helia-byline"><span class="helia-entry-link" data-entry="arxiv">arXiv</span> · 2025</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="chan-2025-internalizing" data-kind="reference">
+<div class="helia-abstract">Many proof assistants allow the use of features and axioms that increase their expressive power. However, these extensions must be used with care, as some combinations are known to lead to logical inconsistencies. Therefore, proof assistants include mechanisms that track which extensions are used in a proof development or module, ensuring that incompatible extensions are not used simultaneously. Unfortunately, existing extension tracking mechanisms are external to the type system. This means that we cannot specify precisely which extensions a definition depends on. Having the ability to write more precise specifications means we are not picking an overapproximation of the extensions needed, which prevents reusing definitions in the presence of incompatible extensions. Furthermore, we cannot refer to definitions that use incompatible extensions even if they are never used in inconsistent ways. The reasoning principles of one extension therefore cannot be used as a metatheory to reason about the properties of an incompatible extension. In this report, I explore the use of the Dependent Calculus of Indistinguishability (DCOI) by Liu et al. for extension tracking. DCOI is a dependent type system with dependency tracking, where terms and variables are assigned dependency levels alongside their types. These dependency levels form a lattice that describes which levels are permitted to access what. To instead track extensions, each set of extensions would correspond to a dependency level, and the lattice would describe how extensions are permitted to interact.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/2510.26839">arXiv</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="master-2025-colored" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="master-2025-colored"><span class="helia-title">Colored Petri Nets are Monoidal Double Functors</span>&nbsp;<a class="helia-slug" href="master-2025-colored.html">master-2025-colored</a><span class="helia-byline"><span class="helia-entry-link" data-entry="arxiv">arXiv</span> · 2025</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="master-2025-colored" data-kind="reference">
+<div class="helia-abstract">We give a characterization of colored Petri nets as monoidal double functors. Framing colored Petri nets in terms of category theory allows for canonical definitions of various well-known constructions on colored Petri nets. In particular, we show how morphisms of colored Petri nets may be understood as natural transformations. The displayed category construction explains how lax double functors are equivalent to functors with codomain their former domain. We use this result to characterize the unfolding of colored Petri nets in terms of free symmetric monoidal categories.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/2510.01946">arXiv</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="aberle-2025-double" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="aberle-2025-double"><span class="helia-title">Double Orthogonal Factorization Systems</span>&nbsp;<a class="helia-slug" href="aberle-2025-double.html">aberle-2025-double</a><span class="helia-byline"><span class="helia-entry-link" data-entry="arxiv">arXiv</span> · 2025</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="aberle-2025-double" data-kind="reference">
+<div class="helia-abstract">We define strict and lax orthogonal factorization systems on double categories. These consist of an orthogonal factorization system on arrows and one on double cells that are compatible with each other. Our definitions are motivated by several explicit examples, including factorization systems on double categories of spans, relations and bimodules. We then prove monadicity results for orthogonal factorization systems on double categories in order to justify our definitions. For fibrant double categories we discuss the structure of the double orthogonal factorization systems that have a given orthogonal factorization system on the arrows in common. Finally, we study the interaction of orthogonal factorization systems on double categories with double fibrations.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/2509.26343">arXiv</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="koronkevich-2025-dependent" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="koronkevich-2025-dependent"><span class="helia-title">Dependent-Type-Preserving Memory Allocation</span>&nbsp;<a class="helia-slug" href="koronkevich-2025-dependent.html">koronkevich-2025-dependent</a><span class="helia-byline"><span class="helia-entry-link" data-entry="arxiv">arXiv</span> · 2025</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="koronkevich-2025-dependent" data-kind="reference">
+<div class="helia-abstract">Dependently typed programming languages such as Coq, Agda, Idris, and F*, allow programmers to write detailed specifications of their programs and prove their programs meet these specifications. However, these specifications can be violated during compilation since they are erased after type checking. External programs linked with the compiled program can violate the specifications of the original program and change the behavior of the compiled program – even when compiled with a verified compiler. For example, since Coq does not allow explicitly allocating memory, a programmer might link their Coq program with a C program that can allocate memory. Even if the Coq program is compiled with a verified compiler, the external C program can still violate the memory-safe specification of the Coq program by providing an uninitialized pointer to memory. This error could be ruled out by type checking in a language expressive enough to indicate whether memory is initialized versus uninitialized. Linking with a program with an uninitialized pointer could be considered ill-typed, and our linking process could prevent linking with ill-typed programs. To facilitate type checking during linking, we can use type-preserving compilation, which preserves the types through the compilation process. In this ongoing work, we develop a typed intermediate language that supports dependent memory allocation, as well as a dependent-type-preserving compiler pass for memory allocation.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/2509.09059">arXiv</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="koronkevich-2025-one" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="koronkevich-2025-one"><span class="helia-title">One Weird Trick to Untie Landin’s Knot</span>&nbsp;<a class="helia-slug" href="koronkevich-2025-one.html">koronkevich-2025-one</a><span class="helia-byline"><span class="helia-entry-link" data-entry="arxiv">arXiv</span> · 2025</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="koronkevich-2025-one" data-kind="reference">
+<div class="helia-abstract">In this work, we explore Landin’s Knot, which is understood as a pattern for encoding general recursion, including non-termination, that is possible after adding higher-order references to an otherwise terminating language. We observe that this isn’t always true – higher-order references, by themselves, don’t lead to non-termination. The key insight is that Landin’s Knot relies not primarily on references storing functions, but on unrestricted quantification over a function’s environment. We show this through a closure converted language, in which the function’s environment is made explicit and hides the type of the environment through impredicative quantification. Once references are added, this impredicative quantification can be exploited to encode recursion. We conjecture that by restricting the quantification over the environment, higher-order references can be safely added to terminating languages, without resorting to more complex type systems such as linearity, and without restricting references from storing functions.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/2507.21317">arXiv</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="zhang-2025-a" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="zhang-2025-a"><span class="helia-title">A Language-Agnostic Logical Relation for Message-Passing Protocols</span>&nbsp;<a class="helia-slug" href="zhang-2025-a.html">zhang-2025-a</a><span class="helia-byline"><span class="helia-entry-link" data-entry="arxiv">arXiv</span> · 2025</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="zhang-2025-a" data-kind="reference">
+<div class="helia-abstract">Today’s computing landscape has been gradually shifting to applications targeting distributed and <em>heterogeneous</em> systems, such as cloud computing and Internet of Things (IoT) applications. These applications are predominantly <em>concurrent</em>, employ <em>message-passing</em>, and interface with <em>foreign objects</em>, ranging from externally implemented code to actual physical devices such as sensors. Verifying that the resulting systems adhere to the intended protocol of interaction is challenging – the usual assumption of a common implementation language, let alone a type system, no longer applies, ruling out any verification method based on them. This paper develops a framework for certifying <em>protocol compliance</em> of heterogeneous message-passing systems. It contributes the first mechanization of a <em>language-agnostic logical relation</em>, asserting that its inhabitants comply with the protocol specified. This definition relies entirely on a labelled transition-based semantics, accommodating arbitrary inhabitants, typed and untyped alike, including foreign objects. As a case study, the paper considers two scenarios: (1) <em>per-instance verification</em> of a specific application or hardware device, and (2) <em>once-and-for-all verification</em> of well-typed applications for a given type system. The logical relation and both scenarios are mechanized in the Coq theorem prover.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/2506.10026">arXiv</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="ames-2025-categorical" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="ames-2025-categorical"><span class="helia-title">Categorical Lyapunov Theory II: Stability of Systems</span>&nbsp;<a class="helia-slug" href="ames-2025-categorical.html">ames-2025-categorical</a><span class="helia-byline"><span class="helia-entry-link" data-entry="arxiv">arXiv</span> · 2025</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="ames-2025-categorical" data-kind="reference">
+<div class="helia-abstract">Lyapunov’s theorem provides a foundational characterization of stable equilibrium points in dynamical systems. In this paper, we develop a framework for stability for F-coalgebras. We give two definitions for a categorical setting in which we can study the stability of a coalgebra for an endofunctor F. One is minimal and better suited for concrete settings, while the other is more intricate and provides a richer theory. We prove a Lyapunov theorem for both notions of setting for stability, and a converse Lyapunov theorem for the second.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/2505.22968">arXiv</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="hu-2025-hybridprover" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="hu-2025-hybridprover"><span class="helia-title">HybridProver: Augmenting Theorem Proving with LLM-Driven Proof Synthesis and Refinement</span>&nbsp;<a class="helia-slug" href="hu-2025-hybridprover.html">hu-2025-hybridprover</a><span class="helia-byline"><span class="helia-entry-link" data-entry="arxiv">arXiv</span> · 2025</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="hu-2025-hybridprover" data-kind="reference">
+<div class="helia-abstract">Formal methods play a crucial role in ensuring the reliability of critical systems through rigorous mathematical verification. However, their adoption remains limited due to the labor-intensive nature of manual proof construction. Recent advances in large language models (LLMs) have opened new opportunities for automated theorem proving. Two main paradigms have emerged: stepwise tactic-based generation and whole-proof synthesis. While both approaches have complementary strengths, existing work largely treats them in isolation. In this work, we propose HybridProver, a unified framework that integrates whole-proof synthesis and tactic-based generation through proof sketches as an intermediate representation. This design enables the reuse of partially correct proof structures while effectively combining high-level planning with fine-grained reasoning. We implement HybridProver in Isabelle/HOL and post-train two 7B-scale LLMs on our optimized Isabelle datasets. Experiments on the miniF2F Isabelle benchmark achieved a 73.8% success rate and improved upon the previous state of the art (61.9%), demonstrating that lightweight models, when combined with our approach, can effectively generate Isabelle/HOL proofs without relying on very large LLMs. Ablation studies further analyze the impact of dataset quality, training configurations, and sampling strategies on proof generation.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/2505.15740">arXiv</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="ames-2025-categoricalx" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="ames-2025-categoricalx"><span class="helia-title">Categorical Lyapunov Theory I: Stability of Flows</span>&nbsp;<a class="helia-slug" href="ames-2025-categoricalx.html">ames-2025-categoricalx</a><span class="helia-byline"><span class="helia-entry-link" data-entry="arxiv">arXiv</span> · 2025</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="ames-2025-categoricalx" data-kind="reference">
+<div class="helia-abstract">Lyapunov’s theorem provides a fundamental characterization of the stability of dynamical systems. This paper presents a categorical framework for Lyapunov theory, generalizing stability analysis with Lyapunov functions categorically. Core to our approach is the set of axioms underlying a setting for stability, which give the necessary ingredients for “doing Lyapunov theory” in a category of interest. With these minimal assumptions, we define the stability of equilibria, formulate Lyapunov morphisms, and demonstrate that the existence of Lyapunov morphisms is necessary and sufficient for establishing the stability of flows. To illustrate these constructions, we show how classical notions of stability, e.g., for continuous and discrete time dynamical systems, are captured by this categorical framework for Lyapunov theory. Finally, to demonstrate the extensibility of our framework, we illustrate how enriched categories, e.g., Lawvere metric spaces, yield settings for stability enabling one to “do Lyapunov theory” in enriched categories.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/2502.15276">arXiv</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="blilihamelin-2025-stop" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="blilihamelin-2025-stop"><span class="helia-title">Stop treating ‘AGI’ as the north-star goal of AI research</span>&nbsp;<a class="helia-slug" href="blilihamelin-2025-stop.html">blilihamelin-2025-stop</a><span class="helia-byline"><span class="helia-entry-link" data-entry="arxiv">arXiv</span> · 2025</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="blilihamelin-2025-stop" data-kind="reference">
+<div class="helia-abstract">The AI research community plays a vital role in shaping the scientific, engineering, and societal goals of AI research. In this position paper, we argue that focusing on the highly contested topic of ‘artificial general intelligence’ (‘AGI’) undermines our ability to choose effective goals. We identify six key traps – obstacles to productive goal setting – that are aggravated by AGI discourse: Illusion of Consensus, Supercharging Bad Science, Presuming Value-Neutrality, Goal Lottery, Generality Debt, and Normalized Exclusion. To avoid these traps, we argue that the AI research community needs to (1) prioritize specificity in engineering and societal goals, (2) center pluralism about multiple worthwhile approaches to multiple valuable goals, and (3) foster innovation through greater inclusion of disciplines and communities. Therefore, the AI research community needs to stop treating ‘AGI’ as the north-star goal of AI research.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/2502.03689">arXiv</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="chan-2025-bounded" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="chan-2025-bounded"><span class="helia-title">Bounded First-Class Universe Levels in Dependent Type Theory</span>&nbsp;<a class="helia-slug" href="chan-2025-bounded.html">chan-2025-bounded</a><span class="helia-byline"><span class="helia-entry-link" data-entry="arxiv">arXiv</span> · 2025</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="chan-2025-bounded" data-kind="reference">
+<div class="helia-abstract">In dependent type theory, being able to refer to a type universe as a term itself increases its expressive power, but requires mechanisms in place to prevent Girard’s paradox from introducing logical inconsistency in the presence of type-in-type. The simplest mechanism is a hierarchy of universes indexed by a sequence of levels, typically the naturals. To improve reusability of definitions, they can be made level polymorphic, abstracting over level variables and adding a notion of level expressions. For even more expressive power, level expressions can be made first-class as terms themselves, and level polymorphism is subsumed by dependent functions quantifying over levels. Furthermore, bounded level polymorphism provides more expressivity by being able to explicitly state constraints on level variables. While semantics for first-class levels with constraints are known, syntax and typing rules have not been explicitly written down. Yet pinning down a well-behaved syntax is not trivial; there exist prior type theories with bounded level polymorphism that fail to satisfy subject reduction. In this work, we design an explicit syntax for a type theory with bounded first-class levels, parametrized over arbitrary well-founded sets of levels. We prove the metatheoretic properties of subject reduction, type safety, consistency, and canonicity, entirely mechanized from syntax to semantics in Lean.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/2502.20485">arXiv</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="baltieri-2025-a" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="baltieri-2025-a"><span class="helia-title">A Bayesian Interpretation of the Internal Model Principle</span>&nbsp;<a class="helia-slug" href="baltieri-2025-a.html">baltieri-2025-a</a><span class="helia-byline"><span class="helia-entry-link" data-entry="arxiv">arXiv</span> · 2025</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="baltieri-2025-a" data-kind="reference">
+<div class="helia-abstract">The internal model principle, originally proposed in the theory of control of linear systems, nowadays represents a more general class of results in control theory and cybernetics. The central claim of these results is that, under suitable assumptions, if a system (a controller) can regulate against a class of external inputs (from the environment), it is because the system contains a model of the system causing these inputs, which can be used to generate signals counteracting them. Similar claims on the role of internal models appear also in cognitive science, especially in modern Bayesian treatments of cognitive agents, often suggesting that a system (a human subject, or some other agent) models its environment to adapt against disturbances and perform goal-directed behaviour. It is however unclear whether the Bayesian internal models discussed in cognitive science bear any formal relation to the internal models invoked in standard treatments of control theory. Here, we first review the internal model principle and present a precise formulation of it using concepts inspired by categorical systems theory. This leads to a formal definition of “model” generalising its use in the internal model principle. Although this notion of model is not a priori related to the notion of Bayesian reasoning, we show that it can be seen as a special case of possibilistic Bayesian filtering. This result is based on a recent line of work formalising, using Markov categories, a notion of “interpretation”, describing when a system can be interpreted as performing Bayesian filtering on an outside world in a consistent way.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.48550/arxiv.2503.00511">DOI</a></span> · <span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/2503.00511">arXiv</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="bolan-2025-the" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="bolan-2025-the"><span class="helia-title">The Equational Theories Project: Advancing Collaborative Mathematical Research at Scale</span>&nbsp;<a class="helia-slug" href="bolan-2025-the.html">bolan-2025-the</a><span class="helia-byline"><span class="helia-entry-link" data-entry="arxiv">arXiv</span> · 2025</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="bolan-2025-the" data-kind="reference">
+<div class="helia-abstract">We report on the Equational Theories Project (ETP), an online collaborative pilot project to explore new ways to collaborate in mathematics with machine assistance. The project successfully determined all 22 028 942 edges of the implication graph between the 4694 simplest equational laws on magmas, by a combination of human-generated and automated proofs, all validated by the formal proof assistant language Lean. As a result of this project, several new constructions of magmas satisfying specific laws were discovered, and several auxiliary questions were also addressed, such as the effect of restricting attention to finite magmas.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.48550/arxiv.2512.07087">DOI</a></span> · <span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/2512.07087">arXiv</a></span></div>
 </div>
 </div>
 </details>
@@ -97,6 +473,181 @@
 </div>
 </details>
 </section>
+<section class="helia-transclusion" data-entry="virgo-2025-a" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="virgo-2025-a"><span class="helia-title">A “good regulator theorem” for embodied agents</span>&nbsp;<a class="helia-slug" href="virgo-2025-a.html">virgo-2025-a</a><span class="helia-byline"><span class="helia-entry-link" data-entry="arxiv">arXiv</span> · 2025</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="virgo-2025-a" data-kind="reference">
+<div class="helia-abstract">In a classic paper, Conant and Ashby claimed that “every good regulator of a system must be a model of that system.” Artificial Life has produced many examples of systems that perform tasks with apparently no model in sight; these suggest Conant and Ashby’s theorem doesn’t easily generalise beyond its restricted setup. Nevertheless, here we show that a similar intuition can be fleshed out in a different way: whenever an agent is able to perform a regulation task, it is possible for an observer to interpret it as having “beliefs” about its environment, which it “updates” in response to sensory input. This notion of belief updating provides a notion of model that is more sophisticated than Conant and Ashby’s, as well as a theorem that is more broadly applicable. However, it necessitates a change in perspective, in that the observer plays an essential role in the theory: models are not a mere property of the system but are imposed on it from outside. Our theorem holds regardless of whether the system is regulating its environment in a classic control theory setup, or whether it’s regulating its own internal state; the model is of its environment either way. The model might be trivial, however, and this is how the apparent counterexamples are resolved.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.48550/arxiv.2508.06326">DOI</a></span> · <span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/2508.06326">arXiv</a></span></div>
+</div>
+</div>
+</details>
+</section>
+</div>
+</details>
+</section>
+</div>
+<div class="helia-venue-year">
+<section class="helia-heading-section" data-level="1">
+<details open>
+<summary class="helia-heading-summary"><h2 class="helia-heading">2024</h2>
+</summary>
+<div class="helia-heading-body">
+<section class="helia-transclusion" data-entry="spies-2024-transformers" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="spies-2024-transformers"><span class="helia-title">Transformers Use Causal World Models in Maze-Solving Tasks</span>&nbsp;<a class="helia-slug" href="spies-2024-transformers.html">spies-2024-transformers</a><span class="helia-byline"><span class="helia-entry-link" data-entry="arxiv">arXiv</span> · 2024</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="spies-2024-transformers" data-kind="reference">
+<div class="helia-abstract">Recent studies in interpretability have explored the inner workings of transformer models trained on tasks across various domains, often discovering that these networks naturally develop highly structured representations. When such representations comprehensively reflect the task domain’s structure, they are commonly referred to as “World Models” (WMs). In this work, we identify WMs in transformers trained on maze-solving tasks. By using Sparse Autoencoders (SAEs) and analyzing attention patterns, we examine the construction of WMs and demonstrate consistency between SAE feature-based and circuit-based analyses. By subsequently intervening on isolated features to confirm their causal role, we find that it is easier to activate features than to suppress them. Furthermore, we find that models can reason about mazes involving more simultaneously active features than they encountered during training; however, when these same mazes (with greater numbers of connections) are provided to models via input tokens instead, the models fail. Finally, we demonstrate that positional encoding schemes appear to influence how World Models are structured within the model’s residual stream.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/2412.11867">arXiv</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="ghalayini-2024-the" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="ghalayini-2024-the"><span class="helia-title">The Denotational Semantics of SSA</span>&nbsp;<a class="helia-slug" href="ghalayini-2024-the.html">ghalayini-2024-the</a><span class="helia-byline"><span class="helia-entry-link" data-entry="arxiv">arXiv</span> · 2024</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="ghalayini-2024-the" data-kind="reference">
+<div class="helia-abstract">Static single assignment form, or SSA, has been the dominant compiler intermediate representation for decades. In this paper, we give a type theory for a variant of SSA, including its equational theory, which are strong enough to validate a variety of control and data flow transformations. We also give a categorical semantics for SSA, and show that the type theory is sound and complete with respect to the categorical axiomatization. We demonstrate the utility of our model by exhibiting a variety of concrete models satisfying our axioms, including in particular a model of TSO weak memory. The correctness of the syntactic metatheory, as well as the completeness proof has been mechanized in the Lean proof assistant.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/2411.09347">arXiv</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="baez-2024-2" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="baez-2024-2"><span class="helia-title">2-Rig Extensions and the Splitting Principle</span>&nbsp;<a class="helia-slug" href="baez-2024-2.html">baez-2024-2</a><span class="helia-byline"><span class="helia-entry-link" data-entry="arxiv">arXiv</span> · 2024</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="baez-2024-2" data-kind="reference">
+<div class="helia-abstract">Classically, the splitting principle says how to pull back a vector bundle in such a way that it splits into line bundles and the pullback map induces an injection on <span class="helia-math helia-math-inline helia-mathml"><math><mi>𝐾</mi></math></span>-theory. Here we categorify the splitting principle and generalize it to the context of 2-rigs. A 2-rig is a kind of categorified “ring without negatives”, such as a category of vector bundles with <span class="helia-math helia-math-inline helia-mathml"><math><mo lspace="0em" rspace="0em">⊕</mo></math></span> as addition and <span class="helia-math helia-math-inline helia-mathml"><math><mo lspace="0em" rspace="0em">⊗</mo></math></span> as multiplication. Technically, we define a 2-rig to be a Cauchy complete <span class="helia-math helia-math-inline helia-mathml"><math><mi>𝑘</mi></math></span>-linear symmetric monoidal category where <span class="helia-math helia-math-inline helia-mathml"><math><mi>𝑘</mi></math></span> has characteristic zero. We conjecture that for any suitably finite-dimensional object <span class="helia-math helia-math-inline helia-mathml"><math><mi>𝑟</mi></math></span> of a 2-rig <span class="helia-math helia-math-inline helia-mathml"><math><mtext>𝖱</mtext></math></span>, there is a 2-rig map <span class="helia-math helia-math-inline helia-mathml"><math><mi>𝐸</mi><mo lspace="0.2777777777777778em" rspace="0.2777777777777778em">:</mo><mtext>𝖱</mtext><mo stretchy="false">→</mo><mrow><mtext>𝖱</mtext><mo lspace="0em" rspace="0em">′</mo></mrow></math></span> such that <span class="helia-math helia-math-inline helia-mathml"><math><mi>𝐸</mi><mrow><mo stretchy="false">(</mo><mi>𝑟</mi><mo stretchy="false">)</mo></mrow></math></span> splits as a direct sum of finitely many “subline objects” and <span class="helia-math helia-math-inline helia-mathml"><math><mi>𝐸</mi></math></span> has various good properties: it is faithful, conservative, essentially injective, and the induced map of Grothendieck rings <span class="helia-math helia-math-inline helia-mathml"><math><mi>𝐾</mi><mrow><mo stretchy="false">(</mo><mi>𝐸</mi><mo stretchy="false">)</mo></mrow><mo lspace="0.2777777777777778em" rspace="0.2777777777777778em">:</mo><mi>𝐾</mi><mrow><mo stretchy="false">(</mo><mtext>𝖱</mtext><mo stretchy="false">)</mo></mrow><mo stretchy="false">→</mo><mi>𝐾</mi><mrow><mo stretchy="false">(</mo><mrow><mtext>𝖱</mtext><mo lspace="0em" rspace="0em">′</mo></mrow><mo stretchy="false">)</mo></mrow></math></span> is injective. We prove this conjecture for the free 2-rig on one object, namely the category of Schur functors, whose Grothendieck ring is the free <span class="helia-math helia-math-inline helia-mathml"><math><mi>𝜆</mi></math></span>-ring on one generator, also known as the ring of symmetric functions. We use this task as an excuse to develop the representation theory of affine categories - that is, categories enriched in affine schemes - using the theory of 2-rigs.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/2410.05598">arXiv</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="fiore-2024-logical" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="fiore-2024-logical"><span class="helia-title">Logical Structure on Inverse Functor Categories</span>&nbsp;<a class="helia-slug" href="fiore-2024-logical.html">fiore-2024-logical</a><span class="helia-byline"><span class="helia-entry-link" data-entry="arxiv">arXiv</span> · 2024</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="fiore-2024-logical" data-kind="reference">
+<div class="helia-abstract">Inspired by recent work on the categorical semantics of dependent type theories, we investigate the following question: When is logical structure (crucially, dependent-product and subobject-classifier structure) induced from a category to categories of diagrams in it? Our work offers several answers, providing a variety of conditions on both the category itself and the indexing category of diagrams. Additionally, motivated by homotopical considerations, we investigate the case when the indexing category is equipped with a class of weak equivalences and study conditions under which the localization map induces a structure-preserving functor between presheaf categories.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/2410.11728">arXiv</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="gratzer-2024-directed" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="gratzer-2024-directed"><span class="helia-title">Directed univalence in simplicial homotopy type theory</span>&nbsp;<a class="helia-slug" href="gratzer-2024-directed.html">gratzer-2024-directed</a><span class="helia-byline"><span class="helia-entry-link" data-entry="arxiv">arXiv</span> · 2024</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="gratzer-2024-directed" data-kind="reference">
+<div class="helia-abstract">Simplicial type theory extends homotopy type theory with a directed path type which internalizes the notion of a homomorphism within a type. This concept has significant applications both within mathematics – where it allows for synthetic (higher) category theory – and programming languages – where it leads to a directed version of the structure identity principle. In this work, we construct the first types in simplicial type theory with non-trivial homomorphisms. We extend simplicial type theory with modalities and new reasoning principles to obtain triangulated type theory in order to construct the universe of discrete types <span class="helia-math helia-math-inline helia-mathml"><math><mi>𝒮︀</mi></math></span>. We prove that homomorphisms in this type correspond to ordinary functions of types i.e., that <span class="helia-math helia-math-inline helia-mathml"><math><mi>𝒮︀</mi></math></span> is directed univalent. The construction of <span class="helia-math helia-math-inline helia-mathml"><math><mi>𝒮︀</mi></math></span> is foundational for both of the aforementioned applications of simplicial type theory. We are able to define several crucial examples of categories and to recover important results from category theory. Using <span class="helia-math helia-math-inline helia-mathml"><math><mi>𝒮︀</mi></math></span>, we are also able to define various types whose usage is guaranteed to be functorial. These provide the first complete examples of the proposed directed structure identity principle.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/2407.09146">arXiv</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="koronkevich-2024-type" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="koronkevich-2024-type"><span class="helia-title">Type Universes as Allocation Effects</span>&nbsp;<a class="helia-slug" href="koronkevich-2024-type.html">koronkevich-2024-type</a><span class="helia-byline"><span class="helia-entry-link" data-entry="arxiv">arXiv</span> · 2024</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="koronkevich-2024-type" data-kind="reference">
+<div class="helia-abstract">In this paper, we explore a connection between type universes and memory allocation. Type universe hierarchies are used in dependent type theories to ensure consistency, by forbidding a type from quantifying over all types. Instead, the types of types (universes) form a hierarchy, and a type can only quantify over types in other universes (with some exceptions), restricting cyclic reasoning in proofs. We present a perspective where universes also describe <em>where</em> values are allocated in the heap, and the choice of universe algebra imposes a structure on the heap overall. The resulting type system provides a simple declarative system for reasoning about and restricting memory allocation, without reasoning about reads or writes. We present a theoretical framework for equipping a type system with higher-order references restricted by a universe hierarchy, and conjecture that many existing universe algebras give rise to interesting systems for reasoning about allocation. We present 3 instantiations of this approach to enable reasoning about allocation in the simply typed <span class="helia-math helia-math-inline helia-mathml"><math><mi>𝜆</mi></math></span>-calculus: (1) the standard ramified universe hierarchy, which we prove guarantees termination of the language extended with higher-order references by restricting cycles in the heap; (2) an extension with an <em>impredicative</em> base universe, which we conjecture enables full-ground references (with terminating computation but cyclic ground data structures); (3) an extension with <em>universe polymorphism</em>, which divides the heap into fine-grained regions.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/2407.06473">arXiv</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="das-2024-on" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="das-2024-on"><span class="helia-title">On the complexity of normalization for the planar <span class="helia-math helia-math-inline helia-mathml"><math><mi>𝜆</mi></math></span>-calculus</span>&nbsp;<a class="helia-slug" href="das-2024-on.html">das-2024-on</a><span class="helia-byline"><span class="helia-entry-link" data-entry="arxiv">arXiv</span> · 2024</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="das-2024-on" data-kind="reference">
+<div class="helia-abstract">We sketch a tentative proof of P-completeness for the <span class="helia-math helia-math-inline helia-mathml"><math><mi>𝛽</mi></math></span>-convertibility problem on untyped planar (a.k.a. ordered or non-commutative) <span class="helia-math helia-math-inline helia-mathml"><math><mi>𝜆</mi></math></span>-terms.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/2404.05276">arXiv</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="rubiomadrigal-2024-rendering" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="rubiomadrigal-2024-rendering"><span class="helia-title">Rendering string diagrams recursively</span>&nbsp;<a class="helia-slug" href="rubiomadrigal-2024-rendering.html">rubiomadrigal-2024-rendering</a><span class="helia-byline"><span class="helia-entry-link" data-entry="arxiv">arXiv</span> · 2024</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="rubiomadrigal-2024-rendering" data-kind="reference">
+<div class="helia-abstract">String diagrams are a graphical language used to represent processes that can be composed sequentially or in parallel, which correspond graphically to horizontal or vertical juxtaposition. In this paper we demonstrate how to compute the layout of a string diagram by folding over its algebraic representation in terms of sequential and parallel composition operators. The algebraic representation can be seen as a term of a free monoidal category or a proof tree for a small fragment of linear logic. This contrasts to existing non-compositional approaches that use graph layout techniques. The key innovation is storing the diagrams in binary space-partition trees, maintaining a right-trapezoidal shape for the diagram’s outline as an invariant. We provide an implementation in Haskell, using an existing denotational graphics library called Diagrams. Our renderer also supports adding semantics to diagrams to serve as a compiler, with matrix algebra used as an example.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/2404.02679">arXiv</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="zhang-2024-co" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="zhang-2024-co"><span class="helia-title">(Co)condition hits the Path</span>&nbsp;<a class="helia-slug" href="zhang-2024-co.html">zhang-2024-co</a><span class="helia-byline"><span class="helia-entry-link" data-entry="arxiv">arXiv</span> · 2024</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="zhang-2024-co" data-kind="reference">
+<div class="helia-abstract">We propose an enhancement to inductive types and records in a dependent type theory, namely (co)conditions. With a primitive interval type, conditions generalize the cubical syntax of higher inductive types in homotopy type theory, while coconditions generalize the cubical path type. (Co)conditions are also useful without an interval type. The duality between conditions and coconditions is presented in an interesting way: The elimination principles of inductive types with conditions can be internalized with records with coconditions and vice versa. However, we do not develop the metatheory of conditions and coconditions in this paper. Instead, we only present the type checking.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/2405.12994">arXiv</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="chandra-2024-watchat" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="chandra-2024-watchat"><span class="helia-title">WatChat: Explaining perplexing programs by debugging mental models</span>&nbsp;<a class="helia-slug" href="chandra-2024-watchat.html">chandra-2024-watchat</a><span class="helia-byline"><span class="helia-entry-link" data-entry="arxiv">arXiv</span> · 2024</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="chandra-2024-watchat" data-kind="reference">
+<div class="helia-abstract">Often, a good explanation for a program’s unexpected behavior is a bug in the programmer’s code. But sometimes, an even better explanation is a bug in the programmer’s mental model of the language or API they are using. Instead of merely debugging our current code (“giving the programmer a fish”), what if our tools could directly debug our mental models (“teaching the programmer to fish”)? In this paper, we apply recent ideas from computational cognitive science to offer a principled framework for doing exactly that. Given a “why?” question about a program, we automatically infer potential misconceptions about the language/API that might cause the user to be surprised by the program’s behavior – and then analyze those misconceptions to provide explanations of the program’s behavior. Our key idea is to formally represent misconceptions as counterfactual (erroneous) semantics for the language/API, which can be inferred and debugged using program synthesis techniques. We demonstrate our framework, WatChat, by building systems for explanation in two domains: JavaScript type coercion, and the Git version control system. We evaluate WatChatJS and WatChatGit by comparing their outputs to experimentally-collected human-written explanations in these two domains: we show that WatChat’s explanations exhibit key features of human-written explanation, unlike those of a state-of-the-art language model.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/2403.05334">arXiv</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="aberle-2024-foundations" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="aberle-2024-foundations"><span class="helia-title">Foundations of Substructural Dependent Type Theory</span>&nbsp;<a class="helia-slug" href="aberle-2024-foundations.html">aberle-2024-foundations</a><span class="helia-byline"><span class="helia-entry-link" data-entry="arxiv">arXiv</span> · 2024</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="aberle-2024-foundations" data-kind="reference">
+<div class="helia-abstract">This paper presents preliminary work on a general system for integrating dependent types into substructural type systems such as linear logic and linear type theory. Prior work on this front has generally managed to deliver type systems possessing either syntax or semantics inclusive of certain practical applications, but has struggled to combine these all in one and the same system. Toward resolving this difficulty, I propose a novel categorical interpretation of substructural dependent types, analogous to the use of monoidal categories as models of linear and ordered logic, that encompasses a wide class of mathematical and computational examples. On this basis, I develop a general framework for substructural dependent type theories, and proceed to prove some essential metatheoretic properties thereof. As an application of this framework, I show how it can be used to construct a type theory that satisfactorily addresses the problem of effectively representing cut admissibility for linear sequent calculus in a logical framework.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/2401.15258">arXiv</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="capucci-2024-a" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="capucci-2024-a"><span class="helia-title">A Fibrational Theory of First Order Differential Structures</span>&nbsp;<a class="helia-slug" href="capucci-2024-a.html">capucci-2024-a</a><span class="helia-byline"><span class="helia-entry-link" data-entry="arxiv">arXiv</span> · 2024</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="capucci-2024-a" data-kind="reference">
+<div class="helia-abstract">We develop a categorical framework for reasoning about abstract properties of differentiation, based on the theory of fibrations. Our work encompasses the first-order fragments of several existing categorical structures for differentiation, including cartesian differential categories, generalised cartesian differential categories, tangent categories, as well as the versions of these categories axiomatising reverse derivatives. We explain uniformly and concisely the requirements expressed by these structures, using sections of suitable fibrations as unifying concept. Our perspective sheds light on their similarities and differences, as well as simplifying certain constructions from the literature.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.48550/arxiv.2409.05763">DOI</a></span> · <span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/2409.05763">arXiv</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="capucci-2024-contextads" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="capucci-2024-contextads"><span class="helia-title">Contextads as Wreaths; Kleisli, Para, and Span Constructions as Wreath Products</span>&nbsp;<a class="helia-slug" href="capucci-2024-contextads.html">capucci-2024-contextads</a><span class="helia-byline"><span class="helia-entry-link" data-entry="arxiv">arXiv</span> · 2024</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="capucci-2024-contextads" data-kind="reference">
+<div class="helia-abstract">We introduce contextads and the Ctx construction, unifying various structures and constructions in category theory dealing with context and contextful arrows – comonads and their Kleisli construction, actegories and their Para construction, adequate triples and their Span construction. Contextads are defined in terms of Lack–Street wreaths, suitably categorified for pseudomonads in a tricategory of spans in a 2-category with display maps. The associated wreath product provides the Ctx construction, and by its universal property we conclude trifunctoriality. This abstract approach lets us work up to structure, and thus swiftly prove that, under very mild assumptions, a contextad equipped colaxly with a 2-algebraic structure produces a similarly structured double category of contextful arrows. We also explore the role contextads might play qua dependently graded comonads in organizing contextful computation in functional programming. We show that many side-effects monads can be dually captured by dependently graded comonads, and gesture towards a general result on the ‘transposability’ of parametric right adjoint monads to dependently graded comonads.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.48550/arxiv.2410.21889">DOI</a></span> · <span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/2410.21889">arXiv</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="capucci-2024-on" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="capucci-2024-on"><span class="helia-title">On Quantifiers for Quantitative Reasoning</span>&nbsp;<a class="helia-slug" href="capucci-2024-on.html">capucci-2024-on</a><span class="helia-byline"><span class="helia-entry-link" data-entry="arxiv">arXiv</span> · 2024</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="capucci-2024-on" data-kind="reference">
+<div class="helia-abstract">We explore a kind of first-order predicate logic with intended semantics in the reals. Compared to other approaches in the literature, we work predominantly in the multiplicative reals <span class="helia-math helia-math-inline helia-mathml"><math><mrow><mo stretchy="false">[</mo><mrow><mn>0</mn><mo>,</mo><mi>∞</mi></mrow><mo stretchy="false">]</mo></mrow></math></span>, showing they support three generations of connectives, that we call non-linear, linear additive, and linear multiplicative. Means and harmonic means emerge as natural candidates for bounded existential and universal quantifiers, and in fact we see they behave as expected in relation to the other logical connectives. We explain this fact through the well-known fact that min/max and arithmetic mean/harmonic mean sit at opposite ends of a spectrum, that of p-means. We give syntax and semantics for this quantitative predicate logic, and as example applications, we show how softmax is the quantitative semantics of argmax, and Rényi entropy/Hill numbers are additive/multiplicative semantics of the same formula. Indeed, the additive reals also fit into the story by exploiting the Napierian duality <span class="helia-math helia-math-inline helia-mathml"><math><mo>−</mo><mo form="prefix" lspace="0.16666666666666666em" rspace="0em">log</mo><mo>⊣</mo><mn>1</mn><mi>/</mi><mo form="prefix" lspace="0.16666666666666666em" rspace="0em">exp</mo></math></span>, which highlights a formal distinction between ‘additive’ and ‘multiplicative’ quantities. Finally, we describe two attempts at a categorical semantics via enriched hyperdoctrines. We discuss why hyperdoctrines are in fact probably inadequate for this kind of logic.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.48550/arxiv.2406.04936">DOI</a></span> · <span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/2406.04936">arXiv</a></span></div>
+</div>
+</div>
+</details>
+</section>
 </div>
 </details>
 </section>
@@ -107,6 +658,72 @@
 <summary class="helia-heading-summary"><h2 class="helia-heading">2023</h2>
 </summary>
 <div class="helia-heading-body">
+<section class="helia-transclusion" data-entry="ivanitskiy-2023-structured" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="ivanitskiy-2023-structured"><span class="helia-title">Structured World Representations in Maze-Solving Transformers</span>&nbsp;<a class="helia-slug" href="ivanitskiy-2023-structured.html">ivanitskiy-2023-structured</a><span class="helia-byline"><span class="helia-entry-link" data-entry="arxiv">arXiv</span> · 2023</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="ivanitskiy-2023-structured" data-kind="reference">
+<div class="helia-abstract">Transformer models underpin many recent advances in practical machine learning applications, yet understanding their internal behavior continues to elude researchers. Given the size and complexity of these models, forming a comprehensive picture of their inner workings remains a significant challenge. To this end, we set out to understand small transformer models in a more tractable setting: that of solving mazes. In this work, we focus on the abstractions formed by these models and find evidence for the consistent emergence of structured internal representations of maze topology and valid paths. We demonstrate this by showing that the residual stream of only a single token can be linearly decoded to faithfully reconstruct the entire maze. We also find that the learned embeddings of individual tokens have spatial structure. Furthermore, we take steps towards deciphering the circuity of path-following by identifying attention heads (dubbed <span class="helia-math helia-math-inline helia-mathml"><math><mtext>𝑎𝑑𝑗𝑎𝑐𝑒𝑛𝑐𝑦 ℎ𝑒𝑎𝑑𝑠</mtext></math></span>), which are implicated in finding valid subsequent tokens.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/2312.02566">arXiv</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="zhang-2023-three" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="zhang-2023-three"><span class="helia-title">Three non-cubical applications of extension types</span>&nbsp;<a class="helia-slug" href="zhang-2023-three.html">zhang-2023-three</a><span class="helia-byline"><span class="helia-entry-link" data-entry="arxiv">arXiv</span> · 2023</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="zhang-2023-three" data-kind="reference">
+<div class="helia-abstract">The development of cubical type theory inspired the idea of “extension types” which has been found to have applications in other type theories that are unrelated to homotopy type theory or cubical type theory. This article describes these applications, including on records, metaprogramming, controlling unfolding, and some more exotic ones.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/2311.05658">arXiv</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="ivanitskiy-2023-a" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="ivanitskiy-2023-a"><span class="helia-title">A Configurable Library for Generating and Manipulating Maze Datasets</span>&nbsp;<a class="helia-slug" href="ivanitskiy-2023-a.html">ivanitskiy-2023-a</a><span class="helia-byline"><span class="helia-entry-link" data-entry="arxiv">arXiv</span> · 2023</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="ivanitskiy-2023-a" data-kind="reference">
+<div class="helia-abstract">Understanding how machine learning models respond to distributional shifts is a key research challenge. Mazes serve as an excellent testbed due to varied generation algorithms offering a nuanced platform to simulate both subtle and pronounced distributional shifts. To enable systematic investigations of model behavior on out-of-distribution data, we present <span class="helia-math helia-math-inline helia-mathml"><math><mtext>𝚖𝚊𝚣𝚎-𝚍𝚊𝚝𝚊𝚜𝚎𝚝</mtext></math></span>, a comprehensive library for generating, processing, and visualizing datasets consisting of maze-solving tasks. With this library, researchers can easily create datasets, having extensive control over the generation algorithm used, the parameters fed to the algorithm of choice, and the filters that generated mazes must satisfy. Furthermore, it supports multiple output formats, including rasterized and text-based, catering to convolutional neural networks and autoregressive transformer models. These formats, along with tools for visualizing and converting between them, ensure versatility and adaptability in research applications.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/2309.10498">arXiv</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="zhang-2023-two" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="zhang-2023-two"><span class="helia-title">Two tricks to trivialize higher-indexed families</span>&nbsp;<a class="helia-slug" href="zhang-2023-two.html">zhang-2023-two</a><span class="helia-byline"><span class="helia-entry-link" data-entry="arxiv">arXiv</span> · 2023</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="zhang-2023-two" data-kind="reference">
+<div class="helia-abstract">The conventional general syntax of indexed families in dependent type theories follow the style of “constructors returning a special case”, as in Agda, Lean, Idris, Coq, and probably many other systems. Fording is a method to encode indexed families of this style with index-free inductive types and an identity type. There is another trick that merges interleaved higher inductive-inductive types into a single big family of types. It makes use of a small universe as the index to distinguish the original types. In this paper, we show that these two methods can trivialize some very fancy-looking indexed families with higher inductive indices (which we refer to as higher indexed families).</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/2309.14187">arXiv</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="flores-2023-a" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="flores-2023-a"><span class="helia-title">A Formalization of Operads in Coq</span>&nbsp;<a class="helia-slug" href="flores-2023-a.html">flores-2023-a</a><span class="helia-byline"><span class="helia-entry-link" data-entry="arxiv">arXiv</span> · 2023</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="flores-2023-a" data-kind="reference">
+<div class="helia-abstract">What provides the highest level of assurance for correctness of execution within a programming language? One answer, and our solution in particular, to this problem is to provide a formalization for, if it exists, the denotational semantics of a programming language. Achieving such a formalization provides a gold standard for ensuring a programming language is correct-by-construction. In our effort on the DARPA V-SPELLS program, we worked to provide a foundation for the denotational semantics of a meta-language using a mathematical object known as an operad. This object has compositional properties which are vital to building languages from smaller pieces. In this paper, we discuss our formalization of an operad in the proof assistant Coq. Moreover, our definition within Coq is capable of providing proofs that objects specified within Coq are operads. This work within Coq provides a formal mathematical basis for our meta-language development within V-SPELLS. Our work also provides, to our knowledge, the first known formalization of operads within a proof assistant that has significant automation, as well as a model that can be replicated without knowledge of Homotopy Type Theory.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/2303.08894">arXiv</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="flores-2023-ax" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="flores-2023-ax"><span class="helia-title">A Formal Algebraic Framework for DSL Composition</span>&nbsp;<a class="helia-slug" href="flores-2023-ax.html">flores-2023-ax</a><span class="helia-byline"><span class="helia-entry-link" data-entry="arxiv">arXiv</span> · 2023</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="flores-2023-ax" data-kind="reference">
+<div class="helia-abstract">We discuss a formal framework for using algebraic structures to model a meta-language that can write, compose, and provide interoperability between abstractions of DSLs. The purpose of this formal framework is to provide a verification of compositional properties of the meta-language. Throughout our paper we discuss the construction of this formal framework, as well its relation to our team’s work on the DARPA V-SPELLS program via the pipeline we have developed for completing our verification tasking on V-SPELLS. We aim to give a broad overview of this verification pipeline in our paper. The pipeline can be split into four main components: the first is providing a formal model of the meta-language in Coq; the second is to give a specification in Coq of our chosen algebraic structures; third, we need to implement specific instances of our algebraic structures in Coq, as well as give a proof in Coq that this implementation is an algebraic structure according to our specification in the second step; and lastly, we need to give a proof in Coq that the formal model for the meta-language in the first step is an instance of the implementation in the third step.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/2302.00744">arXiv</a></span></div>
+</div>
+</div>
+</details>
+</section>
 <section class="helia-transclusion" data-entry="fu2023twolevellineardependenttype" data-depth="1">
 <details>
 <summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="fu2023twolevellineardependenttype"><span class="helia-title">A two-level linear dependent type theory</span>&nbsp;<a class="helia-slug" href="fu2023twolevellineardependenttype.html">fu2023twolevellineardependenttype</a><span class="helia-byline"><span class="helia-entry-link" data-entry="arxiv">arXiv</span> · 2023</span></h2></summary>
@@ -128,6 +745,105 @@
 <summary class="helia-heading-summary"><h2 class="helia-heading">2022</h2>
 </summary>
 <div class="helia-heading-body">
+<section class="helia-transclusion" data-entry="dabral-2022-exploring" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="dabral-2022-exploring"><span class="helia-title">Exploring Consequences of Privacy Policies with Narrative Generation via Answer Set Programming</span>&nbsp;<a class="helia-slug" href="dabral-2022-exploring.html">dabral-2022-exploring</a><span class="helia-byline"><span class="helia-entry-link" data-entry="arxiv">arXiv</span> · 2022</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="dabral-2022-exploring" data-kind="reference">
+<div class="helia-abstract">Informed consent has become increasingly salient for data privacy and its regulation. Entities from governments to for-profit companies have addressed concerns about data privacy with policies that enumerate the conditions for personal data storage and transfer. However, increased enumeration of and transparency in data privacy policies has not improved end-users’ comprehension of how their data might be used: not only are privacy policies written in legal language that users may struggle to understand, but elements of these policies may compose in such a way that the consequences of the policy are not immediately apparent. We present a framework that uses Answer Set Programming (ASP) – a type of logic programming – to formalize privacy policies. Privacy policies thus become constraints on a narrative planning space, allowing end-users to forward-simulate possible consequences of the policy in terms of actors having roles and taking actions in a domain. We demonstrate through the example of the Health Insurance Portability and Accountability Act (HIPAA) how to use the system in various ways, including asking questions about possibilities and identifying which clauses of the law are broken by a given sequence of events.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/2212.06719">arXiv</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="black-2022-interpreting" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="black-2022-interpreting"><span class="helia-title">Interpreting Neural Networks through the Polytope Lens</span>&nbsp;<a class="helia-slug" href="black-2022-interpreting.html">black-2022-interpreting</a><span class="helia-byline"><span class="helia-entry-link" data-entry="arxiv">arXiv</span> · 2022</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="black-2022-interpreting" data-kind="reference">
+<div class="helia-abstract">Mechanistic interpretability aims to explain what a neural network has learned at a nuts-and-bolts level. What are the fundamental primitives of neural network representations? Previous mechanistic descriptions have used individual neurons or their linear combinations to understand the representations a network has learned. But there are clues that neurons and their linear combinations are not the correct fundamental units of description: directions cannot describe how neural networks use nonlinearities to structure their representations. Moreover, many instances of individual neurons and their combinations are polysemantic (i.e. they have multiple unrelated meanings). Polysemanticity makes interpreting the network in terms of neurons or directions challenging since we can no longer assign a specific feature to a neural unit. In order to find a basic unit of description that does not suffer from these problems, we zoom in beyond just directions to study the way that piecewise linear activation functions (such as ReLU) partition the activation space into numerous discrete polytopes. We call this perspective the polytope lens. The polytope lens makes concrete predictions about the behavior of neural networks, which we evaluate through experiments on both convolutional image classifiers and language models. Specifically, we show that polytopes can be used to identify monosemantic regions of activation space (while directions are not in general monosemantic) and that the density of polytope boundaries reflect semantic boundaries. We also outline a vision for what mechanistic interpretability might look like through the polytope lens.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/2211.12312">arXiv</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="braithwaite-2022-dependent" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="braithwaite-2022-dependent"><span class="helia-title">Dependent Bayesian Lenses: Categories of Bidirectional Markov Kernels with Canonical Bayesian Inversion</span>&nbsp;<a class="helia-slug" href="braithwaite-2022-dependent.html">braithwaite-2022-dependent</a><span class="helia-byline"><span class="helia-entry-link" data-entry="arxiv">arXiv</span> · 2022</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="braithwaite-2022-dependent" data-kind="reference">
+<div class="helia-abstract">We generalise an existing construction of Bayesian Lenses to admit lenses between pairs of objects where the backwards object is dependent on states on the forwards object (interpreted as probability distributions). This gives a natural setting for studying stochastic maps with Bayesian inverses restricted to the points supported by a given prior. In order to state this formally we develop a proposed definition by Fritz of a support object in a Markov category and show that these give rise to a section into the category of dependent Bayesian lenses encoding a more canonical notion of Bayesian inversion.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/2209.14728">arXiv</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="moeller-2022-extensions" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="moeller-2022-extensions"><span class="helia-title">Extensions of representation stable categories</span>&nbsp;<a class="helia-slug" href="moeller-2022-extensions.html">moeller-2022-extensions</a><span class="helia-byline"><span class="helia-entry-link" data-entry="arxiv">arXiv</span> · 2022</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="moeller-2022-extensions" data-kind="reference">
+<div class="helia-abstract">A category of FI type is one which is sufficiently similar to finite sets and injections so as to admit nice representation stability results. Several common examples admit a Grothendieck fibration to finite sets and injections. We begin by carefully reviewing the theory of fibrations of categories with motivating examples relevant to algebra and representation theory. We classify which functors between FI type categories are fibrations, and thus obtain sufficient conditions for an FI type category to be the result of a Grothendieck construction.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/2209.03879">arXiv</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="srivastava-2022-beyond" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="srivastava-2022-beyond"><span class="helia-title">Beyond the Imitation Game: Quantifying and extrapolating the capabilities of language models</span>&nbsp;<a class="helia-slug" href="srivastava-2022-beyond.html">srivastava-2022-beyond</a><span class="helia-byline"><span class="helia-entry-link" data-entry="arxiv">arXiv</span> · 2022</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="srivastava-2022-beyond" data-kind="reference">
+<div class="helia-abstract">Language models demonstrate both quantitative improvement and new qualitative capabilities with increasing scale. Despite their potentially transformative impact, these new capabilities are as yet poorly characterized. In order to inform future research, prepare for disruptive new model capabilities, and ameliorate socially harmful effects, it is vital that we understand the present and near-future capabilities and limitations of language models. To address this challenge, we introduce the Beyond the Imitation Game benchmark (BIG-bench). BIG-bench currently consists of 204 tasks, contributed by 450 authors across 132 institutions. Task topics are diverse, drawing problems from linguistics, childhood development, math, common-sense reasoning, biology, physics, social bias, software development, and beyond. BIG-bench focuses on tasks that are believed to be beyond the capabilities of current language models. We evaluate the behavior of OpenAI’s GPT models, Google-internal dense transformer architectures, and Switch-style sparse transformers on BIG-bench, across model sizes spanning millions to hundreds of billions of parameters. In addition, a team of human expert raters performed all tasks in order to provide a strong baseline. Findings include: model performance and calibration both improve with scale, but are poor in absolute terms (and when compared with rater performance); performance is remarkably similar across model classes, though with benefits from sparsity; tasks that improve gradually and predictably commonly involve a large knowledge or memorization component, whereas tasks that exhibit “breakthrough” behavior at a critical scale often involve multiple steps or components, or brittle metrics; social bias typically increases with scale in settings with ambiguous context, but this can be improved with prompting.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/2206.04615">arXiv</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="carette-2022-retrodictive" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="carette-2022-retrodictive"><span class="helia-title">Retrodictive Quantum Computing</span>&nbsp;<a class="helia-slug" href="carette-2022-retrodictive.html">carette-2022-retrodictive</a><span class="helia-byline"><span class="helia-entry-link" data-entry="arxiv">arXiv</span> · 2022</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="carette-2022-retrodictive" data-kind="reference">
+<div class="helia-abstract">Quantum models of computation are widely believed to be more powerful than classical ones. Efforts center on proving that, for a given problem, quantum algorithms are more resource efficient than any classical one. All this, however, assumes a standard predictive paradigm of reasoning where, given initial conditions, the future holds the answer. How about bringing information from the future to the present and exploit it to one’s advantage? This is a radical new approach for reasoning, so-called Retrodictive Computation, that benefits from the specific form of the computed functions. We demonstrate how to use tools of symbolic computation to realize retrodictive quantum computing at scale and exploit it to efficiently, and classically, solve instances of the quantum Deutsch-Jozsa, Bernstein-Vazirani, Simon, Grover, and Shor’s algorithms.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/2205.06346">arXiv</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="mercer-2022-implicit" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="mercer-2022-implicit"><span class="helia-title">Implicit Polarized F: local type inference for impredicativity</span>&nbsp;<a class="helia-slug" href="mercer-2022-implicit.html">mercer-2022-implicit</a><span class="helia-byline"><span class="helia-entry-link" data-entry="arxiv">arXiv</span> · 2022</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="mercer-2022-implicit" data-kind="reference">
+<div class="helia-abstract">System F, the polymorphic lambda calculus, features the principle of impredicativity: polymorphic types may be (explicitly) instantiated at other types, enabling many powerful idioms such as Church encoding and data abstraction. Unfortunately, type applications need to be implicit for a language to be human-usable, and the problem of inferring all type applications in System F is undecidable. As a result, language designers have historically avoided impredicative type inference. We reformulate System F in terms of call-by-push-value, and study type inference for it. Surprisingly, this new perspective yields a novel type inference algorithm which is extremely simple to implement (not even requiring unification), infers many types, and has a simple declarative specification. Furthermore, our approach offers type theoretic explanations of how many of the heuristics used in existing algorithms for impredicative polymorphism arise.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/2203.01835">arXiv</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="daggitt-2022-vehicle" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="daggitt-2022-vehicle"><span class="helia-title">Vehicle: Interfacing Neural Network Verifiers with Interactive Theorem Provers</span>&nbsp;<a class="helia-slug" href="daggitt-2022-vehicle.html">daggitt-2022-vehicle</a><span class="helia-byline"><span class="helia-entry-link" data-entry="arxiv">arXiv</span> · 2022</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="daggitt-2022-vehicle" data-kind="reference">
+<div class="helia-abstract">Verification of neural networks is currently a hot topic in automated theorem proving. Progress has been rapid and there are now a wide range of tools available that can verify properties of networks with hundreds of thousands of nodes. In theory this opens the door to the verification of larger control systems that make use of neural network components. However, although work has managed to incorporate the results of these verifiers to prove larger properties of individual systems, there is currently no general methodology for bridging the gap between verifiers and interactive theorem provers (ITPs). In this paper we present Vehicle, our solution to this problem. Vehicle is equipped with an expressive domain specific language for stating neural network specifications which can be compiled to both verifiers and ITPs. It overcomes previous issues with maintainability and scalability in similar ITP formalisations by using a standard ONNX file as the single canonical representation of the network. We demonstrate its utility by using it to connect the neural network verifier Marabou to Agda and then formally verifying that a car steered by a neural network never leaves the road, even in the face of an unpredictable cross wind and imperfect sensors. The network has over 20,000 nodes, and therefore this proof represents an improvement of 3 orders of magnitude over prior proofs about neural network enhanced systems in ITPs.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/2202.05207">arXiv</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="gratzer-2022-the" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="gratzer-2022-the"><span class="helia-title">The directed plump ordering</span>&nbsp;<a class="helia-slug" href="gratzer-2022-the.html">gratzer-2022-the</a><span class="helia-byline"><span class="helia-entry-link" data-entry="arxiv">arXiv</span> · 2022</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="gratzer-2022-the" data-kind="reference">
+<div class="helia-abstract">Based on Taylor’s hereditarily directed plump ordinals, we define the directed plump ordering on W-types in Martin-Löf type theory. This ordering is similar to the plump ordering but comes equipped with non-empty finite joins in addition to the usual properties of the plump ordering.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/2202.07329">arXiv</a></span></div>
+</div>
+</div>
+</details>
+</section>
 <section class="helia-transclusion" data-entry="amorim_lam_2022" data-depth="1">
 <details>
 <summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="amorim_lam_2022"><span class="helia-title">Distribution Theoretic Semantics for Non-Smooth Differentiable Programming</span>&nbsp;<a class="helia-slug" href="amorim_lam_2022.html">amorim_lam_2022</a><span class="helia-byline"><span class="helia-entry-link" data-entry="arxiv">arXiv</span> · 2022</span></h2></summary>
@@ -142,6 +858,39 @@
 </div>
 </details>
 </section>
+<section class="helia-transclusion" data-entry="gratzer-2022-strict" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="gratzer-2022-strict"><span class="helia-title">Strict universes for Grothendieck topoi</span>&nbsp;<a class="helia-slug" href="gratzer-2022-strict.html">gratzer-2022-strict</a><span class="helia-byline"><span class="helia-entry-link" data-entry="arxiv">arXiv</span> · 2022</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="gratzer-2022-strict" data-kind="reference">
+<div class="helia-abstract">Hofmann and Streicher famously showed how to lift Grothendieck universes into presheaf topoi, and Streicher has extended their result to the case of sheaf topoi by sheafification. In parallel, van den Berg and Moerdijk have shown in the context of algebraic set theory that similar constructions continue to apply even in weaker metatheories. Unfortunately, sheafification seems not to preserve an important realignment property enjoyed by the presheaf universes that plays a critical role in models of univalent type theory as well as synthetic Tait computability, a recent technique to establish syntactic properties of type theories and programming languages. In the context of multiple universes, the realignment property also implies a coherent choice of codes for connectives at each universe level, thereby interpreting the cumulativity laws present in popular formulations of Martin-Löf type theory. We observe that a slight adjustment to an argument of Shulman constructs a cumulative universe hierarchy satisfying the realignment property at every level in any Grothendieck topos. Hence one has direct-style interpretations of Martin-Löf type theory with cumulative universes into all Grothendieck topoi. A further implication is to extend the reach of recent synthetic methods in the semantics of cubical type theory and the syntactic metatheory of type theory and programming languages to all Grothendieck topoi.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.48550/arxiv.2202.12012">DOI</a></span> · <span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/2202.12012">arXiv</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="musca-2022-technical" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="musca-2022-technical"><span class="helia-title">Technical Report: Match-reference regular expressions and lenses</span>&nbsp;<a class="helia-slug" href="musca-2022-technical.html">musca-2022-technical</a><span class="helia-byline"><span class="helia-entry-link" data-entry="arxiv">arXiv</span> · 2022</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="musca-2022-technical" data-kind="reference">
+<div class="helia-abstract">A lens is a single program that specifies two data transformations at once: one transformation converts data from source format to target format and a second transformation inverts the process. Over the past decade, researchers have developed many different kinds of lenses with different properties. One class of such languages operate over regular languages. In other words, these lenses convert strings drawn from one regular language to strings drawn from another regular language (and back again). In this paper, we define a more powerful language of lenses, which we call match-reference lenses, that is capable of translating between non-regular formats that contain repeated substrings, which is a primitive form of dependency. To define the non-regular formats themselves, we develop a new language, match-reference regular expressions, which are regular expressions that can bind variables to substrings and use those substrings repeatedly. These match-reference regular expressions are closely related to the familiar “back-references“ that can be found in traditional regular expression packages, but are redesigned to adhere to conventional programming language lexical scoping conventions and to interact smoothly with lens language infrastructure. We define the semantics of match-reference regular expressions and match-reference lenses. We also define a new kind of automaton, the match-reference regex automaton system (MRRAS), for deciding string membership in the language match-reference regular expressions. We illustrate our definitions with a variety of examples.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.48550/arxiv.2212.04439">DOI</a></span> · <span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/2212.04439">arXiv</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="videla-2022-lenses" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="videla-2022-lenses"><span class="helia-title">Lenses for Composable Servers</span>&nbsp;<a class="helia-slug" href="videla-2022-lenses.html">videla-2022-lenses</a><span class="helia-byline"><span class="helia-entry-link" data-entry="arxiv">arXiv</span> · 2022</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="videla-2022-lenses" data-kind="reference">
+<div class="helia-abstract">We implement the semantics of server operations using parameterised lenses. They allow us to define endpoints and extend them using classical lens composition. The parameterised nature of lenses models state updates while the lens laws mimic properties expected from HTTP. This first approach to server development is extended to use dependent parameterised lenses. An upgrade necessary to model not only endpoints, but entire servers, unlocking the ability to compose them together.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.48550/arxiv.2203.15633">DOI</a></span> · <span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/2203.15633">arXiv</a></span></div>
+</div>
+</div>
+</details>
+</section>
 </div>
 </details>
 </section>
@@ -152,6 +901,50 @@
 <summary class="helia-heading-summary"><h2 class="helia-heading">2021</h2>
 </summary>
 <div class="helia-heading-body">
+<section class="helia-transclusion" data-entry="braithwaite-2021-fibre" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="braithwaite-2021-fibre"><span class="helia-title">Fibre optics</span>&nbsp;<a class="helia-slug" href="braithwaite-2021-fibre.html">braithwaite-2021-fibre</a><span class="helia-byline"><span class="helia-entry-link" data-entry="arxiv">arXiv</span> · 2021</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="braithwaite-2021-fibre" data-kind="reference">
+<div class="helia-abstract">Lenses, optics and dependent lenses (or equivalently morphisms of containers, or equivalently natural transformations of polynomial functors) are all widely used in applied category theory as models of bidirectional processes. From the definition of lenses over a finite product category, optics weaken the required structure to actions of monoidal categories, and dependent lenses make use of the additional property of finite completeness (or, in case of polynomials, even local cartesian closure). This has caused a split in the applied category theory literature between those using optics and those using dependent lenses. The goal of this paper is to unify optics with dependent lenses, by finding a definition of fibre optics admitting both as special cases.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/2112.11145">arXiv</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="baez-2021-schur" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="baez-2021-schur"><span class="helia-title">Schur Functors and Categorified Plethysm</span>&nbsp;<a class="helia-slug" href="baez-2021-schur.html">baez-2021-schur</a><span class="helia-byline"><span class="helia-entry-link" data-entry="arxiv">arXiv</span> · 2021</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="baez-2021-schur" data-kind="reference">
+<div class="helia-abstract">It is known that the Grothendieck group of the category of Schur functors is the ring of symmetric functions. This ring has a rich structure, much of which is encapsulated in the fact that it is a “plethory”: a monoid in the category of birings with its substitution monoidal structure. We show that similarly the category of Schur functors is a “2-plethory”, which descends to give the plethory structure on symmetric functions. Thus, much of the structure of symmetric functions exists at a higher level in the category of Schur functors.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/2106.00190">arXiv</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="shulman-2021-the" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="shulman-2021-the"><span class="helia-title">The derivator of setoids</span>&nbsp;<a class="helia-slug" href="shulman-2021-the.html">shulman-2021-the</a><span class="helia-byline"><span class="helia-entry-link" data-entry="arxiv">arXiv</span> · 2021</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="shulman-2021-the" data-kind="reference">
+<div class="helia-abstract">Without the axiom of choice, the free exact completion of the category of sets (i.e. the category of setoids) may not be complete or cocomplete. We will show that nevertheless, it can be enhanced to a derivator: the formal structure of categories of diagrams related by Kan extension functors. Moreover, this derivator is the free cocompletion of a point in a class of “1-truncated derivators” (which behave like a 1-category rather than a higher category). In classical mathematics, the free cocompletion of a point relative to all derivators is the homotopy theory of spaces. Thus, if there is a homotopy theory that can be shown to have this universal property constructively, its 1-truncation must contain not only sets, but also setoids. This suggests that either setoids are an unavoidable aspect of constructive homotopy theory, or more radical modifications to the notion of homotopy theory are needed.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/2105.08152">arXiv</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="zhang-2021-elegant" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="zhang-2021-elegant"><span class="helia-title">Elegant elaboration with function invocation</span>&nbsp;<a class="helia-slug" href="zhang-2021-elegant.html">zhang-2021-elegant</a><span class="helia-byline"><span class="helia-entry-link" data-entry="arxiv">arXiv</span> · 2021</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="zhang-2021-elegant" data-kind="reference">
+<div class="helia-abstract">We present an elegant design of the core language in a dependently-typed lambda calculus with <span class="helia-math helia-math-inline helia-mathml"><math><mi>𝛿</mi></math></span>-reduction and an elaboration algorithm.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/2105.14840">arXiv</a></span></div>
+</div>
+</div>
+</details>
+</section>
 <section class="helia-transclusion" data-entry="myburghTrackingTranslationInvariance2021" data-depth="1">
 <details>
 <summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="myburghTrackingTranslationInvariance2021"><span class="helia-title">Tracking translation invariance in CNNs</span>&nbsp;<a class="helia-slug" href="myburghTrackingTranslationInvariance2021.html">myburghTrackingTranslationInvariance2021</a><span class="helia-byline"><span class="helia-entry-link" data-entry="arxiv">arXiv</span> · 2021</span></h2></summary>
@@ -159,6 +952,28 @@
 <div class="helia-reference" data-entry="myburghTrackingTranslationInvariance2021" data-kind="reference">
 <div class="helia-abstract">Although Convolutional Neural Networks (CNNs) are widely used, their translation invariance (ability to deal with translated inputs) is still subject to some controversy. We explore this question using translation-sensitivity maps to quantify how sensitive a standard CNN is to a translated input. We propose the use of Cosine Similarity as sensitivity metric over Euclidean Distance, and discuss the importance of restricting the dimensionality of either of these metrics when comparing architectures. Our main focus is to investigate the effect of different architectural components of a standard CNN on that network’s sensitivity to translation. By varying convolutional kernel sizes and amounts of zero padding, we control the size of the feature maps produced, allowing us to quantify the extent to which these elements influence translation invariance. We also measure translation invariance at different locations within the CNN to determine the extent to which convolutional and fully connected layers, respectively, contribute to the translation invariance of a CNN as a whole. Our analysis indicates that both convolutional kernel size and feature map size have a systematic influence on translation invariance. We also see that convolutional layers contribute less than expected to translation invariance, when not specifically forced to do so.</div>
 <div class="helia-entry-links"><span class="helia-entry-link" data-field="url"><a class="helia-link helia-external" href="http://arxiv.org/abs/2104.05997">Web</a></span> · <span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/2104.05997">arXiv</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="sarma-2021-formal" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="sarma-2021-formal"><span class="helia-title">Formal Methods for the Informal Engineer: Workshop Recommendations</span>&nbsp;<a class="helia-slug" href="sarma-2021-formal.html">sarma-2021-formal</a><span class="helia-byline"><span class="helia-entry-link" data-entry="arxiv">arXiv</span> · 2021</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="sarma-2021-formal" data-kind="reference">
+<div class="helia-abstract">Formal Methods for the Informal Engineer (FMIE) was a workshop held at the Broad Institute of MIT and Harvard in 2021 to explore the potential role of verified software in the biomedical software ecosystem. The motivation for organizing FMIE was the recognition that the life sciences and medicine are undergoing a transition from being passive consumers of software and AI/ML technologies to fundamental drivers of new platforms, including those which will need to be mission and safety-critical. Drawing on conversations leading up to and during the workshop, we make five concrete recommendations to help software leaders organically incorporate tools, techniques, and perspectives from formal methods into their project planning and development trajectories.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.31219/osf.io/t4qs8">DOI</a></span> · <span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/2104.00739">arXiv</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="moeller-2021-the" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="moeller-2021-the"><span class="helia-title">The Grothendieck Construction in Categorical Network Theory</span>&nbsp;<a class="helia-slug" href="moeller-2021-the.html">moeller-2021-the</a><span class="helia-byline"><span class="helia-entry-link" data-entry="arxiv">arXiv</span> · 2021</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="moeller-2021-the" data-kind="reference">
+<div class="helia-abstract">In this thesis, we present a flexible framework for specifying and constructing operads which are suited to reasoning about network construction. The data used to present these operads is called a <em>network model</em>, a monoidal variant of Joyal’s combinatorial species. The construction of the operad required that we develop a monoidal lift of the Grothendieck construction. We then demonstrate how concepts like priority and dependency can be represented in this framework. For the former, we generalize Green’s graph products of groups to the context of universal algebra. For the latter, we examine the emergence of monoidal fibrations from the presence of catalysts in Petri nets.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/2101.07777">arXiv</a></span></div>
 </div>
 </div>
 </details>
@@ -173,6 +988,17 @@
 <summary class="helia-heading-summary"><h2 class="helia-heading">2020</h2>
 </summary>
 <div class="helia-heading-body">
+<section class="helia-transclusion" data-entry="comfort-2020-sheet" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="comfort-2020-sheet"><span class="helia-title">Sheet diagrams for bimonoidal categories</span>&nbsp;<a class="helia-slug" href="comfort-2020-sheet.html">comfort-2020-sheet</a><span class="helia-byline"><span class="helia-entry-link" data-entry="arxiv">arXiv</span> · 2020</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="comfort-2020-sheet" data-kind="reference">
+<div class="helia-abstract">Bimonoidal categories (also known as rig categories) are categories with two monoidal structures, one of which distributes over the other. We formally define sheet diagrams, a graphical calculus for bimonoidal categories that was informally introduced by Staton. Sheet diagrams are string diagrams drawn on a branching surface, which is itself an extruded string diagram. Our main result is a soundness and completeness theorem of the usual form for graphical calculi: we show that sheet diagrams form the free bimonoidal category on a signature.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/2010.13361">arXiv</a></span></div>
+</div>
+</div>
+</details>
+</section>
 <section class="helia-transclusion" data-entry="seshiaVerifiedArtificialIntelligence2020" data-depth="1">
 <details>
 <summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="seshiaVerifiedArtificialIntelligence2020"><span class="helia-title">Towards Verified Artificial Intelligence</span>&nbsp;<a class="helia-slug" href="seshiaVerifiedArtificialIntelligence2020.html">seshiaVerifiedArtificialIntelligence2020</a><span class="helia-byline"><span class="helia-entry-link" data-entry="arxiv">arXiv</span> · 2020</span></h2></summary>
@@ -184,13 +1010,45 @@
 </div>
 </details>
 </section>
-<section class="helia-transclusion" data-entry="tranVerificationDeepConvolutional2020" data-depth="1">
+<section class="helia-transclusion" data-entry="zhu-2020-retentive" data-depth="1">
 <details>
-<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="tranVerificationDeepConvolutional2020"><span class="helia-title">Verification of Deep Convolutional Neural Networks Using ImageStars</span>&nbsp;<a class="helia-slug" href="tranVerificationDeepConvolutional2020.html">tranVerificationDeepConvolutional2020</a><span class="helia-byline"><span class="helia-entry-link" data-entry="arxiv">arXiv</span> · 2020</span></h2></summary>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="zhu-2020-retentive"><span class="helia-title">Retentive Lenses</span>&nbsp;<a class="helia-slug" href="zhu-2020-retentive.html">zhu-2020-retentive</a><span class="helia-byline"><span class="helia-entry-link" data-entry="arxiv">arXiv</span> · 2020</span></h2></summary>
 <div class="helia-transclusion-body">
-<div class="helia-reference" data-entry="tranVerificationDeepConvolutional2020" data-kind="reference">
-<div class="helia-abstract">Convolutional Neural Networks (CNN) have redefined stateof-the-art in many real-world applications, such as facial recognition, image classification, human pose estimation, and semantic segmentation. Despite their success, CNNs are vulnerable to adversarial attacks, where slight changes to their inputs may lead to sharp changes in their output in even well-trained networks. Set-based analysis methods can detect or prove the absence of bounded adversarial attacks, which can then be used to evaluate the effectiveness of neural network training methodology. Unfortunately, existing verification approaches have limited scalability in terms of the size of networks that can be analyzed.</div>
-<div class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.48550/arxiv.2004.05511">DOI</a></span> · <span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/2004.05511">arXiv</a></span></div>
+<div class="helia-reference" data-entry="zhu-2020-retentive" data-kind="reference">
+<div class="helia-abstract">Based on Foster et al.‘s lenses, various bidirectional programming languages and systems have been developed for helping the user to write correct data synchronisers. The two well-behavedness laws of lenses, namely Correctness and Hippocraticness, are usually adopted as the guarantee of these systems. While lenses are designed to retain information in the source when the view is modified, well-behavedness says very little about the retaining of information: Hippocraticness only requires that the source be unchanged if the view is not modified, and nothing about information retention is guaranteed when the view is changed. To address the problem, we propose an extension of the original lenses, called retentive lenses, which satisfy a new Retentiveness law guaranteeing that if parts of the view are unchanged, then the corresponding parts of the source are retained as well. As a concrete example of retentive lenses, we present a domain-specific language for writing tree transformations; we prove that the pair of get and put functions generated from a program in our DSL forms a retentive lens. We demonstrate the practical use of retentive lenses and the DSL by presenting case studies on code refactoring, Pombrio and Krishnamurthi’s resugaring, and XML synchronisation.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/2001.02031">arXiv</a></span></div>
+</div>
+</div>
+</details>
+</section>
+</div>
+</details>
+</section>
+</div>
+<div class="helia-venue-year">
+<section class="helia-heading-section" data-level="1">
+<details open>
+<summary class="helia-heading-summary"><h2 class="helia-heading">2019</h2>
+</summary>
+<div class="helia-heading-body">
+<section class="helia-transclusion" data-entry="burcroff-2019-generalized" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="burcroff-2019-generalized"><span class="helia-title">Generalized Lyndon Factorizations of Infinite Words</span>&nbsp;<a class="helia-slug" href="burcroff-2019-generalized.html">burcroff-2019-generalized</a><span class="helia-byline"><span class="helia-entry-link" data-entry="arxiv">arXiv</span> · 2019</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="burcroff-2019-generalized" data-kind="reference">
+<div class="helia-abstract">A generalized lexicographic order on words is a lexicographic order where the total order of the alphabet depends on the position of the comparison. A generalized Lyndon word is a finite word which is strictly smallest among its class of rotations with respect to a generalized lexicographic order. This notion can be extended to infinite words: an infinite generalized Lyndon word is an infinite word which is strictly smallest among its class of suffixes. We prove a conjecture of Dolce, Restivo, and Reutenauer: every infinite word has a unique nonincreasing factorization into finite and infinite generalized Lyndon words. When this factorization has finitely many terms, we characterize the last term of the factorization. Our methods also show that the infinite generalized Lyndon words are precisely the words with infinitely many generalized Lyndon prefixes.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/1905.04746">arXiv</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="shulman-2019-all" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="shulman-2019-all"><span class="helia-title">All <span class="helia-math helia-math-inline helia-mathml"><math><mrow><mo stretchy="false">(</mo><mrow><mi>∞</mi><mo>,</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></math></span>-toposes have strict univalent universes</span>&nbsp;<a class="helia-slug" href="shulman-2019-all.html">shulman-2019-all</a><span class="helia-byline"><span class="helia-entry-link" data-entry="arxiv">arXiv</span> · 2019</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="shulman-2019-all" data-kind="reference">
+<div class="helia-abstract">We prove the conjecture that any Grothendieck <span class="helia-math helia-math-inline helia-mathml"><math><mrow><mo stretchy="false">(</mo><mrow><mi>∞</mi><mo>,</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></math></span>-topos can be presented by a Quillen model category that interprets homotopy type theory with strict univalent universes. Thus, homotopy type theory can be used as a formal language for reasoning internally to <span class="helia-math helia-math-inline helia-mathml"><math><mrow><mo stretchy="false">(</mo><mrow><mi>∞</mi><mo>,</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></math></span>-toposes, just as higher-order logic is used for 1-toposes. As part of the proof, we give a new, more explicit, characterization of the fibrations in injective model structures on presheaf categories. In particular, we show that they generalize the coflexible algebras of 2-monad theory.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/1904.07004">arXiv</a></span></div>
 </div>
 </div>
 </details>
@@ -212,6 +1070,59 @@
 <div class="helia-reference" data-entry="kouvarosFormalVerificationCNNbased2018" data-kind="reference">
 <div class="helia-abstract">We address the problem of verifying neural-based perception systems implemented by convolutional neural networks. We define a notion of local robustness based on affine and photometric transformations. We show the notion cannot be captured by previously employed notions of robustness. The method proposed is based on reachability analysis for feed-forward neural networks and relies on MILP encodings of both the CNNs and transformations under question. We present an implementation and discuss the experimental results obtained for a CNN trained from the MNIST data set.</div>
 <div class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.48550/arxiv.1811.11373">DOI</a></span> · <span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/1811.11373">arXiv</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="munchmaccagnoni-2018-resource" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="munchmaccagnoni-2018-resource"><span class="helia-title">Resource Polymorphism</span>&nbsp;<a class="helia-slug" href="munchmaccagnoni-2018-resource.html">munchmaccagnoni-2018-resource</a><span class="helia-byline"><span class="helia-entry-link" data-entry="arxiv">arXiv</span> · 2018</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="munchmaccagnoni-2018-resource" data-kind="reference">
+<div class="helia-abstract">We present a resource-management model for ML-style programming languages, designed to be compatible with the OCaml philosophy and runtime model. This is a proposal to extend the OCaml language with destructors, move semantics, and resource polymorphism, to improve its safety, efficiency, interoperability, and expressiveness. It builds on the ownership-and-borrowing models of systems programming languages (Cyclone, C++11, Rust) and on linear types in functional programming (Linear Lisp, Clean, Alms). It continues a synthesis of resources from systems programming and resources in linear logic initiated by Baker. It is a combination of many known and some new ideas. On the novel side, it highlights the good mathematical structure of Stroustrup’s “Resource acquisition is initialisation” (RAII) idiom for resource management based on destructors, a notion sometimes confused with finalizers, and builds on it a notion of resource polymorphism, inspired by polarisation in proof theory, that mixes C++‘s RAII and a tracing garbage collector (GC). The proposal targets a new spot in the design space, with an automatic and predictable resource-management model, at the same time based on lightweight and expressive language abstractions. It is backwards-compatible: current code is expected to run with the same performance, the new abstractions fully combine with the current ones, and it supports a resource-polymorphic extension of libraries. It does so with only a few additions to the runtime, and it integrates with the current GC implementation. It is also compatible with the upcoming multicore extension, and suggests that the Rust model for eliminating data-races applies. Interesting questions arise for a safe and practical type system, many of which have already been thoroughly investigated in the languages and prototypes Cyclone, Rust, and Alms.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/1803.02796">arXiv</a></span></div>
+</div>
+</div>
+</details>
+</section>
+</div>
+</details>
+</section>
+</div>
+<div class="helia-venue-year">
+<section class="helia-heading-section" data-level="1">
+<details open>
+<summary class="helia-heading-summary"><h2 class="helia-heading">2017</h2>
+</summary>
+<div class="helia-heading-body">
+<section class="helia-transclusion" data-entry="baez-2017-network" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="baez-2017-network"><span class="helia-title">Network Models</span>&nbsp;<a class="helia-slug" href="baez-2017-network.html">baez-2017-network</a><span class="helia-byline"><span class="helia-entry-link" data-entry="arxiv">arXiv</span> · 2017</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="baez-2017-network" data-kind="reference">
+<div class="helia-abstract">Networks can be combined in various ways, such as overlaying one on top of another or setting two side by side. We introduce “network models” to encode these ways of combining networks. Different network models describe different kinds of networks. We show that each network model gives rise to an operad, whose operations are ways of assembling a network of the given kind from smaller parts. Such operads, and their algebras, can serve as tools for designing networks. Technically, a network model is a lax symmetric monoidal functor from the free symmetric monoidal category on some set to <span class="helia-math helia-math-inline helia-mathml"><math><mtext>𝐂𝐚𝐭</mtext></math></span>, and the construction of the corresponding operad proceeds via a symmetric monoidal version of the Grothendieck construction.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/1711.00037">arXiv</a></span></div>
+</div>
+</div>
+</details>
+</section>
+</div>
+</details>
+</section>
+</div>
+<div class="helia-venue-year">
+<section class="helia-heading-section" data-level="1">
+<details open>
+<summary class="helia-heading-summary"><h2 class="helia-heading">2015</h2>
+</summary>
+<div class="helia-heading-body">
+<section class="helia-transclusion" data-entry="moura-2015-elaboration" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="moura-2015-elaboration"><span class="helia-title">Elaboration in Dependent Type Theory</span>&nbsp;<a class="helia-slug" href="moura-2015-elaboration.html">moura-2015-elaboration</a><span class="helia-byline"><span class="helia-entry-link" data-entry="arxiv">arXiv</span> · 2015</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="moura-2015-elaboration" data-kind="reference">
+<div class="helia-abstract">To be usable in practice, interactive theorem provers need to provide convenient and efficient means of writing expressions, definitions, and proofs. This involves inferring information that is often left implicit in an ordinary mathematical text, and resolving ambiguities in mathematical expressions. We refer to the process of passing from a quasi-formal and partially-specified expression to a completely precise formal one as elaboration. We describe an elaboration algorithm for dependent type theory that has been implemented in the Lean theorem prover. Lean’s elaborator supports higher-order unification, type class inference, ad hoc overloading, insertion of coercions, the use of tactics, and the computational reduction of terms. The interactions between these components are subtle and complex, and the elaboration algorithm has been carefully designed to balance efficiency and usability. We describe the central design goals, and the means by which they are achieved.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/1505.04324">arXiv</a></span></div>
 </div>
 </div>
 </details>

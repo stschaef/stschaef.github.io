@@ -1,0 +1,1 @@
+heliaSearchData("d/hrl-laboratories",{"id":"hrl-laboratories","title":"HRL Laboratories","kind":"institution","tags":[],"authors":[],"venue":[],"date":null,"url":"hrl-laboratories.html","headings":[],"body":""});

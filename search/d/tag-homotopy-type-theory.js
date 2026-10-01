@@ -1,0 +1,1 @@
+heliaSearchData("d/tag-homotopy-type-theory",{"id":"tag-homotopy-type-theory","title":"homotopy-type-theory","kind":"tag","tags":[],"authors":[],"venue":[],"date":null,"url":"tag-homotopy-type-theory.html","headings":[],"body":""});

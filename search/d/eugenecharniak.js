@@ -1,0 +1,1 @@
+heliaSearchData("d/eugenecharniak",{"id":"eugenecharniak","title":"Eugene Charniak","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"eugenecharniak.html","headings":[],"body":""});

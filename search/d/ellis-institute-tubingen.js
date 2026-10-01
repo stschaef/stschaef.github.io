@@ -1,0 +1,1 @@
+heliaSearchData("d/ellis-institute-tubingen",{"id":"ellis-institute-tubingen","title":"ELLIS Institute Tübingen","kind":"institution","tags":[],"authors":[],"venue":[],"date":null,"url":"ellis-institute-tubingen.html","headings":[],"body":""});

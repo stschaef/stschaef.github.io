@@ -1,0 +1,1 @@
+heliaSearchData("d/johnjoonyoungchung",{"id":"johnjoonyoungchung","title":"John Joon Young Chung","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"johnjoonyoungchung.html","headings":[],"body":""});

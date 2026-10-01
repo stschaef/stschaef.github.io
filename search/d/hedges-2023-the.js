@@ -1,0 +1,1 @@
+heliaSearchData("d/hedges-2023-the",{"id":"hedges-2023-the","title":"The Game Semantics of Game Theory","kind":"reference","tags":["open-games"],"authors":["Jules Hedges"],"venue":[],"date":null,"url":"hedges-2023-the.html","headings":[],"body":""});

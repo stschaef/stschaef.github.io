@@ -1,0 +1,1 @@
+heliaSearchData("d/ernstrudigerolderog",{"id":"ernstrudigerolderog","title":"Ernst-Rüdiger Olderog","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"ernstrudigerolderog.html","headings":[],"body":""});

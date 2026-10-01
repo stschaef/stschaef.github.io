@@ -1,0 +1,1 @@
+heliaSearchData("d/ringer-2020-replica",{"id":"ringer-2020-replica","title":"REPLica: REPL instrumentation for Coq analysis","kind":"reference","tags":["proof-engineering"],"authors":["Alex Sanchez-Stern","Dan Grossman","Sorin Lerner","Talia Ringer"],"venue":["CPP","Certified Programs and Proofs"],"date":null,"url":"ringer-2020-replica.html","headings":[],"body":""});

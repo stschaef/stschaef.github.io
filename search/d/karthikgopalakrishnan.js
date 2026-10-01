@@ -1,0 +1,1 @@
+heliaSearchData("d/karthikgopalakrishnan",{"id":"karthikgopalakrishnan","title":"Karthik Gopalakrishnan","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"karthikgopalakrishnan.html","headings":[],"body":""});

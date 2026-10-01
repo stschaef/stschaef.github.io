@@ -1,0 +1,1 @@
+heliaSearchData("d/koch-2025-fulls",{"id":"koch-2025-fulls","title":"Fulls Seldom Differ","kind":"reference","tags":["program-calculation"],"authors":["Alan Lawrence","Conor McBride","Craig Roy","Mark Koch"],"venue":["ICFP","International Conference on Functional Programming"],"date":null,"url":"koch-2025-fulls.html","headings":[],"body":""});

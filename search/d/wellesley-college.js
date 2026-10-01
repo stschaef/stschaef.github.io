@@ -1,0 +1,1 @@
+heliaSearchData("d/wellesley-college",{"id":"wellesley-college","title":"Wellesley College","kind":"institution","tags":[],"authors":[],"venue":[],"date":null,"url":"wellesley-college.html","headings":[],"body":""});

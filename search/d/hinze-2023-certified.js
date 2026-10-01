@@ -1,0 +1,1 @@
+heliaSearchData("d/hinze-2023-certified",{"id":"hinze-2023-certified","title":"Certified, total serialisers with an application to Huffman encoding","kind":"reference","tags":[],"authors":["Ralf Hinze"],"venue":["JFP","Journal of Functional Programming"],"date":null,"url":"hinze-2023-certified.html","headings":[],"body":""});

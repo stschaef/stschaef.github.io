@@ -1,0 +1,1 @@
+heliaSearchData("d/aix-marseille-universite",{"id":"aix-marseille-universite","title":"Aix-Marseille Université","kind":"institution","tags":[],"authors":[],"venue":[],"date":null,"url":"aix-marseille-universite.html","headings":[],"body":""});

@@ -1,0 +1,1 @@
+heliaSearchData("d/francoischollet",{"id":"francoischollet","title":"Francois Chollet","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"francoischollet.html","headings":[],"body":""});

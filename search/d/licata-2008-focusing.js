@@ -1,0 +1,1 @@
+heliaSearchData("d/licata-2008-focusing",{"id":"licata-2008-focusing","title":"Focusing on Binding and Computation","kind":"reference","tags":["abstract-syntax","focusing"],"authors":["Daniel R. Licata","Noam Zeilberger","Robert Harper"],"venue":["LICS","Symposium on Logic in Computer Science"],"date":null,"url":"licata-2008-focusing.html","headings":[],"body":""});

@@ -1,0 +1,1 @@
+heliaSearchData("d/themistocleslassimes",{"id":"themistocleslassimes","title":"Themistocles L Assimes","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"themistocleslassimes.html","headings":[],"body":""});

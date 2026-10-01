@@ -1,0 +1,1 @@
+heliaSearchData("d/cedrickargueta",{"id":"cedrickargueta","title":"Cedrick Argueta","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"cedrickargueta.html","headings":[],"body":""});

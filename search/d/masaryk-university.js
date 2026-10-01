@@ -1,0 +1,1 @@
+heliaSearchData("d/masaryk-university",{"id":"masaryk-university","title":"Masaryk University","kind":"institution","tags":[],"authors":[],"venue":[],"date":null,"url":"masaryk-university.html","headings":[],"body":""});

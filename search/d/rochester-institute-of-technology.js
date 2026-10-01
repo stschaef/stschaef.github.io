@@ -1,0 +1,1 @@
+heliaSearchData("d/rochester-institute-of-technology",{"id":"rochester-institute-of-technology","title":"Rochester Institute of Technology","kind":"institution","tags":[],"authors":[],"venue":[],"date":null,"url":"rochester-institute-of-technology.html","headings":[],"body":""});

@@ -1,0 +1,1 @@
+heliaSearchData("d/claudekirchner",{"id":"claudekirchner","title":"Claude Kirchner","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"claudekirchner.html","headings":[],"body":""});

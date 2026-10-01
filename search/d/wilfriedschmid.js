@@ -1,0 +1,1 @@
+heliaSearchData("d/wilfriedschmid",{"id":"wilfriedschmid","title":"Wilfried Schmid","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"wilfriedschmid.html","headings":[],"body":""});

@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>Baldur: Whole-Proof Generation and Repair with Large Language Models</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Ctext y=%22.9em%22 font-size=%2290%22%3E%F0%9F%8C%BB%3C/text%3E%3C/svg%3E">
+<meta name="generator" content="helia">
+<link rel="alternate" type="application/atom+xml" title="Steven Schaefer" href="feed.xml">
+<link rel="alternate" type="application/feed+json" title="Steven Schaefer" href="feed.json">
+<script src="helia/theme-version.js"></script>
+<script src="theme/folio-early.js"></script>
+<link rel="stylesheet" href="helia/theme.css">
+<link rel="stylesheet" href="helia/highlight.css">
+<link rel="stylesheet" href="helia/search.css">
+<link rel="stylesheet" href="theme/katex.css">
+<link rel="stylesheet" href="theme/recipe.css">
+<link rel="stylesheet" href="theme/site.css">
+<link rel="stylesheet" href="theme/folio.css">
+<script defer src="helia/runtime.js"></script>
+<script defer src="helia/search.js"></script>
+<script defer src="theme/glyphcraft.js"></script>
+<script defer src="theme/glyphart.js"></script>
+<script defer src="theme/glyphgen.js"></script>
+<script defer src="theme/ornament.js"></script>
+<script defer src="theme/folio.js"></script>
+<script defer src="theme/portrait.js"></script>
+<script type="application/json" id="helia-widgets">{"helia-cite-formats":"widgets/helia-cite-formats-a3294ac7.js"}</script>
+<link rel="modulepreload" href="widgets/helia-cite-formats-a3294ac7.js">
+<script type="module" src="widgets/runtime.js"></script>
+</head>
+<body>
+<nav class="helia-topbar"><a class="helia-home" href="home.html">Steven Schaefer</a><ul class="helia-nav-links"><li><a href="stevenschaefer.html">About Me</a></li><li><a href="research.html">Research</a></li><li><a href="new.html">New</a></li></ul><button type="button" class="helia-search-button" aria-label="Search (/ or Ctrl+K)" aria-haspopup="dialog"><span class="helia-search-icon">⌕</span><span class="helia-search-label">Search</span><kbd class="helia-search-key">/</kbd></button></nav>
+<div class="helia-page" data-kind="reference">
+<article class="helia-article">
+<header class="helia-header" data-entry="first-2023-baldur" data-kind="reference">
+<h2 class="helia-heading"><span class="helia-taxon">Reference.</span> Baldur: Whole-Proof Generation and Repair with Large Language Models</h2>
+<div class="helia-meta"><span class="helia-author"><a class="helia-entry-link" href="emilyfirst.html" data-entry="emilyfirst">Emily First</a>, <a class="helia-entry-link" href="markusnrabe.html" data-entry="markusnrabe">Markus N. Rabe</a>, <a class="helia-entry-link" href="taliaringer.html" data-entry="taliaringer">Talia Ringer</a>, <a class="helia-entry-link" href="yuriybrun.html" data-entry="yuriybrun">Yuriy Brun</a></span> · <span class="helia-byline"><a class="helia-entry-link" href="fse.html" data-entry="fse">ESEC/FSE</a> · 2023</span> · <span class="helia-tags"><span class="helia-tag" data-tag="proof-engineering"><a class="helia-entry-link" href="tag-proof-engineering.html" data-entry="tag-proof-engineering">proof-engineering</a></span></span> · <span class="helia-entry-links"><span class="helia-entry-link" data-field="pdf-url"><a class="helia-link helia-external" href="https://dl.acm.org/doi/pdf/10.1145/3611643.3616243">PDF</a></span> · <span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/3611643.3616243">DOI</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/conf/sigsoft/FirstRRB23">pldb</a></span></span></div>
+</header>
+<div class="helia-body">
+</div>
+<div class="helia-cite helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><h3 class="helia-heading">Cite</h3>
+</summary>
+<div class="helia-group-body">
+<div class="helia-widget" data-widget="helia-cite-formats" data-props="{&quot;key&quot;:&quot;first-2023-baldur&quot;,&quot;bibtex&quot;:&quot;@inproceedings{first-2023-baldur, series={ESEC/FSE ’23}, title={Baldur: Whole-Proof Generation and Repair with Large Language Models}, url={http://dx.doi.org/10.1145/3611643.3616243}, DOI={10.1145/3611643.3616243}, booktitle={Proceedings of the 31st ACM Joint European Software Engineering Conference and Symposium on the Foundations of Software Engineering}, publisher={ACM}, author={First, Emily and Rabe, Markus N. and Ringer, Talia and Brun, Yuriy}, year={2023}, month=Nov, pages={1229–1241}, collection={ESEC/FSE ’23} }&quot;,&quot;bib-file&quot;:&quot;first-2023-baldur.bib&quot;,&quot;hayagriva&quot;:&quot;first-2023-baldur:\n  type: article\n  title: &#39;Baldur: Whole-Proof Generation and Repair with Large Language Models&#39;\n  author:\n  - First, Emily\n  - Rabe, Markus N.\n  - Ringer, Talia\n  - Brun, Yuriy\n  date: 2023-11\n  page-range: 1229-1241\n  url: http://dx.doi.org/10.1145/3611643.3616243\n  serial-number:\n    doi: 10.1145/3611643.3616243\n  parent:\n    type: proceedings\n    title: Proceedings of the 31st ACM Joint European Software Engineering Conference and Symposium on the Foundations of Software Engineering\n    publisher: ACM\n    parent:\n      type: proceedings\n      title: ESEC/FSE ’23\n&quot;,&quot;yml-file&quot;:&quot;first-2023-baldur.yml&quot;}"><div class="helia-cite-key" data-copy="@first-2023-baldur" data-copy-label="citation key"><span class="helia-bib-key">Cite as</span> <code class="helia-raw-inline">@first-2023-baldur</code> (helia, typst) · <code class="helia-raw-inline">\cite{first-2023-baldur}</code> (LaTeX)</div>
+<div class="helia-cite-format helia-collapsible" data-format="bibtex" data-copy="true" data-copy-label="BibTeX">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">BibTeX</span></summary>
+<div class="helia-group-body">
+<details class="helia-code" open><summary class="helia-code-summary"><span class="helia-code-lang">bibtex</span> · <span class="helia-code-lines">1 line</span></summary><pre class="helia-raw"><code class="language-bibtex"><span class="hl-text hl-bibtex"><span class="hl-meta hl-entry hl-braces hl-bibtex"><span class="hl-keyword hl-other hl-entry-type hl-bibtex"><span class="hl-punctuation hl-definition hl-keyword hl-bibtex">@</span>inproceedings</span><span class="hl-punctuation hl-section hl-entry hl-begin hl-bibtex">{</span><span class="hl-entity hl-name hl-type hl-entry-key hl-bibtex">first-2023-baldur</span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">series</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>ESEC/FSE ’23<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">title</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>Baldur: Whole-Proof Generation and Repair with Large Language Models<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">url</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>http://dx.doi.org/10.1145/3611643.3616243<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">DOI</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>10.1145/3611643.3616243<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">booktitle</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>Proceedings of the 31st ACM Joint European Software Engineering Conference and Symposium on the Foundations of Software Engineering<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">publisher</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>ACM<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">author</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>First, Emily and Rabe, Markus N. and Ringer, Talia and Brun, Yuriy<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">year</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>2023<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">month</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span>Nov</span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">pages</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>1229–1241<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">collection</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>ESEC/FSE ’23<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span> </span><span class="hl-punctuation hl-section hl-entry hl-end hl-bibtex">}</span></span></span></code></pre></details>
+</div>
+</details>
+</div>
+<div class="helia-cite-format helia-collapsible" data-format="hayagriva" data-copy="true" data-copy-label="hayagriva YAML">
+<details>
+<summary class="helia-group-summary"><span class="helia-group-title">hayagriva YAML (typst)</span></summary>
+<div class="helia-group-body">
+<details class="helia-code" open><summary class="helia-code-summary"><span class="helia-code-lang">yaml</span> · <span class="helia-code-lines">20 lines</span></summary><pre class="helia-raw"><code class="language-yaml"><span class="hl-source hl-yaml"><span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">first-2023-baldur</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">type</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">article</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">title</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-quoted hl-single hl-yaml"><span class="hl-punctuation hl-definition hl-string hl-begin hl-yaml">&#39;</span>Baldur: Whole-Proof Generation and Repair with Large Language Models<span class="hl-punctuation hl-definition hl-string hl-end hl-yaml">&#39;</span></span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">author</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">First, Emily</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Rabe, Markus N.</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Ringer, Talia</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Brun, Yuriy</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">date</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">2023-11</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">page-range</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">1229-1241</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">url</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">http://dx.doi.org/10.1145/3611643.3616243</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">serial-number</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">doi</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">10.1145/3611643.3616243</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">parent</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">type</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">proceedings</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">title</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Proceedings of the 31st ACM Joint European Software Engineering Conference and Symposium on the Foundations of Software Engineering</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">publisher</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">ACM</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">parent</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span>
+      <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">type</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">proceedings</span>
+      <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">title</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">ESEC/FSE ’23</span>
+</span></code></pre></details>
+</div>
+</details>
+</div>
+<div class="helia-cite-files">Download: <a class="helia-link" href="first-2023-baldur.bib">first-2023-baldur.bib</a> · <a class="helia-link" href="first-2023-baldur.yml">first-2023-baldur.yml</a></div>
+</div>
+</div>
+</details>
+</div>
+<div class="helia-reference-cited-by helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">Cited by (6)</span></summary>
+<div class="helia-group-body">
+<section class="helia-transclusion" data-entry="kasibatla-2026-cobblestone" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="kasibatla-2026-cobblestone"><span class="helia-title">Cobblestone: A Divide-and-Conquer Approach for Automating Formal Verification</span>&nbsp;<a class="helia-slug" href="kasibatla-2026-cobblestone.html">kasibatla-2026-cobblestone</a><span class="helia-byline"><span class="helia-entry-link" data-entry="icse">ICSE</span> · 2026</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="kasibatla-2026-cobblestone" data-kind="reference">
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/3744916.3773178">DOI</a></span> · <span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/2410.19940">arXiv</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="hu-2025-hybridprover" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="hu-2025-hybridprover"><span class="helia-title">HybridProver: Augmenting Theorem Proving with LLM-Driven Proof Synthesis and Refinement</span>&nbsp;<a class="helia-slug" href="hu-2025-hybridprover.html">hu-2025-hybridprover</a><span class="helia-byline"><span class="helia-entry-link" data-entry="arxiv">arXiv</span> · 2025</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="hu-2025-hybridprover" data-kind="reference">
+<div class="helia-abstract">Formal methods play a crucial role in ensuring the reliability of critical systems through rigorous mathematical verification. However, their adoption remains limited due to the labor-intensive nature of manual proof construction. Recent advances in large language models (LLMs) have opened new opportunities for automated theorem proving. Two main paradigms have emerged: stepwise tactic-based generation and whole-proof synthesis. While both approaches have complementary strengths, existing work largely treats them in isolation. In this work, we propose HybridProver, a unified framework that integrates whole-proof synthesis and tactic-based generation through proof sketches as an intermediate representation. This design enables the reuse of partially correct proof structures while effectively combining high-level planning with fine-grained reasoning. We implement HybridProver in Isabelle/HOL and post-train two 7B-scale LLMs on our optimized Isabelle datasets. Experiments on the miniF2F Isabelle benchmark achieved a 73.8% success rate and improved upon the previous state of the art (61.9%), demonstrating that lightweight models, when combined with our approach, can effectively generate Isabelle/HOL proofs without relying on very large LLMs. Ablation studies further analyze the impact of dataset quality, training configurations, and sampling strategies on proof generation.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/2505.15740">arXiv</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="sanchezstern-2025-qedcartographer" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="sanchezstern-2025-qedcartographer"><span class="helia-title">QEDCartographer: Automating Formal Verification Using Reward-Free Reinforcement Learning</span>&nbsp;<a class="helia-slug" href="sanchezstern-2025-qedcartographer.html">sanchezstern-2025-qedcartographer</a><span class="helia-byline"><span class="helia-entry-link" data-entry="icse">ICSE</span> · 2025</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="sanchezstern-2025-qedcartographer" data-kind="reference">
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="pdf-url"><a class="helia-link helia-external" href="https://arxiv.org/pdf/2408.09237">PDF</a></span> · <span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1109/icse55347.2025.00033">DOI</a></span> · <span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/2408.09237">arXiv</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/conf/icse/Sanchez-SternVK25">pldb</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="aggarwal-2024-alphaverus" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="aggarwal-2024-alphaverus"><span class="helia-title">AlphaVerus: Bootstrapping Formally Verified Code Generation through Self-Improving Translation and Treefinement</span>&nbsp;<a class="helia-slug" href="aggarwal-2024-alphaverus.html">aggarwal-2024-alphaverus</a><span class="helia-byline"><span class="helia-entry-link" data-entry="icml">ICML</span> · 2024</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="aggarwal-2024-alphaverus" data-kind="reference">
+<div class="helia-abstract">Automated code generation with large language models has gained significant traction, but there remains no guarantee on the correctness of generated code. We aim to use formal verification to provide mathematical guarantees that the generated code is correct. However, generating formally verified code with LLMs is hindered by the scarcity of training data and the complexity of formal proofs. To tackle this challenge, we introduce AlphaVerus, a self-improving framework that bootstraps formally verified code generation by iteratively translating programs from a higher-resource language and leveraging feedback from a verifier. AlphaVerus operates in three phases: exploration of candidate translations, Treefinement – a novel tree search algorithm for program refinement using verifier feedback, and filtering misaligned specifications and programs to prevent reward hacking. Through this iterative process, AlphaVerus enables a LLaMA-3.1-70B model to generate verified code without human intervention or model finetuning. AlphaVerus shows an ability to generate formally verified solutions for HumanEval and MBPP, laying the groundwork for truly trustworthy code-generation agents.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/2412.06176">arXiv</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="sanchezstern-2023-passport" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="sanchezstern-2023-passport"><span class="helia-title">Passport: Improving Automated Formal Verification Using Identifiers</span>&nbsp;<a class="helia-slug" href="sanchezstern-2023-passport.html">sanchezstern-2023-passport</a><span class="helia-byline"><span class="helia-entry-link" data-entry="toplas">TOPLAS</span> · 2023</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="sanchezstern-2023-passport" data-kind="reference">
+<div class="helia-abstract">Formally verifying system properties is one of the most effective ways of improving system quality, but its high manual effort requirements often render it prohibitively expensive. Tools that automate formal verification by learning from proof corpora to synthesize proofs have just begun to show their promise. These tools are effective because of the richness of the data the proof corpora contain. This richness comes from the stylistic conventions followed by communities of proof developers, together with the powerful logical systems beneath proof assistants. However, this richness remains underexploited, with most work thus far focusing on architecture rather than on how to make the most of the proof data. This article systematically explores how to most effectively exploit one aspect of that proof data: identifiers. We develop the Passport approach, a method for enriching the predictive Coq model used by an existing proof-synthesis tool with three new encoding mechanisms for identifiers: category vocabulary indexing, subword sequence modeling, and path elaboration. We evaluate our approach’s enrichment effect on three existing base tools: ASTactic, Tac, and Tok. In head-to-head comparisons, Passport automatically proves 29% more theorems than the best-performing of these base tools. Combining the three tools enhanced by the Passport approach automatically proves 38% more theorems than combining the three base tools. Finally, together, these base tools and their enhanced versions prove 45% more theorems than the combined base tools. Overall, our findings suggest that modeling identifiers can play a significant role in improving proof synthesis, leading to higher-quality software.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="pdf-url"><a class="helia-link helia-external" href="https://dl.acm.org/doi/pdf/10.1145/3593374">PDF</a></span> · <span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/3593374">DOI</a></span> · <span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/2204.10370">arXiv</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/journals/toplas/SanchezSternFZKBR23">pldb</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="zhang-2023-getting" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="zhang-2023-getting"><span class="helia-title">Getting More out of Large Language Models for Proofs</span>&nbsp;<a class="helia-slug" href="zhang-2023-getting.html">zhang-2023-getting</a><span class="helia-byline"><span class="helia-entry-link" data-entry="aitp">AITP</span> · 2023</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="zhang-2023-getting" data-kind="reference">
+<div class="helia-abstract">Large language models have the potential to simplify formal theorem proving and make it more accessible. But how to get the most out of these models is still an open question. To answer this question, we take a step back and explore the failure cases of these models using common prompting-based techniques. Our talk will discuss these failure cases and what they can teach us about how to get more out of these models.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/2305.04369">arXiv</a></span></div>
+</div>
+</div>
+</details>
+</section>
+</div>
+</details>
+</div>
+<div class="helia-reference-cites helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">Cites 111 works (6 here)</span></summary>
+<div class="helia-group-body">
+<div class="helia-reference-cites-here helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">With notes (6)</span></summary>
+<div class="helia-group-body">
+<section class="helia-transclusion" data-entry="sanchezstern-2023-passport" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title"><span class="helia-title">Passport: Improving Automated Formal Verification Using Identifiers</span>&nbsp;<a class="helia-slug" href="sanchezstern-2023-passport.html">sanchezstern-2023-passport</a><span class="helia-byline"><span class="helia-entry-link" data-entry="toplas">TOPLAS</span> · 2023</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="sanchezstern-2023-passport" data-kind="reference">
+<div class="helia-abstract">Formally verifying system properties is one of the most effective ways of improving system quality, but its high manual effort requirements often render it prohibitively expensive. Tools that automate formal verification by learning from proof corpora to synthesize proofs have just begun to show their promise. These tools are effective because of the richness of the data the proof corpora contain. This richness comes from the stylistic conventions followed by communities of proof developers, together with the powerful logical systems beneath proof assistants. However, this richness remains underexploited, with most work thus far focusing on architecture rather than on how to make the most of the proof data. This article systematically explores how to most effectively exploit one aspect of that proof data: identifiers. We develop the Passport approach, a method for enriching the predictive Coq model used by an existing proof-synthesis tool with three new encoding mechanisms for identifiers: category vocabulary indexing, subword sequence modeling, and path elaboration. We evaluate our approach’s enrichment effect on three existing base tools: ASTactic, Tac, and Tok. In head-to-head comparisons, Passport automatically proves 29% more theorems than the best-performing of these base tools. Combining the three tools enhanced by the Passport approach automatically proves 38% more theorems than combining the three base tools. Finally, together, these base tools and their enhanced versions prove 45% more theorems than the combined base tools. Overall, our findings suggest that modeling identifiers can play a significant role in improving proof synthesis, leading to higher-quality software.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="pdf-url"><a class="helia-link helia-external" href="https://dl.acm.org/doi/pdf/10.1145/3593374">PDF</a></span> · <span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/3593374">DOI</a></span> · <span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/2204.10370">arXiv</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/journals/toplas/SanchezSternFZKBR23">pldb</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="agrawal-2023-proofster" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="agrawal-2023-proofster"><span class="helia-title">PRoofster: Automated Formal Verification</span>&nbsp;<a class="helia-slug" href="agrawal-2023-proofster.html">agrawal-2023-proofster</a><span class="helia-byline"><span class="helia-entry-link" data-entry="icse">ICSE</span> · 2023</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="agrawal-2023-proofster" data-kind="reference">
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1109/icse-companion58688.2023.00018">DOI</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="ringer-2020-replica" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="ringer-2020-replica"><span class="helia-title">REPLica: REPL instrumentation for Coq analysis</span>&nbsp;<a class="helia-slug" href="ringer-2020-replica.html">ringer-2020-replica</a><span class="helia-byline"><span class="helia-entry-link" data-entry="cpp">CPP</span> · 2020</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="ringer-2020-replica" data-kind="reference">
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="pdf-url"><a class="helia-link helia-external" href="https://dl.acm.org/doi/pdf/10.1145/3372885.3373823">PDF</a></span> · <span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/3372885.3373823">DOI</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/conf/cpp/RingerSGL20">pldb</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="ringer-2019-qed" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="ringer-2019-qed"><span class="helia-title">QED at Large: A Survey of Engineering of Formally Verified Software</span>&nbsp;<a class="helia-slug" href="ringer-2019-qed.html">ringer-2019-qed</a><span class="helia-byline"><span class="helia-entry-link" data-entry="foundations-and-trends-in-programming-languages">Foundations and Trends® in Programming Languages</span> · 2019</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="ringer-2019-qed" data-kind="reference">
+<div class="helia-abstract">Development of formal proofs of correctness of programs can increase actual and perceived reliability and facilitate better understanding of program specifications and their underlying assumptions. Tools supporting such development have been available for over 40 years, but have only recently seen wide practical use. Projects based on construction of machine-checked formal proofs are now reaching an unprecedented scale, comparable to large software projects, which leads to new challenges in proof development and maintenance. Despite its increasing importance, the field of proof engineering is seldom considered in its own right; related theories, techniques, and tools span many fields and venues. This survey of the literature presents a holistic understanding of proof engineering for program correctness, covering impact in practice, foundations, proof automation, proof organization, and practical proof development.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1561/2500000045">DOI</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="yangFindingUnderstandingBugs" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="yangFindingUnderstandingBugs"><span class="helia-title">Finding and Understanding Bugs in C Compilers</span>&nbsp;<a class="helia-slug" href="yangFindingUnderstandingBugs.html">yangFindingUnderstandingBugs</a><span class="helia-byline"><span class="helia-entry-link" data-entry="pldi">PLDI</span> · 2011</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="yangFindingUnderstandingBugs" data-kind="reference">
+<div class="helia-abstract">Compilers should be correct. To improve the quality of C compilers, we created Csmith, a randomized test-case generation tool, and spent three years using it to find compiler bugs. During this period we reported more than 325 previously unknown bugs to compiler developers. Every compiler we tested was found to crash and also to silently generate wrong code when presented with valid input. In this paper we present our compiler-testing tool and the results of our bug-hunting study. Our first contribution is to advance the state of the art in compiler testing. Unlike previous tools, Csmith generates programs that cover a large subset of C while avoiding the undefined and unspecified behaviors that would destroy its ability to automatically find wrong-code bugs. Our second contribution is a collection of qualitative and quantitative results about the bugs we have found in open-source C compilers.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="pdf-url"><a class="helia-link helia-external" href="https://dl.acm.org/doi/pdf/10.1145/1993498.1993532">PDF</a></span> · <span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/1993498.1993532">DOI</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/conf/pldi/YangCER11">pldb</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="leroy_formal_2009" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="leroy_formal_2009"><span class="helia-title">Formal verification of a realistic compiler</span>&nbsp;<a class="helia-slug" href="leroy_formal_2009.html">leroy_formal_2009</a><span class="helia-byline"><span class="helia-entry-link" data-entry="cacm">CACM</span> · 2009</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="leroy_formal_2009" data-kind="reference">
+<div class="helia-abstract">This paper reports on the development and formal verification (proof of semantic preservation) of CompCert, a compiler from Clight (a large subset of the C programming language) to PowerPC assembly code, using the Coq proof assistant both for programming the compiler and for proving its correctness. Such a verified compiler is useful in the context of critical software and its formal verification: the verification of the compiler guarantees that the safety properties proved on the source code hold for the executable compiled code as well.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/1538788.1538814">DOI</a></span></div>
+</div>
+</div>
+</details>
+</section>
+</div>
+</details>
+</div>
+<div class="helia-reference-cites-away helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">External (105)</span></summary>
+<div class="helia-group-body">
+<ul>
+<li><a class="helia-link helia-external" href="https://doi.org/10.48550/arxiv.2301.02195">Towards Autoformalization of Mathematics and Code Correctness: Experiments with Elementary Proofs</a> (2023)</li>
+<li>The Sledgehammer: Let Automatic Theorem Provers write your Isabelle scripts! (2023)</li>
+<li><a class="helia-link helia-external" href="https://arxiv.org/abs/2303.04910">Baldur: Whole-Proof Generation and Repair with Large Language Models (arXiv version)</a> (2023)</li>
+<li>Better Automatic Program Repair by Using Bug Reports and Tests Together (2023)</li>
+<li><a class="helia-link helia-external" href="https://arxiv.org/abs/2302.12433">ProofNet: A benchmark for autoformalizing and formally proving undergraduate-level mathematics problems</a> (2022)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.18653/v1/2022.bigscience-1.9">GPT-NeoX-20B: An Open-Source Autoregressive Language Model</a> (2022)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.48550/arxiv.2204.02311">PaLM: Scaling Language Modeling with Pathways</a> (2022)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3510003.3510138">Diversity-driven automated formal verification</a> (2022)</li>
+<li>Fairness Guarantees under Demographic Shift (2022)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.48550/arxiv.2206.01962">Formal Specifications from Natural Language</a> (2022)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.48550/arxiv.2205.10893">Thor: Wielding Hammers to Integrate Language Models and Automated Theorem Provers</a> (2022)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.48550/arxiv.2210.12283">Draft, Sketch, and Prove: Guiding Formal Theorem Provers with Informal Proofs</a> (2022)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.48550/arxiv.2205.11491">HyperTree Proof Search for Neural Theorem Proving</a> (2022)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.48550/arxiv.2206.14858">Solving Quantitative Reasoning Problems with Language Models</a> (2022)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-031-06773-0_44">Proof Mate: An Interactive Proof Helper for PVS (Tool Paper)</a> (2022)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.48550/arxiv.2211.05102">Efficiently Scaling Transformer Inference</a> (2022)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.48550/arxiv.2208.11744">Enforcing Delayed-Impact Fairness Guarantees</a> (2022)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.48550/arxiv.2201.11903">Chain of Thought Prompting Elicits Reasoning in Large Language Models</a> (2022)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.48550/arxiv.2205.12615">Autoformalization with Large Language Models</a> (2022)</li>
+<li><a class="helia-link helia-external" href="https://arxiv.org/abs/2109.00110">miniF2F: a cross-system benchmark for formal Olympiad-level mathematics</a> (2022)</li>
+<li><a class="helia-link helia-external" href="https://arxiv.org/abs/2102.06203">Proof Artifact Co-Training for Theorem Proving with Language Models</a> (2022)</li>
+<li><a class="helia-link helia-external" href="https://arxiv.org/abs/2107.03374">Evaluating Large Language Models Trained on Code</a> (2021)</li>
+<li><a class="helia-link helia-external" href="https://arxiv.org/abs/2110.14168">Training Verifiers to Solve Math Word Problems</a> (2021)</li>
+<li><a class="helia-link helia-external" href="https://arxiv.org/abs/2103.03874">Measuring Mathematical Problem Solving With the MATH Dataset</a> (2021)</li>
+<li>LISA: Language models of ISAbelle proofs (2021)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1109/icse-companion52605.2021.00026">Roosterize: Suggesting Lemma Names for Coq Verification Projects Using Deep Learning</a> (2021)</li>
+<li><a class="helia-link helia-external" href="https://arxiv.org/abs/2110.03501">Pretrained Language Models are Symbolic Mathematics Solvers too!</a> (2021)</li>
+<li><a class="helia-link helia-external" href="https://arxiv.org/abs/2112.00114">Show Your Work: Scratchpads for Intermediate Computation with Language Models</a> (2021)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.48550/arxiv.2104.09864">RoFormer: Enhanced Transformer with Rotary Position Embedding</a> (2021)</li>
+<li><a class="helia-link helia-external" href="https://arxiv.org/abs/2106.06600">Break-it-fix-it: Unsupervised learning for program repair</a> (2021)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/s10664-020-09920-w">Automated patch assessment for program repair at scale</a> (2021)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3468264.3468544">A syntax-guided edit decoder for neural program repair</a> (2021)</li>
+<li>Proof Repair (PhD dissertation) (2021)</li>
+<li>TacticZero: Learning to Prove Theorems from Scratch with Deep Learning (2021)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-030-53518-6_17">The Tactician</a> (2020)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3428299">TacTok: semantics-aware proof synthesis</a> (2020)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/s10817-020-09580-x">TacticToe: Learning to Prove with Tactics</a> (2020)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3377812.3382156">MCoq: Mutation Analysis for Coq Verification Projects</a> (2020)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3395363.3397351">Can automated program repair refine fault localization? a unified debugging approach</a> (2020)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1109/tse.2020.2998785">Quality of Automated Program Repair on Real-World Defects</a> (2020)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-030-51054-1_6">Deep Generation of Coq Lemma Names Using Elaborated Terms</a> (2020)</li>
+<li><a class="helia-link helia-external" href="https://arxiv.org/abs/2006.16743">Learning to Format Coq Code Using Language Models</a> (2020)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1109/saner48275.2020.9054829">Experience Report: How Effective is Automated Program Repair for Industrial Software?</a> (2020)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1609/aaai.v34i03.5689">Graph Representations for Higher-Order Logic and Theorem Proving</a> (2020)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3387940.3392180">Refining Fitness Functions in Test-Based Program Repair</a> (2020)</li>
+<li><a class="helia-link helia-external" href="https://arxiv.org/abs/2009.03393">Generative Language Modeling for Automated Theorem Proving</a> (2020)</li>
+<li><a class="helia-link helia-external" href="https://arxiv.org/abs/1910.10683">Exploring the Limits of Transfer Learning with a Unified Text-to-Text Transformer</a> (2020)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3394450.3397466">Generating correctness proofs with neural networks</a> (2020)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3324884.3416532">Evaluating representation learning of code changes for predicting patch correctness in program repair</a> (2020)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3324884.3416590">Automated patch correctness assessment</a> (2020)</li>
+<li><a class="helia-link helia-external" href="https://arxiv.org/abs/2005.14165">Language Models Are Few-Shot Learners</a> (2020)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1109/tse.2019.2944914">SOSRepair: Expressive Semantic Search for Real-World Program Repair</a> (2019)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1109/ase.2019.00057">Mutation Analysis for Coq</a> (2019)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1109/tse.2019.2940179">SEQUENCER: Sequence-to-Sequence Learning for End-to-End Program Repair</a> (2019)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/s11432-018-1465-6">A manual inspection of Defects4J bugs and its implications for automatic program repair</a> (2019)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3338906.3338935">iFixR: bug report driven program repair</a> (2019)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3318162">Automated program repair</a> (2019)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1109/icse.2019.00020">Harnessing Evolution for Multi-Hunk Program Repair</a> (2019)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.48550/arxiv.1911.02150">Fast Transformer Decoding: One Write-Head is All You Need</a> (2019)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1126/science.aag3311">Preventing undesirable behavior of intelligent machines</a> (2019)</li>
+<li><a class="helia-link helia-external" href="https://arxiv.org/abs/1904.03241">HOList: An Environment for Machine Learning of Higher Order Logic Theorem Proving</a> (2019)</li>
+<li><a class="helia-link helia-external" href="https://arxiv.org/abs/1806.00608">GamePad: A Learning Environment for Theorem Proving</a> (2019)</li>
+<li>Offline Contextual Bandits with High Probability Fairness Guarantees (2019)</li>
+<li><a class="helia-link helia-external" href="https://arxiv.org/abs/1905.09381">Learning to prove theorems via interacting with proof assistants</a> (2019)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3183440.3183493">A regression proof selection tool for coq</a> (2018)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/s10817-018-9458-4">Hammer for Coq: Automation for Dependent Type Theory</a> (2018)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3192366.3192387">Automated clustering and program repair for introductory programming assignments</a> (2018)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3213846.3213871">Shaping program repair space with existing patches and similar code</a> (2018)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3180155.3180247">Semantic program repair using a reference implementation</a> (2018)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3238147.3238210">PaMpeR: proof method recommendation system for Isabelle/HOL</a> (2018)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3213846.3213877">piCoq: parallel regression proving for large-scale verification projects</a> (2018)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1109/compsac.2018.00030">Search-Based Efficient Automated Program Repair Using Mutation and Fault Localization</a> (2018)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3296979.3192384">Search, align, and repair: data-driven feedback generation for introductory programming exercises</a> (2018)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3180155.3180233">Context-aware patch generation for better automated program repair</a> (2018)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-030-04272-1_3">Evaluating the Strategies of Statement Selection in Automated Program Repair</a> (2018)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/s10664-018-9619-4">Alleviating patch overfitting with automatic test generation: a study of feasibility and effectiveness for the Nopol repair system</a> (2018)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.18653/v1/p18-1082">Hierarchical Neural Story Generation</a> (2018)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1109/ase.2017.8115630">ICoq: Regression proof selection for large-scale verification projects</a> (2017)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1109/ase.2017.8115674">Contract-based program repair without the contracts</a> (2017)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3106237.3106277">Fairness testing: testing software for discrimination</a> (2017)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3158133">Generating good generators for inductive relations</a> (2017)</li>
+<li><a class="helia-link helia-external" href="https://arxiv.org/abs/1706.03762">Attention is all you need</a> (2017)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3092703.3092718">Identifying test-suite-overfitted patches through test case generation</a> (2017)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3106237.3106274">Better test cases for better automated program repair</a> (2017)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1609/aaai.v31i1.10742">DeepFix: Fixing Common C Language Errors by Deep Learning</a> (2017)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1109/ase.2017.8115675">ELIXIR: Effective object oriented program repair</a> (2017)</li>
+<li>Coq, v.8.7 (2017)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3106237.3106300">Automatically diagnosing and repairing error handling bugs in C</a> (2017)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/s11219-016-9312-z">Fault localization for automated program repair: effectiveness, performance, repair correctness</a> (2016)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-319-41540-6_21">Qlose: Program Repair with Quantitative Objectives</a> (2016)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1109/saner.2016.76">History Driven Program Repair</a> (2016)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/2837614.2837617">Automatic patch generation by learning correct code</a> (2016)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.48550/arxiv.1609.03499">WaveNet: A Generative Model for Raw Audio</a> (2016)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1109/ase.2015.60">Repairing Programs with Semantic Code Search (T)</a> (2015)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/2771783.2771792">Preventing data errors with continuous testing</a> (2015)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/2771783.2771791">An analysis of patch plausibility and correctness for generate-and-validate patch generation systems</a> (2015)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/2786805.2786825">Is the cure worse than the disease? overfitting in automated program repair</a> (2015)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.4204/eptcs.152.5">ACL2(ml): Machine-Learning for ACL2</a> (2014)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/2492061">Probabilistic Relational Reasoning for Differential Privacy</a> (2013)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1109/icse.2013.6606626">Automatic patch generation learned from human-written patches</a> (2013)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/2491411.2494580">Data debugging with continuous testing</a> (2013)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1109/ase.2013.6693094">Leveraging program equivalence for adaptive program repair: Models and first results</a> (2013)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1109/tse.2011.104">GenProg: A Generic Method for Automatic Software Repair</a> (2011)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/1629575.1629596">seL4: Formal Verification of an OS Kernel</a> (2009)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1109/fose.2007.29">The Current State and Future of Search Based Software Engineering</a> (2007)</li>
+</ul>
+</div>
+</details>
+</div>
+</div>
+</details>
+</div>
+</article>
+<div class="helia-identity"><span class="helia-id">first-2023-baldur</span> <span class="helia-kind">reference</span> <span class="helia-path">entries/refs/first-2023-baldur/first-2023-baldur.hel</span></div>
+</div>
+</body>
+</html>

@@ -1,0 +1,1 @@
+heliaSearchData("d/sterling-2023-what",{"id":"sterling-2023-what","title":"What should a generic object be?","kind":"reference","tags":["category-theory"],"authors":["Jon Sterling"],"venue":["MSCS","Mathematical Structures in Computer Science"],"date":null,"url":"sterling-2023-what.html","headings":[],"body":""});

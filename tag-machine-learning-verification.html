@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>machine-learning-verification</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Ctext y=%22.9em%22 font-size=%2290%22%3E%F0%9F%8C%BB%3C/text%3E%3C/svg%3E">
+<meta name="generator" content="helia">
+<link rel="alternate" type="application/atom+xml" title="Steven Schaefer" href="feed.xml">
+<link rel="alternate" type="application/feed+json" title="Steven Schaefer" href="feed.json">
+<script src="helia/theme-version.js"></script>
+<script src="theme/folio-early.js"></script>
+<link rel="stylesheet" href="helia/theme.css">
+<link rel="stylesheet" href="helia/highlight.css">
+<link rel="stylesheet" href="helia/search.css">
+<link rel="stylesheet" href="theme/katex.css">
+<link rel="stylesheet" href="theme/recipe.css">
+<link rel="stylesheet" href="theme/site.css">
+<link rel="stylesheet" href="theme/folio.css">
+<script defer src="helia/runtime.js"></script>
+<script defer src="helia/search.js"></script>
+<script defer src="theme/glyphcraft.js"></script>
+<script defer src="theme/glyphart.js"></script>
+<script defer src="theme/glyphgen.js"></script>
+<script defer src="theme/ornament.js"></script>
+<script defer src="theme/folio.js"></script>
+<script defer src="theme/portrait.js"></script>
+</head>
+<body>
+<nav class="helia-topbar"><a class="helia-home" href="home.html">Steven Schaefer</a><ul class="helia-nav-links"><li><a href="stevenschaefer.html">About Me</a></li><li><a href="research.html">Research</a></li><li><a href="new.html">New</a></li></ul><button type="button" class="helia-search-button" aria-label="Search (/ or Ctrl+K)" aria-haspopup="dialog"><span class="helia-search-icon">⌕</span><span class="helia-search-label">Search</span><kbd class="helia-search-key">/</kbd></button></nav>
+<div class="helia-page" data-kind="tag">
+<article class="helia-article">
+<header class="helia-header" data-entry="tag-machine-learning-verification" data-kind="tag">
+<h2 class="helia-heading"><span class="helia-taxon">Tag.</span> machine-learning-verification</h2>
+<div class="helia-meta"><span class="helia-byline"><span class="helia-tag-name">machine-learning-verification</span></span></div>
+</header>
+<div class="helia-body">
+</div>
+<div class="helia-tag-group">
+<section class="helia-heading-section" data-level="1">
+<details open>
+<summary class="helia-heading-summary"><h2 class="helia-heading">Notes (1)</h2>
+</summary>
+<div class="helia-heading-body">
+<section class="helia-transclusion" data-entry="translation-invariance-verification" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="translation-invariance-verification"><span class="helia-title">A Method for Verifying Translational Invariance of Image Processing Neural Networks</span>&nbsp;<a class="helia-slug" href="translation-invariance-verification.html">translation-invariance-verification</a></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-entry" data-entry="translation-invariance-verification" data-kind="note">
+<p>My understanding for how one may prove a safety property <span class="helia-math helia-math-inline helia-mathml"><math><mi>𝑃</mi></math></span> for a neural network <span class="helia-math helia-math-inline helia-mathml"><math><mi>𝑁</mi></math></span> is as follows. First, express <span class="helia-math helia-math-inline helia-mathml"><math><mi>𝑃</mi></math></span> as an input-output property. That is, choose some region <span class="helia-math helia-math-inline helia-mathml"><math><mi>𝐷</mi></math></span> in the domain of <span class="helia-math helia-math-inline helia-mathml"><math><mi>𝑁</mi></math></span> to represent the inputs of interest. Further choose some region <span class="helia-math helia-math-inline helia-mathml"><math><mi>𝐴</mi></math></span> in the codomain of <span class="helia-math helia-math-inline helia-mathml"><math><mi>𝑁</mi></math></span> to describe safe outputs. Then describe <span class="helia-math helia-math-inline helia-mathml"><math><mi>𝑃</mi></math></span> as the property:</p>
+<div class="helia-math helia-math-display helia-mathml"><math display="block"><mo>∀</mo><mi>𝑥</mi><mo>∈</mo><mi>𝐷</mi><mi>.</mi><mi>𝑁</mi><mrow><mo stretchy="false">(</mo><mi>𝑥</mi><mo stretchy="false">)</mo></mrow><mo>∈</mo><mi>𝐴</mi></math></div>
+<p>For instance, this is more or less how Reluplex, Marabou, and <span class="helia-math helia-math-inline helia-mathml"><math><mi>𝛼</mi><mi>𝛽</mi></math></span>-CROWN each work. Squinting my eyes, this is the only such method for verifying a safety property for <span class="helia-math helia-math-inline helia-mathml"><math><mi>𝑁</mi></math></span>. That is, this is the only way to get a 100% guarantee that <span class="helia-math helia-math-inline helia-mathml"><math><mi>𝑃</mi></math></span> holds rather than some high measure of confidence.</p>
+<p>I believe in this formalism I have an idea for how to express the property “<span class="helia-math helia-math-inline helia-mathml"><math><mi>𝑁</mi></math></span> is translationally invariant” where <span class="helia-math helia-math-inline helia-mathml"><math><mi>𝑁</mi></math></span> is an image classifying net.</p>
+<p>To this end, we need a continuous artifact that captures what it means to translate an image. We can express an image as a matrix of pixels <span class="helia-math helia-math-inline helia-mathml"><math><mi>𝐼</mi></math></span> (or perhaps several parallel matrices if we care about color channels, but stick to a single grayscale matrix for now). To shift <span class="helia-math helia-math-inline helia-mathml"><math><mi>𝐼</mi></math></span> over by a single pixel, we may left-multiply <span class="helia-math helia-math-inline helia-mathml"><math><mi>𝐼</mi></math></span> by the shift matrix <span class="helia-math helia-math-inline helia-mathml"><math><mi>𝑆</mi></math></span>, where <span class="helia-math helia-math-inline helia-mathml"><math><mi>𝑆</mi></math></span> is the matrix filled with zeros and has 1′s on the subdiagonal. Note that all the directions of shifting <span class="helia-math helia-math-inline helia-mathml"><math><mi>𝐼</mi></math></span> are captured by the combinations of left/right multiplication by <span class="helia-math helia-math-inline helia-mathml"><math><mi>𝑆</mi></math></span>, <span class="helia-math helia-math-inline helia-mathml"><math><msup><mi>𝑆</mi><mi>𝑇</mi></msup></math></span>.</p>
+<p>Shifting by multiple pixels is now expressed by the matrix <span class="helia-math helia-math-inline helia-mathml"><math><msup><mi>𝑆</mi><mi>𝑛</mi></msup><mi>𝐼</mi></math></span>, however this is still a discrete dynamical system. We don’t have a continuous object by which we can test our safety property. My initial thought to continuousify this system was to express some sort of exponential flow by <span class="helia-math helia-math-inline helia-mathml"><math><mi>𝑆</mi></math></span>. That is, consider the matrix</p>
+<div class="helia-math helia-math-display helia-mathml"><math display="block"><msup><mi>𝑆</mi><mi>𝑡</mi></msup><mi>𝐼</mi><mo>≔</mo><msup><mi>𝑒</mi><mrow><mi>𝑡</mi><mspace width="0.2222em"/><mtext>𝗅𝗈𝗀</mtext><mrow><mo stretchy="false">(</mo><mi>𝑆</mi><mo stretchy="false">)</mo></mrow></mrow></msup></math></div>
+<p><span class="helia-math helia-math-inline helia-mathml"><math><msup><mi>𝑆</mi><mi>𝑡</mi></msup><mi>𝐼</mi></math></span> then captures what it means to translate the image <span class="helia-math helia-math-inline helia-mathml"><math><mi>𝐼</mi></math></span> over by <span class="helia-math helia-math-inline helia-mathml"><math><mi>𝑡</mi></math></span>, a real-valued “amount of shifting”. This choice of continuous artifact could then be used for a verification effort, however there are some issues related to numerical stability because <span class="helia-math helia-math-inline helia-mathml"><math><mi>𝑆</mi></math></span> isn’t invertible. Because it is not invertible, <span class="helia-math helia-math-inline helia-mathml"><math><mtext>𝗅𝗈𝗀</mtext><mrow><mo stretchy="false">(</mo><mi>𝑆</mi><mo stretchy="false">)</mo></mrow></math></span> doesn’t actually exist. So to make the above construction work, we need to mildly perturb <span class="helia-math helia-math-inline helia-mathml"><math><mi>𝑆</mi></math></span> and take a pseudoinverse. This sort of works and makes it so <span class="helia-math helia-math-inline helia-mathml"><math><msup><mi>𝑆</mi><mi>𝑡</mi></msup><mi>𝐼</mi></math></span> does capture some real valued shift, but it is only accurate when <span class="helia-math helia-math-inline helia-mathml"><math><mi>𝑡</mi></math></span> is small. So this is maybe problematic for our verification effort. This may be resolvable by chopping up the problem into subproblems, each of which is thin enough for the current iteration is accurate enough on that subproblem. However, there are two big things to consider.</p>
+<ol>
+<li>The exponential approach above is probably too complicated. It seems</li>
+</ol>
+<p>likely that you may be able to take some (sequence of) linear interpolation(s) between the <span class="helia-math helia-math-inline helia-mathml"><math><msup><mi>𝑆</mi><mi>𝑛</mi></msup><mi>𝐼</mi></math></span>’s. This will still be some continuous object that captures a real-valued shift and it will be much more stable than the approach above.</p>
+<ol>
+<li>Even if we sort out which continuous object represents translation</li>
+</ol>
+<p>of an image, I cannot for the life of me train any neural network that is translationally invariant. So the proof method is useless if there is nothing that it would ever apply to.</p>
+<p>Precisely in this last point, I have mostly focused on trying to train a small CNN for MNIST handwritten digit classification that preserves the output class for small, reasonable translations of the digit. I’ve used data augmentation to predispose the network to being translationally invariant, and even though I can get a high degree of invariance, I cannot get a network that is invariant for all of the examples even in the training set or a reserved testing set.</p>
+<p>It may be the case that the method I propose for measuring this invariance could be used to adversarially train a network to have better invariance. It may also be the case that all CNNs are bound to suffer from small degrees of translational sensitivity. I cannot find the citation at the moment, but there was a paper that suggested that CNNs suffer from weird issues of translational sensitivity that relate to the size of the convolutional window. So maybe this approach is doomed to fail anyway.</p>
+<p>On the whole, I will say that machine learning verification almost sounds like an oxymoron. That is, if you have the expressivity to properly state a sophisticated safety property, then you likely understand the problem enough to not need to resort to machine learning in the first place. So almost tautologically, it seems that there cannot be satisfying verification of neural nets, as the tasks of machine learning and verification live on very different epistemic foundations.</p>
+<p>The related works I could liberate from Zotero may be found below.</p>
+<div class="helia-query helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">15 entries</span></summary>
+<div class="helia-group-body">
+<div class="helia-query-item" data-entry="capucci-2026-adequate" data-date="20260000">
+<section class="helia-transclusion" data-entry="capucci-2026-adequate" data-depth="2">
+<details open>
+<summary class="helia-transclusion-summary"><h3 class="helia-transclusion-title" id="capucci-2026-adequate"><span class="helia-number">0.1</span> <span class="helia-title">Adequate Losses via Quantitative Linear Logic</span>&nbsp;<a class="helia-slug" href="capucci-2026-adequate.html">capucci-2026-adequate</a><span class="helia-byline"><span class="helia-entry-link" data-entry="arxiv">arXiv</span> · 2026</span></h3></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="capucci-2026-adequate" data-kind="reference">
+<div class="helia-abstract">As neural components are increasingly embedded in existing symbolic software – including safety-critical systems – the question arises of how to specify and enforce the safety of the newly introduced neural parts. Unlike traditional logical specifications, these must be amenable not only to the standard Boolean interpretation, but also to training and optimisation. The latter calls for a quantitative interpretation of the logical syntax, subject to further requirements such as smoothness and differentiability. Moreover, the qualitative and quantitative sides of the logic must share a unifying proof-theoretic and categorical semantics. Finally, the new logic should link cleanly to the substructural and program logics that underpin the verification of existing symbolic programs. In this paper, we present a logic that ticks all of these boxes. We introduce a family of calculi, pQLL, indexed by a hardness degree <span class="helia-math helia-math-inline helia-mathml"><math><mi>𝑝</mi></math></span>, prove a cut-elimination theorem for them, and establish completeness with respect to enriched residuated ‘soft’ lattices. At <span class="helia-math helia-math-inline helia-mathml"><math><mi>𝑝</mi><mo>=</mo><mi>∞</mi></math></span>, pQLL reduces to multiplicative additive linear logic (MALL), and provability in pQLL converges to provability in MALL as <span class="helia-math helia-math-inline helia-mathml"><math><mi>𝑝</mi><mo stretchy="false">→</mo><mi>∞</mi></math></span>. We express optimisation objectives in the syntax of this logic and prove the quantitative adequacy of neuro-symbolic loss functions – a result that has eluded the neuro-symbolic machine learning community for nearly a decade.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.48550/arxiv.2605.13348">DOI</a></span> · <span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/2605.13348">arXiv</a></span></div>
+</div>
+</div>
+</details>
+</section>
+</div>
+<div class="helia-query-item" data-entry="flinkow-2026-quantitative" data-date="20260000">
+<section class="helia-transclusion" data-entry="flinkow-2026-quantitative" data-depth="2">
+<details open>
+<summary class="helia-transclusion-summary"><h3 class="helia-transclusion-title" id="flinkow-2026-quantitative"><span class="helia-number">0.2</span> <span class="helia-title">Quantitative Linear Logic for Neuro-Symbolic Learning and Verification</span>&nbsp;<a class="helia-slug" href="flinkow-2026-quantitative.html">flinkow-2026-quantitative</a><span class="helia-byline"><span class="helia-entry-link" data-entry="arxiv">arXiv</span> · 2026</span></h3></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="flinkow-2026-quantitative" data-kind="reference">
+<div class="helia-abstract">Differentiable Logics are deployed in neuro-symbolic learning tasks as a way of embedding logical constraints in the training objective of neural networks. A differentiable logic consists of a syntax to write logical properties and a semantics to interpret them as real-valued functions to be folded in the loss function. A defining trade-off of the field is that between logical properties of the connectives, and analytic concerns for the semantics, with both aspects being relevant in applications. At one extreme we find fuzzy logics, that have well-established algebraic and proof-theoretic foundations, and at the other ad-hoc differentiable logics like Fischer’s DL2, conceived for deep learning applications. However, no satisfactory foundation has emerged yet. We propose a resolution to this long-standing tension via a novel logic, Quantitative Linear Logic (QLL), with foundational ambitions. Our design is driven by naturality – the idea that, since logical constraints are translated to losses, the semantics of the connectives should be pertinent operations used in ML practice (that is, sum and log-sum-exp) on additive quantities (like logits). We then judge the result on two aspects: logical adequacy – that they satisfy most of the standard logical laws of Linear Logic; and empirical effectiveness – test-time performance (as measured by adversarial attacks) is well-correlated to the actual verification of the logical constraints (as measured by off-the-shelf neural network verifiers), which makes QLL stand out among SoTA techniques.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.48550/arxiv.2605.13845">DOI</a></span> · <span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/2605.13845">arXiv</a></span></div>
+</div>
+</div>
+</details>
+</section>
+</div>
+<div class="helia-query-item" data-entry="marulandagiraldo-2025-quantifiers" data-date="20251000">
+<section class="helia-transclusion" data-entry="marulandagiraldo-2025-quantifiers" data-depth="2">
+<details open>
+<summary class="helia-transclusion-summary"><h3 class="helia-transclusion-title" id="marulandagiraldo-2025-quantifiers"><span class="helia-number">0.3</span> <span class="helia-title">Quantifiers for Differentiable Logics in Rocq (Extended Abstract)</span>&nbsp;<a class="helia-slug" href="marulandagiraldo-2025-quantifiers.html">marulandagiraldo-2025-quantifiers</a><span class="helia-byline"><span class="helia-entry-link" data-entry="saiv">SAIV</span> · 2025</span></h3></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="marulandagiraldo-2025-quantifiers" data-kind="reference">
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-031-99991-8_12">DOI</a></span></div>
+</div>
+</div>
+</details>
+</section>
+</div>
+<div class="helia-query-item" data-entry="gavranovicFundamentalComponentsDeep" data-date="20240000">
+<section class="helia-transclusion" data-entry="gavranovicFundamentalComponentsDeep" data-depth="2">
+<details open>
+<summary class="helia-transclusion-summary"><h3 class="helia-transclusion-title" id="gavranovicFundamentalComponentsDeep"><span class="helia-number">0.4</span> <span class="helia-title">Fundamental Components of Deep Learning: A category-theoretic approach</span>&nbsp;<a class="helia-slug" href="gavranovicFundamentalComponentsDeep.html">gavranovicFundamentalComponentsDeep</a><span class="helia-byline">2024</span></h3></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="gavranovicFundamentalComponentsDeep" data-kind="reference">
+<div class="helia-abstract">Deep learning, despite its remarkable achievements, is still a young field. Like the early stages of many scientific disciplines, it is marked by the discovery of new phenomena, ad-hoc design decisions, and the lack of a uniform and compositional mathematical foundation. From the intricacies of the implementation of backpropagation, through a growing zoo of neural network architectures, to the new and poorly understood phenomena such as double descent, scaling laws or in-context learning, there are few unifying principles in deep learning. This thesis develops a novel mathematical foundation for deep learning based on the language of category theory. We develop a new framework that is a) end-to-end, b) unform, and c) not merely descriptive, but prescriptive, meaning it is amenable to direct implementation in programming languages with sufficient features. We also systematise many existing approaches, placing many existing constructions and concepts from the literature under the same umbrella. In Part I we identify and model two main properties of deep learning systems parametricity and bidirectionality by we expand on the previously defined construction of actegories and Para to study the former, and define weighted optics to study the latter. Combining them yields parametric weighted optics, a categorical model of artificial neural networks, and more. Part II justifies the abstractions from Part I, applying them to model backpropagation, architectures, and supervised learning. We provide a lens-theoretic axiomatisation of differentiation, covering not just smooth spaces, but discrete settings of boolean circuits as well. We survey existing, and develop new categorical models of neural network architectures. We formalise the notion of optimisers and lastly, combine all the existing concepts together, providing a uniform and compositional framework for supervised learning.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.48550/arxiv.2403.13001">DOI</a></span></div>
+</div>
+</div>
+</details>
+</section>
+</div>
+<div class="helia-query-item" data-entry="taoArchitecturePreservingProvableRepair2023" data-date="20230606">
+<section class="helia-transclusion" data-entry="taoArchitecturePreservingProvableRepair2023" data-depth="2">
+<details open>
+<summary class="helia-transclusion-summary"><h3 class="helia-transclusion-title" id="taoArchitecturePreservingProvableRepair2023"><span class="helia-number">0.5</span> <span class="helia-title">Architecture-Preserving Provable Repair of Deep Neural Networks</span>&nbsp;<a class="helia-slug" href="taoArchitecturePreservingProvableRepair2023.html">taoArchitecturePreservingProvableRepair2023</a><span class="helia-byline"><span class="helia-entry-link" data-entry="pldi">PLDI</span> · 2023</span></h3></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="taoArchitecturePreservingProvableRepair2023" data-kind="reference">
+<div class="helia-abstract">Deep neural networks (DNNs) are becoming increasingly important components of software, and are considered the state-of-the-art solution for a number of problems, such as image recognition. However, DNNs are far from infallible, and incorrect behavior of DNNs can have disastrous real-world consequences. This paper addresses the problem of architecture-preserving V-polytope provable repair of DNNs. A V-polytope defines a convex bounded polytope using its vertex representation. V-polytope provable repair guarantees that the repaired DNN satisfies the given specification on the infinite set of points in the given V-polytope. An architecture-preserving repair only modifies the parameters of the DNN, without modifying its architecture. The repair has the flexibility to modify multiple layers of the DNN, and runs in polynomial time. It supports DNNs with activation functions that have some linear pieces, as well as fully-connected, convolutional, pooling and residual layers. To the best our knowledge, this is the first provable repair approach that has all of these features. We implement our approach in a tool called APRNN. Using MNIST, ImageNet, and ACAS Xu DNNs, we show that it has better efficiency, scalability, and generalization compared to PRDNN and REASSURE, prior provable repair methods that are not architecture preserving. CCS Concepts: • Computing methodologies → Neural networks; • Theory of computation → Linear programming; • Software and its engineering → Software post-development issues.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="pdf-url"><a class="helia-link helia-external" href="https://dl.acm.org/doi/pdf/10.1145/3591238">PDF</a></span> · <span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/3591238">DOI</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/journals/pacmpl/TaoNMT23">pldb</a></span></div>
+</div>
+</div>
+</details>
+</section>
+</div>
+<div class="helia-query-item" data-entry="daggitt-2023-compiling" data-date="20230100">
+<section class="helia-transclusion" data-entry="daggitt-2023-compiling" data-depth="2">
+<details open>
+<summary class="helia-transclusion-summary"><h3 class="helia-transclusion-title" id="daggitt-2023-compiling"><span class="helia-number">0.6</span> <span class="helia-title">Compiling Higher-Order Specifications to SMT Solvers: How to Deal with Rejection Constructively</span>&nbsp;<a class="helia-slug" href="daggitt-2023-compiling.html">daggitt-2023-compiling</a><span class="helia-byline"><span class="helia-entry-link" data-entry="cpp">CPP</span> · 2023</span></h3></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="daggitt-2023-compiling" data-kind="reference">
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="pdf-url"><a class="helia-link helia-external" href="https://dl.acm.org/doi/pdf/10.1145/3573105.3575674">PDF</a></span> · <span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/3573105.3575674">DOI</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/conf/cpp/DaggittAKKA23">pldb</a></span></div>
+</div>
+</div>
+</details>
+</section>
+</div>
+<div class="helia-query-item" data-entry="daggitt-2022-vehicle" data-date="20220200">
+<section class="helia-transclusion" data-entry="daggitt-2022-vehicle" data-depth="2">
+<details open>
+<summary class="helia-transclusion-summary"><h3 class="helia-transclusion-title" id="daggitt-2022-vehicle"><span class="helia-number">0.7</span> <span class="helia-title">Vehicle: Interfacing Neural Network Verifiers with Interactive Theorem Provers</span>&nbsp;<a class="helia-slug" href="daggitt-2022-vehicle.html">daggitt-2022-vehicle</a><span class="helia-byline"><span class="helia-entry-link" data-entry="arxiv">arXiv</span> · 2022</span></h3></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="daggitt-2022-vehicle" data-kind="reference">
+<div class="helia-abstract">Verification of neural networks is currently a hot topic in automated theorem proving. Progress has been rapid and there are now a wide range of tools available that can verify properties of networks with hundreds of thousands of nodes. In theory this opens the door to the verification of larger control systems that make use of neural network components. However, although work has managed to incorporate the results of these verifiers to prove larger properties of individual systems, there is currently no general methodology for bridging the gap between verifiers and interactive theorem provers (ITPs). In this paper we present Vehicle, our solution to this problem. Vehicle is equipped with an expressive domain specific language for stating neural network specifications which can be compiled to both verifiers and ITPs. It overcomes previous issues with maintainability and scalability in similar ITP formalisations by using a standard ONNX file as the single canonical representation of the network. We demonstrate its utility by using it to connect the neural network verifier Marabou to Agda and then formally verifying that a car steered by a neural network never leaves the road, even in the face of an unpredictable cross wind and imperfect sensors. The network has over 20,000 nodes, and therefore this proof represents an improvement of 3 orders of magnitude over prior proofs about neural network enhanced systems in ITPs.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/2202.05207">arXiv</a></span></div>
+</div>
+</div>
+</details>
+</section>
+</div>
+<div class="helia-query-item" data-entry="mullerPRIMAGeneralPrecise2022" data-date="20220116">
+<section class="helia-transclusion" data-entry="mullerPRIMAGeneralPrecise2022" data-depth="2">
+<details open>
+<summary class="helia-transclusion-summary"><h3 class="helia-transclusion-title" id="mullerPRIMAGeneralPrecise2022"><span class="helia-number">0.8</span> <span class="helia-title">PRIMA: General and Precise Neural Network Certification via Scalable Convex Hull Approximations</span>&nbsp;<a class="helia-slug" href="mullerPRIMAGeneralPrecise2022.html">mullerPRIMAGeneralPrecise2022</a><span class="helia-byline"><span class="helia-entry-link" data-entry="popl">POPL</span> · 2022</span></h3></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="mullerPRIMAGeneralPrecise2022" data-kind="reference">
+<div class="helia-abstract">Formal verification of neural networks is critical for their safe adoption in real-world applications. However, designing a precise and scalable verifier which can handle different activation functions, realistic network architectures and relevant specifications remains an open and difficult challenge. In this paper, we take a major step forward in addressing this challenge and present a new verification framework, called PRIMA. PRIMA is both (i) general: it handles any non-linear activation function, and (ii) precise: it computes precise convex abstractions involving multiple neurons via novel convex hull approximation algorithms that leverage concepts from computational geometry. The algorithms have polynomial complexity, yield fewer constraints, and minimize precision loss. We evaluate the effectiveness of PRIMA on a variety of challenging tasks from prior work. Our results show that PRIMA is significantly more precise than the state-of-the-art, verifying robustness to input perturbations for up to 20%, 30%, and 34% more images than existing work on ReLU-, Sigmoid-, and Tanh-based networks, respectively. Further, PRIMA enables, for the first time, the precise verification of a realistic neural network for autonomous driving within a few minutes.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="pdf-url"><a class="helia-link helia-external" href="https://dl.acm.org/doi/pdf/10.1145/3498704">PDF</a></span> · <span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/3498704">DOI</a></span> · <span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/2103.03638">arXiv</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/journals/pacmpl/MullerMSPV22">pldb</a></span></div>
+</div>
+</div>
+</details>
+</section>
+</div>
+<div class="helia-query-item" data-entry="sotoudehProvableRepairDeep2021" data-date="20210619">
+<section class="helia-transclusion" data-entry="sotoudehProvableRepairDeep2021" data-depth="2">
+<details open>
+<summary class="helia-transclusion-summary"><h3 class="helia-transclusion-title" id="sotoudehProvableRepairDeep2021"><span class="helia-number">0.9</span> <span class="helia-title">Provable repair of deep neural networks</span>&nbsp;<a class="helia-slug" href="sotoudehProvableRepairDeep2021.html">sotoudehProvableRepairDeep2021</a><span class="helia-byline"><span class="helia-entry-link" data-entry="pldi">PLDI</span> · 2021</span></h3></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="sotoudehProvableRepairDeep2021" data-kind="reference">
+<div class="helia-abstract">Deep Neural Networks (DNNs) have grown in popularity over the past decade and are now being used in safety-critical domains such as aircraft collision avoidance. This has motivated a large number of techniques for finding unsafe behavior in DNNs. In contrast, this paper tackles the problem of correcting a DNN once unsafe behavior is found. We introduce the provable repair problem, which is the problem of repairing a network N to construct a new network N′ that satisfies a given specification. If the safety specification is over a finite set of points, our Provable Point Repair algorithm can find a provably minimal repair satisfying the specification, regardless of the activation functions used. For safety specifications addressing convex polytopes containing infinitely many points, our Provable Polytope Repair algorithm can find a provably minimal repair satisfying the specification for DNNs using piecewise-linear activation functions. The key insight behind both of these algorithms is the introduction of a Decoupled DNN architecture, which allows us to reduce provable repair to a linear programming problem. Our experimental results demonstrate the efficiency and effectiveness of our Provable Repair algorithms on a variety of challenging tasks.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="pdf-url"><a class="helia-link helia-external" href="https://dl.acm.org/doi/pdf/10.1145/3453483.3454064">PDF</a></span> · <span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/3453483.3454064">DOI</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/conf/pldi/SotoudehT21">pldb</a></span></div>
+</div>
+</div>
+</details>
+</section>
+</div>
+<div class="helia-query-item" data-entry="myburghTrackingTranslationInvariance2021" data-date="20210419">
+<section class="helia-transclusion" data-entry="myburghTrackingTranslationInvariance2021" data-depth="2">
+<details open>
+<summary class="helia-transclusion-summary"><h3 class="helia-transclusion-title" id="myburghTrackingTranslationInvariance2021"><span class="helia-number">0.10</span> <span class="helia-title">Tracking translation invariance in CNNs</span>&nbsp;<a class="helia-slug" href="myburghTrackingTranslationInvariance2021.html">myburghTrackingTranslationInvariance2021</a><span class="helia-byline"><span class="helia-entry-link" data-entry="arxiv">arXiv</span> · 2021</span></h3></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="myburghTrackingTranslationInvariance2021" data-kind="reference">
+<div class="helia-abstract">Although Convolutional Neural Networks (CNNs) are widely used, their translation invariance (ability to deal with translated inputs) is still subject to some controversy. We explore this question using translation-sensitivity maps to quantify how sensitive a standard CNN is to a translated input. We propose the use of Cosine Similarity as sensitivity metric over Euclidean Distance, and discuss the importance of restricting the dimensionality of either of these metrics when comparing architectures. Our main focus is to investigate the effect of different architectural components of a standard CNN on that network’s sensitivity to translation. By varying convolutional kernel sizes and amounts of zero padding, we control the size of the feature maps produced, allowing us to quantify the extent to which these elements influence translation invariance. We also measure translation invariance at different locations within the CNN to determine the extent to which convolutional and fully connected layers, respectively, contribute to the translation invariance of a CNN as a whole. Our analysis indicates that both convolutional kernel size and feature map size have a systematic influence on translation invariance. We also see that convolutional layers contribute less than expected to translation invariance, when not specifically forced to do so.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="url"><a class="helia-link helia-external" href="http://arxiv.org/abs/2104.05997">Web</a></span> · <span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/2104.05997">arXiv</a></span></div>
+</div>
+</div>
+</details>
+</section>
+</div>
+<div class="helia-query-item" data-entry="seshiaVerifiedArtificialIntelligence2020" data-date="20200723">
+<section class="helia-transclusion" data-entry="seshiaVerifiedArtificialIntelligence2020" data-depth="2">
+<details open>
+<summary class="helia-transclusion-summary"><h3 class="helia-transclusion-title" id="seshiaVerifiedArtificialIntelligence2020"><span class="helia-number">0.11</span> <span class="helia-title">Towards Verified Artificial Intelligence</span>&nbsp;<a class="helia-slug" href="seshiaVerifiedArtificialIntelligence2020.html">seshiaVerifiedArtificialIntelligence2020</a><span class="helia-byline"><span class="helia-entry-link" data-entry="arxiv">arXiv</span> · 2020</span></h3></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="seshiaVerifiedArtificialIntelligence2020" data-kind="reference">
+<div class="helia-abstract">Verified artificial intelligence (AI) is the goal of designing AI-based systems that have strong, ideally provable, assurances of correctness with respect to mathematically-specified requirements. This paper considers Verified AI from a formal methods perspective. We describe five challenges for achieving Verified AI, and five corresponding principles for addressing these challenges.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.48550/arxiv.1606.08514">DOI</a></span> · <span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/1606.08514">arXiv</a></span></div>
+</div>
+</div>
+</details>
+</section>
+</div>
+<div class="helia-query-item" data-entry="tranVerificationDeepConvolutional2020" data-date="20200514">
+<section class="helia-transclusion" data-entry="tranVerificationDeepConvolutional2020" data-depth="2">
+<details open>
+<summary class="helia-transclusion-summary"><h3 class="helia-transclusion-title" id="tranVerificationDeepConvolutional2020"><span class="helia-number">0.12</span> <span class="helia-title">Verification of Deep Convolutional Neural Networks Using ImageStars</span>&nbsp;<a class="helia-slug" href="tranVerificationDeepConvolutional2020.html">tranVerificationDeepConvolutional2020</a><span class="helia-byline"><span class="helia-entry-link" data-entry="cav">CAV</span> · 2020</span></h3></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="tranVerificationDeepConvolutional2020" data-kind="reference">
+<div class="helia-abstract">Convolutional Neural Networks (CNN) have redefined stateof-the-art in many real-world applications, such as facial recognition, image classification, human pose estimation, and semantic segmentation. Despite their success, CNNs are vulnerable to adversarial attacks, where slight changes to their inputs may lead to sharp changes in their output in even well-trained networks. Set-based analysis methods can detect or prove the absence of bounded adversarial attacks, which can then be used to evaluate the effectiveness of neural network training methodology. Unfortunately, existing verification approaches have limited scalability in terms of the size of networks that can be analyzed.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="pdf-url"><a class="helia-link helia-external" href="https://link.springer.com/content/pdf/10.1007%2F978-3-030-53288-8_2.pdf">PDF</a></span> · <span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-030-53288-8_2">DOI</a></span> · <span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/2004.05511">arXiv</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/conf/cav/TranBXJ20">pldb</a></span></div>
+</div>
+</div>
+</details>
+</section>
+</div>
+<div class="helia-query-item" data-entry="moutonStrideTranslationInvariance2020" data-date="20200000">
+<section class="helia-transclusion" data-entry="moutonStrideTranslationInvariance2020" data-depth="2">
+<details open>
+<summary class="helia-transclusion-summary"><h3 class="helia-transclusion-title" id="moutonStrideTranslationInvariance2020"><span class="helia-number">0.13</span> <span class="helia-title">Stride and Translation Invariance in CNNs</span>&nbsp;<a class="helia-slug" href="moutonStrideTranslationInvariance2020.html">moutonStrideTranslationInvariance2020</a><span class="helia-byline">Artificial Intelligence Research · 2020</span></h3></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="moutonStrideTranslationInvariance2020" data-kind="reference">
+<div class="helia-abstract">Convolutional Neural Networks have become the standard for image classification tasks, however, these architectures are not invariant to translations of the input image. This lack of invariance is attributed to the use of stride which ignores the sampling theorem, and fully connected layers which lack spatial reasoning. We show that stride can greatly benefit translation invariance given that it is combined with sufficient similarity between neighbouring pixels, a characteristic which we refer to as local homogeneity. We also observe that this characteristic is dataset-specific and dictates the relationship between pooling kernel size and stride required for translation invariance. Furthermore we find that a trade-off exists between generalization and translation invariance in the case of pooling kernel size, as larger kernel sizes lead to better invariance but poorer generalization. Finally we explore the efficacy of other solutions proposed, namely global average pooling, anti-aliasing, and data augmentation, both empirically and through the lens of local homogeneity.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-030-66151-9_17">DOI</a></span> · <span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/2103.10097">arXiv</a></span></div>
+</div>
+</div>
+</details>
+</section>
+</div>
+<div class="helia-query-item" data-entry="azulayWhyDeepConvolutional" data-date="20190000">
+<section class="helia-transclusion" data-entry="azulayWhyDeepConvolutional" data-depth="2">
+<details open>
+<summary class="helia-transclusion-summary"><h3 class="helia-transclusion-title" id="azulayWhyDeepConvolutional"><span class="helia-number">0.14</span> <span class="helia-title">Why do deep convolutional networks generalize so poorly to small image transformations?</span>&nbsp;<a class="helia-slug" href="azulayWhyDeepConvolutional.html">azulayWhyDeepConvolutional</a><span class="helia-byline">2019</span></h3></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="azulayWhyDeepConvolutional" data-kind="reference">
+<div class="helia-abstract">Convolutional Neural Networks (CNNs) are commonly assumed to be invariant to small image transformations: either because of the convolutional architecture or because they were trained using data augmentation. Recently, several authors have shown that this is not the case: small translations or rescalings of the input image can drastically change the network’s prediction. In this paper, we quantify this phenomena and ask why neither the convolutional architecture nor data augmentation are sufficient to achieve the desired invariance. Specifically, we show that the convolutional architecture does not give invariance since architectures ignore the classical sampling theorem, and data augmentation does not give invariance because the CNNs learn to be invariant to transformations only for images that are very similar to typical images from the training set. We discuss two possible solutions to this problem: (1) antialiasing the intermediate representations and (2) increasing data augmentation and show that they provide only a partial solution at best. Taken together, our results indicate that the problem of insuring invariance to small image transformations in neural networks while preserving high accuracy remains unsolved.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.48550/arxiv.1805.12177">DOI</a></span></div>
+</div>
+</div>
+</details>
+</section>
+</div>
+<div class="helia-query-item" data-entry="kouvarosFormalVerificationCNNbased2018" data-date="20181128">
+<section class="helia-transclusion" data-entry="kouvarosFormalVerificationCNNbased2018" data-depth="2">
+<details open>
+<summary class="helia-transclusion-summary"><h3 class="helia-transclusion-title" id="kouvarosFormalVerificationCNNbased2018"><span class="helia-number">0.15</span> <span class="helia-title">Formal Verification of CNN-based Perception Systems</span>&nbsp;<a class="helia-slug" href="kouvarosFormalVerificationCNNbased2018.html">kouvarosFormalVerificationCNNbased2018</a><span class="helia-byline"><span class="helia-entry-link" data-entry="arxiv">arXiv</span> · 2018</span></h3></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="kouvarosFormalVerificationCNNbased2018" data-kind="reference">
+<div class="helia-abstract">We address the problem of verifying neural-based perception systems implemented by convolutional neural networks. We define a notion of local robustness based on affine and photometric transformations. We show the notion cannot be captured by previously employed notions of robustness. The method proposed is based on reachability analysis for feed-forward neural networks and relies on MILP encodings of both the CNNs and transformations under question. We present an implementation and discuss the experimental results obtained for a CNN trained from the MNIST data set.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.48550/arxiv.1811.11373">DOI</a></span> · <span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/1811.11373">arXiv</a></span></div>
+</div>
+</div>
+</details>
+</section>
+</div>
+</div>
+</details>
+</div>
+</div>
+</div>
+</details>
+</section>
+</div>
+</details>
+</section>
+</div>
+<div class="helia-tag-group">
+<section class="helia-heading-section" data-level="1">
+<details open>
+<summary class="helia-heading-summary"><h2 class="helia-heading">References (15)</h2>
+</summary>
+<div class="helia-heading-body">
+<section class="helia-transclusion" data-entry="capucci-2026-adequate" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title"><span class="helia-title">Adequate Losses via Quantitative Linear Logic</span>&nbsp;<a class="helia-slug" href="capucci-2026-adequate.html">capucci-2026-adequate</a><span class="helia-byline"><span class="helia-entry-link" data-entry="arxiv">arXiv</span> · 2026</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="capucci-2026-adequate" data-kind="reference">
+<div class="helia-abstract">As neural components are increasingly embedded in existing symbolic software – including safety-critical systems – the question arises of how to specify and enforce the safety of the newly introduced neural parts. Unlike traditional logical specifications, these must be amenable not only to the standard Boolean interpretation, but also to training and optimisation. The latter calls for a quantitative interpretation of the logical syntax, subject to further requirements such as smoothness and differentiability. Moreover, the qualitative and quantitative sides of the logic must share a unifying proof-theoretic and categorical semantics. Finally, the new logic should link cleanly to the substructural and program logics that underpin the verification of existing symbolic programs. In this paper, we present a logic that ticks all of these boxes. We introduce a family of calculi, pQLL, indexed by a hardness degree <span class="helia-math helia-math-inline helia-mathml"><math><mi>𝑝</mi></math></span>, prove a cut-elimination theorem for them, and establish completeness with respect to enriched residuated ‘soft’ lattices. At <span class="helia-math helia-math-inline helia-mathml"><math><mi>𝑝</mi><mo>=</mo><mi>∞</mi></math></span>, pQLL reduces to multiplicative additive linear logic (MALL), and provability in pQLL converges to provability in MALL as <span class="helia-math helia-math-inline helia-mathml"><math><mi>𝑝</mi><mo stretchy="false">→</mo><mi>∞</mi></math></span>. We express optimisation objectives in the syntax of this logic and prove the quantitative adequacy of neuro-symbolic loss functions – a result that has eluded the neuro-symbolic machine learning community for nearly a decade.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.48550/arxiv.2605.13348">DOI</a></span> · <span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/2605.13348">arXiv</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="flinkow-2026-quantitative" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title"><span class="helia-title">Quantitative Linear Logic for Neuro-Symbolic Learning and Verification</span>&nbsp;<a class="helia-slug" href="flinkow-2026-quantitative.html">flinkow-2026-quantitative</a><span class="helia-byline"><span class="helia-entry-link" data-entry="arxiv">arXiv</span> · 2026</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="flinkow-2026-quantitative" data-kind="reference">
+<div class="helia-abstract">Differentiable Logics are deployed in neuro-symbolic learning tasks as a way of embedding logical constraints in the training objective of neural networks. A differentiable logic consists of a syntax to write logical properties and a semantics to interpret them as real-valued functions to be folded in the loss function. A defining trade-off of the field is that between logical properties of the connectives, and analytic concerns for the semantics, with both aspects being relevant in applications. At one extreme we find fuzzy logics, that have well-established algebraic and proof-theoretic foundations, and at the other ad-hoc differentiable logics like Fischer’s DL2, conceived for deep learning applications. However, no satisfactory foundation has emerged yet. We propose a resolution to this long-standing tension via a novel logic, Quantitative Linear Logic (QLL), with foundational ambitions. Our design is driven by naturality – the idea that, since logical constraints are translated to losses, the semantics of the connectives should be pertinent operations used in ML practice (that is, sum and log-sum-exp) on additive quantities (like logits). We then judge the result on two aspects: logical adequacy – that they satisfy most of the standard logical laws of Linear Logic; and empirical effectiveness – test-time performance (as measured by adversarial attacks) is well-correlated to the actual verification of the logical constraints (as measured by off-the-shelf neural network verifiers), which makes QLL stand out among SoTA techniques.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.48550/arxiv.2605.13845">DOI</a></span> · <span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/2605.13845">arXiv</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="marulandagiraldo-2025-quantifiers" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title"><span class="helia-title">Quantifiers for Differentiable Logics in Rocq (Extended Abstract)</span>&nbsp;<a class="helia-slug" href="marulandagiraldo-2025-quantifiers.html">marulandagiraldo-2025-quantifiers</a><span class="helia-byline"><span class="helia-entry-link" data-entry="saiv">SAIV</span> · 2025</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="marulandagiraldo-2025-quantifiers" data-kind="reference">
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-031-99991-8_12">DOI</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="gavranovicFundamentalComponentsDeep" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title"><span class="helia-title">Fundamental Components of Deep Learning: A category-theoretic approach</span>&nbsp;<a class="helia-slug" href="gavranovicFundamentalComponentsDeep.html">gavranovicFundamentalComponentsDeep</a><span class="helia-byline">2024</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="gavranovicFundamentalComponentsDeep" data-kind="reference">
+<div class="helia-abstract">Deep learning, despite its remarkable achievements, is still a young field. Like the early stages of many scientific disciplines, it is marked by the discovery of new phenomena, ad-hoc design decisions, and the lack of a uniform and compositional mathematical foundation. From the intricacies of the implementation of backpropagation, through a growing zoo of neural network architectures, to the new and poorly understood phenomena such as double descent, scaling laws or in-context learning, there are few unifying principles in deep learning. This thesis develops a novel mathematical foundation for deep learning based on the language of category theory. We develop a new framework that is a) end-to-end, b) unform, and c) not merely descriptive, but prescriptive, meaning it is amenable to direct implementation in programming languages with sufficient features. We also systematise many existing approaches, placing many existing constructions and concepts from the literature under the same umbrella. In Part I we identify and model two main properties of deep learning systems parametricity and bidirectionality by we expand on the previously defined construction of actegories and Para to study the former, and define weighted optics to study the latter. Combining them yields parametric weighted optics, a categorical model of artificial neural networks, and more. Part II justifies the abstractions from Part I, applying them to model backpropagation, architectures, and supervised learning. We provide a lens-theoretic axiomatisation of differentiation, covering not just smooth spaces, but discrete settings of boolean circuits as well. We survey existing, and develop new categorical models of neural network architectures. We formalise the notion of optimisers and lastly, combine all the existing concepts together, providing a uniform and compositional framework for supervised learning.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.48550/arxiv.2403.13001">DOI</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="taoArchitecturePreservingProvableRepair2023" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title"><span class="helia-title">Architecture-Preserving Provable Repair of Deep Neural Networks</span>&nbsp;<a class="helia-slug" href="taoArchitecturePreservingProvableRepair2023.html">taoArchitecturePreservingProvableRepair2023</a><span class="helia-byline"><span class="helia-entry-link" data-entry="pldi">PLDI</span> · 2023</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="taoArchitecturePreservingProvableRepair2023" data-kind="reference">
+<div class="helia-abstract">Deep neural networks (DNNs) are becoming increasingly important components of software, and are considered the state-of-the-art solution for a number of problems, such as image recognition. However, DNNs are far from infallible, and incorrect behavior of DNNs can have disastrous real-world consequences. This paper addresses the problem of architecture-preserving V-polytope provable repair of DNNs. A V-polytope defines a convex bounded polytope using its vertex representation. V-polytope provable repair guarantees that the repaired DNN satisfies the given specification on the infinite set of points in the given V-polytope. An architecture-preserving repair only modifies the parameters of the DNN, without modifying its architecture. The repair has the flexibility to modify multiple layers of the DNN, and runs in polynomial time. It supports DNNs with activation functions that have some linear pieces, as well as fully-connected, convolutional, pooling and residual layers. To the best our knowledge, this is the first provable repair approach that has all of these features. We implement our approach in a tool called APRNN. Using MNIST, ImageNet, and ACAS Xu DNNs, we show that it has better efficiency, scalability, and generalization compared to PRDNN and REASSURE, prior provable repair methods that are not architecture preserving. CCS Concepts: • Computing methodologies → Neural networks; • Theory of computation → Linear programming; • Software and its engineering → Software post-development issues.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="pdf-url"><a class="helia-link helia-external" href="https://dl.acm.org/doi/pdf/10.1145/3591238">PDF</a></span> · <span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/3591238">DOI</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/journals/pacmpl/TaoNMT23">pldb</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="daggitt-2023-compiling" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title"><span class="helia-title">Compiling Higher-Order Specifications to SMT Solvers: How to Deal with Rejection Constructively</span>&nbsp;<a class="helia-slug" href="daggitt-2023-compiling.html">daggitt-2023-compiling</a><span class="helia-byline"><span class="helia-entry-link" data-entry="cpp">CPP</span> · 2023</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="daggitt-2023-compiling" data-kind="reference">
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="pdf-url"><a class="helia-link helia-external" href="https://dl.acm.org/doi/pdf/10.1145/3573105.3575674">PDF</a></span> · <span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/3573105.3575674">DOI</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/conf/cpp/DaggittAKKA23">pldb</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="daggitt-2022-vehicle" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title"><span class="helia-title">Vehicle: Interfacing Neural Network Verifiers with Interactive Theorem Provers</span>&nbsp;<a class="helia-slug" href="daggitt-2022-vehicle.html">daggitt-2022-vehicle</a><span class="helia-byline"><span class="helia-entry-link" data-entry="arxiv">arXiv</span> · 2022</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="daggitt-2022-vehicle" data-kind="reference">
+<div class="helia-abstract">Verification of neural networks is currently a hot topic in automated theorem proving. Progress has been rapid and there are now a wide range of tools available that can verify properties of networks with hundreds of thousands of nodes. In theory this opens the door to the verification of larger control systems that make use of neural network components. However, although work has managed to incorporate the results of these verifiers to prove larger properties of individual systems, there is currently no general methodology for bridging the gap between verifiers and interactive theorem provers (ITPs). In this paper we present Vehicle, our solution to this problem. Vehicle is equipped with an expressive domain specific language for stating neural network specifications which can be compiled to both verifiers and ITPs. It overcomes previous issues with maintainability and scalability in similar ITP formalisations by using a standard ONNX file as the single canonical representation of the network. We demonstrate its utility by using it to connect the neural network verifier Marabou to Agda and then formally verifying that a car steered by a neural network never leaves the road, even in the face of an unpredictable cross wind and imperfect sensors. The network has over 20,000 nodes, and therefore this proof represents an improvement of 3 orders of magnitude over prior proofs about neural network enhanced systems in ITPs.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/2202.05207">arXiv</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="mullerPRIMAGeneralPrecise2022" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title"><span class="helia-title">PRIMA: General and Precise Neural Network Certification via Scalable Convex Hull Approximations</span>&nbsp;<a class="helia-slug" href="mullerPRIMAGeneralPrecise2022.html">mullerPRIMAGeneralPrecise2022</a><span class="helia-byline"><span class="helia-entry-link" data-entry="popl">POPL</span> · 2022</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="mullerPRIMAGeneralPrecise2022" data-kind="reference">
+<div class="helia-abstract">Formal verification of neural networks is critical for their safe adoption in real-world applications. However, designing a precise and scalable verifier which can handle different activation functions, realistic network architectures and relevant specifications remains an open and difficult challenge. In this paper, we take a major step forward in addressing this challenge and present a new verification framework, called PRIMA. PRIMA is both (i) general: it handles any non-linear activation function, and (ii) precise: it computes precise convex abstractions involving multiple neurons via novel convex hull approximation algorithms that leverage concepts from computational geometry. The algorithms have polynomial complexity, yield fewer constraints, and minimize precision loss. We evaluate the effectiveness of PRIMA on a variety of challenging tasks from prior work. Our results show that PRIMA is significantly more precise than the state-of-the-art, verifying robustness to input perturbations for up to 20%, 30%, and 34% more images than existing work on ReLU-, Sigmoid-, and Tanh-based networks, respectively. Further, PRIMA enables, for the first time, the precise verification of a realistic neural network for autonomous driving within a few minutes.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="pdf-url"><a class="helia-link helia-external" href="https://dl.acm.org/doi/pdf/10.1145/3498704">PDF</a></span> · <span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/3498704">DOI</a></span> · <span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/2103.03638">arXiv</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/journals/pacmpl/MullerMSPV22">pldb</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="sotoudehProvableRepairDeep2021" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title"><span class="helia-title">Provable repair of deep neural networks</span>&nbsp;<a class="helia-slug" href="sotoudehProvableRepairDeep2021.html">sotoudehProvableRepairDeep2021</a><span class="helia-byline"><span class="helia-entry-link" data-entry="pldi">PLDI</span> · 2021</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="sotoudehProvableRepairDeep2021" data-kind="reference">
+<div class="helia-abstract">Deep Neural Networks (DNNs) have grown in popularity over the past decade and are now being used in safety-critical domains such as aircraft collision avoidance. This has motivated a large number of techniques for finding unsafe behavior in DNNs. In contrast, this paper tackles the problem of correcting a DNN once unsafe behavior is found. We introduce the provable repair problem, which is the problem of repairing a network N to construct a new network N′ that satisfies a given specification. If the safety specification is over a finite set of points, our Provable Point Repair algorithm can find a provably minimal repair satisfying the specification, regardless of the activation functions used. For safety specifications addressing convex polytopes containing infinitely many points, our Provable Polytope Repair algorithm can find a provably minimal repair satisfying the specification for DNNs using piecewise-linear activation functions. The key insight behind both of these algorithms is the introduction of a Decoupled DNN architecture, which allows us to reduce provable repair to a linear programming problem. Our experimental results demonstrate the efficiency and effectiveness of our Provable Repair algorithms on a variety of challenging tasks.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="pdf-url"><a class="helia-link helia-external" href="https://dl.acm.org/doi/pdf/10.1145/3453483.3454064">PDF</a></span> · <span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/3453483.3454064">DOI</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/conf/pldi/SotoudehT21">pldb</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="myburghTrackingTranslationInvariance2021" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title"><span class="helia-title">Tracking translation invariance in CNNs</span>&nbsp;<a class="helia-slug" href="myburghTrackingTranslationInvariance2021.html">myburghTrackingTranslationInvariance2021</a><span class="helia-byline"><span class="helia-entry-link" data-entry="arxiv">arXiv</span> · 2021</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="myburghTrackingTranslationInvariance2021" data-kind="reference">
+<div class="helia-abstract">Although Convolutional Neural Networks (CNNs) are widely used, their translation invariance (ability to deal with translated inputs) is still subject to some controversy. We explore this question using translation-sensitivity maps to quantify how sensitive a standard CNN is to a translated input. We propose the use of Cosine Similarity as sensitivity metric over Euclidean Distance, and discuss the importance of restricting the dimensionality of either of these metrics when comparing architectures. Our main focus is to investigate the effect of different architectural components of a standard CNN on that network’s sensitivity to translation. By varying convolutional kernel sizes and amounts of zero padding, we control the size of the feature maps produced, allowing us to quantify the extent to which these elements influence translation invariance. We also measure translation invariance at different locations within the CNN to determine the extent to which convolutional and fully connected layers, respectively, contribute to the translation invariance of a CNN as a whole. Our analysis indicates that both convolutional kernel size and feature map size have a systematic influence on translation invariance. We also see that convolutional layers contribute less than expected to translation invariance, when not specifically forced to do so.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="url"><a class="helia-link helia-external" href="http://arxiv.org/abs/2104.05997">Web</a></span> · <span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/2104.05997">arXiv</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="seshiaVerifiedArtificialIntelligence2020" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title"><span class="helia-title">Towards Verified Artificial Intelligence</span>&nbsp;<a class="helia-slug" href="seshiaVerifiedArtificialIntelligence2020.html">seshiaVerifiedArtificialIntelligence2020</a><span class="helia-byline"><span class="helia-entry-link" data-entry="arxiv">arXiv</span> · 2020</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="seshiaVerifiedArtificialIntelligence2020" data-kind="reference">
+<div class="helia-abstract">Verified artificial intelligence (AI) is the goal of designing AI-based systems that have strong, ideally provable, assurances of correctness with respect to mathematically-specified requirements. This paper considers Verified AI from a formal methods perspective. We describe five challenges for achieving Verified AI, and five corresponding principles for addressing these challenges.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.48550/arxiv.1606.08514">DOI</a></span> · <span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/1606.08514">arXiv</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="tranVerificationDeepConvolutional2020" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title"><span class="helia-title">Verification of Deep Convolutional Neural Networks Using ImageStars</span>&nbsp;<a class="helia-slug" href="tranVerificationDeepConvolutional2020.html">tranVerificationDeepConvolutional2020</a><span class="helia-byline"><span class="helia-entry-link" data-entry="cav">CAV</span> · 2020</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="tranVerificationDeepConvolutional2020" data-kind="reference">
+<div class="helia-abstract">Convolutional Neural Networks (CNN) have redefined stateof-the-art in many real-world applications, such as facial recognition, image classification, human pose estimation, and semantic segmentation. Despite their success, CNNs are vulnerable to adversarial attacks, where slight changes to their inputs may lead to sharp changes in their output in even well-trained networks. Set-based analysis methods can detect or prove the absence of bounded adversarial attacks, which can then be used to evaluate the effectiveness of neural network training methodology. Unfortunately, existing verification approaches have limited scalability in terms of the size of networks that can be analyzed.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="pdf-url"><a class="helia-link helia-external" href="https://link.springer.com/content/pdf/10.1007%2F978-3-030-53288-8_2.pdf">PDF</a></span> · <span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-030-53288-8_2">DOI</a></span> · <span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/2004.05511">arXiv</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/conf/cav/TranBXJ20">pldb</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="moutonStrideTranslationInvariance2020" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title"><span class="helia-title">Stride and Translation Invariance in CNNs</span>&nbsp;<a class="helia-slug" href="moutonStrideTranslationInvariance2020.html">moutonStrideTranslationInvariance2020</a><span class="helia-byline">Artificial Intelligence Research · 2020</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="moutonStrideTranslationInvariance2020" data-kind="reference">
+<div class="helia-abstract">Convolutional Neural Networks have become the standard for image classification tasks, however, these architectures are not invariant to translations of the input image. This lack of invariance is attributed to the use of stride which ignores the sampling theorem, and fully connected layers which lack spatial reasoning. We show that stride can greatly benefit translation invariance given that it is combined with sufficient similarity between neighbouring pixels, a characteristic which we refer to as local homogeneity. We also observe that this characteristic is dataset-specific and dictates the relationship between pooling kernel size and stride required for translation invariance. Furthermore we find that a trade-off exists between generalization and translation invariance in the case of pooling kernel size, as larger kernel sizes lead to better invariance but poorer generalization. Finally we explore the efficacy of other solutions proposed, namely global average pooling, anti-aliasing, and data augmentation, both empirically and through the lens of local homogeneity.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-030-66151-9_17">DOI</a></span> · <span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/2103.10097">arXiv</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="azulayWhyDeepConvolutional" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title"><span class="helia-title">Why do deep convolutional networks generalize so poorly to small image transformations?</span>&nbsp;<a class="helia-slug" href="azulayWhyDeepConvolutional.html">azulayWhyDeepConvolutional</a><span class="helia-byline">2019</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="azulayWhyDeepConvolutional" data-kind="reference">
+<div class="helia-abstract">Convolutional Neural Networks (CNNs) are commonly assumed to be invariant to small image transformations: either because of the convolutional architecture or because they were trained using data augmentation. Recently, several authors have shown that this is not the case: small translations or rescalings of the input image can drastically change the network’s prediction. In this paper, we quantify this phenomena and ask why neither the convolutional architecture nor data augmentation are sufficient to achieve the desired invariance. Specifically, we show that the convolutional architecture does not give invariance since architectures ignore the classical sampling theorem, and data augmentation does not give invariance because the CNNs learn to be invariant to transformations only for images that are very similar to typical images from the training set. We discuss two possible solutions to this problem: (1) antialiasing the intermediate representations and (2) increasing data augmentation and show that they provide only a partial solution at best. Taken together, our results indicate that the problem of insuring invariance to small image transformations in neural networks while preserving high accuracy remains unsolved.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.48550/arxiv.1805.12177">DOI</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="kouvarosFormalVerificationCNNbased2018" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title"><span class="helia-title">Formal Verification of CNN-based Perception Systems</span>&nbsp;<a class="helia-slug" href="kouvarosFormalVerificationCNNbased2018.html">kouvarosFormalVerificationCNNbased2018</a><span class="helia-byline"><span class="helia-entry-link" data-entry="arxiv">arXiv</span> · 2018</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="kouvarosFormalVerificationCNNbased2018" data-kind="reference">
+<div class="helia-abstract">We address the problem of verifying neural-based perception systems implemented by convolutional neural networks. We define a notion of local robustness based on affine and photometric transformations. We show the notion cannot be captured by previously employed notions of robustness. The method proposed is based on reachability analysis for feed-forward neural networks and relies on MILP encodings of both the CNNs and transformations under question. We present an implementation and discuss the experimental results obtained for a CNN trained from the MNIST data set.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.48550/arxiv.1811.11373">DOI</a></span> · <span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/1811.11373">arXiv</a></span></div>
+</div>
+</div>
+</details>
+</section>
+</div>
+</details>
+</section>
+</div>
+</article>
+<div class="helia-identity"><span class="helia-id">tag-machine-learning-verification</span> <span class="helia-kind">tag</span></div>
+</div>
+</body>
+</html>

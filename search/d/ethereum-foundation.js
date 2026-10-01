@@ -1,0 +1,1 @@
+heliaSearchData("d/ethereum-foundation",{"id":"ethereum-foundation","title":"Ethereum Foundation","kind":"institution","tags":[],"authors":[],"venue":[],"date":null,"url":"ethereum-foundation.html","headings":[],"body":""});

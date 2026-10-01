@@ -1,0 +1,1 @@
+heliaSearchData("d/abdelrahmanmadkour",{"id":"abdelrahmanmadkour","title":"Abdelrahman Madkour","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"abdelrahmanmadkour.html","headings":[],"body":""});

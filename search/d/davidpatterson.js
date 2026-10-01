@@ -1,0 +1,1 @@
+heliaSearchData("d/davidpatterson",{"id":"davidpatterson","title":"David Patterson","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"davidpatterson.html","headings":[],"body":""});

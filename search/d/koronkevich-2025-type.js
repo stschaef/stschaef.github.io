@@ -1,0 +1,1 @@
+heliaSearchData("d/koronkevich-2025-type",{"id":"koronkevich-2025-type","title":"Type Universes as Kripke Worlds","kind":"reference","tags":["logical-relations","universes"],"authors":["Paulette Koronkevich","William J. Bowman"],"venue":["ICFP","International Conference on Functional Programming"],"date":null,"url":"koronkevich-2025-type.html","headings":[],"body":""});

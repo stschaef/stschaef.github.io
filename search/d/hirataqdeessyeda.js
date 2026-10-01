@@ -1,0 +1,1 @@
+heliaSearchData("d/hirataqdeessyeda",{"id":"hirataqdeessyeda","title":"Hira Taqdees Syeda","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"hirataqdeessyeda.html","headings":[],"body":""});

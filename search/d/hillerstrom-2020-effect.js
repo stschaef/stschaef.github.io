@@ -1,0 +1,1 @@
+heliaSearchData("d/hillerstrom-2020-effect",{"id":"hillerstrom-2020-effect","title":"Effect handlers via generalised continuations","kind":"reference","tags":["effects"],"authors":["Daniel Hillerström","Robert Atkey","Sam Lindley"],"venue":["JFP","Journal of Functional Programming"],"date":null,"url":"hillerstrom-2020-effect.html","headings":[],"body":""});

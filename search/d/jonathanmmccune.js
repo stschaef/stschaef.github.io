@@ -1,0 +1,1 @@
+heliaSearchData("d/jonathanmmccune",{"id":"jonathanmmccune","title":"Jonathan M. McCune","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"jonathanmmccune.html","headings":[],"body":""});

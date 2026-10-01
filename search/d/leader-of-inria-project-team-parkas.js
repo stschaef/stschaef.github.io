@@ -1,0 +1,1 @@
+heliaSearchData("d/leader-of-inria-project-team-parkas",{"id":"leader-of-inria-project-team-parkas","title":"leader of INRIA project-team PARKAS","kind":"institution","tags":[],"authors":[],"venue":[],"date":null,"url":"leader-of-inria-project-team-parkas.html","headings":[],"body":""});

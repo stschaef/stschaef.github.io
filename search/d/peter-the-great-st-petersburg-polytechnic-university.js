@@ -1,0 +1,1 @@
+heliaSearchData("d/peter-the-great-st-petersburg-polytechnic-university",{"id":"peter-the-great-st-petersburg-polytechnic-university","title":"Peter the Great St. Petersburg Polytechnic University","kind":"institution","tags":[],"authors":[],"venue":[],"date":null,"url":"peter-the-great-st-petersburg-polytechnic-university.html","headings":[],"body":""});

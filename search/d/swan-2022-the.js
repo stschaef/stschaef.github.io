@@ -1,0 +1,1 @@
+heliaSearchData("d/swan-2022-the",{"id":"swan-2022-the","title":"The Road to General Intelligence","kind":"reference","tags":["machine-learning"],"authors":["Bas Steunebrink","Eric Nivel","Jerry Swan","Jules Hedges","Neel Kant","Timothy Atkinson"],"venue":[],"date":null,"url":"swan-2022-the.html","headings":[],"body":""});

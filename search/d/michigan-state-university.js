@@ -1,0 +1,1 @@
+heliaSearchData("d/michigan-state-university",{"id":"michigan-state-university","title":"Michigan State University","kind":"institution","tags":[],"authors":[],"venue":[],"date":null,"url":"michigan-state-university.html","headings":[],"body":""});

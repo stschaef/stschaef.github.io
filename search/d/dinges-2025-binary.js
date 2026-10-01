@@ -1,0 +1,1 @@
+heliaSearchData("d/dinges-2025-binary",{"id":"dinges-2025-binary","title":"Binary search—think positive","kind":"reference","tags":["program-calculation"],"authors":["Alexander Dinges","Ralf Hinze"],"venue":["JFP","Journal of Functional Programming"],"date":null,"url":"dinges-2025-binary.html","headings":[],"body":""});

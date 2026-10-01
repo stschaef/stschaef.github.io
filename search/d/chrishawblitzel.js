@@ -1,0 +1,1 @@
+heliaSearchData("d/chrishawblitzel",{"id":"chrishawblitzel","title":"Chris Hawblitzel","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"chrishawblitzel.html","headings":[],"body":""});

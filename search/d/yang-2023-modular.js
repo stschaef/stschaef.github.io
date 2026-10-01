@@ -1,0 +1,1 @@
+heliaSearchData("d/yang-2023-modular",{"id":"yang-2023-modular","title":"Modular Models of Monoids with Operations","kind":"reference","tags":["effects"],"authors":["Nicolas Wu","Zhixuan Yang"],"venue":["ICFP","International Conference on Functional Programming"],"date":null,"url":"yang-2023-modular.html","headings":[],"body":""});

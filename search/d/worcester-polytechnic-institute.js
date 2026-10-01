@@ -1,0 +1,1 @@
+heliaSearchData("d/worcester-polytechnic-institute",{"id":"worcester-polytechnic-institute","title":"Worcester Polytechnic Institute","kind":"institution","tags":[],"authors":[],"venue":[],"date":null,"url":"worcester-polytechnic-institute.html","headings":[],"body":""});

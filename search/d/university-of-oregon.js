@@ -1,0 +1,1 @@
+heliaSearchData("d/university-of-oregon",{"id":"university-of-oregon","title":"University of Oregon","kind":"institution","tags":[],"authors":[],"venue":[],"date":null,"url":"university-of-oregon.html","headings":[],"body":""});

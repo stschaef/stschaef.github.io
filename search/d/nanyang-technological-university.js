@@ -1,0 +1,1 @@
+heliaSearchData("d/nanyang-technological-university",{"id":"nanyang-technological-university","title":"Nanyang Technological University","kind":"institution","tags":[],"authors":[],"venue":[],"date":null,"url":"nanyang-technological-university.html","headings":[],"body":""});

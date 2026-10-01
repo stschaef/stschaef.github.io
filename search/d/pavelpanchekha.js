@@ -1,0 +1,1 @@
+heliaSearchData("d/pavelpanchekha",{"id":"pavelpanchekha","title":"Pavel Panchekha","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"pavelpanchekha.html","headings":[],"body":""});

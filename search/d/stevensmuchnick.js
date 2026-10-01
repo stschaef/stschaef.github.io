@@ -1,0 +1,1 @@
+heliaSearchData("d/stevensmuchnick",{"id":"stevensmuchnick","title":"Steven S. Muchnick","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"stevensmuchnick.html","headings":[],"body":""});

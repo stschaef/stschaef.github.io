@@ -1,0 +1,1 @@
+heliaSearchData("d/sokendai",{"id":"sokendai","title":"SOKENDAI (The Graduate University for Advanced Studies)","kind":"institution","tags":[],"authors":[],"venue":[],"date":null,"url":"sokendai.html","headings":[],"body":""});

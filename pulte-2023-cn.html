@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>CN: Verifying Systems C Code with Separation-Logic Refinement Types</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Ctext y=%22.9em%22 font-size=%2290%22%3E%F0%9F%8C%BB%3C/text%3E%3C/svg%3E">
+<meta name="generator" content="helia">
+<link rel="alternate" type="application/atom+xml" title="Steven Schaefer" href="feed.xml">
+<link rel="alternate" type="application/feed+json" title="Steven Schaefer" href="feed.json">
+<script src="helia/theme-version.js"></script>
+<script src="theme/folio-early.js"></script>
+<link rel="stylesheet" href="helia/theme.css">
+<link rel="stylesheet" href="helia/highlight.css">
+<link rel="stylesheet" href="helia/search.css">
+<link rel="stylesheet" href="theme/katex.css">
+<link rel="stylesheet" href="theme/recipe.css">
+<link rel="stylesheet" href="theme/site.css">
+<link rel="stylesheet" href="theme/folio.css">
+<script defer src="helia/runtime.js"></script>
+<script defer src="helia/search.js"></script>
+<script defer src="theme/glyphcraft.js"></script>
+<script defer src="theme/glyphart.js"></script>
+<script defer src="theme/glyphgen.js"></script>
+<script defer src="theme/ornament.js"></script>
+<script defer src="theme/folio.js"></script>
+<script defer src="theme/portrait.js"></script>
+<script type="application/json" id="helia-widgets">{"helia-cite-formats":"widgets/helia-cite-formats-a3294ac7.js"}</script>
+<link rel="modulepreload" href="widgets/helia-cite-formats-a3294ac7.js">
+<script type="module" src="widgets/runtime.js"></script>
+</head>
+<body>
+<nav class="helia-topbar"><a class="helia-home" href="home.html">Steven Schaefer</a><ul class="helia-nav-links"><li><a href="stevenschaefer.html">About Me</a></li><li><a href="research.html">Research</a></li><li><a href="new.html">New</a></li></ul><button type="button" class="helia-search-button" aria-label="Search (/ or Ctrl+K)" aria-haspopup="dialog"><span class="helia-search-icon">⌕</span><span class="helia-search-label">Search</span><kbd class="helia-search-key">/</kbd></button></nav>
+<div class="helia-page" data-kind="reference">
+<article class="helia-article">
+<header class="helia-header" data-entry="pulte-2023-cn" data-kind="reference">
+<h2 class="helia-heading"><span class="helia-taxon">Reference.</span> CN: Verifying Systems C Code with Separation-Logic Refinement Types</h2>
+<div class="helia-meta"><span class="helia-author"><a class="helia-entry-link" href="christopherpulte.html" data-entry="christopherpulte">Christopher Pulte</a>, <a class="helia-entry-link" href="dhruvmakwana.html" data-entry="dhruvmakwana">Dhruv Makwana</a>, <a class="helia-entry-link" href="thomassewell.html" data-entry="thomassewell">Thomas Sewell</a>, <a class="helia-entry-link" href="kayvanmemarian.html" data-entry="kayvanmemarian">Kayvan Memarian</a>, <a class="helia-entry-link" href="petersewell.html" data-entry="petersewell">Peter Sewell</a>, <a class="helia-entry-link" href="neelkrishnaswami.html" data-entry="neelkrishnaswami">Neel Krishnaswami</a></span> · <span class="helia-byline"><a class="helia-entry-link" href="popl.html" data-entry="popl">POPL</a> · 2023</span> · <span class="helia-tags"><span class="helia-tag" data-tag="separation-logic"><a class="helia-entry-link" href="tag-separation-logic.html" data-entry="tag-separation-logic">separation-logic</a></span> <span class="helia-tag" data-tag="refinement-types"><a class="helia-entry-link" href="tag-refinement-types.html" data-entry="tag-refinement-types">refinement-types</a></span></span> · <span class="helia-entry-links"><span class="helia-entry-link" data-field="pdf-url"><a class="helia-link helia-external" href="https://dl.acm.org/doi/pdf/10.1145/3571194">PDF</a></span> · <span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/3571194">DOI</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/journals/pacmpl/PulteMSMSK23">pldb</a></span></span></div>
+</header>
+<div class="helia-body">
+<div class="helia-abstract">Despite significant progress in the verification of hypervisors, operating systems, and compilers, and in verification tooling, there exists a wide gap between the approaches used in verification projects and conventional development of systems software. We see two main challenges in bringing these closer together: verification handling the complexity of code and semantics of conventional systems software, and verification usability. We describe an experiment in verification tool design aimed at addressing some aspects of both: we design and implement CN, a separation-logic refinement type system for C systems software, aimed at predictable proof automation, based on a realistic semantics of ISO C. CN reduces refinement typing to decidable propositional logic reasoning, uses first-class resources to support pointer aliasing and pointer arithmetic, features resource inference for iterated separating conjunction, and uses a novel syntactic restriction of ghost variables in specifications to guarantee their successful inference. We implement CN and formalise key aspects of the type system, including a soundness proof of type checking. To demonstrate the usability of CN we use it to verify a substantial component of Google’s pKVM hypervisor for Android.</div>
+</div>
+<div class="helia-cite helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><h3 class="helia-heading">Cite</h3>
+</summary>
+<div class="helia-group-body">
+<div class="helia-widget" data-widget="helia-cite-formats" data-props="{&quot;key&quot;:&quot;pulte-2023-cn&quot;,&quot;bibtex&quot;:&quot;@article{pulte-2023-cn, title={CN: Verifying Systems C Code with Separation-Logic Refinement Types}, volume={7}, ISSN={2475-1421}, url={http://dx.doi.org/10.1145/3571194}, DOI={10.1145/3571194}, number={POPL}, journal={Proceedings of the ACM on Programming Languages}, publisher={Association for Computing Machinery (ACM)}, author={Pulte, Christopher and Makwana, Dhruv C. and Sewell, Thomas and Memarian, Kayvan and Sewell, Peter and Krishnaswami, Neel}, year={2023}, month=Jan, pages={1–32} }&quot;,&quot;bib-file&quot;:&quot;pulte-2023-cn.bib&quot;,&quot;hayagriva&quot;:&quot;pulte-2023-cn:\n  type: article\n  title: &#39;CN: Verifying Systems C Code with Separation-Logic Refinement Types&#39;\n  author:\n  - Pulte, Christopher\n  - Makwana, Dhruv C.\n  - Sewell, Thomas\n  - Memarian, Kayvan\n  - Sewell, Peter\n  - Krishnaswami, Neel\n  date: 2023-01\n  page-range: 1-32\n  url: http://dx.doi.org/10.1145/3571194\n  serial-number:\n    doi: 10.1145/3571194\n    issn: 2475-1421\n  parent:\n    type: periodical\n    title: Proceedings of the ACM on Programming Languages\n    publisher: Association for Computing Machinery (ACM)\n    issue: POPL\n    volume: 7\n&quot;,&quot;yml-file&quot;:&quot;pulte-2023-cn.yml&quot;}"><div class="helia-cite-key" data-copy="@pulte-2023-cn" data-copy-label="citation key"><span class="helia-bib-key">Cite as</span> <code class="helia-raw-inline">@pulte-2023-cn</code> (helia, typst) · <code class="helia-raw-inline">\cite{pulte-2023-cn}</code> (LaTeX)</div>
+<div class="helia-cite-format helia-collapsible" data-format="bibtex" data-copy="true" data-copy-label="BibTeX">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">BibTeX</span></summary>
+<div class="helia-group-body">
+<details class="helia-code" open><summary class="helia-code-summary"><span class="helia-code-lang">bibtex</span> · <span class="helia-code-lines">1 line</span></summary><pre class="helia-raw"><code class="language-bibtex"><span class="hl-text hl-bibtex"><span class="hl-meta hl-entry hl-braces hl-bibtex"><span class="hl-keyword hl-other hl-entry-type hl-bibtex"><span class="hl-punctuation hl-definition hl-keyword hl-bibtex">@</span>article</span><span class="hl-punctuation hl-section hl-entry hl-begin hl-bibtex">{</span><span class="hl-entity hl-name hl-type hl-entry-key hl-bibtex">pulte-2023-cn</span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">title</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>CN: Verifying Systems C Code with Separation-Logic Refinement Types<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">volume</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>7<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">ISSN</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>2475-1421<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">url</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>http://dx.doi.org/10.1145/3571194<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">DOI</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>10.1145/3571194<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">number</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>POPL<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">journal</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>Proceedings of the ACM on Programming Languages<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">publisher</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>Association for Computing Machinery (ACM)<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">author</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>Pulte, Christopher and Makwana, Dhruv C. and Sewell, Thomas and Memarian, Kayvan and Sewell, Peter and Krishnaswami, Neel<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">year</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>2023<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">month</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span>Jan</span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">pages</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>1–32<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span> </span><span class="hl-punctuation hl-section hl-entry hl-end hl-bibtex">}</span></span></span></code></pre></details>
+</div>
+</details>
+</div>
+<div class="helia-cite-format helia-collapsible" data-format="hayagriva" data-copy="true" data-copy-label="hayagriva YAML">
+<details>
+<summary class="helia-group-summary"><span class="helia-group-title">hayagriva YAML (typst)</span></summary>
+<div class="helia-group-body">
+<details class="helia-code" open><summary class="helia-code-summary"><span class="helia-code-lang">yaml</span> · <span class="helia-code-lines">22 lines</span></summary><pre class="helia-raw"><code class="language-yaml"><span class="hl-source hl-yaml"><span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">pulte-2023-cn</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">type</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">article</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">title</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-quoted hl-single hl-yaml"><span class="hl-punctuation hl-definition hl-string hl-begin hl-yaml">&#39;</span>CN: Verifying Systems C Code with Separation-Logic Refinement Types<span class="hl-punctuation hl-definition hl-string hl-end hl-yaml">&#39;</span></span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">author</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Pulte, Christopher</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Makwana, Dhruv C.</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Sewell, Thomas</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Memarian, Kayvan</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Sewell, Peter</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Krishnaswami, Neel</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">date</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">2023-01</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">page-range</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">1-32</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">url</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">http://dx.doi.org/10.1145/3571194</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">serial-number</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">doi</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">10.1145/3571194</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">issn</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">2475-1421</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">parent</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">type</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">periodical</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">title</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Proceedings of the ACM on Programming Languages</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">publisher</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Association for Computing Machinery (ACM)</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">issue</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">POPL</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">volume</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-constant hl-numeric hl-integer hl-decimal hl-yaml">7</span>
+</span></code></pre></details>
+</div>
+</details>
+</div>
+<div class="helia-cite-files">Download: <a class="helia-link" href="pulte-2023-cn.bib">pulte-2023-cn.bib</a> · <a class="helia-link" href="pulte-2023-cn.yml">pulte-2023-cn.yml</a></div>
+</div>
+</div>
+</details>
+</div>
+<div class="helia-reference-cited-by helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">Cited by (2)</span></summary>
+<div class="helia-group-body">
+<section class="helia-transclusion" data-entry="aamer-2026-code" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="aamer-2026-code"><span class="helia-title">Code-Specify-Test-Debug-Prove: Flexibly Integrating Separation Logic Specification into Conventional Workflows</span>&nbsp;<a class="helia-slug" href="aamer-2026-code.html">aamer-2026-code</a><span class="helia-byline"><span class="helia-entry-link" data-entry="pldi">PLDI</span> · 2026</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="aamer-2026-code" data-kind="reference">
+<div class="helia-abstract">We seek to enable more flexible use of rich specifications in a variety of ways that smoothly extend conventional software development practice. We show how a single specification language, based on separation logic to capture the subtle ownership disciplines of systems code, can be used for runtime assertion checking, for property-based testing, and for formal machine-checked proof—and how each of these complements and supports the others. We demonstrate all this on a challenging example: a component of a production hypervisor, running both stand-alone at user level and in situ in the hypervisor.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="pdf-url"><a class="helia-link helia-external" href="https://dl.acm.org/doi/pdf/10.1145/3808278">PDF</a></span> · <span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/3808278">DOI</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/journals/pacmpl/AamerBKKEMMKPPS26">pldb</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="banerjee-2025-fulminate" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="banerjee-2025-fulminate"><span class="helia-title">Fulminate: Testing CN Separation-Logic Specifications in C</span>&nbsp;<a class="helia-slug" href="banerjee-2025-fulminate.html">banerjee-2025-fulminate</a><span class="helia-byline"><span class="helia-entry-link" data-entry="popl">POPL</span> · 2025</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="banerjee-2025-fulminate" data-kind="reference">
+<div class="helia-abstract">Separation logic has become an important tool for formally capturing and reasoning about the ownership patterns of imperative programs, originally for paper proof, and now the foundation for industrial static analyses and multiple proof tools. However, there has been very little work on program testing of separationlogic specifications in concrete execution. At first sight, separation-logic formulas are hard to evaluate in reasonable time, with their implicit quantification over heap splittings, and other explicit existentials. In this paper we observe that a restricted fragment of separation logic, adopted in the CN proof tool to enable predictable proof automation, also has a natural and readable computational interpretation, that makes it practically usable in runtime testing. We discuss various design issues and develop this as a C + CN source to C source translation, Fulminate. This adds checks – including ownership checks and ownership transfer – for C code annotated with CN pre- and post-conditions; we demonstrate this on nontrivial examples, including the allocator from a production hypervisor. We formalise our runtime ownership testing scheme, showing (and proving) how its reified ghost state correctly captures ownership passing, in a semantics for a small C-like language.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="pdf-url"><a class="helia-link helia-external" href="https://www.repository.cam.ac.uk/bitstreams/a210b3f3-a209-4f54-a69d-ef24d9344806/download">PDF</a></span> · <span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/3704879">DOI</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/journals/pacmpl/BanerjeeMMPKS25">pldb</a></span></div>
+</div>
+</div>
+</details>
+</section>
+</div>
+</details>
+</div>
+<div class="helia-reference-cites helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">Cites 58 works (5 here)</span></summary>
+<div class="helia-group-body">
+<div class="helia-reference-cites-here helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">With notes (5)</span></summary>
+<div class="helia-group-body">
+<section class="helia-transclusion" data-entry="jung_etal_iris_ground_up_2018" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="jung_etal_iris_ground_up_2018"><span class="helia-title">Iris from the ground up: A modular foundation for higher-order concurrent separation logic</span>&nbsp;<a class="helia-slug" href="jung_etal_iris_ground_up_2018.html">jung_etal_iris_ground_up_2018</a><span class="helia-byline"><span class="helia-entry-link" data-entry="jfp">JFP</span> · 2018</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="jung_etal_iris_ground_up_2018" data-kind="reference">
+<div class="helia-abstract">Iris is a framework for higher-order concurrent separation logic, which has been implemented in the Coq proof assistant and deployed very effectively in a wide variety of verification projects. Iris was designed with the express goal of simplifying and consolidating the foundations of modern separation logics, but it has evolved over time, and the design and semantic foundations of Iris itself have yet to be fully written down and explained together properly in one place. Here, we attempt to fill this gap, presenting a reasonably complete picture of the latest version of Iris (version 3.1), from first principles and in one coherent narrative.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="pdf-url"><a class="helia-link helia-external" href="https://www.cambridge.org/core/services/aop-cambridge-core/content/view/26301B518CE2C52796BFA12B8BAB5B5F/S0956796818000151a.pdf/div-class-title-iris-from-the-ground-up-a-modular-foundation-for-higher-order-concurrent-separation-logic-div.pdf">PDF</a></span> · <span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1017/s0956796818000151">DOI</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/journals/jfp/JungKJBBD18">pldb</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="mellies_zeilberger_2015" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="mellies_zeilberger_2015"><span class="helia-title">Functors are type refinement systems</span>&nbsp;<a class="helia-slug" href="mellies_zeilberger_2015.html">mellies_zeilberger_2015</a><span class="helia-byline"><span class="helia-entry-link" data-entry="popl">POPL</span> · 2015</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="mellies_zeilberger_2015" data-kind="reference">
+<div class="helia-abstract">
+<p>The standard reading of type theory through the lens of category theory is based on the idea of viewing a type system as a category of well-typed terms. We propose a basic revision of this reading: rather than interpreting type systems as categories, we describe them as functors from a category of typing derivations to a category of underlying terms. Then, turning this around, we explain how in fact any functor gives rise to a generalized type system, with an abstract notion of typing judgment, typing derivations and typing rules. This leads to a purely categorical reformulation of various natural classes of type systems as natural classes of functors.</p>
+<p>The main purpose of this paper is to describe the general framework (which can also be seen as providing a categorical analysis of refinement types), and to present a few applications. As a larger case study, we revisit Reynolds’ paper on “The Meaning of Types” (2000), showing how the paper’s main results may be reconstructed along these lines.</p>
+</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="pdf-url"><a class="helia-link helia-external" href="https://inria.hal.science/hal-01096910/document">PDF</a></span> · <span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/2676726.2676970">DOI</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/conf/popl/MelliesZ15">pldb</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="kumar_cakeml_2014" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="kumar_cakeml_2014"><span class="helia-title">CakeML: A verified implementation of ML</span>&nbsp;<a class="helia-slug" href="kumar_cakeml_2014.html">kumar_cakeml_2014</a><span class="helia-byline"><span class="helia-entry-link" data-entry="popl">POPL</span> · 2014</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="kumar_cakeml_2014" data-kind="reference">
+<div class="helia-abstract">We have developed and mechanically verified an ML system called CakeML, which supports a substantial subset of Standard ML. CakeML is implemented as an interactive read-eval-print loop (REPL) in x86-64 machine code. Our correctness theorem ensures that this REPL implementation prints only those results permitted by the semantics of CakeML. Our verification effort touches on a breadth of topics including lexing, parsing, type checking, incremental and dynamic compilation, garbage collection, arbitraryprecision arithmetic, and compiler bootstrapping.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="pdf-url"><a class="helia-link helia-external" href="https://dl.acm.org/doi/pdf/10.1145/2535838.2535841">PDF</a></span> · <span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/2535838.2535841">DOI</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/conf/popl/KumarMNO14">pldb</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="reynolds_separation_2002" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="reynolds_separation_2002"><span class="helia-title">Separation logic: A logic for shared mutable data structures</span>&nbsp;<a class="helia-slug" href="reynolds_separation_2002.html">reynolds_separation_2002</a><span class="helia-byline"><span class="helia-entry-link" data-entry="lics">LICS</span> · 2002</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="reynolds_separation_2002" data-kind="reference">
+<div class="helia-abstract">In joint work with Peter O’Hearn and others, based on early ideas of Burstall, we have developed an extension of Hoare logic that permits reasoning about low-level imperative programs that use shared mutable data structure. The simple imperative programming language is extended with commands (not expressions) for accessing and modifying shared structures, and for explicit allocation and deallocation of storage. Assertions are extended by introducing a “separating conjunction” that asserts that its subformulas hold for disjoint parts of the heap, and a closely related “separating implication”. Coupled with the inductive definition of predicates on abstract data structures, this extension permits the concise and flexible description of structures with controlled sharing. In this paper, we survey the current development of this program logic, including extensions that permit unrestricted address arithmetic, dynamically allocated arrays, and recursive procedures. We also discuss promising future directions.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1109/lics.2002.1029817">DOI</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="girard_linear_1987" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="girard_linear_1987"><span class="helia-title">Linear logic</span>&nbsp;<a class="helia-slug" href="girard_linear_1987.html">girard_linear_1987</a><span class="helia-byline"><span class="helia-entry-link" data-entry="tcs">TCS</span> · 1987</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="girard_linear_1987" data-kind="reference">
+<div class="helia-abstract">The familiar connective of negation is broken into two operations: linear negation which is the purely negative part of negation and the modality “of course” which has the meaning of a reaffirmation. Following this basic discovery, a completely new approach to the whole area between constructive logics and programmation is initiated.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1016/0304-3975(87)90045-4">DOI</a></span></div>
+</div>
+</div>
+</details>
+</section>
+</div>
+</details>
+</div>
+<div class="helia-reference-cites-away helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">External (53)</span></summary>
+<div class="helia-group-body">
+<ul>
+<li>Android 13 Release Notes (2022)</li>
+<li>RefinedC formalisation of the early allocator (2022)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1109/msec.2022.3158196">Developing With Formal Methods at BedRock Systems, Inc</a> (2022)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3519939.3523434">Islaris: verification of machine code against authoritative ISA semantics</a> (2022)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3498681">VIP: verifying real-world C idioms with integer-pointer casts</a> (2022)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-031-06773-0_5">The Prusti Project: Formal Verification for Rust</a> (2022)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.5281/zenodo.7320414">Data for "CN: Verifying Systems C Code with Separation-Logic Refinement Types"</a> (2022)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3470569">The dogged pursuit of bug-free C programs: the Frama-C software analysis platform</a> (2021)</li>
+<li><a class="helia-link helia-external" href="https://arxiv.org/abs/2105.14769">Gillian: A Multi-Language Platform for Unified Symbolic Analysis</a> (2021)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1017/s095679682100023x">Cogent: uniqueness types and certifying compilation</a> (2021)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3453483.3454036">RefinedC: automating the foundational verification of C code with refined ownership types</a> (2021)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1109/sp40001.2021.00049">A Secure and Formally Verified Linux KVM Hypervisor</a> (2021)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3477132.3483560">Formal Verification of a Multiprocessor Hypervisor on Arm Relaxed Memory Hardware</a> (2021)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3378426">seL4 in Australia: from research to real-world trustworthy systems</a> (2020)</li>
+<li>Virtualisation for the Masses: Exposing KVM on Android (KVM Forum slides) (2020)</li>
+<li>KVM for Android (2020)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3290380">Exploring C semantics and pointer provenance</a> (2019)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-030-17184-1_3">Semi-automated Reasoning About Non-determinism in C Expressions</a> (2019)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/s10817-018-9457-5">VST-Floyd: A Separation Logic Tool to Verify Correctness of C Programs</a> (2018)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.3233/978-1-61499-810-5-104">Viper: A Verification Infrastructure for Permission-Based Reasoning</a> (2017)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/2914770.2837621">Model checking for symbolic-heap separation logic with inductive predicates</a> (2016)</li>
+<li>CertiKOS: An Extensible Architecture for Building Certified Concurrent OS Kernels (2016)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.3233/jcs-160558">Provably secure memory isolation for Linux on ARM: Submission to special issue on Verified Information Flow Security</a> (2016)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/s10817-016-9369-1">A Formal C Memory Model for Separation Logic</a> (2016)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/2837614.2837655">Dependent types and multi-monadic effects in F*</a> (2016)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/2908080.2908081">Into the depths of C: elaborating the de facto standards</a> (2016)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/2951913.2951924">A new verified compiler backend for CakeML</a> (2016)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-319-41528-4_22">Automatic Verification of Iterated Separating Conjunctions Using Symbolic Execution</a> (2016)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3018610.3018621">Verified compilation of CakeML to multiple machine-code targets</a> (2016)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1109/eucnc.2016.7561034">A high assurance virtualization platform for ARMv8</a> (2016)</li>
+<li>The C Standard Formalized in Coq (PhD thesis, Radboud University Nijmegen) (2015)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1017/cbo9781107256552">Program Logics for Certified Compilers</a> (2014)</li>
+<li>Ironclad Apps: End-to-End Security via Automated Full-System Verification (2014)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/2560537">Comprehensive formal verification of an OS microkernel</a> (2014)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/2663171.2663188">The rust language</a> (2014)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-319-12466-7_1">Certified Complexity (CerCo)</a> (2014)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-642-20398-5_33">Infer: An Automatic Program Verifier for Memory Safety of C Programs</a> (2011)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-642-20398-5_4">VeriFast: A Powerful, Sound, Predictable, Fast Verifier for C and Java</a> (2011)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/1743546.1743574">seL4: formal verification of an operating-system kernel</a> (2010)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-642-05089-3_51">Verifying the Microsoft Hyper-V Hypervisor with VCC</a> (2009)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/s10817-009-9155-4">A Formally Verified Compiler Back-end</a> (2009)</li>
+<li>An Introduction to Separation Logic (Preliminary Draft) (2008)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/1379022.1375602">Liquid types</a> (2008)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-540-78800-3_24">Z3: An Efficient SMT Solver</a> (2008)</li>
+<li>L3: A Linear Language with Locations (2007)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/1111320.1111042">Formal certification of a compiler back-end or: programming a compiler with a proof assistant</a> (2006)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1017/s0956796806006216">Dependent ML An approach to practical programming with dependent types</a> (2006)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/11804192_17">Boogie: A Modular Reusable Verifier for Object-Oriented Programs</a> (2005)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/11559306_19">ATS: A Language That Combines Programming with Theorem Proving</a> (2005)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/11609773_28">What’s Decidable About Arrays?</a> (2005)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/11804192_6">Smallfoot: Modular Automatic Assertion Checking with Separation Logic</a> (2005)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/3-540-45937-5_16">CIL: Intermediate Language and Tools for Analysis and Transformation of C Programs</a> (2002)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/512760.512766">Syntactic Control of Interference</a> (1978)</li>
+</ul>
+</div>
+</details>
+</div>
+</div>
+</details>
+</div>
+</article>
+<div class="helia-identity"><span class="helia-id">pulte-2023-cn</span> <span class="helia-kind">reference</span> <span class="helia-path">entries/refs/pulte-2023-cn/pulte-2023-cn.hel</span></div>
+</div>
+</body>
+</html>

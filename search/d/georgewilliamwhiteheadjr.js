@@ -1,0 +1,1 @@
+heliaSearchData("d/georgewilliamwhiteheadjr",{"id":"georgewilliamwhiteheadjr","title":"George William Whitehead, Jr.","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"georgewilliamwhiteheadjr.html","headings":[],"body":""});

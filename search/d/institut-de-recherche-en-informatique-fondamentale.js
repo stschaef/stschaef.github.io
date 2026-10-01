@@ -1,0 +1,1 @@
+heliaSearchData("d/institut-de-recherche-en-informatique-fondamentale",{"id":"institut-de-recherche-en-informatique-fondamentale","title":"Institut de Recherche en Informatique Fondamentale","kind":"institution","tags":[],"authors":[],"venue":[],"date":null,"url":"institut-de-recherche-en-informatique-fondamentale.html","headings":[],"body":""});

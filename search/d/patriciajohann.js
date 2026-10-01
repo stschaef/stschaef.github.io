@@ -1,0 +1,1 @@
+heliaSearchData("d/patriciajohann",{"id":"patriciajohann","title":"Patricia Johann","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"patriciajohann.html","headings":[],"body":""});

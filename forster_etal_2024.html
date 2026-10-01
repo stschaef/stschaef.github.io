@@ -7,6 +7,8 @@
 <title>Verified Extraction from Coq to OCaml</title>
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Ctext y=%22.9em%22 font-size=%2290%22%3E%F0%9F%8C%BB%3C/text%3E%3C/svg%3E">
 <meta name="generator" content="helia">
+<link rel="alternate" type="application/atom+xml" title="Steven Schaefer" href="feed.xml">
+<link rel="alternate" type="application/feed+json" title="Steven Schaefer" href="feed.json">
 <script src="helia/theme-version.js"></script>
 <script src="theme/folio-early.js"></script>
 <link rel="stylesheet" href="helia/theme.css">
@@ -34,7 +36,7 @@
 <article class="helia-article">
 <header class="helia-header" data-entry="forster_etal_2024" data-kind="reference">
 <h2 class="helia-heading"><span class="helia-taxon">Reference.</span> Verified Extraction from Coq to OCaml</h2>
-<div class="helia-meta"><span class="helia-author"><a class="helia-entry-link" href="yannickforster.html" data-entry="yannickforster">Yannick Forster</a>, <a class="helia-entry-link" href="matthieusozeau.html" data-entry="matthieusozeau">Matthieu Sozeau</a>, <a class="helia-entry-link" href="nicolastabareau.html" data-entry="nicolastabareau">Nicolas Tabareau</a></span> · <span class="helia-byline"><a class="helia-entry-link" href="pldi.html" data-entry="pldi">PLDI</a> · 2024</span> · <span class="helia-tags"><span class="helia-tag" data-tag="compilation"><span class="helia-entry-link helia-unavailable">compilation</span></span></span> · <span class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/3656379">DOI</a></span></span></div>
+<div class="helia-meta"><span class="helia-author"><a class="helia-entry-link" href="yannickforster.html" data-entry="yannickforster">Yannick Forster</a>, <a class="helia-entry-link" href="matthieusozeau.html" data-entry="matthieusozeau">Matthieu Sozeau</a>, <a class="helia-entry-link" href="nicolastabareau.html" data-entry="nicolastabareau">Nicolas Tabareau</a></span> · <span class="helia-byline"><a class="helia-entry-link" href="pldi.html" data-entry="pldi">PLDI</a> · 2024</span> · <span class="helia-tags"><span class="helia-tag" data-tag="compilation"><a class="helia-entry-link" href="tag-compilation.html" data-entry="tag-compilation">compilation</a></span></span> · <span class="helia-entry-links"><span class="helia-entry-link" data-field="pdf-url"><a class="helia-link helia-external" href="https://inria.hal.science/hal-04329663v1/document">PDF</a></span> · <span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/3656379">DOI</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/journals/pacmpl/ForsterST24">pldb</a></span></span></div>
 </header>
 <div class="helia-body">
 <div class="helia-abstract">One of the central claims of fame of the Coq proof assistant is extraction, i.e., the ability to obtain efficient programs in industrial programming languages such as OCaml, Haskell, or Scheme from programs written in Coq’s expressive dependent type theory. Extraction is of great practical usefulness, used crucially e.g., in the CompCert project. However, for such executables obtained by extraction, the extraction process is part of the trusted code base (TCB), as are Coq’s kernel and the compiler used to compile the extracted code. The extraction process contains intricate semantic transformation of programs that rely on subtle operational features of both the source and target language. Its code has also evolved since the last theoretical exposition in the seminal PhD thesis of Pierre Letouzey. Furthermore, while the exact correctness statements for the execution of extracted code are described clearly in academic literature, the interoperability with unverified code has never been investigated formally, and yet is used in virtually every project relying on extraction. In this paper, we describe the development of a novel extraction pipeline from Coq to OCaml, implemented and verified in Coq itself, with a clear correctness theorem and guarantees for safe interoperability. We build our work on the MetaCoq project, which aims at decreasing the TCB of Coq’s kernel by re-implementing it in Coq itself and proving it correct w.r.t. a formal specification of Coq’s type theory in Coq. Since OCaml does not have a formal specification, we make use of the Malfunction project specifying the semantics of the intermediate language of the OCaml compiler. Our work fills some gaps in the literature and highlights important differences between the operational semantics of Coq programs and their extraction. In particular, we focus on the guarantees that can be provided for interoperability with unverified code, and prove that extracted programs of first-order data type are correct and can safely interoperate, whereas for higher-order programs already simple interoperations can lead to incorrect behaviour and even outright segfaults.</div>
@@ -87,11 +89,11 @@
 </div>
 <div class="helia-reference-cites helia-collapsible">
 <details open>
-<summary class="helia-group-summary"><span class="helia-group-title">Cites 38 works (1 here)</span></summary>
+<summary class="helia-group-summary"><span class="helia-group-title">Cites 38 works (2 here)</span></summary>
 <div class="helia-group-body">
 <div class="helia-reference-cites-here helia-collapsible">
 <details open>
-<summary class="helia-group-summary"><span class="helia-group-title">With notes (1)</span></summary>
+<summary class="helia-group-summary"><span class="helia-group-title">With notes (2)</span></summary>
 <div class="helia-group-body">
 <section class="helia-transclusion" data-entry="kumar_cakeml_2014" data-depth="1">
 <details>
@@ -99,7 +101,17 @@
 <div class="helia-transclusion-body">
 <div class="helia-reference" data-entry="kumar_cakeml_2014" data-kind="reference">
 <div class="helia-abstract">We have developed and mechanically verified an ML system called CakeML, which supports a substantial subset of Standard ML. CakeML is implemented as an interactive read-eval-print loop (REPL) in x86-64 machine code. Our correctness theorem ensures that this REPL implementation prints only those results permitted by the semantics of CakeML. Our verification effort touches on a breadth of topics including lexing, parsing, type checking, incremental and dynamic compilation, garbage collection, arbitraryprecision arithmetic, and compiler bootstrapping.</div>
-<div class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/2535838.2535841">DOI</a></span></div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="pdf-url"><a class="helia-link helia-external" href="https://dl.acm.org/doi/pdf/10.1145/2535838.2535841">PDF</a></span> · <span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/2535838.2535841">DOI</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/conf/popl/KumarMNO14">pldb</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="pfenning-1988-higher" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="pfenning-1988-higher"><span class="helia-title">Higher-order abstract syntax</span>&nbsp;<a class="helia-slug" href="pfenning-1988-higher.html">pfenning-1988-higher</a><span class="helia-byline"><span class="helia-entry-link" data-entry="pldi">PLDI</span> · 1988</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="pfenning-1988-higher" data-kind="reference">
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="pdf-url"><a class="helia-link helia-external" href="https://dl.acm.org/doi/pdf/10.1145/53990.54010">PDF</a></span> · <span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/53990.54010">DOI</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/conf/pldi/PfenningE88">pldb</a></span></div>
 </div>
 </div>
 </details>
@@ -109,7 +121,7 @@
 </div>
 <div class="helia-reference-cites-away helia-collapsible">
 <details open>
-<summary class="helia-group-summary"><span class="helia-group-title">External (37)</span></summary>
+<summary class="helia-group-summary"><span class="helia-group-title">External (36)</span></summary>
 <div class="helia-group-body">
 <ul>
 <li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-031-57262-3_10">Trocq: Proof Transfer for Free, With or Without Univalence</a> (2024)</li>
@@ -146,7 +158,6 @@
 <li><a class="helia-link helia-external" href="https://doi.org/10.1145/1111037.1111042">Formal certification of a compiler back-end or</a> (2006)</li>
 <li>Programmation fonctionnelle certifiée: l'extraction de programmes dans l'assistant Coq (Letouzey, PhD thesis) (2004)</li>
 <li><a class="helia-link helia-external" href="https://doi.org/10.1145/291891.291892">Proofs about a folklore let-polymorphic type inference algorithm</a> (1998)</li>
-<li><a class="helia-link helia-external" href="https://doi.org/10.1145/960116.54010">Higher-order abstract syntax</a> (1988)</li>
 <li><a class="helia-link helia-external" href="https://doi.org/10.1016/0096-0551(81)90048-5">Register allocation via coloring</a> (1981)</li>
 <li><a class="helia-link helia-external" href="https://doi.org/10.1145/359460.359478">A data structure for manipulating priority queues</a> (1978)</li>
 </ul>

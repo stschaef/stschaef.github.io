@@ -1,0 +1,1 @@
+heliaSearchData("d/wrocaw-university-of-science-and-technology",{"id":"wrocaw-university-of-science-and-technology","title":"Wrocław University of Science and Technology","kind":"institution","tags":[],"authors":[],"venue":[],"date":null,"url":"wrocaw-university-of-science-and-technology.html","headings":[],"body":""});

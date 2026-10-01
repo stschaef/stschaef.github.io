@@ -1,0 +1,1 @@
+heliaSearchData("d/rensselaer-polytechnic-institute",{"id":"rensselaer-polytechnic-institute","title":"Rensselaer Polytechnic Institute","kind":"institution","tags":[],"authors":[],"venue":[],"date":null,"url":"rensselaer-polytechnic-institute.html","headings":[],"body":""});

@@ -1,0 +1,1 @@
+heliaSearchData("d/university-of-tartu",{"id":"university-of-tartu","title":"University of Tartu","kind":"institution","tags":[],"authors":[],"venue":[],"date":null,"url":"university-of-tartu.html","headings":[],"body":""});

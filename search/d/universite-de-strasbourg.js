@@ -1,0 +1,1 @@
+heliaSearchData("d/universite-de-strasbourg",{"id":"universite-de-strasbourg","title":"Université de Strasbourg","kind":"institution","tags":[],"authors":[],"venue":[],"date":null,"url":"universite-de-strasbourg.html","headings":[],"body":""});

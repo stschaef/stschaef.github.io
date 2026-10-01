@@ -1,0 +1,1 @@
+heliaSearchData("d/xi-1999-dependent",{"id":"xi-1999-dependent","title":"Dependent types in practical programming","kind":"reference","tags":["refinement-types"],"authors":["Frank Pfenning","Hongwei Xi"],"venue":["POPL","Symposium on Principles of Programming Languages"],"date":null,"url":"xi-1999-dependent.html","headings":[],"body":""});

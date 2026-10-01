@@ -1,0 +1,1 @@
+heliaSearchData("d/university-of-passau",{"id":"university-of-passau","title":"University of Passau","kind":"institution","tags":[],"authors":[],"venue":[],"date":null,"url":"university-of-passau.html","headings":[],"body":""});

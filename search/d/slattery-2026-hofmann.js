@@ -1,0 +1,1 @@
+heliaSearchData("d/slattery-2026-hofmann",{"id":"slattery-2026-hofmann","title":"Hofmann-Streicher lifting of fibred categories","kind":"reference","tags":["category-theory"],"authors":["Andrew Slattery","Jon Sterling"],"venue":["LMCS","Logical Methods in Computer Science"],"date":null,"url":"slattery-2026-hofmann.html","headings":[],"body":""});

@@ -1,0 +1,1 @@
+heliaSearchData("d/electronic-arts",{"id":"electronic-arts","title":"Electronic Arts","kind":"institution","tags":[],"authors":[],"venue":[],"date":null,"url":"electronic-arts.html","headings":[],"body":""});

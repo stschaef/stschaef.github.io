@@ -1,0 +1,1 @@
+heliaSearchData("d/harrisongoldstein",{"id":"harrisongoldstein","title":"Harrison Goldstein","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"harrisongoldstein.html","headings":[],"body":""});

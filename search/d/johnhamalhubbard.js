@@ -1,0 +1,1 @@
+heliaSearchData("d/johnhamalhubbard",{"id":"johnhamalhubbard","title":"John Hamal Hubbard","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"johnhamalhubbard.html","headings":[],"body":""});

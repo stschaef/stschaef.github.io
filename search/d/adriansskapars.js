@@ -1,0 +1,1 @@
+heliaSearchData("d/adriansskapars",{"id":"adriansskapars","title":"Adrians Skapars","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"adriansskapars.html","headings":[],"body":""});

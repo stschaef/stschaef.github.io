@@ -1,0 +1,1 @@
+heliaSearchData("d/michaeljohnpatton",{"id":"michaeljohnpatton","title":"Michael John Patton","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"michaeljohnpatton.html","headings":[],"body":""});

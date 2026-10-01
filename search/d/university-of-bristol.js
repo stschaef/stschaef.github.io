@@ -1,0 +1,1 @@
+heliaSearchData("d/university-of-bristol",{"id":"university-of-bristol","title":"University of Bristol","kind":"institution","tags":[],"authors":[],"venue":[],"date":null,"url":"university-of-bristol.html","headings":[],"body":""});

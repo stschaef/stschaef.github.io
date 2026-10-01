@@ -1,0 +1,1 @@
+heliaSearchData("d/fernandovaquerizovillar",{"id":"fernandovaquerizovillar","title":"Fernando Vaquerizo-Villar","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"fernandovaquerizovillar.html","headings":[],"body":""});

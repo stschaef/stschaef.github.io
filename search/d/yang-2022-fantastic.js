@@ -1,0 +1,1 @@
+heliaSearchData("d/yang-2022-fantastic",{"id":"yang-2022-fantastic","title":"Fantastic Morphisms and Where to Find Them: A Guide to Recursion Schemes","kind":"reference","tags":["program-calculation"],"authors":["Nicolas Wu","Zhixuan Yang"],"venue":["MPC","Mathematics of Program Construction"],"date":null,"url":"yang-2022-fantastic.html","headings":[],"body":""});

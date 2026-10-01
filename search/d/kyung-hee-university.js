@@ -1,0 +1,1 @@
+heliaSearchData("d/kyung-hee-university",{"id":"kyung-hee-university","title":"Kyung Hee University","kind":"institution","tags":[],"authors":[],"venue":[],"date":null,"url":"kyung-hee-university.html","headings":[],"body":""});

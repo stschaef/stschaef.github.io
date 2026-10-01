@@ -1,0 +1,1 @@
+heliaSearchData("d/european-commission",{"id":"european-commission","title":"European Commission","kind":"institution","tags":[],"authors":[],"venue":[],"date":null,"url":"european-commission.html","headings":[],"body":""});

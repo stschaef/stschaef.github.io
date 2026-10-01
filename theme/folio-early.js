@@ -1,7 +1,7 @@
 // Run in <head> before the page is drawn ([theme] head-js): the reader's saved settings from the
 // panel, set on <html> exactly as folio.js sets them, so nothing redraws once folio.js runs.
 (function () {
-  var r = document.documentElement, c = {}, scheme = "matyo", mode = "still";
+  var r = document.documentElement, c = {}, scheme = "celadon", mode = "still";
   try { c = JSON.parse(localStorage.getItem("folio-config") || "{}") || {}; } catch (e) {}
   try { scheme = localStorage.getItem("folio-scheme") || scheme; } catch (e) {}
   try { mode = localStorage.getItem("folio-ornament") || mode; } catch (e) {}

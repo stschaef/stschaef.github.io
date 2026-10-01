@@ -1,0 +1,1 @@
+heliaSearchData("d/alexanderzygmunt",{"id":"alexanderzygmunt","title":"Alexander Zygmunt","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"alexanderzygmunt.html","headings":[],"body":""});

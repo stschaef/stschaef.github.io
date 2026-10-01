@@ -1,0 +1,1 @@
+heliaSearchData("d/bates-college",{"id":"bates-college","title":"Bates College","kind":"institution","tags":[],"authors":[],"venue":[],"date":null,"url":"bates-college.html","headings":[],"body":""});

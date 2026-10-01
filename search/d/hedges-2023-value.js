@@ -1,0 +1,1 @@
+heliaSearchData("d/hedges-2023-value",{"id":"hedges-2023-value","title":"Value Iteration is Optic Composition","kind":"reference","tags":["lenses","open-games"],"authors":["Jules Hedges","Riu Rodríguez Sakamoto"],"venue":["EPTCS","Electronic Proceedings in Theoretical Computer Science"],"date":null,"url":"hedges-2023-value.html","headings":[],"body":""});

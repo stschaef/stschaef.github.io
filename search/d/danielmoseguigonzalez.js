@@ -1,0 +1,1 @@
+heliaSearchData("d/danielmoseguigonzalez",{"id":"danielmoseguigonzalez","title":"Daniel Moseguí González","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"danielmoseguigonzalez.html","headings":[],"body":""});

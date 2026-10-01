@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>Toleo: Scaling Freshness to Tera-scale Memory Using CXL and PIM</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Ctext y=%22.9em%22 font-size=%2290%22%3E%F0%9F%8C%BB%3C/text%3E%3C/svg%3E">
+<meta name="generator" content="helia">
+<link rel="alternate" type="application/atom+xml" title="Steven Schaefer" href="feed.xml">
+<link rel="alternate" type="application/feed+json" title="Steven Schaefer" href="feed.json">
+<script src="helia/theme-version.js"></script>
+<script src="theme/folio-early.js"></script>
+<link rel="stylesheet" href="helia/theme.css">
+<link rel="stylesheet" href="helia/highlight.css">
+<link rel="stylesheet" href="helia/search.css">
+<link rel="stylesheet" href="theme/katex.css">
+<link rel="stylesheet" href="theme/recipe.css">
+<link rel="stylesheet" href="theme/site.css">
+<link rel="stylesheet" href="theme/folio.css">
+<script defer src="helia/runtime.js"></script>
+<script defer src="helia/search.js"></script>
+<script defer src="theme/glyphcraft.js"></script>
+<script defer src="theme/glyphart.js"></script>
+<script defer src="theme/glyphgen.js"></script>
+<script defer src="theme/ornament.js"></script>
+<script defer src="theme/folio.js"></script>
+<script defer src="theme/portrait.js"></script>
+<script type="application/json" id="helia-widgets">{"helia-cite-formats":"widgets/helia-cite-formats-a3294ac7.js"}</script>
+<link rel="modulepreload" href="widgets/helia-cite-formats-a3294ac7.js">
+<script type="module" src="widgets/runtime.js"></script>
+</head>
+<body>
+<nav class="helia-topbar"><a class="helia-home" href="home.html">Steven Schaefer</a><ul class="helia-nav-links"><li><a href="stevenschaefer.html">About Me</a></li><li><a href="research.html">Research</a></li><li><a href="new.html">New</a></li></ul><button type="button" class="helia-search-button" aria-label="Search (/ or Ctrl+K)" aria-haspopup="dialog"><span class="helia-search-icon">⌕</span><span class="helia-search-label">Search</span><kbd class="helia-search-key">/</kbd></button></nav>
+<div class="helia-page" data-kind="reference">
+<article class="helia-article">
+<header class="helia-header" data-entry="dong-2024-toleo" data-kind="reference">
+<h2 class="helia-heading"><span class="helia-taxon">Reference.</span> Toleo: Scaling Freshness to Tera-scale Memory Using CXL and PIM</h2>
+<div class="helia-meta"><span class="helia-author"><a class="helia-entry-link" href="juechudong.html" data-entry="juechudong">Juechu Dong</a>, <a class="helia-entry-link" href="jonahrosenblum.html" data-entry="jonahrosenblum">Jonah Rosenblum</a>, <a class="helia-entry-link" href="satishnarayanasamy.html" data-entry="satishnarayanasamy">Satish Narayanasamy</a></span> · <span class="helia-byline"><a class="helia-entry-link" href="asplos.html" data-entry="asplos">ASPLOS</a> · 2024</span> · <span class="helia-tags"><span class="helia-tag" data-tag="security"><a class="helia-entry-link" href="tag-security.html" data-entry="tag-security">security</a></span> <span class="helia-tag" data-tag="hardware"><a class="helia-entry-link" href="tag-hardware.html" data-entry="tag-hardware">hardware</a></span></span> · <span class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/3622781.3674180">DOI</a></span> · <span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/2410.12749">arXiv</a></span></span></div>
+</header>
+<div class="helia-body">
+</div>
+<div class="helia-cite helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><h3 class="helia-heading">Cite</h3>
+</summary>
+<div class="helia-group-body">
+<div class="helia-widget" data-widget="helia-cite-formats" data-props="{&quot;key&quot;:&quot;dong-2024-toleo&quot;,&quot;bibtex&quot;:&quot;@inproceedings{dong-2024-toleo, series={ASPLOS ’24}, title={Toleo: Scaling Freshness to Tera-scale Memory Using CXL and PIM}, url={http://dx.doi.org/10.1145/3622781.3674180}, DOI={10.1145/3622781.3674180}, booktitle={Proceedings of the 29th ACM International Conference on Architectural Support for Programming Languages and Operating Systems, Volume 4}, publisher={ACM}, author={Dong, Juechu and Rosenblum, Jonah and Narayanasamy, Satish}, year={2024}, month=Apr, pages={313–328}, collection={ASPLOS ’24} }&quot;,&quot;bib-file&quot;:&quot;dong-2024-toleo.bib&quot;,&quot;hayagriva&quot;:&quot;dong-2024-toleo:\n  type: article\n  title: &#39;Toleo: Scaling Freshness to Tera-scale Memory Using CXL and PIM&#39;\n  author:\n  - Dong, Juechu\n  - Rosenblum, Jonah\n  - Narayanasamy, Satish\n  date: 2024-04\n  page-range: 313-328\n  url: http://dx.doi.org/10.1145/3622781.3674180\n  serial-number:\n    doi: 10.1145/3622781.3674180\n  parent:\n    type: proceedings\n    title: Proceedings of the 29th ACM International Conference on Architectural Support for Programming Languages and Operating Systems, Volume 4\n    publisher: ACM\n    parent:\n      type: proceedings\n      title: ASPLOS ’24\n&quot;,&quot;yml-file&quot;:&quot;dong-2024-toleo.yml&quot;}"><div class="helia-cite-key" data-copy="@dong-2024-toleo" data-copy-label="citation key"><span class="helia-bib-key">Cite as</span> <code class="helia-raw-inline">@dong-2024-toleo</code> (helia, typst) · <code class="helia-raw-inline">\cite{dong-2024-toleo}</code> (LaTeX)</div>
+<div class="helia-cite-format helia-collapsible" data-format="bibtex" data-copy="true" data-copy-label="BibTeX">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">BibTeX</span></summary>
+<div class="helia-group-body">
+<details class="helia-code" open><summary class="helia-code-summary"><span class="helia-code-lang">bibtex</span> · <span class="helia-code-lines">1 line</span></summary><pre class="helia-raw"><code class="language-bibtex"><span class="hl-text hl-bibtex"><span class="hl-meta hl-entry hl-braces hl-bibtex"><span class="hl-keyword hl-other hl-entry-type hl-bibtex"><span class="hl-punctuation hl-definition hl-keyword hl-bibtex">@</span>inproceedings</span><span class="hl-punctuation hl-section hl-entry hl-begin hl-bibtex">{</span><span class="hl-entity hl-name hl-type hl-entry-key hl-bibtex">dong-2024-toleo</span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">series</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>ASPLOS ’24<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">title</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>Toleo: Scaling Freshness to Tera-scale Memory Using CXL and PIM<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">url</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>http://dx.doi.org/10.1145/3622781.3674180<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">DOI</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>10.1145/3622781.3674180<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">booktitle</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>Proceedings of the 29th ACM International Conference on Architectural Support for Programming Languages and Operating Systems, Volume 4<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">publisher</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>ACM<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">author</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>Dong, Juechu and Rosenblum, Jonah and Narayanasamy, Satish<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">year</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>2024<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">month</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span>Apr</span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">pages</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>313–328<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">collection</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>ASPLOS ’24<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span> </span><span class="hl-punctuation hl-section hl-entry hl-end hl-bibtex">}</span></span></span></code></pre></details>
+</div>
+</details>
+</div>
+<div class="helia-cite-format helia-collapsible" data-format="hayagriva" data-copy="true" data-copy-label="hayagriva YAML">
+<details>
+<summary class="helia-group-summary"><span class="helia-group-title">hayagriva YAML (typst)</span></summary>
+<div class="helia-group-body">
+<details class="helia-code" open><summary class="helia-code-summary"><span class="helia-code-lang">yaml</span> · <span class="helia-code-lines">19 lines</span></summary><pre class="helia-raw"><code class="language-yaml"><span class="hl-source hl-yaml"><span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">dong-2024-toleo</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">type</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">article</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">title</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-quoted hl-single hl-yaml"><span class="hl-punctuation hl-definition hl-string hl-begin hl-yaml">&#39;</span>Toleo: Scaling Freshness to Tera-scale Memory Using CXL and PIM<span class="hl-punctuation hl-definition hl-string hl-end hl-yaml">&#39;</span></span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">author</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Dong, Juechu</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Rosenblum, Jonah</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Narayanasamy, Satish</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">date</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">2024-04</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">page-range</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">313-328</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">url</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">http://dx.doi.org/10.1145/3622781.3674180</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">serial-number</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">doi</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">10.1145/3622781.3674180</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">parent</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">type</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">proceedings</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">title</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Proceedings of the 29th ACM International Conference on Architectural Support for Programming Languages and Operating Systems, Volume 4</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">publisher</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">ACM</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">parent</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span>
+      <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">type</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">proceedings</span>
+      <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">title</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">ASPLOS ’24</span>
+</span></code></pre></details>
+</div>
+</details>
+</div>
+<div class="helia-cite-files">Download: <a class="helia-link" href="dong-2024-toleo.bib">dong-2024-toleo.bib</a> · <a class="helia-link" href="dong-2024-toleo.yml">dong-2024-toleo.yml</a></div>
+</div>
+</div>
+</details>
+</div>
+<div class="helia-reference-cited-by helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">Cited by (1)</span></summary>
+<div class="helia-group-body">
+<section class="helia-transclusion" data-entry="rosenblum-2025-confidential" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="rosenblum-2025-confidential"><span class="helia-title">Confidential computing for population-scale genome-wide association studies with SECRET-GWAS</span>&nbsp;<a class="helia-slug" href="rosenblum-2025-confidential.html">rosenblum-2025-confidential</a><span class="helia-byline"><span class="helia-entry-link" data-entry="nature-computational-science">Nature Computational Science</span> · 2025</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="rosenblum-2025-confidential" data-kind="reference">
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1038/s43588-025-00856-z">DOI</a></span></div>
+</div>
+</div>
+</details>
+</section>
+</div>
+</details>
+</div>
+<div class="helia-reference-cites helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">Cites 65 works (0 here)</span></summary>
+<div class="helia-group-body">
+<div class="helia-reference-cites-away helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">External (65)</span></summary>
+<div class="helia-group-body">
+<ul>
+<li>TPC-C Benchmark (2024)</li>
+<li>Nvidia bluefield networking platform (2024)</li>
+<li>Nvidia gh200 grace hopper superchip (2024)</li>
+<li>RedisLabs/memtier_benchmark: NoSQL Redis and Memcache traffic generation and benchmarking tool (2024)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3627703.3650071">Smartnic security isolation in the cloud with s-nic</a> (2024)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3575693.3578835">Pond: CXL-Based Memory Pooling Systems for Cloud Platforms</a> (2023)</li>
+<li><a class="helia-link helia-external" href="https://arxiv.org/abs/2208.10134">Machine learning with confidential computing: A systematization of knowledge</a> (2023)</li>
+<li>4th Gen AMD EPYC processor architecture white paper (2023)</li>
+<li><a class="helia-link helia-external" href="https://arxiv.org/abs/2307.09288">Llama 2: Open foundation and fine-tuned chat models</a> (2023)</li>
+<li>Insight into cxl 2.0 security features and benefits (2022)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1109/access.2022.3174101">Benchmarking a New Paradigm: Experimental Analysis and Characterization of a Real Processing-in-Memory System</a> (2022)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1109/mm.2022.3164651">Aquabolt-xl hbm2-pim, lpddr5-pim with in-memory processing, and axdimm with acceleration buffer</a> (2022)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1109/hpca53966.2022.00051">LoopPoint: Checkpoint-driven sampled simulation for multi-threaded applications</a> (2022)</li>
+<li>What designers need to know about hbm3 (2022)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1109/mm.2022.3228561">Compute Express Link (CXL): Enabling Heterogeneous Data-Centric Computing With Heterogeneous Memory Hierarchy</a> (2022)</li>
+<li>Supporting Intel SGX on Multi-Socket Platforms (2022)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3470496.3527378">SoftVN: Efficient memory protection via software-provided version numbers</a> (2022)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1109/hpca53966.2022.00025">TNPU: Supporting Trusted Execution with Tree-less Integrity Protection for Neural Processing Unit</a> (2022)</li>
+<li>Common terminology for confidential computing (2022)</li>
+<li>TEE Device Interface Security Protocol (TDISP) (2022)</li>
+<li>Runtime encryption of memory with intel tme mk (2021)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1109/hcs52781.2021.9567191">Aquabolt-XL: Samsung HBM2-PIM with in-memory processing for ML accelerators and beyond</a> (2021)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1109/hpca51647.2021.00037">BlockHammer: Preventing RowHammer at low cost by blacklisting rapidly-accessed DRAM rows</a> (2021)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1109/hpca51647.2021.00011">Common Counters: Compressed Encryption Counters for Secure GPU Memory</a> (2021)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3458864.3466628">PPFL: Privacy-preserving Federated Learning with Trusted Execution Environments</a> (2021)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1109/ispass51385.2021.00012">GenomicsBench: A benchmark suite for genomics</a> (2021)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1109/tps-isa50397.2020.00028">A framework for privacy-preserving genomic data analysis using trusted execution environments</a> (2020)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3399742">Spectre attacks: Exploiting speculative execution</a> (2020)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1109/lca.2020.2973991">DRAMsim3: A Cycle-Accurate, Thermal-Capable DRAM Simulator</a> (2020)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3470496.3527418">MGX: Near-Zero Overhead Memory Protection for Data-Intensive Accelerators</a> (2020)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3359789.3359809">DR.SGX: Automated and adjustable side-channel protection for SGX using data location randomization</a> (2019)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1109/eurosp.2019.00020">SgxPectre: Stealing Intel Secrets from SGX Enclaves Via Speculative Execution</a> (2019)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1109/hpca.2019.00011">D-RaNGe: Using Commodity DRAM Devices to Generate True Random Numbers with Low Latency and High Throughput</a> (2019)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.5441/002/edbt.2019.28">Hyrise Re-engineered: An Extensible Database System for Research in Relational In-Memory Data Management</a> (2019)</li>
+<li>Varys: Protecting SGX enclaves from practical side-channel attacks (2018)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1109/sp.2018.00025">EnclaveDB: A secure database using SGX</a> (2018)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1109/micro.2018.00041">Morphable counters: Enabling compact integrity trees for low-overhead secure memories</a> (2018)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1109/ispass.2018.00012">MAPS: Understanding metadata access patterns in secure memory</a> (2018)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3173162.3177155">VAULT: Reducing paging overheads in SGX with efficient integrity verification structures</a> (2018)</li>
+<li>Foreshadow: Extracting the keys to the Intel SGX kingdom with transient out-of-order execution (2018)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3140659.3080232">InvisiMem: Smart memory defenses for memory bus side channel</a> (2017)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3079856.3080230">ObfusMem: A low-overhead access obfuscation for trusted memories</a> (2017)</li>
+<li><a class="helia-link helia-external" href="https://arxiv.org/abs/1508.03619">The gap benchmark suite</a> (2017)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1109/imw.2017.7939084">HBM (High Bandwidth Memory) DRAM Technology and Architecture</a> (2017)</li>
+<li>Intel SGX explained (2016)</li>
+<li>A memory encryption engine suitable for general purpose processors (2016)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1109/tc.2016.2538218">Reducing the Memory Bandwidth Overheads of Hardware Security Support for Multi-Core Processors</a> (2016)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1109/micro.2016.7783741">PoisonIvy: Safe speculation for secure memory</a> (2016)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/2902961.2903512">Leveraging 3D technologies for hardware security: Opportunities and challenges</a> (2016)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/2611765.2611774">Towards fast hardware memory integrity checking with skewed Merkle trees</a> (2014)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1109/estc.2014.6962745">Cost and yield analysis of multi-die packaging using 2.5D technology compared to fan-out wafer level packaging</a> (2014)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1109/ectc.2013.6575830">Fanout flipchip eWLB (embedded Wafer Level Ball Grid Array) technology as 2.5D packaging solutions</a> (2013)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1109/hpca.2011.5749717">Shared last-level TLBs for chip multiprocessors</a> (2011)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1109/hotchips.2011.7477494">Hybrid memory cube (HMC)</a> (2011)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/2063384.2063454">Sniper: Exploring the level of abstraction for scalable and accurate parallel multi-core simulation</a> (2011)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/1920261.1920292">Hardware assistance for trustworthy systems through 3-D integration</a> (2010)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-540-74735-2_20">TEC-Tree: A low-cost, parallelizable tree for efficient defense against memory replay attacks</a> (2007)</li>
+<li>The XTS-AES tweakable block cipher, an extract from IEEE Std 1619-2007 (2007)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/11693383_7">Parallelizable Authentication Trees</a> (2006)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1109/micro.2006.11">Authentication Control Point and Its Implications For Secure Processor Design</a> (2006)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1109/hpca.2003.1183547">Caches and hash trees for efficient memory integrity verification</a> (2003)</li>
+<li>A digital signature based on a conventional encryption function (1987)</li>
+<li>Explaining cxl: Memory pooling and sharing</li>
+<li>Compute express link (cxl) 3.0 specification</li>
+<li>Intel total memory encryption (Intel TME)</li>
+</ul>
+</div>
+</details>
+</div>
+</div>
+</details>
+</div>
+<footer class="helia-footer">
+<div class="helia-related helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><h3 class="helia-heading">Related</h3>
+</summary>
+<div class="helia-group-body">
+<ul>
+<li><a class="helia-entry-link" href="tan-2023-security.html" data-entry="tan-2023-security">Security Verification of Low-Trust Architectures</a> <span class="helia-related-tags"><a class="helia-entry-link" href="tag-hardware.html" data-entry="tag-hardware">#hardware</a> <a class="helia-entry-link" href="tag-security.html" data-entry="tag-security">#security</a></span></li>
+<li><a class="helia-entry-link" href="zhou-2023-galapagos.html" data-entry="zhou-2023-galapagos">Galápagos: Developing Verified Low Level Cryptography on Heterogeneous Hardwares</a> <span class="helia-related-tags"><a class="helia-entry-link" href="tag-hardware.html" data-entry="tag-hardware">#hardware</a> <a class="helia-entry-link" href="tag-security.html" data-entry="tag-security">#security</a></span></li>
+</ul>
+</div>
+</details>
+</div>
+</footer>
+</article>
+<div class="helia-identity"><span class="helia-id">dong-2024-toleo</span> <span class="helia-kind">reference</span> <span class="helia-path">entries/refs/dong-2024-toleo/dong-2024-toleo.hel</span></div>
+</div>
+</body>
+</html>

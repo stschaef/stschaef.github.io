@@ -1,0 +1,1 @@
+heliaSearchData("d/geoffreyshcruttwell",{"id":"geoffreyshcruttwell","title":"Geoffrey S. H. Cruttwell","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"geoffreyshcruttwell.html","headings":[],"body":""});

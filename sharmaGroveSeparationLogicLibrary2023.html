@@ -7,6 +7,8 @@
 <title>Grove: A Separation-Logic Library for Verifying Distributed Systems</title>
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Ctext y=%22.9em%22 font-size=%2290%22%3E%F0%9F%8C%BB%3C/text%3E%3C/svg%3E">
 <meta name="generator" content="helia">
+<link rel="alternate" type="application/atom+xml" title="Steven Schaefer" href="feed.xml">
+<link rel="alternate" type="application/feed+json" title="Steven Schaefer" href="feed.json">
 <script src="helia/theme-version.js"></script>
 <script src="theme/folio-early.js"></script>
 <link rel="stylesheet" href="helia/theme.css">
@@ -34,7 +36,7 @@
 <article class="helia-article">
 <header class="helia-header" data-entry="sharmaGroveSeparationLogicLibrary2023" data-kind="reference">
 <h2 class="helia-heading"><span class="helia-taxon">Reference.</span> Grove: A Separation-Logic Library for Verifying Distributed Systems</h2>
-<div class="helia-meta"><span class="helia-author"><a class="helia-entry-link" href="upamanyusharma.html" data-entry="upamanyusharma">Upamanyu Sharma</a>, <a class="helia-entry-link" href="ralfjung.html" data-entry="ralfjung">Ralf Jung</a>, <a class="helia-entry-link" href="josephtassarotti.html" data-entry="josephtassarotti">Joseph Tassarotti</a>, <a class="helia-entry-link" href="franskaashoek.html" data-entry="franskaashoek">Frans Kaashoek</a>, <a class="helia-entry-link" href="nickolaizeldovich.html" data-entry="nickolaizeldovich">Nickolai Zeldovich</a></span> · <span class="helia-byline"><a class="helia-entry-link" href="sosp.html" data-entry="sosp">SOSP</a> · 2023</span> · <span class="helia-tags"><span class="helia-tag" data-tag="distributed-systems"><span class="helia-entry-link helia-unavailable">distributed-systems</span></span> <span class="helia-tag" data-tag="inductive-invariants"><span class="helia-entry-link helia-unavailable">inductive-invariants</span></span> <span class="helia-tag" data-tag="separation-logic"><span class="helia-entry-link helia-unavailable">separation-logic</span></span></span> · <span class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/3600006.3613172">DOI</a></span></span></div>
+<div class="helia-meta"><span class="helia-author"><a class="helia-entry-link" href="upamanyusharma.html" data-entry="upamanyusharma">Upamanyu Sharma</a>, <a class="helia-entry-link" href="ralfjung.html" data-entry="ralfjung">Ralf Jung</a>, <a class="helia-entry-link" href="josephtassarotti.html" data-entry="josephtassarotti">Joseph Tassarotti</a>, <a class="helia-entry-link" href="franskaashoek.html" data-entry="franskaashoek">Frans Kaashoek</a>, <a class="helia-entry-link" href="nickolaizeldovich.html" data-entry="nickolaizeldovich">Nickolai Zeldovich</a></span> · <span class="helia-byline"><a class="helia-entry-link" href="sosp.html" data-entry="sosp">SOSP</a> · 2023</span> · <span class="helia-tags"><span class="helia-tag" data-tag="distributed-systems"><a class="helia-entry-link" href="tag-distributed-systems.html" data-entry="tag-distributed-systems">distributed-systems</a></span> <span class="helia-tag" data-tag="inductive-invariants"><a class="helia-entry-link" href="tag-inductive-invariants.html" data-entry="tag-inductive-invariants">inductive-invariants</a></span> <span class="helia-tag" data-tag="separation-logic"><a class="helia-entry-link" href="tag-separation-logic.html" data-entry="tag-separation-logic">separation-logic</a></span></span> · <span class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/3600006.3613172">DOI</a></span></span></div>
 </header>
 <div class="helia-body">
 <div class="helia-abstract">Grove is a concurrent separation logic library for verifying distributed systems. Grove is the first to handle time-based leases, including their interaction with reconfiguration, crash recovery, thread-level concurrency, and unreliable networks. This paper uses Grove to verify several distributed system components written in Go, including vKV, a realistic distributed multi-threaded key-value store. vKV supports reconfiguration, primary/backup replication, and crash recovery, and uses leases to execute read-only requests on any replica. vKV achieves high performance (67–73% of Redis on a single core), scales with more cores and more backup replicas (achieving about 2× the throughput when going from 1 to 3 servers), and can safely execute reads while reconfiguring.</div>
@@ -109,21 +111,81 @@
 </div>
 </details>
 </div>
+<div class="helia-reference-cited-by helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">Cited by (3)</span></summary>
+<div class="helia-group-body">
+<section class="helia-transclusion" data-entry="mathiasen-2026-verifying" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="mathiasen-2026-verifying"><span class="helia-title">Verifying Isolation Levels of Database Implementations for Free Using Separation Logic</span>&nbsp;<a class="helia-slug" href="mathiasen-2026-verifying.html">mathiasen-2026-verifying</a><span class="helia-byline"><span class="helia-entry-link" data-entry="arxiv">arXiv</span> · 2026</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="mathiasen-2026-verifying" data-kind="reference">
+<div class="helia-abstract">Modern databases are highly concurrent and provide transactions as a mean of grouping several database operations into atomically applied units. Database vendors and software engineers use isolation levels to describe the consistency guarantees of transactions. The popular isolation levels give weak guarantees, with intricate semantics, to optimize performance of applications. The problem of assuring that database implementations actually implement the isolation level guarantees that application developers build their systems upon has received a great deal of attention from the testing community. But until now, there exists no method for formally verifying that a database implementation actually implements the isolation level that database vendors says it provides. In this paper, we present a method for verifying that a database implements an isolation level: we derive isolation levels directly, as formalized in transactional consistency models by the database community, from the structure of separation logic specifications. By doing so, we consider all program executions that a database and arbitrary clients of the database could produce. The result is a so-called free theorem meaning that any database implementation, whose operations are verified against a specific set of separation logic specifications, actually implements its isolation level. As all proofs in this paper are mechanized in the Rocq proof assistant and build upon a detailed semantic model of program execution, we believe this contribution raises the bar for the achievable robustness of databases.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/2607.15877">arXiv</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="alnormathiasen-2025-reasoning" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="alnormathiasen-2025-reasoning"><span class="helia-title">Reasoning about Weak Isolation Levels in Separation Logic</span>&nbsp;<a class="helia-slug" href="alnormathiasen-2025-reasoning.html">alnormathiasen-2025-reasoning</a><span class="helia-byline"><span class="helia-entry-link" data-entry="icfp">ICFP</span> · 2025</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="alnormathiasen-2025-reasoning" data-kind="reference">
+<div class="helia-abstract">Consistency guarantees among concurrently executing transactions in local- and distributed systems, commonly referred to as isolation levels, have been formalized in a number of models. Thus far, no model can reason about executable implementations of databases or local transaction libraries providing weak isolation levels. Weak isolation levels are characterized by being highly concurrent and, unlike their stronger counter part serializability, they are not equivalent to the consistency guarantees provided by a transaction library implemented using a global lock. Industrial-strength databases almost exclusively implement weak isolation levels as their default level. This calls for formalism as numerous bugs violating isolation have been detected in these databases. In this paper, we formalize three weak isolation levels in separation logic, namely read uncommitted, read committed, and snapshot isolation. We define modular separation logic specifications that are independent of the underlying transaction library implementation. Historically, isolation levels have been specified using examples of executions between concurrent transactions that are not allowed to occur, and we demonstrate that our specifications correctly prohibit such examples. To show that our specifications are realizable, we formally verify that an executable implementation of a key-value database running the multi-version concurrency control algorithm from the original snapshot isolation paper satisfies our specification of snapshot isolation. Moreover, we prove implications between the specifications—snapshot isolation implies read committed and read committed implies read uncommitted—and thus the verification effort of the database serves as proof that all of our specifications are realizable. All results are mechanized in the Rocq proof assistant on top of the Iris separation logic framework.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="pdf-url"><a class="helia-link helia-external" href="https://dl.acm.org/doi/pdf/10.1145/3747515">PDF</a></span> · <span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/3747515">DOI</a></span> · <span class="helia-entry-link" data-field="eprint"><a class="helia-link helia-external" href="https://arxiv.org/abs/2501.14421">arXiv</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/journals/pacmpl/MathiasenGDTB25">pldb</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="lattuada-2024-verus" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="lattuada-2024-verus"><span class="helia-title">Verus: A Practical Foundation for Systems Verification</span>&nbsp;<a class="helia-slug" href="lattuada-2024-verus.html">lattuada-2024-verus</a><span class="helia-byline"><span class="helia-entry-link" data-entry="sosp">SOSP</span> · 2024</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="lattuada-2024-verus" data-kind="reference">
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/3694715.3695952">DOI</a></span></div>
+</div>
+</div>
+</details>
+</section>
+</div>
+</details>
+</div>
 <div class="helia-reference-cites helia-collapsible">
 <details open>
-<summary class="helia-group-summary"><span class="helia-group-title">Cites 48 works (3 here)</span></summary>
+<summary class="helia-group-summary"><span class="helia-group-title">Cites 48 works (8 here)</span></summary>
 <div class="helia-group-body">
 <div class="helia-reference-cites-here helia-collapsible">
 <details open>
-<summary class="helia-group-summary"><span class="helia-group-title">With notes (3)</span></summary>
+<summary class="helia-group-summary"><span class="helia-group-title">With notes (8)</span></summary>
 <div class="helia-group-body">
+<section class="helia-transclusion" data-entry="gondelman-2023-verifying" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="gondelman-2023-verifying"><span class="helia-title">Verifying Reliable Network Components in a Distributed Separation Logic with Dependent Separation Protocols</span>&nbsp;<a class="helia-slug" href="gondelman-2023-verifying.html">gondelman-2023-verifying</a><span class="helia-byline"><span class="helia-entry-link" data-entry="icfp">ICFP</span> · 2023</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="gondelman-2023-verifying" data-kind="reference">
+<div class="helia-abstract">We present a foundationally verified implementation of a reliable communication library for asynchronous client-server communication, and a stack of formally verified components on top thereof. Our library is implemented in an OCaml-like language on top of UDP and features characteristic traits of existing protocols, such as a simple handshaking protocol, bidirectional channels, and retransmission/acknowledgement mechanisms. We verify the library in the Aneris distributed separation logic using a novel proof pattern—dubbed the session escrow pattern—based on the existing escrow proof pattern and the so-called dependent separation protocols, which hitherto have only been used in a non-distributed concurrent setting. We demonstrate how our specification of the reliable communication library simplifies formal reasoning about applications, such as a remote procedure call library, which we in turn use to verify a lazily replicated key-value store with leader-followers and clients thereof. Our development is highly modular—each component is verified relative to specifications of the components it uses (not the implementation). All our results are formalized in the Coq proof assistant.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="pdf-url"><a class="helia-link helia-external" href="https://dl.acm.org/doi/pdf/10.1145/3607859">PDF</a></span> · <span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/3607859">DOI</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/journals/pacmpl/GondelmanHPTB23">pldb</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="lorch-2020-armada" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="lorch-2020-armada"><span class="helia-title">Armada: low-effort verification of high-performance concurrent programs</span>&nbsp;<a class="helia-slug" href="lorch-2020-armada.html">lorch-2020-armada</a><span class="helia-byline"><span class="helia-entry-link" data-entry="pldi">PLDI</span> · 2020</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="lorch-2020-armada" data-kind="reference">
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="pdf-url"><a class="helia-link helia-external" href="https://dl.acm.org/doi/pdf/10.1145/3385412.3385971">PDF</a></span> · <span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/3385412.3385971">DOI</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/conf/pldi/LorchCKPQSWZ20">pldb</a></span></div>
+</div>
+</div>
+</details>
+</section>
 <section class="helia-transclusion" data-entry="mcmillanIvyMultimodalVerification2020" data-depth="1">
 <details>
 <summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="mcmillanIvyMultimodalVerification2020"><span class="helia-title">Ivy: A Multi-modal Verification Tool for Distributed Algorithms</span>&nbsp;<a class="helia-slug" href="mcmillanIvyMultimodalVerification2020.html">mcmillanIvyMultimodalVerification2020</a><span class="helia-byline"><span class="helia-entry-link" data-entry="cav">CAV</span> · 2020</span></h2></summary>
 <div class="helia-transclusion-body">
 <div class="helia-reference" data-entry="mcmillanIvyMultimodalVerification2020" data-kind="reference">
 <div class="helia-abstract">Ivy is a multi-modal verification tool for correct design and implementation of distributed protocols and algorithms, supporting modular specification, implementation and proof. Ivy supports proving safety and liveness properties of parameterized and infinite-state systems via three modes: deductive verification using an SMT solver, abstraction and model checking, and manual proofs using natural deduction. It supports light-weight formal methods via compositional specification-based testing and bounded model checking. Ivy can extract executable distributed programs by translation to efficient C++ code. It is designed to support decidable automated reasoning, to improve proof stability and to provide transparency in the case of proof failures. For this purpose, it presents concrete finite counterexamples, automatically audits proofs for decidability of verification conditions, and provides modular hiding of theories.</div>
-<div class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-030-53291-8_12">DOI</a></span></div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="pdf-url"><a class="helia-link helia-external" href="https://link.springer.com/content/pdf/10.1007%2F978-3-030-53291-8_12.pdf">PDF</a></span> · <span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-030-53291-8_12">DOI</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/conf/cav/McMillanP20">pldb</a></span></div>
 </div>
 </div>
 </details>
@@ -145,7 +207,37 @@
 <div class="helia-transclusion-body">
 <div class="helia-reference" data-entry="jung_etal_iris_ground_up_2018" data-kind="reference">
 <div class="helia-abstract">Iris is a framework for higher-order concurrent separation logic, which has been implemented in the Coq proof assistant and deployed very effectively in a wide variety of verification projects. Iris was designed with the express goal of simplifying and consolidating the foundations of modern separation logics, but it has evolved over time, and the design and semantic foundations of Iris itself have yet to be fully written down and explained together properly in one place. Here, we attempt to fill this gap, presenting a reasonably complete picture of the latest version of Iris (version 3.1), from first principles and in one coherent narrative.</div>
-<div class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1017/s0956796818000151">DOI</a></span></div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="pdf-url"><a class="helia-link helia-external" href="https://www.cambridge.org/core/services/aop-cambridge-core/content/view/26301B518CE2C52796BFA12B8BAB5B5F/S0956796818000151a.pdf/div-class-title-iris-from-the-ground-up-a-modular-foundation-for-higher-order-concurrent-separation-logic-div.pdf">PDF</a></span> · <span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1017/s0956796818000151">DOI</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/journals/jfp/JungKJBBD18">pldb</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="krebbers-2017-interactive" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="krebbers-2017-interactive"><span class="helia-title">Interactive proofs in higher-order concurrent separation logic</span>&nbsp;<a class="helia-slug" href="krebbers-2017-interactive.html">krebbers-2017-interactive</a><span class="helia-byline"><span class="helia-entry-link" data-entry="popl">POPL</span> · 2017</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="krebbers-2017-interactive" data-kind="reference">
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="pdf-url"><a class="helia-link helia-external" href="https://dl.acm.org/doi/pdf/10.1145/3009837.3009855">PDF</a></span> · <span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/3009837.3009855">DOI</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/conf/popl/KrebbersTB17">pldb</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="hawblitzel-2015-ironfleet" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="hawblitzel-2015-ironfleet"><span class="helia-title">IronFleet: proving practical distributed systems correct</span>&nbsp;<a class="helia-slug" href="hawblitzel-2015-ironfleet.html">hawblitzel-2015-ironfleet</a><span class="helia-byline"><span class="helia-entry-link" data-entry="sosp">SOSP</span> · 2015</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="hawblitzel-2015-ironfleet" data-kind="reference">
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/2815400.2815428">DOI</a></span></div>
+</div>
+</div>
+</details>
+</section>
+<section class="helia-transclusion" data-entry="jung-2015-iris" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="jung-2015-iris"><span class="helia-title">Iris: Monoids and Invariants as an Orthogonal Basis for Concurrent Reasoning</span>&nbsp;<a class="helia-slug" href="jung-2015-iris.html">jung-2015-iris</a><span class="helia-byline"><span class="helia-entry-link" data-entry="popl">POPL</span> · 2015</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="jung-2015-iris" data-kind="reference">
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="pdf-url"><a class="helia-link helia-external" href="https://dl.acm.org/doi/pdf/10.1145/2676726.2676980">PDF</a></span> · <span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/2676726.2676980">DOI</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/conf/popl/JungSSSTBD15">pldb</a></span></div>
 </div>
 </div>
 </details>
@@ -155,10 +247,9 @@
 </div>
 <div class="helia-reference-cites-away helia-collapsible">
 <details open>
-<summary class="helia-group-summary"><span class="helia-group-title">External (45)</span></summary>
+<summary class="helia-group-summary"><span class="helia-group-title">External (40)</span></summary>
 <div class="helia-group-body">
 <ul>
-<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3607859">Verifying Reliable Network Components in a Distributed Separation Logic with Dependent Separation Protocols</a> (2023)</li>
 <li><a class="helia-link helia-external" href="https://doi.org/10.5281/zenodo.8161141">The Coq Proof Assistant, version 8.17.1</a> (2023)</li>
 <li>Verifying vMVCC, a high-performance transaction library using multi-version concurrency control (2023)</li>
 <li>Sharding the state machine: Automated modular reasoning for complex concurrent systems (2023)</li>
@@ -170,20 +261,16 @@
 <li><a class="helia-link helia-external" href="https://doi.org/10.1145/3448016.3457559">FoundationDB: A Distributed Unbundled Transactional Key Value Store</a> (2021)</li>
 <li>GoJournal: a verified, concurrent, crash-safe journaling system (2021)</li>
 <li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-030-44914-8_13">Aneris: A Mechanised Logic for Modular Reasoning about Distributed Systems</a> (2020)</li>
-<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3385412.3385971">Armada: low-effort verification of high-performance concurrent programs</a> (2020)</li>
 <li><a class="helia-link helia-external" href="https://doi.org/10.1145/3341301.3359632">Verifying concurrent, crash-safe systems with Perennial</a> (2019)</li>
 <li><a class="helia-link helia-external" href="https://doi.org/10.1145/3371113">The future is ours: prophecy variables in separation logic</a> (2019)</li>
 <li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-030-03424-5_22">ByMC: Byzantine Model Checker</a> (2018)</li>
 <li>Verifying concurrent software using movers in CSPEC (2018)</li>
 <li><a class="helia-link helia-external" href="https://doi.org/10.1145/3140568">Paxos made EPR: decidable reasoning about distributed protocols</a> (2017)</li>
 <li><a class="helia-link helia-external" href="https://doi.org/10.1145/3158116">Programming and proving with distributed protocols</a> (2017)</li>
-<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3009837.3009855">Interactive proofs in higher-order concurrent separation logic</a> (2016)</li>
 <li><a class="helia-link helia-external" href="https://doi.org/10.1145/2767386.2767415">Help!</a> (2015)</li>
 <li><a class="helia-link helia-external" href="https://doi.org/10.1145/2815400.2815402">Using Crash Hoare logic for certifying the FSCQ file system</a> (2015)</li>
 <li><a class="helia-link helia-external" href="https://doi.org/10.1145/2815400.2815425">No compromises</a> (2015)</li>
-<li><a class="helia-link helia-external" href="https://doi.org/10.1145/2815400.2815428">IronFleet</a> (2015)</li>
 <li><a class="helia-link helia-external" href="https://doi.org/10.1145/2737924.2737958">Verdi: a framework for implementing and formally verifying distributed systems</a> (2015)</li>
-<li><a class="helia-link helia-external" href="https://doi.org/10.1145/2676726.2676980">Iris: Monoids and invariants as an orthogonal basis for concurrent reasoning</a> (2015)</li>
 <li>In search of an understandable consensus algorithm (2014)</li>
 <li>A Self-Configurable Geo-Replicated Cloud Storage System (2014)</li>
 <li>Apache Kafka replication (https://cwiki.apache.org/confluence/display/kafka/kafka+replication) (2013)</li>
@@ -217,18 +304,18 @@
 </summary>
 <div class="helia-group-body">
 <ul>
-<li><a class="helia-entry-link" href="LuoSatBasedQuantifiedSymmetric.html" data-entry="LuoSatBasedQuantifiedSymmetric">SAT-based quantified symmetric minimization of the reachable states of distributed protocols: An update</a> <span class="helia-related-count">· 2 shared tags</span></li>
-<li><a class="helia-entry-link" href="anderson2014netkat.html" data-entry="anderson2014netkat">NetKAT: Semantic foundations for networks</a> <span class="helia-related-count">· 2 shared tags</span></li>
-<li><a class="helia-entry-link" href="bradleySATBasedModelChecking2011.html" data-entry="bradleySATBasedModelChecking2011">SAT-Based Model Checking without Unrolling</a> <span class="helia-related-count">· 2 shared tags</span></li>
-<li><a class="helia-entry-link" href="goelAVRAbstractlyVerifying2020.html" data-entry="goelAVRAbstractlyVerifying2020">AVR: Abstractly Verifying Reachability</a> <span class="helia-related-count">· 2 shared tags</span></li>
-<li><a class="helia-entry-link" href="goelRegularityQuantificationNew.html" data-entry="goelRegularityQuantificationNew">Regularity and Quantification: A New Approach to Verify Distributed Protocols</a> <span class="helia-related-count">· 2 shared tags</span></li>
-<li><a class="helia-entry-link" href="goelSymmetryQuantificationNew2021.html" data-entry="goelSymmetryQuantificationNew2021">On Symmetry and Quantification: A New Approach to Verify Distributed Protocols</a> <span class="helia-related-count">· 2 shared tags</span></li>
-<li><a class="helia-entry-link" href="hanceFindingInvariantsDistributed.html" data-entry="hanceFindingInvariantsDistributed">Finding Invariants of Distributed Systems: It’s a Small (Enough) World After All</a> <span class="helia-related-count">· 2 shared tags</span></li>
-<li><a class="helia-entry-link" href="maSiftUsingRefinementguided.html" data-entry="maSiftUsingRefinementguided">Sift: Using Refinement-guided Automation to Verify Complex Distributed Systems</a> <span class="helia-related-count">· 2 shared tags</span></li>
-<li><a class="helia-entry-link" href="mcmillanDeductiveVerificationDecidable2018.html" data-entry="mcmillanDeductiveVerificationDecidable2018">Deductive Verification in Decidable Fragments with Ivy</a> <span class="helia-related-count">· 2 shared tags</span></li>
-<li><a class="helia-entry-link" href="padonDecidabilityInferringInductive2016.html" data-entry="padonDecidabilityInferringInductive2016">Decidability of inferring inductive invariants</a> <span class="helia-related-count">· 2 shared tags</span></li>
-<li><a class="helia-entry-link" href="padonDeductiveVerificationDistributed2018.html" data-entry="padonDeductiveVerificationDistributed2018">Deductive Verification of Distributed Protocols in First-Order Logic</a> <span class="helia-related-count">· 2 shared tags</span></li>
-<li><a class="helia-entry-link" href="padonIvySafetyVerification.html" data-entry="padonIvySafetyVerification">Ivy: Safety verification by interactive generalization</a> <span class="helia-related-count">· 2 shared tags</span></li>
+<li><a class="helia-entry-link" href="LuoSatBasedQuantifiedSymmetric.html" data-entry="LuoSatBasedQuantifiedSymmetric">SAT-based quantified symmetric minimization of the reachable states of distributed protocols: An update</a> <span class="helia-related-tags"><a class="helia-entry-link" href="tag-inductive-invariants.html" data-entry="tag-inductive-invariants">#inductive-invariants</a> <a class="helia-entry-link" href="tag-distributed-systems.html" data-entry="tag-distributed-systems">#distributed-systems</a></span></li>
+<li><a class="helia-entry-link" href="anderson2014netkat.html" data-entry="anderson2014netkat">NetKAT: Semantic foundations for networks</a> <span class="helia-related-tags"><a class="helia-entry-link" href="tag-inductive-invariants.html" data-entry="tag-inductive-invariants">#inductive-invariants</a> <a class="helia-entry-link" href="tag-distributed-systems.html" data-entry="tag-distributed-systems">#distributed-systems</a></span></li>
+<li><a class="helia-entry-link" href="bradleySATBasedModelChecking2011.html" data-entry="bradleySATBasedModelChecking2011">SAT-Based Model Checking without Unrolling</a> <span class="helia-related-tags"><a class="helia-entry-link" href="tag-inductive-invariants.html" data-entry="tag-inductive-invariants">#inductive-invariants</a> <a class="helia-entry-link" href="tag-distributed-systems.html" data-entry="tag-distributed-systems">#distributed-systems</a></span></li>
+<li><a class="helia-entry-link" href="goelAVRAbstractlyVerifying2020.html" data-entry="goelAVRAbstractlyVerifying2020">AVR: Abstractly Verifying Reachability</a> <span class="helia-related-tags"><a class="helia-entry-link" href="tag-inductive-invariants.html" data-entry="tag-inductive-invariants">#inductive-invariants</a> <a class="helia-entry-link" href="tag-distributed-systems.html" data-entry="tag-distributed-systems">#distributed-systems</a></span></li>
+<li><a class="helia-entry-link" href="goelRegularityQuantificationNew.html" data-entry="goelRegularityQuantificationNew">Regularity and Quantification: A New Approach to Verify Distributed Protocols</a> <span class="helia-related-tags"><a class="helia-entry-link" href="tag-inductive-invariants.html" data-entry="tag-inductive-invariants">#inductive-invariants</a> <a class="helia-entry-link" href="tag-distributed-systems.html" data-entry="tag-distributed-systems">#distributed-systems</a></span></li>
+<li><a class="helia-entry-link" href="goelSymmetryQuantificationNew2021.html" data-entry="goelSymmetryQuantificationNew2021">On Symmetry and Quantification: A New Approach to Verify Distributed Protocols</a> <span class="helia-related-tags"><a class="helia-entry-link" href="tag-inductive-invariants.html" data-entry="tag-inductive-invariants">#inductive-invariants</a> <a class="helia-entry-link" href="tag-distributed-systems.html" data-entry="tag-distributed-systems">#distributed-systems</a></span></li>
+<li><a class="helia-entry-link" href="hanceFindingInvariantsDistributed.html" data-entry="hanceFindingInvariantsDistributed">Finding Invariants of Distributed Systems: It’s a Small (Enough) World After All</a> <span class="helia-related-tags"><a class="helia-entry-link" href="tag-inductive-invariants.html" data-entry="tag-inductive-invariants">#inductive-invariants</a> <a class="helia-entry-link" href="tag-distributed-systems.html" data-entry="tag-distributed-systems">#distributed-systems</a></span></li>
+<li><a class="helia-entry-link" href="maSiftUsingRefinementguided.html" data-entry="maSiftUsingRefinementguided">Sift: Using Refinement-guided Automation to Verify Complex Distributed Systems</a> <span class="helia-related-tags"><a class="helia-entry-link" href="tag-inductive-invariants.html" data-entry="tag-inductive-invariants">#inductive-invariants</a> <a class="helia-entry-link" href="tag-distributed-systems.html" data-entry="tag-distributed-systems">#distributed-systems</a></span></li>
+<li><a class="helia-entry-link" href="mcmillanDeductiveVerificationDecidable2018.html" data-entry="mcmillanDeductiveVerificationDecidable2018">Deductive Verification in Decidable Fragments with Ivy</a> <span class="helia-related-tags"><a class="helia-entry-link" href="tag-inductive-invariants.html" data-entry="tag-inductive-invariants">#inductive-invariants</a> <a class="helia-entry-link" href="tag-distributed-systems.html" data-entry="tag-distributed-systems">#distributed-systems</a></span></li>
+<li><a class="helia-entry-link" href="padonDecidabilityInferringInductive2016.html" data-entry="padonDecidabilityInferringInductive2016">Decidability of inferring inductive invariants</a> <span class="helia-related-tags"><a class="helia-entry-link" href="tag-inductive-invariants.html" data-entry="tag-inductive-invariants">#inductive-invariants</a> <a class="helia-entry-link" href="tag-distributed-systems.html" data-entry="tag-distributed-systems">#distributed-systems</a></span></li>
+<li><a class="helia-entry-link" href="padonDeductiveVerificationDistributed2018.html" data-entry="padonDeductiveVerificationDistributed2018">Deductive Verification of Distributed Protocols in First-Order Logic</a> <span class="helia-related-tags"><a class="helia-entry-link" href="tag-inductive-invariants.html" data-entry="tag-inductive-invariants">#inductive-invariants</a> <a class="helia-entry-link" href="tag-distributed-systems.html" data-entry="tag-distributed-systems">#distributed-systems</a></span></li>
+<li><a class="helia-entry-link" href="padonIvySafetyVerification.html" data-entry="padonIvySafetyVerification">Ivy: Safety verification by interactive generalization</a> <span class="helia-related-tags"><a class="helia-entry-link" href="tag-inductive-invariants.html" data-entry="tag-inductive-invariants">#inductive-invariants</a> <a class="helia-entry-link" href="tag-distributed-systems.html" data-entry="tag-distributed-systems">#distributed-systems</a></span></li>
 </ul>
 </div>
 </details>

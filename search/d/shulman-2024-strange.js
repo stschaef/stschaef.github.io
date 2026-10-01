@@ -1,0 +1,1 @@
+heliaSearchData("d/shulman-2024-strange",{"id":"shulman-2024-strange","title":"Strange new universes: Proof assistants and synthetic foundations","kind":"reference","tags":[],"authors":["Michael Shulman"],"venue":["Bull. AMS","Bulletin of the American Mathematical Society"],"date":null,"url":"shulman-2024-strange.html","headings":[],"body":""});

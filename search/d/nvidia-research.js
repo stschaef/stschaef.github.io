@@ -1,0 +1,1 @@
+heliaSearchData("d/nvidia-research",{"id":"nvidia-research","title":"NVIDIA Research","kind":"institution","tags":[],"authors":[],"venue":[],"date":null,"url":"nvidia-research.html","headings":[],"body":""});

@@ -1,0 +1,1 @@
+heliaSearchData("d/ghalayini-2023-explicit",{"id":"ghalayini-2023-explicit","title":"Explicit Refinement Types","kind":"reference","tags":["refinement-types"],"authors":["Jad Elkhaleq Ghalayini","Neel Krishnaswami"],"venue":["ICFP","International Conference on Functional Programming"],"date":null,"url":"ghalayini-2023-explicit.html","headings":[],"body":""});

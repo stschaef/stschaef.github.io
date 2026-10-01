@@ -1,0 +1,1 @@
+heliaSearchData("d/shanghaitech-university",{"id":"shanghaitech-university","title":"ShanghaiTech University","kind":"institution","tags":[],"authors":[],"venue":[],"date":null,"url":"shanghaitech-university.html","headings":[],"body":""});

@@ -1,0 +1,1 @@
+heliaSearchData("d/hinze-2005-finger",{"id":"hinze-2005-finger","title":"Finger trees: a simple general-purpose data structure","kind":"reference","tags":[],"authors":["Ralf Hinze","Ross Paterson"],"venue":["JFP","Journal of Functional Programming"],"date":null,"url":"hinze-2005-finger.html","headings":[],"body":""});

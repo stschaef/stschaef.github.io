@@ -1,0 +1,1 @@
+heliaSearchData("d/information-sciences-institute",{"id":"information-sciences-institute","title":"Information Sciences Institute","kind":"institution","tags":[],"authors":[],"venue":[],"date":null,"url":"information-sciences-institute.html","headings":[],"body":""});

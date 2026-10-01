@@ -1,0 +1,1 @@
+heliaSearchData("d/sterling-2022-a",{"id":"sterling-2022-a","title":"A Cubical Language for Bishop Sets","kind":"reference","tags":["cubical"],"authors":["Carlo Angiuli","Daniel Gratzer","Jon Sterling"],"venue":["LMCS","Logical Methods in Computer Science"],"date":null,"url":"sterling-2022-a.html","headings":[],"body":""});

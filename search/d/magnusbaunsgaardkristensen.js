@@ -1,0 +1,1 @@
+heliaSearchData("d/magnusbaunsgaardkristensen",{"id":"magnusbaunsgaardkristensen","title":"Magnus Baunsgaard Kristensen","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"magnusbaunsgaardkristensen.html","headings":[],"body":""});

@@ -1,0 +1,1 @@
+heliaSearchData("d/timany-2024-the",{"id":"timany-2024-the","title":"The Logical Essence of Well-Bracketed Control Flow","kind":"reference","tags":["logical-relations"],"authors":["Amin Timany","Armaël Guéneau","Lars Birkedal"],"venue":["POPL","Symposium on Principles of Programming Languages"],"date":null,"url":"timany-2024-the.html","headings":[],"body":""});

@@ -1,0 +1,1 @@
+heliaSearchData("d/chantalenguehard",{"id":"chantalenguehard","title":"Chantal Enguehard","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"chantalenguehard.html","headings":[],"body":""});

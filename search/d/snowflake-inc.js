@@ -1,0 +1,1 @@
+heliaSearchData("d/snowflake-inc",{"id":"snowflake-inc","title":"Snowflake Inc.","kind":"institution","tags":[],"authors":[],"venue":[],"date":null,"url":"snowflake-inc.html","headings":[],"body":""});

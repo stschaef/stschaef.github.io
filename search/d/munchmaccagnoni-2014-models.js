@@ -1,0 +1,1 @@
+heliaSearchData("d/munchmaccagnoni-2014-models",{"id":"munchmaccagnoni-2014-models","title":"Models of a Non-associative Composition","kind":"reference","tags":[],"authors":["Guillaume Munch-Maccagnoni"],"venue":["FoSSaCS","Foundations of Software Science and Computation Structures"],"date":null,"url":"munchmaccagnoni-2014-models.html","headings":[],"body":""});

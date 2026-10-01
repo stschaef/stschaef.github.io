@@ -663,7 +663,8 @@ article {
 
 .helia-tag {
   display: inline-block;
-  font-size: 0.8em;
+  font-family: var(--helia-font-mono);
+  font-size: 0.75em;
   line-height: 1.5;
   padding: 0 0.55em;
   margin: 0 0.1em;
@@ -977,6 +978,32 @@ code.helia-raw-inline {
 
 .helia-transclusion-title .helia-title {
   font-weight: inherit;
+}
+
+/* Related: the tags an entry shares with this one, quietly after its title. */
+.helia-related-tags {
+  font-family: var(--helia-font-mono);
+  hyphens: none;
+  -webkit-hyphens: none;
+  margin-left: 0.5em;
+  font-size: 0.78em;
+  color: var(--helia-faint);
+  white-space: normal;
+}
+
+.helia-related-tags a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* not the "[id]" the footer lists put after their links */
+.helia-related .helia-related-tags a.helia-entry-link[data-entry]::after {
+  content: none;
+}
+
+.helia-related-tags a:hover,
+.helia-related-tags a:focus-visible {
+  text-decoration: underline;
 }
 
 /* Footer lists (backlinks, related): each entry's ID after its title, "[id]". */

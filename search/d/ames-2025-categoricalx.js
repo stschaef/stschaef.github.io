@@ -1,0 +1,1 @@
+heliaSearchData("d/ames-2025-categoricalx",{"id":"ames-2025-categoricalx","title":"Categorical Lyapunov Theory I: Stability of Flows","kind":"reference","tags":["dynamical-systems"],"authors":["Aaron D. Ames","Joe Moeller","Paulo Tabuada"],"venue":["arXiv"],"date":null,"url":"ames-2025-categoricalx.html","headings":[],"body":""});

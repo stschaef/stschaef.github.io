@@ -1,0 +1,1 @@
+heliaSearchData("d/munchmaccagnoni-2014-formulae",{"id":"munchmaccagnoni-2014-formulae","title":"Formulae-as-types for an involutive negation","kind":"reference","tags":["focusing"],"authors":["Guillaume Munch-Maccagnoni"],"venue":["LICS","Symposium on Logic in Computer Science"],"date":null,"url":"munchmaccagnoni-2014-formulae.html","headings":[],"body":""});

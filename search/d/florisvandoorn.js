@@ -1,0 +1,1 @@
+heliaSearchData("d/florisvandoorn",{"id":"florisvandoorn","title":"Floris van Doorn","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"florisvandoorn.html","headings":[],"body":""});

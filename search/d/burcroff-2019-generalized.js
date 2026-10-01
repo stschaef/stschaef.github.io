@@ -1,0 +1,1 @@
+heliaSearchData("d/burcroff-2019-generalized",{"id":"burcroff-2019-generalized","title":"Generalized Lyndon Factorizations of Infinite Words","kind":"reference","tags":[],"authors":["Amanda Burcroff","Eric Winsor"],"venue":["arXiv"],"date":null,"url":"burcroff-2019-generalized.html","headings":[],"body":""});

@@ -1,0 +1,1 @@
+heliaSearchData("d/jonathandilorenzo",{"id":"jonathandilorenzo","title":"Jonathan DiLorenzo","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"jonathandilorenzo.html","headings":[],"body":""});

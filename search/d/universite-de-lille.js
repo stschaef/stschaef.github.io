@@ -1,0 +1,1 @@
+heliaSearchData("d/universite-de-lille",{"id":"universite-de-lille","title":"Université de Lille","kind":"institution","tags":[],"authors":[],"venue":[],"date":null,"url":"universite-de-lille.html","headings":[],"body":""});

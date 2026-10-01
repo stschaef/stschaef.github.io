@@ -1,0 +1,1 @@
+heliaSearchData("d/bangor-university",{"id":"bangor-university","title":"Bangor University","kind":"institution","tags":[],"authors":[],"venue":[],"date":null,"url":"bangor-university.html","headings":[],"body":""});

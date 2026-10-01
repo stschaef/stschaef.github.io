@@ -1,0 +1,1 @@
+heliaSearchData("d/moura-2015-elaboration",{"id":"moura-2015-elaboration","title":"Elaboration in Dependent Type Theory","kind":"reference","tags":["type-theory"],"authors":["Cody Roux","Jeremy Avigad","Leonardo de Moura","Soonho Kong"],"venue":["arXiv"],"date":null,"url":"moura-2015-elaboration.html","headings":[],"body":""});

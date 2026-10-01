@@ -1,0 +1,1 @@
+heliaSearchData("d/hinze-2025-the",{"id":"hinze-2025-the","title":"The graphical theory of monads","kind":"reference","tags":["string-diagrams"],"authors":["Dan Marsden","Ralf Hinze"],"venue":["JFP","Journal of Functional Programming"],"date":null,"url":"hinze-2025-the.html","headings":[],"body":""});

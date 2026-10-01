@@ -1,0 +1,1 @@
+heliaSearchData("d/clementpitclaudel",{"id":"clementpitclaudel","title":"Clement Pit-Claudel","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"clementpitclaudel.html","headings":[],"body":""});

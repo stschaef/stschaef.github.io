@@ -1,0 +1,1 @@
+heliaSearchData("d/dannyhernandez",{"id":"dannyhernandez","title":"Danny Hernandez","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"dannyhernandez.html","headings":[],"body":""});

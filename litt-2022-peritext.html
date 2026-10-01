@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>Peritext: A CRDT for Collaborative Rich Text Editing</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Ctext y=%22.9em%22 font-size=%2290%22%3E%F0%9F%8C%BB%3C/text%3E%3C/svg%3E">
+<meta name="generator" content="helia">
+<link rel="alternate" type="application/atom+xml" title="Steven Schaefer" href="feed.xml">
+<link rel="alternate" type="application/feed+json" title="Steven Schaefer" href="feed.json">
+<script src="helia/theme-version.js"></script>
+<script src="theme/folio-early.js"></script>
+<link rel="stylesheet" href="helia/theme.css">
+<link rel="stylesheet" href="helia/highlight.css">
+<link rel="stylesheet" href="helia/search.css">
+<link rel="stylesheet" href="theme/katex.css">
+<link rel="stylesheet" href="theme/recipe.css">
+<link rel="stylesheet" href="theme/site.css">
+<link rel="stylesheet" href="theme/folio.css">
+<script defer src="helia/runtime.js"></script>
+<script defer src="helia/search.js"></script>
+<script defer src="theme/glyphcraft.js"></script>
+<script defer src="theme/glyphart.js"></script>
+<script defer src="theme/glyphgen.js"></script>
+<script defer src="theme/ornament.js"></script>
+<script defer src="theme/folio.js"></script>
+<script defer src="theme/portrait.js"></script>
+<script type="application/json" id="helia-widgets">{"helia-cite-formats":"widgets/helia-cite-formats-a3294ac7.js"}</script>
+<link rel="modulepreload" href="widgets/helia-cite-formats-a3294ac7.js">
+<script type="module" src="widgets/runtime.js"></script>
+</head>
+<body>
+<nav class="helia-topbar"><a class="helia-home" href="home.html">Steven Schaefer</a><ul class="helia-nav-links"><li><a href="stevenschaefer.html">About Me</a></li><li><a href="research.html">Research</a></li><li><a href="new.html">New</a></li></ul><button type="button" class="helia-search-button" aria-label="Search (/ or Ctrl+K)" aria-haspopup="dialog"><span class="helia-search-icon">⌕</span><span class="helia-search-label">Search</span><kbd class="helia-search-key">/</kbd></button></nav>
+<div class="helia-page" data-kind="reference">
+<article class="helia-article">
+<header class="helia-header" data-entry="litt-2022-peritext" data-kind="reference">
+<h2 class="helia-heading"><span class="helia-taxon">Reference.</span> Peritext: A CRDT for Collaborative Rich Text Editing</h2>
+<div class="helia-meta"><span class="helia-author"><a class="helia-entry-link" href="geoffreylitt.html" data-entry="geoffreylitt">Geoffrey Litt</a>, <a class="helia-entry-link" href="sarahlim.html" data-entry="sarahlim">Sarah Lim</a>, <a class="helia-entry-link" href="martinkleppmann.html" data-entry="martinkleppmann">Martin Kleppmann</a>, <a class="helia-entry-link" href="petervanhardenberg.html" data-entry="petervanhardenberg">Peter van Hardenberg</a></span> · <span class="helia-byline"><a class="helia-entry-link" href="pacmhci.html" data-entry="pacmhci">PACMHCI</a> · 2022</span> · <span class="helia-tags"><span class="helia-tag" data-tag="crdts"><a class="helia-entry-link" href="tag-crdts.html" data-entry="tag-crdts">crdts</a></span></span> · <span class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/3555644">DOI</a></span></span></div>
+</header>
+<div class="helia-body">
+<div class="helia-abstract">Conflict-Free Replicated Data Types (CRDTs) support decentralized collaborative editing of shared data, enabling peer-to-peer sharing and flexible branching and merging workflows. While there is extensive work on CRDTs for plain text, much less is known about CRDTs for rich text with formatting. No algorithms have been published, and existing open-source implementations do not always preserve user intent. In this paper, we describe a model of intent preservation in rich text editing, developed through a series of concurrent editing scenarios. We then describe Peritext, a CRDT algorithm for rich text that satisfies the criteria of our model. The key idea is to store formatting spans alongside the plaintext character sequence, linked to a stable identifier for the first and last character of each span, and then to derive the final formatted text from these spans in a deterministic way that ensures concurrent operations commute. We have prototyped our algorithm in TypeScript, validated it using randomized property-based testing, and integrated it with an editor UI. We also prove that our algorithm ensures convergence, and demonstrate its causality preservation and intention preservation properties.</div>
+</div>
+<div class="helia-cite helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><h3 class="helia-heading">Cite</h3>
+</summary>
+<div class="helia-group-body">
+<div class="helia-widget" data-widget="helia-cite-formats" data-props="{&quot;key&quot;:&quot;litt-2022-peritext&quot;,&quot;bibtex&quot;:&quot;@article{litt-2022-peritext, title={Peritext: A CRDT for Collaborative Rich Text Editing}, volume={6}, ISSN={2573-0142}, url={http://dx.doi.org/10.1145/3555644}, DOI={10.1145/3555644}, number={CSCW2}, journal={Proceedings of the ACM on Human-Computer Interaction}, publisher={Association for Computing Machinery (ACM)}, author={Litt, Geoffrey and Lim, Sarah and Kleppmann, Martin and van Hardenberg, Peter}, year={2022}, month=Nov, pages={1–36} }&quot;,&quot;bib-file&quot;:&quot;litt-2022-peritext.bib&quot;,&quot;hayagriva&quot;:&quot;litt-2022-peritext:\n  type: article\n  title: &#39;Peritext: A CRDT for Collaborative Rich Text Editing&#39;\n  author:\n  - Litt, Geoffrey\n  - Lim, Sarah\n  - Kleppmann, Martin\n  - name: Hardenberg\n    given-name: Peter\n    prefix: van\n  date: 2022-11\n  page-range: 1-36\n  url: http://dx.doi.org/10.1145/3555644\n  serial-number:\n    doi: 10.1145/3555644\n    issn: 2573-0142\n  parent:\n    type: periodical\n    title: Proceedings of the ACM on Human-Computer Interaction\n    publisher: Association for Computing Machinery (ACM)\n    issue: CSCW2\n    volume: 6\n&quot;,&quot;yml-file&quot;:&quot;litt-2022-peritext.yml&quot;}"><div class="helia-cite-key" data-copy="@litt-2022-peritext" data-copy-label="citation key"><span class="helia-bib-key">Cite as</span> <code class="helia-raw-inline">@litt-2022-peritext</code> (helia, typst) · <code class="helia-raw-inline">\cite{litt-2022-peritext}</code> (LaTeX)</div>
+<div class="helia-cite-format helia-collapsible" data-format="bibtex" data-copy="true" data-copy-label="BibTeX">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">BibTeX</span></summary>
+<div class="helia-group-body">
+<details class="helia-code" open><summary class="helia-code-summary"><span class="helia-code-lang">bibtex</span> · <span class="helia-code-lines">1 line</span></summary><pre class="helia-raw"><code class="language-bibtex"><span class="hl-text hl-bibtex"><span class="hl-meta hl-entry hl-braces hl-bibtex"><span class="hl-keyword hl-other hl-entry-type hl-bibtex"><span class="hl-punctuation hl-definition hl-keyword hl-bibtex">@</span>article</span><span class="hl-punctuation hl-section hl-entry hl-begin hl-bibtex">{</span><span class="hl-entity hl-name hl-type hl-entry-key hl-bibtex">litt-2022-peritext</span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">title</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>Peritext: A CRDT for Collaborative Rich Text Editing<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">volume</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>6<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">ISSN</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>2573-0142<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">url</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>http://dx.doi.org/10.1145/3555644<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">DOI</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>10.1145/3555644<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">number</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>CSCW2<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">journal</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>Proceedings of the ACM on Human-Computer Interaction<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">publisher</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>Association for Computing Machinery (ACM)<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">author</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>Litt, Geoffrey and Lim, Sarah and Kleppmann, Martin and van Hardenberg, Peter<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">year</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>2022<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span></span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">month</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span>Nov</span>, <span class="hl-meta hl-key-assignment hl-bibtex"><span class="hl-string hl-unquoted hl-key hl-bibtex">pages</span><span class="hl-punctuation hl-separator hl-key-value hl-bibtex">=</span><span class="hl-string hl-quoted hl-other hl-braces hl-bibtex"><span class="hl-punctuation hl-definition hl-string hl-begin hl-bibtex">{</span>1–36<span class="hl-punctuation hl-definition hl-string hl-end hl-bibtex">}</span></span> </span><span class="hl-punctuation hl-section hl-entry hl-end hl-bibtex">}</span></span></span></code></pre></details>
+</div>
+</details>
+</div>
+<div class="helia-cite-format helia-collapsible" data-format="hayagriva" data-copy="true" data-copy-label="hayagriva YAML">
+<details>
+<summary class="helia-group-summary"><span class="helia-group-title">hayagriva YAML (typst)</span></summary>
+<div class="helia-group-body">
+<details class="helia-code" open><summary class="helia-code-summary"><span class="helia-code-lang">yaml</span> · <span class="helia-code-lines">22 lines</span></summary><pre class="helia-raw"><code class="language-yaml"><span class="hl-source hl-yaml"><span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">litt-2022-peritext</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">type</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">article</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">title</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-quoted hl-single hl-yaml"><span class="hl-punctuation hl-definition hl-string hl-begin hl-yaml">&#39;</span>Peritext: A CRDT for Collaborative Rich Text Editing<span class="hl-punctuation hl-definition hl-string hl-end hl-yaml">&#39;</span></span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">author</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Litt, Geoffrey</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Lim, Sarah</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Kleppmann, Martin</span>
+  <span class="hl-punctuation hl-definition hl-block hl-sequence hl-item hl-yaml">-</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">name</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Hardenberg</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">given-name</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Peter</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">prefix</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">van</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">date</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">2022-11</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">page-range</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">1-36</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">url</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">http://dx.doi.org/10.1145/3555644</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">serial-number</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">doi</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">10.1145/3555644</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">issn</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">2573-0142</span>
+  <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">parent</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">type</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">periodical</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">title</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Proceedings of the ACM on Human-Computer Interaction</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">publisher</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">Association for Computing Machinery (ACM)</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">issue</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml">CSCW2</span>
+    <span class="hl-string hl-unquoted hl-plain hl-out hl-yaml"><span class="hl-entity hl-name hl-tag hl-yaml">volume</span></span><span class="hl-punctuation hl-separator hl-key-value hl-mapping hl-yaml">:</span> <span class="hl-constant hl-numeric hl-integer hl-decimal hl-yaml">6</span>
+</span></code></pre></details>
+</div>
+</details>
+</div>
+<div class="helia-cite-files">Download: <a class="helia-link" href="litt-2022-peritext.bib">litt-2022-peritext.bib</a> · <a class="helia-link" href="litt-2022-peritext.yml">litt-2022-peritext.yml</a></div>
+</div>
+</div>
+</details>
+</div>
+<div class="helia-reference-cited-by helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">Cited by (1)</span></summary>
+<div class="helia-group-body">
+<section class="helia-transclusion" data-entry="adams-2025-grove" data-depth="1">
+<details>
+<summary class="helia-transclusion-summary"><h2 class="helia-transclusion-title" id="adams-2025-grove"><span class="helia-title">Grove: A Bidirectionally Typed Collaborative Structure Editor Calculus</span>&nbsp;<a class="helia-slug" href="adams-2025-grove.html">adams-2025-grove</a><span class="helia-byline"><span class="helia-entry-link" data-entry="popl">POPL</span> · 2025</span></h2></summary>
+<div class="helia-transclusion-body">
+<div class="helia-reference" data-entry="adams-2025-grove" data-kind="reference">
+<div class="helia-abstract">Version control systems typically rely on a patch language , heuristic patch synthesis algorithms like diff , and three-way merge algorithms . Standard patch languages and merge algorithms often fail to identify conflicts correctly when there are multiple edits to one line of code or code is relocated. This paper introduces Grove, a collaborative structure editor calculus that eliminates patch synthesis and three-way merge algorithms entirely. Instead, patches are derived directly from the log of the developer’s edit actions and all edits commute, i.e. the repository state forms a commutative replicated data type (CmRDT). To handle conflicts that can arise due to code relocation, the core datatype in Grove is a labeled directed multi-graph with uniquely identified vertices and edges. All edits amount to edge insertion and deletion, with deletion being permanent. To support tree-based editing, we define a decomposition from graphs into groves , which are a set of syntax trees with conflicts–including local, relocation, and unicyclic relocation conflicts–represented explicitly using holes and references between trees. Finally, we define a type error localization system for groves that enjoys a totality property, i.e. all editor states in Grove are statically meaningful, so developers can use standard editor services while working to resolve these explicitly represented conflicts. The static semantics is defined as a bidirectional marking system in line with recent work, with gradual typing employed to handle situations where errors and conflicts prevent type determination. We then layer on a unification-based type inference system to opportunistically fill type holes and fail gracefully when no solution exists. We mechanize the metatheory of Grove using the Agda theorem prover. We implement these ideas as the Grove Workbench , which generates the necessary data structures and algorithms in OCaml given a syntax tree specification.</div>
+<div class="helia-entry-links"><span class="helia-entry-link" data-field="doi"><a class="helia-link helia-external" href="https://doi.org/10.1145/3704909">DOI</a></span> · <span class="helia-entry-link" data-field="pldb"><a class="helia-link helia-external" href="https://pldb.kirancodes.me/p/journals/pacmpl/AdamsGPSZO25">pldb</a></span></div>
+</div>
+</div>
+</details>
+</section>
+</div>
+</details>
+</div>
+<div class="helia-reference-cites helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">Cites 48 works (0 here)</span></summary>
+<div class="helia-group-body">
+<div class="helia-reference-cites-away helia-collapsible">
+<details open>
+<summary class="helia-group-summary"><span class="helia-group-title">External (48)</span></summary>
+<div class="helia-group-body">
+<ul>
+<li>Papyrus: rich text CRDT from 2012 (2021)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.17863/cam.87326">Peritext prototype implementation</a> (2021)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3359591.3359737">Local-first software: you own your data, in spite of the cloud</a> (2019)</li>
+<li>Lessons learned from creating a rich-text editor with real-time collaboration (2018)</li>
+<li><a class="helia-link helia-external" href="https://arxiv.org/abs/1806.10254">Conflict-free replicated data types: an overview</a> (2018)</li>
+<li><a class="helia-link helia-external" href="https://arxiv.org/abs/1710.04469">Pure operation-based replicated data types</a> (2017)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1002/cpe.4110">Enhancing rich content wikis with real-time collaboration</a> (2017)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/2998181.2998252">Exhaustive Search and Resolution of Puzzles in OT Systems Supporting String-Wise Operations</a> (2017)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/3133933">Verifying strong eventual consistency in distributed systems</a> (2017)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/2957276.2957300">High Responsiveness for Group Editing CRDTs</a> (2016)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1109/tpds.2017.2697382">A Conflict-Free Replicated JSON Datatype</a> (2016)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/2957276.2957310">Near Real-Time Peer-to-Peer Shared Editing on Extensible Data Types</a> (2016)</li>
+<li>Rich text type for Yjs (2016)</li>
+<li>wiki-transformation.md (2016)</li>
+<li>Collaborative editing in ProseMirror (2015)</li>
+<li>ProseMirror: a toolkit for building rich-text editors on the web (2015)</li>
+<li><a class="helia-link helia-external" href="https://arxiv.org/abs/1512.05949">TP1-valid transformation functions for operations on ordered n-ary trees</a> (2015)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.4108/icst.collaboratecom.2013.254123">Supporting adaptable granularity of changes for massive-scale collaborative editing</a> (2013)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/2494266.2494278">LSEQ: an adaptive structure for sequences in distributed collaborative editing</a> (2013)</li>
+<li>Introduction to Reliable and Secure Distributed Programming (2011)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1016/j.jpdc.2010.12.006">Replicated abstract data types: Building blocks for collaborative applications</a> (2011)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-642-24550-3_29">Conflict-Free Replicated Data Types</a> (2011)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/1832772.1832777">Deep hypertext with embedded revision control implemented in regular expressions</a> (2010)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-3-642-16934-2_37">Scalable XML collaborative editing with undo</a> (2010)</li>
+<li>What's different about the new Google Docs: making collaboration fast (2010)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1109/icdcs.2009.20">A Commutative Replicated Data Type for Cooperative Editing</a> (2009)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1109/icdcs.2009.75">Logoot: A Scalable Optimistic Replication Algorithm for Collaborative Editing on P2P Networks</a> (2009)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/s10606-007-9071-2">Multi-level Editing of Hierarchical Documents</a> (2008)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1109/icpads.2006.18">A performance study of group editing algorithms</a> (2006)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1109/colcom.2006.361867">Tombstone Transformation Functions for Ensuring Consistency in Collaborative Editing Systems</a> (2006)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/1180875.1180916">Data consistency for P2P collaborative editing</a> (2006)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/1188816.1188821">Transparent adaptation of single-user applications for multi-user real-time collaboration</a> (2006)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/1031607.1031681">Operational Transformation for Collaborative Word Processing</a> (2004)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/1031607.1031635">Leveraging single-user applications for multi-user collaboration: the coword approach</a> (2004)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/978-94-010-0068-0_17">Customizable Collaborative Editor Relying on treeOPT Algorithm</a> (2003)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/587078.587088">Generalizing operational transformation to the standard general markup language</a> (2002)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/274444.274447">Achieving convergence, causality preservation, and intention preservation in real-time cooperative editing systems</a> (1998)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/215585.215706">High-latency, low-bandwidth windowing in the Jupiter collaboration system</a> (1995)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1007/bf00750746">Design Issues and Model for a Distributed Multi-User Editor</a> (1994)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/192844.192900">Duplex: A Distributed Collaborative Editing Environment in Large Scale</a> (1994)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/128738.128742">Lightweight causal and atomic group multicast</a> (1991)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/67544.66963">Concurrency control in groupware systems</a> (1989)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/62266.1024798">Replicated document management in a group communication system</a> (1988)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/320071.320076">A Majority consensus approach to concurrency control for multiple copy databases</a> (1979)</li>
+<li><a class="helia-link helia-external" href="https://doi.org/10.1145/359545.359563">Time, clocks, and the ordering of events in a distributed system</a> (1978)</li>
+<li>Convergence Examples: Froala</li>
+<li>Convergence developer guide: real time models</li>
+<li>Convergence JavaScript client: transformation functions</li>
+</ul>
+</div>
+</details>
+</div>
+</div>
+</details>
+</div>
+</article>
+<div class="helia-identity"><span class="helia-id">litt-2022-peritext</span> <span class="helia-kind">reference</span> <span class="helia-path">entries/refs/litt-2022-peritext/litt-2022-peritext.hel</span></div>
+</div>
+</body>
+</html>

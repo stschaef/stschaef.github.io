@@ -1,0 +1,1 @@
+heliaSearchData("d/national-tsing-hua-university",{"id":"national-tsing-hua-university","title":"National Tsing Hua University","kind":"institution","tags":[],"authors":[],"venue":[],"date":null,"url":"national-tsing-hua-university.html","headings":[],"body":""});

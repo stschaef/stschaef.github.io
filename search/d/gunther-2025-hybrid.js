@@ -1,0 +1,1 @@
+heliaSearchData("d/gunther-2025-hybrid",{"id":"gunther-2025-hybrid","title":"Hybrid Obfuscated Key Exchange and KEMs","kind":"reference","tags":["security"],"authors":["Douglas Stebila","Felix Günther","Michael Rosenberg","Shannon Veitch"],"venue":["CRYPTO","International Cryptology Conference"],"date":null,"url":"gunther-2025-hybrid.html","headings":[],"body":""});

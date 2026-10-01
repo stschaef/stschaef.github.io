@@ -1,0 +1,1 @@
+heliaSearchData("d/horstluckhardt",{"id":"horstluckhardt","title":"Horst Luckhardt","kind":"person","tags":[],"authors":[],"venue":[],"date":null,"url":"horstluckhardt.html","headings":[],"body":""});

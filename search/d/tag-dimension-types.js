@@ -1,0 +1,1 @@
+heliaSearchData("d/tag-dimension-types",{"id":"tag-dimension-types","title":"dimension-types","kind":"tag","tags":[],"authors":[],"venue":[],"date":null,"url":"tag-dimension-types.html","headings":[],"body":""});

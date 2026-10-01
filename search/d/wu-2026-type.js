@@ -1,0 +1,1 @@
+heliaSearchData("d/wu-2026-type",{"id":"wu-2026-type","title":"Type-Directed Discretization of Probabilistic Programs (Extended Version)","kind":"reference","tags":["probabilistic"],"authors":["Alexandra Silva","Jules Jacobs","Katherine Wu","Kevin Batz"],"venue":["arXiv"],"date":null,"url":"wu-2026-type.html","headings":[],"body":""});

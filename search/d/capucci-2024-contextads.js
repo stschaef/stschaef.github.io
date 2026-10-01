@@ -1,0 +1,1 @@
+heliaSearchData("d/capucci-2024-contextads",{"id":"capucci-2024-contextads","title":"Contextads as Wreaths; Kleisli, Para, and Span Constructions as Wreath Products","kind":"reference","tags":["category-theory"],"authors":["David Jaz Myers","Matteo Capucci"],"venue":["arXiv"],"date":null,"url":"capucci-2024-contextads.html","headings":[],"body":""});
