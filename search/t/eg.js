@@ -1,1 +1,1 @@
-heliaSearchData("t/eg",{"egbert":[1060,128,1978,32],"egbertrijke":[1060,32],"egg":[1406,1,2676,160],"egolf":[954,128,107,32,1,32,1073,32],"egolfverbatim":[1062,32],"egor":[1063,128,1536,32,1,32],"egornamakonov":[1063,32]});
+heliaSearchData("t/eg",{"egbert":[1060,128,1978,32],"egbertrijke":[1060,32],"egg":[1406,1,1947,129,731,160],"egolf":[954,128,107,32,1,32,1073,32],"egolfverbatim":[1062,32],"egor":[1063,128,1536,32,1,32],"egornamakonov":[1063,32]});

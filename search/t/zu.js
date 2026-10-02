@@ -1,1 +1,1 @@
-heliaSearchData("t/zu",{"zu":[711,160,902,160],"zucker":[2886,128,306,32],"zuidema":[1831,128],"zulfikar":[426,32,3837,128],"zulfikarramzan":[4263,32],"zulip":[3352,2],"zurich":[1159,160,471,160,2327,160]});
+heliaSearchData("t/zu",{"zu":[711,160,902,160],"zucker":[2886,128,306,32],"zuidema":[1831,128],"zulfikar":[426,32,3839,128],"zulfikarramzan":[4265,32],"zulip":[3352,2],"zurich":[1159,160,471,160,2329,160]});
