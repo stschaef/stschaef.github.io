@@ -1,1 +1,1 @@
-heliaSearchData("t/mn",{"mnist":[3722,1]});
+heliaSearchData("t/mn",{"mnist":[3726,1]});
